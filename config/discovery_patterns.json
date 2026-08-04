@@ -1,0 +1,109 @@
+{
+  "version": "discovery-0.1",
+  "patterns": {
+    "E_BO3_SERIES_COMEBACK": {
+      "name": "E型：BO3/BO5 整场反转发现标签",
+      "type": "discovery_tag",
+      "maturity": "L2_BACKTESTED",
+      "market_scope": [
+        "Match Winner",
+        "Series Winner"
+      ],
+      "format_scope": [
+        "BO3",
+        "BO5"
+      ],
+      "description": "扫描 BO3/BO5 整场胜负市场中，首局失利、前半段落后或价格折价后的修复机会。",
+      "core_signals": [
+        "目标市场是 Match Winner 或 Series Winner",
+        "赛制是 BO3 或 BO5",
+        "目标方出现首局失利、前半段落后，或价格序列表现出明显折价",
+        "当前仍有系列赛反转时间，不接近终局",
+        "成交量、盘口深度、spread、价格更新时间达标"
+      ],
+      "price_sequence_fallback": {
+        "note": "没有实时赛况数据时，先用开盘/早段价格和当前折价近似判断。",
+        "routes": [
+          {
+            "subtype": "E-A",
+            "label": "低价系列赛反转",
+            "early_price_max": 0.35,
+            "discount_price_min": 0.05,
+            "discount_price_max": 0.3,
+            "route_to_strategy": "A_DEEP_REVERSAL",
+            "execution_mode": "small_live_allowed",
+            "default_cycle_budget_usd": 25
+          },
+          {
+            "subtype": "E-A2",
+            "label": "中位系列赛反转",
+            "early_price_min": 0.55,
+            "discount_price_min": 0.3,
+            "discount_price_max": 0.45,
+            "route_to_strategy": "A2_MID_SERIES_REVERSAL",
+            "execution_mode": "suggest_or_simulate_first",
+            "default_cycle_budget_usd_min": 15,
+            "default_cycle_budget_usd_max": 20
+          },
+          {
+            "subtype": "E-B2",
+            "label": "强队折价修复",
+            "early_price_min": 0.55,
+            "discount_price_min": 0.55,
+            "discount_price_max": 0.7,
+            "route_to_strategy": "B_FAVORITE_DIP",
+            "execution_mode": "small_live_allowed",
+            "default_cycle_budget_usd": 25,
+            "stop_b2_below": 0.4
+          }
+        ]
+      },
+      "required_execution_protection": "D2_PROFIT_LOCK",
+      "profit_lock_rule": {
+        "after_first_fill": "place_base_take_profit_and_track_d2_exposure",
+        "above_0_60": "start_cost_recovery",
+        "above_0_75": "lock_major_profit",
+        "above_0_80": "keep_only_fixed_small_lottery"
+      },
+      "skip_conditions": [
+        "价格已经接近 0 或 1 且没有足够流动性",
+        "比赛接近终局，留给进出场的时间过短",
+        "spread 过大或盘口深度不足",
+        "价格长时间不更新且无法判断是否暂停",
+        "已触发 B2 路由但价格跌破 40c，必须重新评估是否切换到 E-A2 或只管理已有仓位"
+      ],
+      "seed_examples": [
+        {
+          "event": "Dota2 Vici Gaming vs Yakult Brothers",
+          "market": "Match Winner",
+          "subtype": "E-A",
+          "report": "reports/dota2_vg_yb_match_winner_strategy_a_backtest.md",
+          "fixed_budget_usd": 25,
+          "backtest_roi": 1.964
+        },
+        {
+          "event": "CS2 SPARTA vs ex-Young Ninjas",
+          "market": "Match Winner",
+          "subtype": "E-A2",
+          "report": "reports/cs2_sparta_youngn_match_winner_strategy_b_backtest.md",
+          "fixed_budget_usd": 25,
+          "backtest_roi": 0.347
+        },
+        {
+          "event": "LoL Natus Vincere vs Shifters",
+          "market": "Match Winner",
+          "subtype": "E-B2",
+          "report": "reports/lol_navi_shft_match_winner_strategy_b_backtest.md",
+          "fixed_budget_usd": 25,
+          "backtest_roi": 0.335
+        }
+      ],
+      "next_validation": [
+        "扫描器自动找出至少 20 个 BO3/BO5 Match Winner / Series Winner 候选",
+        "人工复核至少 5 个符合 E-A / E-A2 / E-B2",
+        "完成 3-5 次小额真实验证",
+        "验证 D2 能正确限制剩余彩票仓暴露"
+      ]
+    }
+  }
+}

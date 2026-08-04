@@ -1,0 +1,22 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Local runtime outputs and trade execution state
+runtime/*.json
+runtime/*.log
+runtime/logs/
+runtime/*.command
+!runtime/run_task2_live_scan.command
+
+# Generated scan reports
+reports/opportunity_scan*.md
+reports/diag_*_scan_*.md
+
+# Local/private environment files
+.env
+.env.*
+*.pem
+*.key
+*.secret
+
