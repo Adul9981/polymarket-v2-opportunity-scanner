@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "remember_528222",
+  "url": "https://www.huya.com/rememberlol",
+  "state": "offline_waiting",
+  "started_at": "2026-08-26T16:26:53+00:00",
+  "heartbeat_at": "2026-08-27T00:20:16+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 528222,
+  "channel_id": 1950358554,
+  "nickname": "Remember",
+  "introduction": "[LCK]季后赛 KTvsBRO 决胜局",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-26T16:26:54+00:00"
+}

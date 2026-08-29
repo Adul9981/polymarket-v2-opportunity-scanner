@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>比赛详情 · Spirit vs DENDELE CS · 弹幕情报库</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#6e6e73;--line:#e5e5ea;--accent:#0071e3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;padding:24px 16px 56px}
+.wrap{max-width:980px;margin:0 auto}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.brand{font-weight:700;font-size:14px;color:var(--ink);text-decoration:none}
+.crumb{font-size:12px;color:var(--sub)} .crumb b{color:var(--ink)}
+.navi{font-size:12px;color:var(--sub);text-decoration:none;margin-left:4px} .navi:hover{color:var(--accent)}
+h1{font-size:24px;font-weight:800;margin-bottom:4px}
+.sub{color:var(--sub);font-size:13px;margin-bottom:14px}
+.picker{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.nbtn{border:1px solid var(--line);background:var(--card);border-radius:12px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--sub);cursor:pointer}
+.nbtn:hover{color:var(--accent)} .nbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.nbtn .s{display:block;font-size:10px;font-weight:400;opacity:.85}
+.frame{width:100%;height:900px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.note{color:var(--sub);font-size:12px;margin-top:12px}
+footer{margin-top:16px;font-size:11.5px;color:var(--sub);border-top:1px solid var(--line);padding-top:12px}
+</style></head><body><div class="wrap">
+<div class="top">
+  <a class="brand" href="../index.html">弹幕情报库</a>
+  <span class="crumb">首页 › <a href="today.html" class="navi">今日比赛</a> › <b>Spirit vs DENDELE CS</b></span>
+  <span style="margin-left:auto"><a class="navi" href="history.html">历史情报库</a> <a class="navi" href="../subscribe.html">订阅</a></span>
+</div>
+<h1>Spirit vs DENDELE CS</h1>
+<div class="sub">CS2 · BLAST Open Porto Group A · 2026-08-26 · 按时间点切换查看该场比赛不同阶段的情报输出</div>
+<div class="picker"><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_g1_bp.html" aria-pressed="true">G1 · BP 后<span class="s">G1 · EARLY</span></button><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_g1_mid.html">G1 · 局中<span class="s">G1 · MID</span></button><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_g1_end.html">G1 · 结束<span class="s">G1 · REVIEW</span></button><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_g2_bp.html">G2 · BP 后<span class="s">G2 · EARLY</span></button><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_g2_mid.html">G2 · 局中<span class="s">G2 · MID</span></button><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_g2_end.html">G2 · 结束<span class="s">G2 · REVIEW</span></button><button class="nbtn" data-src="intel_danmu_Spirit-DENDELE_2026-08-26_full.html">系列复盘<span class="s">FINAL · SERIES-REVIEW</span></button></div>
+<iframe id="view" class="frame" title="时间点情报"></iframe>
+<div class="note">时间轴自动产出：赛前 -> 每小局（BP 后 / 局中 / 局末）-> 赛后整场复盘；缺失节点自动出现并标注"此节点暂未采集数据"，不 404。</div>
+<footer>弹幕情报库 · 比赛时间轴 · 2026-08-26</footer>
+</div>
+<script>
+(function () {
+  var btns = document.querySelectorAll(".nbtn");
+  var view = document.getElementById("view");
+  function show(src) { view.src = src + (src.indexOf("?") < 0 ? "?embed=1" : "&embed=1"); }
+  btns.forEach(function (b) {
+    b.addEventListener("click", function () {
+      btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      show(b.getAttribute("data-src"));
+    });
+  });
+  var first = document.querySelector(".nbtn[aria-pressed='true']");
+  if (first) show(first.getAttribute("data-src"));
+})();
+</script>
+<script>if(location.search.indexOf("embed=1")>-1){document.querySelectorAll("nav").forEach(function(n){n.style.display="none"});document.querySelectorAll("div[style*='max-width:1020px']").forEach(function(n){n.style.display="none"});}</script>
+</body></html>

@@ -1,0 +1,767 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-27T09:22:46+00:00",
+  "signals": [
+    {
+      "id": "IS-2026-08-08-001",
+      "date": "2026-08-08",
+      "event_slug": "lol-wb-lng-2026-08-08",
+      "source_person": "二路解说（多名退役/职业选手转型）",
+      "source_type": "caster_co",
+      "credibility": "high",
+      "quote": "有一个队伍的中单选手不会玩他现在选的这个英雄",
+      "tags": [
+        "proficiency"
+      ],
+      "object": "待确认（WB 或 LNG）",
+      "object_type": "unknown",
+      "direction": "中单熟练度低 -> 该队中路劣势 -> 利多对手侧",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": "用户进场时听到"
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": "赛中补记，采集前价缺失"
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-08T12:00:00Z",
+      "note": "对象队伍待确认——确认后补全 object、object_type 与 beneficial_side"
+    },
+    {
+      "id": "IS-2026-08-08-002",
+      "date": "2026-08-08",
+      "event_slug": "lol-t1-hle1-2026-08-08",
+      "source_person": "二路解说",
+      "source_type": "caster_co",
+      "credibility": "high",
+      "quote": "HLE 主要靠上单选手发挥；上单没声音时打野和辅助表现不好、没有节奏、带不起来，队伍表现就会很糟糕",
+      "tags": [
+        "style"
+      ],
+      "object": "HLE 上单",
+      "object_type": "player",
+      "direction": "看 HLE 比赛先看上单状态；上单被压制时 HLE 倾向 B4 阴跌",
+      "beneficial_side": "HLE",
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": "G1 解说口径"
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": "赛中补记，采集前价缺失"
+      },
+      "verification": {
+        "status": "confirmed",
+        "note": "上单核心信号方向应验——HLE 上单有声音（G2/G3）时 HLE 赢下系列赛 2:1",
+        "verified_at": "2026-08-08T13:00:00Z"
+      },
+      "timeframe": "durable",
+      "expected_patterns": [
+        "B4"
+      ],
+      "related_signal_ids": [
+        "IS-2026-08-08-004"
+      ],
+      "linked_profiles": [
+        "TEAM_PROFILES#HLE"
+      ],
+      "source_url": null,
+      "recorded_at": "2026-08-08T09:30:00Z",
+      "note": "信号已沉淀为 HLE 队伍画像（上单核心），与 G3 选角信号互为印证"
+    },
+    {
+      "id": "IS-2026-08-08-003",
+      "date": "2026-08-08",
+      "event_slug": "lol-t1-hle1-2026-08-08",
+      "source_person": "二路解说",
+      "source_type": "caster_co",
+      "credibility": "high",
+      "quote": "HLE 近期状态持续低迷",
+      "tags": [
+        "form"
+      ],
+      "object": "HLE 全队",
+      "object_type": "team",
+      "direction": "HLE 近期状态低迷 -> 利空 HLE（短期状态，非实力差）",
+      "beneficial_side": "T1",
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": "G1 解说口径"
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": "赛中补记，采集前价缺失"
+      },
+      "verification": {
+        "status": "partially_confirmed",
+        "note": "G1 应验（HLE 输 G1）、G2 未应验（HLE 赢 G2）——'低迷'是短期状态而非实力差",
+        "verified_at": "2026-08-08T13:00:00Z"
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [
+        "TEAM_PROFILES#HLE"
+      ],
+      "source_url": null,
+      "recorded_at": "2026-08-08T09:30:00Z",
+      "note": "状态类信号时效短（1-2 周），只进近期状态层，不进长期画像"
+    },
+    {
+      "id": "IS-2026-08-08-004",
+      "date": "2026-08-08",
+      "event_slug": "lol-t1-hle1-2026-08-08",
+      "source_person": "用户观察",
+      "source_type": "user_observation",
+      "credibility": "medium",
+      "quote": "HLE 上单选出'后期能发挥作用的英雄'，本局表现非常出色，直接带动 HLE 赢下决胜局与系列赛",
+      "tags": [
+        "bp",
+        "style"
+      ],
+      "object": "HLE 上单",
+      "object_type": "player",
+      "direction": "HLE 上单拿到后期大核且状态在线 -> HLE 赢面显著提升（利多 HLE）",
+      "beneficial_side": "HLE",
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": "BP 后英雄选定即可判断——赛前情报层的关键前置信号"
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": "赛后补记，采集前价缺失"
+      },
+      "verification": {
+        "status": "confirmed",
+        "note": "G3 应验（HLE 赢系列赛 2:1）；'BP/选角 -> 预期情形'第一条完整闭环样本",
+        "verified_at": "2026-08-08T13:00:00Z"
+      },
+      "timeframe": "durable",
+      "expected_patterns": [],
+      "related_signal_ids": [
+        "IS-2026-08-08-002"
+      ],
+      "linked_profiles": [
+        "TEAM_PROFILES#HLE"
+      ],
+      "source_url": null,
+      "recorded_at": "2026-08-08T11:00:00Z",
+      "note": "来源为用户观察 + 比赛结果；与二路解说上单核心信号互为印证，HLE 画像信任等级升级"
+    },
+    {
+      "id": "IS-2026-08-08-005",
+      "date": "2026-08-08",
+      "event_slug": "cs2-eye-pha-2026-08-08",
+      "source_person": "用户复盘",
+      "source_type": "user_observation",
+      "credibility": "medium",
+      "quote": "PHA 被砸到 13.5c 时是强强对话的价值错杀位，随后逆转赢下 Map2",
+      "tags": [
+        "tempo"
+      ],
+      "object": "Phantom (PHA)",
+      "object_type": "team",
+      "direction": "强强对话（5:5 开局）中一方被错杀到 10-15c 是价值位而非死位 -> 利多错杀方",
+      "beneficial_side": "PHA",
+      "timing": {
+        "phase": "post_match",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": "moneyline",
+        "price_before": 0.135,
+        "price_after": 0.515,
+        "note": "10:55 UTC 13.5c -> 11:30 UTC 51.5c（五五开回归）；赛后复盘补记"
+      },
+      "verification": {
+        "status": "confirmed",
+        "note": "PHA 从 13.5c 逆转赢下 Map2，Moneyline 回到 51.5c，五五开回归成立（强强对话错杀反转 A7 正例）",
+        "verified_at": "2026-08-08T15:31:06+00:00"
+      },
+      "timeframe": "durable",
+      "expected_patterns": [
+        "A7"
+      ],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-08T15:31:02+00:00",
+      "note": "复盘型测试信号：验证非 LoL 比赛闭环；赛后补记、非赛中采集"
+    },
+    {
+      "id": "IS-2026-08-08-006",
+      "date": "2026-08-08",
+      "event_slug": "cs2-eye-pha-2026-08-08",
+      "source_person": "用户复盘",
+      "source_type": "user_observation",
+      "credibility": "medium",
+      "quote": "EYE 86.5c 时是近胜高危区：上行只剩 13c、下行 86c，赔率严重不对称",
+      "tags": [
+        "tempo"
+      ],
+      "object": "EYEBALLERS (EYE)",
+      "object_type": "team",
+      "direction": "高位一侧赔率不对称 -> 未锁盈将经历大幅回撤（高位持仓风险信号）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "post_match",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": "moneyline",
+        "price_before": 0.865,
+        "price_after": 0.485,
+        "note": "10:55 UTC 86.5c -> 11:30 UTC 48.5c（回撤发生）；赛后复盘补记"
+      },
+      "verification": {
+        "status": "confirmed",
+        "note": "EYE 86.5c -> 48.5c 回撤真实发生，高位不对称风险信号成立",
+        "verified_at": "2026-08-08T15:31:07+00:00"
+      },
+      "timeframe": "durable",
+      "expected_patterns": [
+        "B2"
+      ],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-08T15:31:04+00:00",
+      "note": "复盘型测试信号：验证非 LoL 比赛闭环；赛后补记、非赛中采集"
+    },
+    {
+      "id": "IS-2026-07-31-001",
+      "date": "2026-07-31",
+      "event_slug": "lck-dk-hle-2026-07-31",
+      "source_person": "957 (WE957)",
+      "source_type": "caster_co",
+      "credibility": "high",
+      "quote": "许哥牛逼！许哥推两个！（DK 落后七千翻盘 HLE 的关键团战评述）",
+      "tags": [
+        "form",
+        "tempo"
+      ],
+      "object": "DK (ShowMaker)",
+      "object_type": "team",
+      "direction": "DK 落后七千仍能翻盘 HLE，ShowMaker 状态在线 -> 利多 DK（翻盘能力信号）",
+      "beneficial_side": "DK",
+      "timing": {
+        "phase": "post_match",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "durable",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": "https://www.huya.com/video/play/1120307486.html",
+      "recorded_at": "2026-08-08T16:18:08+00:00",
+      "note": "转录自虎牙回放（957 二路解说剪辑 103s，2026-07-31 发布）；按用户要求暂不做 Polymarket 对照；弹幕接口已验证可用（本视频无弹幕）"
+    },
+    {
+      "id": "IS-2026-08-17-001",
+      "date": "2026-08-17",
+      "event_slug": "lol-t1-dnf-2026-08-17",
+      "source_person": "Polymarket 评论区聚合（Maltazar/EurekaWTI/xman123/Toxa 等）+ 用户口述虎牙弹幕",
+      "source_type": "community",
+      "credibility": "low",
+      "quote": "G2 连续暂停期评论区出现 chronobreak/回滚/match fixing/50-50 结算讨论；EurekaWTI: 'still chance to sell your overvalued T1 shares before they go back to sub 50 after chronobreak' / 'its going sub 60 minimum the second they restart' / 'match fixing'",
+      "tags": [
+        "event"
+      ],
+      "object": "T1（G2 高位持仓方向）",
+      "object_type": "team",
+      "direction": "暂停+评论区负面共识 -> 高位持仓（70c+）减仓锁盈警示；不作反手/方向依据",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": "2026-08-17T11:08:00Z",
+        "note": null
+      },
+      "market_verification": {
+        "market": "game2",
+        "price_before": 0.705,
+        "price_after": 0.355,
+        "note": "19:08 发言时 T1 70.5c -> 19:15 重启 35.5c（7 分钟 -35c）-> 19:33 0.5c；喊跌方向验证正确"
+      },
+      "verification": {
+        "status": "confirmed",
+        "note": "19:08 评论称重启后 T1 必跌：T1 70.5c(19:08) -> 35.5c(19:15 重启) -> 0.5c(19:33)；喊跌方向验证正确，暂停+负面共识=高位减仓警示信号有效",
+        "verified_at": "2026-08-17T11:53:35+00:00"
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [
+        "A2 冲高崩溃",
+        "B3 深水反转"
+      ],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": "https://polymarket.com/zh/esports/league-of-legends/kespa-cup/lol-t1-dnf-2026-08-17",
+      "recorded_at": "2026-08-17T11:53:26+00:00",
+      "note": "与 2026-08-15 弹幕共识信号同边界：警示/减仓参考，不作反手依据；虎牙弹幕待用户提供房间/录播链接回填"
+    },
+    {
+      "id": "IS-2026-08-17-002",
+      "date": "2026-08-17",
+      "event_slug": "lol-t1-dnf-2026-08-17",
+      "source_person": "Polymarket 评论区（CyanideGG1/ButterflyKnife/benjaminglin）+ 用户观察",
+      "source_type": "community",
+      "credibility": "medium",
+      "quote": "T1 上二队消息：'i think its T1 academy'（16:04）；benjaminglin: 'T1's second team is the number one team in the CK League'",
+      "tags": [
+        "event"
+      ],
+      "object": "T1 二队（首发名单）",
+      "object_type": "team",
+      "direction": "名单信息≠实力判断；T1 二队为 CK 联赛第一，'二队'标签导致 DNS 定价高估（65c+）、T1 被低估",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "pre_match",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": "2026-08-17T08:04:00Z",
+        "note": null
+      },
+      "market_verification": {
+        "market": "game1",
+        "price_before": 0.365,
+        "price_after": 0.9995,
+        "note": "16:03 T1 36.5c -> G1 结束 99.95c；G1 T1 二队碾压赢下（应验）；G2 后半 DNS 反超（二队韧性不足）"
+      },
+      "verification": {
+        "status": "partially_confirmed",
+        "note": "G1 应验（T1 33.5c->99.95c 二队碾压）；G2 未应验（19:33 DNS 99.5c 反超）；'二队标签低估实力'仅在单局成立",
+        "verified_at": "2026-08-17T11:53:35+00:00"
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [
+        "A3/A5 中位反转"
+      ],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": "https://polymarket.com/zh/esports/league-of-legends/kespa-cup/lol-t1-dnf-2026-08-17",
+      "recorded_at": "2026-08-17T11:53:31+00:00",
+      "note": "与 TEAM_PROFILES T1 画像联动：二队/CK 战绩需纳入名单类信息评估"
+    },
+    {
+      "id": "IS-2026-08-27-001",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "硕硕(323444)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "纯假赛 这都不一波",
+      "tags": [
+        "event"
+      ],
+      "object": "NS",
+      "object_type": "team",
+      "direction": "质疑NS不一波（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:00:16+00:00",
+      "note": "G1 尾声 NS 领先不一波被观众质疑；方向未兑现（NS 赢下 G1）"
+    },
+    {
+      "id": "IS-2026-08-27-002",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "957(890001)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "确实会演",
+      "tags": [
+        "event"
+      ],
+      "object": "NS",
+      "object_type": "team",
+      "direction": "质疑NS演/不一波（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:00:16+00:00",
+      "note": "G1 尾声 NS 不一波语境；方向未兑现（NS 赢下 G1）"
+    },
+    {
+      "id": "IS-2026-08-27-003",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "957(890001)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "思考特也是庄狗的儿子 会送",
+      "tags": [
+        "event"
+      ],
+      "object": "Scout",
+      "object_type": "player",
+      "direction": "质疑Scout会送（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:00:17+00:00",
+      "note": "G2 开局；NS 灰信号对象扩展至中单 Scout，重点留痕"
+    },
+    {
+      "id": "IS-2026-08-27-004",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "957(890001)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "演员啊卧槽 / 打野又开送了",
+      "tags": [
+        "event"
+      ],
+      "object": "BFX打野(Vi)",
+      "object_type": "player",
+      "direction": "质疑BFX打野送（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:10:23+00:00",
+      "note": "G2 一血相关；BFX 打野 G1 李青+G2 蔚 连两局送质疑（实体再犯）"
+    },
+    {
+      "id": "IS-2026-08-27-005",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "硕硕(323444)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "今天剧本是谁一血谁输",
+      "tags": [
+        "event"
+      ],
+      "object": "BFX",
+      "object_type": "team",
+      "direction": "剧本论（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:10:24+00:00",
+      "note": "G2 BFX 拿一血后剧本质疑；方向待 G2 结果验证"
+    },
+    {
+      "id": "IS-2026-08-27-006",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "米勒(149361)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "bfx的打野没用 不干事还送 / 这蔚没节奏，又送",
+      "tags": [
+        "event"
+      ],
+      "object": "BFX打野(Vi)",
+      "object_type": "player",
+      "direction": "质疑BFX打野送（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:10:25+00:00",
+      "note": "G2 局中；BFX 打野两局连送质疑，实体重点留痕"
+    },
+    {
+      "id": "IS-2026-08-27-007",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "957(890001)+米勒(149361)+硕硕(323444)",
+      "source_type": "danmaku",
+      "credibility": "medium",
+      "quote": "打赢了不拿龙就是信号 / 假赛BFX / 这打野是看不见龙吗",
+      "tags": [
+        "event"
+      ],
+      "object": "BFX打野(Vi)",
+      "object_type": "player",
+      "direction": "质疑BFX故意不控龙/假赛准备输（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:22:45+00:00",
+      "note": "G2 中段 BFX 赢团不控龙被 3 房约 15 条质疑；与昨日 BRO 优势不拿龙教训联动；方向待 G2 结果验证"
+    },
+    {
+      "id": "IS-2026-08-27-008",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "硕硕(323444)+957(890001)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "这中单哪次不蛆 不打假赛怎么挣钱 / 相信小学必送打假赛 / ns的中单就是喜欢演",
+      "tags": [
+        "event"
+      ],
+      "object": "Scout",
+      "object_type": "player",
+      "direction": "质疑Scout打假赛/演（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:22:46+00:00",
+      "note": "G2 中后段叠加 IS-003 升级；NS 灰信号对象 Scout 两度被点名；待验证"
+    },
+    {
+      "id": "IS-2026-08-27-009",
+      "date": "2026-08-27",
+      "event_slug": "2026-08-27_ns_bfx",
+      "source_person": "硕硕(323444)",
+      "source_type": "danmaku",
+      "credibility": "low",
+      "quote": "2-0犯法，小学生日常假赛 / 跟上昨天剧本",
+      "tags": [
+        "event"
+      ],
+      "object": "NS",
+      "object_type": "team",
+      "direction": "剧本/假赛论（观众质疑非结论）",
+      "beneficial_side": null,
+      "timing": {
+        "phase": "in_game",
+        "minute": null,
+        "stream_offset_min": null,
+        "utc": null,
+        "note": null
+      },
+      "market_verification": {
+        "market": null,
+        "price_before": null,
+        "price_after": null,
+        "note": null
+      },
+      "verification": {
+        "status": "pending",
+        "note": "赛后回填是否应验",
+        "verified_at": null
+      },
+      "timeframe": "short_lived",
+      "expected_patterns": [],
+      "related_signal_ids": [],
+      "linked_profiles": [],
+      "source_url": null,
+      "recorded_at": "2026-08-27T09:22:46+00:00",
+      "note": "G2 中后段剧本论再提；与 IS-005 一血剧本论联动"
+    }
+  ]
+}

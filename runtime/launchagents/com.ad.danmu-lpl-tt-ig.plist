@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.ad.danmu-lpl-tt-ig</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/ad/.hermes/hermes-agent/venv/bin/python3</string>
+		<string>/Users/ad/Documents/polymarket/tools/run_danmu_session.py</string>
+		<string>--session</string>
+		<string>lpl_2026-08-28</string>
+		<string>--title</string>
+		<string>LPL 骑士之路 08-28 TT vs IG（官方/957）</string>
+		<string>--room</string>
+		<string>huya_lol_official=https://www.huya.com/660000</string>
+		<string>--room</string>
+		<string>huya_we957=https://www.huya.com/890001</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/ad/Documents/polymarket</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>StandardOutPath</key>
+	<string>/Users/ad/Documents/polymarket/runtime/danmu_sessions/lpl_2026-08-28/launchd.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/ad/Documents/polymarket/runtime/danmu_sessions/lpl_2026-08-28/launchd.err</string>
+</dict>
+</plist>

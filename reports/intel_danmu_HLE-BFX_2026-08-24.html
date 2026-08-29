@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HLE vs BFX 局中弹幕情报 · 2026-08-24</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed;--warn:#b25000;--warnbg:#fff8ec;--warnline:#f0d58c}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.55;padding:24px 16px 56px}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:24px;font-weight:700;margin-bottom:4px}
+.sub{color:var(--sub);font-size:13px;margin-bottom:16px}
+.badges{margin-bottom:12px;display:flex;flex-wrap:wrap;gap:8px}
+.badge{display:inline-block;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:600}
+.badge.live{background:#fff3cd;color:#8a5b00;border:1px solid #f0d58c}
+.badge.warn{background:#ffe5e5;color:#a52a2a;border:1px solid #f5b5b5}
+.badge.ok{background:#e6f6ec;color:#1d7a46;border:1px solid #bfe6cf}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.stat{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px}
+.card{background:var(--card);border-radius:14px;padding:16px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.card.gray{border:1px solid var(--warnline);background:var(--warnbg)}
+h2{font-size:16px;font-weight:600;margin-bottom:10px;display:flex;align-items:baseline;gap:8px}
+h2 .no{color:var(--accent);font-weight:700}
+h3{font-size:14px;font-weight:600;margin:12px 0 6px}
+.meta{color:var(--sub);font-size:12px;margin-bottom:8px}
+.row{padding:7px 0;border-bottom:1px solid var(--line);font-size:13px}
+.row:last-child{border-bottom:none}
+.row b{font-weight:600}
+.s{color:var(--sub);font-size:12px}
+.t{color:var(--accent);font-weight:600;margin-right:8px;white-space:nowrap}
+.tag{display:inline-block;font-size:11px;font-weight:600;border-radius:6px;padding:1px 7px;margin-right:6px;vertical-align:1px}
+.tag.pos{background:#e6f6ec;color:#1d7a46}
+.tag.neg{background:#ffe5e5;color:#a52a2a}
+.tag.mid{background:#eef2f7;color:#4a5a6a}
+.tag.warn{background:#fff3cd;color:#8a5b00}
+ul{margin:4px 0 4px 18px;font-size:13px}
+li{margin:3px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.minicard{background:#fafafc;border-radius:10px;padding:10px;border:1px solid var(--line)}
+.minicard h4{font-size:13px;font-weight:600;margin-bottom:4px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;color:var(--sub);font-size:12px;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.num{font-variant-numeric:tabular-nums}
+.empty{border:1px solid #d8d8de;background:#fafafc;border-radius:10px;padding:10px 12px;font-size:13px;color:var(--sub)}
+.note{color:var(--sub);font-size:11px;margin-top:16px;line-height:1.7}
+.divider{height:1px;background:var(--line);margin:10px 0}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="wrap">
+
+<header>
+  <div class="badges">
+    <span class="badge live">局中 · 非终局，结果待定</span>
+    <span class="badge warn">弹幕口径 · 官方待回填</span>
+    <span class="badge ok">B 型局中页 · 赛后自动升级 A 型</span>
+  </div>
+  <h1>HLE vs BFX · 局中弹幕情报页</h1>
+  <p class="sub">虎牙二路 硕硕(323444) 弹幕源 · 2026-08-24 · SAP/Apple 风格局中快照</p>
+  <div class="stats">
+    <div class="stat"><div class="num">3377</div><div class="lbl">原始弹幕条数</div></div>
+    <div class="stat"><div class="num">954</div><div class="lbl">活跃用户（规则层）</div></div>
+    <div class="stat"><div class="num">34.3/分</div><div class="lbl">平均密度</div></div>
+    <div class="stat"><div class="num">203</div><div class="lbl">密度峰值 10:02 UTC</div></div>
+    <div class="stat"><div class="num">42</div><div class="lbl">灰信号（规则层口径）</div></div>
+    <div class="stat"><div class="num">G3</div><div class="lbl">弹幕口径第三局进行中</div></div>
+  </div>
+</header>
+
+<section class="card">
+  <h2><span class="no">0</span>比赛信息</h2>
+  <div class="row"><b>对阵</b>　HLE（韩华，二队）vs BFX · 弹幕推断口径，与用户提示一致</div>
+  <div class="row"><b>联赛</b>　弹幕口径混杂：以「小ck（LCK CL 次级联赛）」为主（「这就是小ck」「张硕我看小ck三年从来没有3-0的比赛」），另有「这个不是K杯吗？」等 K 杯猜测 —— <b>待官方确认</b>，页面按弹幕推断标注</div>
+  <div class="row"><b>赛制</b>　BO5（弹幕口径：「这bo5我看过」「让二追三」）</div>
+  <div class="row"><b>当前进度</b>　弹幕口径：HLE 2-0 领先，第三局进行中；局内阶段约 S1–S2（对线/资源期）—— 未确认，官方比分待回填</div>
+  <div class="row"><b>数据源</b>　虎牙直播间 硕硕(323444)，source=huya_shuoshuo</div>
+  <div class="row"><b>数据窗口</b>　原始文件 2026-08-24 09:54:12 – 11:33:59（UTC）；规则层统计窗口 09:54 – 11:27（UTC）</div>
+  <div class="row"><b>页面生成</b>　2026-08-24（UTC），基于本窗口数据快照</div>
+</section>
+
+<section class="card">
+  <h2><span class="no">1</span>当前进度 / 结果总览（弹幕口径 · 未确认）</h2>
+  <p class="meta">所有比分均为观众弹幕表述，未与官方核对；非终局，结果待定。</p>
+  <h3>比分线索（按出现时间）</h3>
+  <ul>
+    <li><span class="t">09:55</span>「我是穿越者，剧本让二追三」—— 剧本党出现（暗示某队 0-2 后翻盘）</li>
+    <li><span class="t">10:44</span>「这把钥匙2:0直接3:0」→ <span class="t">10:46</span>「2-0了 还」→ <span class="t">10:50</span>「2:0了，女警这装备，没了」—— 观众口径 HLE 已/将取得 2-0</li>
+    <li><span class="t">11:19–11:24</span>「我早说了这联赛没有 3:0」「3-0 稳稳的幸福」「3比0了」vs「明牌2-1」「放一把吗」「纯2:1呀」「让二追二?」—— 3-0 横扫与「送一局 2-1」分歧</li>
+    <li><span class="t">11:30</span>「这bfx经济还是领先呢」—— 第三局仍在进行，BFX 经济领先</li>
+  </ul>
+  <h3>三局观测片段（局数边界为弹幕推断）</h3>
+  <ul>
+    <li><b>首局（09:54–10:03 收尾）</b>：HLE 胜出口径（「最菜的韩华 都能赢 天塌了」「打个韩华这么费劲吗大哥」）；BFX 三火龙魂仍被拖死（「左边有优势后期赢不了，可以拖」「火龙魂左边这个阵容伤害也不够」）。</li>
+    <li><b>第二局（10:20–11:04）</b>：HLE 2-0 口径（见上）；本局集中爆发皇子/巴德「演员」质疑与盘口讨论。</li>
+    <li><b>第三局（11:19–11:34，进行中）</b>：BP 期讨论大树/永恩/蔚/卢锡安等；11:30 BFX 经济领先；观众围绕 HLE 是否「送一把」（3-0 vs 2-1）展开分歧。</li>
+  </ul>
+  <div class="empty">结论：弹幕口径显示 HLE 2-0 领先 BFX、第三局进行中；<b>官方比分未核对，结果待定</b>。本页不输出任何终局结论。</div>
+</section>
+
+<section class="card">
+  <h2><span class="no">2</span>弹幕规模、密度峰值与事件时间线</h2>
+  <h3>密度峰值（原始文件逐分钟）</h3>
+  <table>
+    <tr><th>时间（UTC）</th><th>条数/分</th><th>弹幕主题（代表样句）</th></tr>
+    <tr><td>10:02</td><td class="num">203</td><td>首局结束：「gg」「弱悲」「卧槽」「好帅的盲僧」「mvp」</td></tr>
+    <tr><td>10:53</td><td class="num">145</td><td>玩梗刷屏：「哈哈哈」「？？？？」（与矿泉水梗混叠）</td></tr>
+    <tr><td>10:57</td><td class="num">143</td><td>皇子玩梗+引援调侃：「皇子回归基本功」「去滔博」「这打野我wbg要了」</td></tr>
+    <tr><td>10:51</td><td class="num">126</td><td>大龙决策现场：「巴德内鬼」「这不去大龙？」「皇子纯内鬼」</td></tr>
+    <tr><td>11:03</td><td class="num">123</td><td>第二局收尾：「韩华太搞笑了」「皇子黑了」「gg」</td></tr>
+    <tr><td>11:04</td><td class="num">106</td><td>局末结算/赛后调侃</td></tr>
+    <tr><td>10:56</td><td class="num">101</td><td>皇子操作争议持续</td></tr>
+  </table>
+  <p class="s">注：峰值含大量与比赛无关的玩梗/刷屏（恒大冰泉、昆仑山、巴黎水等饮料梗），密度数字仅作规模参考；事件锚点以主题词核验为准。多路聚合页（intel_danmu_live_vps_2026-08-24.html）合计口径为 10:02 约 487 条/分。</p>
+  <h3>关键事件锚点</h3>
+  <ul>
+    <li><span class="t">10:02</span>首局结束，盲僧操作获「神僧/MVP」评价；LPL 各队弹幕抢人玩梗（T1/EDG/WBG/LNG/IG「要了」）。</li>
+    <li><span class="t">10:43–10:44</span>巴德/皇子质疑潮：「内鬼巴德」「巴德重注了对面」「皇子大招呢？」</li>
+    <li><span class="t">10:51–10:57</span>第二局大龙决策争议：皇子「900血不惩戒跑去开送」「连续三波团不放大不闪现」；巴德「只定自己人」。</li>
+    <li><span class="t">11:03</span>第二局收尾（「gg」「皇子黑了」）。</li>
+    <li><span class="t">11:19–11:24</span>第三局 BP：五ban中单、大树/永恩/蔚/卢锡安讨论、「这把要打一个小时」。</li>
+    <li><span class="t">11:30</span>第三局进行中：「这bfx经济还是领先呢」「右边打野进去就死」。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="no">3</span>阵容与 BP / 英雄讨论</h2>
+  <p class="meta">英雄提及量为原始文件行级计数（含玩梗）；归属按弹幕「左/右」与队名交叉推断，标注未确认。</p>
+  <div class="grid2">
+    <div class="minicard">
+      <h4>首局（09:54–10:03）</h4>
+      <ul>
+        <li>岩雀 + EZ + 小P（前打野选手改玩 EZ）—— HLE 侧口径：「韩华二队太菜了，两个龙魂团岩雀一个大招都不拦」</li>
+        <li>轮子妈/希维尔 + 奥拉夫 + 三火龙 —— BFX 侧口径：「三火龙轮子妈光头 拉夫进来两秒死」</li>
+        <li>盲僧（打野，MVP 操作）+ 剑魔（「野狗剑魔又怂又菜」）</li>
+      </ul>
+    </div>
+    <div class="minicard">
+      <h4>第二局（10:20–11:04）</h4>
+      <ul>
+        <li>HLE（右/红）：皇子打野 + 女警 + 巴德 + 加里奥 + 兰博（「加里奥皇子，下路再来一个大核，输不了」）</li>
+        <li>BFX（左/蓝）：奇亚娜打野 + 烬 + 老黑(奎桑提) + 安妮（「左边名牌烬啊」「后期安妮和打野闪现秒了女警」）</li>
+        <li>BP 共识：观众普遍认为 HLE 阵容更好（「右边自选阵容？」「韩华阵容每次都好」「左边这阵容太烂了」）</li>
+      </ul>
+    </div>
+  </div>
+  <h3>第三局 BP 讨论（11:19–11:24，进行中）</h3>
+  <ul>
+    <li>「五ban中单」「韩华可以拿个塞拉斯很舒服」「上单小炮」「卡片上单」—— 观众围绕选人建议，<b>最终阵容未确认</b>。</li>
+    <li>大树体系：大树 + 永恩 + 泽丽（「大树永恩配ad泽丽咋样」「大树给bfx大腿吗？」「我靠又是大树」）—— 结合「第一场第三局也是选大树 然后输掉」构成负锚点。</li>
+    <li>HLE 打野蔚（Vi）：「绝活魏」「韩一蔚」—— 正锚点；搭配「右边绝活马威」「他的蔚也没有r的」（口径混杂）。</li>
+    <li>下路卢锡安-米利欧（「还选个卢 能玩明白吗」「小炮下午岂不是要被卢米打穿」）+「卢锡安胜率好低」—— 负锚点争议。</li>
+    <li>「些什么古怪的阵容啊」「拆迁队」「这把要打一个小时」—— 观众对 BP 风格与节奏的评论。</li>
+  </ul>
+
+  <h3>BP 后战绩情报（必抓项，2026-08-21 规则）</h3>
+  <p class="meta">pick 锁定窗口内「选手/队伍 × 英雄/对手」战绩与胜率类提及；均为弹幕口径，待赛后回填验证。</p>
+  <table>
+    <tr><th>时间</th><th>弹幕</th><th>锚点</th><th>归属/语境</th></tr>
+    <tr><td>10:02:37</td><td>轮子妈拖后期胜率太高了</td><td><span class="tag pos">正锚点</span></td><td>首局希维尔（BFX 侧）后期体系</td></tr>
+    <tr><td>10:02:52</td><td>这瞎子是原来2队的dk 结果被买走了 导致dk本赛季第一没了</td><td><span class="tag mid">身份口径</span></td><td>首局盲僧选手来历（观众多口径：曾 HLE 二队/UP 前打野/DK 二队，未确认）</td></tr>
+    <tr><td>10:22:26</td><td>琪亚娜没胜率</td><td><span class="tag neg">负锚点</span></td><td>第二局奇亚娜（BFX 打野）</td></tr>
+    <tr><td>10:24:10</td><td>安妮胜率不是很低吗</td><td><span class="tag neg">负锚点</span></td><td>第二局安妮（BFX 中单）</td></tr>
+    <tr><td>10:26:11/14/36</td><td>女警全是输 / 女警没赢过 / gg的女警都输了（另有 10:36:07「弱悲，女警没赢过」）</td><td><span class="tag neg">负锚点</span></td><td>第二局女警（HLE ADC）；同窗口有反方「女警这英雄后期输不了」</td></tr>
+    <tr><td>10:46:59–10:48:55</td><td>巴德搭档过三冠王姑妈鱼丝（×3）</td><td><span class="tag mid">背景</span></td><td>第二局巴德选手（辅助）履历提及</td></tr>
+    <tr><td>10:57:21–33</td><td>grizzly之前打过lck，还进季后赛了（×5）</td><td><span class="tag mid">背景</span></td><td>grizzly 职业履历（曾 HLE 二队→一线顶替 Clid→现效力本场，队伍口径待确认）</td></tr>
+    <tr><td>11:19:28</td><td>刚看了一下数据，今年韩华只赢过狐狸一小局</td><td><span class="tag neg">队伍级</span></td><td>HLE 对 FOX（狐狸）本赛季战绩口径，指向对象待确认</td></tr>
+    <tr><td>11:20:43/11:21:16</td><td>绝活魏 / 韩一蔚</td><td><span class="tag pos">正锚点</span></td><td>第三局 HLE 打野蔚为绝活</td></tr>
+    <tr><td>11:21:53–11:22:01</td><td>第一场第三局也是选大树 然后输掉 / dns也是大树开演 / 我靠又是大树</td><td><span class="tag neg">负锚点</span></td><td>第三局大树体系近期多输/开演（跨场战绩）</td></tr>
+    <tr><td>11:24:06</td><td>卢锡安胜率好低</td><td><span class="tag neg">负锚点</span></td><td>第三局卢锡安（HLE 下路口径）</td></tr>
+  </table>
+  <div class="empty">结论：战绩类提及充足（正锚点 2 条、负锚点 4 组、身份/背景 4 组）；具体英雄与选手对应关系仍为弹幕推断，赛后按官方 BP 回填验证。</div>
+</section>
+
+<section class="card">
+  <h2><span class="no">4</span>队伍情绪与画像</h2>
+  <div class="grid2">
+    <div class="minicard">
+      <h4>HLE（韩华 / 「汉化」，二队）<span class="tag neg">强负面+嘲讽</span></h4>
+      <p class="s">提及约 131 行（韩华 82 / 汉化 25 / HLE 23），规则层仅计 23 —— 词表缺口，见溯源。</p>
+      <ul>
+        <li>「hle太菜了」「韩华二队就是一坨」「次级最菜的队」「倒数第2名，垫底烂队」「花钱养二队这帮飞舞」</li>
+        <li>但本场 2-0 领先：「最菜的韩华 都能赢 天塌了」「打个韩华这么费劲吗大哥」「这韩华太变态了」→ 指向 BFX 更弱</li>
+        <li>BP 认可：「韩华阵容每次都好」「右边自选阵容？」；操作质疑集中（皇子/巴德，见灰信号节）</li>
+        <li>场外：季后赛压力「hle别搞得季后赛一轮游了」；「今年韩华只赢过狐狸一小局」（口径待确认）</li>
+      </ul>
+    </div>
+    <div class="minicard">
+      <h4>BFX（「左边」）<span class="tag mid">弱负面/不信任</span></h4>
+      <p class="s">提及 15–16 行；规则层词表未登记 BFX —— 漏计，见溯源。</p>
+      <ul>
+        <li>「BFX这把没了 垃圾阵容」「感觉BFX还是输啊」「我也不想信左边啊 但右边是汉化呀」（两边都不被信）</li>
+        <li>规律信号：「bfx确实不喜欢控龙」「这BFX就是不控龙」（×2，可跨场沉淀）</li>
+        <li>韧性：「这bfx经济还是领先呢」（11:30，第三局）；「后期感觉还是bfx」「左边实力可以，这盘口一直在诱客队」（少数派看好）</li>
+        <li>长期画像：样本不足（规则库无 BFX 画像），仅弹幕口径「控龙差」+ 打野 grizzly 有 LCK 履历</li>
+      </ul>
+    </div>
+  </div>
+  <h3>高价值用户（规则层 top）</h3>
+  <p class="s">我是一颗小虎牙 149 · 克神的肥婆初恋 39 · 低调但实力 39 · 真没有名字取了 38 · 耀阳黄金集团继承人- 37 · Nioukey7 35 · zxy 35 · 卡布达 35（条数口径）</p>
+</section>
+
+<section class="card">
+  <h2><span class="no">5</span>人员画像（带提及量）</h2>
+  <table>
+    <tr><th>对象</th><th>提及</th><th>评价与语境</th></tr>
+    <tr><td>皇子（HLE G2 打野）</td><td class="num">358</td><td>争议核心：「皇子演员/买了/没开过大/连续三波团不放大不闪现/王子比赛输了钱赢了/查手机」；反向玩梗「皇子我爱你」「我是左边 有皇子我很放心」</td></tr>
+    <tr><td>女警（HLE G2 ADC 英雄）</td><td class="num">106</td><td>「女警没赢过/全是输/gg的女警都输了/残疾女警」；反方「女警这英雄后期输不了」—— 负符号但 HLE 仍赢下该局</td></tr>
+    <tr><td>巴德（HLE G2 辅助）</td><td class="num">91</td><td>「内鬼/最佳第六人/重注了对面/只定自己人/精准救人(反讽)」；背景「搭档过三冠王姑妈鱼丝」</td></tr>
+    <tr><td>老黑/奎桑提（BFX G2 上单）</td><td class="num">56</td><td>「右边打不动老黑」「老黑如果在正面，右边等死」—— BFX 前排硬度认可</td></tr>
+    <tr><td>兰博（HLE G2 上单）</td><td class="num">45</td><td>「兰博大招不等皇子先开 直接放」「这兰博看着巨菜」</td></tr>
+    <tr><td>烬（BFX G2 ADC）</td><td class="num">40</td><td>「落后40刀/演员/歪把子/熟练度真的不如我」「这个烬真的是上把轮子妈？」</td></tr>
+    <tr><td>盲僧（首局打野）</td><td class="num">38</td><td>「好帅的盲僧/神僧/MVP」+ LPL 抢人玩梗；身份多口径（曾 HLE 二队 / UP 前打野 / DK 二队被买走），未确认</td></tr>
+    <tr><td>奇亚娜/琪亚娜（BFX G2 打野）</td><td class="num">32</td><td>「琪亚娜没胜率」「左边野王，奇亚娜表演秀」「奇亚娜还送」「被皇子单杀拿一血」</td></tr>
+    <tr><td>安妮（BFX G2 中单）</td><td class="num">30</td><td>「安妮胜率不是很低吗」「安妮不配赢吧」「后期安妮和打野闪现秒了女警」</td></tr>
+    <tr><td>蔚（HLE G3 打野）</td><td class="num">29</td><td>「绝活魏」「韩一蔚」（正锚点）；「他的蔚也没有r的」「右边打野进去就死」（反方）</td></tr>
+    <tr><td>grizzly</td><td class="num">5+</td><td>曾 HLE 二队 → HLE 一线（Clid 出事后顶替，LCK 进季后赛）→ 现效力本场（推测 BFX 打野，未确认）</td></tr>
+    <tr><td>超威/Faker/Zeus/小天</td><td class="num">1–8</td><td>玩梗对照（「怎么超威在bfx」「对面亚索是Faker」「HLE有一个人好像小天啊」「咋上单不是宙斯」），<b>非阵容结论</b></td></tr>
+  </table>
+  <div class="empty">规则层将「33」归类为选手：经原文核验为盘口「大33」线位与击杀滚动（「大33收」「33-20=13」），非选手 —— 本页已修正归类，建议同步修正规则层 JSON。</div>
+</section>
+
+<section class="card gray">
+  <h2><span class="no">6</span>灰信号汇总 —— <b>观众质疑，非结论</b></h2>
+  <h3>规模与分布</h3>
+  <ul>
+    <li>规则层聚合 42 条；原文核验（含重叠）：演员/内鬼类 33、假赛类 11、剧本类 5、买了/卡盘类 22；集中时段 <span class="t">10:43–11:04</span></li>
+    <li>预警等级：<b>低–中</b>（单直播间、无两路共振、与玩梗文化高度混叠、无盘口重合硬证据）</li>
+  </ul>
+  <h3>三类指向</h3>
+  <ul>
+    <li><b>HLE 皇子/巴德操作质疑（G2 末段）</b>：「内鬼巴德」「巴德重注了对面」「皇子纯内鬼」「这么激动是不是买了」「都是奥斯卡」「这包假」「王子比赛输了钱赢了」「900血不惩戒 跑去开送」</li>
+    <li><b>赛果剧本叙事</b>：「我是穿越者，剧本让二追三」「第二把韩华就会玩了 看吧 老剧本了」「第三把还是韩华势如破竹 最后3-2被拿下」；G3 BP 期「这是要开演的节奏啊」「会送一把吗」「经典面子局」「放一把吗」—— 指向 HLE 是否「送一局」</li>
+    <li><b>盘口操控叙事</b>：「解说买的小31.5」「一直在诱客队大概率3-1。3-0带走」「就杀你们这种一直追高水的」；<b>反方弹幕</b>「加赛只能左右输赢，精确时间、人头，控不住」「人家推演了几十种情况，用最大风险情况开的盘，你说别人卡」</li>
+  </ul>
+  <h3>纪律与市场含义</h3>
+  <ul>
+    <li>纪律：灰信号（假赛/剧本/卡盘质疑）只作聚合风险标注与盘口对照素材，<b>不作为假赛证据</b>；对外呈现一律写明「观众质疑，非结论」（DANMU_CAPTURE_RULES）。</li>
+    <li>市场含义：观众质疑集中在 HLE 操作（皇子/巴德）与「送一局」叙事；若市场定价了「HLE 放局」（2-1/3-1），而实际 3-0 兑现，HLE 赢盘侧可能被低估；反之「送局」兑现则 2-1。仅观察点，不构成任何方向结论，须配合盘口/价格验证与风控。</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="no">7</span>联赛规律与版本符号</h2>
+  <ul>
+    <li><b>「小ck 无 3-0」规律（观众口径）</b>：「张硕我看小ck三年从来没有3-0的比赛」（×4，11:19–11:23）「不可能3-0的，尤其是这种小ck的比赛」「次级水平差距不大」—— 与「送一局/面子局」叙事直接联动，<b>赛后回填验证</b></li>
+    <li><b>BFX 控龙规律</b>：「bfx确实不喜欢控龙」「这BFX就是不控龙」（×2）—— 可跨场沉淀的队伍画像</li>
+    <li><b>版本符号</b>：火龙魂争议（「火龙魂是最强龙魂」vs「火龙魂很垃圾没用」）；女警「没赢过」负符号；大树近期负符号（「第一场第三局也是选大树然后输掉」）；蔚=绝活正符号；皇子「回归基本功」玩梗符号</li>
+    <li><b>管理/场外</b>：「韩华花钱养二队这帮飞舞」「二队骗钱给一队买人」「二队也在线下了？？」（线下赛场馆疑问）；「小ck当lec看就行」（强度调侃）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="no">8</span>观众预测与可验证悬念（预测验证框架）</h2>
+  <table>
+    <tr><th>预测</th><th>口径</th><th>回填项</th></tr>
+    <tr><td>HLE 3-0 横扫</td><td>「3-0 稳稳的幸福」「3-0 早点休息」「3-0，早点备战解说杯」（共识派）</td><td>第三局结果 + 系列赛终局比分</td></tr>
+    <tr><td>HLE 送一局 → 2-1 / 3-1</td><td>「明牌2-1」「纯2:1呀」「放一把吗」「让一局了」（分歧派）</td><td>第三局是否兑现「送局」叙事</td></tr>
+    <tr><td>让二追三剧本</td><td>「我是穿越者，剧本让二追三」「让二追二?」（少数剧本党）</td><td>后续局数（若成立为极端信号）</td></tr>
+    <tr><td>战绩锚点回填</td><td>女警没赢过（G2 HLE 女警已胜）→ 应验/未应验；大树近期输（G3）；卢锡安胜率低（G3）；韩一蔚（G3）</td><td>官方 BP + 各局胜负</td></tr>
+  </table>
+  <p class="s">预测均为弹幕口径，非结果；赛后按 result-verification 流程回填。</p>
+</section>
+
+<section class="card">
+  <h2><span class="no">9</span>盘口/数字讨论</h2>
+  <ul>
+    <li><b>具体数字</b>：受让 8.5 → 7.5（10:07）；大 33（G1，10:02「大33收」）；小 29 / 小 37.5（09:59）；小 33.5（10:06–10:08）；小 31.5（10:52「解说买的小31.5」）；「32 7.5 双卡双待」</li>
+    <li><b>击杀滚动口径</b>（观众刷屏，精确比分未确认）：32-16、33-20、33-25、33-28、26-25 等</li>
+    <li><b>盘口状态</b>：「平水了」「盘口关了」（G1 末段关盘）；「两边人头全是打野的没什么用」（人头结构讨论）</li>
+    <li><b>观众叙事</b>：「左边实力可以，这盘口一直在诱客队」「一直在诱客队大概率3-1。3-0带走」「就杀你们这种一直追高水的」「你们对韩华1和2队都无知，只吃最高的水」—— 口径：盘口诱导客队（BFX）资金，多数看好 HLE；方向待行情对照验证</li>
+    <li><b>Polymarket 市场</b>：本场为弹幕推断对阵，情报库暂无事件 slug 登记 —— <b>样本不足/待登记</b>，不硬造链接</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="no">10</span>情报含义与后续观察点（LONG/SHORT 分层）</h2>
+  <ul>
+    <li><span class="tag pos">LONG HLE（弹幕口径观察）</span>2-0 领先 + 阵容评价好（「右边自选阵容」）+ 受让线收窄 → 观察 G3 是否 3-0 兑现；若「送局」叙事兑现则为反向风险</li>
+    <li><span class="tag mid">SHORT/对冲观察 BFX 反弹</span>G3 经济领先 + 「小ck 无 3-0」规律 + 「放一把」叙事 → 若 HLE 让局则 2-1，BFX 咬盘</li>
+    <li><span class="tag warn">风险提示</span>灰信号集中质疑 HLE 操作；单直播间口径，需多路/官方交叉；本页全部方向仅为赛后回填素材，不构成交易指令</li>
+    <li><b>可跨场沉淀（每页至少 1 条）</b>：① BFX 不控龙规律；② 「小ck 无 3-0」观众规律（待验证）；③ 女警/大树近期负符号；④ grizzly 职业履历（HLE 二队→一线→现 BFX 口径）；⑤ 皇子「演员质疑」事件留痕（gray_entities 待录入）</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <ul>
+    <li>原始弹幕：docs/data/danmu/huya/2026-08-24_huya_shuoshuo.jsonl · 3377 条 · 09:54:12–11:33:59 UTC · room 323444</li>
+    <li>规则层情报：runtime/vps_intel/lck_hle_bfx_intel.json · 3197 条（窗口 09:54–11:27）· 活跃用户 954 · 34.3 条/分 · density_bursts/odds/gray 字段</li>
+    <li>多路聚合页：reports/intel_danmu_live_vps_2026-08-24.html（含本房健康状态，多路合计峰值 10:02 487 条/分）</li>
+    <li>生成方式：本页由 Agent 按 intel-report 技能 + INTEL_HTML_TEMPLATE（B 型）+ LIVE_INTEL_SCHEMA 生成，弹幕原文逐条核验</li>
+  </ul>
+  <h3>待确认与修正记录（一次错误原则）</h3>
+  <ul>
+    <li><b>待官方确认</b>：对阵/联赛（小ck vs K 杯）、系列赛比分（HLE 2-0 口径）、第三局阶段、各局 BP/阵容对应</li>
+    <li><b>修正 1（词表缺口）</b>：规则层队伍列表缺 BFX（原文 15+ 条漏计）、HLE 仅计 23（漏韩华 82 / 汉化 25）→ 需登记词表并跑回归（防错规则 7 同类）</li>
+    <li><b>修正 2（归类错误）</b>：规则层 players 中的「33」经核验为盘口「大33」线位讨论，非选手 → 建议修正 JSON 归类</li>
+    <li><b>修正 3（玩梗甄别）</b>：超威/Faker/Zeus/小天 等为观众玩梗对照，不计入阵容/人员结论</li>
+    <li><b>样本不足项</b>：BFX 长期画像、Polymarket slug、高价值用户深度画像、G3 最终阵容 —— 不硬造</li>
+  </ul>
+</section>
+
+<p class="note">
+弹幕为低可信度信号，需聚合使用；灰信号（假赛/剧本/卡盘质疑）只作风险标注非证据；结果/比分以官方为准。<br>
+规则：knowledge/DANMU_CAPTURE_RULES.md · 模板：knowledge/INTEL_HTML_TEMPLATE.md（B 型=A 型局中快照，10 段骨架）· 生成时间：2026-08-24 UTC<br>
+本页为局中版本；比赛结束后按「比赛结束自动情报流水线」升级为 A 型整场复盘页并回填验证闭环。
+</p>
+
+</div></body></html>

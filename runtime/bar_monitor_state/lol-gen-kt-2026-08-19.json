@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "lol-gen-kt-2026-08-19",
+  "targets": {
+    "lol-gen-kt-2026-08-19-game1|Gen.G": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.735,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-gen-kt-2026-08-19-game2|Gen.G": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.735,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-gen-kt-2026-08-19|Gen.G": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.81,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    }
+  }
+}

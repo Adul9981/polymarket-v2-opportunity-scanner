@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync intel pages + auto index to danmu-intel site
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/danmu-intel
+ExecStart=/opt/danmu-intel/.venv/bin/python tools/publish_intel_pages.py --push

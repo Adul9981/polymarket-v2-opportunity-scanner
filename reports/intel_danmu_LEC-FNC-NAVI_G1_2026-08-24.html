@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEC 2026 Summer · FNC vs NAVI G1 局后情报（修正版）· 2026-08-24</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#ffffff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.65; padding:24px 14px 60px; }
+  .wrap { max-width:880px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:22px 24px; margin:16px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:24px; font-weight:700; letter-spacing:-.01em; }
+  h2 { font-size:18px; font-weight:650; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  h2::before { content:""; width:4px; height:18px; background:var(--accent); border-radius:2px; display:inline-block; }
+  .meta { color:var(--sub); font-size:13px; margin-top:8px; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--accent); border-radius:999px; padding:2px 10px; font-size:12px; margin:2px 4px 2px 0; }
+  .tag.live { background:#e8f6ec; color:var(--good); }
+  .tag.warn { background:#fdf0e6; color:var(--warn); }
+  .tag.bad { background:#fdf1f0; color:var(--bad); }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin-top:8px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:12px; padding:8px 10px; border-bottom:1px solid var(--line); }
+  td { padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .num { font-weight:650; color:var(--accent); }
+  .q { background:#f7f7fa; border-left:3px solid var(--accent); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:14px; color:#333; }
+  .warn { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:14px; }
+  .good { background:#f0faf3; border-left:3px solid var(--good); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:14px; }
+  .bad { background:#fdf1f0; border-left:3px solid var(--bad); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:14px; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:14px; }
+  .footer { color:var(--sub); font-size:12px; text-align:center; margin-top:24px; }
+  .stage { font-size:13px; color:var(--sub); }
+  @media (max-width:600px){ body{padding:12px 8px 40px;} .card{padding:16px;} h1{font-size:20px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="card">
+  <h1>FNC vs NAVI · G1 局后情报（修正版）</h1>
+  <div class="meta">
+    LEC 2026 Summer · 常规赛第 5 周 · BO3 第 1 局 <b>已结束</b><br>
+    结果：<span class="tag live">NAVI 1-0 FNC（官方比分源 + 用户确认）</span>
+    <span class="tag bad">修正：本页初版误标 FNC 1-0，2026-08-25 已更正</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>0. 修正声明（一次错误原则）</h2>
+  <div class="bad">
+    <b>错误：</b>初版将 G1 归属判定为 FNC 胜（"弹幕口径"）。<br>
+    <b>根因：</b>把英文 Twitch 弹幕的<b>反讽/玩梗</b>（"FNC ARE BACK / HOLY FNC / FNC is playing well.. mhm" =
+    嘲讽 FNC 老毛病、笑 FNC 送）误读为 FNC 庆祝，并用单方弹幕情绪覆盖了比分机器人
+    （NAVI 1-0）与官方比分源（Sheep Esports NAVI 1-0）的结构性证据。<br>
+    <b>防错规则已固化（AGENTS.md 第 14 条）：</b>赛果判定优先级 =
+    官方/比分机器/权威比分站/用户确认 &gt; 弹幕情绪；英文弹幕必须先做反讽语气判定，
+    与结构源冲突时禁止用弹幕覆盖结构源。
+  </div>
+</div>
+
+<div class="card">
+  <h2>1. G1 结果总览（官方口径）</h2>
+  <ul>
+    <li><b>NAVI 1-0 FNC</b>：G1 NAVI 获胜（比分机器人 Moobot "NAVI 1-0 / GAME 1 NAVI WINS" + Sheep Esports + 用户确认三方一致）；</li>
+    <li>G1 过程（弹幕口径）：Rhilech 23:14 一度 int 被击杀，但 NAVI 仍赢下首局；FNC 侧 SamD 对位压制下路未兑现（SamD 属于 NAVI）；</li>
+    <li>修正后 G1 锚点验证：<b>Rhilech 三绝正锚应验</b>（NAVI 胜）、<b>FNC Locke 负锚应验</b>（FNC 输）。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>2. BP 锚点验证（修正后）</h2>
+  <table>
+    <tr><th>锚点</th><th>方向</th><th>终局验证（修正后）</th></tr>
+    <tr><td>NAVI·Rhilech·Aatrox（三绝之一）</td><td>正锚</td><td><b>应验</b>（NAVI 胜 G1；虽 Rhilech 局中 int 仍赢）</td></tr>
+    <tr><td>FNC·英雄 Locke</td><td>负锚</td><td><b>应验</b>（FNC 输 G1，Locke 选角负面方向兑现）</td></tr>
+    <tr><td>Viktor 今日禁用</td><td>版本情报</td><td>确认：昨日取消比赛触发 bug，Viktor 禁用（弹幕口径）</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>3. 灰信号（G1，8 条 · 预警中）</h2>
+  <div class="warn">
+    G1 收官窗口（23:32–23:34）集中质疑：<b>"明着假赛"（×3）/ "演戏" / "故意放资源" / "避战" / "只有菠菜的人看"</b>。
+    主要来自硕硕 323444 房。<br>
+    <b>指向对象待复核</b>：初版记录为"NAVI 侧"，但随 G1 赛果修正（NAVI 胜），质疑对象需重新核对
+    （可能指向 FNC 侧崩盘或整局观感）；已标注待复核，不硬下结论。<br>
+    <span style="font-size:12px">纪律声明：观众质疑非结论；若兑现方向成立，对应侧价格可能失真（反手参考需盘口验证）。</span>
+  </div>
+</div>
+
+<div class="card">
+  <h2>4. 选手归属（官方 rosters，修正）</h2>
+  <table>
+    <tr><th>队</th><th>上</th><th>野</th><th>中</th><th>下</th><th>辅</th></tr>
+    <tr><td>FNC</td><td>Soboro</td><td>Razork</td><td><b>Vladi</b></td><td>Upset</td><td>Lospa</td></tr>
+    <tr><td>NAVI</td><td>Maynter</td><td><b>Rhilech</b></td><td><b>Poby</b></td><td>SamD</td><td>Parus</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>5. 数据与溯源</h2>
+  <table>
+    <tr><th>源</th><th>状态</th></tr>
+    <tr><td>比分机器人 Moobot（LEC 官方 Twitch）</td><td>NAVI 1-0 / GAME 1 NAVI WINS</td></tr>
+    <tr><td>Sheep Esports（官方比分页）</td><td>NAVI 1 : FNC 0（Aug 24 · 17:15 CEST）</td></tr>
+    <tr><td>用户确认</td><td>G1 NAVI 1:0 获胜</td></tr>
+    <tr><td>弹幕 5 路 JSONL</td><td>作为过程佐证（情绪侧不可单独定胜负）</td></tr>
+  </table>
+  <p class="stage">bp_signals 已同步修正（rhilech_aatrox / locke_pick 判定翻转）；matches.json 已记录修正日志。</p>
+</div>
+
+<div class="footer">
+  修正版 2026-08-25 · 灰信号仅为观众质疑非结论 · 过程数据以官方结算为准
+</div>
+
+</div>
+</body>
+</html>

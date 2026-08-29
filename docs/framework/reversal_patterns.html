@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反转形态库 · Polymarket 电竞</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --text:#1d1d1f; --text2:#6e6e73;
+    --line:#e8e9ec; --blue:#0070f2; --green:#1a7f37; --red:#d13438;
+    --amber:#b26a00; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:48px 28px 80px}
+  .hero{padding:8px 0 30px}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+  h1{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:8px 0 10px}
+  .sub{color:var(--text2);font-size:16px;max-width:780px}
+  .meta{margin-top:14px;font-size:13px;color:var(--text2);display:flex;gap:18px;flex-wrap:wrap}
+  .meta b{color:var(--text);font-weight:600}
+  nav{position:sticky;top:0;background:rgba(245,246,248,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);z-index:10;padding:12px 0}
+  nav .wrap{padding:0 28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .chip{font-size:13px;font-weight:600;color:var(--text2);background:var(--card);border:1px solid var(--line);
+        padding:7px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+  .chip:hover{color:var(--blue);border-color:var(--blue)}
+  .chip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}
+  section{padding-top:40px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+  .sec-head h2{font-size:24px;font-weight:700;letter-spacing:-.01em}
+  .sec-head .count{font-size:13px;color:var(--text2);font-weight:600}
+  .note{font-size:13px;color:var(--text2);background:var(--card);border:1px solid var(--line);
+        border-radius:12px;padding:10px 16px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .pipeline{background:linear-gradient(135deg,#0b3d91 0%,#0070f2 100%);color:#fff;border-radius:var(--radius);
+            padding:26px 30px;margin-bottom:10px;box-shadow:var(--shadow)}
+  .pipeline h3{font-size:18px;font-weight:700;margin-bottom:10px}
+  .pipe-steps{display:flex;gap:10px;flex-wrap:wrap;align-items:center;font-size:14px}
+  .step{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:10px 16px;font-weight:600}
+  .step small{display:block;font-weight:400;opacity:.85;font-size:12px;margin-top:2px}
+  .arrow{opacity:.8;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;border:1px solid var(--line);
+        transition:transform .18s ease,box-shadow .18s ease;display:flex;flex-direction:column;gap:10px}
+  .card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 16px 36px rgba(0,0,0,.10)}
+  .card-head{display:flex;justify-content:space-between;align-items:center}
+  .badge{font-size:11px;font-weight:700;letter-spacing:.06em;color:#fff;padding:4px 10px;border-radius:999px}
+  .badge.A{background:var(--green)} .badge.B{background:var(--red)} .badge.C{background:var(--blue)}
+  .shape-id{font-size:12px;font-weight:700;color:var(--text2);letter-spacing:.05em}
+  h3{font-size:19px;font-weight:700;letter-spacing:-.01em}
+  .spark{width:100%;height:74px;display:block}
+  .desc{font-size:13.5px;color:var(--text2)}
+  .tags{display:flex;gap:8px;flex-wrap:wrap}
+  .tag{font-size:12px;font-weight:600;padding:4px 10px;border-radius:8px;background:#f0f2f5;color:#3a3a3c}
+  .tag.scope{background:#e8f1ff;color:#0b5bb8}
+  .route{font-size:13px}
+  .route b{font-weight:700}
+  .route b.g{color:var(--green)} .route b.b{color:var(--blue)}
+  .samples{font-size:13px;color:var(--text)}
+  .samples .lbl{font-weight:700;color:var(--green)}
+  .risks{font-size:13px;color:var(--text)}
+  .risks .lbl{font-weight:700;color:var(--red)}
+  .protect{font-size:12.5px;color:var(--text2);background:#f7f8fa;border-radius:10px;padding:9px 12px}
+  .protect .lbl{font-weight:700;color:var(--blue)}
+  .foot{margin-top:60px;border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--text2)}
+  .foot b{color:var(--text)}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  @media (max-width:720px){
+    h1{font-size:30px}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="chip" href="#sec-game"><span class="dot" style="background:var(--green)"></span>小局形态</a>
+  <a class="chip" href="#sec-match">整局形态</a>
+  <a class="chip" href="#sec-common">通用形态</a>
+  <a class="chip" href="#sec-mechanism">深蹲判别器</a>
+  <a class="chip" href="matchup_forecast.html">⚔️ 对战形态预判</a>
+  <a class="chip" href="strategy_library.html">→ 策略总清单</a>
+</div></nav>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Pattern Library · 现象层</div>
+    <h1>反转形态库</h1>
+    <p class="sub">把 1 分钟粒度价格序列里反复出现的图形全部登记成形态。
+    分类与策略一致：<b>小局第一、整局第二、通用收尾</b>——你大部分观测来自小局。
+    形态回答"发生了什么形状"，路由到策略，再落到保护；另配<b>深蹲判别器</b>区分可接深蹲与死亡螺旋。</p>
+    <div class="meta"><span>最后更新 <b>2026-08-12</b></span><span>形态 <b>14</b> 种 + 判别器</span><span>数据 <b>30 组快照 + CS/Dota 回测序列</b></span><span>分类工具 <b>v1.3</b></span></div>
+  </header>
+
+  <div class="pipeline">
+    <h3>现象 → 策略 → 验证 → 自动化</h3>
+    <div class="pipe-steps">
+      <span class="step">形态<small>识别图形</small></span><span class="arrow">→</span>
+      <span class="step">路由<small>匹配策略</small></span><span class="arrow">→</span>
+      <span class="step">回测/复盘<small>验证期望</small></span><span class="arrow">→</span>
+      <span class="step">执行<small>扫描 + 挂单 + D2/D3</small></span>
+    </div>
+  </div>
+
+  <section id="sec-game">
+    <div class="sec-head"><h2>小局形态</h2><span class="count">Game / Map Winner 主战场 · 8 种</span></div>
+    <div class="note">主要观测于小局；整场 Moneyline 同样出现时在卡片内标注。</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A1</span></div>
+        <h3>V 型极值反转</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,36 52,32 88,62 96,58 116,24 140,13 164,7 226,3"/>
+          <circle cx="226" cy="3" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">曾 ≥25c，跌入 &lt;10c（含 &lt;5c 极值），随后 1-10 分钟直线拉到 70-100c。</p>
+        <div class="tags"><span class="tag scope">小局</span><span class="tag scope">整场同现</span></div>
+        <div class="route">路由策略：<b class="g">S1-深反 + 反弹确认加仓</b></div>
+        <div class="samples"><span class="lbl">正样本</span> WE G1 6.5→100 · WE G2 0.65→100 · BRO G1 1.5→99.95 · TES G1 4.5→100 · <b>FOKUS G1 9→99.95（CS2 首证，12 分钟）</b> · NS/T1 G1 4.5→100 · <b>K27 整场 6→100（16 倍）/ Map2 11→100（CS2 让一追二，08-09）</b> · DNS 整场 11.5→100（08-10）· GEN vs DNS 整场 5.5→92.5 / G1 7.5→100（08-10）· HLE 整场 11.5→100（08-10）· <b>RE 整场 17.5→61.5（Dota2，08-11）· LevelUP 整场 9.5→100（Dota2，08-11）· NSEA/DKC G2 4.5→100 / 整场 1.5→100 / Over 5.5→100（LCK CL 让一追二，08-11）</b></div>
+        <div class="risks"><span class="lbl">反例</span> 08-05 接刀九连负 · DNSC/DKC 8c 后归零 · BLG G1 0.1c 后归零</div>
+        <div class="protect"><span class="lbl">保护</span> 彩票仓化（预算内可归零）+ D2 深反版（70/85 动作点）；整场版：VG/YB 7c、WE/AL Moneyline</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A5</span></div>
+        <h3>W 型双底</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,38 44,58 76,32 96,34 112,60 126,58 152,20 180,9 226,3"/>
+          <circle cx="226" cy="3" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">第一次反弹后二次探底（不破前低或略破），再反转。</p>
+        <div class="tags"><span class="tag scope">小局</span></div>
+        <div class="route">路由策略：<b class="g">深反 + 反弹确认</b>（第二底才是接刀与深反的分界）</div>
+        <div class="samples"><span class="lbl">正样本</span> WE G1 8.5→6.5 二次探底 → 75.5→100 · <b>DNS G2 19.5→99.5（08-10，A2+A5 双标签）</b></div>
+        <div class="risks"><span class="lbl">反例</span> 假反弹后破位（见 B3）</div>
+        <div class="protect"><span class="lbl">保护</span> 只在第二底确认后进，第一底不接</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A6</span></div>
+        <h3>反弹确认</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,40 54,36 74,61 80,59 92,53 98,48 124,20 154,12 226,3"/>
+          <circle cx="92" cy="53" r="4" fill="#0070f2"/>
+          <circle cx="226" cy="3" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">&lt;10c 段低点后出现单根（1 分钟）拉升 ≥10c，确认反弹存在再追，不接刀。</p>
+        <div class="tags"><span class="tag scope">小局为主</span><span class="tag scope">整场同现</span></div>
+        <div class="route">路由策略：<b class="b">彩票机器第二层</b>（主触发：单根 +10c）</div>
+        <div class="samples"><span class="lbl">回测</span> 4 触发平均 +13.7/笔（ROI +91%）；WE G2 13c 上车 +425%；CS2 同型：FOKUS G1 9c 触发</div>
+        <div class="risks"><span class="lbl">反例</span> 假拉升后继续阴跌（DNSC/DKC 26→62.5 后归零；HLE Moneyline 止损 -48.9%）</div>
+        <div class="protect"><span class="lbl">保护</span> 确认仓 $10-20 + 立即挂 50/70/85 止盈与止损</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge B">崩塌类</span><span class="shape-id">B1</span></div>
+        <h3>尾盘崩塌</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#d13438" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,8 140,10 164,12 180,30 190,54 202,61 226,61"/>
+          <circle cx="226" cy="61" r="3.4" fill="#d13438"/>
+        </svg>
+        <p class="desc">领先 60-99c 在几分钟内崩到 0。</p>
+        <div class="tags"><span class="tag scope">小局为主</span><span class="tag scope">整场同现</span></div>
+        <div class="route">意义：<b class="b">D2 锁盈的最强论据</b>，不是入场策略</div>
+        <div class="samples"><span class="lbl">样本</span> BFX G1 98.5→0.05（1 分钟）· BLG G1 95.5→0.05 · PAR G1 85.5→0.05（CS2）· WE G1 67.5→0.05 · BRO G3 67→0.05 · <b>DNS G1 77.5→0.05（08-10）</b>；整场：NS/T1 Moneyline 79.5→0.5</div>
+        <div class="protect"><span class="lbl">保护</span> 75-85c 锁盈 80%，只留彩票仓（BFX 98.5c 未锁盈 = 裸奔）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge B">崩塌类</span><span class="shape-id">B3</span></div>
+        <h3>假反弹后归零</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#d13438" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,50 72,54 90,32 112,20 132,24 152,44 178,58 226,61"/>
+          <circle cx="226" cy="61" r="3.4" fill="#d13438"/>
+        </svg>
+        <p class="desc">中位/低位反弹后继续阴跌归零（接刀陷阱）。</p>
+        <div class="tags"><span class="tag scope">小局为主</span><span class="tag scope">整场同现</span></div>
+        <div class="route">意义：<b class="b">"反弹"必须叠加时间窗口 / 流动性 / P5 上下文过滤</b></div>
+        <div class="samples"><span class="lbl">样本</span> DNSC/DKC G1 26→62.5→0.05 · YB1 G2 45→15→0 · WE vs TT 的 WE 侧 · <b>T1 vs HLE G2 16.5→78.5→0.05（08-08，反弹确认后必须跟止损）</b> · 08-05 九连负</div>
+        <div class="protect"><span class="lbl">保护</span> 无过滤低吸 = 接刀；用反弹确认 + 止损兜底</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge B">崩塌类</span><span class="shape-id">B4</span></div>
+        <h3>直线阴跌</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#d13438" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,20 70,28 120,40 170,50 226,59"/>
+          <circle cx="226" cy="59" r="3.4" fill="#d13438"/>
+        </svg>
+        <p class="desc">无有效反弹的单边下行。</p>
+        <div class="tags"><span class="tag scope">小局为主</span><span class="tag scope">整场同现</span></div>
+        <div class="route">意义：<b class="b">方向判断失败；D3 止损价值在早</b></div>
+        <div class="samples"><span class="lbl">样本</span> Monfils 37→12→0 · Royer 28→0 · HLE G1 50→20→0 · <b>NAVI G2 69.5→0.05（LEC 干净翻转，22 分钟）</b> · LGD 整场 · <b>K27 Map1 43→0.05 / MOUZ G1 50→0.05 / HLE G1 45→0.05（08-09/08-10）</b> · <b>RE G1 55→0.1 / LevelUP G1 53.5→0.1（Dota2）· DRXC G2 70.5→0.005（LCK CL，08-11 高位加仓归零反面）</b></div>
+        <div class="protect"><span class="lbl">保护</span> 30c 入场 20c 离场少亏约 67%；进场即挂止损</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge C">震荡类</span><span class="shape-id">C1</span></div>
+        <h3>中位震荡反复穿越</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#0070f2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,34 42,26 64,38 86,22 108,36 130,26 152,38 174,22 196,32 218,26 226,32"/>
+          <circle cx="226" cy="32" r="3.4" fill="#0070f2"/>
+        </svg>
+        <p class="desc">25-75c 来回、50% 穿越 ≥4 次。</p>
+        <div class="tags"><span class="tag scope">小局为主</span><span class="tag scope">整场同现</span></div>
+        <div class="route">路由策略：<b class="b">中位震荡多轮网格</b>（纠缠指数确认）</div>
+        <div class="samples"><span class="lbl">样本</span> GLYPH G2（10 次）· NS/T1 G1（6）· BFX G1（5）；整场：SPARTA / VG/YB / WE-TT Moneyline（5-7 次）</div>
+        <div class="protect"><span class="lbl">保护</span> 每场最多 2 轮、每轮 3 层买入；不无限加仓</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge C">震荡类</span><span class="shape-id">C2</span></div>
+        <h3>早期缩距</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#0070f2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,46 52,44 84,38 116,30 148,28 226,27"/>
+          <circle cx="226" cy="27" r="3.4" fill="#0070f2"/>
+        </svg>
+        <p class="desc">下狗 25-35c 快速拉到 40-55c（第一次确认）。</p>
+        <div class="tags"><span class="tag scope">小局</span></div>
+        <div class="route">路由策略：<b class="b">P-早建仓 / S2 场景</b>（早买区 35-45c）</div>
+        <div class="samples"><span class="lbl">样本</span> TT G1 37.5→50.5→79.5 · WE vs TT 复盘"35-45c 早买区"；<b>五五开开局碾压变体</b>：ACE/VAN · VAE/OG · LONE/PHA · BRO G2（败方 44-53c 开局归零 = P-早建仓反面）</div>
+        <div class="protect"><span class="lbl">保护</span> 早买小仓 + D2；不追 &gt;60c</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-match">
+    <div class="sec-head"><h2>整局形态</h2><span class="count">Moneyline 专属 · 2 种</span></div>
+    <div class="note">只在 BO3/BO5 整场市场定义；与整局策略（P5 / 下狗反转 / 死亡螺旋纪律）对应。</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A4</span></div>
+        <h3>下狗整场反转</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,44 44,42 52,38 76,36 82,28 108,24 116,15 140,12 148,6 226,3"/>
+          <circle cx="226" cy="3" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">Moneyline 低开（20-35c 甚至 &lt;10c）→ 系列赛一路赢到 100，G1/G2 逐局抬升。</p>
+        <div class="tags"><span class="tag scope">整场专属</span></div>
+        <div class="route">路由策略：<b class="g">下狗整场反转早买</b> · 早买区 <b class="g">35-45c</b></div>
+        <div class="samples"><span class="lbl">正样本</span> TT 27.5→100 · TES 14.5→100 · WE/AL Moneyline 13.5→100 · VG/YB 7→100 · BRO Moneyline 21.5→100 · <b>DNS 整场 11.5→100（DNF 让一追二）· DNS 整场 5.5→92.5（GEN 弱克强，08-10）</b></div>
+        <div class="risks"><span class="lbl">反例</span> 首局赢后被 G2 打回（需要系列赛窗口）</div>
+        <div class="protect"><span class="lbl">保护</span> 强制 D2；下狗确认早买区（35-45c）优于追深跌</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge B">崩塌类</span><span class="shape-id">B2</span></div>
+        <h3>死亡螺旋</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#d13438" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,10 80,14 98,34 108,40 132,46 152,56 172,61 226,61"/>
+          <circle cx="226" cy="61" r="3.4" fill="#d13438"/>
+        </svg>
+        <p class="desc">Moneyline 热门近胜被翻 → 一路归零。</p>
+        <div class="tags"><span class="tag scope">整场专属</span></div>
+        <div class="route">意义：<b class="b">整场持有纪律</b>——G1 被翻后减仓/止损（D3）</div>
+        <div class="samples"><span class="lbl">样本</span> BFX Moneyline 78.5→0.05 · BLG Moneyline 85.5→0.05 · NS/T1 Moneyline 79.5→0.5 · BRO vs DRX 67→0.05 · <b>DNS G1 77.5→0.05（08-10，小局死亡螺旋）</b></div>
+        <div class="protect"><span class="lbl">保护</span> 不留着赌 G2；D3 止损 + D2 高位保护</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-common">
+    <div class="sec-head"><h2>通用形态</h2><span class="count">小局 + 整场都大量观测 · 3 种</span></div>
+    <div class="note">两边实证均衡，路由策略也两边通用（S1-标准 / S2 / 中位震荡）。</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A2</span></div>
+        <h3>中位 U 型反转</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,28 66,30 100,52 136,54 176,22 212,10 226,6"/>
+          <circle cx="226" cy="6" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">13-35c 深跌后回升到 70-100c，斜率缓于 V 型。</p>
+        <div class="tags"><span class="tag scope">小局</span><span class="tag scope">整场</span></div>
+        <div class="route">路由策略：<b class="g">S1-标准 / P5 E-A2</b></div>
+        <div class="samples"><span class="lbl">正样本</span> DNF/BRO G2 13.5→100 · GLYPH G2 13.5→73 · <b>SK G2 30.5→99.95（LEC）</b> · <b>Liquid G1 16.5→99.95（CS2，5 分钟粒度）</b> · <b>CFO G2 24.5→100（LCP）</b> · <b>CFO G3 35→92.5（LCP，阿卡丽信号 50→95）</b>（小局）；SPARTA 33.5→100 · TES Moneyline 14.5→100（整场）· <b>08-10 ×8：MOUZ G2 18.5→100 · DNS G2 19.5→99.5 · DNS Over 18.5→100 · DNS G2（GEN 13→99.5）· HLE G2 21.5→100 · HLE Over 22.5→99.5 · KC 一血 G1/G2</b> · <b>08-11 ×3：RE G2 27→100 · LevelUP G2 18→100 · DRXC G1 29.5→100</b></div>
+        <div class="risks"><span class="lbl">反例</span> 40-50c 破位仍加仓（中位接刀）</div>
+        <div class="protect"><span class="lbl">保护</span> 买80回收 + D3 止损（跌破成本一半）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A3</span></div>
+        <h3>折价修复</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,16 58,15 92,34 118,42 146,36 182,24 214,12 226,8"/>
+          <circle cx="226" cy="8" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">强势方 65-80c 被压到 55-70c（深则 38-45c）后修复回 90-100。</p>
+        <div class="tags"><span class="tag scope">小局</span><span class="tag scope">整场</span></div>
+        <div class="route">路由策略：<b class="g">S2 热门回撤接</b></div>
+        <div class="samples"><span class="lbl">正样本</span> LNG/IG G1 38→100（小局）；NAVI 57.5→100 · SPARTA 66→33.5→100（整场）· <b>KC G1/G2 72.5→100 / 66→100（LEC 热门全程压制，08-09）</b> · <b>DNS 整场 18.5→75.5（K 杯阵容信息差一分钟重定价，08-11）</b></div>
+        <div class="risks"><span class="lbl">反例</span> 跌破 40c 仍按 S2 加仓（失效区）</div>
+        <div class="protect"><span class="lbl">保护</span> 45c 档主攻 + 跌破 40c 停加仓</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge C">震荡类</span><span class="shape-id">C3</span></div>
+        <h3>中位震荡后突破</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#0070f2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,34 50,28 80,38 110,30 140,34 170,26 192,16 214,8 226,4"/>
+          <circle cx="226" cy="4" r="3.4" fill="#0070f2"/>
+        </svg>
+        <p class="desc">长时间 35-65c 震荡后向 75/25 突破。</p>
+        <div class="tags"><span class="tag scope">小局</span><span class="tag scope">整场</span></div>
+        <div class="route">路由策略：<b class="b">突破 80+ 停止新开，只管理已有仓</b></div>
+        <div class="samples"><span class="lbl">样本</span> 早期形态库设计 · GLYPH G2 末端（73c 收）</div>
+        <div class="protect"><span class="lbl">保护</span> 终局封顶/归零形态禁止新开仓</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">反转类</span><span class="shape-id">A7</span></div>
+        <h3>强强对话错杀反转</h3>
+        <svg class="spark" viewBox="0 0 240 72" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#1a7f37" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" points="14,30 52,28 82,58 98,55 122,34 152,24 226,26"/>
+          <circle cx="226" cy="26" r="3.4" fill="#1a7f37"/>
+        </svg>
+        <p class="desc">双方实力接近（赛前 45-55 分）+ 一方被错杀到 &lt;30c（常 &lt;15c）后逆转回升。</p>
+        <div class="tags"><span class="tag scope">小局</span><span class="tag scope">整场</span></div>
+        <div class="route">路由策略：<b class="g">强强对话价值买入</b>（S1-标准 / 彩票仓）· <b class="b">联赛信誉过滤</b></div>
+        <div class="samples"><span class="lbl">正样本</span> PHA 13.5c（CS2 EYE/PHA）· HLE G2 22-25c（LCK，翻盘赢系列赛）· TT 27.5c · TES G1 4.5c · BRO G1 1.5c · <b>K27 Map2 11→100（CS2，08-09）· HLE1 Moneyline 11.5→100（LCK 让一追二，08-10）</b></div>
+        <div class="risks"><span class="lbl">反例</span> BLG/TES（LPL 假赛风险，错杀不兑现）——LCK/CS2 适用，LPL 降级</div>
+        <div class="protect"><span class="lbl">保护</span> 彩票仓 + D3；反弹确认后才给正常仓位</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-mechanism">
+    <div class="sec-head"><h2>深蹲判别器与机制</h2><span class="count">区分"可接深蹲"与"死亡螺旋" · 2026-08-08</span></div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-head"><span class="badge A">可接</span><span class="shape-id">快速反弹型深蹲</span></div>
+        <h3>接：彩票仓 + 反弹确认</h3>
+        <p class="desc">满足以下 4 条信号才把深蹲当机会：</p>
+        <div class="samples"><span class="lbl">信号</span> ① 低点后 5-10 分钟内首次有效反弹（单根 +10c 或相对低点 +50%），二次探底不破前低<br>② 触底发生在比赛窗口中后段（20-30 分钟窗口唯一正 EV），距终局仍有时间<br>③ 流动性保持（spread 不放大、持续成交），对手未锁 90c+<br>④ 诱因是单次事件（一波团战/回合失误）而非整局崩盘</div>
+        <div class="protect"><span class="lbl">保护</span> 确认仓 $10-20 + 立即挂 50/70/85 止盈与止损（D3）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge B">躲开</span><span class="shape-id">死亡螺旋型</span></div>
+        <h3>躲：不接</h3>
+        <p class="desc">出现以下任一特征即躲开：</p>
+        <div class="risks"><span class="lbl">清单</span> ① 无有效反弹的持续阴跌；二次探底破前低并创新低<br>② 低于阈值持续 &gt;20-30 分钟仍未修复；或临近终局才深跌<br>③ 流动性干涸（spread 拉大、价格长时间不更新）；Moneyline 同步死亡<br>④ 反例清单：B3 假反弹（反弹后破位归零）、B4 直线阴跌、终局深跌、同一小局双边都买</div>
+        <div class="protect"><span class="lbl">过滤顺序</span> 先认形态（A1/A6 vs B3/B4）→ 再叠加触底时机 + 时间剩余 + 流动性 + P5 上下文</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge C">统计</span><span class="shape-id">深跌基准率</span></div>
+        <h3>深跌基准率与形态气候</h3>
+        <p class="desc">28 个市场侧样本（低点 ≤20c 的 21 个）：</p>
+        <div class="samples"><span class="lbl">基准</span> 反弹到 50c：9/21 = <b>43%</b>（中位 16 分钟）· 70c：43%（20 分钟）· 100c：38%（27 分钟）——大部分深蹲是死的，靠确认层提高命中率</div>
+        <div class="route">形态气候：<b class="b">按日统计反转 vs 崩塌占比</b>——崩塌日（08-07 B1×4）上调 D2 锁盈、下调深反仓位；反转日反之</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge C">机制</span><span class="shape-id">容错 / 术语 / 未知通道</span></div>
+        <h3>数据容错与未知形态通道</h3>
+        <p class="desc">分辨率容错：1 分钟存档只有高成交量市场有（BLG 143 万 USDC → 60s；Liquid 5.3 万 → 仅 5-10 分钟）；低成交量双重降级，策略按实际分辨率降级触发。</p>
+        <div class="route">术语统一：<b class="b">下狗 = 赛前低赔率方</b>；<b class="b">落后侧/下盘 = 盘中暂时落后方</b></div>
+        <div class="risks"><span class="lbl">未知通道</span> 分类器未匹配 → L0 观察池 → 累计 ≥3 个相似图形 → 登记候选形态（08-12 巡检未知 9：原 8 条（SHU/NRG×2、HLE/DRX、EYE/PHA、SK/NAVI×2、T1/HLE、dota2-pr1-mouz Moneyline）+ 新增 lol-drxc-foxy Moneyline（pre 60.5 / end 56.5 / low 49.5 / x50 2，未结算）；未达 3 相似图形，仅观察）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><span class="badge C">频率</span><span class="shape-id">v1.2 全库</span></div>
+        <h3>形态频率统计（136 序列 · 08-12 巡检）</h3>
+        <div class="samples"><span class="lbl">top（08-18 巡检，283 序列）</span> B4 直线阴跌 113 · A2 中位反转 65 · C2 开局碾压 36 · A3 折价修复 24 · A5 W 型 19 · A1 深反 17 · 热门全程压制 16 · 未知 17（数据异常为主）；以 reports/pattern_audit_*.md 为准</div>
+        <div class="route">含义：<b class="b">B 族崩塌类标签合计 62（B1+B2+B4+B4低开），A 族反转类标签合计 85</b>——深反仍是少数派，必须小仓 + 确认；A2/A1 越过单形态 ≥10 样本门槛，可按形态分口径出统计；"热门全程压制 + 开局碾压"22 次 = 大量场次无交易价值（S2 不触发）</div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="foot">
+    <b>数据基础</b>：5 组 LoL 1 分钟快照（WE/AL · HLE/DRX · WE/TT · BFX/BRO · BLG/TES）+ 08-09/08-10 新增 6 组（FNC/K27 · PR1/MOUZ · FNC/KC · DNF/DRX · GEN/DNS · HLE/GEN）+ 08-11 新增 4 组（MOUZ/RE · DRXC/FOXY · HLE/DNS · NSEA/DKC）+ CS/Dota/早期 LoL 60 秒回测序列（SPARTA · VG/YB · GLYPH · NS/T1 · NAVI · LNG/IG · DNF/BRO · DNSC/DKC）。<br>
+    <b>下一步</b>：MOUZ/RE 与 DRXC/FOXY G3/系列赛结算后复核未知与 A1 标签 · 复核 SHU/NRG Moneyline 最终结算 · 分类器随样本校准阈值（当前 v1.2）· 任务 6 情报卡复用本库。<br>
+    完整细节见 <a href="REVERSAL_PATTERN_LIBRARY.md">REVERSAL_PATTERN_LIBRARY.md</a>；策略层见 <a href="strategy_library.html">策略总清单</a>。
+  </footer>
+</div>
+</body>
+</html>

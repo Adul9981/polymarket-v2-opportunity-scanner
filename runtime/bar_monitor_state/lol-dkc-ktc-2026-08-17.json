@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "slug": "lol-dkc-ktc-2026-08-17",
+  "targets": {
+    "lol-dkc-ktc-2026-08-17-game1|KT Rolster Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.44,
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ]
+    },
+    "lol-dkc-ktc-2026-08-17-game2|KT Rolster Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.435,
+      "last_pattern_labels": [
+        "C1_中位震荡",
+        "A5_W型双底"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-dkc-ktc-2026-08-17|KT Rolster Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.395,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-dkc-ktc-2026-08-17-game1|Dplus KIA Challengers": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.575,
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-dkc-ktc-2026-08-17-game2|Dplus KIA Challengers": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.575,
+      "last_pattern_labels": [
+        "C1_中位震荡",
+        "A5_W型双底"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-dkc-ktc-2026-08-17|Dplus KIA Challengers": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.605,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    }
+  }
+}

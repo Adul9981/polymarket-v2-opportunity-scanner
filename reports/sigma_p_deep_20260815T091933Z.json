@@ -1,0 +1,209 @@
+{
+ "captured_at": "20260815T091933Z",
+ "x": 1.0,
+ "groups": [
+  {
+   "ts": 1786785638,
+   "group": "sinquefield-cup-winner-20260716212706135",
+   "negRiskMarketID": "0xa3cfb68a6a4cad6bb1650ac32260e36e26371332cc24adfa299516a74837b500",
+   "n_legs": 12,
+   "ask_sump": 8.955,
+   "subgroup_sump_fillable": 8.955,
+   "x": 1.0,
+   "mark_sump": 2.496,
+   "mark_edge_per_x": 1.496,
+   "exec_edge_per_x": null,
+   "no_cost": 8.078,
+   "no_theory": 11.0,
+   "no_gross": -Infinity,
+   "no_net": -Infinity,
+   "no_net_rebate": NaN,
+   "no_depth_ok": false,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 9,
+   "n_yes_fillable": 9,
+   "yes_cost": 1.069,
+   "yes_gross": -Infinity,
+   "yes_net": -Infinity,
+   "yes_net_rebate": NaN,
+   "yes_depth_ok": false,
+   "yes_fillable_min": 1.0,
+   "side": "YES",
+   "verdict": "fail",
+   "days_to_end": 6,
+   "exhaustive_hint": true,
+   "notes": "",
+   "legs": [
+    {
+     "title": "Praggnanandhaa Rameshbabu",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.14,
+     "no_cost": 0.88,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Maxime Vachier-Lagrave",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.11,
+     "no_cost": 0.899,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Anish Giri",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.007,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Wesley So",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.43,
+     "no_cost": 0.6,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Fabiano Caruana",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.17,
+     "no_cost": 0.86,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Javokhir Sindarov",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.029,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Levon Aronian",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.033,
+     "no_cost": 0.98,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Vincent Keymer",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.14,
+     "no_cost": 0.88,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Samuel Sevian",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "B",
+     "yes_ask": null,
+     "no_ask": null,
+     "yes_cost": 0.0,
+     "no_cost": 0.0,
+     "yes_filled": 0.0,
+     "no_filled": 0.0,
+     "no_ok": false,
+     "yes_ok": false,
+     "flags": [
+      "stale_book_1786785600s",
+      "degenerate_both_sides_0.995+",
+      "no_book_empty",
+      "yes_book_empty"
+     ]
+    },
+    {
+     "title": "C",
+     "yes_ask": null,
+     "no_ask": null,
+     "yes_cost": 0.0,
+     "no_cost": 0.0,
+     "yes_filled": 0.0,
+     "no_filled": 0.0,
+     "no_ok": false,
+     "yes_ok": false,
+     "flags": [
+      "stale_book_1786785619s",
+      "degenerate_both_sides_0.995+",
+      "no_book_empty",
+      "yes_book_empty"
+     ]
+    },
+    {
+     "title": "Other",
+     "yes_ask": null,
+     "no_ask": null,
+     "yes_cost": 0.0,
+     "no_cost": 0.0,
+     "yes_filled": 0.0,
+     "no_filled": 0.0,
+     "no_ok": false,
+     "yes_ok": false,
+     "flags": [
+      "stale_book_1786785638s",
+      "degenerate_both_sides_0.995+",
+      "no_book_empty",
+      "yes_book_empty"
+     ]
+    }
+   ]
+  }
+ ]
+}

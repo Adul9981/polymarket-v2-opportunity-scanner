@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>四阶段执行框架 · 回测 v1</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;
+  --line:#e8e8ed;--red:#ff3b30;--green:#34c759;--orange:#ff9f0a;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,
+  "SF Pro Text","SF Pro Display","Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.55;}
+.hero{max-width:1080px;margin:0 auto;padding:64px 24px 32px;}
+.hero h1{font-size:42px;font-weight:700;letter-spacing:-0.02em;}
+.hero p{color:var(--sub);font-size:17px;margin-top:10px;max-width:760px;}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+.chip{background:rgba(0,113,227,.08);color:var(--accent);font-size:13px;font-weight:600;
+  padding:6px 14px;border-radius:999px;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+.insight{margin:18px 0;padding:18px 22px;background:linear-gradient(135deg,#eaf3ff,#f5f5f7);
+  border-radius:16px;border:1px solid rgba(0,113,227,.15);font-size:15px;}
+h2.sec{font-size:24px;font-weight:700;margin:44px 0 6px;}
+.sec-sub{color:var(--sub);font-size:14px;margin-bottom:18px;}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;}
+.stage{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);
+  position:relative;}
+.stage .tag{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--accent);
+  padding:4px 12px;border-radius:999px;margin-bottom:10px;}
+.stage:nth-child(2) .tag{background:#5856d6;}
+.stage:nth-child(3) .tag{background:var(--orange);}
+.stage:nth-child(4) .tag{background:var(--red);}
+.stage h3{font-size:17px;font-weight:700;margin-bottom:10px;}
+.stage .blk{margin:10px 0;}
+.stage .blk b{font-size:12px;color:var(--sub);display:block;margin-bottom:3px;letter-spacing:.03em;}
+.stage .blk ul{list-style:none;}
+.stage .blk li{font-size:13px;color:var(--ink);margin:5px 0;padding-left:13px;position:relative;}
+.stage .blk li::before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;
+  border-radius:50%;background:var(--accent);}
+.ev{font-size:12px;color:var(--sub);border-top:1px solid var(--line);padding-top:8px;margin-top:8px;}
+.ev b{color:var(--ink);}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;}
+.card{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.card h3{font-size:16px;font-weight:700;margin-bottom:12px;}
+.big{font-size:34px;font-weight:700;letter-spacing:-0.02em;}
+.big-label{font-size:12px;color:var(--sub);font-weight:500;margin-left:6px;}
+.stat{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:10px 0;font-size:14px;}
+.stat span{color:var(--sub);}
+.stat b{font-weight:600;}
+.chart-card svg{width:100%;height:auto;}
+.note-list{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.note-list li{font-size:14px;margin:10px 0;padding-left:18px;position:relative;list-style:none;}
+.note-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent);}
+.note-list li b{font-weight:600;}
+footer{max-width:1080px;margin:0 auto;padding:40px 24px 80px;color:var(--sub);font-size:13px;}
+@media (max-width:640px){.hero h1{font-size:32px;}.hero{padding-top:44px;}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>四阶段执行框架 · 回测 v1</h1>
+  <p>0-10 / 10-20 / 20-30 / 30+ 分钟：每个时间窗口的<b>信号 → 决策 → 执行</b>逻辑，
+    以及回测证据（LOL 28 条局级序列，1 分钟粒度）。</p>
+  <div class="chips">
+    <span class="chip">2026-08-10</span>
+    <span class="chip">样本 28 场 LOL</span>
+    <span class="chip">1 分钟粒度</span>
+    <span class="chip">v1 · 未定仓位</span>
+  </div>
+</header>
+<div class="wrap">
+<div class="insight">核心结论：方向一致性 <b>t=0 36% → t=10 57% → t=20 68% → t=25 79% → t=30 81%</b>。
+前 10 分钟接近掷硬币，10-20 方向成形，20-30 收敛，30+ 定局；
+深水区低点多在 25 分钟后（中位数 29 分钟），高位仓尾盘反转率 <b>20%</b>。</div>
+
+<h2 class="sec">时间窗口 · 信号 → 决策 → 执行</h2>
+<p class="sec-sub">四个阶段的判断逻辑（未验证前的执行框架，仓位上限待 v2 数据）</p>
+<div class="flow">
+  <div class="stage">
+    <span class="tag">0-10 分钟</span>
+    <h3>只观察 · 最小仓</h3>
+    <div class="blk"><b>信号</b><ul>
+      <li>赛前强弱（价格 &gt;0.5 侧）</li>
+      <li>前 10 分钟走势、一血/早期团战</li>
+    </ul></div>
+    <div class="blk"><b>决策</b><ul><li>不判方向、不下重注</li></ul></div>
+    <div class="blk"><b>执行</b><ul><li>小仓或空仓，只记录信号</li></ul></div>
+    <div class="ev">回测：方向一致性 <b>57% ≈ 掷硬币</b>；t=0 仅 36%（样本偏爆冷）</div>
+  </div>
+  <div class="stage">
+    <span class="tag">10-20 分钟</span>
+    <h3>反转策略主窗口</h3>
+    <div class="blk"><b>信号</b><ul>
+      <li>深水区反转启动：单局上穿 0.30/0.50（低点后最后一次）</li>
+      <li>熟练度信号：阿卡丽单杀、一血/团战转折</li>
+      <li>顺势确认：热门持续 &gt;0.65 不回撤</li>
+    </ul></div>
+    <div class="blk"><b>决策</b><ul><li>定方向：反转 还是 顺势</li><li>无信号 → 不做</li></ul></div>
+    <div class="blk"><b>执行</b><ul><li>反转：低点后上穿确认买入（成本 &le;25c）</li>
+      <li>顺势：信号确认后加仓</li></ul></div>
+    <div class="ev">回测：一致性 <b>57% → 68%</b>，方向成形窗口</div>
+  </div>
+  <div class="stage">
+    <span class="tag">20-30 分钟</span>
+    <h3>收敛 · 彩票窗口</h3>
+    <div class="blk"><b>信号</b><ul>
+      <li>方向收敛：价格站上 0.70/0.80</li>
+      <li>彩票：25+ 分钟深水区极值（&lt;15c）</li>
+    </ul></div>
+    <div class="blk"><b>决策</b><ul><li>顺势加仓 / 减仓</li><li>彩票可开始（25+）</li></ul></div>
+    <div class="blk"><b>执行</b><ul><li>彩票：归零预算 + 上穿 0.2/0.3 启动确认</li>
+      <li>止盈梯 0.5/0.6 回本优先</li></ul></div>
+    <div class="ev">回测：一致性 <b>79%</b>；深水区低点中位数 <b>29 分钟</b></div>
+  </div>
+  <div class="stage">
+    <span class="tag">30+ 分钟</span>
+    <h3>定局 · 锁盈止损</h3>
+    <div class="blk"><b>信号</b><ul>
+      <li>价格锁定 0.90+ 或归零</li>
+      <li>尾盘反转风险（26-33 分钟集中）</li>
+    </ul></div>
+    <div class="blk"><b>决策</b><ul><li>不再新开方向仓</li></ul></div>
+    <div class="blk"><b>执行</b><ul><li>D2 锁盈：80% 于 0.90-0.95</li>
+      <li>D3 止损：跌破成本一半离场</li></ul></div>
+    <div class="ev">回测：一致性 <b>81%</b>；高位仓尾盘反转率 <b>20%</b></div>
+  </div>
+</div>
+
+<h2 class="sec">回测证据</h2>
+<p class="sec-sub">LOL 28 条局级序列（含双/单边），开局检测对齐，存在 ±5 分钟误差</p>
+<div class="grid2">
+  <div class="card chart-card">
+    <h3>方向一致性曲线（价格 &gt;0.5 与最终胜者一致）</h3>
+    <svg viewBox="0 0 560 260" role="img">
+      <line x1="40" y1="210" x2="540" y2="210" stroke="#e8e8ed" stroke-width="1"/>
+      <line x1="40" y1="20" x2="40" y2="210" stroke="#e8e8ed" stroke-width="1"/>
+      <polyline points="40,170 140,142 240,126 340,102 440,90 540,74"
+        fill="none" stroke="#0071e3" stroke-width="3" stroke-linecap="round"/>
+      <g font-family="Helvetica Neue" font-size="12" fill="#86868b" text-anchor="middle">
+        <text x="40" y="230">t=0</text><text x="140" y="230">t=10</text>
+        <text x="240" y="230">t=20</text><text x="340" y="230">t=25</text>
+        <text x="440" y="230">t=30</text><text x="540" y="230">终局</text>
+      </g>
+      <g font-family="Helvetica Neue" font-size="13" font-weight="700" fill="#1d1d1f" text-anchor="middle">
+        <text x="40" y="162">36%</text><text x="140" y="134">57%</text>
+        <text x="240" y="118">68%</text><text x="340" y="94">79%</text>
+        <text x="440" y="82">81%</text><text x="540" y="66">100%</text>
+      </g>
+      <g fill="#0071e3">
+        <circle cx="40" cy="170" r="4"/><circle cx="140" cy="142" r="4"/>
+        <circle cx="240" cy="126" r="4"/><circle cx="340" cy="102" r="4"/>
+        <circle cx="440" cy="90" r="4"/><circle cx="540" cy="74" r="4"/>
+      </g>
+    </svg>
+    <div class="stat"><span>0-10 噪声</span><b>57% ≈ 掷硬币</b></div>
+    <div class="stat"><span>10-20 成形</span><b>57% → 68%</b></div>
+    <div class="stat"><span>20-30 收敛</span><b>79% → 81%</b></div>
+  </div>
+  <div>
+    <div class="card" style="margin-bottom:14px">
+      <h3>深水区（min&lt;15c）低点出现时间</h3>
+      <div class="big">29<span class="big-label">分钟 · 中位数</span></div>
+      <div class="stat"><span>25-35 分钟出现</span><b>15/21（71%）</b></div>
+      <div class="stat"><span>15 分钟前出现</span><b>2/21（10%）</b></div>
+      <div class="ev">→ 彩票策略放 25 分钟后，极值低点集中于此</div>
+    </div>
+    <div class="card">
+      <h3>尾盘反转（高位 85c+ → 终局 ≤20c）</h3>
+      <div class="big">20%<span class="big-label">3/15 高位样本归零</span></div>
+      <div class="stat"><span>反转时间</span><b>26-33 分钟</b></div>
+      <div class="ev">→ 30+ 阶段必须锁盈/止损，不是"结果已定可以不动"</div>
+    </div>
+  </div>
+</div>
+
+<h2 class="sec">盲点与局限（v1）</h2>
+<p class="sec-sub">未验证前的注意事项，仓位上限等 v2 数据</p>
+<ul class="note-list">
+  <li><b>样本偏差：</b>现有快照偏爆冷/深反（t=0 一致性仅 36% &lt; 随机），结论只验证方向，不定仓位。</li>
+  <li><b>对齐误差：</b>开局检测为启发式（±5 分钟）；CS2 长窗口 v1 无法对齐，待事件级二次对齐。</li>
+  <li><b>第三局无独立小局市场：</b>BO3 的 G3 只有 Moneyline，窗口定义要单独处理。</li>
+  <li><b>可成交性：</b>低价彩票可能买不到/滑点大，回测用中间价会高估收益，需成交量过滤。</li>
+  <li><b>"不做"也是决策：</b>10-20 无信号时应空仓，回测需统计错过机会的成本。</li>
+  <li><b>赛制与游戏差异：</b>表演赛/正赛打满率不同；LOL/CS/DOTA 局时长不同，窗口边界按游戏校准。</li>
+  <li><b>锁盈有代价：</b>防 20% 尾盘反转，也会少赚继续涨的部分，需回测"锁盈 vs 不锁盈"期望差。</li>
+</ul>
+</div>
+<footer>
+  数据与方法：Polymarket CLOB 1 分钟价格；v1 仅 LOL；H2 口径待修正为"低点后最后一次上穿"。
+  完整报告：reports/window_backtest_v1_2026-08-10.md ｜ 框架：docs/task/THREE_WINDOW_EXECUTION_FRAMEWORK.md
+</footer>
+</body>
+</html>

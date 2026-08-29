@@ -1,0 +1,282 @@
+{"kind":"deck","id":"pr/9bjr5y","name":"Deck"}
+{"kind":"layout","layoutId":"b189c09e-3cb7-4e6f-aa12-1c5db58f5e88","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"97a45e7a-157e-424d-88b3-a63fb2fecf08","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/pssqvq","slide":1,"title":"分享讨论 · 基于 Polymarket 公开数据","textShapes":4}
+{"kind":"textbox","id":"sh/ytkfy18f","slide":1,"text":"分享讨论 · 基于 Polymarket 公开数据","textPreview":"分享讨论 · 基于 Polymarket 公开数据","textChars":25,"textLines":1,"bbox":[72,208,720,30]}
+{"kind":"shape","id":"sh/lwvytw76","slide":1,"bbox":[72,256,96,4]}
+{"kind":"textbox","id":"sh/kvmx0rql","slide":1,"text":"预测市场，到底是不是赌博？","textPreview":"预测市场，到底是不是赌博？","textChars":13,"textLines":1,"bbox":[72,286,1136,150]}
+{"kind":"textbox","id":"sh/7ydgv6pc","slide":1,"text":"以及——没有优势的人，该怎么参与","textPreview":"以及——没有优势的人，该怎么参与","textChars":16,"textLines":1,"bbox":[72,452,1000,44]}
+{"kind":"textbox","id":"sh/6x4f218r","slide":1,"text":"用真实数据拆解：结构优势 / 信息优势 / 资金与分散 · 2026-08","textPreview":"用真实数据拆解：结构优势 / 信息优势 / 资金与分散 · 2026-08","textChars":37,"textLines":1,"bbox":[72,528,900,30]}
+{"kind":"notes","id":"nt/pssqvq","slide":1,"text":"开场（约 30 秒）：今天想和大家认真聊一个问题——预测市场到底是不是赌博？这个问题的答案，决定你该不该进场、以及进场后怎么活下来。\n我不是来给结论的，我是带着数据来的：过去两周我们拆了四组 Polymarket 上的真实案例，今天的分享就是这些数据的解读。\n\n[Sources] 内容基于本项目拆解：docs/forensics/KNOWLEDGE_BASE.md、docs/forensics/STRATEGY_LIBRARY.md、docs/forensics/cases/README.md"}
+{"kind":"slide","id":"sl/51v83z","slide":2,"title":"今天的路线","textShapes":13}
+{"kind":"textbox","id":"sh/tgnqp8rm","slide":2,"text":"今天的路线","textPreview":"今天的路线","textChars":5,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/6dwrutsv","slide":2,"text":"三个问题，一条主线","textPreview":"三个问题，一条主线","textChars":9,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/7e58ny9g","slide":2,"bbox":[72,200,1136,118]}
+{"kind":"textbox","id":"sh/g3e90nax","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[104,232,76,54]}
+{"kind":"textbox","id":"sh/h47qtsri","slide":2,"text":"预测市场是赌博吗？","textPreview":"预测市场是赌博吗？","textChars":9,"textLines":1,"bbox":[210,224,420,34]}
+{"kind":"textbox","id":"sh/u1wryds7","slide":2,"text":"先给一个会被质疑的结论，再用期望值拆开看。","textPreview":"先给一个会被质疑的结论，再用期望值拆开看。","textChars":21,"textLines":1,"bbox":[210,262,950,30]}
+{"kind":"shape","id":"sh/v258ri9c","slide":2,"bbox":[72,342,1136,118]}
+{"kind":"textbox","id":"sh/w7upojat","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[104,374,76,54]}
+{"kind":"textbox","id":"sh/x83qhobe","slide":2,"text":"长期盈利的人，到底靠什么？","textPreview":"长期盈利的人，到底靠什么？","textChars":13,"textLines":1,"bbox":[210,366,420,34]}
+{"kind":"textbox","id":"sh/5s7ehoba","slide":2,"text":"三种能从数据里看见的优势：结构、信息、资金与分散。","textPreview":"三种能从数据里看见的优势：结构、信息、资金与分散。","textChars":25,"textLines":1,"bbox":[210,404,950,30]}
+{"kind":"shape","id":"sh/kryx8jup","slide":2,"bbox":[72,484,1136,118]}
+{"kind":"textbox","id":"sh/jqpwfytk","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[104,516,76,54]}
+{"kind":"textbox","id":"sh/ipgf6tcz","slide":2,"text":"没有优势的人，该怎么参与？","textPreview":"没有优势的人，该怎么参与？","textChars":13,"textLines":1,"bbox":[210,508,420,34]}
+{"kind":"textbox","id":"sh/twryl8bm","slide":2,"text":"三个可执行的起点——以及一条现在就该走的路。","textPreview":"三个可执行的起点——以及一条现在就该走的路。","textChars":22,"textLines":1,"bbox":[210,546,950,30]}
+{"kind":"textbox","id":"sh/svyxc3u1","slide":2,"text":"预测市场 · 是不是赌博","textPreview":"预测市场 · 是不是赌博","textChars":12,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/7upwjytg","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/51v83z","slide":2,"text":"先告诉大家今天要讲什么：三个问题。第一个问题帮我们摆正心态，第二个问题用数据回答'赢家凭什么赢'，第三个问题落到你自己身上——没有优势，怎么参与。\n全程大约 XX 分钟，中间留几次讨论。"}
+{"kind":"slide","id":"sl/15qlgq","slide":3,"title":"先说结论","textShapes":6}
+{"kind":"textbox","id":"sh/7edgfi10","slide":3,"text":"先说结论","textPreview":"先说结论","textChars":4,"textLines":1,"bbox":[72,150,600,30]}
+{"kind":"textbox","id":"sh/sfmh8nil","slide":3,"text":"预测市场不是赌博——它是零和的交易市场。","textPreview":"预测市场不是赌博——它是零和的交易市场。","textChars":20,"textLines":1,"bbox":[72,210,1136,130]}
+{"kind":"textbox","id":"sh/tgvyhsj6","slide":3,"text":"但对“没有优势的人”来说，进去之后的结果，和赌博没有区别。","textPreview":"但对“没有优势的人”来说，进去之后的结果，和赌博没有区别。","textChars":29,"textLines":1,"bbox":[72,360,1136,130]}
+{"kind":"textbox","id":"sh/i9kf2t0j","slide":3,"text":"那些地址能长期盈利，不是因为他们运气好，是因为他们带着优势进来。","textPreview":"那些地址能长期盈利，不是因为他们运气好，是因为他们带着优势进来。","textChars":32,"textLines":1,"bbox":[72,530,1136,40]}
+{"kind":"textbox","id":"sh/jadgby14","slide":3,"text":"预测市场 · 是不是赌博","textPreview":"预测市场 · 是不是赌博","textChars":12,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/kbmh43ip","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/15qlgq","slide":3,"text":"先给结论，再拆逻辑：预测市场本身不是赌博，它是零和的交易市场。\n但这句话有个残酷的尾巴——对没有优势的人，进去之后的结果和赌博没有区别。\n后面我会用四组真实数据证明：长期盈利的地址，靠的不是运气，是三种看得见的优势。"}
+{"kind":"slide","id":"sl/l73m9m","slide":4,"title":"先分清两件事","textShapes":11}
+{"kind":"textbox","id":"sh/7alszmdg","slide":4,"text":"先分清两件事","textPreview":"先分清两件事","textChars":6,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/sbut8rul","slide":4,"text":"赌场游戏和预测市场，输赢的决定因素完全不同","textPreview":"赌场游戏和预测市场，输赢的决定因素完全不同","textChars":21,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/tc3u1wb6","slide":4,"bbox":[72,196,550,330]}
+{"kind":"textbox","id":"sh/udwba1cr","slide":4,"text":"赌场游戏","textPreview":"赌场游戏","textChars":4,"textLines":1,"bbox":[100,220,180,28]}
+{"kind":"textbox","id":"sh/fe5c36tc","slide":4,"text":"轮盘 / 老虎机","textPreview":"轮盘 / 老虎机","textChars":8,"textLines":1,"bbox":[100,254,480,40]}
+{"kind":"textbox","id":"sh/gfetcbux","slide":4,"text":"庄家固定抽水，期望值永远是负的\n你玩得越久，越确定亏光\n输赢和“你是谁”无关","textPreview":"庄家固定抽水，期望值永远是负的 | 你玩得越久，越确定亏光 | 输赢和“你是谁”无关","textChars":38,"textLines":3,"bbox":[100,316,500,120]}
+{"kind":"shape","id":"sh/1gnu5gbi","slide":4,"bbox":[658,196,550,330]}
+{"kind":"textbox","id":"sh/ahsbyxcn","slide":4,"text":"预测市场","textPreview":"预测市场","textChars":4,"textLines":1,"bbox":[686,220,180,28]}
+{"kind":"textbox","id":"sh/vi1sr2d8","slide":4,"text":"Polymarket","textPreview":"Polymarket","textChars":10,"textLines":1,"bbox":[686,254,480,40]}
+{"kind":"textbox","id":"sh/zqd8vq1k","slide":4,"text":"零和：每一块钱的盈利，都来自另一个人的亏损\n没有庄家固定抽水（暂不计手续费与返佣）\n输赢取决于：你和对手相比，有没有优势","textPreview":"零和：每一块钱的盈利，都来自另一个人的亏损 | 没有庄家固定抽水（暂不计手续费与返佣） | 输赢取决于：你和对手相比，有没有优势","textChars":60,"textLines":3,"bbox":[686,316,500,120]}
+{"kind":"textbox","id":"sh/yp4rml0z","slide":4,"text":"所以决定结果的是“相对优势”，不是运气。","textPreview":"所以决定结果的是“相对优势”，不是运气。","textChars":20,"textLines":1,"bbox":[72,566,1136,44]}
+{"kind":"textbox","id":"sh/lsvqx0ja","slide":4,"text":"预测市场 · 是不是赌博","textPreview":"预测市场 · 是不是赌博","textChars":12,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/krm9ovi5","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/l73m9m","slide":4,"text":"赌场游戏：庄家固定抽水，期望值恒为负，玩得越久越确定亏光，而且和你是谁无关。\n预测市场：近似零和，没有庄家固定抽水。每一块钱的盈利都来自另一个人的亏损。所以能不能赢，取决于你相对于对手有没有优势。\n注意两个限定：第一，这里说的零和暂不计平台手续费与返佣，返佣是平台给做市和流动性的激励，不是庄家抽水；第二，结论是“和没有优势的人相比”，不是绝对说法。\n\n[Sources] 对比框架与限定说明：docs/forensics/prediction_market_vs_gambling.html"}
+{"kind":"slide","id":"sl/u2qicj","slide":5,"title":"市场不是赌场；","textShapes":6}
+{"kind":"textbox","id":"sh/ep8j6po7","slide":5,"text":"市场不是赌场；","textPreview":"市场不是赌场；","textChars":7,"textLines":1,"bbox":[72,218,1136,80]}
+{"kind":"textbox","id":"sh/1sj214ny","slide":5,"text":"但如果你没有优势，","textPreview":"但如果你没有优势，","textChars":9,"textLines":1,"bbox":[72,312,1136,80]}
+{"kind":"textbox","id":"sh/0ral8z6d","slide":5,"text":"你就成了别人优势的燃料。","textPreview":"你就成了别人优势的燃料。","textChars":12,"textLines":1,"bbox":[72,406,1136,80]}
+{"kind":"textbox","id":"sh/rmhkva5w","slide":5,"text":"这不是吓唬人——下一页开始，我们用数据看赢家到底带什么进场。","textPreview":"这不是吓唬人——下一页开始，我们用数据看赢家到底带什么进场。","textChars":30,"textLines":1,"bbox":[72,540,1136,36]}
+{"kind":"textbox","id":"sh/ql8j25ob","slide":5,"text":"预测市场 · 是不是赌博","textPreview":"预测市场 · 是不是赌博","textChars":12,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/doz2xknm","slide":5,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/u2qicj","slide":5,"text":"把上一页推到结论：市场不是赌场，但如果你没有优势，你就是别人优势的燃料。\n这句话听着刺耳，但它可以被数据检验。接下来四组案例，就是检验过程。"}
+{"kind":"slide","id":"sl/e10br3","slide":6,"title":"我们手里的数据","textShapes":21}
+{"kind":"textbox","id":"sh/rm94v2pk","slide":6,"text":"我们手里的数据","textPreview":"我们手里的数据","textChars":7,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/cnilo7q5","slide":6,"text":"四组真实案例，覆盖三种优势","textPreview":"四组真实案例，覆盖三种优势","textChars":13,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/dormxs7q","slide":6,"bbox":[72,196,550,172]}
+{"kind":"textbox","id":"sh/2xg3id83","slide":6,"text":"结构套利","textPreview":"结构套利","textChars":4,"textLines":1,"bbox":[100,218,300,30]}
+{"kind":"textbox","id":"sh/3y94ripo","slide":6,"text":"e46m3 · 吉达温度组","textPreview":"e46m3 · 吉达温度组","textChars":13,"textLines":1,"bbox":[100,248,500,32]}
+{"kind":"textbox","id":"sh/4jilknq9","slide":6,"text":"11 档完整集，Σp 长期偏离 $1","textPreview":"11 档完整集，Σp 长期偏离 $1","textChars":18,"textLines":1,"bbox":[100,290,500,30]}
+{"kind":"textbox","id":"sh/pkrmts7u","slide":6,"text":"单轮毛利 4.7%~6.4%","textPreview":"单轮毛利 4.7%~6.4%","textChars":14,"textLines":1,"bbox":[100,324,500,30]}
+{"kind":"shape","id":"sh/mtknuh87","slide":6,"bbox":[658,196,550,172]}
+{"kind":"textbox","id":"sh/net43mps","slide":6,"text":"信息优势","textPreview":"信息优势","textChars":4,"textLines":1,"bbox":[686,218,300,30]}
+{"kind":"textbox","id":"sh/nilcz65c","slide":6,"text":"fkigedgjdgwbg · EDG vs LGD","textPreview":"fkigedgjdgwbg · EDG vs LGD","textChars":26,"textLines":1,"bbox":[686,248,500,32]}
+{"kind":"textbox","id":"sh/mhcbq14r","slide":6,"text":"LGD 盘口 20 分钟 0.57 → 0.99","textPreview":"LGD 盘口 20 分钟 0.57 → 0.99","textChars":24,"textLines":1,"bbox":[686,290,500,30]}
+{"kind":"textbox","id":"sh/9knu1gni","slide":6,"text":"追买 $277,608","textPreview":"追买 $277,608","textChars":11,"textLines":1,"bbox":[686,324,500,30]}
+{"kind":"shape","id":"sh/8jutsbmx","slide":6,"bbox":[72,396,550,172]}
+{"kind":"textbox","id":"sh/vm5c3q5o","slide":6,"text":"资金 + 分散","textPreview":"资金 + 分散","textChars":7,"textLines":1,"bbox":[100,418,300,30]}
+{"kind":"textbox","id":"sh/alwbul43","slide":6,"text":"深水机器人簇 · GX vs VIT G2","textPreview":"深水机器人簇 · GX vs VIT G2","textChars":21,"textLines":1,"bbox":[100,448,500,32]}
+{"kind":"textbox","id":"sh/xonu50ne","slide":6,"text":"深水（≤0.15）买家逐一画像","textPreview":"深水（≤0.15）买家逐一画像","textChars":15,"textLines":1,"bbox":[100,490,500,30]}
+{"kind":"textbox","id":"sh/wnetwvm9","slide":6,"text":"145 人 / 86k 份","textPreview":"145 人 / 86k 份","textChars":13,"textLines":1,"bbox":[100,524,500,30]}
+{"kind":"shape","id":"sh/ja5c7qlk","slide":6,"bbox":[658,396,550,172]}
+{"kind":"textbox","id":"sh/i9wbyl4z","slide":6,"text":"5.4 倍差距","textPreview":"5.4 倍差距","textChars":7,"textLines":1,"bbox":[686,418,300,30]}
+{"kind":"textbox","id":"sh/e50fqpo7","slide":6,"text":"赢家账户对照 · 两场同日比赛","textPreview":"赢家账户对照 · 两场同日比赛","textChars":15,"textLines":1,"bbox":[686,448,500,32]}
+{"kind":"textbox","id":"sh/f69wzups","slide":6,"text":"889 个跨场共同赢家","textPreview":"889 个跨场共同赢家","textChars":11,"textLines":1,"bbox":[686,490,500,30]}
+{"kind":"textbox","id":"sh/g7ixsz6d","slide":6,"text":"场均 $3,559 vs $658","textPreview":"场均 $3,559 vs $658","textChars":17,"textLines":1,"bbox":[686,524,500,30]}
+{"kind":"textbox","id":"sh/18re14ny","slide":6,"text":"数据全部来自公开行情与链上记录，每一组都能溯源到原始文件。","textPreview":"数据全部来自公开行情与链上记录，每一组都能溯源到原始文件。","textChars":29,"textLines":1,"bbox":[72,596,1136,30]}
+{"kind":"textbox","id":"sh/6hgfmpob","slide":6,"text":"预测市场 · 是不是赌博","textPreview":"预测市场 · 是不是赌博","textChars":12,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/7ipwvupw","slide":6,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/e10br3","slide":6,"text":"先交代数据：我们拆了四组案例——吉达温度组的完整集套利、EDG vs LGD 的盘口异动、GX vs VIT 的深水买家画像、以及两场同日比赛的赢家对照。\n这些全部来自 Polymarket 公开行情和链上记录，不是推测，是可溯源的原始数据。\n\n[Sources] docs/forensics/cases/2026-08-12_jeddah_temperature/、docs/forensics/data/fkigedgjdgwbg/、docs/forensics/cases/2026-08-15_lol-gx-vit-game2-address/、docs/forensics/cases/2026-08-18_lol-winner-accounts-t1gen-drxbro/"}
+{"kind":"slide","id":"sl/qhyuwj","slide":7,"title":"赢家们带什么进场","textShapes":20}
+{"kind":"textbox","id":"sh/snilobid","slide":7,"text":"赢家们带什么进场","textPreview":"赢家们带什么进场","textChars":8,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/rm9kf61s","slide":7,"text":"三种优势，每一种都能从数据里看到","textPreview":"三种优势，每一种都能从数据里看到","textChars":16,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/6l03m107","slide":7,"bbox":[72,196,352,372]}
+{"kind":"textbox","id":"sh/1sr2lgju","slide":7,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[100,224,120,54]}
+{"kind":"textbox","id":"sh/grilsbi9","slide":7,"text":"结构优势","textPreview":"结构优势","textChars":4,"textLines":1,"bbox":[100,292,300,36]}
+{"kind":"textbox","id":"sh/fq9kj61o","slide":7,"text":"利润与预测结果无关，由数学规则保证","textPreview":"利润与预测结果无关，由数学规则保证","textChars":17,"textLines":1,"bbox":[100,336,300,60]}
+{"kind":"textbox","id":"sh/ep03q10j","slide":7,"text":"检测 Σp 偏离 $1，买低估侧，Convert 兑现","textPreview":"检测 Σp 偏离 $1，买低估侧，Convert 兑现","textChars":27,"textLines":1,"bbox":[100,404,300,60]}
+{"kind":"textbox","id":"sh/pgb2p0j6","slide":7,"text":"复制门槛：工具 + 返佣","textPreview":"复制门槛：工具 + 返佣","textChars":12,"textLines":1,"bbox":[100,500,300,34]}
+{"kind":"shape","id":"sh/of2lwvil","slide":7,"bbox":[464,196,352,372]}
+{"kind":"textbox","id":"sh/y9kzuxcr","slide":7,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[492,224,120,54]}
+{"kind":"textbox","id":"sh/zatg32tc","slide":7,"text":"信息优势","textPreview":"信息优势","textChars":4,"textLines":1,"bbox":[492,292,300,36]}
+{"kind":"textbox","id":"sh/kb2hw7ux","slide":7,"text":"知道别人不知道的（甚至是不该知道的）","textPreview":"知道别人不知道的（甚至是不该知道的）","textChars":18,"textLines":1,"bbox":[492,336,300,60]}
+{"kind":"textbox","id":"sh/lcby5sb2","slide":7,"text":"价格被打到位后，确认信息再下大注","textPreview":"价格被打到位后，确认信息再下大注","textChars":16,"textLines":1,"bbox":[492,404,300,60]}
+{"kind":"textbox","id":"sh/mdkzyxcn","slide":7,"text":"复制门槛：不可复制，且有边界","textPreview":"复制门槛：不可复制，且有边界","textChars":14,"textLines":1,"bbox":[492,500,300,34]}
+{"kind":"shape","id":"sh/7ydg72t8","slide":7,"bbox":[856,196,352,372]}
+{"kind":"textbox","id":"sh/8zmh07ut","slide":7,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[884,224,120,54]}
+{"kind":"textbox","id":"sh/90vy9cbe","slide":7,"text":"资金 + 分散","textPreview":"资金 + 分散","textChars":7,"textLines":1,"bbox":[884,292,300,36]}
+{"kind":"textbox","id":"sh/2h0fmdcj","slide":7,"text":"大数法则把波动变成确定性","textPreview":"大数法则把波动变成确定性","textChars":12,"textLines":1,"bbox":[884,336,300,60]}
+{"kind":"textbox","id":"sh/ni9gvit4","slide":7,"text":"几百笔小额深水，少数赢家覆盖多数输家","textPreview":"几百笔小额深水，少数赢家覆盖多数输家","textChars":18,"textLines":1,"bbox":[884,404,300,60]}
+{"kind":"textbox","id":"sh/rm5wne9w","slide":7,"text":"复制门槛：本金 + 纪律","textPreview":"复制门槛：本金 + 纪律","textChars":12,"textLines":1,"bbox":[884,500,300,34]}
+{"kind":"textbox","id":"sh/qlwvu9sb","slide":7,"text":"长期盈利的账户，至少带着其中一种；你看到的动作，只是优势的外表。","textPreview":"长期盈利的账户，至少带着其中一种；你看到的动作，只是优势的外表。","textChars":32,"textLines":1,"bbox":[72,606,1136,36]}
+{"kind":"textbox","id":"sh/do7ep4r2","slide":7,"text":"三种优势","textPreview":"三种优势","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/snydwjah","slide":7,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/qhyuwj","slide":7,"text":"三种优势的总览。第一种是结构优势——利润和预测结果无关，是数学规则保证的。第二种是信息优势——知道别人不知道的。第三种是资金加分散——用大数法则把波动变成确定性。\n注意每种优势的复制门槛：结构需要工具和返佣，信息几乎不可复制而且有边界，资金分散需要本金和纪律。"}
+{"kind":"slide","id":"sl/qbhoaa","slide":8,"title":"优势 01 · 结构","textShapes":22}
+{"kind":"textbox","id":"sh/qdcjqh0n","slide":8,"text":"优势 01 · 结构","textPreview":"优势 01 · 结构","textChars":10,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/dgn2lwje","slide":8,"text":"e46m3：不猜比赛，做完整集套利","textPreview":"e46m3：不猜比赛，做完整集套利","textChars":17,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/cfe1srit","slide":8,"bbox":[72,196,520,400]}
+{"kind":"textbox","id":"sh/z25kn61k","slide":8,"text":"它怎么运作","textPreview":"它怎么运作","textChars":5,"textLines":1,"bbox":[100,220,300,30]}
+{"kind":"textbox","id":"sh/yhwju10z","slide":8,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[100,266,52,40]}
+{"kind":"textbox","id":"sh/l4n2pwja","slide":8,"text":"检测","textPreview":"检测","textChars":2,"textLines":1,"bbox":[166,264,150,34]}
+{"kind":"textbox","id":"sh/03e1wri5","slide":8,"text":"同一组结果的 YES 价格之和 Σp 偏离 $1","textPreview":"同一组结果的 YES 价格之和 Σp 偏离 $1","textChars":24,"textLines":1,"bbox":[166,296,400,34]}
+{"kind":"textbox","id":"sh/n6pkr6hg","slide":8,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[100,362,52,40]}
+{"kind":"textbox","id":"sh/m5wjy10v","slide":8,"text":"买入","textPreview":"买入","textChars":2,"textLines":1,"bbox":[166,360,150,34]}
+{"kind":"textbox","id":"sh/wzm50jeh","slide":8,"text":"买被低估的一侧（例如全套 NO）","textPreview":"买被低估的一侧（例如全套 NO）","textChars":16,"textLines":1,"bbox":[166,392,400,34]}
+{"kind":"textbox","id":"sh/x0v6t4v2","slide":8,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[100,458,52,40]}
+{"kind":"textbox","id":"sh/ad4ny9wr","slide":8,"text":"兑现","textPreview":"兑现","textChars":2,"textLines":1,"bbox":[166,456,150,34]}
+{"kind":"textbox","id":"sh/vydoredc","slide":8,"text":"Convert / Merge 立刻换成现金，不等结算","textPreview":"Convert / Merge 立刻换成现金，不等结算","textChars":27,"textLines":1,"bbox":[166,488,400,34]}
+{"kind":"textbox","id":"sh/k3654jet","slide":8,"text":"结论：与预测结果完全无关——它不是赌徒，是套利机器。","textPreview":"结论：与预测结果完全无关——它不是赌徒，是套利机器。","textChars":26,"textLines":1,"bbox":[100,548,460,36]}
+{"kind":"shape","id":"sh/54f6xove","slide":8,"bbox":[628,196,580,400]}
+{"kind":"textbox","id":"sh/i14n29wn","slide":8,"text":"吉达温度组 · 实测数据","textPreview":"吉达温度组 · 实测数据","textChars":12,"textLines":1,"bbox":[656,220,300,30]}
+{"kind":"textbox","id":"sh/j2xoved8","slide":8,"text":"Σp = 1.0475 ~ 1.0640","textPreview":"Σp = 1.0475 ~ 1.0640","textChars":20,"textLines":1,"bbox":[656,270,530,44]}
+{"kind":"textbox","id":"sh/s76p83ep","slide":8,"text":"完整集定价偏离，全套 NO 被低估","textPreview":"完整集定价偏离，全套 NO 被低估","textChars":17,"textLines":1,"bbox":[656,318,530,30]}
+{"kind":"textbox","id":"sh/t8f61ova","slide":8,"text":"单轮毛利 4.7% ~ 6.4%","textPreview":"单轮毛利 4.7% ~ 6.4%","textChars":16,"textLines":1,"bbox":[656,370,530,44]}
+{"kind":"textbox","id":"sh/1ob6lone","slide":8,"text":"约 30 秒一轮，循环兑现","textPreview":"约 30 秒一轮，循环兑现","textChars":13,"textLines":1,"bbox":[656,418,530,30]}
+{"kind":"textbox","id":"sh/gn25cj6t","slide":8,"text":"12 天 5,000 次 Convert","textPreview":"12 天 5,000 次 Convert","textChars":20,"textLines":1,"bbox":[656,470,530,44]}
+{"kind":"textbox","id":"sh/fmtoje5o","slide":8,"text":"单笔中位 $0.70，24×7 自动化","textPreview":"单笔中位 $0.70，24×7 自动化","textChars":19,"textLines":1,"bbox":[656,518,530,30]}
+{"kind":"textbox","id":"sh/elknato3","slide":8,"text":"三种优势","textPreview":"三种优势","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/psv6p8nq","slide":8,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/qbhoaa","slide":8,"text":"先看结构优势，主角是 e46m3。它的运作只有三步：检测 Σp 偏离 1 美元、买入被低估的一侧、用 Convert 和 Merge 立刻兑现价差，不等结算。\n吉达温度组的实测数据：Σp 在 1.0475 到 1.0640 之间，单轮毛利 4.7% 到 6.4%，约 30 秒一轮；过去 12 天做了 5000 次 Convert，单笔中位 0.7 美元，24 小时不间断。\n重点：它的利润和预测结果完全无关——这是数学规则保证的。它不是赌徒，是套利机器。\n\n[Sources] docs/forensics/KNOWLEDGE_BASE.md §2、docs/forensics/cases/2026-08-12_jeddah_temperature/README.md、docs/forensics/data/e46m3/stats.json"}
+{"kind":"slide","id":"sl/pdjlmg","slide":9,"title":"优势 02 · 信息","textShapes":25}
+{"kind":"textbox","id":"sh/g36t83q1","slide":9,"text":"优势 02 · 信息","textPreview":"优势 02 · 信息","textChars":10,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/f2dszypg","slide":9,"text":"fkigedgjdgwbg：确认信息后，才下大注","textPreview":"fkigedgjdgwbg：确认信息后，才下大注","textChars":24,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/e14b6t8v","slide":9,"bbox":[72,196,520,400]}
+{"kind":"textbox","id":"sh/psfu587i","slide":9,"text":"EDG vs LGD · LGD 盘口时间线（UTC）","textPreview":"EDG vs LGD · LGD 盘口时间线（UTC）","textChars":27,"textLines":1,"bbox":[100,220,320,30]}
+{"kind":"textbox","id":"sh/or6tc3qx","slide":9,"text":"07:00","textPreview":"07:00","textChars":5,"textLines":1,"bbox":[100,266,110,32]}
+{"kind":"textbox","id":"sh/3qxc3ypc","slide":9,"text":"0.57","textPreview":"0.57","textChars":4,"textLines":1,"bbox":[218,266,130,32]}
+{"kind":"textbox","id":"sh/25obad8r","slide":9,"text":"赛前，LGD 只是小热门","textPreview":"赛前，LGD 只是小热门","textChars":12,"textLines":1,"bbox":[356,266,210,32]}
+{"kind":"textbox","id":"sh/5wvato7e","slide":9,"text":"07:20","textPreview":"07:20","textChars":5,"textLines":1,"bbox":[100,344,110,32]}
+{"kind":"textbox","id":"sh/4v2t0jqt","slide":9,"text":"0.645","textPreview":"0.645","textChars":5,"textLines":1,"bbox":[218,344,130,32]}
+{"kind":"textbox","id":"sh/exczixkz","slide":9,"text":"开始异动","textPreview":"开始异动","textChars":4,"textLines":1,"bbox":[356,344,210,32]}
+{"kind":"textbox","id":"sh/zyl0rilk","slide":9,"text":"07:40","textPreview":"07:40","textChars":5,"textLines":1,"bbox":[100,422,110,32]}
+{"kind":"textbox","id":"sh/0zuhkn25","slide":9,"text":"0.994","textPreview":"0.994","textChars":5,"textLines":1,"bbox":[218,422,130,32]}
+{"kind":"textbox","id":"sh/l03its3q","slide":9,"text":"20 分钟内拉到 0.99","textPreview":"20 分钟内拉到 0.99","textChars":13,"textLines":1,"bbox":[356,422,210,32]}
+{"kind":"textbox","id":"sh/mlczmxkb","slide":9,"text":"07:44 起","textPreview":"07:44 起","textChars":7,"textLines":1,"bbox":[100,500,110,32]}
+{"kind":"textbox","id":"sh/nml0v2lg","slide":9,"text":"0.95~0.999","textPreview":"0.95~0.999","textChars":10,"textLines":1,"bbox":[218,500,130,32]}
+{"kind":"textbox","id":"sh/8neho721","slide":9,"text":"该地址开始大额追买","textPreview":"该地址开始大额追买","textChars":9,"textLines":1,"bbox":[356,500,210,32]}
+{"kind":"shape","id":"sh/9onixc3m","slide":9,"bbox":[628,196,580,400]}
+{"kind":"textbox","id":"sh/apwjqhk7","slide":9,"text":"8 月 14 日 · 账户行为","textPreview":"8 月 14 日 · 账户行为","textChars":15,"textLines":1,"bbox":[656,220,320,30]}
+{"kind":"textbox","id":"sh/vq50z2ls","slide":9,"text":"$277,608","textPreview":"$277,608","textChars":8,"textLines":1,"bbox":[656,270,530,44]}
+{"kind":"textbox","id":"sh/7upgnmh0","slide":9,"text":"追买 LGD，成交价 0.95~0.999（三块盘合计）","textPreview":"追买 LGD，成交价 0.95~0.999（三块盘合计）","textChars":28,"textLines":1,"bbox":[656,318,530,30]}
+{"kind":"textbox","id":"sh/6twzeh0f","slide":9,"text":"794 笔 / 单日","textPreview":"794 笔 / 单日","textChars":10,"textLines":1,"bbox":[656,370,530,44]}
+{"kind":"textbox","id":"sh/tw7ypczq","slide":9,"text":"全部为买入，合计约 $531,992，无任何卖出","textPreview":"全部为买入，合计约 $531,992，无任何卖出","textChars":24,"textLines":1,"bbox":[656,418,530,30]}
+{"kind":"textbox","id":"sh/svyhgri5","slide":9,"text":"$81,676","textPreview":"$81,676","textChars":7,"textLines":1,"bbox":[656,470,530,44]}
+{"kind":"textbox","id":"sh/jq5gj2ho","slide":9,"text":"单笔最大赢利，历史累计 3,139 笔","textPreview":"单笔最大赢利，历史累计 3,139 笔","textChars":19,"textLines":1,"bbox":[656,518,530,30]}
+{"kind":"textbox","id":"sh/ipwzax03","slide":9,"text":"它是在信息确认后才下注；散户买在同一价位，就是在给它接盘。","textPreview":"它是在信息确认后才下注；散户买在同一价位，就是在给它接盘。","textChars":29,"textLines":1,"bbox":[72,624,1136,40]}
+{"kind":"textbox","id":"sh/5snylczu","slide":9,"text":"三种优势","textPreview":"三种优势","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/krehc7i9","slide":9,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/pdjlmg","slide":9,"text":"第二种优势是信息优势。8 月 14 日 EDG 对 LGD，LGD 的盘口在 20 分钟里从 0.57 被拉到 0.99，而这个地址在价格打到位之后，以 0.95 到 0.999 的价格追买了 27.7 万美元。\n当天它 794 笔全部是买入、合计约 53 万美元，没有任何卖出；历史单笔最大赢利 8.1 万美元。\n这里要说明：假赛性质来自案例标注的外部推测，我们确认的是行为模式——它在信息确认后才下注。散户没有这个信息，买在同一价位，就是给它接盘。\n\n[Sources] docs/forensics/data/fkigedgjdgwbg/README.md、docs/forensics/cases/README.md（2026-08-14 EDG vs LGD 行）"}
+{"kind":"slide","id":"sl/hgtqa1","slide":10,"title":"优势 03 · 资金 + 分散","textShapes":9}
+{"kind":"textbox","id":"sh/yh47m98v","slide":10,"text":"优势 03 · 资金 + 分散","textPreview":"优势 03 · 资金 + 分散","textChars":15,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/lkfqxo7m","slide":10,"text":"深水机器人簇：用几百笔小注换确定性","textPreview":"深水机器人簇：用几百笔小注换确定性","textChars":17,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/0j6pojq1","slide":10,"bbox":[72,196,520,400]}
+{"kind":"textbox","id":"sh/bed8repk","slide":10,"text":"它们的行为特征","textPreview":"它们的行为特征","textChars":7,"textLines":1,"bbox":[100,220,300,30]}
+{"kind":"textbox","id":"sh/qd47i98z","slide":10,"text":"每天几十场，每场几百股\n只买 ≤ $0.15 的大劣势方（深水）\nGX vs VIT G2：深水共 145 人 / $8.5k / 86k 份\n大额买家几乎全是系统性深水机器","textPreview":"每天几十场，每场几百股 | 只买 ≤ $0.15 的大劣势方（深水） | GX vs VIT G2：深水共 145 人 / $8.5k / 86k 份 | 大额买家几乎全是系统性深水机器","textChars":87,"textLines":4,"bbox":[100,272,470,160]}
+{"kind":"shape","id":"sh/dgvqt47a","slide":10,"bbox":[628,196,580,400]}
+{"kind":"textbox","id":"sh/cfmpkjq5","slide":10,"text":"为什么这样能赢","textPreview":"为什么这样能赢","textChars":7,"textLines":1,"bbox":[656,220,300,30]}
+{"kind":"textbox","id":"sh/vax83ypo","slide":10,"text":"单个深水单大概率归零——没关系\n几百笔里，赢的少数覆盖输的多数\n大数法则把波动变成了确定性\n这是资金规模和纪律的组合，不是判断力","textPreview":"单个深水单大概率归零——没关系 | 几百笔里，赢的少数覆盖输的多数 | 大数法则把波动变成了确定性 | 这是资金规模和纪律的组合，不是判断力","textChars":64,"textLines":4,"bbox":[656,272,530,160]}
+{"kind":"textbox","id":"sh/a9o7ut83","slide":10,"text":"你想学的不是“买深水”，是它背后的分散结构。","textPreview":"你想学的不是“买深水”，是它背后的分散结构。","textChars":22,"textLines":1,"bbox":[72,624,1136,40]}
+{"kind":"textbox","id":"sh/wf2pg3e5","slide":10,"text":"三种优势","textPreview":"三种优势","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/hgbqp8fq","slide":10,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/hgtqa1","slide":10,"text":"第三种优势是资金加分散。深水机器人每天几十场、每场几百股、只买 15 美分以下的大劣势方。GX 对 VIT 那场，深水买家共 145 人、8 万 6 千份，大额买家几乎全是系统性机器。\n它为什么能赢：单个深水单大概率归零，但几百笔里赢的少数覆盖输的多数——大数法则把波动变成了确定性。这是资金规模和纪律的组合，不是判断力。\n所以真正值得学的是分散结构，不是“买深水”这个动作。\n\n[Sources] docs/forensics/KNOWLEDGE_BASE.md 关键发现 10/11、docs/forensics/cases/2026-08-15_lol-gx-vit-game2-address/SITUATION_REPORT.md"}
+{"kind":"slide","id":"sl/850w9c","slide":11,"title":"一个反直觉的数字","textShapes":11}
+{"kind":"textbox","id":"sh/s3ap8fy5","slide":11,"text":"一个反直觉的数字","textPreview":"一个反直觉的数字","textChars":8,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/r2h8zahk","slide":11,"text":"跨场赢家 vs 单场赢家：5.4 倍","textPreview":"跨场赢家 vs 单场赢家：5.4 倍","textChars":18,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"textbox","id":"sh/618765gz","slide":11,"text":"5.4×","textPreview":"5.4×","textChars":4,"textLines":1,"bbox":[72,210,1136,130]}
+{"kind":"textbox","id":"sh/50zqxkze","slide":11,"text":"两场同日比赛（Gen.G vs T1 & DRX vs BRO）· 889 个共同赢家","textPreview":"两场同日比赛（Gen.G vs T1 & DRX vs BRO）· 889 个共同赢家","textChars":43,"textLines":1,"bbox":[72,348,1136,40]}
+{"kind":"shape","id":"sh/4zqp4fyt","slide":11,"bbox":[190,416,430,110]}
+{"kind":"textbox","id":"sh/jyh8vah8","slide":11,"text":"$3,559","textPreview":"$3,559","textChars":6,"textLines":1,"bbox":[218,436,380,40]}
+{"kind":"textbox","id":"sh/ix8725gn","slide":11,"text":"跨场赢家 · 场均盈利","textPreview":"跨场赢家 · 场均盈利","textChars":11,"textLines":1,"bbox":[218,478,380,30]}
+{"kind":"shape","id":"sh/pw3q94zi","slide":11,"bbox":[660,416,430,110]}
+{"kind":"textbox","id":"sh/ovu9gzyd","slide":11,"text":"$658","textPreview":"$658","textChars":4,"textLines":1,"bbox":[688,436,380,40]}
+{"kind":"textbox","id":"sh/6pwjehc7","slide":11,"text":"单场赢家 · 场均盈利","textPreview":"单场赢家 · 场均盈利","textChars":11,"textLines":1,"bbox":[688,478,380,30]}
+{"kind":"textbox","id":"sh/rq50nmts","slide":11,"text":"逻辑：长期盈利者都在用三种优势之一在玩；“买深水 / 买高位 / 买好比赛”只是优势的外表。","textPreview":"逻辑：长期盈利者都在用三种优势之一在玩；“买深水 / 买高位 / 买好比赛”只是优势的外表。","textChars":46,"textLines":1,"bbox":[72,566,1136,50]}
+{"kind":"textbox","id":"sh/sry1grud","slide":11,"text":"三种优势","textPreview":"三种优势","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/ts7ipcby","slide":11,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/850w9c","slide":11,"text":"这个数字很反直觉：我们把两场同日比赛放在一起，889 个在两场都赢钱的账户，场均盈利 3559 美元，是单场赢家 658 美元的 5.4 倍。\n注意样本：这是两场具体比赛的对照，不是一个长期统计，但它指向同一件事——长期盈利的账户在用三种优势之一在玩。你看到的买深水、买高位、买好比赛，只是优势的外表。\n\n[Sources] docs/forensics/cases/2026-08-18_lol-winner-accounts-t1gen-drxbro/README.md"}
+{"kind":"slide","id":"sl/pwapq3","slide":12,"title":"我们亲自验证 · 结构套利回测","textShapes":7}
+{"kind":"textbox","id":"sh/290nmt4j","slide":12,"text":"我们亲自验证 · 结构套利回测","textPreview":"我们亲自验证 · 结构套利回测","textChars":15,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/pcb6hona","slide":12,"text":"机会是真的，但门槛在执行质量，不是发现错价","textPreview":"机会是真的，但门槛在执行质量，不是发现错价","textChars":21,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/obi5ojmp","slide":12,"bbox":[72,196,460,400]}
+{"kind":"textbox","id":"sh/f69obe58","slide":12,"text":"回测结论（保守口径）","textPreview":"回测结论（保守口径）","textChars":10,"textLines":1,"bbox":[100,220,300,30]}
+{"kind":"textbox","id":"sh/u50ni94n","slide":12,"text":"结构机会真实且高频：吉达 24 小时出现 31 个错价窗口\n但边很薄：毛利约 0.3% / 轮，1% 滑点就吃掉大半\ntaker 全收费、无返佣口径：净期望为负\n敏感性：只有“零滑点 + 100% 返佣”才转正（+$6.77）\ne46m3 只在 Σp≥1.0475 动手、挑腿买、叠返佣","textPreview":"结构机会真实且高频：吉达 24 小时出现 31 个错价窗口 | 但边很薄：毛利约 0.3% / 轮，1% 滑点就吃掉大半 | taker 全收费、无返佣口径：净期望为负 | 敏感性：只有“零滑点 + 100% 返佣”才转正（+$6.77） | e46m3 只在 Σp≥1.0...","textChars":143,"textLines":5,"bbox":[100,270,410,200]}
+{"kind":"textbox","id":"sh/g7i5kjmd","slide":12,"text":"结论：结构套利不是“能不能发现”，而是“有没有工具和返佣把它做出来”。","textPreview":"结论：结构套利不是“能不能发现”，而是“有没有工具和返佣把它做出来”。","textChars":35,"textLines":1,"bbox":[72,630,1136,36]}
+{"kind":"textbox","id":"sh/7ipo7e5w","slide":12,"text":"我们自己的验证","textPreview":"我们自己的验证","textChars":7,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/6hgne94b","slide":12,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"table","id":"tb/s76d0rmd","slide":12,"name":"","rows":6,"cols":3,"preview":"指标 | 吉达温度组 | Villarreal 比分","bbox":[572,216,636,300]}
+{"kind":"notes","id":"nt/pwapq3","slide":12,"text":"这是我们自己做的验证：把吉达和 Villarreal 的价格历史重放，模拟“买全套 NO → Convert → 拿现金”的完整流程，计入滑点、手续费和 gas。\n结论：结构机会是真的，而且高频——吉达 24 小时出现 31 个错价窗口。但边很薄：毛利只有投入的约 0.3%，1% 滑点就吃掉大半。保守口径（taker 全收费、无返佣）净期望为负；敏感性表里只有“零滑点加 100% 返佣”才转正。\ne46m3 的现实行为也印证了这一点：它只在 Σp 达到 4.7% 以上才动手、只挑部分腿买、还叠加返佣。所以门槛不在发现错价，在执行质量。\n\n[Sources] reports/forensics_arb_backtest_jeddah_prices_20260817-095544.md、reports/forensics_arb_backtest_e46m3_villarreal_exact_2026-08-12_20260817-095543.md、tools/forensics_arb_backtester.py"}
+{"kind":"slide","id":"sl/8rt123","slide":13,"title":"那对你意味着什么","textShapes":8}
+{"kind":"textbox","id":"sh/g7250v2l","slide":13,"text":"那对你意味着什么","textPreview":"那对你意味着什么","textChars":8,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/f69orql0","slide":13,"text":"诚实版本","textPreview":"诚实版本","textChars":4,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/u50nylkf","slide":13,"bbox":[72,196,1136,150]}
+{"kind":"textbox","id":"sh/t4r6pg3u","slide":13,"text":"你现在没有这三种优势——没有套利引擎、没有内幕信息、没有大资金分散。所以对你来说，当前方式下进入预测市场 ≈ 赌博。","textPreview":"你现在没有这三种优势——没有套利引擎、没有内幕信息、没有大资金分散。所以对你来说，当前方式下进入预测市场 ≈ 赌博。","textChars":58,"textLines":1,"bbox":[104,222,1080,100]}
+{"kind":"shape","id":"sh/s3i5wb29","slide":13,"bbox":[72,372,1136,170]}
+{"kind":"textbox","id":"sh/7i9on6l4","slide":13,"text":"你是在和带着优势的人玩零和游戏，长期期望是负的。","textPreview":"你是在和带着优势的人玩零和游戏，长期期望是负的。","textChars":24,"textLines":1,"bbox":[104,398,1080,60]}
+{"kind":"textbox","id":"sh/6h0nu1kj","slide":13,"text":"这不是侮辱你的判断力——判断力单独不构成优势：你的对手也有判断力，而且他们还有你没有的仓位结构。","textPreview":"这不是侮辱你的判断力——判断力单独不构成优势：你的对手也有判断力，而且他们还有你没有的仓位结构。","textChars":48,"textLines":1,"bbox":[104,458,1080,60]}
+{"kind":"textbox","id":"sh/5grmlw3y","slide":13,"text":"所以问题不是“该不该玩”，而是“以什么身份进场”。","textPreview":"所以问题不是“该不该玩”，而是“以什么身份进场”。","textChars":25,"textLines":1,"bbox":[72,580,1136,50]}
+{"kind":"textbox","id":"sh/kfy5srmd","slide":13,"text":"怎么参与","textPreview":"怎么参与","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/qlwb2h8v","slide":13,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/8rt123","slide":13,"text":"现在说点扎心的：这三种优势，你现在都没有。所以对你来说，当前方式下进入预测市场，和赌博没有区别——你是在和带优势的人玩零和游戏，长期期望为负。\n注意，这不是说你的判断力不行。判断力单独不构成优势，因为对手也有判断力，而且还有你没有的仓位结构。\n所以问题不是该不该玩，而是以什么身份进场。下一页开始讲怎么参与。"}
+{"kind":"slide","id":"sl/hxhg83","slide":14,"title":"怎么参与 ①","textShapes":14}
+{"kind":"textbox","id":"sh/u5sn61cr","slide":14,"text":"怎么参与 ①","textPreview":"怎么参与 ①","textChars":6,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/h8j61wbi","slide":14,"text":"先停止“无优势的下注”","textPreview":"先停止“无优势的下注”","textChars":11,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/g7a58bux","slide":14,"bbox":[72,210,352,300]}
+{"kind":"textbox","id":"sh/72hovmtg","slide":14,"text":"30–50u 小账户","textPreview":"30–50u 小账户","textChars":10,"textLines":1,"bbox":[100,238,300,66]}
+{"kind":"textbox","id":"sh/6h8n2hcv","slide":14,"text":"先学会输得起","textPreview":"先学会输得起","textChars":6,"textLines":1,"bbox":[100,316,300,34]}
+{"kind":"textbox","id":"sh/t4z6xwb6","slide":14,"text":"用一笔归零也不影响生活的钱进场","textPreview":"用一笔归零也不影响生活的钱进场","textChars":15,"textLines":1,"bbox":[100,356,300,90]}
+{"kind":"shape","id":"sh/83q54rul","slide":14,"bbox":[464,210,352,300]}
+{"kind":"textbox","id":"sh/jehormt4","slide":14,"text":"单笔 ≤ 30% 账户","textPreview":"单笔 ≤ 30% 账户","textChars":11,"textLines":1,"bbox":[492,238,300,66]}
+{"kind":"textbox","id":"sh/ydonyhcj","slide":14,"text":"固定金额制","textPreview":"固定金额制","textChars":5,"textLines":1,"bbox":[492,316,300,34]}
+{"kind":"textbox","id":"sh/ovedo729","slide":14,"text":"不按比例加仓，不做“回本式”下注","textPreview":"不按比例加仓，不做“回本式”下注","textChars":16,"textLines":1,"bbox":[492,356,300,90]}
+{"kind":"shape","id":"sh/pwnuxs3u","slide":14,"bbox":[856,210,352,300]}
+{"kind":"textbox","id":"sh/2twvmxk3","slide":14,"text":"规则止损 + 先 dry-run","textPreview":"规则止损 + 先 dry-run","textChars":16,"textLines":1,"bbox":[884,238,300,66]}
+{"kind":"textbox","id":"sh/3u5cv2lo","slide":14,"text":"实盘前先模拟","textPreview":"实盘前先模拟","textChars":6,"textLines":1,"bbox":[884,316,300,34]}
+{"kind":"textbox","id":"sh/grutkn2d","slide":14,"text":"所有动作先在模拟环境里过一遍","textPreview":"所有动作先在模拟环境里过一遍","textChars":14,"textLines":1,"bbox":[884,356,300,90]}
+{"kind":"textbox","id":"sh/1snuts3y","slide":14,"text":"这一步的意义：把劣势降到最低，把学费控制在可承受的范围。","textPreview":"这一步的意义：把劣势降到最低，把学费控制在可承受的范围。","textChars":28,"textLines":1,"bbox":[72,556,1136,60]}
+{"kind":"textbox","id":"sh/u5cbidk7","slide":14,"text":"怎么参与","textPreview":"怎么参与","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/fqlcrils","slide":14,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/hxhg83","slide":14,"text":"参与的第一步不是找机会，是止损自己的行为：30 到 50u 的小账户，先学会输得起；单笔不超过账户 30%，固定金额制，不按比例加仓；规则止损，实盘前先模拟。\n这些都是项目风控里的现成纪律，不是新发明。它们的意义只有一句话：把劣势降到最低，把学费控制在可承受范围。\n\n[Sources] config/risk_limits.json、AGENTS.md（固定金额制、先 dry-run）"}
+{"kind":"slide","id":"sl/gfiaje","slide":15,"title":"怎么参与 ②","textShapes":10}
+{"kind":"textbox","id":"sh/cv610ra9","slide":15,"text":"怎么参与 ②","textPreview":"怎么参与 ②","textChars":6,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/rudkrm94","slide":15,"text":"用“彩票预算”学分散","textPreview":"用“彩票预算”学分散","textChars":10,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/qt4jyhsj","slide":15,"bbox":[72,210,700,320]}
+{"kind":"textbox","id":"sh/psv2pcby","slide":15,"text":"深水小仓 = 深水机器人的“分散”结构","textPreview":"深水小仓 = 深水机器人的“分散”结构","textChars":19,"textLines":1,"bbox":[104,236,600,40]}
+{"kind":"textbox","id":"sh/4rm1w7ad","slide":15,"text":"只买 ≤ 15¢ 价位的大劣势方\n单笔金额小到“归零也不心疼”\n用一批小注，而不是一把大注，去理解胜率结构","textPreview":"只买 ≤ 15¢ 价位的大劣势方 | 单笔金额小到“归零也不心疼” | 用一批小注，而不是一把大注，去理解胜率结构","textChars":53,"textLines":3,"bbox":[104,296,640,120]}
+{"kind":"textbox","id":"sh/3qd0nmts","slide":15,"text":"目标：先学结构（怎么分配、怎么止损），再学动作。","textPreview":"目标：先学结构（怎么分配、怎么止损），再学动作。","textChars":24,"textLines":1,"bbox":[104,452,640,44]}
+{"kind":"shape","id":"sh/2p4juhs7","slide":15,"bbox":[808,210,400,320]}
+{"kind":"textbox","id":"sh/hovilcbm","slide":15,"text":"一个提醒","textPreview":"一个提醒","textChars":4,"textLines":1,"bbox":[836,240,344,60]}
+{"kind":"textbox","id":"sh/gn21s7ah","slide":15,"text":"这不是“抄底致富”的捷径，是付学费买认知。\n深水机器人的钱来自几百笔的分散，不是单笔的命中。","textPreview":"这不是“抄底致富”的捷径，是付学费买认知。 | 深水机器人的钱来自几百笔的分散，不是单笔的命中。","textChars":46,"textLines":2,"bbox":[836,306,344,150]}
+{"kind":"textbox","id":"sh/q5gra5ov","slide":15,"text":"彩票预算 = 你能承受的“学费上限”，不是仓位建议。","textPreview":"彩票预算 = 你能承受的“学费上限”，不是仓位建议。","textChars":26,"textLines":1,"bbox":[72,566,1136,60]}
+{"kind":"textbox","id":"sh/r6ps3apg","slide":15,"text":"怎么参与","textPreview":"怎么参与","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/c7y9cv61","slide":15,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/gfiaje","slide":15,"text":"第二步：用彩票预算学分散。深水小仓学的是深水机器人的分散结构——只买 15 美分以下的大劣势方，单笔金额小到归零也不心疼。\n提醒一下：这不是抄底致富的捷径，是付学费买认知。深水机器人的钱来自几百笔的分散，不是单笔的命中。"}
+{"kind":"slide","id":"sl/4rx5lg","slide":16,"title":"怎么参与 ③","textShapes":17}
+{"kind":"textbox","id":"sh/m1gjapwb","slide":16,"text":"怎么参与 ③","textPreview":"怎么参与 ③","textChars":6,"textLines":1,"bbox":[72,52,700,26]}
+{"kind":"textbox","id":"sh/94ri5kf2","slide":16,"text":"长期三条路，选一条认真走","textPreview":"长期三条路，选一条认真走","textChars":12,"textLines":1,"bbox":[72,84,1136,78]}
+{"kind":"shape","id":"sh/83y1cfeh","slide":16,"bbox":[72,210,352,310]}
+{"kind":"textbox","id":"sh/v6907uds","slide":16,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[100,238,120,50]}
+{"kind":"textbox","id":"sh/u50jepw7","slide":16,"text":"结构","textPreview":"结构","textChars":2,"textLines":1,"bbox":[100,296,300,40]}
+{"kind":"textbox","id":"sh/h8ri94vy","slide":16,"text":"套利 / 做市","textPreview":"套利 / 做市","textChars":7,"textLines":1,"bbox":[100,340,300,34]}
+{"kind":"textbox","id":"sh/w7i1gzed","slide":16,"text":"需要工具与返佣门槛——扫描与回测我们已经在建","textPreview":"需要工具与返佣门槛——扫描与回测我们已经在建","textChars":22,"textLines":1,"bbox":[100,384,300,100]}
+{"kind":"shape","id":"sh/ja90bud4","slide":16,"bbox":[464,210,352,310]}
+{"kind":"textbox","id":"sh/i90ji9wj","slide":16,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[492,238,120,50]}
+{"kind":"textbox","id":"sh/w7mh4zy9","slide":16,"text":"信息","textPreview":"信息","textChars":2,"textLines":1,"bbox":[492,296,300,40]}
+{"kind":"textbox","id":"sh/h8vyd4fu","slide":16,"text":"情报库","textPreview":"情报库","textChars":3,"textLines":1,"bbox":[492,340,300,34]}
+{"kind":"textbox","id":"sh/u54z2pg3","slide":16,"text":"用公开数据建立可溯源的信息优势——进行中","textPreview":"用公开数据建立可溯源的信息优势——进行中","textChars":20,"textLines":1,"bbox":[492,384,300,100]}
+{"kind":"shape","id":"sh/v6dgbuxo","slide":16,"bbox":[856,210,352,310]}
+{"kind":"textbox","id":"sh/4bmh8je5","slide":16,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[884,238,120,50]}
+{"kind":"textbox","id":"sh/5wfyhofq","slide":16,"text":"纪律 + 时间","textPreview":"纪律 + 时间","textChars":7,"textLines":1,"bbox":[884,296,300,40]}
+{"kind":"textbox","id":"sh/i94z69gf","slide":16,"text":"资金分散","textPreview":"资金分散","textChars":4,"textLines":1,"bbox":[884,340,300,34]}
+{"kind":"textbox","id":"sh/jadgfexk","slide":16,"text":"慢，但每一分钱都在长本事","textPreview":"慢，但每一分钱都在长本事","textChars":12,"textLines":1,"bbox":[884,384,300,100]}
+{"kind":"textbox","id":"sh/sz6hcjeh","slide":16,"text":"三条都不急，但第一条路——停止无优势下注——现在就该走。","textPreview":"三条都不急，但第一条路——停止无优势下注——现在就该走。","textChars":28,"textLines":1,"bbox":[72,556,1136,60]}
+{"kind":"textbox","id":"sh/d0fylof2","slide":16,"text":"怎么参与","textPreview":"怎么参与","textChars":4,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/1gby5o76","slide":16,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/4rx5lg","slide":16,"text":"长期只有三条路：结构，需要工具和返佣门槛，扫描与回测我们已经在建；信息，用公开数据建立可溯源的情报库，正在进行；纪律加时间，慢慢积累资金分散，慢但每一分都在长本事。\n三条都不急，但第一条路——停止无优势下注——现在就该走。"}
+{"kind":"slide","id":"sl/g24rar","slide":17,"title":"预测市场不是赌博，但“没有优势的人预测”就是赌博。","textShapes":7}
+{"kind":"textbox","id":"sh/mto3q5sj","slide":17,"text":"预测市场不是赌博，但“没有优势的人预测”就是赌博。","textPreview":"预测市场不是赌博，但“没有优势的人预测”就是赌博。","textChars":25,"textLines":1,"bbox":[72,128,1136,90]}
+{"kind":"textbox","id":"sh/9wf210ra","slide":17,"text":"那些地址能赢，是因为他们从赌博，变成了套利 / 信息 / 分散。","textPreview":"那些地址能赢，是因为他们从赌博，变成了套利 / 信息 / 分散。","textChars":32,"textLines":1,"bbox":[72,244,1136,40]}
+{"kind":"shape","id":"sh/8v6lsfap","slide":17,"bbox":[190,330,900,250]}
+{"kind":"textbox","id":"sh/zqxkvq98","slide":17,"text":"留给讨论的三个问题","textPreview":"留给讨论的三个问题","textChars":9,"textLines":1,"bbox":[230,356,830,36]}
+{"kind":"textbox","id":"sh/yp43mlsn","slide":17,"text":"你进预测市场，是为了赚钱，还是为了参与感？\n你能接受“我暂时没有优势”吗？如果不能，凭什么？\n结构、信息、纪律——你愿意为哪一条花半年？","textPreview":"你进预测市场，是为了赚钱，还是为了参与感？ | 你能接受“我暂时没有优势”吗？如果不能，凭什么？ | 结构、信息、纪律——你愿意为哪一条花半年？","textChars":68,"textLines":3,"bbox":[230,408,830,120]}
+{"kind":"textbox","id":"sh/lsf2x0ry","slide":17,"text":"谢谢 · 欢迎讨论","textPreview":"谢谢 · 欢迎讨论","textChars":9,"textLines":1,"bbox":[72,622,1136,40]}
+{"kind":"textbox","id":"sh/0r6lovat","slide":17,"text":"结束","textPreview":"结束","textChars":2,"textLines":1,"bbox":[72,676,520,20]}
+{"kind":"textbox","id":"sh/r2dkrq9w","slide":17,"text":"16","textPreview":"16","textChars":2,"textLines":1,"bbox":[1150,676,58,20]}
+{"kind":"notes","id":"nt/g24rar","slide":17,"text":"收尾一句话：预测市场不是赌博，但没有优势的人预测就是赌博。那些地址能赢，是因为他们从赌博变成了套利、信息、分散。\n最后留三个问题给大家讨论：你进来是为了赚钱还是参与感？你能接受自己暂时没有优势吗？结构、信息、纪律，你愿意为哪一条花半年？\n谢谢，欢迎讨论。"}

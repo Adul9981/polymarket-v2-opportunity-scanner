@@ -1,0 +1,10 @@
+{
+  "host": "",
+  "user": "root",
+  "remote_base": "/opt/danmu/docs/data/danmu",
+  "local_base": "docs/data/danmu",
+  "sync_sessions": true,
+  "remote_sessions": "/opt/danmu/runtime/danmu_sessions/server",
+  "local_sessions": "runtime/danmu_sessions/server",
+  "note": "host 填服务器 IP 后即可用；留空时同步脚本静默退出，避免定时任务报错。"
+}

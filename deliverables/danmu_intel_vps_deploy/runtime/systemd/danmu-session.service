@@ -1,0 +1,16 @@
+[Unit]
+Description=Danmu intel 7x24 collector (Huya/SOOP, 过渡方案：只采集)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=/opt/danmu-intel
+Environment=INTEL_PY=/opt/danmu-intel/.venv/bin/python
+ExecStart=/opt/danmu-intel/.venv/bin/python tools/vps_capture.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/opt/danmu-intel/logs/danmu-session.log
+StandardError=append:/opt/danmu-intel/logs/danmu-session.err
+
+[Install]
+WantedBy=multi-user.target

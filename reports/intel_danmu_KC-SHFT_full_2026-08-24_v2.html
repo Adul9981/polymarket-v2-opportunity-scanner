@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KC vs SHFT · LEC 整场复盘（KC 2:1 让一追二 · 灰信号方向未兑现）（v2 决策导向版）</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 22px; height:22px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 52px; font-size:11px; font-weight:650; padding-top:2px; }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  details { margin:6px 0; }
+  summary { cursor:pointer; color:var(--accent); font-size:12.5px; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="top">
+    <span class="score-big">1:2</span>
+    <span class="badge b-pend">弹幕口径 · 官方待回填</span>
+    <span class="badge b-risk">灰信号见 §2</span>
+    <span class="badge b-anchor">锚点见 §3</span>
+    <span class="badge b-odds">盘口见 §4</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span>现（KC 赢）——"被质疑方必输"整体未兑现（KC 2:1） ；对照 08-21 SK-TH（83 条指向 SK 两局兑现）——灰信号浓度与方向兑现无必然联系 跨场参照：MKOI 假赛质疑连续三日被引用（"KOI剧本/昨天晚上… <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span>G1 蛇女正锚未应验（版本符号需叠加选手执行），SHFT 维克托接管 <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--good)">盘口</span><span>BO3 KC 1.0 / Over 2.5 1.0（全 settled）；系列盘赛中一度 KC 82%（最终兑现） 弹幕盘口：G1 让分 KC 让 10.5-13.5（01:47"平水"翻转）；G2 击杀… <span class="meta">→ 详 §4</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span>七、预测验证 预测/锚点 结果 赛前"默认2-0/2-0速速下班"（KC 横扫） 未兑现 （G1… <span class="meta">→ 详 §5/§10</span></span></div>
+  </div>
+  <div class="act"><b>决策落点：</b>LONG/SHORT：负锚（注意：负锚≠必输，系列反例） SHFT 领先守不住画像 + 弱队盲僧正锚候选——跨场参考 SHORT（本场有效） 本系列验证：KC 状态波动大（G1 送/ G2 翻/ G3…</div>
+</div>
+<div class="card">
+  <h2><span class="no">1</span>比赛信息与结果总览 / 状态核验</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">header</h3><!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KC vs SHFT · LEC 整场复盘（KC 2:1 让一追二 · 灰信号方向未兑现）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+.block{margin-bottom:16px}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+.chip{display:inline-block;background:#f0f4ff;color:var(--accent);border-radius:999px;padding:2px 10px;font-size:11px;margin:2px 4px 2px 0}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>KC vs SHFT · LEC 整场复盘</h1>
+<p class="sub">赛事：LEC 2026 Summer W5（KC vs SHFT，BO3）· 数据源：硕硕(323444) 单路 + Polymarket 官方结算 · 窗口 01:15（BP）– 03:42（终局）· <b>结果：KC 2:1 SHFT（官方确认：Polymarket lol-shft-kc-2026-08-23 全 settled；G1 SHFT / G2 KC / G3 KC，让一追二）</b></p>
+<div class="stats">
+<div class="stat"><div class="num">KC 2:1</div><div class="lbl">让一追二（官方）</div></div>
+<div class="stat"><div class="num">3,112 条</div><div class="lbl">全窗弹幕（硕硕路）</div></div>
+<div class="stat"><div class="num">~100+ 条</div><div class="lbl">灰信号宽口径（三局）</div></div>
+<div class="stat"><div class="num">未兑现</div><div class="lbl">灰信号方向（KC 2:1）</div></div>
+</div>
+
+<div class="warn"><b>核心：KC 让一追二 2:1 赢下系列，但三局弹幕灰信号高浓度定向 KC（"明牌假赛/控盘/中单买了吧"）。</b>G1 SHFT 爆冷（灰信号方向兑现）→ G2 KC 马拉松扳平（方向未兑现）→ G3 KC 前期"速通/29-7"领先、中期被质疑"翻/要输"后收尾（方向未兑现）。<b>最终结论：灰信号浓度高 ≠ 结果方向——"被质疑方必输"整体未兑现（KC 2:1 赢系列），灰信号兑现率再添重要反例</b>（G1 兑现 / G2+G3 未兑现）。</div>
+
+<div class="ok"><b>结果校验（官方）：</b>Polymarket 事件 lol-shft-kc-2026-08-23 已 closed——game1 Shifters 1.0 / game2 Karmine Corp 1.0 / BO3 Karmine Corp 1.0 / 总局数 Over 2.5 1.0。弹幕口径一致（03:42"闹剧终于结束了"）。<b>灰信号纪律：观众质疑非结论，本系列为"高浓度灰信号但结果相反"的关键反例。</b></div>
+
+<section class="card"><h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">一、结果总览</h3><table>
+<tr><th>小局</th><th>结果</th><th>进程</th><th>关键信号</th></tr>
+<tr><td>G1（01:26–02:00，34 分钟）</td><td><b>SHFT 胜</b></td><td>KC 14 分钟领先 5k、天肥女警（近 3k/约 15:13）拖 34 分钟被翻；终局"泰坦抢龙 + ACE + 一波"</td><td>灰信号高预警定向 KC（蛇女明牌假赛/女警明演/KOI剧本）；"1-2梭哈 15倍"命中；蛇女 BP 正锚未应验</td></tr>
+<tr><td>G2（02:08–02:57，49 分钟）</td><td><b>KC 胜</b></td><td>SHFT 卡牌上单压纳尔/盲僧 4 头/EZ 一度主导（观众喊"早说了2:0"），KC 马拉松局翻盘（"让一追二"）</td><td>灰信号仍高浓度定向 KC 中单（瑞兹"控盘假赛杀kc/中单不想赢"）但 KC 赢——方向未兑现；击杀让分 -9.5 结算</td></tr>
+<tr><td>G3（03:00–03:42，约 27 分钟）</td><td><b>KC 胜</b></td><td>KC 前期"速通/要屠杀"（"29-7"击杀领先）→ 中期被质疑"翻了/要输了/yike红了" → 03:42 收尾，系列 2:1</td><td>灰信号延续（"故意演戏/这尼玛中单买了吧"）但 KC 拿下；Canna 阿卡丽（"canna都能玩上阿卡丽了"）</td></tr>
+</table>
+<ul>
+<li>系列 KC 2:1（官方确认，让一追二）；KC 保住 LEC 榜首（7-1），SHFT 首胜未遂（0-7）</li>
+<li>置信：高（Polymarket 官方结算 + 弹幕多信号一致）</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（风险 · 观众质疑非结论）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">五、灰信号汇总（系列）</h3><ul>
+<li><b>宽口径 ~100+ 条（三局合计）</b>：G1 ~60（定向 24）/ G2 高浓度（瑞兹定向）/ G3 延续（"故意演戏/中单买了吧"）</li>
+<li>核心对象：KC 中单（三局连续定向）＋ KC 队伍（"控盘假赛杀kc/畜生kc控盘狗/KC缺钱非得吃/都是第一了为什么不吃/lec也敢吃低保"）</li>
+<li>联赛级灰话："lec假赛赛区/lec大舞台有钱你就来/欧洲只吃最大的/lec的韩子都是去打假赛的"（含国籍指向——仅观众口径）</li>
+<li><b>方向验证（重要反例）：G1 兑现（KC 输）＋ G2/G3 未兑现（KC 赢）——"被质疑方必输"整体未兑现（KC 2:1）</b>；对照 08-21 SK-TH（83 条指向 SK 两局兑现）——灰信号浓度与方向兑现无必然联系</li>
+<li>跨场参照：MKOI 假赛质疑连续三日被引用（"KOI剧本/昨天晚上mkoi比这个变态么"）</li>
+<li>纪律：观众质疑非结论；本系列灰信号作高浓度风险标注，方向判定以官方结算为准（refuted）</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  
+</div>
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">八、盘口讨论</h3><ul>
+<li>Polymarket：game1 SHFT 1.0 / game2 KC 1.0 / BO3 KC 1.0 / Over 2.5 1.0（全 settled）；系列盘赛中一度 KC 82%（最终兑现）</li>
+<li>弹幕盘口：G1 让分 KC 让 10.5-13.5（01:47"平水"翻转）；G2 击杀让分 -9.5 结算（"初盘10.5 死活不给"）；"减号GG"（G3 减号方向）；"赛前20 26倍我上了"（SHFT 高赔未成）</li>
+<li>灰话："吃低保/加号/减号/梭哈/大脑袋"——LEC 盘口生态词汇（非结论）</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板（锚点×共识×灰信号）</h2>
+  <p class="meta">今日无方向板章节</p>
+</div>
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点（LONG/SHORT）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">九、情报含义与后续观察点</h3><div class="block"><h3>LONG（长期资产）</h3>
+<ul>
+<li><b>灰信号兑现率重要反例</b>：高浓度定向（~100 条/三局）≠ 结果方向——"被质疑方输球"在本系列未兑现（G1 兑现/G2+G3 未兑现），入库 gray_signals refuted 统计</li>
+<li><b>KC 卡时间跨场规律</b>（08-18 → 08-24 系列，三局 27+ 分钟）——后续 KC 比赛时长盘/打满盘参考；"领先不推进"画像需与"最终能赢"并列（KC 让一追二）</li>
+<li>KC 中单三局负锚（蛇女/瑞兹/第三选）——若选手 ID 确认，入 players.json 长期负锚（注意：负锚≠必输，系列反例）</li>
+<li>SHFT 领先守不住画像 + 弱队盲僧正锚候选——跨场参考</li>
+</ul></div>
+<div class="block"><h3>SHORT（本场有效）</h3>
+<ul>
+<li>本系列验证：KC 状态波动大（G1 送/ G2 翻/ G3 速通后波动）——后续 KC 比赛第一局不宜追深水</li>
+<li>SHFT 首胜未遂（0-7）——垫底队"终于要赢"叙事连续两日未兑现（08-22 vs FNC、08-24 vs KC）</li>
+</ul></div></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">7</span>逐局复盘（证据层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">二、逐局复盘</h3><div class="block"><h3>G1（867 条）—— SHFT 爆冷：KC 大优势被翻 + 灰信号兑现</h3>
+<ul>
+<li><b>BP 后战绩情报（G1）＝ 蛇女正锚，未应验</b>："蛇女一出直接赢"（BP 段共识，T1/GENG 放蛇女+盲僧皆败）→ KC 蛇女被集火送维克托多次（"明牌假赛/蛇女买了收了"），SHFT 维克托后期接管——版本符号需叠加选手执行（对照 HLE Zeka 蛇女赢）</li>
+<li>局中：KC 14 分钟领先 5k（"14分钟领先5000，打不过团"01:59:23）→ 天肥女警拖 34 分钟 → 终局"泰坦抢龙+ACE+一波"（01:58-59）→ SHFT 拿下</li>
+<li>灰信号（宽口径 ~60/定向 24）："这个蛇女明牌假赛/女警不放夹子就是明演/KC缺钱非得吃/都是第一了为什么不吃/lec也敢吃低保"——<b>方向兑现（被质疑方 KC 输 G1）</b></li>
+</ul>
+</div>
+<div class="block"><h3>G2（约 1,100 条）—— KC 马拉松扳平：灰信号方向首次未兑现</h3>
+<ul>
+<li>BP：KC 中单换英雄（蛇女→瑞兹），"kc怎么换中单了吗"（02:18:32）；瑞兹被批"补刀都不会"；SHFT 卡牌上单+盲僧+EZ 体系（"打破LEC弱队无盲僧魔咒"）</li>
+<li>局中：SHFT 主导（"早说了2:0/2:0了"多轮）→ 终局 KC 翻盘（"让一追二"02:56:18、"这赢了赌G死一地"02:48:17）→ Polymarket game2 = KC 99.95%</li>
+<li>灰信号：仍高浓度定向 KC 中单（瑞兹"控盘假赛杀kc/畜生kc控盘狗/中单不想赢/这个中路得买多少"）——<b>但 KC 赢，方向未兑现</b></li>
+</ul>
+</div>
+<div class="block"><h3>G3（467 条）—— KC 决胜：前期速通 + 中期波动 + 收尾</h3>
+<ul>
+<li>开局："这把kc速通局/要屠杀了"（03:15-17）、"29-7"击杀领先（03:25:55）——KC 前期压制</li>
+<li>中期波动："翻了/故意演戏"（03:22-23）、"yike红了 KC 要寄"（03:27:36）、"kc要输了？"（03:29:48）——观众仍质疑</li>
+<li>收尾："减号GG"（03:35:26）、"闹剧终于结束了"（03:42:25）→ KC 2:1（Polymarket BO3 = KC 1.0）</li>
+<li>灰信号延续："故意演戏"（03:23:47）、"这尼玛中单买了吧"（03:38:28）——<b>但 KC 赢，方向再次未兑现</b></li>
+</ul>
+</div></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（证据层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">三、队伍画像（本场 + 长期库）</h3><table>
+<tr><th>队伍</th><th>画像</th></tr>
+<tr><td>KC（2:1）</td><td>让一追二韧性 + <b>卡时间画像实锤</b>（G1 34 分钟/G2 49 分钟/G3 27 分钟，全超 25 分钟——"kc打谁都要30几分钟"应验）；中单三局负锚（蛇女/瑞兹/第三选）但系列赢——<b>"弹幕骂得凶≠必输"关键反例</b>；灰信号历史 69 条（08-18）+ 本系列 ~100 条宽口径，但方向最终未兑现（refuted）——实体状态更新为"高浓度但方向未兑现"</td></tr>
+<tr><td>SHFT（1:2）</td><td>G1 爆冷（0-6 打 7-0，首胜叙事最接近的一次）→ G2 被翻 → G3 未守住；卡牌上单/盲僧/EZ 体系有强度但终结能力不足（"这包是翻不了的局"被打破）；维克托（G1）/卡牌+盲僧（G2）两套体系均在领先时被翻——<b>领先守不住画像</b></td></tr>
+</table></section>
+
+<section class="card"><h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">四、人员画像（提及量，硕硕路）</h3><table>
+<tr><th>选手/对象</th><th>提及</th><th>评价</th></tr>
+<tr><td>KC 中单（G1 蛇女 / G2 瑞兹 / G3 第三选，ID 待核）</td><td>30+</td><td>"明牌假赛/买了收了/补刀都不会/中单不想赢/这个中路得买多少/这尼玛中单买了吧"——三局定向核心，但系列 KC 赢（灰信号对象≠输家）</td></tr>
+<tr><td>Yike（KC 打野）</td><td>6+</td><td>G2 全输出赵信被批"不像人能出的装备"；G3 "yike红了 KC 要寄"（波动）</td></tr>
+<tr><td>Canna（KC 上单）</td><td>4+</td><td>G1 朗姆送武器 2 个（"canna装b抗塔"）；G3 "canna都能玩上阿卡丽了"（阿卡丽正名）</td></tr>
+<tr><td>Sheo（SHFT 打野，TH 旧将）</td><td>5+</td><td>"把把送/明牌打野"（G2 蔚被批）→ "sheo把自己踢高潮了"（G3 盲僧秀）——波动大</td></tr>
+<tr><td>SHFT 维克托（G1）/卡牌（G2）/EZ（G2-G3）使用者</td><td>15+</td><td>维克托"会控大招比某些中单强"（G1 翻盘核心）；卡牌"压纳尔/死两次经济领先"（G2）；EZ"少爷ez太尽力了"（输方尽力）</td></tr>
+</table></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本（沉淀层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">六、联赛规律与版本</h3><ul>
+<li><b>LEC 榜首输榜尾传统再样本</b>："欧洲自古倒数第一吃第一/周末必有爆冷/第一只能输倒一"——G1 兑现（SHFT 爆冷）但系列被逆转（KC 2:1）</li>
+<li><b>KC 卡时间规律实锤</b>：三局 34/49/27 分钟，"打谁都要30几分钟"应验（08-18 领先1万拖32分钟 → 本系列延续）</li>
+<li>版本符号双因素模型再样本：蛇女（HLE Zeka 赢 vs KC 输）、盲僧（SHFT 弱队强打 vs 魔咒）、卡牌上单（压制但终结不足）</li>
+<li>"弱队盲僧"正锚候选（SHFT 盲僧 4 头强打）——跨场观察</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填明细（沉淀层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">七、预测验证</h3><table>
+<tr><th>预测/锚点</th><th>结果</th></tr>
+<tr><td>赛前"默认2-0/2-0速速下班"（KC 横扫）</td><td><b>未兑现</b>（G1 被 SHFT 爆冷；最终 2:1）</td></tr>
+<tr><td>"打满吧/打满"（G3 预期）</td><td><b>兑现</b>（总局数 Over 2.5 = 1.0）</td></tr>
+<tr><td>蛇女正锚"一出直接赢"（KC）</td><td><b>未应验</b>（G1 输；系列 KC 靠 G2/G3 逆转——单局负锚≠系列）</td></tr>
+<tr><td>灰信号方向"被质疑方输球"</td><td><b>整体未兑现</b>（G1 兑现 / G2+G3 未兑现；KC 2:1）</td></tr>
+<tr><td>"1-2梭哈 15倍"（观众押 SHFT 高赔）</td><td>G1 命中但系列未成（SHFT 1:2）</td></tr>
+<tr><td>KC 卡时间"打谁都要30几分钟"</td><td><b>应验</b>（三局均 27+ 分钟）</td></tr>
+</table></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">十、数据与溯源</h3><ul>
+<li>docs/data/danmu/huya/2026-08-24_shuoshuo_323444.jsonl（全窗 3,112 条：G1 867 + G2 ~1,100 + G3 467）＋ official_660000（机器人为主）</li>
+<li>官方：Polymarket lol-shft-kc-2026-08-23（closed；game1/2/BO3/Over2.5 全结算）</li>
+<li>关联页：BP-LOCK / G1 / G2（intel_danmu_KC-SHFT_*.html）；本页为系列终态（A 型）</li>
+<li>待确认：MVP/选手 ID、G3 完整阵容待官方核对（已关闭不追）</li>
+</ul>
+<p class="note">报告生成：2026-08-24 08:0x（北京时间）· 模板：A 型整场复盘（10 段）· 本系列灰信号方向整体未兑现（官方结算判定）</p>
+</div></body></html>
+</div>
+<div class="footer">v2 决策导向重排 · 弹幕口径 · 灰信号仅为观众质疑非结论 · 由 tools/reformat_intel_template.py 生成</div>
+</div>
+</body>
+</html>

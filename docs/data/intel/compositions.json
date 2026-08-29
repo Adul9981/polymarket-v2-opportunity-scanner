@@ -1,0 +1,257 @@
+{
+ "schema_version": "1.0",
+ "description": "阵容/体系情报层：体系类型、核心组合、克制关系、适用队伍、样本验证。样本<3 不登记为规律（观察池除外）。",
+ "updated_at": "2026-08-24T17:10:00+08:00",
+ "compositions": [
+  {
+   "id": "lucian_milio_bot",
+   "name": "卢锡安+米利欧/娜美 下路体系",
+   "game": "lol",
+   "type": [
+    "下路强度线"
+   ],
+   "core": [
+    "lucian",
+    "milio"
+   ],
+   "requires": "米利欧/娜美必选其一；无体系=负锚",
+   "countered_by": [
+    "锁头体系",
+    "后期手长"
+   ],
+   "teams": [
+    {
+     "team_id": "gx",
+     "note": "Flakked 绝活",
+     "wins": 1,
+     "losses": 0
+    }
+   ],
+   "samples": [
+    {
+     "match_id": "2026-08-23_th_gx_g2",
+     "verdict": "未配米利欧→判负应验（TH 输）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "cass_lee_mid_jg",
+   "name": "蛇女+盲僧 中野体系",
+   "game": "lol",
+   "type": [
+    "中野强度",
+    "版本强组合"
+   ],
+   "core": [
+    "cassiopeia",
+    "lee_sin"
+   ],
+   "note": "HLE Zeka+Kanavi 先例获胜；复制需选手执行到位",
+   "teams": [
+    {
+     "team_id": "hle",
+     "note": "Zeka 蛇女+Kanavi 盲僧团战完美",
+     "wins": 1,
+     "losses": 0
+    },
+    {
+     "team_id": "kc",
+     "note": "复制失败（蛇女被集火）",
+     "wins": 0,
+     "losses": 1
+    }
+   ],
+   "samples": [
+    {
+     "match_id": "2026-08-23_t1_hle_g1",
+     "verdict": "应验（HLE 胜）"
+    },
+    {
+     "match_id": "2026-08-24_kc_shft_g1",
+     "verdict": "未应验（KC 输 G1，系列逆转）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "xin_orianna_anti_cass",
+   "name": "赵信+发条 反蛇女失败体系",
+   "game": "lol",
+   "type": [
+    "反制失败样本"
+   ],
+   "core": [
+    "xin_zhao",
+    "orianna"
+   ],
+   "note": "T1/GENG 放蛇女+盲僧用此应对均败；'不拿发条阿'预警",
+   "teams": [
+    {
+     "team_id": "t1",
+     "note": "发条/赵信应对失败",
+     "wins": 0,
+     "losses": 1
+    }
+   ],
+   "samples": [
+    {
+     "match_id": "2026-08-23_t1_hle_g1",
+     "verdict": "应验（败）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "turtle_time_control",
+   "name": "乌龟/卡时间体系",
+   "game": "lol",
+   "type": [
+    "节奏管理",
+    "时长盘"
+   ],
+   "core": [],
+   "note": "领先不推进、拖时间（KC 08-18 领先1万拖32分；08-24 三局 34/49/27 分钟）——时长盘/打满盘参考",
+   "teams": [
+    {
+     "team_id": "kc",
+     "note": "卡时间画像（打谁都要30几分钟）",
+     "samples": 4
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "lock_heavy",
+   "name": "锁头体系（多硬控集火核心）",
+   "game": "lol",
+   "type": [
+    "团战控制"
+   ],
+   "core": [],
+   "note": "'左边全是控/双锁头'压制天肥女警类核心；对单核/手短阵容克制",
+   "teams": [
+    {
+     "team_id": "shft",
+     "note": "G2 双锁头让女警没输出环境"
+    }
+   ],
+   "samples": [
+    {
+     "match_id": "2026-08-24_kc_shft_g2",
+     "verdict": "部分（压制但局输）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "late_scale_poke",
+   "name": "后期手长/双锁头 体系",
+   "game": "lol",
+   "type": [
+    "后期运营"
+   ],
+   "core": [
+    "viktor",
+    "ezreal"
+   ],
+   "note": "维克托+EZ 后期接管（SHFT G1 维克托翻盘核心）；对短手笨比阵容优势",
+   "teams": [
+    {
+     "team_id": "shft",
+     "note": "维克托/EZ 后期核心",
+     "wins": 1,
+     "losses": 2
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "tf_top_split",
+   "name": "卡牌上单单带体系",
+   "game": "lol",
+   "type": [
+    "单带",
+    "压制"
+   ],
+   "core": [
+    "twisted_fate"
+   ],
+   "note": "压制纳尔类对位（'死两次经济还领先'）；终结能力决定成败",
+   "teams": [
+    {
+     "team_id": "shft",
+     "note": "G2 压制但被翻"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "aatrox_jg",
+   "name": "剑魔打野（负锚体系）",
+   "game": "lol",
+   "type": [
+    "负锚观察池"
+   ],
+   "core": [
+    "aatrox"
+   ],
+   "note": "弹幕口径'弱队玩不了剑魔打野'（TH Daglas）；上单剑魔为正锚——位置决定体系价值",
+   "teams": [
+    {
+     "team_id": "th",
+     "note": "G2 剑魔打野被全程批",
+     "wins": 0,
+     "losses": 1
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "kalista_renata_bot",
+   "name": "卡莉丝塔+蕾娜塔 下路压制体系",
+   "game": "lol",
+   "type": [
+    "对线压制",
+    "下路击穿"
+   ],
+   "core": [
+    "kalista",
+    "renata"
+   ],
+   "note": "弹幕\"칼리레나타 에노시 퀀텀 잘한다\"——对临时转位 ADC 具有击穿效应（G1 vs Vincenzo 烬）",
+   "teams": [
+    {
+     "team_id": "dns.c",
+     "note": "G1 下路压制 KRX.C",
+     "wins": 1,
+     "losses": 0
+    }
+   ],
+   "memory_tier": "LONG"
+  }
+ ],
+ "map_pool_notes": [
+  {
+   "team_id": "fut",
+   "map": "nuke",
+   "anchor": "负锚（今年零胜率）",
+   "match": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "verified": "应验"
+  },
+  {
+   "team_id": "spirit",
+   "map": "ancient",
+   "anchor": "正锚（里约至今没输过）",
+   "match": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "verified": "应验"
+  },
+  {
+   "team_id": "spirit",
+   "map": "anubis",
+   "anchor": "正锚（世一/29杀局）",
+   "match": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "verified": "应验"
+  }
+ ]
+}

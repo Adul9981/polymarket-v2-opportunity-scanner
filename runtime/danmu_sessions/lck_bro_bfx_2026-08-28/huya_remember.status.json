@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "huya_remember",
+  "url": "https://www.huya.com/528222",
+  "state": "offline_waiting",
+  "started_at": "2026-08-28T09:01:22+00:00",
+  "heartbeat_at": "2026-08-28T09:02:03+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 528222,
+  "channel_id": 1950358554,
+  "nickname": "Remember",
+  "introduction": "[LCK] BFXvsNS=3:1",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-28T09:01:23+00:00"
+}

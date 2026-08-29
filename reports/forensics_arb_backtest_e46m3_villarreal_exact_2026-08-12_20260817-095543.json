@@ -1,0 +1,117 @@
+{
+  "input": "docs/forensics/data/e46m3/e46m3_villarreal_exact_2026-08-12.json",
+  "params": {
+    "input": "docs/forensics/data/e46m3/e46m3_villarreal_exact_2026-08-12.json",
+    "x": 10.0,
+    "entry_threshold": 0.02,
+    "fee_rate": 0.05,
+    "gas_usd": 0.05,
+    "slip_bps": 100,
+    "convert_fee_bps": 0,
+    "taker_rebate": 0.0,
+    "step_s": 60,
+    "max_stale_s": 900,
+    "budget_usd": 50.0,
+    "activity": null,
+    "trades": null,
+    "out_dir": null
+  },
+  "legs": 17,
+  "window": [
+    1785871807.0,
+    1785876607.0
+  ],
+  "sigmaP": {
+    "min": 0.9570000000000001,
+    "max": 1.0765,
+    "mean": 1.0468765432098774,
+    "median": 1.0565,
+    "time_above": 70,
+    "time_below": 1
+  },
+  "yes_side": {
+    "min_sump": 0.9570000000000001,
+    "edge_per_x": 0.04299999999999993
+  },
+  "episodes": 1,
+  "rounds": 1,
+  "totals": {
+    "net": -1.290402,
+    "gross_edge": 0.765,
+    "friction": 2.0554,
+    "outlay": 161.290402,
+    "taker_fees": 0.413052,
+    "gas": 0.05,
+    "convert_fee": 0.0,
+    "slip_cost": 1.593,
+    "roi_pct": -0.800049
+  },
+  "verdict": "non_positive",
+  "reality_check": {
+    "sump_at_actual": {
+      "count": 12,
+      "min": 1.021,
+      "max": 1.069,
+      "mean": 1.0552
+    },
+    "conversions_actual": {
+      "count": 12,
+      "count_in_backtest_window": 12,
+      "window": [
+        "2026-08-04 19:48:03Z",
+        "2026-08-04 20:28:15Z"
+      ]
+    },
+    "actual_buy_rounds": [
+      {
+        "ts": "2026-08-04 19:47:50Z",
+        "n_fills": 3,
+        "notional_usd": 44.49,
+        "shares": 49.99,
+        "avg_fill_price": 0.89,
+        "sigmaP_at_grid": 1.07
+      },
+      {
+        "ts": "2026-08-04 19:49:59Z",
+        "n_fills": 1,
+        "notional_usd": 22.25,
+        "shares": 25.0,
+        "avg_fill_price": 0.89,
+        "sigmaP_at_grid": 1.069
+      },
+      {
+        "ts": "2026-08-04 20:08:51Z",
+        "n_fills": 1,
+        "notional_usd": 11.02,
+        "shares": 12.52,
+        "avg_fill_price": 0.88,
+        "sigmaP_at_grid": 1.0565
+      },
+      {
+        "ts": "2026-08-04 20:27:05Z",
+        "n_fills": 1,
+        "notional_usd": 21.36,
+        "shares": 24.67,
+        "avg_fill_price": 0.866,
+        "sigmaP_at_grid": 1.0495
+      }
+    ]
+  },
+  "sensitivity": [
+    {
+      "slip_bps": 0,
+      "net_rebate0": 0.2313,
+      "net_rebate1": 0.715
+    },
+    {
+      "slip_bps": 50,
+      "net_rebate0": -0.5298,
+      "net_rebate1": -0.0812
+    },
+    {
+      "slip_bps": 100,
+      "net_rebate0": -1.2904,
+      "net_rebate1": -0.8773
+    }
+  ]
+}

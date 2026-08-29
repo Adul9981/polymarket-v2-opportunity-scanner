@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNS vs BRO · 弹幕情报（SOOP carrylck）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:840px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:23px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:4px}
+.meta{color:var(--sub);font-size:12px;margin-bottom:14px}
+.block{margin-bottom:16px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>DNS vs BRO · 弹幕情报（SOOP carrylck）</h1>
+<p class="sub">比赛：LCK（DNS vs BRO，2026 第二场）· 数据源：SOOP carrylck(296474407) 中文解说流 · 采集 20:16 启动 · 20:49 中断 · <b>样本不足，未覆盖完整赛程</b></p>
+<div class="stats">
+<div class="stat"><div class="num">连接正常</div><div class="lbl">弹幕通道</div></div>
+<div class="stat"><div class="num">20</div><div class="lbl">弹幕（20:16-20:49）</div></div>
+<div class="stat"><div class="num">G2 开始</div><div class="lbl">比赛进度</div></div>
+<div class="stat"><div class="num">已中断</div><div class="lbl">状态</div></div>
+</div>
+
+<div class="warn"><b>状态说明：采集 20:49 中断，仅捕获第二局开局 20 条弹幕，样本严重不足。</b>不做任何局势/选手结论；如需补全该场数据，须通过 SOOP VOD 回捞（tools/fetch_soop_vod_chat.py）。</div>
+
+<section class="card"><h2>一、当前已知</h2>
+<ul>
+<li>频道标题："[中文] GEN vs KT | BRO vs DNS | 2026 LCK"（当天多场预告）</li>
+<li>弹幕窗口：20:16-20:49，第二局进行中中断；仅 20 条，多为表情与零散评论</li>
+<li>唯一信息点："史迦納被康爆欸，BRO解題解的真好"——BRO 反制体系被认可</li>
+<li>无灰信号；未覆盖完整赛程，结果未确认</li>
+</ul></section>
+
+<p class="note">数据说明：原始数据 docs/data/danmu/soop/2026-08-19_carrylck_296474407.jsonl；灰信号纪律：观众质疑非结论。
+本页为样本不足版（采集中断），结果待官方确认；如需补全请回捞 VOD。</p>
+</div></body></html>

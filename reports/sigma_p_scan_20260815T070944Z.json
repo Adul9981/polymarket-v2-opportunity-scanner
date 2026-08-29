@@ -1,0 +1,209 @@
+{
+ "captured_at": "20260815T070944Z",
+ "note": "mark-price level-1 coarse scan (funded markets only); suspicious SigmaP artifacts flagged; level-2 order-book ask screening required before any action.",
+ "threshold": 0.02,
+ "groups": [
+  {
+   "negRiskMarketID": "0x346c8e90f828b20d8da3451280cac278cd764d3945aeb367821c91f66b499500",
+   "sigmaP": 4.2735,
+   "legs": 9,
+   "title": "FK Auda Riga vs. Ogre United - Exact Score",
+   "slug": "lva1-aud-ogr-2026-08-03-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T15:00:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0x17a635e02ba8ce5f7cdfc662f8d44a4f49ef305480dac7e9f376aa20c2ba5900",
+   "sigmaP": 3.978,
+   "legs": 8,
+   "title": "Birmingham Legion FC vs. New Mexico United - Exact Score",
+   "slug": "uslc-bir-new-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T00:00:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0xdb3a6156448aafc4c15d4479bfb0c5c56b6635207ff6bad9e8b95a691ce82b00",
+   "sigmaP": 3.975,
+   "legs": 11,
+   "title": "IK Start vs. Vålerenga Fotball - Exact Score",
+   "slug": "nor-ik-vif-2026-05-25-exact-score",
+   "category": "",
+   "endDate": "2026-05-25T12:30:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0xa2dc9eda07fa50c177b426b3ad565c99b43e8f42dd0f2a73be0cb6f429ad9600",
+   "sigmaP": 3.8925,
+   "legs": 8,
+   "title": "Tianjin Jinmen Hu FC vs. Liaoning Tieren FC - Exact Score",
+   "slug": "chi-jin-tie-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:00:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0x08a0306facc766d3b0e4249442a410b37683e755b69238106e7651f8137b1f00",
+   "sigmaP": 2.9795,
+   "legs": 7,
+   "title": "Boyacá Chicó FC vs. Atlético Nacional - Exact Score",
+   "slug": "col1-bcf-atn-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0xd91cd468fada75ef9aaca63769d7e8edb0509d15ab6d8c1134d7310dec473100",
+   "sigmaP": 2.804,
+   "legs": 17,
+   "title": "Marske United FC vs. Boro Rangers FC - Exact Score",
+   "slug": "efa-mar2-bor2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0x00ce5e2b3f291f431c9d235c431c5232719627cbdfaa7669ad0e67317bd92a00",
+   "sigmaP": 2.7,
+   "legs": 6,
+   "title": "Shanghai Shenhua FC vs. Beijing Guoan FC - Exact Score",
+   "slug": "chi-sgr-bgu-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:35:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0x774dbd9baa353a70b3737d8a5a3b69c8233284627deb9b85d3b3a8c706ca7000",
+   "sigmaP": 2.475,
+   "legs": 5,
+   "title": "CD Coquimbo Unido vs. CD Universidad de Concepción - Exact Score",
+   "slug": "chi1-ccu-cu1-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0x25ad4bddc7e06fc699384c0880a18abb4ccbd61b60c7386fd9784f351f19d700",
+   "sigmaP": 2.47,
+   "legs": 5,
+   "title": "Club Nacional de Football vs. CA Progreso - Exact Score",
+   "slug": "uru1-nac-pro-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-24T22:30:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0x79bb6f139b0a91228342feb73b86af25c5a8b8960da7c2cd70f525ed98caed00",
+   "sigmaP": 2.28,
+   "legs": 5,
+   "title": "Wuhan San Zhen FC vs. Henan FC - Exact Score",
+   "slug": "chi-wsz-hen-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:00:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0xed61bf7245ae78ae88549c5b4a304e7c4ea525d3818a4530856adb33d932d300",
+   "sigmaP": 2.225,
+   "legs": 5,
+   "title": "Zhejiang Zhiye FC vs. Wuhan San Zhen FC - Exact Score",
+   "slug": "chi-zhe-wsz-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T11:35:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0x9230b679cacec7292dd04bc5eb7af8f37f93944893568a3e8079de14e9dcb900",
+   "sigmaP": 2.045,
+   "legs": 8,
+   "title": "Shanghai Haigang FC vs. Dalian Yingbo FC - Exact Score",
+   "slug": "chi-shp-ygb-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:35:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0xde1b13952cae626f3515e90336a09908d63d0ca134613c166e64d44047967100",
+   "sigmaP": 0.4995,
+   "legs": 5,
+   "title": "ZHFK Sisters vs. BSC Young Boys Frauen - Exact Score",
+   "slug": "uwcl-sis-byb-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T12:30:00Z",
+   "suspicious": true
+  },
+  {
+   "negRiskMarketID": "0xf366b8f57feba29c3d7bb1c907daffd6b367dca9aff9e57db9aa16406dd06900",
+   "sigmaP": 0.5,
+   "legs": 10,
+   "title": "CA Guemes vs. CSD Tristan Suarez - Exact Score",
+   "slug": "argpn-gue-tri-2026-08-02-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T19:00:00Z",
+   "suspicious": false
+  }
+ ],
+ "hits": [
+  {
+   "negRiskMarketID": "0x79bb6f139b0a91228342feb73b86af25c5a8b8960da7c2cd70f525ed98caed00",
+   "sigmaP": 2.28,
+   "legs": 5,
+   "title": "Wuhan San Zhen FC vs. Henan FC - Exact Score",
+   "slug": "chi-wsz-hen-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:00:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0x9230b679cacec7292dd04bc5eb7af8f37f93944893568a3e8079de14e9dcb900",
+   "sigmaP": 2.045,
+   "legs": 8,
+   "title": "Shanghai Haigang FC vs. Dalian Yingbo FC - Exact Score",
+   "slug": "chi-shp-ygb-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:35:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0x25ad4bddc7e06fc699384c0880a18abb4ccbd61b60c7386fd9784f351f19d700",
+   "sigmaP": 2.47,
+   "legs": 5,
+   "title": "Club Nacional de Football vs. CA Progreso - Exact Score",
+   "slug": "uru1-nac-pro-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-24T22:30:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0x774dbd9baa353a70b3737d8a5a3b69c8233284627deb9b85d3b3a8c706ca7000",
+   "sigmaP": 2.475,
+   "legs": 5,
+   "title": "CD Coquimbo Unido vs. CD Universidad de Concepción - Exact Score",
+   "slug": "chi1-ccu-cu1-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0xf366b8f57feba29c3d7bb1c907daffd6b367dca9aff9e57db9aa16406dd06900",
+   "sigmaP": 0.5,
+   "legs": 10,
+   "title": "CA Guemes vs. CSD Tristan Suarez - Exact Score",
+   "slug": "argpn-gue-tri-2026-08-02-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T19:00:00Z",
+   "suspicious": false
+  },
+  {
+   "negRiskMarketID": "0xed61bf7245ae78ae88549c5b4a304e7c4ea525d3818a4530856adb33d932d300",
+   "sigmaP": 2.225,
+   "legs": 5,
+   "title": "Zhejiang Zhiye FC vs. Wuhan San Zhen FC - Exact Score",
+   "slug": "chi-zhe-wsz-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T11:35:00Z",
+   "suspicious": false
+  }
+ ]
+}

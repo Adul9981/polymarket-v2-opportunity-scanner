@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GGA vs BRO · 第二局复盘与灰数据价值（SOOP + 硕硕）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:840px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:23px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:4px}
+.meta{color:var(--sub);font-size:12px;margin-bottom:14px}
+.block{margin-bottom:16px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+ul{margin:0 0 8px 18px}li{margin-bottom:5px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.grey{background:#f7f2ff;border-left:4px solid #7a5ae0;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>GGA vs BRO · 第二局复盘与灰数据价值</h1>
+<p class="sub">比赛：[CC] GGA vs BRO | 2026 LCK CL ROUND 4 · 数据源：SOOP 官方流（韩文）+ 硕硕直播间（中文）· <b>推断结果：GGA 扳平，总比分 1:1（待官方确认）</b>· 决胜局（G3）进行中</p>
+<div class="stats">
+<div class="stat"><div class="num">1:1</div><div class="lbl">总比分（弹幕推断）</div></div>
+<div class="stat"><div class="num">30+</div><div class="lbl">G2 灰信号（观众质疑）</div></div>
+<div class="stat"><div class="num">GGA 翻盘</div><div class="lbl">第二局剧情</div></div>
+<div class="stat"><div class="num">4</div><div class="lbl">灰数据价值维度</div></div>
+</div>
+
+<div class="warn"><b>最重要信号：第二局 GGA 翻盘扳平 + 观众抛出一个联赛规律——"LCK CL 很少 2:0，强队第二局必给一盘"。</b>赛前两路观众共识"BRO 2:0"被打破（"必有 1:1""ck 果然不会 2:0"）；第二局灰信号集中爆发（瑞兹/狼母被质疑"明牌演""严查瑞兹"），与"给一盘"叙事绑定。若"CL 少 2:0"成为统计规律，价值类似 LEC 的"打满率 49%"结构规律。</div>
+
+<section class="card"><h2>一、第二局结果与剧情（据弹幕推断，待官方确认）</h2>
+<ul>
+<li><b>GGA 1:1 BRO</b>——第二局 GGA 扳回（弹幕"翻了""翻盘了""1:1 联赛"大量出现）</li>
+<li>剧情：BRO 前期一度占优（女警体系推塔、镀层满吃），但<b>优势不控龙</b>（"赢了团不拿小龙""资源全让"）被 GGA 拖入翻盘节奏；观众反复类比"DK 那把女警——推完塔不控小龙被大翻盘"</li>
+<li>GGA 第二局亮点：女警 carry（"7.5k 女警""12 层镀层"）、卡尔玛发挥（"卡尔玛站出来了"）、下路对位压制</li>
+</ul></section>
+
+<div class="grey"><b>灰数据价值专题（本场最重要的收获）：</b>观众（尤其赌徒）其实很懂——局内信号比结果更早暴露走向。本场四条可复用的灰数据维度已入库（gray_signals.json + 本报告）：</div>
+
+<section class="card"><h2>二、灰数据价值：四类"局内异常"信号</h2>
+<div class="block"><h3>1. 表情/互动信号："弱爆就是暗号"</h3>
+<ul>
+<li>双方打野多次互亮"弱爆"表情，观众直接解读为信号："弱爆是暗号""一直亮弱爆，肯定有问题""弱爆就是暗号"</li>
+<li>配合队内/对位恩怨叙事："他和辅助要么关系很好要么有仇""辅助前面也给倒赞"——表情互动 = 队内关系与心态的暴露窗口</li>
+</ul></div>
+<div class="block"><h3>2. 队伍内部问题：被放养 / 内讧传闻影响执行</h3>
+<ul>
+<li>GEN 二队被放养（无宿舍/无教练/在家打比赛）——观众："这种队伍怎么磨合""队伍纪律松散"</li>
+<li>NS 队内分裂传闻、Kingen 下家传闻（今天弹幕）——队内问题会直接体现在局内执行（送头/不控龙/梦游）</li>
+</ul></div>
+<div class="block"><h3>3. 局内节奏异常：优势不控龙 → 送团灭 → 被翻</h3>
+<ul>
+<li>"赢了团不拿小龙""两次打赢了都不打，最后送团灭""想赢的时候很会控龙"——节奏失控是反转前兆</li>
+<li>观众类比历史样本："DK 那把女警，推完塔不控龙等输"——同类剧本可跨场复用</li>
+</ul></div>
+<div class="block"><h3>4. 选手表现分裂：想赢 vs 在演</h3>
+<ul>
+<li>"感觉就瑞兹一个想赢，其他几个都在混""除了瑞兹剩下 4 个不是人"——选手间投入度分裂 = 队内信号</li>
+<li>"瑞兹每次打团肉身开团""闪现全在团灭"——异常决策模式被观众系统化捕捉</li>
+</ul></div>
+</section>
+
+<section class="card"><h2>三、交易教训关联（2026-08-18 用户实录）</h2>
+<div class="meta">完整记录见 knowledge/PSYCHOLOGY_NOTES.md（2026-08-18 事件）</div>
+<ul>
+<li><b>情境</b>：本场盘中 64→95 区间持有未卖，之后价格回落/失去流动性，再无第二次卖点</li>
+<li><b>灰数据本可提前提示</b>：弱爆暗号、队伍内讧、"优势不控龙→被翻"等局内异常在翻盘前已刷屏——灰数据与局内走势高度共振，领先于结果</li>
+<li><b>教训</b>：不是"没看准方向"，而是"看准了却没处理仓位"；上涨到目标区先执行部分锁盈（D2 式），灰数据出现"局内异常"时优先处理已有仓位而不是加仓</li>
+<li><b>沉淀</b>：灰数据从"情报参考"升级为"仓位纪律触发条件"——这是本场最重要的方法论收获</li>
+</ul></section>
+
+<section class="card"><h2>四、灰信号纪律与理性归因并行</h2>
+<ul>
+<li>灰数据只作风险标注与盘口对照素材，<b>不作假赛结论</b>——"观众质疑"是信号，不是证据</li>
+<li>本场反方理性归因并存："女警这英雄只推塔没用，不速龙就是等输"（BP 理解）——灰数据要与阵容/版本分析交叉，避免单边情绪化</li>
+</ul></section>
+
+<section class="card"><h2>五、联赛规律（重点入库项）</h2>
+<table>
+<tr><th>规律</th><th>观众原话（译）</th><th>样本</th></tr>
+<tr><td>LCK CL 很少 2:0</td><td>"小 ck 很少 2:0"</td><td>今日 GGA vs BRO + 历史观感</td></tr>
+<tr><td>强队第二局必给一盘</td><td>"看习惯了，这小 LCK 次级，第二盘强队必给一盘"</td><td>观众长期观察</td></tr>
+<tr><td>近期 CL 全部打满</td><td>"小 LCK 最近全部打满，送也正常"</td><td>观众近期观察</td></tr>
+</table>
+<div class="meta">价值：类似 LEC"打满率 49% / G1G2 赢家相反 ⟺ 打满"的结构规律；若累计验证成立，可作 CL 系列赛"打满"与"让一追二"的先验。</div>
+</section>
+
+<section class="card"><h2>六、预测验证（观众集体智慧可信度累计）</h2>
+<table>
+<tr><th>预测</th><th>结果</th><th>命中</th></tr>
+<tr><td>开赛前主流：BRO 2:0</td><td>GGA 扳平 1:1</td><td><b>未命中（集体共识被打脸）</b></td></tr>
+<tr><td>少数派：必有 1:1（"第二局强队给一盘"）</td><td>1:1</td><td><b>命中</b></td></tr>
+<tr><td>G1 预测：BRO 赢第一局</td><td>BRO 1:0</td><td>命中</td></tr>
+</table>
+<div class="meta">要点："BRO 2:0"是情绪化共识，而"1:1"来自联赛结构认知（少 2:0）——结构规律 > 单场情绪。</div>
+</section>
+
+<section class="card"><h2>七、决胜局（G3）情报含义</h2>
+<ul>
+<li>若"CL 少 2:0"规律延续，G3 是真正的实力局；GGA 第二局状态回升后，观众对 GGA 的"弱队"共识可能出现松动</li>
+<li>BRO 需要回应"优势不控龙"的批评；G3 BP 若再放女警/卡尔玛，观众会立刻质疑</li>
+<li>灰数据四类信号（弱爆/内讧/节奏异常/选手分裂）在 G3 出现时，直接作为"局内异常"风险提示</li>
+</ul></section>
+
+<p class="note">数据说明：本复盘基于 SOOP 韩文官方流 + 硕硕中文直播间弹幕（第二局窗口），韩文已翻译为中文要点。
+比分与结果均为弹幕推断，待官方确认；灰数据四类信号已同步 gray_signals.json；交易教训记录于 knowledge/PSYCHOLOGY_NOTES.md。
+决胜局数据两路采集进行中。</p>
+</div></body></html>

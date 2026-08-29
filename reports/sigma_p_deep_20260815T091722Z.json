@@ -1,0 +1,1474 @@
+{
+ "captured_at": "20260815T091722Z",
+ "x": 1.0,
+ "groups": [
+  {
+   "ts": 1786785465,
+   "group": "mls-2026-golden-boot-winner",
+   "negRiskMarketID": "0x26fb4a37ce422e81354090b3fdf1a198507701eaa666d8be6dc0dab9cb6f4e00",
+   "n_legs": 22,
+   "ask_sump": 21.978,
+   "subgroup_sump_fillable": 21.978,
+   "x": 1.0,
+   "mark_sump": 2.1815,
+   "mark_edge_per_x": 1.1815,
+   "exec_edge_per_x": -0.302,
+   "no_cost": 21.302,
+   "no_theory": 21.0,
+   "no_gross": -0.302,
+   "no_net": -0.73304,
+   "no_net_rebate": -0.52002,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 22,
+   "n_yes_fillable": 22,
+   "yes_cost": 3.598,
+   "yes_gross": -2.598,
+   "yes_net": -2.67496,
+   "yes_net_rebate": -2.63898,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "fail",
+   "days_to_end": 98,
+   "exhaustive_hint": false,
+   "notes": "",
+   "legs": [
+    {
+     "title": "Lionel Messi",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.483,
+     "no_cost": 0.521,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Denis Bouanga",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.282,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Sam Surridge",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.371,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Anders Dreyer",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.344,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Tadeo Allende",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.004,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Hugo Cuypers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.255,
+     "no_cost": 0.983,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Petar Musa",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.393,
+     "no_cost": 0.938,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Brian White",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.036,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Dejan Joveljić",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.321,
+     "no_cost": 0.983,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Evander",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.09,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Tai Baribo",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.09,
+     "no_cost": 0.974,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Eric Maxim Choupo-Moting",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.02,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Hany Mukhtar",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.023,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Danny Musovski",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Kévin Denkey",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.079,
+     "no_cost": 0.989,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Martín Ojeda",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.047,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Milan Iloski",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.071,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Prince-Osei Owusu",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.259,
+     "no_cost": 0.987,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Albert Rusnák",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.009,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Idan Toklomati",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.34,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Germán Berterame",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.009,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cheikh Sabaly",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.069,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": 1786785493,
+   "group": "mlb-doubles-leader",
+   "negRiskMarketID": "0xd8e647252c04f53767d5daf397f8f08ded2479bc4de55d00fc8c7dbea644a200",
+   "n_legs": 33,
+   "ask_sump": 32.949,
+   "subgroup_sump_fillable": 32.949,
+   "x": 1.0,
+   "mark_sump": 2.2415,
+   "mark_edge_per_x": 1.2415,
+   "exec_edge_per_x": -0.687,
+   "no_cost": 32.687,
+   "no_theory": 32.0,
+   "no_gross": -0.687,
+   "no_net": -1.34574,
+   "no_net_rebate": -1.01887,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 33,
+   "n_yes_fillable": 33,
+   "yes_cost": 4.801,
+   "yes_gross": -3.801,
+   "yes_net": -3.90202,
+   "yes_net_rebate": -3.85401,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "fail",
+   "days_to_end": 56,
+   "exhaustive_hint": false,
+   "notes": "",
+   "legs": [
+    {
+     "title": "Taylor Ward",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.015,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Willy Adames",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.869,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Matt Olson",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.774,
+     "no_cost": 0.963,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Christian Walker",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Nico Hoerner",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.759,
+     "no_cost": 0.996,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "James Wood",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.038,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Kevin McGonigle",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.078,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Mauricio Dubón",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.05,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Gavin Sheets",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Casey Schmitt",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.004,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Bobby Witt Jr.",
+     "yes_ask": 0.99,
+     "no_ask": 0.97,
+     "yes_cost": 0.07,
+     "no_cost": 0.94,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Bo Bichette",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Jarren Duran",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.006,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Freddie Freeman",
+     "yes_ask": 0.99,
+     "no_ask": 0.96,
+     "yes_cost": 0.09,
+     "no_cost": 0.94,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Maikel Garcia",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Bryan Reynolds",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.74,
+     "no_cost": 0.985,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Francisco Lindor",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.025,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Salvador Perez",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.019,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Ernie Clement",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.738,
+     "no_cost": 0.971,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "CJ Abrams",
+     "yes_ask": 0.999,
+     "no_ask": 0.996,
+     "yes_cost": 0.069,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Shohei Ohtani",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.119,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Aaron Judge",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Bryce Harper",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Ian Happ",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.031,
+     "no_cost": 0.996,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Juan Soto",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.009,
+     "no_cost": 0.996,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Andy Pages",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.007,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Nick Kurtz",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Yordan Alvarez",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.101,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "George Springer",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Vladimir Guerrero Jr.",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.04,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Josh Jung",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.071,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Corbin Carroll",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.008,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Riley Greene",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.036,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": 1786785532,
+   "group": "democratic-vp-nominee-2028",
+   "negRiskMarketID": "0x5ac69a6a884f1619fde924709375d06a08f1a0a3f90b4087549473f5106dfc00",
+   "n_legs": 43,
+   "ask_sump": 42.948,
+   "subgroup_sump_fillable": 42.948,
+   "x": 1.0,
+   "mark_sump": 1.626,
+   "mark_edge_per_x": 0.626,
+   "exec_edge_per_x": -0.04,
+   "no_cost": 42.04,
+   "no_theory": 42.0,
+   "no_gross": -0.04,
+   "no_net": -0.8858,
+   "no_net_rebate": -0.4654,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 43,
+   "n_yes_fillable": 43,
+   "yes_cost": 2.315,
+   "yes_gross": -1.315,
+   "yes_net": -1.3663,
+   "yes_net_rebate": -1.34315,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "fail",
+   "days_to_end": 725,
+   "exhaustive_hint": false,
+   "notes": "",
+   "legs": [
+    {
+     "title": "Gavin Newsom",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.057,
+     "no_cost": 0.979,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Alexandria Ocasio-Cortez",
+     "yes_ask": 0.99,
+     "no_ask": 0.96,
+     "yes_cost": 0.11,
+     "no_cost": 0.9,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "Pete Buttigieg",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.068,
+     "no_cost": 0.934,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Josh Shapiro",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.049,
+     "no_cost": 0.971,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Wes Moore",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.038,
+     "no_cost": 0.973,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Stephen A. Smith",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.031,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Kamala Harris",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.042,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Gretchen Whitmer",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.116,
+     "no_cost": 0.903,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Andy Beshear",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.104,
+     "no_cost": 0.936,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Jon Ossoff",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.075,
+     "no_cost": 0.949,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Mark Cuban",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.046,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "J.B. Pritzker",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.123,
+     "no_cost": 0.989,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Raphael Warnock",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.052,
+     "no_cost": 0.964,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cory Booker",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.014,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Tim Walz",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.068,
+     "no_cost": 0.978,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Michelle Obama",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.031,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Mark Kelly",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.036,
+     "no_cost": 0.976,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Rahm Emanuel",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.043,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Gina Raimondo",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.004,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Zohran Mamdani",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.05,
+     "no_cost": 0.959,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Roy Cooper",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.083,
+     "no_cost": 0.986,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "John Fetterman",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.02,
+     "no_cost": 0.987,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Jared Polis",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.061,
+     "no_cost": 0.969,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Jon Stewart",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.076,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Barack Obama",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.019,
+     "no_cost": 0.982,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Hillary Clinton",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.075,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Liz Cheney",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.996,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Bernie Sanders",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.033,
+     "no_cost": 0.978,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Phil Murphy",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.004,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "LeBron James",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.069,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Hunter Biden",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.049,
+     "no_cost": 0.976,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "George Clooney",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.015,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Chelsea Clinton",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.062,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Dwayne 'The Rock' Johnson",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.014,
+     "no_cost": 0.997,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Oprah Winfrey",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.048,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Andrew Yang",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.065,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Beto O’Rourke",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.11,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Kim Kardashian",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.083,
+     "no_cost": 0.952,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Chris Murphy",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.059,
+     "no_cost": 0.996,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Ruben Gallego",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.037,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Ro Khanna",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.053,
+     "no_cost": 0.963,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "James Talarico",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.066,
+     "no_cost": 0.96,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Elissa Slotkin",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.047,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  }
+ ]
+}

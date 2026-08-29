@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "mile_149361",
+  "url": "https://www.huya.com/149361",
+  "state": "offline_waiting",
+  "started_at": "2026-08-23T16:24:13+00:00",
+  "heartbeat_at": "2026-08-24T07:39:05+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "room_id": 149361,
+  "channel_id": 1925949926,
+  "nickname": "解说米勒",
+  "introduction": "LPL登峰大战！JDG vs TES~!",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-23T16:24:14+00:00"
+}

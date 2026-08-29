@@ -1,0 +1,524 @@
+{
+  "meta": {
+    "total": 47225,
+    "active_users": 9482,
+    "window_utc": [
+      "2026-08-19 13:45",
+      "2026-08-19 21:50"
+    ],
+    "density_per_min": 97.4,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "kc出"
+      ]
+    },
+    "Navi": {
+      "mentions": 63,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "navi压轴云",
+        "navi是被沙特收买了吗",
+        "navi是睡衣吗",
+        "navi隔壁是绿龙吗 有点意思",
+        "navi才像沙特队吧"
+      ]
+    },
+    "T1": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "T1？",
+        "t1"
+      ]
+    },
+    "KT": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "当年lolfakers3双劫大战赢的就是kt ryu",
+        "Kt ryu又长得像明星王岳伦，所以ryu=月伦"
+      ]
+    },
+    "WE": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "we are Falcons",
+        "we are Falcons"
+      ]
+    },
+    "EDG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "EDG加油"
+      ]
+    },
+    "BLG": {
+      "mentions": 11,
+      "pos": 8,
+      "neg": 0,
+      "samples": [
+        "blg王朝了",
+        "这左手我们blg要了",
+        "去年亚军今年十六强还有我BLG的事",
+        "去年亚军今年十六强还有我BLG的事",
+        "BLG玩具选拔赛"
+      ]
+    },
+    "Vitality": {
+      "mentions": 80,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "昨天输给小蜜蜂了",
+        "ep昨天输小蜜蜂了",
+        "小蜜蜂也有cf战队",
+        "EP昨天就输小蜜蜂了，小蜜蜂今天让AG捶了",
+        "EP昨天就输小蜜蜂了，小蜜蜂今天让AG捶了"
+      ]
+    },
+    "Spirit": {
+      "mentions": 411,
+      "pos": 36,
+      "neg": 10,
+      "samples": [
+        "绿龙？？？？？",
+        "绿龙进八强了吗？？",
+        "法尔孔和绿龙",
+        "绿龙不如小蜜蜂",
+        "绿龙和B8有啥看的，不如蜜蜂"
+      ]
+    },
+    "G2": {
+      "mentions": 371,
+      "pos": 24,
+      "neg": 37,
+      "samples": [
+        "A和G2",
+        "g2 a队",
+        "g2打fut就好看了 a队现在什么路边啊我去",
+        "g2什么图",
+        "mo和马西西一起播g2吗"
+      ]
+    },
+    "NAVI": {
+      "mentions": 63,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "navi压轴云",
+        "navi是被沙特收买了吗",
+        "navi是睡衣吗",
+        "navi隔壁是绿龙吗 有点意思",
+        "navi才像沙特队吧"
+      ]
+    },
+    "FaZe": {
+      "mentions": 126,
+      "pos": 4,
+      "neg": 2,
+      "samples": [
+        "faze",
+        "mo肯定播faze",
+        "faze",
+        "faze",
+        "faze"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 556,
+      "pos": 33,
+      "neg": 27,
+      "samples": [
+        "老鼠的教练",
+        "老鼠教练？",
+        "老鼠的队服怎么感觉没换过",
+        "mouz没有明星像",
+        "老鼠吧"
+      ]
+    },
+    "Liquid": {
+      "mentions": 12,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "液体今年拉了",
+        "怎么没看到液体啊？",
+        "液体就没参加吧",
+        "液体进没",
+        "黑猪去液体了"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 99,
+      "pos": 0,
+      "neg": 5,
+      "samples": [
+        "蒙古作为卫冕冠军最后出场",
+        "蒙古从舞台中间出来，和lol一样",
+        "蒙古要压轴了",
+        "蒙古最后呗",
+        "最后是蒙古中间出场 因为是冠军"
+      ]
+    },
+    "EF": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "永恒之火废了买个小吉米",
+        "永恒之火买两个人家不要的"
+      ]
+    },
+    "Astra": {
+      "mentions": 20,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Make Astralis Great Again ！",
+        "Make Astralis Great Again！",
+        "Make Astralis Great Again！",
+        "Make Astralis Great Again！",
+        "Make Astralis Great Again！"
+      ]
+    },
+    "AG": {
+      "mentions": 29,
+      "pos": 3,
+      "neg": 1,
+      "samples": [
+        "ag不行状态不好",
+        "AG",
+        "Ag",
+        "Ag和白沙",
+        "ag"
+      ]
+    },
+    "白鲨": {
+      "mentions": 12,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "白鲨",
+        "白鲨",
+        "白鲨吧",
+        "白鲨，ag",
+        "白鲨"
+      ]
+    },
+    "情久": {
+      "mentions": 2,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "情久很猛的",
+        "ag 白鲨 情久也算厉害"
+      ]
+    },
+    "EP": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "EP",
+        "ep",
+        "ep",
+        "ep昨天输小蜜蜂了",
+        "EP昨天就输小蜜蜂了，小蜜蜂今天让AG捶了"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "老李家好喝",
+        "老李家",
+        "到处都是老李家，到底有多少个老李",
+        "打岳伦得让Faker来",
+        "我像月轮道歉  再也不说是被faker打到cs来了"
+      ]
+    },
+    "Chovy": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我刚来就丢分啊我chovy"
+      ]
+    },
+    "Niko": {
+      "mentions": 381,
+      "pos": 6,
+      "neg": 3,
+      "samples": [
+        "可以看看niko和apex的测谎仪",
+        "nikovlog里说是五千人",
+        "看niko和apex测谎仪",
+        "看一下apex和niko的测谎视频。",
+        "看一下apex和niko的测谎视频。"
+      ]
+    },
+    "Apex": {
+      "mentions": 38,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "可以看看niko和apex的测谎仪",
+        "看niko和apex测谎仪",
+        "apex续约了",
+        "看一下apex和niko的测谎视频。",
+        "看一下apex和niko的测谎视频。"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 41,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "载物主场",
+        "zywoo",
+        "载物怀孕了",
+        "载物还我faze命来",
+        "载物好不尊重"
+      ]
+    },
+    "donk": {
+      "mentions": 121,
+      "pos": 14,
+      "neg": 0,
+      "samples": [
+        "DONK",
+        "DONK 最帅",
+        "donk队",
+        "DONK",
+        "Donk遇到结婚了"
+      ]
+    },
+    "m0NESY": {
+      "mentions": 38,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "绿龙感觉都是小孩子",
+        "这个不是曾经说自己狙击水平跟小孩差不多的那个狙击手嘛",
+        "G2这个狙击手怎么给小孩宫走的",
+        "这狙击手跟小孩一对比就是💩",
+        "g2认个错把小孩请回来吧"
+      ]
+    },
+    "ropz": {
+      "mentions": 10,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "ropz",
+        "ropz",
+        "ropz",
+        "ropz",
+        "ropz"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 27,
+    "samples": [
+      "别只看价值，ak2700，a1a4都是2900你不是照样换",
+      "不是因为g2开始的人头白给好多了",
+      "g2开始的人头白给那么多",
+      "夯特，特人头能不厉害吗",
+      "当着人头数了",
+      "当着人头数",
+      "夯特被抢了人头",
+      "夯特被抢了人头"
+    ]
+  },
+  "situation": {
+    "count": 293,
+    "samples": [
+      "faze打小蜜蜂有图池优势，叉车和遗迹至少拿一张图",
+      "落后 了呀",
+      "‘ggggggggggggg",
+      "蒙古吗，估计gg了",
+      "一波了",
+      "一波了12/6",
+      "拿六分经济这么差",
+      "a队经济好差"
+    ]
+  },
+  "gray_signals": {
+    "count": 181,
+    "samples": [
+      "navi是被沙特收买了吗",
+      "绿龙蜜蜂故意的",
+      "绿龙蜜蜂故意的绿龙蜜蜂故意的绿龙蜜蜂故意的绿龙蜜蜂故意的绿龙",
+      "科隆剧本。猎鹰夺冠",
+      "faze拿的猎鹰科隆剧本有感觉吗",
+      "故意的有感觉吗",
+      "马总嗯把蒙古买了。",
+      "马喜喜是不是买了G2"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "20:25",
+      "count": 1020,
+      "samples": [
+        "寄",
+        "心态不好了",
+        "牛逼",
+        "2打5"
+      ]
+    },
+    {
+      "minute_utc": "20:57",
+      "count": 521,
+      "samples": [
+        "赢了",
+        "不用看",
+        "马上打脸",
+        "串不串，一直烦"
+      ]
+    },
+    {
+      "minute_utc": "19:14",
+      "count": 459,
+      "samples": [
+        "牛逼",
+        "三楼趣事",
+        "回放",
+        "这没包骗人家666"
+      ]
+    },
+    {
+      "minute_utc": "19:58",
+      "count": 459,
+      "samples": [
+        "？？？？？？",
+        "？？？？？？？？？？？？？",
+        "法玛斯gl租借的买的？",
+        "？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "19:59",
+      "count": 446,
+      "samples": [
+        "这狙",
+        "K3急了",
+        "小吉米侧身杀不死",
+        "侧身打不死还有什么好说的"
+      ]
+    },
+    {
+      "minute_utc": "19:16",
+      "count": 430,
+      "samples": [
+        "俩边。都不会有图三的节奏啊",
+        "超级关键的一分啊，一分顶五分",
+        "k3被猎鹰用毁了",
+        "k3被猎鹰用毁了"
+      ]
+    },
+    {
+      "minute_utc": "20:19",
+      "count": 397,
+      "samples": [
+        "牛逼",
+        "这个阶段有几条命啊？",
+        "下半区不就是死亡赛蛆吗",
+        "？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "15:45",
+      "count": 368,
+      "samples": [
+        "猎鹰比赛是明天的",
+        "马尔布斯也守不住",
+        "？？？？",
+        "？？？？"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      1512
+    ],
+    [
+      "吾十开锦绣",
+      329
+    ],
+    [
+      "翁达长臂猿",
+      309
+    ],
+    [
+      "小虎牙-q5Fjx5MKCT",
+      290
+    ],
+    [
+      "CCCC",
+      137
+    ],
+    [
+      "Totti丶",
+      137
+    ],
+    [
+      "纯净养精神",
+      131
+    ],
+    [
+      "万籁自家心下",
+      128
+    ]
+  ],
+  "sources": {
+    "csboy_123321": 40141,
+    "captainmo": 7084
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_123321",
+      "url": "https://www.huya.com/123321",
+      "state": "preflight",
+      "started_at": "2026-08-20T00:13:26+00:00",
+      "heartbeat_at": "2026-08-20T00:13:26+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "captainmo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "preflight",
+      "started_at": "2026-08-20T00:13:36+00:00",
+      "heartbeat_at": "2026-08-20T00:13:36+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null
+    }
+  ]
+}

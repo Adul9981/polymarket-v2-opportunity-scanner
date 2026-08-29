@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "slug": "dota2-lgd-ty-2026-08-16",
+  "targets": {
+    "dota2-lgd-ty-2026-08-16-game1|LGD Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "last_action_key": "no_entry_high|buy|",
+      "last_pattern_labels": [
+        "A2_中位U型反转",
+        "A5_W型双底"
+      ]
+    },
+    "dota2-lgd-ty-2026-08-16-game2|LGD Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "below_stop",
+      "high_water": 0.425,
+      "last_pattern_labels": [
+        "B4_直线阴跌"
+      ],
+      "last_action_key": "stop_new_entry|buy|"
+    },
+    "dota2-lgd-ty-2026-08-16|LGD Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [
+        {
+          "price": 0.08,
+          "amount_usd": 6.25,
+          "ts": "2026-08-16T11:40:27.840805+00:00"
+        },
+        {
+          "price": 0.06,
+          "amount_usd": 7.08,
+          "ts": "2026-08-16T11:40:27.840805+00:00"
+        },
+        {
+          "price": 0.04,
+          "amount_usd": 8.75,
+          "ts": "2026-08-16T11:40:27.840805+00:00"
+        },
+        {
+          "price": 0.02,
+          "amount_usd": 12.5,
+          "ts": "2026-08-16T11:40:27.840805+00:00"
+        }
+      ],
+      "filled_levels": [],
+      "last_zone": "in_entry",
+      "high_water": 0.635,
+      "last_pattern_labels": [
+        "B4_直线阴跌"
+      ],
+      "last_action_key": "place_buy|buy|0.02"
+    },
+    "dota2-lgd-ty-2026-08-16-game1|Team Yandex": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "below_stop",
+      "last_action_key": "switch_to_s1_eval|buy|",
+      "last_pattern_labels": [
+        "B4_直线阴跌"
+      ]
+    },
+    "dota2-lgd-ty-2026-08-16-game2|Team Yandex": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "high_water": 0.83,
+      "last_pattern_labels": [
+        "C2_五五开开局碾压"
+      ],
+      "last_action_key": "no_entry_high|buy|"
+    },
+    "dota2-lgd-ty-2026-08-16|Team Yandex": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.895,
+      "last_pattern_labels": [
+        "A2_中位U型反转"
+      ]
+    }
+  }
+}

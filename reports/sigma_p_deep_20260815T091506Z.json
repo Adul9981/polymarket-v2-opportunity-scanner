@@ -1,0 +1,376 @@
+{
+ "captured_at": "20260815T091506Z",
+ "x": 1.0,
+ "groups": [
+  {
+   "ts": 1786785313,
+   "group": "highest-temperature-in-madrid-on-august-15-2026",
+   "negRiskMarketID": "0xb9ce67795215e83b4b74a352677a283318433c69552d6dc25a4bbec75db87700",
+   "n_legs": 7,
+   "ask_sump": 6.948,
+   "subgroup_sump_fillable": 6.948,
+   "x": 1.0,
+   "mark_sump": 1.075,
+   "mark_edge_per_x": 0.075,
+   "exec_edge_per_x": 0.0012,
+   "no_cost": 5.9988,
+   "no_theory": 6.0,
+   "no_gross": 0.0012,
+   "no_net": -0.123776,
+   "no_net_rebate": -0.063788,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 7,
+   "n_yes_fillable": 7,
+   "yes_cost": 1.124,
+   "yes_gross": -0.124,
+   "yes_net": -0.15148,
+   "yes_net_rebate": -0.14024,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "fail",
+   "days_to_end": 0,
+   "exhaustive_hint": false,
+   "notes": "",
+   "legs": [
+    {
+     "title": "30°C or below",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.092,
+     "no_cost": 0.925,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "31°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.28,
+     "no_cost": 0.7448,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "32°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.37,
+     "no_cost": 0.65,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "33°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.23,
+     "no_cost": 0.79,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "34°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.11,
+     "no_cost": 0.92,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "35°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.04,
+     "no_cost": 0.97,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "36°C",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": 1786785320,
+   "group": "highest-temperature-in-paris-on-august-15-2026",
+   "negRiskMarketID": "0x187cdcea37c9a776f63b13352f49a9cde970d390107c36aba6668de268f79f00",
+   "n_legs": 7,
+   "ask_sump": 6.966,
+   "subgroup_sump_fillable": 6.966,
+   "x": 1.0,
+   "mark_sump": 1.041,
+   "mark_edge_per_x": 0.041,
+   "exec_edge_per_x": -0.021,
+   "no_cost": 6.021,
+   "no_theory": 6.0,
+   "no_gross": -0.021,
+   "no_net": -0.14642,
+   "no_net_rebate": -0.08621,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 7,
+   "n_yes_fillable": 7,
+   "yes_cost": 1.09,
+   "yes_gross": -0.09,
+   "yes_net": -0.1168,
+   "yes_net_rebate": -0.1059,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "fail",
+   "days_to_end": 0,
+   "exhaustive_hint": false,
+   "notes": "",
+   "legs": [
+    {
+     "title": "30°C or below",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.028,
+     "no_cost": 0.984,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "31°C",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.096,
+     "no_cost": 0.919,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "32°C",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.24,
+     "no_cost": 0.789,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "33°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.42,
+     "no_cost": 0.59,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "34°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.23,
+     "no_cost": 0.79,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "35°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.06,
+     "no_cost": 0.96,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "36°C",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.016,
+     "no_cost": 0.989,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": 1786785326,
+   "group": "highest-temperature-in-amsterdam-on-august-15-2026",
+   "negRiskMarketID": "0xa48fda76fc1da6ace45256f22d49f4d35ee96b219cee3322f65f6f570c0b7600",
+   "n_legs": 7,
+   "ask_sump": 6.948,
+   "subgroup_sump_fillable": 6.948,
+   "x": 1.0,
+   "mark_sump": 1.059,
+   "mark_edge_per_x": 0.059,
+   "exec_edge_per_x": -0.039,
+   "no_cost": 6.039,
+   "no_theory": 6.0,
+   "no_gross": -0.039,
+   "no_net": -0.16478,
+   "no_net_rebate": -0.10439,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "n_no_fillable": 7,
+   "n_yes_fillable": 7,
+   "yes_cost": 1.108,
+   "yes_gross": -0.108,
+   "yes_net": -0.13516,
+   "yes_net_rebate": -0.12408,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "fail",
+   "days_to_end": 0,
+   "exhaustive_hint": false,
+   "notes": "",
+   "legs": [
+    {
+     "title": "22°C",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "23°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.14,
+     "no_cost": 0.87,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "24°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.41,
+     "no_cost": 0.62,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "25°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.36,
+     "no_cost": 0.7,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "26°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.15,
+     "no_cost": 0.88,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "27°C",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.03,
+     "no_cost": 0.98,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": []
+    },
+    {
+     "title": "28°C",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.008,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "no_ok": true,
+     "yes_ok": true,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  }
+ ]
+}

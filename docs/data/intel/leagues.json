@@ -1,0 +1,205 @@
+{
+ "schema_version": "1.0",
+ "updated_at": "2026-08-24T23:40:00+08:00",
+ "description": "联赛维度情报档案：赛事特征、假赛/灰信号风险、覆盖平台与直播间、弹幕词表方向。",
+ "leagues": [
+  {
+   "id": "lck",
+   "name": "LCK",
+   "region": "KR",
+   "platforms": [
+    "SOOP",
+    "虎牙"
+   ],
+   "streamers": [
+    "957(890001)",
+    "硕硕(323444)",
+    "米勒(149361)",
+    "LCK_CL(SOOP)"
+   ],
+   "gray_risk": "低-中",
+   "notes": "历史样本假赛少、反转可靠；Kingen 下赛季传去巴西联赛（2026-08-18 弹幕）；DNS 常规赛垫底但 K 杯 3:0 夺冠（打野 shavel 关键）；2026-08-21 T1-KT：两路 15,399 条弹幕，'让一追二'共识命中；T1 赢→DK 进季后赛、KT 掉入围赛（弹幕口径）；08-22 DNS-KRX：DNS K杯冠军后被质疑剧本/低水，灰信号高浓度；官方确认 DNS 2:0 KRX（质疑方向未兑现）",
+   "key_samples": [
+    "DK vs KT 让一追二：DK 整场 23.5c -> 98.5c（2026-08-09）",
+    "DNS 3:0 NS：K 杯决赛（2026-08-18）",
+    "T1 2:1 KT（2026-08-21）：KT 连续两局领先被翻='充电宝'叙事；T1 '死一次基地爆炸'单核体系 + '资源倾斜多兰=无效'候选规律"
+   ]
+  },
+  {
+   "id": "lck_cl",
+   "name": "LCK Challengers League（二线）",
+   "region": "KR",
+   "platforms": [
+    "SOOP",
+    "虎牙"
+   ],
+   "streamers": [
+    "硕硕(虎牙 323444)",
+    "LCK_CL(SOOP afchall)"
+   ],
+   "gray_risk": "低-中",
+   "notes": "二队/学院队赛事；特征：高击杀混战局、'二队杰斯=灾难'负面共识、GGA(3胜21败)等垫底队被放养（无宿舍/教练）；选手波动大；<b>结构规律（2026-08-18 观众观察，待统计验证）：很少 2:0，强队第二局必给一盘/近期多打满</b>——类似 LEC 打满率规律，GGA vs BRO 2:1 打满首样本命中，继续累计；2026-08-18 GGA vs BRO 案例 4 高度疑似（BRO 91c 崩盘+两路弹幕指瑞兹故意送），与 DNS/NS 决赛暂停潮共振，联赛级假赛嫌疑观察项升级；官方已确认 GGA 1-2 BRO（08-18，G2 瑞兹送局为 BRO 唯一败局）；08-20 BRO vs KRX 系列 KRX 2:1（用户确认，官方 VOD 待回补） 2026-08-24 Play-In Upper R1：DNS.C 3:1 KRX.C（Polymarket 结算价锁定）；BFX.Y vs HLE.C 紧随其后。",
+   "key_samples": [
+    "DNS vs NS（CL ROUND 4）：G1 尾声 NS 被批 BP，观众预测 NS 扳回未兑现",
+    "GGA vs BRO：BRO 1:0（弹幕推断），GEN 学院 BP 被比作'NS 风格'"
+   ],
+   "keywords": [
+    "제이스(杰斯)",
+    "2군(二队)",
+    "조합(阵容)",
+    "숙소(宿舍)",
+    "2:0(很少)",
+    "꽉(打满)"
+   ],
+   "features": [
+    "季后赛（Play-In Upper R1）为 BO5 + 无畏征召（Fearless）",
+    "1 军出场超额禁赛规则：LCK 出场过多的选手不能打 CL 季后赛（08-24 Rich/LazyFeel 案例，弹幕口径）",
+    "残阵效应：核心缺阵队（KRX.C）下路被击穿规律；BP 负锚\"CL 杰斯必败\"待多场验证"
+   ],
+   "updated_at": "2026-08-24T17:10:00+08:00"
+  },
+  {
+   "id": "lec",
+   "name": "LEC",
+   "region": "EU",
+   "platforms": [
+    "Twitch",
+    "虎牙"
+   ],
+   "streamers": [
+    "Caedrel(Twitch caedrel)",
+    "LEC官方(Twitch lec)",
+    "毛毛(虎牙 149346)",
+    "Remember(虎牙 528222)",
+    "硕硕(虎牙 323444)"
+   ],
+   "gray_risk": "中-高",
+   "notes": "打满率 49.2%（G1/G2 赢家方向相反 ⟺ 打满，65/65 全对）；假赛/剧本疑似局集中（KC 卡时间质疑）；2026-08-21 SK-TH 两局灰信号 83 条指向 SK（输家）方向连续兑现；08-23 TH-GX：GX 2:0 横扫（Polymarket 价格收敛），TH 弱队三负锚集齐（杰斯/卢锡安无体系/剑魔打野）——'弱队杰斯判负'跨赛区规律再强化（唯一例外 Zeus）；MKOI 假赛质疑连续两日被提及（08-22 45 条 + 08-23 5 条）重点跟踪；LEC 大龙决策烂（'拿了大龙就逛街/送'）跨场规律候选；08-24 KC vs SHFT：榜首 KC 被垫底 SHFT 爆冷（G1 弹幕口径 SHFT 胜），灰信号高预警定向 KC（蛇女/女警明演 24 条，'被质疑方输球'兑现）——KC 卡时间+领先不推进跨场规律再样本（08-18 → 08-24）；'欧洲自古倒数第一吃第一'榜尾爆冷传统；蛇女版本锚本场反向（需叠加选手执行）；08-24 KC vs SHFT 系列 1:1 进行中（G1 SHFT 爆冷/G2 KC 马拉松扳平，Polymarket lol-shft-kc-2026-08-23 交叉）：KC 中单双局负锚（蛇女/瑞兹）+ 灰信号方向混合（G1 兑现/G2 未兑现）；'欧洲自古倒数第一吃第一'榜尾爆冷样本；08-24 KC 2:1 SHFT（官方，让一追二）：G1 榜首爆冷后逆转——灰信号高浓度定向 KC（~100 条）但方向整体未兑现（重要反例，入库 refuted）；KC 卡时间跨场规律实锤（三局 27+ 分钟）；'榜首输榜尾'G1 兑现但系列反转；SHFT 领先守不住画像",
+   "key_samples": [
+    "KC vs GX：KC 大优势拖到固定时间点终结，灰信号 69 条（2026-08-18）",
+    "TH vs Navi：观众嘴上看衰但比分领先的信息差信号（2026-08-17）",
+    "SK vs TH（2026-08-21）：TH 开局 3-0/5-1 领先被翻，终局灰信号爆发（水位不动），SK 胜",
+    "TH vs GX（2026-08-23）：GX 2:0；弱队杰斯/卢锡安无米利欧双 BP 负锚应验；TH 上野（Daglas 剑魔打野/Tracyn 纳尔）负面中心",
+    "KC vs SHFT（2026-08-24 G1）：KC 领先5k/天肥女警被翻，SHFT 1:0；蛇女正锚未应验+KC 灰信号再犯（高预警）",
+    "KC vs SHFT（2026-08-24 系列）：KC 2:1；灰信号方向反例（高浓度≠必输）+ KC 卡时间三局实锤"
+   ],
+   "capture_note": "多路同抓 2026-08-24 固化：Twitch 2 路 + 虎牙 3 路；同一比赛全部房间同一 session"
+  },
+  {
+   "id": "lpl",
+   "name": "LPL",
+   "region": "CN",
+   "platforms": [
+    "虎牙"
+   ],
+   "streamers": [
+    "957(890001)",
+    "硕硕(323444)",
+    "毛毛(149346)",
+    "米勒(149361)"
+   ],
+   "gray_risk": "高",
+   "notes": "队伍信誉度低，实力接近的'反转'可能不兑现（BLG 大优被翻反例）；同形态需降仓或不做；08-22 WE-LGD：LGD 2:1 让一追二（G3 21-4 碾压），Monki 灰信号三连兑现（WE 输），'lgd6倍拿下了'冷门盘兑现，LGD '每次都打满'规律再添样本；08-22 爆冷日：LGD 2:1 WE + NIP 2:0 IG 双冷门；IG 控分叙事（排名博弈）；JDG-TES 进行中；TES 状态差（小天/BP）",
+   "key_samples": [
+    "BLG vs TES：BLG 大优 93-94.5c -> 0.05c 被翻（2026-08-07）",
+    "WE vs LGD（2026-08-22）：LGD 6倍冷门 2:1 让一追二；Monki 再犯兑现"
+   ]
+  },
+  {
+   "id": "kespa_cup",
+   "name": "KeSPA Cup（K 杯）",
+   "region": "KR",
+   "platforms": [
+    "SOOP",
+    "虎牙"
+   ],
+   "streamers": [
+    "LCK_CL(SOOP)",
+    "硕硕(323444)",
+    "957(890001)"
+   ],
+   "gray_risk": "中",
+   "notes": "商业杯赛、奖金约 3000 万韩元；场馆简陋被调侃；DNS(倒数第一) 3:0 夺冠引发'含金量'争议；暂停争议（G2 DNS 频繁暂停）触发灰信号",
+   "key_samples": [
+    "DNS 3:0 NS 夺冠（2026-08-18）：MVP 打野 shavel，G2 暂停争议 + 灰信号集中"
+   ]
+  },
+  {
+   "id": "ewc_cs2",
+   "name": "EWC CS2（电竞世界杯）",
+   "platform": [
+    "虎牙（CSBOY官方123321/CSBOY-Mo captainmo）",
+    "KICK（官方 esportsworldcup / ESL 官方 eslcs / Gaules 二路）",
+    "Twitch（lolesports 类国际流按赛事切换，CS2 主源为 Kick eslcs）"
+   ],
+   "features": [
+    "单败淘汰（16强）",
+    "爆冷频率高（2026-08-19 G2/A队 即一例）",
+    "图池讨论密集（叉车/遗迹/沙二）"
+   ],
+   "gray_risk": "低（决赛 0 实质灰信号）",
+   "vocab": [
+    "Astralis",
+    "G2",
+    "FaZe",
+    "Vitality",
+    "Magic",
+    "FUT",
+    "Spirit",
+    "NAVI",
+    "MongolZ",
+    "Eternal Fire",
+    "B8"
+   ],
+   "notes": "R16 官方赛果（08-19/20）：G2 2:1 Astralis、FUT 2:1 magic、FURIA 2:1 Aurora、MOUZ 2:1 GL、Vitality 2:0 FaZe、Legacy 2:0 NAVI；QF：FURIA 2:1 G2；决赛（08-23）：Spirit 3:1 FUT 夺冠（官方确认；让一追三，图二 Anubis tN1R 29 杀/图三 Ancient 加时/图四 Nuke FUT 零胜率图速通）——BO5 图池深度决定冠军；FUT 图池短板+狙击手软肋+关键局波动实体化；Spirit 同日 TI15 双冠"
+  },
+  {
+   "id": "ti2026_dota2",
+   "name": "The International 2026（Dota2）",
+   "region": "Global",
+   "platforms": [
+    "虎牙",
+    "OpenDota"
+   ],
+   "streamers": [
+    "TI2026舞台一(660118)",
+    "Maybeee111(211888)"
+   ],
+   "gray_risk": "低（首局仅单源 4 条零星质疑）",
+   "notes": "首个标准化弹幕样本：Iron Wing vs Team Spirit G1。Dota 长局的核心交易信息不只来自击杀/团战，必须同时跟踪买活、三路兵线、高地与基地压力；G1 出现正面团战观感与最终胜负条件背离。；胜者组首轮官方赛果：Team Spirit 2:0 Iron Wing、Team Vision 2:1 BoomBoys",
+   "key_samples": [
+    "Team Spirit 45:34 Iron Wing（62:24）：Yatoro 德鲁伊 18/0/9、塔伤 36,688，以兵线/基地压力终结"
+   ],
+   "keywords": [
+    "肉山",
+    "买活",
+    "三路",
+    "超级兵",
+    "高地",
+    "守家",
+    "偷家",
+    "BKB",
+    "德鲁伊",
+    "小熊"
+   ]
+  },
+  {
+   "id": "cs2",
+   "name": "CS2",
+   "region": "EU/全球",
+   "platforms": [
+    "虎牙",
+    "KICK"
+   ],
+   "streamers": [
+    "CSBOY 官方/马西西(虎牙 123321)",
+    "CSBOY-Mo(虎牙 321123)",
+    "BLAST 官方(虎牙 blast)",
+    "KICK eslcs / gaules / esportsworldcup / cs2_maincast"
+   ],
+   "gray_risk": "中-高",
+   "notes": "08-26 BLAST Open Porto Group A：Spirit 2:0 DENDELE（G1 遗迹 13-8 / G2 叉车 13-7/13-8 区间）；观众对 Spirit 领先送分/经济差批评跨图持续，灰信号约 14 条（0 实锤）；弱图（叉车）叙事修正样本。默认采集集：CSBOY 123321 + CSBOY-Mo 321123 + BLAST 官方 blast；maxixi 已删除（与 CSBOY 123321 同房，2026-08-27）；Twitch 暂停。",
+   "updated_at": "2026-08-26"
+  }
+ ]
+}

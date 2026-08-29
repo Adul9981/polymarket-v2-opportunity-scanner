@@ -1,0 +1,43 @@
+{
+  "question": "LEC BO3：G1 强队赢 -> G2 弱队赢 的频率（用于定 G2 弱队翻倍仓位的倍数）",
+  "target_samples": 20,
+ "status": "样本不足（4/20）。已用 LEC 07-24→08-08 赛前1小时价回填 4 例（reports/lec_bo3_stats_2026-08-09.md 窗口分析）；累计 >=20 后出频率结论并定仓位倍数。",
+ "samples": [
+  {
+   "date": "2026-08-08",
+   "match": "SK vs NAVI",
+   "g1_favorite_won": true,
+   "g2_underdog_won": true,
+   "g2_underdog_low_c": 30.5,
+   "note": "G2 SK 30.5c->99.95c 中位反转；LEC 弹幕情报'常打满/明眼'；初验 1/1",
+   "source": "docs/task/PROJECT_PROGRESS.md 08-08/08-09 记录"
+  },
+  {
+   "date": "2026-07-26",
+   "match": "MKOI vs VIT",
+   "g1_favorite_won": true,
+   "g2_underdog_won": true,
+   "g2_underdog_low_c": null,
+   "note": "G1 MKOI(65.5c)赢 -> G2 VIT 赢 -> 系列赛 VIT 翻盘（4 例中唯一翻系列）",
+   "source": "reports/lec_bo3_stats_2026-08-09.md 窗口回填（赛前1小时价）"
+  },
+  {
+   "date": "2026-08-02",
+   "match": "FNC vs MKOI",
+   "g1_favorite_won": true,
+   "g2_underdog_won": true,
+   "g2_underdog_low_c": null,
+   "note": "G1 MKOI(60.5c)赢 -> G2 FNC 赢 -> 系列赛 MKOI 守住",
+   "source": "reports/lec_bo3_stats_2026-08-09.md 窗口回填（赛前1小时价）"
+  },
+  {
+   "date": "2026-08-07",
+   "match": "GIANTX vs SHFT",
+   "g1_favorite_won": true,
+   "g2_underdog_won": true,
+   "g2_underdog_low_c": null,
+   "note": "G1 GIANTX(58.5c)赢 -> G2 SHFT 赢 -> 系列赛 GIANTX 守住",
+   "source": "reports/lec_bo3_stats_2026-08-09.md 窗口回填（赛前1小时价）"
+  }
+ ]
+}

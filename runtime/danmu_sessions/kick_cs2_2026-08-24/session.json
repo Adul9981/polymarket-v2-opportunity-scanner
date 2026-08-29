@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "session": "kick_cs2_2026-08-24",
+  "title": "KICK CS2 弹幕情报（ESL 官方 + Gaules 二路）",
+  "state": "running",
+  "updated_at": "2026-08-24T18:59:02+00:00",
+  "report": "reports/intel_danmu_live_kick_cs2_2026-08-24.html",
+  "intel_json": "runtime/danmu_sessions/kick_cs2_2026-08-24/intel.json",
+  "rooms": [
+    {
+      "channel": "eslcs",
+      "source": "kick_eslcs",
+      "chatroom_id": 101198156,
+      "connected_at": "2026-08-24T18:48:27+00:00",
+      "messages": 59,
+      "state": "connected",
+      "restart_count": 0
+    },
+    {
+      "channel": "gaules",
+      "source": "kick_gaules",
+      "chatroom_id": 66973867,
+      "connected_at": "2026-08-24T18:58:30+00:00",
+      "messages": 1512,
+      "state": "connected",
+      "restart_count": 0
+    }
+  ]
+}

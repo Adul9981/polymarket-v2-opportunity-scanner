@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WE vs LGD · LPL 弹幕情报（整场：LGD 2:1 让一追二）（v2 决策导向版）</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 22px; height:22px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 52px; font-size:11px; font-weight:650; padding-top:2px; }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  details { margin:6px 0; }
+  summary { cursor:pointer; color:var(--accent); font-size:12.5px; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="top">
+    <span class="score-big">6:0</span>
+    <span class="badge b-pend">弹幕口径 · 官方待回填</span>
+    <span class="badge b-risk">灰信号见 §2</span>
+    <span class="badge b-anchor">锚点见 §3</span>
+    <span class="badge b-odds">盘口见 §4</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span>五、灰信号汇总（观众质疑，非结论） 假赛类 6 条、演类 23 条、剧本类 9 条、盘类 34 条（穿盘/加号词密集） 实质指向 WE 侧 3–5 条（"资本告诉你1:1""这演技拙劣""收到指令33分钟之前推完"）；大量赌狗对骂 Monki 灰信… <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span>WE 少爷卢锡安负锚应验（G2）+ cube 杰斯正锚 vs '杰斯送'反方 <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--good)">盘口</span><span>2x） ——LGD 6 倍盘兑现（观众口径，唯一具体赔率锚点；LGD 赛前冷门 6 倍 → 2:1 拿下） "第三把WE捡钱了"（16:… <span class="meta">→ 详 §4</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span>七、预测验证 预测（弹幕） 结果 命中 "资本告诉你1:1"（16:08） LGD 扳平 G2 命中 "让一追二"（16:52-55） LGD 2:1 完成 命中 "lgd的比赛每… <span class="meta">→ 详 §5/§10</span></span></div>
+  </div>
+  <div class="act"><b>决策落点：</b>LONG/SHORT：沉淀） ：3 场 2 兑现 1 未兑现（08-19 WE-EDG 兑现、08-21 WE-AL 未兑现、08-22 WE-LGD 兑现）——"被疑方输球"方向 2/3，实体持续重点…</div>
+</div>
+<div class="card">
+  <h2><span class="no">1</span>比赛信息与结果总览 / 状态核验</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">header</h3><!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WE vs LGD · LPL 弹幕情报（整场：LGD 2:1 让一追二）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+.block{margin-bottom:16px}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>WE vs LGD · LPL 整场弹幕复盘</h1>
+<p class="sub">比赛：LPL 第三赛段（WE vs LGD，BO3）· 数据源：官方流(660000) + 957(890001) · 窗口 16:05~17:33 · <b>总比分：LGD 2:1 WE（让一追二；官方确认）· G1 弹幕未录制（数据缺口）</b></p>
+<div class="stats">
+<div class="stat"><div class="num">LGD 2:1</div><div class="lbl">让一追二（弹幕）</div></div>
+<div class="stat"><div class="num">21-4</div><div class="lbl">G3 人头（观众口径）</div></div>
+<div class="stat"><div class="num">6 倍</div><div class="lbl">LGD 盘口（观众口径）</div></div>
+<div class="stat"><div class="num">Monki 兑现</div><div class="lbl">灰信号方向（WE 输）</div></div>
+</div>
+
+<div class="warn"><b>核心：LGD 让一追二，WE 再度输掉关键局。</b>G1 WE 胜（弹幕缺失）；G2 LGD 扳平（"资本告诉你1:1"兑现）；G3 LGD 碾压（"老干爹虐了21-4""GGWE不像人""恭喜lgd"），系列 LGD 2:1（"史上最毫无悬念的让一追二""LGD竟然赢了"）。WE 打野 Monki（超雄）连续第三场被集中质疑，本场 WE 输系列——灰信号方向兑现。盘口亮点："lgd6倍拿下了"（LGD 6 倍盘兑现，观众口径）。</div>
+
+<div class="ok"><b>灰信号纪律：</b>WE 侧做局质疑 3–5 条（"资本告诉你1:1""这演技拙劣""收到指令33分钟之前推完"）+ Monki 连续质疑，方向与 WE 输系列一致（弱兑现）；大量为赌狗对骂（"we又假赛了666" ↔ "赌狗看啥都是假赛"）；观众质疑非结论。G1 弹幕缺失（采集 16:05 恢复）。</div>
+
+<section class="card"><h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">一、结果总览</h3><table>
+<tr><th>小局</th><th>结果</th><th>要点</th></tr>
+<tr><td>G1</td><td>WE 胜（官方标题口径）</td><td>弹幕未录制（采集 16:05 恢复）；957"这第一把咋赢的啊，咋we赢了"（翻盘口径）</td></tr>
+<tr><td>G2（16:05–16:57）</td><td>LGD 胜</td><td>"资本告诉你1:1"兑现；WE 下路（少爷卢锡安/女警）被压；Monki 再犯质疑</td></tr>
+<tr><td>G3（16:57–17:33）</td><td>LGD 胜</td><td>"老干爹虐了21-4"；"GGWE不像人""恭喜lgd""lgd6倍拿下了"；中上巨大优势（"结束了，中上巨大优势"）</td></tr>
+</table>
+<ul>
+<li>系列 LGD 2:1（弹幕多信号：恭喜lgd/GG/结束了/21-4/让一追二；官方待回填）</li>
+<li>观众口径："看似2:1，实则3:0"（玩梗）；"LGD竟然赢了"（爆冷感）</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（风险 · 观众质疑非结论）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">五、灰信号汇总（观众质疑，非结论）</h3><ul>
+<li>假赛类 6 条、演类 23 条、剧本类 9 条、盘类 34 条（穿盘/加号词密集）</li>
+<li>实质指向 WE 侧 3–5 条（"资本告诉你1:1""这演技拙劣""收到指令33分钟之前推完"）；大量赌狗对骂</li>
+<li><b>Monki 灰信号方向验证：</b>本场 WE 输系列 → 方向兑现（弱）；跨场统计：08-19 兑现、08-21 未兑现、08-22 兑现（2/3）</li>
+<li>盘口：<b>"lgd6倍拿下了"</b>（17:2x，LGD 6 倍盘兑现，观众口径）——本场唯一具体赔率锚点</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  
+</div>
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">八、盘口讨论</h3><ul>
+<li><b>"lgd6倍拿下了"（17:2x）</b>——LGD 6 倍盘兑现（观众口径，唯一具体赔率锚点；LGD 赛前冷门 6 倍 → 2:1 拿下）</li>
+<li>"第三把WE捡钱了"（16:57）——G3 WE 侧盘口情绪（落空）</li>
+<li>"we能不能穿盘一次/把把就是不穿盘/最近场场加号"——穿盘/加号词密集，无数字（待价格回填）</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板（锚点×共识×灰信号）</h2>
+  <p class="meta">今日无方向板章节</p>
+</div>
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点（LONG/SHORT）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">九、情报含义与后续观察点</h3><ul>
+<li><b>Monki 灰信号跨场统计（长期沉淀）</b>：3 场 2 兑现 1 未兑现（08-19 WE-EDG 兑现、08-21 WE-AL 未兑现、08-22 WE-LGD 兑现）——"被疑方输球"方向 2/3，实体持续重点标记</li>
+<li><b>LGD 冷门盘样本</b>：6 倍盘 2:1 兑现——冷门让一追二案例，与盘口对照价值高</li>
+<li>观察点：WE 季后赛前景（"WE还能前四吗"）、LGD 排名（"lgd能拿下BLG一小局和滔博应该是二号种子"观众口径）、官方赛果与 MVP</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">7</span>逐局复盘（证据层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">二、逐局复盘</h3><div class="block"><h3>G2（16:05–16:57，官方流 16:11 峰值 104 条/分）—— LGD 扳平</h3>
+<ul>
+<li>BP 后战绩情报：WE 少爷卢锡安负锚点（"少爷不会卢，这把有了""卢锡安僵的一批"）应验（被压制）；cube 杰斯正锚点 vs "杰斯都是送"反方</li>
+<li>局中：下路差距（"下路打爆了/下路穿了"）；"we中野直直走到对面脸上送的，这演技拙劣"（收尾段灰话）</li>
+<li>Monki（超雄）质疑贯穿（"极度自负/找个替补打野吧/把把送/世一野潜力monki"反讽）</li>
+</ul>
+</div>
+<div class="block"><h3>G3（16:57–17:33，17:33 官方流 213 条/分峰值）—— LGD 碾压</h3>
+<ul>
+<li>BP（16:57–17:02）：WE 奥恩/巨魔/辛德拉 vs LGD 维克托/克烈/波比（"给汤圆维克托前期做不了事 这把没了"反被打脸）</li>
+<li>局中：LGD 中上巨大优势（"结束了，中上巨大优势"）；"老干爹虐了21-4"（人头 21-4）；karis 被汤圆爆（"卡瑞斯被汤圆爆三把，可以退役了"）</li>
+<li>终局（17:33）："GG/结束了/终于结束了/恭喜lgd"；"lgd6倍拿下了"（6 倍盘兑现）</li>
+</ul>
+</div></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（证据层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">三、队伍画像（本场 + 长期库）</h3><table>
+<tr><th>队伍</th><th>画像</th></tr>
+<tr><td>LGD（胜 2:1）</td><td>让一追二完成（"史上最毫无悬念的让一追二"）；G3 碾压 21-4；汤圆中单爆 karis 三把；"LGD的比赛每次都打满"规律再添样本；6 倍盘兑现（观众口径）</td></tr>
+<tr><td>WE（负 1:2）</td><td>连续翻盘型但 G3 被碾压（"每把前期都没优势"）；Monki 灰信号三连（08-19 兑现 / 08-21 未兑现 / 08-22 兑现）；karis 中单被爆；下路少爷状态差；"打法太单一"</td></tr>
+</table></section>
+
+<section class="card"><h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">四、人员画像（提及量，official+957）</h3><table>
+<tr><th>选手/对象</th><th>提及</th><th>评价</th></tr>
+<tr><td>Monki（WE 打野，"超雄/梦奇/王梦齐"）</td><td>50+</td><td>三场连续被疑，本场 WE 输系列——方向兑现（2/3 兑现：08-19 兑现、08-21 未兑现、08-22 兑现）</td></tr>
+<tr><td>汤圆（LGD 中单）</td><td>20+</td><td>"汤圆爆 karis 三把"；G3 维克托 carry；"WE下赛季可以考虑原神/汤圆"（观众认可）</td></tr>
+<tr><td>少爷/Shaoye（WE AD）</td><td>34</td><td>卢锡安/女警被批（"纯纯涅槃ad"）——G2 负锚点应验</td></tr>
+<tr><td>cube（WE 上单）</td><td>13</td><td>杰斯正锚点 vs 反方分歧；G3 未carry</td></tr>
+<tr><td>原神（LGD 中单？）</td><td>11</td><td>"原神玩维克托g了"（被打脸）；"WE下赛季可以考虑原神了"（价值认可）</td></tr>
+<tr><td>karis（WE 中单）</td><td>3</td><td>"被汤圆爆三把，可以退役了"（观众口诛）——负向画像</td></tr>
+</table></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本（沉淀层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">六、联赛规律与版本</h3><ul>
+<li>LPL 规律候选："没有人能连胜，总是输一天赢一天"；WE "只会翻盘"（本场翻不动了）</li>
+<li>LGD 规律："每次都打满"（跨场，再添样本）；"前期有说法中后期不会玩"（G3 例外：中上巨大优势一路碾压）</li>
+<li>版本：杰斯、卢锡安（负锚点）、维克托（汤圆）、巨魔上单</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填明细（沉淀层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">七、预测验证</h3><table>
+<tr><th>预测（弹幕）</th><th>结果</th><th>命中</th></tr>
+<tr><td>"资本告诉你1:1"（16:08）</td><td>LGD 扳平 G2</td><td>命中</td></tr>
+<tr><td>"让一追二"（16:52-55）</td><td>LGD 2:1 完成</td><td>命中</td></tr>
+<tr><td>"lgd的比赛每次都打满"（16:43）</td><td>系列打满三局</td><td>命中（规律候选）</td></tr>
+<tr><td>"给我干翻we"（16:5x）</td><td>LGD 21-4 碾压 G3</td><td>命中</td></tr>
+<tr><td>"we能不能穿盘一次"（16:56）</td><td>WE 输系列，穿盘未兑现（待价格回填）</td><td>待定</td></tr>
+</table></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">十、数据与溯源</h3><ul>
+<li>数据源：docs/data/danmu/huya/2026-08-22_official_660000.jsonl + we957_890001.jsonl（16:05–17:33）</li>
+<li>密度峰值：G2 16:11 官方流 104 条/分；G3 收尾 17:33 213 条/分</li>
+<li>数据缺口：G1 弹幕未录制（采集 16:05 恢复）；16:28–16:42 中断 14 分钟——完整性受影响，已记录</li>
+<li>待官方确认：系列赛果与 MVP、21-4 人头、6 倍盘口、双方阵容</li>
+</ul></section>
+
+<p class="note">生成时间：2026-08-22 17:38 前后 · 灰信号纪律：观众质疑非结论 · 结果口径见各局标注。</p>
+</div></body></html>
+</div>
+<div class="footer">v2 决策导向重排 · 弹幕口径 · 灰信号仅为观众质疑非结论 · 由 tools/reformat_intel_template.py 生成</div>
+</div>
+</body>
+</html>

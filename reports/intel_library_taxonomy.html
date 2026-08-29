@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>弹幕情报库 · 系统分类框架 v1</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:920px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.tag{display:inline-block;border-radius:999px;padding:2px 10px;font-size:11px;margin:2px 4px 2px 0}
+.ok{background:#eaf6ec;color:#1d7a35}.new{background:#eef4ff;color:#0071e3}.warn{background:#fff4e5;color:#b25e00}.off{background:#f2f2f7;color:#86868b}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+pre{background:#fafafc;border:1px solid var(--line);border-radius:10px;padding:12px;font-size:12px;overflow-x:auto;line-height:1.6}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>弹幕情报库 · 系统分类框架</h1>
+<p class="sub">v1（2026-08-24）· 从"每场比赛的弹幕整理"升级为"可跨场复用的专业情报库" · 实体化 + 关系化 + 验证化</p>
+<div class="stats">
+<div class="stat"><div class="num">13</div><div class="lbl">英雄锚点（champions）</div></div>
+<div class="stat"><div class="num">8</div><div class="lbl">阵容/体系（compositions）</div></div>
+<div class="stat"><div class="num">36</div><div class="lbl">昵称映射（aliases）</div></div>
+<div class="stat"><div class="num">11</div><div class="lbl">验证样本（应验/反例）</div></div>
+</div>
+
+<section class="card"><h2>一、四大域分类</h2>
+<table>
+<tr><th>域</th><th>实体</th><th>文件</th><th>状态</th></tr>
+<tr><td rowspan="4"><b>A 实体域</b><br>谁/什么<br>跨场复用</td><td>联赛</td><td>leagues.json</td><td><span class="tag ok">已有</span>格式/爆冷传统/卡时间文化/灰风险</td></tr>
+<tr><td>队伍</td><td>teams.json</td><td><span class="tag ok">已有</span>风格/核心/纪律/灰历史</td></tr>
+<tr><td>选手</td><td>players.json</td><td><span class="tag ok">已有</span>英雄池焦点/正负锚/留痕</td></tr>
+<tr><td>英雄 / 阵容 / 地图</td><td>champions.json / compositions.json</td><td><span class="tag new">新增 v1</span>版本符号/搭配/克制/体系/图池</td></tr>
+<tr><td><b>B 事件域</b><br>发生了什么</td><td>比赛 + 局级节点</td><td>matches.json + node_data/</td><td><span class="tag ok">已有</span>47 场</td></tr>
+<tr><td rowspan="2"><b>C 信号域</b><br>观众共识/异常</td><td>BP 信号 / 实体留痕</td><td>bp_signals.json / bp_entities.json</td><td><span class="tag ok">已有</span>17 条信号</td></tr>
+<tr><td>灰信号 / 实体留痕</td><td>gray_signals.json / gray_entities.json</td><td><span class="tag ok">已有</span>27 条 · 兑现率统计</td></tr>
+<tr><td><b>D 市场域</b><br>盘口对照</td><td>盘口/价格</td><td>match 内嵌 + snapshots/</td><td><span class="tag ok">已有</span></td></tr>
+</table>
+<h3>跨切面</h3>
+<ul>
+<li>记忆分层 LONG / SHORT / TRANSIENT（MEMORY_TIERS.md）</li>
+<li>验证双轨：应验 / 未应验并列（validation_samples.json，11 条）</li>
+<li>版本/时间：patch + 有效期（patches.json）· 阵容 as-of（rosters.json.changes）</li>
+<li>多路共振：信号记录带 routes 字段（单路=低置信，两路=升置信）</li>
+</ul></section>
+
+<section class="card"><h2>二、关系模型</h2>
+<pre>
+league ──< team ──< player
+player ──(熟练度/锚)── champion        （杰斯×Zeus=正锚 / 杰斯×弱队=负锚）
+champion ──(搭配)── champion           （卢锡安 × 米利欧/娜美）
+champion ──(克制)── champion           （冰鸟 > 蛇女 > 发条）
+composition = 核心英雄 + 体系类型 + 克制关系 + 适用队伍
+team ──(惯用体系)── composition        （KC = 乌龟/卡时间体系）
+match ──(局级 BP)── pick 组合 → bp_signals（选手×英雄锚）
+客观层 official/official_matches.json ↔ matches.json（按 match_id 关联）
+</pre></section>
+
+<section class="card"><h2>三、已落地文件（v1）</h2>
+<table>
+<tr><th>文件</th><th>内容</th></tr>
+<tr><td>docs/data/intel/aliases.json</td><td>36 条昵称→官方名映射（绿龙=Spirit / 超雄=Monki / 啪哒克=待核实…），全部带证据，未核实不猜</td></tr>
+<tr><td>docs/data/intel/rosters.json</td><td>队伍名册（GX/TH/KC/SHFT/SK/NS/BFX）+ 阵容变动（TH Sheo→Daglas / KC 中单疑似变动）</td></tr>
+<tr><td>docs/data/intel/champions.json</td><td>13 个英雄锚点（杰斯/蛇女/冰鸟/卢锡安/剑魔/永恩/卡牌/盲僧/纳尔/维克托/瑞兹/女警/赵信）</td></tr>
+<tr><td>docs/data/intel/compositions.json</td><td>8 个体系 + 3 条图池锚（卢锡安+米利欧 / 蛇女+盲僧 / 卡时间 / 锁头 / 卡牌上单 / 剑魔打野负锚…）</td></tr>
+<tr><td>docs/data/intel/validation_samples.json</td><td>应验/反例 11 条（含 KC 灰信号方向反例、蛇女单局未应验）</td></tr>
+<tr><td>docs/data/intel/patches.json</td><td>patch 登记 + "锚点必须带版本窗口"约定</td></tr>
+<tr><td>docs/data/intel/official/official_matches.json</td><td>客观层：10 场官方结算（Polymarket closed / 战报）</td></tr>
+<tr><td>tools/intel_query.py</td><td>检索：<code>python3 tools/intel_query.py 蛇女</code> / <code>--entity team kc</code></td></tr>
+</table></section>
+
+<section class="card"><h2>四、路线图</h2>
+<table>
+<tr><th>阶段</th><th>内容</th><th>状态</th></tr>
+<tr><td>0 地基</td><td>官方名册/昵称映射 + patch 版本 + 多路 routes 约定</td><td><span class="tag ok">已完成 v1</span></td></tr>
+<tr><td>1 实体层</td><td>champions / compositions / 客观层初版</td><td><span class="tag ok">已完成 v1</span></td></tr>
+<tr><td>2 自动采集</td><td>BP 锁定自动记录 pick 组合入库 + 锚点自动检索推送（黄金窗口）</td><td><span class="tag warn">待做</span></td></tr>
+<tr><td>3 统计画像</td><td>锚点应验率/体系胜率统计 + champion/composition 画像页 + 交叉检索</td><td><span class="tag warn">待做</span></td></tr>
+<tr><td>4 产品化</td><td>聚合展示 + 付费墙（免费赛后 / 付费实时节点）</td><td><span class="tag off">待定</span></td></tr>
+</table>
+<p class="note">范围定稿（2026-08-24 用户确认）：1/2/4/5/6/7/9 做；3（官方基线胜率对照）不做；8（产品/合规）只加提醒。规范全文：knowledge/INTEL_LIBRARY_TAXONOMY.md。</p>
+</div></body></html>

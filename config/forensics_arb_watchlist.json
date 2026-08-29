@@ -1,0 +1,17 @@
+{
+  "description": "e46m3 主战场白名单：天气（每日城市温度组）、选举/政治、当天比分盘、电竞未来盘。用于 --slugs 高频小池精扫（1-5 分钟）。",
+  "slugs": [
+    "highest-temperature-in-milan-on-august-17-2026",
+    "highest-temperature-in-london-on-august-17-2026",
+    "highest-temperature-in-amsterdam-on-august-17-2026",
+    "highest-temperature-in-nyc-on-august-17-2026",
+    "highest-temperature-in-madrid-on-august-17-2026",
+    "lowest-temperature-in-hong-kong-on-august-17-2026",
+    "latvian-parliamentary-election-winner",
+    "which-company-has-best-ai-model-end-of-2026",
+    "brazil-presidential-election",
+    "alaska-governor-election-winner",
+    "how-many-fed-rate-cuts-in-2026",
+    "mlb-world-series-champion-2026"
+  ]
+}

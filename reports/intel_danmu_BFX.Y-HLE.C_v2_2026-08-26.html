@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BFX.Y vs HLE.C 整场情报（v2 决策导向版）· 2026-08-24</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 22px; height:22px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 52px; font-size:11px; font-weight:650; padding-top:2px; }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .kr { color:var(--sub); font-size:11px; }
+  details { margin:6px 0; }
+  summary { cursor:pointer; color:var(--accent); font-size:12.5px; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- 0 核心情报速览 -->
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="top">
+    <span class="score-big">BFX.Y 3:0 HLE.C</span>
+    <span class="badge b-pend">弹幕口径 · 官方待回填</span>
+    <span class="badge b-ok">G1 Polymarket 99.95c 已结算</span>
+    <span class="badge b-risk">灰信号 2 簇 · 预警中</span>
+    <span class="badge b-anchor">BP 负锚已应验</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span><b>灰信号约 16 条指向 HLE.C 侧</b>：G2 打野龙坑送（中预警）+ G1 AD 技能空放（玩梗向）——输方操作质疑，无反手反转信号 <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>HLE.C 中单 Rock 选角「必败」负锚应验</b>；「CL 杰斯必败」共识延续 <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--good)">盘口</span><span><b>让分 7.5 提及 / G2 押韩华 860 张未兑现 / 3:0 高赔不给</b>；G2 市场短时反向（62.5→57.5c）后 BFX.Y 仍胜 <span class="meta">→ 详 §4</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span><b>观众「3:0」赛前共识命中</b>；高价值用户 콜라 赛前预言 3:0 兑现 <span class="meta">→ 详 §5</span></span></div>
+  </div>
+  <div class="act"><b>决策落点：</b>BFX.Y 强势侧已被定价（G1 99.95c），边际信息在 <b>HLE.C 执行/灰信号风险</b>（两场 BP 好评全输＝纸面强执行弱）。后续 HLE.C 场次若龙坑类灰信号再现 → 升级观察；反手需盘口验证。</div>
+</div>
+
+<!-- 1 结果总览 -->
+<div class="card">
+  <h2><span class="no">1</span>结果总览</h2>
+  <table>
+    <tr><td>对阵</td><td>BNK FearX Youth（BFX.Y / 피어엑스 유스）vs Hanwha Life Esports Challengers（HLE.C / 한화생명 챌린저스）· LCK CL（league id=lck_cl）· BO5（弹幕口径）· Polymarket slug：lol-foxy-hle-2026-08-24</td></tr>
+    <tr><td>系列比分</td><td><b>BFX.Y 3:0 HLE.C</b>（弹幕口径 · 官方待回填；G1 10:25、G2 ~11:05、G3 11:55 gg 簇确认）</td></tr>
+    <tr><td>弹幕规模</td><td>6,833 条 · 481 活跃用户 · 平均 52 条/分 · 峰值 206（10:02 UTC）</td></tr>
+    <tr><td>MVP 候选</td><td>Grizzly（BFX.Y 打野，G1 李青「全票」呼声）；Kangin（上单，三局三解法）；HLE.C 侧 Bluffing（辅助）孤木难支</td></tr>
+    <tr><td>数据窗口</td><td>2026-08-24 09:45:54–11:57:13 UTC（约 2 小时 12 分）</td></tr>
+  </table>
+  <p class="meta">单局胜负、比分均无官方交叉前一律视为弹幕口径。<br>
+  <b>跨源一致性提示：</b>另一路（虎牙硕硕）局中快照 intel_danmu_HLE-BFX_2026-08-24.html 曾标注「HLE 2-0 领先」，与本页及 Polymarket G1 结算方向不一致；该快照弹幕含「让二追三」语境，判断其方向标注疑有误，以官方回填为准。</p>
+</div>
+
+<!-- 2 灰信号 -->
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（风险 · 观众质疑非结论）</h2>
+  <p class="meta">口径：规则层关键词未覆盖韩文「일부러/수상」类 → 0 条；本页对原始切片独立复核约 11 条疑似质疑，形成 2 簇 + 2 处零星。</p>
+  <table>
+    <tr><th>簇</th><th>窗口</th><th>条数/指向</th><th>预警</th><th>样本（意译）</th></tr>
+    <tr><td>C1</td><td>G1 10:02–10:08</td><td>约 8 条 · HLE.C AD Pyeonsik（Ezreal 技能空放）</td><td>低（玩梗向）</td><td>「Ez 技能是故意打空的吗」「Ez 故意不命中」</td></tr>
+    <tr><td>C2</td><td>G2 10:51–11:03</td><td>约 8 条 · HLE.C 打野 Jackal（Jarvan 龙坑开团）</td><td>中（同事件集中）</td><td>「这人真可疑」「Jarvan 像故意送」「三连肉身开送」</td></tr>
+    <tr><td>零星</td><td>09:52 / 11:24–43</td><td>MG 玩梗 1 条；Rock 选角必败 6 条</td><td>低</td><td>「MG 打虫时就很可疑」「肉装 Rock 必败」</td></tr>
+  </table>
+  <details><summary>原文摘录（韩文，溯源用）</summary>
+    <p class="kr">C1：「이즈 스킬을 일부러 빗맞추는건가」（10:04）·「이즈 일부러 스킬 안맞추노」（10:05）</p>
+    <p class="kr">C2：「쟤는 진짜 수상하다」（10:51）·「자르반 일부러 질려고그러는거같은데」（10:53）·「쌉 하드 슈퍼 캐리 3연 몸던지기」（11:03）</p>
+  </details>
+  <div class="warnbox">市场含义：质疑集中于 HLE.C 侧（输方操作质疑），未见「被质疑方反手翻盘」类反转信号；该侧价格或含情绪折价。纪律：灰信号不作假赛结论、不裸赌；反手必须过盘口/价格验证 + 项目风控。</div>
+</div>
+
+<!-- 3 BP 锚点 -->
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  <table>
+    <tr><th>锚点</th><th>内容</th><th>验证</th></tr>
+    <tr><td>Rock 选角「필패」</td><td>G3 HLE.C 中单 Rock 锁「肉装必败」英雄（观众共识符号）</td><td><b>应验</b>（HLE.C 输 G3）</td></tr>
+    <tr><td>CL 杰斯必败</td><td>「제필패」跨场负锚（CL 二队杰斯惯例）</td><td>延续（本场无杰斯正面样本）</td></tr>
+    <tr><td>逆版本符号</td><td>G3「서폿 카밀」（辅助卡蜜尔）被嘲逆版本</td><td>观察</td></tr>
+    <tr><td>中路池浅</td><td>G3 中路 4-5 ban，HLE.C 中单英雄池见底（Rock 负锚根源）</td><td>方向应验</td></tr>
+  </table>
+  <details><summary>原文摘录</summary><p class="kr">「물몸로크 필패 ㅈㅈ」（11:24）·「로크 뽑은것부터 조합 개망」（11:43）·「2군 카밀;;」（11:20）</p></details>
+</div>
+
+<!-- 4 盘口 -->
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <table>
+    <tr><th>时刻</th><th>内容（意译）</th><th>说明</th></tr>
+    <tr><td>09:52 / 10:56</td><td>让分盘 7.5 提及</td><td>兑现方向无价格数据待回填</td></tr>
+    <tr><td>10:29–30</td><td>G2 押韩华胜 860 张</td><td>未兑现（HLE.C 输 G2）</td></tr>
+    <tr><td>11:36</td><td>「BFX.Y 3:0 赔率太高盘口不给」</td><td>印证 BFX.Y 大热、3:0 为高赔方向</td></tr>
+    <tr><td>G2 窗口</td><td>市场 62.5→57.5c 反向认可 HLE.C 阵容</td><td>短时反向后 BFX.Y 仍胜，待价格数据复核</td></tr>
+  </table>
+  <details><summary>原文摘录</summary><p class="kr">「한화승 500장 냠냠」（09:52）·「7.5마핸 슛」（10:56）·「2세트 한화승 860장」（10:30）·「폭스 3ㄷ0승은 너무고배당이라 안주네」（11:36）</p></details>
+</div>
+
+<!-- 5 方向板 -->
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板（锚点 × 共识 × 灰信号）</h2>
+  <table>
+    <tr><th>类型</th><th>对象</th><th>内容</th><th>验证</th></tr>
+    <tr><td>正锚</td><td>BFX.Y · 上中野代差</td><td>交手三连系列全胜（2:0/2:0/3:0）+ 市场已定价</td><td>应验（3:0）</td></tr>
+    <tr><td>负锚</td><td>HLE.C · Rock 选角</td><td>「肉装必败」+ 中路池浅</td><td>应验</td></tr>
+    <tr><td>共识</td><td>「3:0 横扫」</td><td>赛前多次「3:0 대떡」（大胜）预言</td><td>命中（高价值用户 콜라 兑现）</td></tr>
+    <tr><td>灰信号</td><td>HLE.C 侧（质疑）</td><td>2 簇约 16 条（打野/AD 操作）</td><td>输方操作质疑，无反转信号</td></tr>
+  </table>
+</div>
+
+<!-- 6 情报含义 -->
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点</h2>
+  <ul>
+    <li><b>LONG</b>：BFX.Y 对 HLE.C 三连系列全胜 → 再遇可维持强势预期；Grizzly/Kangin 画像入 players.json；</li>
+    <li><b>SHORT</b>：HLE.C「BP 纸面强、执行弱」（两场 BP 好评全输）；打野开团/中单熟练度是连续短板；</li>
+    <li><b>观察点</b>：① 官方回填比分/MVP/阵容；② Pyeonsik Ezreal 状态样本；③ Rock 是否新秀首发；④ Bluffing「1 军预约」传闻；⑤ C2 灰信号在 HLE.C 后续比赛是否再现（→ gray_entities 升级）。</li>
+  </ul>
+</div>
+
+<!-- 7 逐局复盘 -->
+<div class="card">
+  <h2><span class="no">7</span>逐局复盘（证据层）</h2>
+  <table>
+    <tr><th>局</th><th>结果</th><th>阵容（弹幕口径）</th><th>要点 / 时间线锚点</th></tr>
+    <tr><td>G1</td><td>BFX.Y 胜（10:25）</td><td>BFX.Y：Aatrox(Kangin)/Lee Sin(Grizzly)/Ryze(MG)/Sivir/Alistar ｜ HLE.C：Pantheon/Olaf/Taliyah/Ezreal(Pyeonsik)/Rakan(Bluffing)</td><td>后期价值 vs 冲阵；观众 BP 好评 HLE.C；10:01-02 全天密度峰值 206（大团战）；转折点=BFX.Y 后期价值成型后冲阵失效；Pyeonsik Ezreal 命中率群嘲（灰 C1）</td></tr>
+    <tr><td>G2</td><td>BFX.Y 胜（~11:05）</td><td>BFX.Y：K'Sante(Kangin)/Qiyana(Grizzly)/Annie(MG)/Jhin/Nautilus ｜ HLE.C：Rumble/Jarvan(Jackal)/Galio/Caitlyn/Bard(Bluffing)</td><td>HLE.C BP 再获好评（「밴픽 압승」）仍输；Jarvan 龙坑开团失败（灰 C2）；市场 62.5→57.5c 短时反向仍胜；「2:0」预言兑现</td></tr>
+    <tr><td>G3</td><td>BFX.Y 胜（11:55）</td><td>中路 4-5 ban；Rock 中单选角失败（负锚）</td><td>「3:0 확정」11:23 提前定性；11:55-56 gg 簇 + 「3:0 스코어 맞췄네」</td></tr>
+  </table>
+  <p class="meta"><b>BP 后战绩情报（必抓项）：</b>本场无「选手×英雄 X胜Y负」类新战绩提及；仅 Olaf 负锚跨场延续（「올라프 동네북」系此前 BRO 奥拉夫负锚共识的延续，非本场新情报）——已按规范记录。</p>
+</div>
+
+<!-- 8 画像 -->
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（证据层 · 折叠）</h2>
+  <details><summary>BFX.Y 画像：上中野代差 + 补位 AD 高光（展开）</summary>
+    <p>Kangin（上）三局三解法（Aatrox/K'Sante/Varus）；Grizzly（野）李青全票 MVP 呼声；MG（中）后期兜底；Vincenzo（补位 AD）G1 高光「1 局之喜」。交手三连全胜。</p>
+  </details>
+  <details><summary>HLE.C 画像：纸面强执行弱（展开）</summary>
+    <p>Bluffing（辅）三局高光孤木难支；Pyeonsik（AD）状态被集中批评（Ezreal 命中率群嘲）；Jackal（野）龙坑开团被疑；Rock（中）英雄池浅负锚。两场 BP 好评全输。盘面倾向：弱侧（一周前两度 0:2 负 BFX.Y）。信任等级：低（本场）。</p>
+  </details>
+  <h2 style="margin-top:14px">人员画像（带提及量 · 弹幕口径）</h2>
+  <table>
+    <tr><th>选手（队）</th><th>提及量</th><th>评价方向</th><th>代表信号（意译）</th></tr>
+    <tr><td>Grizzly（BFX.Y 野）</td><td>200</td><td>正为主</td><td>「Grizzly 李青」「二队门神」；赛后 MVP 讨论；负样本「拿头不值」</td></tr>
+    <tr><td>Rock（HLE.C 中）</td><td>119</td><td>负为主</td><td>「选 Rock 必败」「打得太烂」「首秀?」；少量正「Rock 4 杀」</td></tr>
+    <tr><td>Pyeonsik（HLE.C AD）</td><td>60</td><td>负为主</td><td>「Ez 故意不命中」「状态怎么这么差」；正锚「卢锡安 1 军级」</td></tr>
+    <tr><td>Kangin（BFX.Y 上）</td><td>58</td><td>正为主</td><td>「K'Sante 是神」「1 军会被要很多次」；负样本零星</td></tr>
+    <tr><td>Bluffing（HLE.C 辅）</td><td>56</td><td>全正</td><td>「Rakan 一军级」「下赛季 1 军预约」「Bard 超级救」</td></tr>
+    <tr><td>Jackal（HLE.C 野）</td><td>46</td><td>负为主</td><td>「Jarvan 开送」「像故意送」（灰 C2 指向）</td></tr>
+    <tr><td>MG（BFX.Y 中）</td><td>16</td><td>混合</td><td>「自由发育中」；灰玩梗 1 条（非质疑本队）</td></tr>
+    <tr><td>Diable（BFX.Y AD）</td><td>0</td><td>样本不足</td><td>未直接点名（以英雄指代：G2 烬/G3 直伤）——不硬造</td></tr>
+  </table>
+</div>
+
+<!-- 9 规律 -->
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本（沉淀层）</h2>
+  <ul>
+    <li>「CL 少 2:0/多打满」规律受挑战：本场 3:0 横扫（或仅适用碾压级对局），样本更新；</li>
+    <li>「로크=필패」新增负锚符号（待统计验证）；「CL 杰斯必败」延续；</li>
+    <li>CL 高击杀混战特征：G1 弹幕预测「至少 50 杀」，实际待官方回填。</li>
+  </ul>
+</div>
+
+<!-- 10 预测验证 -->
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填明细（沉淀层）</h2>
+  <table>
+    <tr><th>时刻</th><th>预测</th><th>结果</th></tr>
+    <tr><td>09:47</td><td>「BFX.Y 必赢」</td><td>命中</td></tr>
+    <tr><td>09:46</td><td>「G1 韩华 BP 赢必胜」</td><td>未命中</td></tr>
+    <tr><td>10:26</td><td>「2:0」</td><td>命中</td></tr>
+    <tr><td>10:26–29</td><td>「韩华 BP 碾压」「25 分钟韩华不可输」</td><td>BP 好评未兑现</td></tr>
+    <tr><td>10:57 / 11:23</td><td>「3:0 横扫」</td><td>命中（多源）</td></tr>
+    <tr><td>11:22</td><td>「韩华不选 Rock 就赢」（反讽）</td><td>兑现（选了且输）</td></tr>
+    <tr><td>11:25</td><td>「3:1」</td><td>未命中</td></tr>
+    <tr><td>11:33</td><td>「后期米利欧必赢韩华」</td><td>未命中</td></tr>
+  </table>
+  <p class="meta">高价值用户：콜라（339 条）赛前预言 3:0 并自述命中 → 长期观察样本。</p>
+</div>
+
+<!-- 11 溯源 -->
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <p class="meta">弹幕切片 data/intel_slices/lol-foxy-hle-2026-08-24.jsonl（6,833 条）· 全量 docs/data/danmu/soop/2026-08-24_soop_lck_cl.jsonl（6,853 条）· Polymarket slug lol-foxy-hle-2026-08-24 · 灰信号/锚点/盘口均已入库（gray_signals / bp_signals / matches）· 待官方回填：比分/MVP/阵容/击杀数。</p>
+</div>
+
+<div class="footer">BFX.Y vs HLE.C · v2 决策导向版 · 弹幕口径 + Polymarket 交叉 · 灰信号仅为观众质疑非结论 · 2026-08-26</div>
+</div>
+</body>
+</html>

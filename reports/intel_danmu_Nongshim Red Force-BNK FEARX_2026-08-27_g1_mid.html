@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>弹幕情报局中页 · Nongshim Red Force vs BNK FEARX · 2026-08-27（G1｜局中 MID-GAME）</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 22px; height:22px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  h3 { font-size:14px; font-weight:650; margin:12px 0 6px; color:var(--ink); }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-live { background:#e8f6ec; color:var(--good); }
+  .b-nonfinal { background:#fdeaea; color:var(--bad); font-weight:650; }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 52px; font-size:11px; font-weight:650; padding-top:2px; text-align:center; border-radius:8px; height:22px; line-height:22px; }
+  .sig .body { flex:1; }
+  .sig .dec { color:var(--sub); font-size:12px; margin-top:2px; }
+  .t-risk { background:#fdeaea; color:var(--bad); }
+  .t-anchor { background:#eaf2fb; color:var(--accent); }
+  .t-odds { background:#e8f6ec; color:var(--good); }
+  .t-con { background:#f3f0fa; color:var(--purple); }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .graybox { background:#fdeaea; border-left:3px solid var(--bad); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .src { display:inline-block; font-size:11px; color:var(--sub); background:#f0f0f2; border-radius:6px; padding:1px 7px; margin:1px 3px 1px 0; }
+  .peak { display:inline-block; background:#eaf2fb; color:var(--accent); border-radius:10px; padding:4px 10px; font-size:12px; font-weight:600; margin:3px 5px 3px 0; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+  .long { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  .long .t { color:var(--good); font-weight:700; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+<div style="margin-top:8px"><ul style="padding-left:18px;margin:6px 0;font-size:13px;line-height:1.75"><li>时间 内容（意译） 解读 来源 16:17:19 『king嗨吃人头吃爽了』（Remember） Kingen 人头表现，人头盘观察 本场弹…</li><li>方向判断（条件式，推测·待验证）： 若兑现 → 指向 BFX 赢/翻盘 （被质疑方先演后赢，做局叙事）；若为观众玩梗/情绪 → 翻盘属正常比…</li><li>』（硕硕，紧随 BFX 翻盘团） BFX 翻盘方 本场弹幕 16:20:50 『接到指令</li><li>条件式（推测·待验证）：若 BFX『先演后赢/收钱』质疑兑现 → 指向 BFX 赢下 G1 ；若为玩梗/情绪 → 翻盘属正常波动，NS 阵容…</li><li>『发条皇子组合技太权威』（16:19:36）；『左边死刑了』；957『结束啦』（16:19:04）；『3 线劣势』（16:19:54）→ N…</li></ul></div>
+</div><div class="act"><b>决策落点：</b>G1 窗口边际信息 = BFX 尾段翻盘团 + 灰信号集中（4 条全指向 BFX，观众质疑非结论）；正锚 Kingen 青钢影 + 负锚 VicLa 加里奥 26% 胜率构成本局方向骨架。进度与结果以官方回填为准，本页为局中快照、非终局。</div>
+</div>
+
+<div class="card">
+  <h2><span class="no">1</span>比赛信息与结果总览 / 状态核验</h2>
+  <table>
+    <tr><td>对阵</td><td><b>Nongshim Red Force（NS / 농심）</b> vs <b>BNK FEARX（BFX / FOX / 피어엑스）</b> · LCK（一级）· 骑士之路（Play-In）第一轮 · BO5 生死战 <span class="src">比赛元数据</span><span class="src">推测·待验证：轮次/赛制细节以官方赛程为准</span></td></tr>
+    <tr><td>事件 slug</td><td>lol-ns-fox1-2026-08-27 · <a href="https://polymarket.com/event/lol-ns-fox1-2026-08-27">Polymarket 事件链接</a>（局中页不引盘口数字，兑现赛后回填）</td></tr>
+    <tr><td>节点 / 进度</td><td><b>G1｜局中（MID-GAME，约游戏 15 分钟）</b> · 系列比分 <b>0:0（弹幕口径 · 官方待回填）</b> · <span class="badge b-nonfinal">局中 · 非终局，结果待定</span></td></tr>
+    <tr><td>弹幕口径进度</td><td>NS（右侧）前期起 08:16 团战连续获胜、青钢影 12 分钟三相、多路喊『一波/下一把』；<b>窗口尾 08:24 BFX 翻盘团</b>（多路『翻了』、『左边拿下了呀』）→ G1 胜负重新开放，待官方回填 <span class="src">本场弹幕（5 路，08:16-08:24）</span></td></tr>
+    <tr><td>数据窗口</td><td>规则层 2026-08-27 08:08–08:24 UTC（921 条 · 活跃 456 · 密度 56.3 条/分）；有效本场窗口 <b>16:16:36–16:24:22</b>（4 路解说房 16:16:32 起接入，08:08–08:16 仅官方房噪声、非本场源）</td></tr>
+    <tr><td>数据源 / 条数</td><td>虎牙 5 路 = 官方(660000)/957(890001)/米勒(149361)/Remember(528222)/硕硕(323444) · 共 921 条；本场关联弹幕集中于 08:16–08:24（约 600+ 条，官方房 27 条为 LPL 预告噪声/广告）</td></tr>
+    <tr><td>状态核验</td><td><b>局中 · 非终局，结果待定。</b>比分/胜负均无官方确认；一血/先锋/龙数等细节弹幕未给全（一血无弹幕提及）→ 一律标「弹幕口径 · 官方待回填」 <span class="src">本场弹幕</span></td></tr>
+  </table>
+  <div class="warnbox"><b>跨源一致性提示：</b>虎牙 4 路解说房（957/米勒/Remember/硕硕）对本局主线描述一致（NS 碾压 → 尾段 BFX 翻盘团）；会话级另有 Twitch LCK 官方 / Caedrel / OTPLoL 于 08:25 前后同步在播本场（『this galio i cant』『Vicla should be permabanned』『NS WILL THROW』），与本页结论方向一致，但未纳入本切片统计（见 §11）。</div>
+</div>
+
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（风险 · 观众质疑非结论）</h2>
+  <div class="graybox">
+    <b>本窗口灰信号 4 条（规则层 count=4），全部指向 BFX（左侧）</b>：『选出来就是送分局』→『各种故意送』→『送分的、季后赛不想打』→ 尾段翻盘后『bfx收钱了？』。另有 1 条疑似（『接到指令？』，语境不充分，低预警）。
+    <br><b>方向判断（条件式，推测·待验证）：</b>若兑现 → 指向 <b>BFX 赢/翻盘</b>（被质疑方先演后赢，做局叙事）；若为观众玩梗/情绪 → 翻盘属正常比赛波动。仅作风险标注与兑现统计，<b>观众质疑，非结论</b>。
+    <br><b>预警等级：中</b>（集中指向单一方向 + 时间集中，但样本 4-5 条偏少、无盘口/价格重合佐证，未达『高』）。
+  </div>
+  <table>
+    <tr><th>时间（UTC）</th><th>弹幕（意译）</th><th>指向</th><th>来源</th></tr>
+    <tr><td>16:21:47</td><td>『左边这个阵容选出来就是送分局』（硕硕）</td><td>BFX 阵容/BP</td><td><span class="src">本场弹幕</span></td></tr>
+    <tr><td>16:22:47</td><td>『这不是各种故意送嘛』（米勒，紧跟盲僧/加里奥连续失误弹幕）</td><td>BFX 盲僧/加里奥</td><td><span class="src">本场弹幕</span></td></tr>
+    <tr><td>16:22:54</td><td>『这个阵容选出来就是送分的，季后赛对它们来说不想打一样』（硕硕）</td><td>BFX 阵容/态度</td><td><span class="src">本场弹幕</span></td></tr>
+    <tr><td>16:24:20</td><td>『bfx收钱了？』（硕硕，紧随 BFX 翻盘团）</td><td>BFX 翻盘方</td><td><span class="src">本场弹幕</span></td></tr>
+    <tr><td>16:20:50</td><td>『接到指令？』（硕硕，疑似，语境不充分）</td><td>方向不明</td><td><span class="src">本场弹幕（疑似·待验证）</span></td></tr>
+  </table>
+  <p class="meta">窗口外补充（会话级 08:25，未计入上表）：957『加里奥演员』、Remember『这加里奥肯定买了 / 加里奥故意的 / 全lck异味最大的加里奥就是vicla』→ 灰信号在窗口后继续指向 VicLa 加里奥，已记录待整场复盘归总。</p>
+  <div class="warnbox"><b>历史画像对照：</b>NS 为 gray_entities「重点标记」实体（08-18 K 杯 G1/G2 累计 48 条灰信号，最高预警高，指向 NS 打野/AD；结果 NS 0:3 DNS）；BFX 08-21 vs BRO G1 曾现奥拉夫灰信号 47 条/41% 指向 BRO 侧且质疑方向兑现（BRO 输 G1）。<b>本窗口质疑对象是 BFX（非 NS）</b>，与两队历史留痕方向相反，属新样本。<span class="src">历史画像（2026-08-18 / 2026-08-21）</span></div>
+</div>
+
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  <h3>双方阵容（弹幕口径，英雄+选手，待官方回填）</h3>
+  <table>
+    <tr><th>位置</th><th>NS（右侧）</th><th>BFX（左侧）</th></tr>
+    <tr><td>上单</td><td>Kingen · 青钢影（Camille）</td><td>Clear · 杰斯（Jayce）</td></tr>
+    <tr><td>打野</td><td>Longxin（待核）· 皇子（Jarvan IV）</td><td>待确认（弹幕昵称『勇哥/太勇』？）· 盲僧（Lee Sin）</td></tr>
+    <tr><td>中单</td><td>Scout · 发条（Orianna）</td><td>VicLa（大光）· 加里奥（Galio）</td></tr>
+    <tr><td>ADC</td><td>Diable（大菠萝）· 烬（Jhin）</td><td>Taeyoon（泰永/泰云）· 女警（Caitlyn）</td></tr>
+    <tr><td>辅助</td><td>Lehends（莲子）· 慎（Shen）</td><td>shenE（待确认）· 巴德（Bard）</td></tr>
+  </table>
+  <p class="meta">来源：本场弹幕英雄/选手提及交叉；NS 侧五人首发与 players.json 名册一致；BFX 打野/辅助 ID 弹幕未给全名 → 标注待确认，禁止硬猜。</p>
+  <h3>阵容评价（观众共识）</h3>
+  <ul>
+    <li><b>NS 强开体系被认可</b>：『发条皇子组合技太权威』（16:19:36）『皇子带球eq + 青钢影 + 慎 女警玩毛』（16:22:17）『右边就是强开』（16:19:46）——青钢影/慎/皇子三重进场，女警无生存空间；<span class="src">本场弹幕（多路）</span></li>
+    <li><b>BFX 阵容被批</b>：『左边阵容只能各打各的，后期鸟兽散』『左边没输出』『没有女警左边不好打』（16:17:07-16:17:51）——杰斯+加里奥+盲僧输出结构脆弱，依赖女警后期；<span class="src">本场弹幕（多路）</span></li>
+    <li><b>版本符号</b>：『杰斯是这版本最垃圾的上路』（16:20:46）『加里奥和杰斯这版本胜率可怜』（16:23:22）——两个负符号叠加在 BFX 一侧；<span class="src">本场弹幕</span></li>
+  </ul>
+  <h3>BP 后战绩情报（必抓项 · 2026-08-21 固化）</h3>
+  <p><b>无「选手×英雄 X胜Y负」硬格式战绩弹幕</b>；存在胜率类弱提及 7 条（记录如下，禁止省略）：</p>
+  <table>
+    <tr><th>时间</th><th>内容（意译）</th><th>类型</th></tr>
+    <tr><td>16:17:29</td><td>『大光（VicLa）加里奥赢过吗就选』（957）</td><td>负锚·胜率质疑</td></tr>
+    <tr><td>16:18:04</td><td>『杰斯胜率真的低，还死玩』（硕硕）</td><td>负锚·英雄胜率</td></tr>
+    <tr><td>16:18:40</td><td>『杰斯胜率最近还好吧，没原来低了』（硕硕）</td><td>反驳（少数派）</td></tr>
+    <tr><td>16:20:06</td><td>『大光加里奥胜率特别低，没想到第一局就用』（硕硕）</td><td>负锚·胜率质疑</td></tr>
+    <tr><td>16:20:58</td><td>『冷知识大光加里奥 26 胜率，把把坑』（Remember）</td><td><b>负锚·带数字（26%）</b></td></tr>
+    <tr><td>16:23:22</td><td>『加里奥和杰斯这版本胜率可怜』（硕硕）</td><td>版本负锚</td></tr>
+    <tr><td>16:23:35</td><td>『大光的加里奥拿出来，对面就是一分』（硕硕）</td><td>负锚·结果预判</td></tr>
+  </table>
+  <p class="meta">共振情况：加里奥负锚 3 路提及（硕硕/Remember/957）+ 窗口外 Twitch『0-4 on galio』『Vicla should be permabanned』（08:25 会话级）→ 多源一致负锚，待终局回填验证。</p>
+</div>
+
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <p><b>无明确报价</b>：规则层 odds_discussion.count=3，均为弹幕口径、无独赢/让分/时长的确定数字盘。<b>样本不足，不引价格。</b></p>
+  <table>
+    <tr><th>时间</th><th>内容（意译）</th><th>解读</th><th>来源</th></tr>
+    <tr><td>16:17:19</td><td>『king嗨吃人头吃爽了』（Remember）</td><td>Kingen 人头表现，人头盘观察</td><td><span class="src">本场弹幕</span></td></tr>
+    <tr><td>16:18:41</td><td>『才 6.5 要翻』（硕硕）</td><td>推测为总人头/击杀数字盘（6.5），仅一句、无方向上下文</td><td><span class="src">本场弹幕</span><span class="src">推测·待验证</span></td></tr>
+    <tr><td>16:20:56</td><td>『突然大起来了，人头』（硕硕）</td><td>人头数暴增，大乱斗节奏对总人头盘含义</td><td><span class="src">本场弹幕</span></td></tr>
+    <tr><td>16:23:15</td><td>『大头提前收米』（硕硕）</td><td>博彩收米语境，对象不明，疑似金主/观众玩梗</td><td><span class="src">本场弹幕</span><span class="src">推测·待验证</span></td></tr>
+  </table>
+  <div class="warnbox"><b>历史盘口背景（非本场，仅预期）：</b>LCK『反转可靠/让一追二』样本（DK-KT 08-09 整场 23.5c→98.5c；T1 2:1 KT 08-21；BFX 2:1 BRO 08-21 独赢 1.7 兑现）；NS 2:1 BFX（08-23）官方确认。本场不据此下结论。<span class="src">历史画像（2026-08-09 / 08-21 / 08-23）</span></div>
+</div>
+
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板（正锚 × 负锚 × 共识 × 灰信号条件预测）</h2>
+  <h3>正锚点（看好 → 谁赢）</h3>
+  <table>
+    <tr><th>对象</th><th>锚点内容</th><th>依据</th><th>时间</th><th>共振</th><th>验证</th></tr>
+    <tr><td>Kingen · 青钢影（NS）</td><td>『冠军青钢影』『请神 S12 决赛』『12 分钟三相』『一次死不了/游龙』</td><td>S12 决赛青钢影历史 + 本局 12 分钟三相之力、团战多杀</td><td>08:16–08:23（密集）</td><td>4 路共振（957/米勒/Remember/硕硕）</td><td>部分应验（NS 中期碾压；窗口尾 BFX 翻盘团，终局待定）</td></tr>
+  </table>
+  <p class="meta">历史对照：Kingen 剑魔正锚（08-20 2:0 KRX G1『22 年剑魔本体』）、『时一上/限时上单』叙事；本局青钢影为同一记忆的触发点。<span class="src">历史画像（2026-08-20）</span></p>
+  <h3>负锚点（看衰 → 谁输）</h3>
+  <table>
+    <tr><th>对象</th><th>锚点内容</th><th>依据</th><th>时间</th><th>共振</th><th>验证</th></tr>
+    <tr><td>VicLa · 加里奥（BFX）</td><td>『26 胜率把把坑』『异味最大的加里奥』『拿出来对面就是一分』</td><td>胜率 26% + 本局死亡闪/0-4（Twitch 口径）</td><td>16:17:29–16:23:35</td><td>3 路（硕硕/Remember/957）+ Twitch 窗口外</td><td>待定（终局回填）</td></tr>
+    <tr><td>Clear · 杰斯（BFX）</td><td>『杰斯废了/没伤害/胜率真的低』『玩个杰斯必输』</td><td>『杰斯判负』跨场规律（08-18 Kingen / 08-24 KRX.C Frog 均应验）</td><td>08:17–08:23（69 条提及）</td><td>4 路一致负向</td><td>激活待回填</td></tr>
+    <tr><td>BFX 打野 · 盲僧</td><td>『全程 OB/带崩三路/不是人/太菜』</td><td>本局操作集火（66 条提及）</td><td>08:16–08:24</td><td>4 路一致负向</td><td>待定</td></tr>
+  </table>
+  <h3>群体共识（弹幕情绪 · 带样本量）</h3>
+  <table>
+    <tr><th>方向</th><th>内容</th><th>样本（08:16-08:24，本场关联弹幕）</th></tr>
+    <tr><td>看好 NS（碾压/一波）</td><td>『一波一波』×20、『下一把/结束啦/点了/GG』×16</td><td>≈36 条（4 路）</td></tr>
+    <tr><td>分歧（NS 会送/翻盘）</td><td>『农心会送』×3 + 『翻了/会送』类 17 条 + 『记住25分钟准时翻』玩梗</td><td>17 条</td></tr>
+    <tr><td>系列比分预测</td><td>『感觉3:0』（硕硕 16:20:01）</td><td>1 条</td></tr>
+  </table>
+  <p><b>结论：NS 一侧共识强（≈36 条）但有翻盘分歧（17 条）</b>；样本量以 4 路解说房 921 条窗口计，方向可量化但不构成终局结论。</p>
+  <h3>灰信号条件预测</h3>
+  <div class="graybox">
+    <b>今日有灰信号（4 条，全指向 BFX）。</b>条件式（推测·待验证）：若 BFX『先演后赢/收钱』质疑兑现 → 指向 <b>BFX 赢下 G1</b>；若为玩梗/情绪 → 翻盘属正常波动，NS 阵容优势仍是系列主线。赛后按兑现率回填 gray-tracking。
+    <br><b>关系判断：</b>正锚（NS 青钢影）+ 负锚（BFX 杰斯/加里奥）+ 共识（NS）同向 = 强信号；<b>窗口尾灰信号方向与共识背离</b>（质疑 BFX 赢）＝分歧信号，本场最大边际信息。
+  </div>
+</div>
+
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点（LONG / SHORT）</h2>
+  <ul>
+    <li><b>LONG（NS 侧）</b>：Kingen 青钢影正锚（S12 记忆 + 12 分钟三相）+ 发条/皇子/慎强开体系中期碾压，多路共识同向；历史 NS 2:1 BFX（08-23）与『三 FMVP』阵容支撑系列强度；</li>
+    <li><b>SHORT（看衰/风险）</b>：BFX 三负锚集齐（杰斯/加里奥 26%/盲僧）→ 本局体系难赢；但 BFX 有『后手翻盘』画像（08-21 2:1 BRO 让一追二、08-23 1:2 NS 领先后被翻），NS『农心会送』画像再样本（窗口尾翻盘团）→ NS 优势期兑现风险；</li>
+    <li><b>边际信息</b>：窗口尾 BFX 翻盘团 + 『收钱』灰信号 = 本窗口最重要边际信息；若 G1 终局 BFX 赢，灰信号方向（被质疑方赢）兑现，需与盘口背离度交叉核验；</li>
+    <li><b>观察点</b>：G1 终局（官方回填）、G2 BP（无畏征召 BO5 英雄池压力）、VicLa 加里奥后续 pick 与否、NS 优势期送头频率。</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2><span class="no">7</span>逐局复盘（G1 已发生片段 + 时间线 · 证据层）</h2>
+  <h3>G1 时间线（UTC · 游戏时间 ≈ UTC-08:09，弹幕口径）</h3>
+  <ul>
+    <li><b>08:08–08:16</b>：无本场弹幕（4 路解说房未接入，仅官方房 LPL 预告噪声）；BP 细节窗口内未覆盖 → 阵容见 §3，待官方回填。</li>
+    <li><b>16:16:36–43</b>：shenE（巴德）闪失误；皇子『不 EQ』被批；先锋归属争议 → 对线期尾/资源期初，BFX 辅野已现失误。<span class="src">本场弹幕</span></li>
+    <li><b>16:16:44–16:17:15 · 密度 08:17=110</b>：第一波大团，NS 主动开团打赢：『一波一波』（全窗口 20 条、此段首现）『kingen 第一波开的好』『哎哟，NS 打赢了』『g了啊bfx』；BFX 盲僧『全程 OB/真蠢』、杰斯『没伤害』。<span class="src">本场弹幕（多路）</span></li>
+    <li><b>16:17:15–16:18:30</b>：雪球期。青钢影 2 头（16:18:20）；BFX 阵容被批『各打各的/没输出』；杰斯负锚密集（69 条提及峰值段）；加里奥负锚起点（『赢过吗就选』16:17:29）。</li>
+    <li><b>16:18:30–16:19:40 · 密度 08:19=110</b>：团战连发。『发条皇子组合技太权威』（16:19:36）；『左边死刑了』；957『结束啦』（16:19:04）；『3 线劣势』（16:19:54）→ NS 全面领先。<span class="src">本场弹幕</span></li>
+    <li><b>16:19:40–16:21:30 · 密度 08:20=105 / 08:21=115</b>：NS 压制维持但 BFX 稳住：『感觉3:0』（16:20:01）；『左边烂了』（16:20:15）；人头数暴增（16:20:56）；青钢影『12 分钟三项』（16:21:20/33）；『皇子这把 mvp』（16:21:18）。</li>
+    <li><b>16:21:30–16:23:30 · 密度 08:22=164（窗口峰值）</b>：大乱斗期（『战斗爽/打架局/有点像排位』）；灰信号集中（送分局 16:21:47 / 故意送 16:22:47 / 送分不想打 16:22:54）；盲僧被反复集火（『带崩三路』）；『刚好15分钟，点了』（16:22:59、16:23:11）→ 观众已判 NS 胜势。<span class="src">本场弹幕</span></li>
+    <li><b>16:23:30–16:24:22（窗口截断）</b>：<b>BFX 翻盘团</b>：多路『翻了翻了』（米勒/957/硕硕）；『左边拿下了呀』（957 16:24:21）；『亏麻了农心』（米勒 16:24:22）；VicLa 死亡闪（『闪现不交/只交死亡闪』）；『bfx收钱了？』（硕硕 16:24:20）→ G1 胜负重新开放。<span class="src">本场弹幕（多路一致）</span></li>
+    <li><b>窗口外（08:25，会话级）</b>：灰信号续集『加里奥演员/肯定买了/故意的』（957/Remember）；Twitch『0-4 on galio』『NS WILL THROW』（Caedrel）→ 与窗口尾翻盘团同向。<span class="src">会话级补充（未计入 921 条）</span></li>
+  </ul>
+  <h3>密度时间线（每分钟条数，切片 921 条）</h3>
+  <p>
+    <span class="peak">08:08-08:14 · 合计 13 条（仅官方房）</span>
+    <span class="peak">08:16 · 40</span>
+    <span class="peak">08:17 · 110</span>
+    <span class="peak">08:18 · 92</span>
+    <span class="peak">08:19 · 110</span>
+    <span class="peak">08:20 · 105</span>
+    <span class="peak">08:21 · 115</span>
+    <span class="peak">08:22 · 164（峰）</span>
+    <span class="peak">08:23 · 130</span>
+    <span class="peak">08:24 · 42（截断）</span>
+  </p>
+  <p class="meta">峰值解读：08:22 峰值 = 大乱斗团战连发 + 灰信号集中；08:24 在窗口截断前仍达 42 条/分 = 翻盘团事件锚点；08:17/08:19/08:21 次峰 = 大团战/终结叙事。G2–G5 未发生 → <b>待观察</b>。</p>
+</div>
+
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（证据层 · 带提及量）</h2>
+  <h3>队伍画像（引用长期库）</h3>
+  <table>
+    <tr><th>队伍</th><th>提及量（本窗口）</th><th>长期画像</th><th>来源</th></tr>
+    <tr><td>NS（Nongshim）</td><td>22</td><td>『三 FMVP 阵容』（两个 S 赛冠军 + 一个 MSI 冠军）；打野/AD 稳定性差；先崩后翻韧性（08-23 2:1 BFX：G1 负后连扳两局）；灰实体重点标记（08-18 累计 48 条，最高预警高）；骑士之路生死战背景</td><td><span class="src">历史画像（teams.json 2026-08-23）</span></td></tr>
+    <tr><td>BFX（BNK FEARX）</td><td>13</td><td>领先守不住样本（08-23 1:2 NS：G1 泰永女警 10-0 后连丢两局）；让一追二韧性（08-21 2:1 BRO）；08-21 G1 奥拉夫灰信号 47 条质疑方向兑现（BRO 输 G1）</td><td><span class="src">历史画像（teams.json 2026-08-23）</span></td></tr>
+  </table>
+  <h3>人员画像（带提及量）</h3>
+  <table>
+    <tr><th>选手</th><th>提及量</th><th>本局（弹幕口径）</th><th>长期画像 / 备注</th></tr>
+    <tr><td>Kingen（NS 上单）</td><td>80（含 大根/时一上/限时/kin嗨/fmvp 等昵称）</td><td>青钢影 12 分钟三相、游龙、『一次死不了』——本局正锚核心</td><td>22 年剑魔/青钢影本体；08-18 一抢杰斯判负负锚；『时一上/限时上单』叙事（players.json）</td></tr>
+    <tr><td>Scout（NS 中单）</td><td>1（小学）</td><td>发条『组合技太权威』（16:19:36）</td><td>历史标签『发条没伤害』（08-18/20）；S 赛冠军身份（players.json）</td></tr>
+    <tr><td>Lehends（NS 辅助）</td><td>9（莲子/腰子/慎）</td><td>慎开团被认可（『青钢影加腰子进场太无敌』）</td><td>历史『神经刀/偷偷阵亡』（players.json）</td></tr>
+    <tr><td>Diable（NS ADC）</td><td>21（大菠萝/烬）</td><td>烬收割/送头争议并存（『大菠萝心里有火』『大菠萝真菜』）</td><td>08-23 G2 卢锡安 13 杀爆砍；08-20 卢锡安滑脸送；『最菜 ADC』历史标签</td></tr>
+    <tr><td>Longxin（NS 打野）</td><td>0（皇子 24 条）</td><td>皇子评价两极（『mvp』vs『垃圾』；硕硕辩护『不是一群弹幕在喷皇子蠢菜？』）</td><td>历史 0-5 被集火（players.json）</td></tr>
+    <tr><td>Clear（BFX 上单）</td><td>3（clear/幼年宙斯）</td><td>杰斯负锚核心（『废了/没伤害/胜率低』）</td><td>08-23 战报『Clear 鳄鱼 TP 绕后白给』；无独立 players.json 画像 → 本场为首个建档样本</td></tr>
+    <tr><td>VicLa（BFX 中单）</td><td>11（大光/v克拉）</td><td>加里奥 26% 胜率负锚 + 死亡闪；『全 LCK 异味最大的加里奥』（窗口外 08:25）</td><td>无独立 players.json 画像 → 本场为首个建档样本（bp_signals 候选）</td></tr>
+    <tr><td>Taeyoon（BFX ADC）</td><td>5（泰永/泰云）+ 女警 46 条</td><td>女警『啥都没干/玩个锤子/夹子一个没中』——本局输出真空</td><td>08-23 G1 女警 10-0 骑脸大菠萝（对位压制历史）；NS 旧将（957 弹幕口径『换掉泰永』）</td></tr>
+    <tr><td>BFX 打野（盲僧）</td><td>66（盲僧/瞎子/盲森）+ 勇哥/太勇 9 条</td><td>头号集火对象：『全程 OB/带崩三路/不是人』</td><td>ID 待确认（『勇哥/太勇』疑似昵称，待官方名册）；无画像 → 建档候选</td></tr>
+    <tr><td>shenE（BFX 辅助，待确认）</td><td>2 + 巴德 13 条</td><td>巴德『闪失误/一个q不中/人机』</td><td>ID 待确认；无画像 → 建档候选</td></tr>
+  </table>
+  <p class="meta">说明：BFX 五名首发在 players.json 无登记（仅队伍级画像）→ 本页为其首次弹幕建档；ID 以官方名册回填为准。</p>
+</div>
+
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本（沉淀层）</h2>
+  <ul>
+    <li><b>『杰斯判负』负锚跨级再样本</b>：08-18 K 杯（Kingen 一抢杰斯应验）→ 08-24 CL（KRX.C Frog 应验）→ 本场 LCK 一级（Clear 杰斯被批）——规律从二线扩展至一级样本，持续累计；<span class="src">历史画像 + 本场弹幕</span></li>
+    <li><b>VicLa 加里奥负锚（新）</b>：26% 胜率 + 多路『异味最大/自动降智』 + 窗口外 Twitch 共振——入 bp_signals 候选，赛后回填应验性；<span class="src">本场弹幕（多路）</span></li>
+    <li><b>『农心会送』NS 画像再样本</b>：08-20 玩梗刷屏 → 本场窗口尾优势期被翻团（『NS WILL THROW』Twitch 同向）——NS 领先兑现风险为系列关键变量；<span class="src">历史画像（2026-08-20）+ 本场弹幕</span></li>
+    <li><b>骑士之路生死战节奏</b>：高击杀大乱斗（『比昨天那两只乌龟好看』对照 KT-BRO 慢节奏）；LCK 灰风险低-中，反转可靠——灰信号兑现统计继续累计；<span class="src">本场弹幕 + leagues.json</span></li>
+    <li><b>无畏征召（Fearless）BO5</b>：深局 BP 英雄池压力待 G2-G5 观察（本局青钢影/杰斯/加里奥均为强符号选择）。<span class="src">推测·待验证</span></li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填（沉淀层）</h2>
+  <table>
+    <tr><th>预测 / 可验证项</th><th>状态</th></tr>
+    <tr><td>赛前窗口预测：无（24 条 0 条本场关联）→ <b>样本不足</b>，无赛前共识可回填</td><td>—</td></tr>
+    <tr><td>正锚：Kingen 青钢影（12 分钟三相/游龙）</td><td>部分应验（NS 中期碾压；G1 终局待定）</td></tr>
+    <tr><td>负锚：VicLa 加里奥 26% 胜率</td><td>激活，待 G1 终局回填</td></tr>
+    <tr><td>负锚：Clear 杰斯『判负』规律</td><td>激活（弹幕已判死刑），待终局回填</td></tr>
+    <tr><td>『农心会送』玩梗</td><td>部分应验（窗口尾 BFX 翻盘团），终局待定</td></tr>
+    <tr><td>灰信号（BFX 收钱/做局，4 条）</td><td>若 BFX 赢 G1 → 兑现（方向=被质疑方赢）；待官方回填</td></tr>
+    <tr><td>人头盘 6.5 / 人头暴增</td><td>待官方人头数回填</td></tr>
+    <tr><td>历史对照：NS 2:1 BFX（08-23，官方确认）</td><td>已回填（AD 互换恩怨主线：G1 泰永 10-0 → G2 大菠萝 13 杀）</td></tr>
+  </table>
+  <p class="meta">回填纪律：以上全部为「弹幕口径 · 官方待回填」；G1 终局后按官方战报 + VOD 回填至整场复盘页。</p>
+</div>
+
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <h3>数据完整性三栏</h3>
+  <table>
+    <tr><th>实际数据源</th><th>预期数据源（LCK 默认采集集 · CAPTURE_RULES §17）</th><th>缺口</th></tr>
+    <tr>
+      <td>虎牙 5 路：957(890001) / 米勒(149361) / Remember(528222) / 硕硕(323444) / 官方房(660000，非本场源，27 条噪声)<br>切片 921 条 · 活跃 456 · 密度 56.3 条/分</td>
+      <td>虎牙：957 / 毛毛(149346) / 米勒(149361) / Remember(528222) / 硕硕(323444)；Twitch：LCK 官方 / Caedrel（会话级已在采）；SOOP：韩文官方流（LCK 默认补充源）</td>
+      <td>毛毛(149346) 离线未采；SOOP 未接入本场；官方房非本场源；08:08–08:16 无本场弹幕（4 解说房 16:16:32 才接入）→ 对线期（S1）弹幕证据缺失，标「数据缺口」；Twitch 数据在会话级可用但未并入本切片统计</td>
+    </tr>
+  </table>
+  <h3>情报来源分层（每条结论对应）</h3>
+  <ul>
+    <li><b>本场弹幕</b>：灰信号 4+1 条、阵容/BP 讨论、锚点/共识、密度峰值、翻盘团时间线——全部来自 data/intel_slices/lol-ns-fox1-2026-08-27_g1_mid.jsonl（921 条）；</li>
+    <li><b>前局弹幕</b>：G1 BP 后窗口（runtime/vps_intel/lol-ns-fox1-2026-08-27_g1_bp_intel.json，20 条 0 关联）；赛前窗口（pre_intel.json，24 条 0 关联）——两窗口均无本场内容，故速览卡不含其数据；</li>
+    <li><b>历史画像</b>：teams.json / players.json / matches.json（NS 08-18/08-20/08-23、BFX 08-21/08-23、杰斯判负 08-18/08-24），引用均带日期；</li>
+    <li><b>盘口</b>：仅弹幕报价提及（6.5 人头盘，推测），无外部行情抓取；</li>
+    <li><b>推测·待验证</b>：轮次/赛制细节、BFX 打野/辅助 ID、『6.5』含义、灰信号方向——均显式标注。</li>
+  </ul>
+  <h3>词表缺漏说明（防错）</h3>
+  <div class="warnbox">规则层 intel JSON（g1_mid_intel.json）队伍/选手字段未覆盖 NS/BFX 及本场选手昵称：其 teams 命中（IG/T1/KT/WE/BLG）全部为官方房广告或历史讨论噪声，players 仅命中 Faker(1)/Zeus(14)（来自皮肤与 S12 历史对比）。<b>本页内容以原始切片逐条复核为准</b>；词表缺漏已记录，待补 NS/BFX/大光/大根/泰永/勇哥 等词条并回归（防静默漏抓，规则 7）。</div>
+  <h3>溯源文件</h3>
+  <p class="meta">data/intel_slices/lol-ns-fox1-2026-08-27_g1_mid.jsonl（921 条，08:08–08:24 UTC）· runtime/vps_intel/lol-ns-fox1-2026-08-27_g1_mid_intel.json（规则层）· runtime/danmu_sessions/vps_2026-08-27/（会话级健康状态，含 Twitch 共振样本）· docs/data/intel/teams.json / players.json / matches.json（历史画像）· knowledge/DANMU_CAPTURE_RULES.md §17（预期采集集）</p>
+  <div class="long"><span class="t">本场长期沉淀点（≥1）：</span>
+    ① <b>VicLa 加里奥负锚</b>（26% 胜率，3 路共振 + Twitch『0-4/permabanned』）→ 入 bp_signals 候选（lck_playin_ns_bfx_g1_galio），后续 LCK/骑士之路遇 VicLa 加里奥即激活；
+    ② <b>『被质疑方翻盘/先演后赢』灰信号方向新样本</b>（BFX 尾段翻盘 + 『收钱』质疑）——与 08-21 BRO-BFX（质疑方向兑现=输家侧）形成方向对照，纳入 gray-tracking 兑现率统计；
+    ③ <b>『杰斯判负』规律延伸至 LCK 一级</b>（08-18 K 杯 → 08-24 CL → 本场 Play-In，三连样本）。
+  </div>
+</div>
+
+<div class="footer">弹幕情报库 · Nongshim Red Force vs BNK FEARX · G1 局中快照（MID-GAME）· 弹幕口径 · 未经官方确认 · 局中·非终局，结果待定 · 灰信号仅为观众质疑非结论 · 更新 2026-08-27 08:25 UTC</div>
+</div>
+</body>
+</html>

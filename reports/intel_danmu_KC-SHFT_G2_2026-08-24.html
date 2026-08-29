@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KC vs SHFT · G2 复盘（KC 扳平 1:1 · 决胜局前瞻）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+.block{margin-bottom:16px}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>KC vs SHFT · G2 复盘</h1>
+<p class="sub">赛事：LEC 2026 Summer W5（KC vs SHFT，BO3）· 数据源：硕硕(323444) 单路 + Polymarket 官方结算 · 节点：G2-END（02:08 开局，约 02:57 结束，49 分钟马拉松）· <b>结果：G2 KC 胜（Polymarket game2 结算 99.95% KC + 弹幕"让一追二/赌G死一地"）· 系列：SHFT 1:1 KC · G3 决胜局待开</b></p>
+<div class="stats">
+<div class="stat"><div class="num">KC 1:1</div><div class="lbl">系列（G3 决胜局）</div></div>
+<div class="stat"><div class="num">~1,100 条</div><div class="lbl">G2 全窗弹幕（02:03-02:58）</div></div>
+<div class="stat"><div class="num">方向未兑现</div><div class="lbl">G2 灰信号（KC 赢）</div></div>
+<div class="stat"><div class="num">KC 82%</div><div class="lbl">系列盘（Polymarket）</div></div>
+</div>
+
+<div class="warn"><b>核心：KC 马拉松局扳回一城（系列 1:1）。</b>G2 打了约 49 分钟，SHFT 一度主导（观众喊"早说了2:0"），终局 KC 翻盘拿下（"让一追二"02:56:18、"这赢了赌G死一地"02:48:17、Polymarket game2 99.95% KC）。<b>灰信号方向未兑现：G2 仍高浓度定向 KC 中单（瑞兹"控盘假赛杀kc/中单不想赢"），但 KC 赢下该局</b>——G1 兑现（KC 输）+ G2 未兑现（KC 赢）＝混合样本，G3 是决定性验证窗口。</div>
+
+<div class="ok"><b>G2 BP 锚（快照）：</b>KC 换中单英雄但疑似同一人（"kc怎么换中单了吗"02:18:32）；瑞兹被批"补刀都不会"（02:23:55）；SHFT 卡牌上单压制 KC 纳尔（"卡牌怎么能压纳尔这么多"02:25:00）、EZ+盲僧体系（"弱队的盲僧等于超级兵"→"这盲僧要打破LEC弱队无盲僧的魔咒"02:25:15/02:32:59）；观众质疑"这不选兰博"（02:20:29，G1 朗姆=负面却不再选）。</div>
+
+<section class="card"><h2>一、结果总览（当前进度）</h2>
+<table>
+<tr><th>项</th><th>状态</th><th>要点</th></tr>
+<tr><td>系列</td><td><b>SHFT 1:1 KC</b></td><td>G1 SHFT 爆冷 → G2 KC 马拉松局扳平；G3 决胜局待开（Polymarket 总局数 Over 2.5 已定 99.95%）</td></tr>
+<tr><td>G2 结果</td><td><b>KC 胜</b></td><td>约 49 分钟局（02:08-02:57）；终局 KC 翻盘（"让一追二"02:56:18）；击杀让分 -9.5 结算（02:56-57）；Polymarket game2 = KC 99.95%</td></tr>
+<tr><td>灰信号</td><td><b>方向未兑现</b></td><td>G2 高浓度定向 KC 中单（瑞兹）但 KC 赢——G1 兑现/G2 未兑现＝混合样本，G3 决定性</td></tr>
+</table></section>
+
+<section class="card"><h2>二、逐局复盘（G2 已发生片段）</h2>
+<div class="block"><h3>G2 BP（02:04–02:19）</h3>
+<ul>
+<li>KC 中单换英雄（蛇女→瑞兹）："kc怎么换中单了吗"（02:18:32）；瑞兹被批"补刀都不会"（02:23:55）——<b>G1 蛇女负锚 → G2 瑞兹负锚，同一目标连续两局</b></li>
+<li>下路对线讨论："女枪打ez，前期对线不好打"（02:17:28）、"选女枪直接g"（02:17:23）——KC 女枪 vs SHFT EZ（"少爷的ez"02:16:15）；"这左边的ad菜的夸张"（02:34:05，SHFT 侧 ADC 也被批）</li>
+<li>SHFT 上中野：卡牌上单（"卡牌上单又是"02:24:41）压制纳尔；盲僧打野（"Lec的kanavi"02:30:30，逆版本强打）；"这不选兰博"（02:20:29，KC 未继续 G1 上单英雄）</li>
+</ul>
+</div>
+<div class="block"><h3>G2 局中（02:19–02:34）</h3>
+<ul>
+<li>KC 中单被集火："这瑞兹补刀都不会/这中单不想赢"（02:23:55/58）、"瑞兹太假了"（02:29:35）、"这个中路得买多少"（02:30:13）、"上把蛇女 这把瑞兹 这中单是真的不想赢的"（02:29:44）</li>
+<li>SHFT 体系：卡牌经济领先（"卡牌死两次，经济还领先"02:33:56）；盲僧 4 头（"打破LEC弱队无盲僧的魔咒"02:32:59）；EZ 后期接管预期（"一会看少爷ez怎么c吧"02:32:00）；"燕雀可以"（02:33:19，中单候选）</li>
+<li>系列叙事："这不就是那天晚上G2剧本一模一样"（02:31:47）、"这场无关实力 第一只能输倒一"（02:32:14）、"7:0吃两把怎么了 不然工资你发啊"（02:32:37）、"kc吃疯了！！！"（02:34:16）</li>
+</ul>
+</div></section>
+
+<section class="card"><h2>三、队伍画像（本场 + 长期库）</h2>
+<table>
+<tr><th>队伍</th><th>画像</th></tr>
+<tr><td>KC</td><td><b>连续两局被疑做局（再犯升级）</b>：G1 蛇女/女警明演口径 → G2 瑞兹"控盘假赛杀kc/畜生kc控盘狗/中单不想赢"；观众口径"7:0吃两把怎么了/第一只能输倒一"；中单双英雄（蛇女/瑞兹）双负锚</td></tr>
+<tr><td>SHFT</td><td>垫底爆冷横扫叙事："shift王朝了有没有感觉"（02:30:07）、"Shift要去世界赛"（02:31:43，玩梗）、"0-6打7-0"（02:29:34）；卡牌上单+盲僧+EZ 体系打出压制（"左边比上一场黑衣人敢打多了"02:29:33）</td></tr>
+</table></section>
+
+<section class="card"><h2>四、人员画像（提及量，硕硕路）</h2>
+<table>
+<tr><th>选手/对象</th><th>提及</th><th>评价</th></tr>
+<tr><td>KC 中单（G1 蛇女 / G2 瑞兹）</td><td>15+</td><td>"瑞兹补刀都不会/这中单不想赢/太假了/这个中路得买多少/上把蛇女这把瑞兹是真的不想赢的"——连续两局定向灰信号核心</td></tr>
+<tr><td>SHFT 卡牌使用者（上单）</td><td>5+</td><td>"卡牌压纳尔这么多/死两次经济还领先/卡牌上单又是"——压制表现</td></tr>
+<tr><td>SHFT 盲僧使用者（打野）</td><td>5+</td><td>"Lec的kanavi/瞎子四个头/打破LEC弱队无盲僧魔咒"——逆版本强打（弱队盲僧正锚候选）</td></tr>
+<tr><td>"少爷"EZ（SHFT AD）</td><td>4+</td><td>"少爷的ez/一会看少爷ez怎么c吧/全部给ez加压力"——后期核心预期</td></tr>
+<tr><td>KC 女枪使用者（AD）</td><td>4+</td><td>"女枪打ez前期不好打/女枪混混放个好大就行"——低预期</td></tr>
+</table></section>
+
+<section class="card"><h2>五、灰信号汇总（本节点重点）</h2>
+<ul>
+<li><b>高浓度，定向 KC 中单</b>："瑞兹太假了"（02:29:35）、"这个中路得买多少"（02:30:13）、"这中单不想赢/中单真菜/中单差距"（02:23:58/02:29:39）、"上把蛇女 这把瑞兹 这中单是真的不想赢的"（02:29:44）、"控盘假赛杀kc"（02:30:56）、"畜生kc控盘狗"（02:31:02）、"kc吃疯了！！！"（02:34:16/19）</li>
+<li>联赛级灰话："lec假赛赛区"（02:29:44）、"lec大舞台。有钱你就来"（02:18:21）、"欧洲只吃最大的"（02:29:32）、"lec的韩子都是去打假赛的"（02:24:40，含国籍指向——仅观众口径）</li>
+<li><b>再犯升级逻辑（G2 修正）</b>：G1 蛇女 +24 条定向 → G2 瑞兹再定向（同一目标连续两局）——KC 灰信号实体升至最高观察级；<b>但 G2 KC 赢下该局，灰信号方向未兑现</b>（G1 兑现 / G2 未兑现＝混合样本）；G3 若 KC 再被翻则"双局兑现"，若 KC 拿下则"被质疑方仍赢球"（方向偏未兑现）</li>
+<li>纪律：观众质疑非结论；高预警风险标注，官方核查待回填</li>
+</ul></section>
+
+<section class="card"><h2>六、联赛规律与版本</h2>
+<ul>
+<li>"这场无关实力 第一只能输倒一"（02:32:14）、"周末集体来爆冷是吧"（02:33:21）——LEC 榜首输榜尾传统再样本（G1 已兑现）</li>
+<li>KC 中单双英雄负锚：蛇女（版本符号但选手执行差）→ 瑞兹（补刀都不会）——"选手×英雄"负锚连续</li>
+<li>"弱队盲僧"正锚候选：SHFT 盲僧逆版本强打（"打破LEC弱队无盲僧的魔咒"）——跨场观察项</li>
+<li>"这不就是那天晚上G2剧本一模一样"（02:31:47）——LEC 剧本化叙事（观众口径）</li>
+</ul></section>
+
+<section class="card"><h2>七、预测验证（G2 待回填）</h2>
+<table>
+<tr><th>预测/锚点</th><th>状态</th></tr>
+<tr><td>"早说了2:0 / 2:0了"（SHFT 横扫）</td><td><b>未兑现</b>（G2 KC 拿下，系列 1:1）</td></tr>
+<tr><td>"打满"（G3 预期）</td><td><b>兑现</b>（系列 1:1，G3 决胜局，Polymarket Over 2.5 已定）</td></tr>
+<tr><td>KC 中单瑞兹负锚（"补刀都不会/太假了"）</td><td>暂兑现（瑞兹被集火）</td></tr>
+<tr><td>"第二局可以梭哈了"（02:30:40）</td><td>押 SHFT 方向<strong>未兑现</strong>（G2 KC 胜）</td></tr>
+<tr><td>"赛前20 26倍我上了"（02:31:49）</td><td>SHFT 高赔 26 倍已上，待结算</td></tr>
+</table></section>
+
+<section class="card"><h2>八、盘口讨论</h2>
+<ul>
+<li>"赛前20 26倍我上了"（02:31:49）——SHFT 系列 26 倍高赔已有人上车；"五倍上了"（02:31:30）；"第二局可以梭哈了"（02:30:40）</li>
+<li>G1 让分盘（KC 让 10.5-13.5）方向：G1 已翻（KC 让盘大概率输）；G2 盘口数字暂未见</li>
+<li>"加号已经稳稳的幸福"（02:33:55）——观众押"加号"（让分/大分方向）口径</li>
+</ul></section>
+
+<section class="card"><h2>九、情报含义与后续观察点</h2>
+<div class="block"><h3>LONG（长期资产）</h3>
+<ul>
+<li><b>KC 中单双局负锚</b>（蛇女/瑞兹 + 连续定向灰信号）——后续 KC 比赛该选手任一 pick 均为负锚加分；"凡走过必有痕迹"再犯样本</li>
+<li>SHFT 爆冷画像：卡牌上单压制 + 盲僧逆版本 + EZ 后期——垫底队逆袭体系（跨场观察）</li>
+<li>"弱队盲僧"正锚候选（对照"弱队杰斯"负锚）——LEC 版本规律积累</li>
+</ul></div>
+<div class="block"><h3>SHORT（本场有效）</h3>
+<ul>
+<li><b>G2 已落地："让一追二"剧本进行中（KC 1:1）</b>；G3 决胜局：Polymarket 系列盘 KC 82%——市场认为 KC 会完成逆转</li>
+<li>G3 看点：KC 中单（蛇女/瑞兹双负锚）第三手选什么；SHFT 卡牌/盲僧体系是否延续；灰信号方向（KC 赢则未兑现、KC 输则双局兑现）</li>
+</ul></div></section>
+
+<section class="card"><h2>十、数据与溯源</h2>
+<ul>
+<li>docs/data/danmu/huya/2026-08-24_shuoshuo_323444.jsonl（G2 窗 02:03-02:34 约 290 条；全窗 1,783 条）＋ official_660000（机器人为主）</li>
+<li>关联页：BP-LOCK（intel_danmu_KC-SHFT_BP_2026-08-24.html）、G1 复盘（intel_danmu_KC-SHFT_G1_2026-08-24.html）</li>
+<li>G2 结果已官方交叉（Polymarket game2 = KC 99.95%）；待确认：G3 最终结果、完整阵容官方核对、KC 中单 ID、击杀让分精确数字</li>
+</ul>
+<p class="note">报告更新：2026-08-24 03:04（北京时间）· 节点：G2-END（B 升级终态）· G3 决胜局监控中，系列复盘赛后输出</p>
+</div></body></html>

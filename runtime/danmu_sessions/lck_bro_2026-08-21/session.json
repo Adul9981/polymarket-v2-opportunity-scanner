@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "session": "lck_bro_2026-08-21",
+  "title": "LCK BRO 弹幕情报（硕硕 08-21）",
+  "state": "running",
+  "updated_at": "2026-08-22T02:48:04+00:00",
+  "report": "reports/intel_danmu_live_lck_bro_2026-08-21.html",
+  "intel_json": "runtime/danmu_sessions/lck_bro_2026-08-21/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "shuoshuo_323444",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-08-21T19:44:50+00:00",
+      "heartbeat_at": "2026-08-22T02:48:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "LEC！VIT NAVI！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-21T19:44:51+00:00",
+      "restart_count": 25
+    }
+  ]
+}

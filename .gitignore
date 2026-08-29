@@ -1,6 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
+.danmu_intel_site/
 
 # Local runtime outputs and trade execution state
 runtime/*.json
@@ -8,10 +9,20 @@ runtime/*.log
 runtime/logs/
 runtime/*.command
 !runtime/run_task2_live_scan.command
+runtime/keys/
+runtime/markers/
 
 # Generated scan reports
 reports/opportunity_scan*.md
 reports/diag_*_scan_*.md
+
+# Raw bulk data (too large for GitHub / not product logic): keep intel/ structured library
+docs/forensics/data/
+docs/data/danmu/
+docs/data/snapshots/
+
+# Local member registry contains real user info; publish the example template only
+data/members.json
 
 # Local/private environment files
 .env
@@ -19,4 +30,4 @@ reports/diag_*_scan_*.md
 *.pem
 *.key
 *.secret
-
+.vercel

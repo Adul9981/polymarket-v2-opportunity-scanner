@@ -1,0 +1,221 @@
+{
+ "captured_at": "20260815T093024Z",
+ "groups": [
+  {
+   "group": "highest-temperature-in-madrid-on-august-15-2026",
+   "n_legs": 7,
+   "no_theory_per_x": 6,
+   "depth_min": 495.3,
+   "depth_max": 10422.8,
+   "max_full_set_x": 495.3,
+   "rows": [
+    {
+     "x": 1,
+     "cost": 5.978,
+     "gross": 0.022,
+     "net": -0.0428,
+     "gross_pct": 0.367
+    },
+    {
+     "x": 2,
+     "cost": 11.956,
+     "gross": 0.044,
+     "net": -0.0856,
+     "gross_pct": 0.367
+    },
+    {
+     "x": 5,
+     "cost": 29.89,
+     "gross": 0.11,
+     "net": -0.2139,
+     "gross_pct": 0.367
+    },
+    {
+     "x": 10,
+     "cost": 59.78,
+     "gross": 0.22,
+     "net": -0.4278,
+     "gross_pct": 0.367
+    },
+    {
+     "x": 25,
+     "cost": 149.7218,
+     "gross": 0.2782,
+     "net": -1.344,
+     "gross_pct": 0.185
+    },
+    {
+     "x": 50,
+     "cost": 300.8748,
+     "gross": -0.8748,
+     "net": -4.1335,
+     "gross_pct": -0.292
+    },
+    {
+     "x": 100,
+     "cost": 604.6622,
+     "gross": -4.6622,
+     "net": -11.2088,
+     "gross_pct": -0.777
+    },
+    {
+     "x": 200,
+     "cost": 1215.6603,
+     "gross": -15.6603,
+     "net": -28.8169,
+     "gross_pct": -1.305
+    },
+    {
+     "x": 500,
+     "cost": null
+    }
+   ]
+  },
+  {
+   "group": "pro-football-2027-champion-20260729185915366",
+   "n_legs": 32,
+   "no_theory_per_x": 31,
+   "depth_min": 406834.8,
+   "depth_max": 5222704.2,
+   "max_full_set_x": 406834.8,
+   "rows": [
+    {
+     "x": 1,
+     "cost": 30.974,
+     "gross": 0.026,
+     "net": -0.2887,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 2,
+     "cost": 61.948,
+     "gross": 0.052,
+     "net": -0.5775,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 5,
+     "cost": 154.87,
+     "gross": 0.13,
+     "net": -1.4437,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 10,
+     "cost": 309.74,
+     "gross": 0.26,
+     "net": -2.8874,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 25,
+     "cost": 774.35,
+     "gross": 0.65,
+     "net": -7.2185,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 50,
+     "cost": 1548.7,
+     "gross": 1.3,
+     "net": -14.437,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 100,
+     "cost": 3097.4,
+     "gross": 2.6,
+     "net": -28.874,
+     "gross_pct": 0.084
+    },
+    {
+     "x": 200,
+     "cost": 6194.8571,
+     "gross": 5.1429,
+     "net": -57.8057,
+     "gross_pct": 0.083
+    },
+    {
+     "x": 500,
+     "cost": 15487.6942,
+     "gross": 12.3058,
+     "net": -145.0711,
+     "gross_pct": 0.079
+    }
+   ]
+  },
+  {
+   "group": "mls-chi-vwh-2026-07-16-exact-score",
+   "n_legs": 15,
+   "no_theory_per_x": 14,
+   "depth_min": 3452.0,
+   "depth_max": 21086.7,
+   "max_full_set_x": 3452.0,
+   "rows": [
+    {
+     "x": 1,
+     "cost": 14.663,
+     "gross": -0.663,
+     "net": -0.8146,
+     "gross_pct": -4.736
+    },
+    {
+     "x": 2,
+     "cost": 29.326,
+     "gross": -1.326,
+     "net": -1.6293,
+     "gross_pct": -4.736
+    },
+    {
+     "x": 5,
+     "cost": 73.315,
+     "gross": -3.315,
+     "net": -4.0731,
+     "gross_pct": -4.736
+    },
+    {
+     "x": 10,
+     "cost": 146.73,
+     "gross": -6.73,
+     "net": -8.2473,
+     "gross_pct": -4.807
+    },
+    {
+     "x": 25,
+     "cost": 368.1079,
+     "gross": -18.1079,
+     "net": -21.914,
+     "gross_pct": -5.174
+    },
+    {
+     "x": 50,
+     "cost": 738.5829,
+     "gross": -38.5829,
+     "net": -46.2188,
+     "gross_pct": -5.512
+    },
+    {
+     "x": 100,
+     "cost": 1481.1117,
+     "gross": -81.1117,
+     "net": -96.4228,
+     "gross_pct": -5.794
+    },
+    {
+     "x": 200,
+     "cost": 2969.006,
+     "gross": -169.006,
+     "net": -199.6961,
+     "gross_pct": -6.036
+    },
+    {
+     "x": 500,
+     "cost": 7438.2066,
+     "gross": -438.2066,
+     "net": -515.0887,
+     "gross_pct": -6.26
+    }
+   ]
+  }
+ ]
+}

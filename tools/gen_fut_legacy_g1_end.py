@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""FUT vs Legacy G1 结束情报（2026-08-27，22:30 CST 开赛，图一 Ancient）。
+
+按线上参考标准（intel_danmu_CS2-FUT-Legacy_G2_2026-08-27.html）重写：
+官方源仲裁（BLAST 官方页 fcc5ce44 / Liquipedia）+ 弹幕证据层 + 灰信号纪律。
+结果：Legacy 1-0 FUT（图一 Ancient 13:10）；图二 Dust II 进行中。
+"""
+
+from pathlib import Path
+
+from gen_spirit_dendele_pages import REPORTS  # noqa: E402
+
+CSS = """
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 22px; height:22px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 52px; font-size:11px; font-weight:650; padding-top:2px; }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  .errbox { background:#fdf3f0; border-left:3px solid var(--bad); padding:8px 12px; border-radius:0 8px 8px 0; margin:10px 0 2px; font-size:12.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .badbox { background:#fdf1f0; border-left:3px solid var(--bad); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+"""
+
+
+def page(title: str, sub: str, speed: str, sections: list[tuple[str, str, str]], footer: str) -> str:
+    cards = "".join(
+        f'<div class="card"><h2><span class="no">{no}</span>{h2}</h2>{body}</div>'
+        for no, h2, body in sections
+    )
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title><style>{CSS}</style></head><body><div class="wrap">
+<h1>{title}</h1><p class="meta">{sub}</p>
+<div class="card speed"><h2><span class="no">0</span>核心情报速览</h2>{speed}</div>
+{cards}
+<div class="footer">{footer}</div>
+</div></body></html>"""
+
+
+SPEED = """
+  <div class="top">
+    <span class="score-big">G1 结束 · Legacy 13:10 Ancient（官方）· 系列 FUT 0-1 Legacy</span>
+    <span class="badge b-ok">官方比分源确认</span>
+    <span class="badge b-anchor">官方地图 Ancient·Dust II·Cache</span>
+    <span class="badge b-risk">灰信号簇 12 条 · 两房共振</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>Legacy 狙击手 try 图一 Carry（官方数据 26-9 / +17）</b>："把把3打5还赢了""敌我狙击手""潘帕斯闪光"——vs FUT cmtry（14-18）；图二 Dust II 是其狙舞台（已开始，弹幕"敌我try差距"延续） <span class="meta">→ 详 §3/§5/§8</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span><b>FUT 图一告负（输掉自己选图 Ancient）+ 灰信号簇</b>："把把人数优势把把输""故意送""fut明显不想赢"（12 条、两房共振，23:07-23:16 图一崩盘段）——<b>观众质疑·非结论</b> <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span><b>拼枪大战、纯肌肉 CS</b>："战斗爽""这才是纯粹的CSGO"；"猎鹰严父选拔赛/抚养权争夺"刷屏——胜者路径聚焦 Falcons <span class="meta">→ 详 §5/§6</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--sub)">盘口</span><span><b>大额单线索 $132,997（~59%，21:35）</b>：chaincatcher 报道本场胜者盘大单，方向未明确——标注"方向待确认"；图一结束后盘口定价待查证 <span class="meta">→ 详 §4</span></span></div>
+  </div>
+  <div class="errbox"><b>修正说明：</b>本页为 G1 结束节点。23:24 初版曾误把图一（Ancient）结束信号当作图二，产出"1-1"错误状态；已按 BLAST 官方比分源修正为 <b>Legacy 1-0 FUT（图一 Ancient 13:10），图二 Dust II 现进行中</b>。防错规则已固化（见 §11）。</div>
+"""
+
+
+SECTIONS = [
+    ("1", "比赛信息与状态（官方源）", """<table>
+    <tr><td>对阵</td><td>FUT（EWC 亚军）vs Legacy（菊花，EWC 季军）· BLAST Premier Open Porto 2026 小组赛 B 组 · BO3 · 胜者组八强（UB QF3）</td></tr>
+    <tr><td>官方时间</td><td>2026-08-27 22:30 CST 开赛（Liquipedia 16:30 CEST）· hltv match 2396929 · BLAST match fcc5ce44 · startedAt 22:33:41 CST</td></tr>
+    <tr><td>官方地图</td><td>图一 <b>Ancient</b> · 图二 <b>Dust II</b> · 图三 Cache（Liquipedia 记录；弹幕"fut的遗迹""菊花选的沙二"对应选图）</td></tr>
+    <tr><td>系列状态（官方）</td><td><b>Legacy 1 - 0 FUT</b>：图一 Ancient <b>Legacy 13:10</b>（Legacy T 7/CT 6 vs FUT T 5/CT 5；BLAST 官方页 endedAt 23:22:04 CST）；<b>图二 Dust II 进行中</b></td></tr>
+    <tr><td>今日同组赛果</td><td>17:00 IC 2-0 Vitality（爆冷：Anubis 13:8 / Cache 16:13 加时，ZywOo 低迷）· 20:00 MOUZ 2-0 9z（Cache 13:4 / Nuke 13:7）· 00:30 Falcons vs LVG（未开）</td></tr>
+    <tr><td>弹幕规模</td><td>本场窗口（22:35 起）<b>3,921 条 / 活跃 1,306 人 / 91.9 条/分</b>：CSBOY 官方 3,029 / CSBOY-Mo 788 / BLAST 官方 104；try/3打5 相关簇 117 条</td></tr>
+    <tr><td>完整性</td><td><span class="badge b-ok">三路齐采</span>本版系列/逐图比分来自 <b>BLAST 官方比赛页</b>（23:32 抓取）；Liquipedia 曾滞后显示 0-0；弹幕仅作过程佐证</td></tr>
+  </table>
+  <p class="meta">系列/比分 = BLAST 官方页（2026-08-27 23:32 抓取）；地图/时间 = Liquipedia + 官方页 startedAt/endedAt；其余标注弹幕口径。</p>"""),
+    ("2", "灰信号汇总（风险 · 观众质疑非结论）", """<p><b>12 条</b>，两房共振（CSBOY 官方 9 条 + BLAST 官方 3 条），集中出现在 <b>图一 23:07-23:16（FUT 落后/输选图段）</b>：</p>
+  <ul>
+    <li>23:07-23:12：BLAST 房"到底在演什么剧本啊""感觉就是在演比分啊 各种搞笑""演的吧"；官方房"故意送""故意送是吧"</li>
+    <li>23:15-23:16：官方房"fut不想赢""故意送的吧""fut明显不想赢""这两分输的，fut明显不想赢"</li>
+    <li>早段模糊项（不计入簇）：22:36"剧本"（玩梗语境）、22:38"fut感觉送人头来了"、22:48"想看菊花再擒虾剧本"</li>
+  </ul>
+  <div class="warnbox"><b>纪律声明：</b>以上均为观众质疑，语境多为 FUT"人数优势局被翻"（5打3输）的嘲讽与不解，<b>非假赛证据</b>；按灰信号纪律仅作风险标注、不上升结论。若后续出现"吃了/收钱/带老板"类明确指控或盘口价格异动，升级重点监控。</div>"""),
+    ("3", "地图与选图情报（官方 + 弹幕）", """<p><b>✅ 官方地图顺序（Liquipedia + BLAST）：</b>图一 <b>Ancient</b> · 图二 <b>Dust II</b> · 图三 <b>Cache</b></p>
+  <table>
+    <tr><th>锚点</th><th>内容</th><th>置信</th></tr>
+    <tr><td>图一 Ancient（FUT 选图）</td><td>"图一遗迹"（22:30）"fut的遗迹"（22:45）——FUT 选图；<b>官方结果 Legacy 13:10</b>（23:22:04 结束）；"fut 遗迹还是太硬了""遗迹是fut强图"等正锚<b>未兑现</b></td><td>官方确认</td></tr>
+    <tr><td>try 图一 Carry</td><td>官方数据 <b>try 26-9 / +17</b>；弹幕"把把3打5还赢了""敌我狙击手""大狙差距""潘帕斯闪光"——图一 Legacy 胜负手</td><td>官方+多源</td></tr>
+    <tr><td>图二 Dust II（Legacy 选图）</td><td>"菊花选的沙二"（22:51）"菊花沙二强图"（22:35）——<b>已开赛</b>；"到了沙二你就看try神怎么狙吧"（22:59）预判在局中兑现中（弹幕"敌我狙击手差距太大"）</td><td>弹幕（局中）</td></tr>
+    <tr><td>FUT 崩盘负锚（图一）</td><td>"把把人数优势把把输""5打3输了2把""人数领先一直送""fut 5个人凑不住一个脑子""FUT还不换掉cmtry吗"</td><td>多源</td></tr>
+    <tr><td>图三候选 Cache</td><td>"别急，这俩队要打图三的"（22:43）"图三飞机场"（22:48）——若 1-1 进 Cache 决胜</td><td>官方记录</td></tr>
+  </table>
+  <p class="meta">BP 后战绩情报：无"选手×地图历史胜率"类弹幕；"try vs cmtry 谁更厉害"对比锚点在图一已由官方数据兑现（try 26-9 vs cmtry 14-18）。</p>"""),
+    ("4", "盘口与市场讨论", """<ul>
+    <li><b>大额单线索：</b>chaincatcher 报道本场胜者盘出现约 <b>$132,997.1</b> 大额单，定价约 <b>59%</b>（21:35 交易），方向仅标注"match winner"、<b>未明确买到 FUT 还是 Legacy</b>——待确认，勿据此直接下方向。</li>
+    <li><b>图一结束后的定价：</b>Legacy 1-0 领先且手握图二自己选图，盘口应明显向 Legacy 倾斜；具体价格待查证（Polymarket / limitless），查证后回填。</li>
+    <li><b>弹幕口径：</b>无具体赔率/让分/人头数字；"fut感觉送人头来了"为嘲讽非盘口信息。</li>
+  </ul>"""),
+    ("5", "方向性情报板（锚点 × 共识 × 风险）", """<table>
+    <tr><th>维度</th><th>FUT</th><th>Legacy（菊花）</th></tr>
+    <tr><td>强度层</td><td>EWC 亚军；BLAST 页近 10 场 Ancient 69.2%（9W4L）——<b>今天却输掉 Ancient 选图</b></td><td>EWC 季军；BLAST 页近 10 场 Ancient 25%（2W6L）逆袭拿下；"菊花三擒法尔孔（猎鹰）"历史梗</td></tr>
+    <tr><td>本场信号（图一官方）</td><td>Ancient 10-13 告负；cmtry 14-18 被质疑；人数优势局连输</td><td>Ancient 13-10 拿下；try 26-9 +17 爆发；"菊花无痛赢"</td></tr>
+    <tr><td>反方声音</td><td>"最终还是福特拿下"（单条，与官方结果相反，为误读/反讽）</td><td>"菊花一点战术都没吗"（早段质疑）</td></tr>
+    <tr><td>共识</td><td colspan="2">纯肌肉拼枪大战（"战斗爽""纯粹的CS"）；"绿龙含金量还在上升"；"猎鹰严父选拔赛/抚养权争夺"——胜者路径聚焦 Falcons（猎鹰）；Legacy 1-0 领先且图二为其选图</td></tr>
+  </table>"""),
+    ("6", "情报含义与决策落点", """<ul>
+    <li><b>短期：</b>Legacy <b>1-0</b> 领先（官方），图二 Dust II 为 Legacy 选图（弹幕口径"菊花沙二强图"）；FUT 已输掉自己的 Ancient 选图，容错率低。</li>
+    <li><b>方向信号：</b>弹幕共识在向 Legacy 倾斜（敌我狙击手差距 + FUT 决策崩盘 + 选图告负）；若图二 Dust II Legacy 再胜 → 2-0 直接结束。</li>
+    <li><b>风险提示：</b>灰信号簇 12 条指向"FUT 不想赢"；仅观众质疑，须等官方结算；图二进行中，以官方 window/比分源校准。</li>
+    <li><b>决策动作：</b>不提前定局；优先官方比分源；关注 try 状态延续与 FUT 是否调整（若再崩，"FUT 喜欢浪"模式应验）。</li>
+  </ul>"""),
+    ("7", "今日 BLAST Open 逐场复盘（事实层）", """<table>
+    <tr><th>时间</th><th>对阵</th><th>结果</th></tr>
+    <tr><td>17:00</td><td>IC vs Vitality</td><td>IC <b>2-0</b> 爆冷（Anubis 13:8 / Cache 16:13 加时；ZywOo 低迷）</td></tr>
+    <tr><td>20:00</td><td>MOUZ vs 9z</td><td>MOUZ <b>2-0</b>（Cache 13:4 / Nuke 13:7）</td></tr>
+    <tr><td>22:30</td><td>FUT vs Legacy</td><td>进行中：图一 Ancient <b>Legacy 13:10</b>（官方）；图二 Dust II 进行中</td></tr>
+    <tr><td>00:30</td><td>Falcons vs LVG</td><td>未开</td></tr>
+  </table>"""),
+    ("8", "队伍 / 人员画像（证据层 · 官方 + 弹幕口径）", """<p><b>FUT：</b>土耳其俱乐部；"年轻人火力猛"、枪法刚但"喜欢浪"；图一输掉自己的 Ancient 选图（官方 10-13）；狙击手 <b>cmtry</b> 官方数据 14-18 / -4，被集中质疑（"FUT还不换掉cmtry吗""厘米try不行""敌我狙击手"）。</p>
+  <p><b>Legacy（菊花）：</b>"三擒法尔孔"猎鹰克星梗；狙击手 <b>try</b>（阿根廷人，弹幕称 21-22 岁，"潘帕斯闪光""蓝白闪光"），图一官方数据 <b>26-9 / +17 / ADR 90</b>——MVP 级表现（3打5 翻盘 + 击杀秀）。</p>
+  <p><b>周边人物梗：</b>m0NESY/载物/donk top1 之争（"让小孩一轮游美美刷最高rt"）；NiKo 恐惧梗（"niko看到菊花脚软"）；Vitality 爆冷输 IC 被反复提及。</p>"""),
+    ("9", "联赛规律与版本（沉淀层）", """<ul>
+    <li>Cache（叉车）回归后版本热度高（"叉车出场率也太高了吧"）——潜在决胜图。</li>
+    <li>"肌肉派/枪法流"对决成 B 组主旋律（IC/MOUZ/FUT/Legacy 均为刚枪风格），"纯粹CS"梗高频。</li>
+    <li>猎鹰叙事：Legacy 对 Falcons 历史占优（"菊花三擒法尔孔"），Falcons 粉丝自我调侃"严父选拔赛"——Legacy 若晋级，后续对阵 Falcons 的 H2H 心理优势是观众共识级话题。</li>
+  </ul>"""),
+    ("10", "预测验证回填（沉淀层）", """<table>
+    <tr><th>预测/锚点</th><th>时间</th><th>状态</th></tr>
+    <tr><td>"fut 遗迹还是太硬了 / 遗迹是fut强图"（FUT×Ancient 正锚）</td><td>22:52/23:10</td><td><b>未兑现</b>（图一 FUT 10-13 告负·官方）</td></tr>
+    <tr><td>"菊花沙二强图"（Legacy 选图 Dust II）</td><td>22:35</td><td>图二验证中（进行中）</td></tr>
+    <tr><td>"到了沙二你就看try神怎么狙吧"（try 图二爆发）</td><td>22:59</td><td>图二局中兑现中（弹幕"敌我狙击手差距"）</td></tr>
+    <tr><td>"正常的fut就是喜欢浪然后打不过图二"（FUT 图二崩盘模式）</td><td>23:15</td><td>图二验证中</td></tr>
+    <tr><td>灰信号簇 12 条（FUT 不想赢）</td><td>23:07-23:16</td><td>待终局回填（观众质疑·非结论）</td></tr>
+  </table>"""),
+    ("11", "数据与溯源", """<p><b>官方源</b>：BLAST 官方比赛页 fcc5ce44（2026-08-27 23:32 抓取）：<b>Legacy 1-0 FUT</b>；图一 Ancient <b>13:10</b>（Legacy T7/CT6 vs FUT T5/CT5），startedAt 22:33:41 / endedAt 23:22:04 CST；图二 Dust II 进行中；Liquipedia 曾滞后 0-0。</p>
+  <p class="meta"><b>数据窗口</b>：2026-08-27 22:35-23:23 CST（本场节点切片，未混入局间/其他场次）。</p>
+  <p class="meta"><b>数据源</b>：虎牙三路同会话：CSBOY 官方 123321（3,029 条）/ CSBOY-Mo 321123（788 条）/ BLAST 官方 blast（104 条）；采集会话 cs2_blast_2026-08-27 运行中。</p>
+  <p class="meta"><b>密度峰值</b>：23:12 CST（387 条/分）、23:15 CST（459 条/分）——图一 try 击杀秀与 FUT 关键局翻车。</p>
+  <p class="meta"><b>修正记录</b>：23:24 初版误判"1-1"（把图一结束信号当图二，弹幕口径）；23:32 按 BLAST 官方源修正为 Legacy 1-0、图二未开；本节点为 G1 结束页，图二现进行中。</p>
+  <p class="meta">生成/修正时间：2026-08-27 23:50 CST · 情报原则：核心=本场弹幕，事实层=官方源仲裁，推测显式标注。</p>"""),
+]
+
+
+G1_END = page(
+    "BLAST Open Porto · FUT vs Legacy · G1 结束情报 · 2026-08-27",
+    "CS2 · BLAST Open Porto Group B · BO3 · 图一 Ancient（遗迹）· Legacy 13-10 FUT（官方）",
+    SPEED,
+    SECTIONS,
+    "弹幕情报 · 观众质疑非结论 · 比分以官方源为准 · Polymarket 电竞情报项目",
+)
+
+
+if __name__ == "__main__":
+    out = REPORTS / "intel_danmu_FUT-Legacy_2026-08-27_g1_end.html"
+    out.write_text(G1_END, encoding="utf-8")
+    print("wrote", out)

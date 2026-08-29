@@ -1,0 +1,599 @@
+{
+  "meta": {
+    "total": 59684,
+    "active_users": 9685,
+    "window_utc": [
+      "2026-08-24 14:28",
+      "2026-08-24 18:58"
+    ],
+    "density_per_min": 221.3,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 113,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "KC VS SHIFTERS LO",
+        "KC can do the funniest thing PepeLaugh",
+        "SK BEATS KC AND MAKES IT BASED",
+        "@Caedrel Did you see Shifters took a game off KC",
+        "Are you skipping KC games on purpose ? @Caedrel"
+      ]
+    },
+    "GX": {
+      "mentions": 433,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@k_i_w_a_t_a_r_i Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "@Amra_Sakusa Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "@sargasssum Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "@magnixxx Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "@sarius22228 both, GX, FNC and Navi fighting for playoff spots"
+      ]
+    },
+    "TH": {
+      "mentions": 18,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "DNCE CAKE BY TH OCEAN",
+        "TH LO",
+        "no way they lose to TH Clueless",
+        "TH are such incredible dog shit",
+        "@Kara3315 well less criminal than Shifters and TH"
+      ]
+    },
+    "Navi": {
+      "mentions": 596,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@k_i_w_a_t_a_r_i Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "fnatix or Navi today bois",
+        "@Amra_Sakusa Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "NAVI GONNA WIN",
+        "@sargasssum Score is: FNC 0-0 NAVI // GX 0-0 G2"
+      ]
+    },
+    "T1": {
+      "mentions": 129,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@neekonomicon T1 four in a row?",
+        "what about SK vs T1 Worlds Final?",
+        "Aloo this is t1 riftbound",
+        "T1 toothbrush",
+        "T1 shirt for dinner"
+      ]
+    },
+    "DNS": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Dns is stronger than this 2 scrubs",
+        "WHEN IS DNS",
+        "DNS when",
+        "SHIFTERS DNS END OF SEASON RUN @caedrel",
+        "@Caedrel who would win old DNS or Shifters? please answer"
+      ]
+    },
+    "KT": {
+      "mentions": 26,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "KTFRAUD KT IS NOT MAKING PLAYOFFS KTFRAUD",
+        "@LaureBV what will you feel KT wont play on worlds",
+        "@Caedrel  what do you think of BRO vs KT",
+        "you mean fnatic KT right ?",
+        "DK OVER KT LO"
+      ]
+    },
+    "HLE": {
+      "mentions": 18,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Sent all my channel points on HLE t9 win game 1 and T1 to win game 2 and 3 2 dwys ago and now I sent the rest on NaVi WHY",
+        "HLE",
+        "just copy hle",
+        "HLE: why? you guys just suck",
+        "HLE"
+      ]
+    },
+    "GEN": {
+      "mentions": 42,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@geng_sharvel Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "Lospa GENG Flash",
+        "@bowloffruits gen Alpha kids...",
+        "prime geng gaming by FNC",
+        "@caedrel sir caedrel if geng win their bo5 do they make worlds?"
+      ]
+    },
+    "WBG": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "G2 WBG INCIDENT",
+        "A WBG RUN"
+      ]
+    },
+    "WE": {
+      "mentions": 631,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "We’re locking in Support for you! Get ExpressVPN and claim exclusive rewards: Battle Bunny Aurora, Secret Agent Xin Zhao + Hextech Chests Plus, limited time discounts available now. https://expressvpn.com/lec",
+        "Are we not gonna talk about this guy making Wario green",
+        "Reach top 6.7% and we'll talk",
+        "WE ARE YOUNG",
+        "WE ARE YOUNG"
+      ]
+    },
+    "BLG": {
+      "mentions": 22,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Boaster to BLG xdd",
+        "its navi not blg @Caedrel",
+        "HUPU SAYING THIS SKIN LOOKS LIKE MADE FOR BLG LOL",
+        "G2 T1 BLG",
+        "GG BB can win, BLG no bin FailFish"
+      ]
+    },
+    "TES": {
+      "mentions": 46,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "TES LO",
+        "Stooooooooooooop ypu're about to TES them",
+        "reference to caps tristana in g2 tes?",
+        "hesRight he smurfed on TES with it",
+        "TES LO"
+      ]
+    },
+    "IG": {
+      "mentions": 83,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "can IG make it to worlds",
+        "HOLY IG TALENT",
+        "IG TALENT",
+        "IG TALENT HOLT",
+        "HOLY IG SHOULD HAVE KEPT HIM OVER TheSpy"
+      ]
+    },
+    "Vitality": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "current fnc could beat vitality no?"
+      ]
+    },
+    "Spirit": {
+      "mentions": 10,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "T1 vs spirit?",
+        "@Caedrel I was told that Mikyx announced his roaster for next year, Lider will be back cause SlowQ just isn't it, and they intend to replace Wunder who has been performing out of line recently and replace him with Myrwn who is way closer to the spirit of the team mhm",
+        "less than what spirit earned yesterday LOL",
+        "@Caedrel I was told that Mikyx announced his roaster for next year, Lider will be back cause SlowQ just isn't it, and they intend to replace Wunder who has been performing out of line recently and replace him with Myrwn who is way closer to the spirit of the team mhm",
+        "spirit blossom clears"
+      ]
+    },
+    "G2": {
+      "mentions": 633,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "@k_i_w_a_t_a_r_i Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "@Amra_Sakusa Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "@sargasssum Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "g2 impaktGandalf impaktGandalf",
+        "G2 impaktPedro"
+      ]
+    },
+    "NAVI": {
+      "mentions": 596,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@k_i_w_a_t_a_r_i Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "fnatix or Navi today bois",
+        "@Amra_Sakusa Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "NAVI GONNA WIN",
+        "@sargasssum Score is: FNC 0-0 NAVI // GX 0-0 G2"
+      ]
+    },
+    "Liquid": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "I do hope Caps likes them, even though I think they're liquid garbage."
+      ]
+    },
+    "AG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@Caedrel oh yeah Caedrel have you see AG.AL picture when they won EWC? they have two shanks cuz Flandre left LUL"
+      ]
+    },
+    "EP": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "EP"
+      ]
+    }
+  },
+  "players": {
+    "Canna": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "reminder that canna got turbogapped by oscarinin in a worlds qualifying series",
+        "@Caedrel Canna is playing nasus in soloQ",
+        "cannavi LOL"
+      ]
+    },
+    "Oscar": {
+      "mentions": 126,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "reminder that canna got turbogapped by oscarinin in a worlds qualifying series",
+        "oscarinin was way better than soboro xdd",
+        "oscarinin was way better than soboro xdd ͏",
+        "@ShootOfLove oscarinin alt Susge",
+        "where is oscarinin playing??"
+      ]
+    },
+    "Poby": {
+      "mentions": 173,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "lets go poby",
+        "o7 poby",
+        "MYFRAUD \"POBY FELL OFF\" MYFRAUD \"POBY FELL OFF\" MYFRAUD \"POBY FELL OFF\"",
+        "MY GOST POBY",
+        "poby lamont"
+      ]
+    },
+    "Hype": {
+      "mentions": 33,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "GoalHype",
+        "HypeLUL",
+        "who else most hype for FNC",
+        "i0kiHi NeedHeal GiveHeal i0kiHyperCatface",
+        "Navi hype"
+      ]
+    },
+    "Guma": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Guma's MVP skin looks more like a HOF than this imo",
+        "guma's MF is much better LO",
+        "Hey @caedrel have you seen the picture of how buffed gumayusi is rn?",
+        "Hey @caedrel wanna see a gumayusi pic? You might like it 👁️ 👁️",
+        "GUMA CANT STEAL IT MYFRAUD GUMA CANT STEAL IT MYFRAUD GUMA CANT STEAL IT MYFRAUD GUMA CANT STEAL IT MYFRAUD GUMA CANT STEAL IT MYFRAUD GUMA CANT STEAL IT MYFRAUD"
+      ]
+    },
+    "Faker": {
+      "mentions": 115,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "faker skin so much cooler",
+        "Is Poby supposed to be the next faker ?",
+        "if faker moved from t1 to dignitas right after his rookie year he wouldn't be faker now would he?",
+        "@Fireharthell a dude asked if poby was supposed to be the next faker so I put things into perspective",
+        "imagine faker mid yatoro ad collapse top"
+      ]
+    },
+    "Chovy": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "thats why Chovy use wired btw",
+        "@Caedrel why is upset chovyng on cs ?",
+        "xddcaps Tssk FAKER AND CHOVY FATHER",
+        "@Slayra xddcaps Tssk FAKER AND CHOVY FATHER  ͏",
+        "xddcaps Tssk FAKER AND CHOVY FATHER"
+      ]
+    },
+    "Zeus": {
+      "mentions": 16,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Fnc wont make worlds.. we have to see naaknako against zeus",
+        "@Caedrel who would be a top lane Hall of Legends? is it just obviously Zeus?",
+        "fnatic just need to sign oner and zeus and we can play, even win worlds",
+        "@BoetIsBack aa they oner and zeus want to join fnc KEKW",
+        "o7 zeus"
+      ]
+    },
+    "Niko": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@Niko2two he should have 2 i think",
+        "@Niko2two don't think it show anyways",
+        "@Niko2two Overlay doesn't show, he has 2",
+        "@niko758b Score is: FNC 0-0 NAVI // GX 0-0 G2",
+        "2024 profits is bcs of niko sale also"
+      ]
+    },
+    "donk": {
+      "mentions": 24,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "LOOK CAPS SKIN TRAILER DINK DONK",
+        "LEC EXTENSION xdDinkDonk  LEC EXTENSION xdDinkDonk LEC EXTENSION xdDinkDonk LEC EXTENSION xdDinkDonk LEC EXTENSION xdDinkDonk LEC EXTENSION xdDinkDonk LEC EXTENSION xdDinkDonk",
+        "locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk",
+        "locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk  locke stacks xdDinkDonk",
+        "xdDinkDonk"
+      ]
+    },
+    "Pure": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Pure RAGEBAIT",
+        "pure despresso",
+        "fnatic is pure trash'",
+        "those skins are pure ass ngl",
+        "@Ariaeterna lec chat is pure illness, just get used to it haha"
+      ]
+    },
+    "33": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "2 33 2",
+        "rhilech on zaahen, aatrox, qiyana: 15-3(21-33 without) please just ban them already",
+        "=> ERROR [build 10/10] RUN UV_PROJECT_ENVIRONMENT=/venv uv sync --no-cache --locked --compile-bytecode                                                                                                                                               11.7s ------  > [build 10/10] RUN UV_PROJECT_ENVIRONMENT=/venv uv sync --no-cache --locked --compile-bytecode: 0.697 Downloading cpython-3.13.15-linux-x86_64-gnu (download) (33.2MiB) 4.053  Downloaded cpython-3.13.15-linux-x86_64-gnu (download) 4.356 Usi",
+        "@z8GT_mda both games under 33.5 kills and time, easy money tho",
+        "uwu :33"
+      ]
+    },
+    "Yatoro": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "imagine faker mid yatoro ad collapse top",
+        "MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO",
+        "MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO  ͏",
+        "MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO MYFRAUD SATANIC > YATORO",
+        "but yatoro goated"
+      ]
+    },
+    "Larl": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@Mrlarlar4 JINXED"
+      ]
+    },
+    "Collapse": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "till i collapse",
+        "till i collapse",
+        "imagine faker mid yatoro ad collapse top",
+        "This is a bonkers collapse",
+        "FNC Total collapse ?"
+      ]
+    },
+    "not me": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@caedrel_meal why mean and not meals? Susge",
+        "ogg not me",
+        "HuntingBaron Tssk Not me"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 20,
+    "samples": [
+      "700 hela locke lmao",
+      "7.5 UP??",
+      "https://www.youtube.com/watch?v=qulG8eewz3U <:HOLY:1444043487136710697>",
+      "https://x.com/SkinSpotlights/status/2091917094879203818 @Caedrel",
+      "6700 gold",
+      "-700 LO",
+      "@Caedrel FNC was 7000 ahead when i went to dinner? whaaaaat happend??",
+      "@Caedrel FNC was 7000 ahead when i went to dinner? whaaaaat happend????"
+    ]
+  },
+  "situation": {
+    "count": 1919,
+    "samples": [
+      "xgg",
+      "I am jiggily",
+      "xgg ͏",
+      "i thought you were spot on with shaggy",
+      "green xgg",
+      "xgg",
+      "xgg",
+      "xgg"
+    ]
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "16:44",
+      "count": 655,
+      "samples": [
+        "o7",
+        "sprinta",
+        "isnt Poby ex T1 player?",
+        "just one more year of razork"
+      ]
+    },
+    {
+      "minute_utc": "15:57",
+      "count": 587,
+      "samples": [
+        "just took a shower and came back",
+        "RIOT",
+        "?",
+        "SAMDDDDDDDDDD"
+      ]
+    },
+    {
+      "minute_utc": "16:01",
+      "count": 565,
+      "samples": [
+        "the ori skin is good tht skin is ass tho",
+        "LOL",
+        "LOL",
+        "LO"
+      ]
+    },
+    {
+      "minute_utc": "15:48",
+      "count": 536,
+      "samples": [
+        "thats the FNC i hatewatch EZ",
+        "classic Razork",
+        "razork clowning around",
+        "RAZORK LOST HIS MIND"
+      ]
+    },
+    {
+      "minute_utc": "18:38",
+      "count": 530,
+      "samples": [
+        "Cinema",
+        "horrible target selection from hans",
+        "FLAKKE D",
+        "NO HANDSAMA LO NO HANDSAMA LO NO HANDSAMA LO NO HANDSAMA LO NO HANDSAMA LO"
+      ]
+    },
+    {
+      "minute_utc": "14:52",
+      "count": 524,
+      "samples": [
+        "@scoobsg I've",
+        "MrDestructoid MrDestructoid MrDestructoid",
+        "paidchatter",
+        "W"
+      ]
+    },
+    {
+      "minute_utc": "15:47",
+      "count": 502,
+      "samples": [
+        "RIOT",
+        "FNC LO",
+        "SON",
+        "classic"
+      ]
+    },
+    {
+      "minute_utc": "15:22",
+      "count": 495,
+      "samples": [
+        "IQ IQ IQ",
+        "wireless aint light IQ IQ IQ",
+        "LMAOO",
+        "light travels through the wires..."
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "ponX69",
+      519
+    ],
+    [
+      "NaSaNGG",
+      365
+    ],
+    [
+      "Moobot",
+      339
+    ],
+    [
+      "jeppe194",
+      307
+    ],
+    [
+      "太った犬",
+      297
+    ],
+    [
+      "AbyssalDirge",
+      264
+    ],
+    [
+      "roders_m8",
+      255
+    ],
+    [
+      "Ariaeterna",
+      245
+    ]
+  ],
+  "sources": {
+    "caedrel": 55231,
+    "lec": 4453
+  },
+  "capture_health": [
+    {
+      "channel": "caedrel",
+      "source": "caedrel",
+      "connected_at": "2026-08-24T17:24:30+00:00",
+      "messages": 39143,
+      "state": "connected"
+    },
+    {
+      "channel": "lec",
+      "source": "lec",
+      "connected_at": "2026-08-24T17:25:30+00:00",
+      "messages": 2965,
+      "state": "connected"
+    }
+  ]
+}

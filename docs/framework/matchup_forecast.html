@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>对战形态预判 · Polymarket 电竞</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --text:#1d1d1f; --text2:#6e6e73;
+    --line:#e8e9ec; --blue:#0070f2; --green:#1a7f37; --red:#d13438;
+    --amber:#b26a00; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:48px 28px 80px}
+  .hero{padding:8px 0 26px}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+  h1{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:8px 0 10px}
+  .sub{color:var(--text2);font-size:16px;max-width:800px}
+  .meta{margin-top:14px;font-size:13px;color:var(--text2);display:flex;gap:18px;flex-wrap:wrap}
+  .meta b{color:var(--text);font-weight:600}
+  nav{position:sticky;top:0;background:rgba(245,246,248,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);z-index:10;padding:12px 0}
+  nav .wrap{padding:0 28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .chip{font-size:13px;font-weight:600;color:var(--text2);background:var(--card);border:1px solid var(--line);
+        padding:7px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+  .chip:hover{color:var(--blue);border-color:var(--blue)}
+  .panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line);
+         padding:24px 26px;margin-top:24px}
+  .panel h2{font-size:21px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+  .panel .hint{font-size:13px;color:var(--text2);margin-bottom:16px}
+  .inputs{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:12px;font-weight:700;color:var(--text2);letter-spacing:.05em}
+  select,input[type=range]{font-size:15px;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;min-width:180px}
+  .odds-row{display:flex;align-items:center;gap:14px}
+  .odds-row output{font-size:16px;font-weight:800;min-width:64px;text-align:center}
+  .btn{font-size:15px;font-weight:700;color:#fff;background:var(--blue);border:none;border-radius:12px;
+       padding:11px 26px;cursor:pointer;transition:.15s}
+  .btn:hover{filter:brightness(1.08)}
+  .vs{font-size:13px;font-weight:700;color:var(--text2);padding:0 2px 12px}
+  .res-head{display:flex;align-items:baseline;gap:10px;margin:26px 0 14px;flex-wrap:wrap}
+  .res-head h2{font-size:22px;font-weight:700}
+  .res-head .tag{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:#e8f1ff;color:#0b5bb8}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;border:1px solid var(--line);
+        display:flex;flex-direction:column;gap:9px}
+  .card-top{display:flex;justify-content:space-between;align-items:center}
+  .conf{font-size:12px;font-weight:700;padding:4px 11px;border-radius:999px}
+  .conf.hi{background:#e8f5ec;color:var(--green)} .conf.mid{background:#fff4e0;color:var(--amber)} .conf.lo{background:#fdecec;color:var(--red)}
+  h3{font-size:17px;font-weight:700}
+  .row{font-size:13px;color:var(--text)}
+  .row b{color:var(--text);font-weight:700}
+  .row .lbl{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;padding:2px 8px;border-radius:7px;margin-right:6px}
+  .lbl.cond{background:#eef1f5;color:#3a3a3c} .lbl.sig{background:#e8f1ff;color:#0b5bb8} .lbl.act{background:#e8f5ec;color:var(--green)}
+  .notice{font-size:13px;color:var(--text2);background:#f7f8fa;border-radius:12px;padding:12px 16px;margin-top:18px;border:1px dashed #c9ccd2}
+  .notice b{color:var(--text)}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;font-weight:700;color:var(--text2);background:#f7f8fa}
+  .foot{margin-top:60px;border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--text2)}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  @media (max-width:720px){h1{font-size:30px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="chip" href="strategy_library.html">→ 策略总清单</a>
+  <a class="chip" href="reversal_patterns.html">→ 反转形态库</a>
+  <a class="chip" href="#data">队伍数据</a>
+</div></nav>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Matchup Forecast · 赛前情报层</div>
+    <h1>对战形态预判</h1>
+    <p class="sub">输入两队 + 赛前赔率（实力差），基于<b>队伍形态倾向频率 + 联赛信誉 + 情报信号</b>，
+    输出这场比赛<b>可能出现的形态清单（带置信度）</b>与盘中验证信号。</p>
+    <div class="meta"><span>性质 <b>参考性假说</b></span><span>样本 <b>89 序列 / 每队 2-6</b></span><span>验证 <b>盘中用 classify_pattern 确认</b></span></div>
+  </header>
+
+  <div class="panel">
+    <h2>选择对阵</h2>
+    <div class="hint">样本不足，结果仅供参考；每场比赛后自动回填队伍频率，预判会越来越准。</div>
+    <div class="inputs">
+      <div class="field"><label>队伍 A</label><select id="teamA"></select></div>
+      <span class="vs">VS</span>
+      <div class="field"><label>队伍 B</label><select id="teamB"></select></div>
+      <div class="field"><label>赛前赔率 A（实力差）</label>
+        <div class="odds-row">
+          <input type="range" id="odds" min="5" max="95" value="50" step="1" style="min-width:220px">
+          <output id="oddsOut">50 : 50</output>
+        </div>
+      </div>
+      <button class="btn" onclick="run()">生成预判</button>
+    </div>
+  </div>
+
+  <div class="res-head" id="results"><h2>预期形态清单</h2><span class="tag" id="scenario"></span></div>
+  <div class="grid" id="cards"></div>
+
+  <div class="notice" id="notice" style="display:none">
+    <b>用法</b>：这是赛前假说，不是结论——① 开盘后看实际价格与预期是否一致；
+    ② 盘中用 <b>tools/classify_pattern.py</b> 认实际形态，确认/否定预期；
+    ③ 每场比赛结束后回填队伍频率与结果，置信度随之更新。
+    也可以直接告诉 Codex"帮我判断这场 A vs B"，我会用同样逻辑 + 当日情报实时给出。
+  </div>
+
+  <div class="panel" id="data">
+    <h2>队伍形态倾向数据（现有样本）</h2>
+    <div class="hint">频率 = 该队出现各形态的次数（样本 n 见列）；用于合成对阵预判。</div>
+    <table id="teamTable">
+      <thead><tr><th>队伍</th><th>联赛</th><th>风格 / 画像</th><th>形态倾向</th><th>信任</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div class="notice" style="margin-top:16px">
+      <b>联赛信誉</b>：LCK / CS2 = 反转可信，可正常仓位；LPL / LEC = 假赛风险高，同形态降级小仓或观察；<b>LCP</b>（CFO 联赛）= 波动高（08-09 CFO/GZ 50→35→92.5 大摆动），单局快进快出、95c 止盈优先、不延伸整场。
+      <b>情报信号</b>：HLE 上单核心（BP 选角即可判断）、中单熟练度（08-08 WB/LNG）等见 knowledge/INTEL_SIGNALS.md。
+    </div>
+  </div>
+
+  <footer class="foot">
+    完整口径见 <a href="STRATEGY_MASTER_LIST.md">策略总清单</a>、<a href="REVERSAL_PATTERN_LIBRARY.md">反转形态库</a>、
+    <a href="../knowledge/TEAM_PROFILES.md">队伍画像</a>、<a href="../knowledge/EXPECTATION_VERIFICATION.md">预期情形盘中验证</a>。
+  </footer>
+</div>
+
+<script>
+const TEAMS = {
+  "WE":   {league:"LPL", profile:"打野核心启动", tend:["A1 极值反转","B4 阴跌","A6 反弹确认","A2 中位反转"], trust:"中"},
+  "TT":   {league:"LPL", profile:"爱打架，下狗反转倾向", tend:["A2 中位反转","A4 下狗整场"], trust:"中"},
+  "TES":  {league:"LPL", profile:"低位反转执行者", tend:["A2 中位反转","A1 极值反转","A4 下狗整场","A6 反弹确认"], trust:"中"},
+  "BLG":  {league:"LPL", profile:"大优会浪/送", tend:["B4 阴跌","B2 死亡螺旋","B1 尾盘崩塌"], trust:"高"},
+  "HLE":  {league:"LCK", profile:"上单核心（BP 选角决定）", tend:["B4 阴跌","A2 中位反转","A5 W 型"], trust:"高"},
+  "T1":   {league:"LCK", profile:"下路核心，样本不足", tend:["C2 开局碾压","B4 阴跌"], trust:"低"},
+  "BRO":  {league:"LCK", profile:"经济劣势翻盘能力强", tend:["A1 极值反转","A6 反弹确认","A2 中位反转"], trust:"中"},
+  "JDG":  {league:"LPL", profile:"强队压制型", tend:["A3 折价修复","热门全程压制"], trust:"高"},
+  "Gen.G":{league:"LCK", profile:"强队压制型", tend:["热门全程压制"], trust:"高"},
+  "KT":   {league:"LCK", profile:"强队压制型", tend:["热门全程压制"], trust:"高"},
+  "FOKUS":{league:"CS2", profile:"CS 深反执行者", tend:["A3 折价修复","A1 极值反转","A6 反弹确认"], trust:"中"},
+  "NRG":  {league:"CS2", profile:"CS 压制型", tend:["C2 开局碾压"], trust:"中"},
+  "SK":   {league:"LEC", profile:"样本不足", tend:["A2 中位反转","B4 阴跌"], trust:"低"},
+  "NAVI": {league:"LEC", profile:"LEC 强队", tend:["C2 开局碾压","A3 折价修复"], trust:"中"},
+  "DK":   {league:"LCK", profile:"落后韧性（G1 输后让一追二）", tend:["A2 中位反转","A4 下狗整场","A7 强强错杀"], trust:"中"},
+  "DRX":  {league:"LCK", profile:"易被横扫", tend:["B4 阴跌"], trust:"低"},
+  "CFO":  {league:"LCP", profile:"中位+信号执行（阿卡丽单杀）", tend:["A2 中位反转"], trust:"中"},
+  "GZ":   {league:"LCP", profile:"弱队", tend:["B4 阴跌"], trust:"低"}
+};
+const TRUST = {LCK:1.0, CS2:1.0, LPL:0.5, LEC:0.5, LCP:0.6};
+
+function fillSelects(){
+  const names = Object.keys(TEAMS);
+  const a=document.getElementById('teamA'), b=document.getElementById('teamB');
+  names.forEach(n=>{a.add(new Option(n,n)); b.add(new Option(n,n));});
+  a.value='TES'; b.value='TT';
+}
+const oddsEl=document.getElementById('odds');
+oddsEl.addEventListener('input',()=>{const v=+oddsEl.value;document.getElementById('oddsOut').textContent=v+': '+(100-v);});
+
+function has(team,pat){return team.tend.some(t=>t.includes(pat));}
+function conf(trust){return trust>=0.8?'中':'低';}
+
+function run(){
+  const A=document.getElementById('teamA').value, B=document.getElementById('teamB').value;
+  const oddsA=+oddsEl.value, oddsB=100-oddsA, gap=Math.abs(oddsA-oddsB);
+  const tA=TEAMS[A], tB=TEAMS[B];
+  const trust=Math.min(TRUST[tA.league]||0.5, TRUST[tB.league]||0.5);
+  const fav=oddsA>oddsB?tA:tB, dog=oddsA>oddsB?tB:tA;
+  const favN=oddsA>oddsB?A:B, dogN=oddsA>oddsB?B:A;
+  const cards=[];
+  const scenario = gap<=15?'强强对话（实力接近）':gap<=35?'中强对话（一方略优）':'强弱对话（大热门 vs 下狗）';
+
+  if(gap<=15){
+    if(has(tA,'A2')||has(tB,'A2')) cards.push({p:'A2 中位 U 型反转',c:conf(trust),
+      cond:'一方被砸到 13-35c 后回升',sig:'深蹲 + 反弹确认（A6）；触底时机 20-30 分钟',act:'S1-标准 买80回收；LPL/LEC 降级小仓'});
+    cards.push({p:'A7 强强对话错杀',c:conf(trust),
+      cond:'一方被错杀 <30c（常 <15c）',sig:'错杀位 + 反弹确认；联赛信誉过滤',act:'强强对话价值买入（彩票仓）；LCK/CS2 正常，LPL/LEC 观察'});
+    if(has(tA,'B4')||has(tB,'B4')||has(tA,'B1')||has(tB,'B1')) cards.push({p:'B1 尾盘崩塌（保护）',c:'高',
+      cond:'任一方 90c+ 停留',sig:'90c+ 停留时长 / 经济差 / 送头事件',act:'D2 锁盈 80%，不持仓过 90c+'});
+  } else if(gap<=35){
+    if(has(fav,'压制')||has(fav,'A3')) cards.push({p:'A3 折价修复 / 热门压制',c:'中',
+      cond:'热门 65-80c 回撤后修复（或全程无回撤）',sig:'回撤到 55-70c / 40-50c',act:'S2 45c 档主攻；跌破 40c 停'});
+    else cards.push({p:'热门全程压制（网格低交易价值）',c:'中',
+      cond:'热门无回撤（最低 62c+）',sig:'45c 挂单不触发 = 正常',act:'网格不挂单；若大热门 >=80c + 画像/状态确认 -> 躺赢持有 🟡（90c+ D2 锁盈，不裸奔）'});
+    if(has(dog,'A1')||has(dog,'A2')||has(dog,'A4')) cards.push({p:'A1/A2/A4 反转（下狗侧）',c:conf(trust),
+      cond:'下狗跌入深位 5-35c',sig:'反弹确认 / 下狗早买区 35-45c',act:'彩票机器层 1+2；LPL/LEC 降级'});
+    else cards.push({p:'B4 直线阴跌（下狗侧，不接）',c:'中',
+      cond:'无反弹阴跌',sig:'阴跌 / 破前低 / 流动性干涸',act:'不接'});
+  } else {
+    cards.push({p:'热门全程压制（网格低交易价值）',c:'高',
+      cond:'强弱悬殊',sig:'S2 挂单不触发',act:'网格不做；若大热门 >=80c + 实力差悬殊 -> 躺赢持有 🟡（90c+ D2 锁盈）'});
+    if(has(dog,'A1')||has(dog,'A2')||has(dog,'A4')) cards.push({p:'A1 深反彩票（下狗侧）',c:conf(trust),
+      cond:'下狗 <15c 深蹲',sig:'反弹确认 + 深蹲判别器',act:'彩票机器小仓'});
+    else cards.push({p:'B4 低开阴跌（不接）',c:'中',
+      cond:'低开一路阴跌',sig:'阴跌',act:'不接'});
+  }
+  if(A==='HLE'||B==='HLE') cards.push({p:'HLE 上单核心（BP 前置）',c:'高',
+    cond:'HLE 上单选后期大核且有声音',sig:'BP 选角阶段即可判断',act:'上单被压制 → B4；上单强 → A2/A3 反转或压制'});
+  if(A==='BLG'||B==='BLG') cards.push({p:'BLG 大优会浪（B1 风险）',c:'高',
+    cond:'BLG 90c+ 大优',sig:'经济领先 ≥1 万 / 送头事件',act:'D2 强锁，不持仓过 90c+'});
+
+  document.getElementById('scenario').textContent = scenario + ' · ' + oddsA + ':' + oddsB + ' · 信誉 ' + (trust>=0.8?'可信':'降级');
+  const box=document.getElementById('cards'); box.innerHTML='';
+  cards.forEach(cd=>{
+    const cls = cd.c==='高'?'hi':cd.c==='中'?'mid':'lo';
+    const d=document.createElement('div'); d.className='card';
+    d.innerHTML=`<div class="card-top"><h3>${cd.p}</h3><span class="conf ${cls}">${cd.c}</span></div>
+      <div class="row"><span class="lbl cond">触发条件</span>${cd.cond}</div>
+      <div class="row"><span class="lbl sig">验证信号</span>${cd.sig}</div>
+      <div class="row"><span class="lbl act">建议动作</span>${cd.act}</div>`;
+    box.appendChild(d);
+  });
+  document.getElementById('notice').style.display='block';
+}
+
+function renderTable(){
+  const tb=document.querySelector('#teamTable tbody');
+  Object.keys(TEAMS).forEach(n=>{
+    const t=TEAMS[n];
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td><b>${n}</b></td><td>${t.league}</td><td>${t.profile}</td><td>${t.tend.join(' · ')}</td><td>${t.trust}</td>`;
+    tb.appendChild(tr);
+  });
+}
+fillSelects(); renderTable(); run();
+</script>
+</body>
+</html>

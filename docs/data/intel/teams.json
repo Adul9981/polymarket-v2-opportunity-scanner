@@ -1,0 +1,1352 @@
+{
+ "schema_version": "1.0",
+ "updated_at": "2026-08-26",
+ "description": "队伍画像情报库：弹幕情报（提及/情绪/标签）+ 盘面情报 + 信任等级，跨场累计。",
+ "teams": [
+  {
+   "id": "dns",
+   "name": "DNS",
+   "league": "LCK / LCK CL / K杯",
+   "danmu": {
+    "mentions_total": 260,
+    "tone": "正（CL 季后赛 3:1 晋级）+ 历史灰信号重点标记",
+    "tags": [
+     "打野单核",
+     "换打野后连胜",
+     "背靠背体力隐患",
+     "暂停争议",
+     "常规赛垫底",
+     "K杯冠军",
+     "08-19 DNS vs BRO 样本不足",
+     "K杯夺冠归来被 BRO 2:0 横扫（背靠背/状态透支）",
+     "K杯冠军（08-18 3:0 NS）后被质疑剧本/含金量",
+     "'场场开低水，场场被虐'（观众口径）",
+     "灰信号高浓度（假赛之王lck/菠菜明牌）",
+     "G2 疑似换打野（'dns换个打野战绩那么好了么'）",
+     "08-24 LCK CL 季后赛 3:1 KRX.C 晋级",
+     "Lancer 卡山特正锚（G2 MVP 翻盘）",
+     "残阵对手下路击穿规律",
+     "中野前期节奏差（Flip/DDoiV）"
+    ],
+    "samples": [
+     "盲僧和其他九个不是一个档次的（shavel G1）",
+     "DNS 王朝了 / 倒数第一拿到冠军",
+     "换了个打野这么猛？",
+     "DNS 一直暂停（G2 灰信号触发点）"
+    ]
+   },
+   "market": {
+    "tendency": "状态类 A1/A2 反转执行者；1:0 领先后能守",
+    "evidence": "08-12 vs NS 新打野+连胜；08-10 让一追二 DRX、2:0 GEN"
+   },
+   "trust": "中",
+   "updated": "2026-08-24",
+   "gray_history": {
+    "total_signals": 30,
+    "records": [
+     "2026-08-18_dns_ns_g2"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-18",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "ns",
+   "name": "NS（Nongshim）",
+   "league": "LCK / K杯",
+   "danmu": {
+    "mentions_total": 320,
+    "tone": "中性转正（08-23 2:1 BFX：G1 崩后连扳两局）",
+    "tags": [
+     "三 FMVP 阵容",
+     "打野/AD 稳定性差",
+     "Kingen 被单杀",
+     "学弟发条没伤害",
+     "莲子神经刀",
+     "灰信号集中指向（历史）",
+     "08-23 2:1 BFX：G2 Diable 卢锡安 13 杀爆砍扳平、G3 Scout 辛德拉收官",
+     "AD 大菠萝(Diable) 回暖样本：G1 被泰永骑脸 → G2 卢锡安 13 杀",
+     "骑士之路第一轮 vs BFX BO5 生死战"
+    ],
+    "samples": [
+     "两个 S 赛冠军 + 一个 MSI 冠军打成这样",
+     "EZ 整场不交闪（大菠萝）",
+     "这打野打假赛啊（观众质疑，非结论）"
+    ]
+   },
+   "market": {
+    "tendency": "韧性样本+1：先崩后翻（08-23 2:1 BFX）",
+    "evidence": "08-12 vs DNS G1 平推后 G2/G3 连丢；K杯决赛 0:3；08-23 2:1 BFX（G1 负后连扳两局）"
+   },
+   "trust": "中",
+   "updated": "2026-08-23",
+   "gray_history": {
+    "total_signals": 48,
+    "records": [
+     "2026-08-18_dns_ns_g1",
+     "2026-08-18_dns_ns_g2"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-18",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "gga",
+   "name": "GGA（GEN 学院队）",
+   "league": "LCK CL",
+   "danmu": {
+    "mentions_total": 150,
+    "tone": "负（2:1 落败，但 G2 展示反扑力）",
+    "tags": [
+     "3胜21败",
+     "二队杰斯灾难",
+     "被俱乐部放养（无宿舍/教练）",
+     "BP 被比作 NS 风格"
+    ],
+    "samples": [
+     "3 胜 20 败不是没原因的",
+     "二队杰斯=灾难",
+     "GEN 把预算都花一队了",
+     "G2 女警/卡尔玛翻盘：'7.5k 女警''卡尔玛站出来了'",
+     "G3 假翻后 31 分钟打大龙送团灭：'倒数第一实至名归'"
+    ]
+   },
+   "market": {},
+   "trust": "低-中（弹幕来源）",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "bro",
+   "name": "BRO（브리온）",
+   "league": "LCK CL",
+   "danmu": {
+    "mentions_total": 0,
+    "tone": "负（08-26 vs KT BO5：BRO 2-3 出局；越打越好但终结能力差再次验证）",
+    "tags": [
+     "终结能力差",
+     "后期阵容价值高但无法终结",
+     "G2 瑞兹/打架阵能赢",
+     "Deny/打野被批",
+     "Naafiri G3 灰信号中心（待归人）",
+     "1:2 负（弹幕+用户确认）",
+     "1:2 负 BFX（08-21 LCK）",
+     "G1 奥拉夫灰信号 47 条/41%=监控以来密度最高（方向兑现：BRO 输 G1）",
+     "用户 G2 抄底 +30 / G3 全仓 -220（见交易复盘）",
+     "08-26 vs KT：G2/G3 连扳（卡列反打翻节奏）",
+     "08-26 vs KT：2-3 出局（G2/G3 胜、G1/G4/G5 负）",
+     "G5 差一条龙——\"bro拿一条小龙都赢了\""
+    ],
+    "samples": [
+     "BRO 总是占优然后这样输",
+     "희망이 디나이인거부터(希望寄托Deny就完了)",
+     "브리온 스트레이트4용(BRO 让四龙)",
+     "一个职业选手不知道奥拉夫开大往里冲？我不信！就是不想赢而已",
+     "懦拉夫"
+    ]
+   },
+   "market": {},
+   "trust": "低-中",
+   "updated": "2026-08-26"
+  },
+  {
+   "id": "kc",
+   "name": "KC",
+   "league": "LEC",
+   "danmu": {
+    "mentions_total": 87,
+    "tone": "正偏争议（2:1 让一追二赢 SHFT；灰信号方向未兑现）",
+    "tags": [
+     "欧洲独一档",
+     "卡时间打法",
+     "领先1万拖到32分钟",
+     "灰信号集中",
+     "2026-08-24 G1 被 SHFT 爆冷（领先5k/天肥女警被翻，34 分钟）",
+     "灰信号再犯：蛇女/女警被疑明演（定向 24 条），'被质疑方输球'兑现",
+     "卡时间规律再样本（打谁都要30几分钟）",
+     "蛇女 BP 正锚未应验（反向样本）",
+     "G2 马拉松局（约49分钟）扳平（让一追二进行中）",
+     "中单双局负锚：G1 蛇女/G2 瑞兹",
+     "灰信号方向混合：G1 兑现/G2 未兑现",
+     "2026-08-24 2:1 SHFT（让一追二，官方确认）",
+     "卡时间三局实锤（34/49/27分钟）",
+     "灰信号方向未兑现：三局高浓度定向但 KC 赢（关键反例）",
+     "中单三局负锚（蛇女/瑞兹/第三选）但系列赢"
+    ],
+    "samples": [
+     "不到32不会推进",
+     "时间一到马上结束",
+     "太假了这kc（观众质疑，非结论）",
+     "这个蛇女明牌假赛",
+     "都是第一了，打倒数第一为什么不吃",
+     "lec也敢吃低保"
+    ]
+   },
+   "trust": "中",
+   "updated": "2026-08-24",
+   "gray_history": {
+    "total_signals": 93,
+    "records": [
+     "2026-08-18_kc_gx",
+     "2026-08-24_kc_shft_g1"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-24",
+    "status": "重点标记（再犯升级·方向兑现）",
+    "note": "凡走过必有痕迹（但方向未兑现反例）：08-18 卡时间 69 条 → 08-24 系列三局 ~100 条定向，G1 兑现/G2+G3 未兑现（KC 2:1）——高浓度灰信号≠必输"
+   }
+  },
+  {
+   "id": "gx",
+   "name": "GX",
+   "league": "LEC",
+   "danmu": {
+    "mentions_total": 11,
+    "tone": "正（2:0 TH；资源团纪律）",
+    "tags": [
+     "被碾压",
+     "阵容不行",
+     "LEC汤圆",
+     "2026-08-23 2:0 TH：G1 翻盘（TH 领先5k开送）",
+     "G2 控资源纪律（'gx资源团不送永远不可能输'）",
+     "Flakked 老将（G2 初代 AD 仍在打）",
+     "让分 -1.5 兑现",
+     "赛前共识 86% 兑现"
+    ],
+    "samples": [
+     "右边看不到一点希望",
+     "这把gx输不了 资源团不送 永远不可能输",
+     "第三条龙拿不到 就感觉gx不放水了"
+    ]
+   },
+   "trust": "低-中（弹幕+盘口口径）",
+   "updated": "2026-08-24"
+  },
+  {
+   "id": "th",
+   "name": "TH（Team Heretics）",
+   "league": "LEC",
+   "danmu": {
+    "mentions_total": 14,
+    "tone": "负（0:2 GX；弱队三负锚集齐）",
+    "tags": [
+     "放资源换发育",
+     "20分钟三龙听牌",
+     "观众嘴上看衰但比分领先",
+     "三度被嘲'菜的发昏/人机TH'",
+     "08-21 SK-TH：开局 3-0/5-1 领先被翻",
+     "G2 强势扳平（'有备而来/虐菜有心得/恭喜th'）",
+     "剑魔+炼金龙魂 23 分钟速通",
+     "'放龙剧本'跨场延续（观众口径）",
+     "2:0 横扫 SK（08-21）",
+     "G1 后期翻盘 + G2 剑魔炼金龙魂速通（'恭喜th'）",
+     "本系列灰信号实际指向 SK（非 TH 再犯，误判已修正）",
+     "'放龙剧本'为 TH 上周边延续（观众口径）",
+     "2026-08-23 0:2 GX：G1 领先5k被翻（杰斯+女警开送）",
+     "G2 剑魔打野+纳尔+卢锡安体系中期崩（'假翻'数波）",
+     "上野负面中心：Daglas 剑魔打野/Tracyn 纳尔",
+     "弱队杰斯/卢锡安无体系/剑魔打野三负锚集齐",
+     "刚 2:0 SK 热手叙事被 GX 打断"
+    ],
+    "samples": [
+     "th今天有备而来啊",
+     "恭喜th",
+     "th确实虐菜有心得",
+     "th这菜逼 现在这么猛（热手叙事，未兑现）",
+     "道格拉斯有什么逼脸拿剑魔打野",
+     "这个th是真菜的发瘟"
+    ]
+   },
+   "trust": "低（弹幕来源，待盘面验证）",
+   "updated": "2026-08-24",
+   "gray_history": {
+    "total_signals": 248,
+    "records": [
+     "2026-08-17_th_navi"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-17",
+    "status": "重点标记（多次再犯）",
+    "note": "08-17 TH-Navi 留痕；08-21 SK-TH 灰信号指向 SK，非 TH 再犯"
+   }
+  },
+  {
+   "id": "wbg",
+   "name": "WBG（微博）",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 251,
+    "tone": "负（'不敢赢'叙事中心）",
+    "tags": [
+     "小虎被批",
+     "灰信号中心（杀减号/不敢赢）",
+     "2:1 胜（官方确认）"
+    ],
+    "samples": [
+     "微博这队伍基本不可能 2-0",
+     "名牌不敢赢杀减号",
+     "虎大捞比",
+     "官方：2:1 胜 LNG，G3 小虎维克托终结"
+    ]
+   },
+   "market": {},
+   "trust": "低-中",
+   "updated": "2026-08-20",
+   "gray_history": {
+    "total_signals": 104,
+    "records": [
+     "2026-08-19_wbg_lng"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-19",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "lng",
+   "name": "LNG（李宁）",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 202,
+    "tone": "负（'任务队'质疑）",
+    "tags": [
+     "任务队质疑",
+     "紫卡身价打没",
+     "1:2 负（官方确认，六连败收官）"
+    ],
+    "samples": [
+     "lng 纯的任务队",
+     "lng 的目的就是按照庄家的指令打比赛"
+    ]
+   },
+   "market": {},
+   "trust": "低-中",
+   "updated": "2026-08-20",
+   "gray_history": {
+    "total_signals": 104,
+    "records": [
+     "2026-08-19_wbg_lng"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-19",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "tes",
+   "name": "TES（滔搏）",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 39,
+    "tone": "正（2:1 胜）",
+    "tags": [
+     "打野玉玉被集火",
+     "ZUI 纳尔 G1 关键",
+     "2:1 胜（官方确认）",
+     "08-22 JDG-TES：状态差（昨天被BLG打自闭）",
+     "小天打野被批（'不如给小天没他赢不了'反讽）",
+     "教练 BP 公式化（'谁都知道你选奥拉夫'）"
+    ],
+    "samples": [
+     "打野互换滔博早赢了",
+     "滔搏中下两个大哥发挥太差"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-22",
+   "gray_history": {
+    "total_signals": 49,
+    "records": [
+     "2026-08-19_tes_al"
+    ],
+    "max_severity": "中",
+    "last_seen": "2026-08-19",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "al",
+   "name": "AL",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 35,
+    "tone": "负（追二失败 WE）",
+    "tags": [
+     "打野巨魔被批",
+     "Breathe 奎桑提 POG",
+     "HOPE 韦鲁斯",
+     "1:2 负（官方确认）",
+     "1:2 负 WE（08-21）",
+     "tarzan G3 被批不控龙",
+     "AL -1.5 盘口未兑现",
+     "G1 塔赞占优信号（弹幕）"
+    ],
+    "samples": [
+     "这巨魔真是逆天要把队友都带崩",
+     "韦鲁斯是 hope 爹啊",
+     "塔赞 G3 不控龙"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-21",
+   "gray_history": {
+    "total_signals": 49,
+    "records": [
+     "2026-08-19_tes_al"
+    ],
+    "max_severity": "中",
+    "last_seen": "2026-08-19",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "gen",
+   "name": "GEN（Gen.G）",
+   "league": "LCK",
+   "danmu": {
+    "mentions_total": 80,
+    "tone": "正（状态好，'演'讨论背景）",
+    "tags": [
+     "Chovy 状态好",
+     "Kiin 奥拉夫",
+     "Ruler 女警翻盘",
+     "2:1 胜（官方确认，传奇组前二）"
+    ],
+    "samples": [
+     "大超虐人了",
+     "换冰女了那 gen 赢了",
+     "官方：让一追二 2:1 KT，锁定传奇组前二"
+    ]
+   },
+   "market": {
+    "tendency": "强队，状态好"
+   },
+   "trust": "中",
+   "updated": "2026-08-20",
+   "gray_history": {
+    "total_signals": 10,
+    "records": [
+     "2026-08-19_gen_kt"
+    ],
+    "max_severity": "中",
+    "last_seen": "2026-08-19",
+    "status": "重点标记",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "kt",
+   "name": "KT",
+   "league": "LCK",
+   "danmu": {
+    "mentions_total": 2773,
+    "tone": "中性偏正（08-26 vs BRO BO5：KT 3-2 晋级；伪强队叙事多次被证伪，G5 惊险翻盘）",
+    "tags": [
+     "ADC 鸡窝被批",
+     "BDD 被批",
+     "PerfecT 奎桑提 G2 扳平",
+     "1:2 负（官方确认，五连败）",
+     "1:2 负 T1（08-21，让一追二被翻）",
+     "连续两局领先被翻='充电宝'",
+     "Perfect 鳄鱼 G3 优势送（灰信号弱兑现）",
+     "鸡窝（ADC）三局被看衰",
+     "掉入围赛线（弹幕口径）",
+     "08-26 vs BRO：G1 胜 / G2 负 / G3 负 / G4 胜（弹幕口径+结算）",
+     "G4 BP 双绝活正锚（BDD 佐伊 + 泰迪 EZ）未兑现",
+     "阵容被动/龙魂控制差（\"2把一条龙没控到\"）",
+     "BDD 被单杀（G4）、中野熄火",
+     "灰信号三路共振（G4 局中\"打野演员/假赛\"）——再犯升级",
+     "08-26 vs BRO：KT 3-2 晋级（G1/G4/G5 胜）",
+     "G4 BP 双绝活未兑现仍赢；G5 阵容首次获赞\"太扎实\"",
+     "共识判 KT 出局两次未兑现（G1/G4）——叙事需以结果校准"
+    ],
+    "samples": [
+     "KT 换 ad 换崩了",
+     "让 BDD 玩工具人 KT 赢不了",
+     "kt牌充电宝完成任务",
+     "这kt纯不敢赢",
+     "kt2-0很稳（落空）",
+     "kt本质伪强队，原形毕露了（08-26 G4）",
+     "佐伊没优势没用，打团就一个q（08-26 G4）",
+     "杰斯ez都能被右边一起拿到，左边教练是人啊（08-26 G4）"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-26",
+   "gray_history": {
+    "total_signals": 26,
+    "records": [
+     "2026-08-19_gen_kt",
+     "2026-08-21_t1_kt_g2",
+     "2026-08-21_t1_kt_g3",
+     "2026-08-26_kt_bro2_g4"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-26",
+    "status": "重点标记",
+    "note": "08-26 vs BRO G4 局中：硕硕/957/米勒三路共振\"演/假赛/打野演员\"，输家侧指向 KT 打野——再犯升级，兑现待官方"
+   }
+  },
+  {
+   "id": "we",
+   "name": "WE（西安）",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 1141,
+    "tone": "负（1:2 LGD，翻盘体质失效）",
+    "tags": [
+     "领先一万被翻",
+     "Monki(超雄=弹幕嘲讽/莽) 打野被质疑",
+     "BP 争议",
+     "刚 2:0 TES 强弱互换",
+     "0:2 负（弹幕口径）",
+     "2:1 胜 AL（08-21，G3 翻盘）",
+     "Monki 再犯灰信号（'超雄开演'）但方向未兑现（WE 赢系列）",
+     "'劫富济贫'叙事",
+     "AL -1.5 盘口未兑现",
+     "1:2 负 LGD（08-22，让一追二被反杀）",
+     "Monki 灰信号三连本场兑现（WE 输系列）",
+     "karis 中单被汤圆爆三把",
+     "少爷 AD 状态差（卢锡安负锚点）",
+     "'只会翻盘'但 G3 被 21-4 碾压"
+    ],
+    "samples": [
+     "WE 让打野坑了",
+     "这 WE 野辅是人吗",
+     "这把MVP:Monki（反讽）",
+     "WE 刚 2:0 TES 转手输 EDG",
+     "超雄开演/超雄今天怎么送",
+     "WE 说白了就是靠临场，没有完整的运营体系"
+    ]
+   },
+   "market": {},
+   "trust": "低-中",
+   "updated": "2026-08-22",
+   "gray_history": {
+    "total_signals": 881,
+    "records": [
+     "2026-08-19_we_edg",
+     "2026-08-21_we_al_g1",
+     "2026-08-22_we_lgd"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-22",
+    "status": "重点标记（Monki 多次再犯）",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "edg",
+   "name": "EDG",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 754,
+    "tone": "中性（08-23 1:2 JDG：扳平后决胜失利）",
+    "tags": [
+     "赛季首胜（08-19 2:0）",
+     "韧性翻盘",
+     "jiejie 打野 MVP 候选",
+     "永恩体系",
+     "暂停梗",
+     "08-23 1:2 JDG：G2 扳平后 G3 决胜失利（约 19:49）",
+     "jiejie 口碑危机持续：\"登峰第一菜打野/刷野一局/一龙不拿\"（弹幕批评密集）"
+    ],
+    "samples": [
+     "EDG 王朝/就在今天",
+     "感谢老铁送的首胜",
+     "杰杰又是 MVP，好气啊",
+     "EDG 后期让对方三龙汇都没事"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "astralis",
+   "name": "Astralis（A队）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 30,
+    "tone": "负（被 G2 淘汰）",
+    "tags": [
+     "出局（弹幕口径）",
+     "phzy 独木难支"
+    ],
+    "samples": [
+     "A队两图晋级了",
+     "A队不吃晃的狙击手",
+     "A队暴打G2就离谱"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "g2",
+   "name": "G2",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 60,
+    "tone": "正（胜 A队晋级）",
+    "tags": [
+     "胜 Astralis（弹幕口径）",
+     "新狙 rinkle 有争议",
+     "晋级"
+    ],
+    "samples": [
+     "G2新来狙击手不如阳叔一根",
+     "没阳叔就彻底瘫了",
+     "G2的遗迹又菜又爱玩",
+     "rinkle杀人伤害队伍的"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "magic",
+   "name": "Magic（魔术）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 55,
+    "tone": "负（被 FUT 淘汰）",
+    "tags": [
+     "阿伟状态崩塌成主因",
+     "出局（弹幕口径）"
+    ],
+    "samples": [
+     "魔术队赢FUT倒是不意外",
+     "魔术太聪明了",
+     "魔术这狙还不行？",
+     "魔术一点纪律性没有"
+    ]
+   },
+   "market": {},
+   "trust": "低-中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "fut",
+   "name": "FUT",
+   "league": "EWC CS2 / BLAST Open Porto",
+   "danmu": {
+    "mentions_total": null,
+    "tone": "负（2026-08-23 EWC 亚军；2026-08-27 BLAST 0:2 Legacy 出局）",
+    "tags": [
+     "2026-08-27 BLAST Open Porto Group B 0:2 Legacy（官方：Ancient 10-13 / Dust II 11-13）",
+     "输掉自己选图 Ancient（BLAST 页近 10 场 69.2% 强图未兑现）",
+     "图二 Dust II 崩盘模式再现（'fut喜欢浪'），弹幕'fut沙二 没战术 没思路'",
+     "狙击手 cmtry 26-35/-9 全程被压（敌我狙击手：vs Legacy try 42-22/+20）",
+     "灰信号 57+ 条三房质疑（'不想赢/放分/收钱了吧'，观众质疑·非结论）",
+     "图三强图兑现",
+     "晋级（弹幕口径）",
+     "2026-08-23 EWC 决赛亚军（0:3 Spirit 后三图）",
+     "图池短板：Nuke 今年零胜率（Ban 沙二不 Ban Nuke 被拷问）",
+     "关键局心理波动：两图赛点全丢（'5打3输了/3打1输了'）",
+     "狙击手软肋（'fut的狙纯区/换王德发真王朝了'）",
+     "风格：前压/找人单挑（'太喜欢找人对枪'）——对纪律型队伍自伤"
+    ],
+    "samples": [
+     "故意送的吧",
+     "fut明显不想赢",
+     "废物FUT开始吃了",
+     "fut沙二 没战术 没思路 不然为什么ban啊",
+     "不是魔术强是FUT自己拉完了",
+     "fut怎么没人喊",
+     "这FUT两张图几个赛点都没有拿下",
+     "fut缺个MOLODY",
+     "fut本质二线队（决赛口径）"
+    ]
+   },
+   "market": {},
+   "trust": "低-中（弹幕+官方战报口径）",
+   "updated": "2026-08-28"
+  },
+  {
+   "id": "faze",
+   "name": "FaZe",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 95,
+    "tone": "分歧（图池被看好 vs 状态不稳）",
+    "tags": [
+     "图池优势（叉车/遗迹）",
+     "地狱归来/触底反弹叙事",
+     "不稳定（毒瘤指挥/聚散梗）"
+    ],
+    "samples": [
+     "faze打小蜜蜂有图池优势",
+     "faze地狱舒适区",
+     "聚是一坨屎散是满天星",
+     "faze毒瘤指挥怎么看"
+    ]
+   },
+   "market": {
+    "tendency": "观众倾向 FaZe，但爆冷日对热门不利"
+   },
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "vitality",
+   "name": "Vitality（小蜜蜂）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 30,
+    "tone": "负偏质疑（被看衰）",
+    "tags": [
+     "沙二胜率 25%",
+     "'进四强我吃一斤拖鞋'",
+     "vs FaZe 图池劣势"
+    ],
+    "samples": [
+     "蜜蜂沙二才25胜率",
+     "小蜜蜂能进四强我吃一斤拖鞋",
+     "赢小蜜蜂还是有说法"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "mouz",
+   "name": "MOUZ（老鼠）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 556,
+    "tone": "分歧（晋级但状态差）",
+    "tags": [
+     "2:1 胜 GL（弹幕口径）",
+     "让一追二",
+     "换血后变弱共识",
+     "新援被批"
+    ],
+    "samples": [
+     "换完阵之后老鼠没以前强了",
+     "老鼠现在打一个三流战队都搞不赢",
+     "恭喜老鼠🐭"
+    ]
+   },
+   "market": {
+    "tendency": "状态差但晋级；下轮 vs Aurora"
+   },
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "gl",
+   "name": "GL（GamerLegion）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 182,
+    "tone": "负（被 MOUZ 淘汰）",
+    "tags": [
+     "K3 指挥争议",
+     "枪法队",
+     "图一赢后连丢被让一追二",
+     "出局（弹幕口径）"
+    ],
+    "samples": [
+     "指挥不行硬是靠枪法打赢",
+     "K3指挥一坨/枪法硬两极",
+     "K3呼吸snax全部回家"
+    ]
+   },
+   "market": {},
+   "trust": "低-中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "aurora",
+   "name": "Aurora（欧若拉）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 155,
+    "tone": "负（R16 1:2 出局，官方确认）",
+    "tags": [
+     "1:2 负 FURIA（官方确认，R16 出局）",
+     "图一 8:4 大优被翻后仍曾领先，图三落败",
+     "不会守 CT",
+     "小吉米新援低迷"
+    ],
+    "samples": [
+     "欧若拉明显不会CT",
+     "换阵换了个啥啊 找来两个大摊子"
+    ]
+   },
+   "market": {
+    "tendency": "R16 出局；此前弹幕口径误记晋级已修正（官方 FURIA 2:1）"
+   },
+   "trust": "低-中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "furia",
+   "name": "FURIA（黑豹）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": 80,
+    "tone": "正（R16 2:1 胜 Aurora、QF 2:1 胜 G2，官方确认）",
+    "tags": [
+     "2:1 胜 Aurora（官方确认，R16 晋级）",
+     "fallen/教父 老将发挥",
+     "黑闪被批",
+     "QF 2:1 再胜 G2 进四强"
+    ],
+    "samples": [
+     "教父还没老啊",
+     "教父杀21个",
+     "黑闪真的区完了"
+    ]
+   },
+   "market": {
+    "tendency": "四强；黑豹连胜叙事（R16 胜 Aurora、QF 胜 G2）"
+   },
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "team_spirit_dota2",
+   "name": "Team Spirit（Dota2）",
+   "league": "The International 2026",
+   "danmu": {
+    "mentions_total": 11,
+    "tone": "正偏分歧（G1 收尾样本）",
+    "tags": [
+     "62分钟长局韧性",
+     "兵线/基地压迫",
+     "德鲁伊小熊终结",
+     "正面团战未必占优但胜负条件清晰"
+    ],
+    "samples": [
+     "尾段观众集中讨论雪碧依靠兵线和小熊持续给基地压力",
+     "结束后双源共识为 Team Spirit 拿下 G1"
+    ]
+   },
+   "market": {
+    "tendency": "Dota 后期不能仅按正面团战定价；拥有德鲁伊/三路兵线时，基地压力会显著压低对手真实容错",
+    "evidence": "TI2026 vs Iron Wing G1，Team Spirit 45:34，Yatoro 德鲁伊塔伤 36,688"
+   },
+   "trust": "中（首个弹幕样本，需系列后续验证）",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "iron_wing",
+   "name": "Iron Wing（Dota2）",
+   "league": "The International 2026",
+   "danmu": {
+    "mentions_total": 1,
+    "tone": "负（G1 终局执行）",
+    "tags": [
+     "正面接团能力仍在",
+     "三路兵线/基地处理失败",
+     "末日买活与大招决策争议",
+     "bzm 高输出未兑现"
+    ],
+    "samples": [
+     "G1 收尾讨论集中在能打团但守不住基地",
+     "bzm 被视为尽力，33 成为终局决策批评焦点"
+    ]
+   },
+   "market": {
+    "tendency": "后期赢团不等于可兑现；基地暴露时不应因一次团战胜利追高",
+    "evidence": "TI2026 vs Team Spirit G1，bzm 全场最高英雄伤害但 Iron Wing 34:45 告负"
+   },
+   "trust": "中（首个弹幕样本，需系列后续验证）",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "krx",
+   "name": "KRX（키움/Kiwoom）",
+   "league": "LCK CL",
+   "danmu": {
+    "mentions_total": 0,
+    "tone": "负偏（残阵出局）+ 上野能打",
+    "tags": [
+     "G1 Rich 卡蜜尔/G3 远古龙超神操作",
+     "无前排但伤害溢出",
+     "对 BRO 历史不败(弹幕)",
+     "2:1 胜（弹幕+用户确认）",
+     "08-22 DNS-KRX：'krx玩的好oner啊'（打野被赞）",
+     "G1 翻盘方候选（'krx翻了'）",
+     "'下把上rich'待确认",
+     "08-24 LCK CL 季后赛 1:3 出局",
+     "残阵：Rich/LazyFeel 禁赛 → Vincenzo 转 ADC",
+     "下路灾难画像（Vincenzo/AKaJe）",
+     "Winner 打野 G3 亮点",
+     "CL 杰斯必败负锚（Frog）"
+    ],
+    "samples": [
+     "리치 장로전 슈퍼플레이(Rich 远古龙超级操作)",
+     "키움 이제 훨씬 쌔(KRX 强多了)",
+     "KRX 상체가 재앙(上野是灾难但赢了)"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-24"
+  },
+  {
+   "id": "hle",
+   "name": "HLE（韩华）",
+   "league": "LCK",
+   "danmu": {
+    "mentions_total": 88,
+    "tone": "正（2:0 DK）",
+    "tags": [
+     "强开/翻盘",
+     "Delight 牛头体系",
+     "领先爱浪不稳",
+     "已锁世界赛",
+     "2:0 胜（弹幕口径）"
+    ],
+    "samples": [
+     "韩华打团能力很强",
+     "韩华太能送了啊(领先浪)",
+     "hle又赢了"
+    ]
+   },
+   "market": {
+    "tendency": "强队但领先不稳"
+   },
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "dk",
+   "name": "DK",
+   "league": "LCK",
+   "danmu": {
+    "mentions_total": 137,
+    "tone": "负（0:2）",
+    "tags": [
+     "杰斯体系输（判负应验）",
+     "送麻/掉点",
+     "Guma 被单杀",
+     "要和 KT 抢名额",
+     "0:2 负（弹幕口径）",
+     "0:2 HLE（08-20）",
+     "G1 98.5c 被翻盘=高位不稳样本"
+    ],
+    "samples": [
+     "DK经典，第一局优势被翻，第二局直接拉到底",
+     "DK送麻了",
+     "假赛之王DK(玩梗)"
+    ]
+   },
+   "market": {},
+   "trust": "中",
+   "updated": "2026-08-20"
+  },
+  {
+   "id": "t1",
+   "name": "T1",
+   "league": "LCK",
+   "danmu": {
+    "mentions_total": 2500,
+    "tone": "正（2:1 让一追二，终结三连败）",
+    "tags": [
+     "上中野被集中批（'登峰5队里最菜的上中野'）",
+     "Peyz 双模式大核（岩雀9-0/女警）",
+     "Keria 游走提速（硬辅王）",
+     "'死一次基地爆炸'单核体系（G1 应验/G2G3 未触发）",
+     "多兰三局资源黑洞（武器0-3-0/VN7.6k/格温送）",
+     "轮换/转会梗（海苔/画家/48）",
+     "2:1 胜（弹幕口径，官方待回填）"
+    ],
+    "samples": [
+     "T1拥有登峰5个队里，现在最菜的上中野",
+     "少爷太c了/这个家没pz得散",
+     "死一次基地爆炸",
+     "多兰领先4000经济就打了个这个"
+    ]
+   },
+   "market": {
+    "tendency": "排名第三（弹幕口径，待官方）；T1 赢→DK 进季后赛"
+   },
+   "trust": "中",
+   "updated": "2026-08-21",
+   "gray_history": {
+    "total_signals": 40,
+    "records": [
+     "2026-08-21_t1_kt_g2"
+    ],
+    "max_severity": "低-中",
+    "last_seen": "2026-08-21",
+    "status": "重点标记",
+    "note": "Oner G2 定向质疑（演/收钱/假赛）方向未兑现；凡走过必有痕迹"
+   }
+  },
+  {
+   "id": "bfx",
+   "name": "BFX",
+   "league": "LCK",
+   "danmu": {
+    "mentions_total": 22,
+    "tone": "转负（08-23 1:2 NS：领先后被翻）",
+    "tags": [
+     "2:1 胜 BRO（08-21）",
+     "G1 奥拉夫灰信号 47 条/41% 全指向 BRO 侧（质疑方向兑现：BRO 输 G1）",
+     "08-23 1:2 NS：G1 泰永女警 10-0 超神后连丢两局",
+     "泰永(Taeyoon) AD 对位压制样本（G1 骑脸大菠萝）但系列被翻",
+     "骑士之路第一轮 vs NS BO5 生死战"
+    ],
+    "samples": [
+     "重仓 BFX 有人不想赢，但是我不说是谁",
+     "bfx拿下了，这人狗人柱力",
+     "这BFX打团真的垃圾"
+    ]
+   },
+   "market": {
+    "tendency": "领先守不住样本+1（G1 10-0 超神后 1:2）",
+    "evidence": "08-23 vs NS：G1 大胜后 G2/G3 连丢"
+   },
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "sk",
+   "name": "SK Gaming（SK）",
+   "league": "LEC",
+   "danmu": {
+    "mentions_total": 9,
+    "tone": "负（0:2 被横扫，两局灰信号中心）",
+    "tags": [
+     "G1 3-0 领先被翻（'开局3-0大优势打成这样'）",
+     "G2 团战阵放龙被速通（'Sk就是人机'）",
+     "两局灰信号均指向 SK（83 条，方向连续兑现）",
+     "Wunder 纳尔依赖（'没有纳尔直接输一半'）",
+     "'大优势水位不动'盘口联动"
+    ],
+    "samples": [
+     "sk赚了！（灰话：做局输球获利，非胜）",
+     "皇子明着演/wunder是演员",
+     "大优势sk还是水位不动"
+    ]
+   },
+   "market": {
+    "tendency": "LEC 后期翻盘型队伍"
+   },
+   "trust": "中-低",
+   "updated": "2026-08-22",
+   "gray_history": {
+    "total_signals": 83,
+    "records": [
+     "2026-08-21_sk_th",
+     "2026-08-21_sk_th_g2"
+    ],
+    "max_severity": "高",
+    "last_seen": "2026-08-21",
+    "status": "重点标记（首次）",
+    "note": "两局被疑做局且均输，方向连续兑现；再犯自动升级"
+   }
+  },
+  {
+   "id": "ig",
+   "name": "IG",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 300,
+    "tone": "负（0:2 NIP 被横扫）",
+    "tags": [
+     "'三个世界冠军一个msi冠军'豪华阵容发挥失常",
+     "上单（奥拉夫/掘墓双负锚点）+辅助（Meiko 巴德）+教练 BP 三处背锅",
+     "控分/故意输叙事（排名博弈，待官方）",
+     "'IG不换上单包输'"
+    ],
+    "samples": [
+     "右边三个世界冠军一个msi冠军解散吧",
+     "妹妹的巴德你就享受吧",
+     "IG故意控分，拿涅槃第二"
+    ]
+   },
+   "trust": "中",
+   "updated": "2026-08-22",
+   "gray_history": {
+    "total_signals": 15,
+    "records": [
+     "2026-08-22_ig_nip"
+    ],
+    "max_severity": "低-中",
+    "last_seen": "2026-08-22",
+    "status": "关注",
+    "note": "控分叙事待官方验证"
+   }
+  },
+  {
+   "id": "nip",
+   "name": "NIP（糯米鸡）",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 150,
+    "tone": "正（2:0 横扫 IG）",
+    "tags": [
+     "'严父/克星'叙事（研究透了 IG）",
+     "佳琪烬正锚点",
+     "波比体系（'放波比的代价'）",
+     "'NIP打团更默契'"
+    ],
+    "samples": [
+     "NIP拿下了",
+     "NIP简直就是怎么研究打IG的",
+     "这就是放波比的代价"
+    ]
+   },
+   "trust": "中",
+   "updated": "2026-08-22"
+  },
+  {
+   "id": "navi",
+   "name": "Natus Vincere（NAVI）",
+   "league": "EWC CS2",
+   "danmu": {
+    "mentions_total": null,
+    "tone": "负（R16 0:2 出局，官方确认）",
+    "tags": [
+     "0:2 负 Legacy（官方确认）",
+     "w0nderful 唯一正输出（1.14 Rating）",
+     "换人/AWPer 魔咒叙事",
+     "\"全世界都认为 NAVI 变强了\"被打脸"
+    ],
+    "samples": [
+     "navi 被炸鱼了",
+     "navi 不会直接回家吧",
+     "这navi穿着跟去洗脚似的"
+    ]
+   },
+   "market": {
+    "tendency": "EWC 9-16 名；依赖单点（w0nderful/发哥）"
+   },
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "legacy",
+   "name": "Legacy（菊花，巴西）",
+   "league": "EWC CS2 / BLAST Open Porto",
+   "danmu": {
+    "mentions_total": null,
+    "tone": "正（2026-08-27 BLAST 2:0 FUT 晋级胜者组半决赛；2026-08-23 R16 2:0 NAVI）",
+    "tags": [
+     "2026-08-27 BLAST Open Porto Group B 2:0 FUT（官方：Ancient 13-10 / Dust II 13-11）→ 晋级胜者组半决赛，对阵 Falcons/LVG 胜者",
+     "狙击手 try 全场 MVP（42-22/+20，'潘帕斯闪光/蓝白闪光'）——'敌我狙击手'完胜 FUT cmtry",
+     "Dust II 强图兑现（'菊花沙二强图'，13-11 拿下）",
+     "弹幕期待'三擒猎鹰'（对 Falcons H2H 占优叙事）",
+     "2:0 横扫 NAVI（官方确认，图二 13-2）",
+     "n1ssim/dumau 图二合砍 41 杀",
+     "小镇(Inferno)强图自选兑现",
+     "latto：没想到赢 NAVI 这么轻松"
+    ],
+    "samples": [
+     "菊花沙二强图",
+     "到了沙二你就看try神怎么狙吧",
+     "恭喜菊花，获得猎鹰抚养权",
+     "菊花小镇强的啊",
+     "菊花选的地图他赢",
+     "菊花拿赛点后故意保枪"
+    ]
+   },
+   "market": {
+    "tendency": "胜者组半决赛对阵 Falcons/LVG 胜者（官方）"
+   },
+   "trust": "中",
+   "updated": "2026-08-28"
+  },
+  {
+   "id": "team_vision",
+   "name": "Team Vision（PV）",
+   "league": "The International 2026",
+   "danmu": {
+    "mentions_total": null,
+    "tone": "正（胜者组 2:1 胜 BoomBoys，官方确认）",
+    "tags": [
+     "2:1 胜 BoomBoys（官方确认）",
+     "赏金体系（\"喜欢放 PV 的赏金\"）",
+     "妖刀/非常规打法"
+    ],
+    "samples": [
+     "喜欢放pv的赏金",
+     "正面谁打得过吗"
+    ]
+   },
+   "market": {
+    "tendency": "胜者组半决赛迎战 Team Spirit"
+   },
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "boomboys",
+   "name": "BoomBoys（BB）",
+   "league": "The International 2026",
+   "danmu": {
+    "mentions_total": null,
+    "tone": "负（胜者组 1:2 负 Team Vision，官方确认）",
+    "tags": [
+     "1:2 负 Team Vision（官方确认，掉败者组）",
+     "正面处理不了熊拆家（\"BB输团赢团都处理不了熊的拆家\"）"
+    ],
+    "samples": [
+     "不懂bb还打什么 没有任何希望了已经"
+    ]
+   },
+   "market": {
+    "tendency": "败者组对阵 Iron Wing"
+   },
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "jdg",
+   "name": "JDG",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 0,
+    "tone": "正（08-23 2:1 EDG 打满收官）",
+    "tags": [
+     "08-23 2:1 EDG：G3 锤石钩爆 Leave + GALA 无尽屠戮",
+     "\"京东打满的神\"：08-20 2:1 TT、08-23 2:1 EDG 打满样本",
+     "JDG 状态波动：08-22 2:0 TES → 08-23 被 EDG 拖入决胜",
+     "GALA/HongQ 双 C 兜底"
+    ],
+    "samples": [
+     "还是京东赢，京东打满的神",
+     "京东现在拉成这样了（G3 中段批评）"
+    ]
+   },
+   "market": {
+    "tendency": "打满属性：关键局双 C 兜底能力强",
+    "evidence": "08-20 2:1 TT、08-23 2:1 EDG"
+   },
+   "trust": "中",
+   "updated": "2026-08-23"
+  },
+  {
+   "id": "spirit",
+   "name": "Spirit（Team Spirit/绿龙/雪碧）",
+   "league": "EWC CS2 + DOTA2",
+   "danmu": {
+    "mentions_total": 1400,
+    "tone": "正（EWC CS2 夺冠；同日 TI15 双冠）",
+    "tags": [
+     "2026-08-23 EWC CS2 冠军（让一追三 3:1 FUT）",
+     "同日 DOTA2 TI15 冠军（一天双冠）",
+     "手枪局弱项（'永远送三分'）跨场规律候选",
+     "donk 决赛发挥争议",
+     "tN1R/zont1x/sh1ro 轮流兜底",
+     "08-26 BLAST Porto Spirit 2:0 DENDELE：遗迹 13-8 + 叉车弱图拿下",
+     "领先送分/经济管理差（跨图持续，观众口径）",
+     "灰信号约 14 条（送分/吃/操控，0 实锤）",
+     "donk 手枪局强 / sh1ro 残局强 / tN1R 被批"
+    ],
+    "samples": [
+     "绿龙从里约到现在的遗迹没输过",
+     "宗主决赛MVP",
+     "绿龙一天双冠",
+     "图一绿龙赢了 13-8",
+     "都是手枪为什么donk打的那么牛逼",
+     "绿龙一直在赢但是经济没养好"
+    ]
+   },
+   "trust": "中（官方确认）",
+   "updated": "2026-08-26",
+   "gray_history": {
+    "total_signals": 16,
+    "records": [
+     "2026-08-26_ts7_dendel_g1",
+     "2026-08-26_ts7_dendel_g2"
+    ],
+    "last_seen": "2026-08-26",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  },
+  {
+   "id": "lgd",
+   "name": "LGD",
+   "league": "LPL",
+   "danmu": {
+    "mentions_total": 20,
+    "tone": "正（2:0 TT 收官；汤圆洛克绝活）",
+    "tags": [
+     "2026-08-23 2:0 TT（横扫收官）",
+     "汤圆洛克 15-2-6 绝活锚点",
+     "骑士之路 BP 参照"
+    ],
+    "samples": [
+     "洛克15-2-6",
+     "汤圆真没毛的，去kc感觉王朝了（玩梗）"
+    ]
+   },
+   "trust": "低-中（弹幕+官方）",
+   "updated": "2026-08-24"
+  },
+  {
+   "id": "shft",
+   "name": "SHFT（Shifters）",
+   "league": "LEC",
+   "danmu": {
+    "mentions_total": 40,
+    "tone": "负偏争议（G1 爆冷后 1:2 被翻；0-7 首胜未遂）",
+    "tags": [
+     "2026-08-24 G1 爆冷 KC 后连输两局",
+     "领先守不住画像",
+     "卡牌上单/盲僧/EZ 体系",
+     "弱队盲僧正锚候选"
+    ],
+    "samples": [
+     "0-6赢7-0",
+     "shift王朝了有没有感觉（玩梗）",
+     "少爷ez太尽力了"
+    ]
+   },
+   "trust": "低-中（弹幕+Polymarket 口径）",
+   "updated": "2026-08-24"
+  },
+  {
+   "id": "dendelecs",
+   "name": "DENDELE CS",
+   "league": "CS2（BLAST Open Porto）",
+   "danmu": {
+    "mentions_total": 0,
+    "tone": "负（08-26 0:2 Spirit；被观众定义为三线队/弱旅）",
+    "tags": [
+     "0:2 负 Spirit（08-26 BLAST Porto）",
+     "G1 遗迹 8-13；G2 叉车 7/8-13（市场口径）",
+     "观众历史叙事：'major连续给天禄送分'（待核实）"
+    ],
+    "samples": [
+     "打个三线队，50个人头没有闹麻了",
+     "对面这队不是major连续给天禄送分的吗"
+    ]
+   },
+   "market": {
+    "tendency": "弱旅定位；观众预期低",
+    "evidence": "08-26 vs Spirit 0:2"
+   },
+   "trust": "低（弹幕来源）",
+   "updated": "2026-08-26",
+   "gray_history": {
+    "total_signals": 0,
+    "records": [],
+    "max_severity": "低",
+    "last_seen": "2026-08-26",
+    "status": "无",
+    "note": "凡走过必有痕迹：再犯自动升级关注"
+   }
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KC vs SHFT · G1 复盘（SHFT 爆冷 1:0 · 灰信号高预警）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+.block{margin-bottom:16px}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>KC vs SHFT · G1 复盘</h1>
+<p class="sub">赛事：LEC 2026 Summer W5（KC vs SHFT，BO3）· 数据源：硕硕(323444) 单路 · 节点：G1-END（01:26 开局，约 02:00 结束，34 分钟）· <b>结果：SHFT 1:0 KC（弹幕多信号：ACE/一波/1-2梭哈15倍命中；官方待回填）· 置信：中高</b></p>
+<div class="stats">
+<div class="stat"><div class="num">SHFT 1:0</div><div class="lbl">G1 爆冷（官方待回填）</div></div>
+<div class="stat"><div class="num">867 条</div><div class="lbl">G1 弹幕（硕硕路）</div></div>
+<div class="stat"><div class="num">~60 条</div><div class="lbl">灰信号宽口径（定向 KC 24）</div></div>
+<div class="stat"><div class="num">未应验</div><div class="lbl">蛇女 BP 正锚（反向）</div></div>
+</div>
+
+<div class="warn"><b>核心：SHFT 爆冷拿下 G1（1:0）。</b>KC 14 分钟领先 5k、天肥女警领先近 3k（人头一度 15:13），拖到 34 分钟终局被 SHFT 维克托后期翻盘——终局波"泰坦抢龙 + ACE + 一波"（01:58:21-59:11）。<b>灰信号高预警：定向 KC（约 24 条高浓度）</b>——"这个蛇女明牌假赛/蛇女买了/蛇女收了/女警不放夹子就是明演/KC缺钱非得吃/都是第一了为什么不吃"——与 BP 段"KC老师别打假赛"预警 + 08-18 卡时间灰信号历史（69 条）闭环，<b>"被质疑方输球"型样本兑现（凡走过必有痕迹：KC 再犯升级）</b>。</div>
+
+<div class="ok"><b>BP 锚验证（重要）：蛇女正锚未应验。</b>BP 段共识"蛇女一出直接赢"（T1/GENG 放蛇女+盲僧皆败）→ 本场 KC 蛇女"没伤害/野狗蛇女/从头到尾就不正常"（01:48:49），反被 SHFT 维克托压制（"维克托会控大招 比某些中单强"01:48:28）——"蛇女打一切中路"当日规律在本场失效（选手/阵容双因素：维克托发育太顺 + 蛇女被集火）。counter 锚"只有高手冰鸟"本场未出现。</div>
+
+<section class="card"><h2>一、结果总览（当前进度）</h2>
+<table>
+<tr><th>项</th><th>状态</th><th>要点</th></tr>
+<tr><td>系列</td><td><b>SHFT 1:0</b></td><td>G1 约 34 分钟结束；KC 卡时间画像应验（"kc打谁都要30几分钟"）</td></tr>
+<tr><td>G1 结果</td><td><b>SHFT 胜（爆冷）</b></td><td>KC 14 分钟领先 5k、天肥女警（近 3k 领先、约 15:13）被翻；终局"泰坦抢龙 + ACE + 一波"（01:58:21-01:59:11）；弹幕确认"shift嬴了?/kc输啦？"（02:00:40/01:33）</td></tr>
+<tr><td>灰信号</td><td><b>高预警·定向 KC</b></td><td>宽口径 ~60 条，定向 KC 约 24 条（蛇女/女警/队伍）；"被质疑方输球"方向兑现，详见第五节</td></tr>
+</table></section>
+
+<section class="card"><h2>二、逐局复盘（G1 已发生片段）</h2>
+<div class="block"><h3>G1 时间线（01:26–01:53）</h3>
+<ul>
+<li><b>01:26-31 开局</b>：KC 速推预期（"这把KC能速推不"01:26:42）；女警早期起飞（"废了 女警赚麻了"01:31:10）；"速推肯定不行"（01:27:19，阵容判断）</li>
+<li><b>01:37-41 中期</b>：Canna 朗姆送武器 2 个（"朗姆前期也夸张送武器2个"01:48:49 回述）；蛇女被质疑（"蛇女确定是人"01:38:28）；KC 领先约 4 千不敢打（"领先4千不敢打"01:40:36）；SHFT Sheo 蔚连送（"这个Sheo 把把送 是真出生...在TH的时候就是"01:41:12/40）</li>
+<li><b>01:45-48 大翻盘波</b>："翻了翻了翻天娃来了"（01:45:54-01:48:06 密集）、"KOI剧本"（01:48:03）、"0-6赢7-0"（01:48:12）、"1-2中了梭哈/15倍"（01:48:14/15）、"平水了朋友们"（01:47:48，盘口翻转）</li>
+<li><b>01:49-57 假翻确认+蛇女被集火</b>："女警这么肥 假翻"（01:50:37）、"右边kc要赢早赢了"（01:52:35）、"开送了"（01:52:38）；01:56-57 蛇女被集中指控（"这个蛇女就跟收到信号一样就在那里等死/队友打大龙他去送/明牌假赛/蛇女买了/收了"）</li>
+<li><b>01:58-02:00 终局翻盘</b>："翻了翻了翻天娃来了/一波了/完辣"（01:58:21-35）、"泰坦的龙也太变态了/泰坦立功/泰坦mvp"（01:58:45-01:59:48，抢龙 MVP 口径）、"ACE"（01:59:11）、"1-2梭哈中了/15倍/16倍"（01:58:49/52/01:59:15）、"shift嬴了?"（02:00:40）——<b>SHFT 翻盘拿下 G1</b></li>
+</ul>
+</div>
+<div class="block"><h3>阵容（弹幕口径）</h3>
+<ul>
+<li>KC（右）：蛇女（中）/ 朗姆·兰博（上，Canna）/ 赵信（野，Yike 全输出）/ 女警（AD，天肥）/ 泰坦（辅）</li>
+<li>SHFT（左）：武器·贾克斯（上）/ 蔚（野，Sheo）/ 维克托（中，后期核心）/ 韦鲁斯（AD，被批"最菜"）/ 巴德（辅，被批"没出干锅"）</li>
+<li>边位/归属为弹幕口径，官方 BP 页待核对</li>
+</ul>
+</div></section>
+
+<section class="card"><h2>三、队伍画像（本场 + 长期库）</h2>
+<table>
+<tr><th>队伍</th><th>画像</th></tr>
+<tr><td>KC</td><td><b>卡时间/领先不推进画像实锤中</b>：08-18"领先1万拖到32分钟"历史 + 本场天肥女警拖到 33 分钟仍收不掉（"kc打谁都要30几分钟"01:23:12 应验）；灰信号历史 69 条（四场全卡）→ 本场"送一小局/KOI剧本"再触发——若 G1 最终输，即"被质疑方输球"型样本兑现（凡走过必有痕迹）</td></tr>
+<tr><td>SHFT</td><td>垫底队（0-6）爆冷叙事进行中："0-6赢7-0"（01:48:12）、"倒数第一也是第一，谁怕谁"（01:47:23）；维克托后期体系 + 下野被批（Sheo 蔚/韦鲁斯"最菜"）但中后期阵容拖赢节奏</td></tr>
+</table></section>
+
+<section class="card"><h2>四、人员画像（提及量，硕硕路）</h2>
+<table>
+<tr><th>选手/对象</th><th>提及</th><th>评价</th></tr>
+<tr><td>女警使用者（KC AD）</td><td>15+</td><td>天肥（"领先将近3K/赚麻了"）但"没输出环境/夹子不放封路=明演/为啥不围绕女警打"——肥而不赢，终局关键被批</td></tr>
+<tr><td>Yike（KC 打野）</td><td>5+</td><td>"yike也是不知道装什么"（01:33:32）、全输出赵信"不像人能出的装备/跟畜生一样"（01:52:07/18/40）——出装决策负面</td></tr>
+<tr><td>Canna（KC 上单）</td><td>2</td><td>"canna装b抗塔"（01:37:55）；朗姆前期送武器 2 个（01:48:49 回述）</td></tr>
+<tr><td>Sheo（SHFT 打野）</td><td>4</td><td>"这个Sheo 把把送 是真出生...在TH的时候就是"（01:41:12/40，明牌打野画像，TH 旧将）——但本场 SHFT 仍在赢</td></tr>
+<tr><td>维克托使用者（SHFT 中单）</td><td>6+</td><td>"维克托无敌了/帽子就无敌/会控大招比某些中单强"——本场翻盘核心；ID 待核实（疑似 Puduk，待官方）</td></tr>
+</table></section>
+
+<section class="card"><h2>五、灰信号汇总（本节点重点）</h2>
+<ul>
+<li><b>宽口径 ~60 条（G1 窗 867 条）</b>：假 16 / 演 10 / 送 26 / 剧本 2 / 演员 1 / 明牌 4 / 吃低保 13 / 收米+梭哈 8；<b>定向 KC 约 24 条</b>（蛇女 10+ / 女警 4 / 队伍 8）</li>
+<li>高浓度定向样本："这个蛇女明牌假赛"（01:57:40）、"蛇女名牌"（01:57:50）、"蛇女买了/收了"（01:57:34/38）、"这个蛇女就跟收到信号一样就在那里等死/队友打大龙他去送"（01:56:54/55）、"这中单送了几次维克托。不然早平推了"（01:57:11）、"打龙魂团 先落位 女警不放夹子封路 就是明演"（01:50:19）、"KC缺钱？非得吃？"（01:49:17）、"都是第一了，打倒数第一为什么不吃"（01:49:46）、"lec也敢吃低保"（01:58:57）</li>
+<li>与 BP 段预警闭环：BP 锁定"KC老师别打假赛谢谢"（01:16:11）→ 局中高浓度定向 → <b>G1 SHFT 胜（被质疑方输球）→ 方向兑现，KC 灰信号历史再犯升级</b>（08-18 四场全卡 69 条 → 本场 +24 定向）</li>
+<li>跨场参照："KOI剧本"（01:48:03）、"昨天晚上mkoi比这个变态么"（01:59:12）——MKOI 假赛质疑延续；纪律：观众质疑非结论，本场作高预警风险标注，官方核查待回填</li>
+</ul></section>
+
+<section class="card"><h2>六、联赛规律与版本</h2>
+<ul>
+<li>"传统艺能了 就是输倒一"（01:48:33）、"欧洲自古倒数第一吃第一"（01:59:03）、"周末必有爆冷"（01:59:05）——LEC 榜首打榜尾爆冷传统（观众口径）</li>
+<li>KC 卡时间规律再样本：本场 33+ 分钟终局拉扯（"打谁都要30几分钟"应验）——LONG 级规律强化</li>
+<li>"这个比赛都是谁一龙谁输"（01:49:21）——首龙负锚（本场观察项）</li>
+<li>蛇女版本锚本场失效："蛇女打一切中路" vs 维克托后期——版本符号需叠加选手执行/阵容双因素</li>
+</ul></section>
+
+<section class="card"><h2>七、预测验证（G1 待回填）</h2>
+<table>
+<tr><th>预测/锚点</th><th>状态</th></tr>
+<tr><td>蛇女正锚"一出直接赢"（KC）</td><td><b>未应验（反向）</b>（蛇女明牌被集火/送维克托多次，终局翻盘）</td></tr>
+<tr><td>KC 卡时间"打谁都要30几分钟"</td><td><b>应验</b>（33+ 分钟仍在打）</td></tr>
+<tr><td>"默认2-0 / 2-0速速下班"（KC 横扫）</td><td><b>未兑现</b>（G1 SHFT 爆冷拿下）</td></tr>
+<tr><td>"打满吧"（01:17:20）</td><td><b>暂兑现</b>（"肯定打满了"01:48:20；系列 1:0，G2 即赛点）</td></tr>
+<tr><td>"1-2梭哈中了 / 15倍"（观众押 SHFT 方向）</td><td><b>G1 命中</b>（01:58:49 梭哈中，高赔兑现）</td></tr>
+</table></section>
+
+<section class="card"><h2>八、盘口讨论</h2>
+<ul>
+<li>人头/让分盘（弹幕口径）：KC 让 10.5–13.5（"+13.5/1.88"01:49:34、"就这，现在还让13.5"01:40:11、"就这，你让12.5头"01:38:13、"+10.5都只有1.87"01:49:59）；"大30 ＋14.5无压力"（01:52:15）</li>
+<li>"平水了朋友们"（01:47:48）——大翻盘波时盘口翻转信号；"24-15=9"（01:41:11，击杀差计算）</li>
+<li>"赌狗完蛋了/输死赌狗/低保末日"（01:48-49 密集）——押 KC 方情绪崩溃（非结论）</li>
+</ul></section>
+
+<section class="card"><h2>九、情报含义与后续观察点</h2>
+<div class="block"><h3>LONG（长期资产）</h3>
+<ul>
+<li><b>KC 领先不推进=跨场灰信号规律再样本</b>（08-18 四场全卡 + 本场天肥女警拖 33 分钟）——后续 KC 比赛大优势期即是风险标注窗口</li>
+<li>蛇女版本锚需加"选手执行+阵容"双因素：HLE Zeka 蛇女赢、KC 蛇女输——英雄强度≠使用者执行</li>
+<li>SHFT 垫底画像但后期阵容能爆冷——弱队交易需看 BP 后期强度</li>
+</ul></div>
+<div class="block"><h3>SHORT（本场有效）</h3>
+<ul>
+<li><b>G1 已兑现"被质疑方输球"型样本</b>：KC（灰信号中心）输 G1——与 08-18 卡时间历史连成"领先不推进+被疑做局+输球"三连</li>
+<li>G2 BP 看点：KC 是否变阵/头铁蛇女；"第二局给一盘"剧本已成立（G1 已送）→ <b>若 G2 KC 认真拿下，则"送一局"口径强化；若 G2 再被翻，灰信号升至最高级</b>；盘口关注 SHFT +13.5 系列让分兑现</li>
+</ul></div></section>
+
+<section class="card"><h2>十、数据与溯源</h2>
+<ul>
+<li>docs/data/danmu/huya/2026-08-24_shuoshuo_323444.jsonl（G1 窗 01:26-02:00 共 867 条；全窗 1,490 条）＋ official_660000（机器人为主）</li>
+<li>BP 节点页：intel_danmu_KC-SHFT_BP_2026-08-24.html（蛇女锚/预测共识/灰话预警）</li>
+<li>待确认：G1 官方结算（gol.gg/loltv.gg 滞后）、MVP（弹幕口径泰坦）、维克托使用者 ID（疑似 Puduk）、KC 中单 ID（蛇女使用者）、官方阵容核对</li>
+</ul>
+<p class="note">报告生成：2026-08-24 02:03（北京时间）· 节点：G1-END（B 升级终态）· 监控运行中，G2 BP 情报另行输出</p>
+</div></body></html>

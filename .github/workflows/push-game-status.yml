@@ -1,0 +1,48 @@
+name: push-game-status
+
+# 小局结算状态云端推送：每 5 分钟把 Polymarket 小局结算状态推到云服务器，
+# 供 vps_intel_pipeline 按小局出节点（服务器在首尔，直连 Polymarket 被 451 地区限制）。
+# 启用前提：
+#   1) 仓库含 tools/fetch_game_status.py（已随本工作流提交）；
+#   2) GitHub 仓库 Secrets 添加 DANMU_SERVER_SSH_KEY（服务器 root 私钥，
+#      对应公钥已登记在服务器 ~/.ssh/authorized_keys，见 runtime/keys/ 说明）。
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install SSH key
+        env:
+          SSH_KEY: ${{ secrets.DANMU_SERVER_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_actions
+          chmod 600 ~/.ssh/id_actions
+          ssh-keyscan -H 158.247.214.175 >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Pull watchlist from server
+        run: |
+          scp -i ~/.ssh/id_actions -o StrictHostKeyChecking=no \
+            root@158.247.214.175:/opt/danmu-intel/runtime/watchlist_events.json \
+            /tmp/watchlist_events.json
+
+      - name: Fetch game status from Polymarket
+        run: |
+          python3 tools/fetch_game_status.py --watchlist /tmp/watchlist_events.json \
+            --out /tmp/game_status.json
+
+      - name: Push game status to server
+        run: |
+          scp -i ~/.ssh/id_actions -o StrictHostKeyChecking=no \
+            /tmp/game_status.json \
+            root@158.247.214.175:/opt/danmu-intel/data/game_status.json

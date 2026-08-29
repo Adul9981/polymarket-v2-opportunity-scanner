@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "maybeee_211888",
+  "url": "https://www.huya.com/211888",
+  "state": "capturing",
+  "started_at": "2026-08-20T04:29:31+00:00",
+  "heartbeat_at": "2026-08-20T15:17:01+00:00",
+  "last_message_at": "2026-08-20T15:17:00+00:00",
+  "message_count": 26857,
+  "warning": null,
+  "error": null,
+  "room_id": 211888,
+  "channel_id": 2381472418,
+  "nickname": "Maybeee111",
+  "introduction": "国际邀请赛",
+  "room_name": "",
+  "page_live": true,
+  "checked_at": "2026-08-20T04:29:31+00:00"
+}

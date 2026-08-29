@@ -1,0 +1,507 @@
+{
+  "meta": {
+    "total": 31038,
+    "active_users": 7699,
+    "window_utc": [
+      "2026-08-23 16:24",
+      "2026-08-23 19:04"
+    ],
+    "density_per_min": 193.6,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 23,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "Navi二队是吧",
+        "就是鞭Navi和Navi青训知道吗",
+        "navi附体",
+        "NAVI好死！！！！！！",
+        "demon和指挥去navi吧"
+      ]
+    },
+    "T1": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "刀塔T1也有200万",
+        "T1为啥没CS项目啊"
+      ]
+    },
+    "WE": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "咋听到了，we are falcons"
+      ]
+    },
+    "IG": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "IG加油",
+        "IG加油"
+      ]
+    },
+    "Vitality": {
+      "mentions": 156,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "可能fut分析绿龙和小蜜蜂的时候发现绿龙核子比较弱",
+        "不是小蜜蜂就被学小蜜蜂的病",
+        "不是小蜜蜂就别学小蜜蜂的病",
+        "进了场馆，  宗主被解放了， 从到小蜜蜂开始",
+        "绿龙被虚是因为把小蜜蜂淘汰了"
+      ]
+    },
+    "Spirit": {
+      "mentions": 1860,
+      "pos": 82,
+      "neg": 12,
+      "samples": [
+        "本来打沙二还有机会能赢绿龙",
+        "熟悉的绿龙回来了",
+        "绿龙配赢吗",
+        "神人绿龙",
+        "可能fut分析绿龙和小蜜蜂的时候发现绿龙核子比较弱"
+      ]
+    },
+    "G2": {
+      "mentions": 4,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "g2的闪光",
+        "G2有0.38",
+        "G2的0.38夸张啊",
+        "G2闪光这么厉害"
+      ]
+    },
+    "NAVI": {
+      "mentions": 23,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "Navi二队是吧",
+        "就是鞭Navi和Navi青训知道吗",
+        "navi附体",
+        "NAVI好死！！！！！！",
+        "demon和指挥去navi吧"
+      ]
+    },
+    "FaZe": {
+      "mentions": 101,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "faze的含金量还在上升",
+        "faze  up",
+        "faze up",
+        "faze up",
+        "FAZE UP！"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 21,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "mouz提a了吗",
+        "底座选猎鹰，小蜜蜂和老鼠呀",
+        "王朝啥啊。被猎鹰被老鼠炸一下就老实了",
+        "打老鼠可惜了",
+        "上个月才被老鼠暴揍，这个月居然夺冠了"
+      ]
+    },
+    "Liquid": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "液体战术",
+        "感觉fut有点像之前的液体的核子",
+        "感觉fut有点像之前的液体的核子",
+        "感觉fut有点像之前的液体的核子",
+        "感觉fut有点像之前的液体的核子"
+      ]
+    },
+    "FURIA": {
+      "mentions": 23,
+      "pos": 5,
+      "neg": 3,
+      "samples": [
+        "这张图黑豹都能虐",
+        "打黑豹的时候就不会也不ban",
+        "绿龙核子弱只是和蜜蜂黑豹比。打你个fut还不是随便打？",
+        "绿龙核子弱只是和蜜蜂黑豹比。打你个fut还不是随便打？",
+        "绿龙核子弱只是和蜜蜂黑豹比。打你个fut还不是随便打？"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "去年天禄就被蒙古选了底座😂",
+        "去年蒙古选天禄",
+        "选蒙古啊"
+      ]
+    },
+    "AG": {
+      "mentions": 154,
+      "pos": 12,
+      "neg": 1,
+      "samples": [
+        "不休息了，因为待会要给AG颁奖",
+        "ewc  ag是不是夺冠了",
+        "俱乐部ag 已经夺冠了",
+        "ag已经冠军了",
+        "不如AG"
+      ]
+    },
+    "白鲨": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "对于念旧还是差一些，CF 决赛昨天白鲨念旧三张图杀了120个",
+        "对比念旧还是差一些，CF 决赛昨天白鲨念旧三张图杀了120个",
+        "对比念旧还是差一些CF决赛昨天白鲨念旧三张图杀了120个夺冠",
+        "对比念旧还是差一些CF决赛昨天白鲨念旧三张图杀了120个夺冠",
+        "对比念旧还是差一些CF决赛昨天白鲨念旧三张图杀了120个夺冠"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "搜飞科老师",
+        "搜飞科",
+        "mo 给老李带一杯",
+        "mo队给老李带一杯，再给老将带一杯",
+        "让莫队给老李带一杯"
+      ]
+    },
+    "Chovy": {
+      "mentions": 7,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "你不是说中场半小时吗我超威",
+        "我chovy谁带的动",
+        "我chovy谁带的动",
+        "我chovy谁带的动",
+        "我chovy谁带的动"
+      ]
+    },
+    "Niko": {
+      "mentions": 118,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "donk不配这rt，niko来2.几rt冠军加mvp",
+        "donk<niko",
+        "这就是donk比Niko差的地方",
+        "提niko软脚了",
+        "nikonikoniko"
+      ]
+    },
+    "Apex": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "apex来了是真的",
+        "faze还有APEX冠军呢"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 31,
+      "pos": 4,
+      "neg": 0,
+      "samples": [
+        "载物也干了",
+        "插载物u盘了？？？",
+        "又欠你载物炸",
+        "巴黎安静得像载物面对森的时候",
+        "缺个载物"
+      ]
+    },
+    "donk": {
+      "mentions": 940,
+      "pos": 56,
+      "neg": 17,
+      "samples": [
+        "这才是donk吧",
+        "donk你个彩笔还要你紫蝶杀几个你才醒",
+        "donk不配这rt，niko来2.几rt冠军加mvp",
+        "donk<niko",
+        "donk彩笔"
+      ]
+    },
+    "ropz": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "ropz"
+      ]
+    },
+    "sh1ro": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "顺境看西若，逆境看donk，绝境还得看马西西",
+        "西若拉满了这局",
+        "西若;你不举吗",
+        "sh1ro谁能绷住",
+        "西若像个小偷"
+      ]
+    },
+    "bzm": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "本泽马"
+      ]
+    },
+    "33": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "不搬零胜率的核子，搬33胜率的沙二吗，fut你这家伙"
+      ]
+    },
+    "Yatoro": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "冷神断一断，雨神在外场。冷神断一断，雨神在外场。冷神断一断，",
+        "yatoro和donk王朝了"
+      ]
+    },
+    "Collapse": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "已经被打崩溃了",
+        "晴宝崩溃了"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 8,
+    "samples": [
+      "宗主关键人头 啊啊啊啊啊啊啊啊",
+      "donk来抢人头来了",
+      "Donk场均20个人头，正常发挥",
+      "Donk场均20个人头，正常发挥",
+      "AG 700万?",
+      "这可是700w啊",
+      "700万刀肯定要给分多选手啊，毕竟都是临时签过来的",
+      "ag这700万还是税后的"
+    ]
+  },
+  "situation": {
+    "count": 158,
+    "samples": [
+      "翻盘",
+      "没钱为啥不打一波啊",
+      "4打3 道具一波不就完了",
+      "一波打补枪就行",
+      "这个大比分是不是给错了？",
+      "有经济吗？硬缴枪",
+      "这个大比分是不是给错了",
+      "经济那么差，还硬缴枪"
+    ]
+  },
+  "gray_signals": {
+    "count": 22,
+    "samples": [
+      "八块钱，买了右边",
+      "故意不小心的",
+      "绿龙拿了天路瓦剧本",
+      "什么叫做绿龙拿天禄瓦剧本，又是什么东西",
+      "绿龙经典剧本前面打不过决胜直接虐",
+      "故意的",
+      "故意de",
+      "故意还是不小心"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "16:51",
+      "count": 1166,
+      "samples": [
+        "donk炸炸炸",
+        "NB",
+        "一瞬间",
+        "666666666666666"
+      ]
+    },
+    {
+      "minute_utc": "16:34",
+      "count": 1108,
+      "samples": [
+        "FUT。亡了~~",
+        "牛杯",
+        "开编开鞭",
+        "fut在核子真的不堪一击"
+      ]
+    },
+    {
+      "minute_utc": "16:52",
+      "count": 969,
+      "samples": [
+        "66666666666666",
+        "猎鹰你人呢猎鹰你人呢",
+        "地狱归来",
+        "牛逼了绿龙"
+      ]
+    },
+    {
+      "minute_utc": "16:40",
+      "count": 875,
+      "samples": [
+        "漂漂漂漂漂漂漂漂漂",
+        "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+        "巴黎图书馆",
+        "漂漂漂漂漂漂漂漂漂漂漂漂漂漂"
+      ]
+    },
+    {
+      "minute_utc": "16:49",
+      "count": 784,
+      "samples": [
+        "牛杯",
+        "牛杯",
+        "牛杯",
+        "牛杯"
+      ]
+    },
+    {
+      "minute_utc": "16:33",
+      "count": 765,
+      "samples": [
+        "豪狂",
+        "豪饰生日",
+        "现场怎么不叫了",
+        "在天梯都要被骂成🐶"
+      ]
+    },
+    {
+      "minute_utc": "17:07",
+      "count": 753,
+      "samples": [
+        "呱呱呱呱呱",
+        "C位",
+        "奖牌呢",
+        "看看总赛事数据"
+      ]
+    },
+    {
+      "minute_utc": "16:59",
+      "count": 734,
+      "samples": [
+        "排面",
+        "小蜜蜂不配底座？",
+        "排面",
+        "还以为会选蜜蜂的"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      1054
+    ],
+    [
+      "翁达长臂猿",
+      177
+    ],
+    [
+      "杏花春欲破",
+      128
+    ],
+    [
+      "啵啵守护使",
+      98
+    ],
+    [
+      "拰",
+      96
+    ],
+    [
+      "司机小杨🐑",
+      88
+    ],
+    [
+      "至鮰hg",
+      86
+    ],
+    [
+      "罐头梨栉水母动物门",
+      81
+    ]
+  ],
+  "sources": {
+    "csboy_123321": 28680,
+    "captainmo": 2358
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_123321",
+      "url": "https://www.huya.com/123321",
+      "state": "offline_waiting",
+      "started_at": "2026-08-23T22:00:16+00:00",
+      "heartbeat_at": "2026-08-24T07:38:13+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】EWC闭幕式",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-23T22:00:20+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "captainmo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "offline_waiting",
+      "started_at": "2026-08-23T21:43:36+00:00",
+      "heartbeat_at": "2026-08-24T07:38:14+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】1绿龙-FUT 决赛BO5",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-23T21:43:36+00:00"
+    }
+  ]
+}

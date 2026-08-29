@@ -1,0 +1,151 @@
+﻿priority_tier,analysis_score,num,start_bjt,format,league,teams,event_slug,market_count,game_markets,recommended_action,rationale
+S 核心策略池,90,139,2026-06-28 11:10,BO5,Mid-Season Invitational Play-In,T1 vs Team Liquid,lol-t1-tl2-2026-06-28,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,90,140,2026-06-28 14:00,BO5,Mid-Season Invitational Play-In,Karmine Corp vs Deep Cross Gaming,lol-kc-dcg-2026-06-27,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,90,141,2026-06-29 11:00,BO5,Mid-Season Invitational Play-In,T1 vs Karmine Corp,lol-t1-kc-2026-06-28,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,90,142,2026-06-29 13:45,BO5,Mid-Season Invitational Play-In,Deep Cross Gaming vs Team Liquid,lol-dcg-tl2-2026-06-29,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,90,143,2026-06-30 16:00,BO5,Mid-Season Invitational Play-In,Karmine Corp vs Team Liquid,lol-kc-tl2-2026-06-30,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,82,27,2026-06-06 16:00,BO5,LCK Road to MSI,Dplus KIA vs HANJIN BRION,lol-dk-bro2-2026-06-06,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,82,34,2026-06-07 16:00,BO5,LCK Road to MSI,KT Rolster vs Dplus KIA,lol-kt-dk-2026-06-07,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,82,102,2026-06-12 16:15,BO5,LCK Road to MSI,Hanwha Life Esports vs T1,lol-hle1-t1-2026-06-12,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,82,107,2026-06-13 14:15,BO5,LCK Road to MSI,Gen.G vs KT Rolster,lol-gen-kt-2026-06-13,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+S 核心策略池,82,115,2026-06-14 14:00,BO5,LCK Road to MSI,T1 vs Gen.G,lol-t1-gen-2026-06-14,5,4,优先做深度模型：赛前胜率、地图/小局路径、series 与 game 市场联动。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,2,2026-06-01 17:00,BO5,LPL Playoffs,Anyone's Legend vs Team WE,lol-al-we-2026-06-01,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,7,2026-06-02 17:00,BO5,LPL Playoffs,ThunderTalk Gaming vs LGD Gaming,lol-tt-lgd-2026-06-02,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,12,2026-06-03 17:00,BO5,LPL Playoffs,EDward Gaming vs Bilibili Gaming,lol-edg-blg-2026-06-03,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,20,2026-06-05 17:00,BO5,LPL Playoffs,Anyone's Legend vs LGD Gaming,lol-al-lgd-2026-06-05,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,29,2026-06-06 17:00,BO5,LPL Playoffs,JD Gaming vs Bilibili Gaming,lol-jdg-blg-2026-06-06,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,36,2026-06-07 17:00,BO5,LPL Playoffs,Top Esports vs Team WE,lol-tes-we-2026-06-07,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,43,2026-06-08 17:00,BO5,LPL Playoffs,Anyone's Legend vs Bilibili Gaming,lol-al-blg-2026-06-08,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,108,2026-06-13 16:30,BO5,LPL Playoffs,Team WE vs Bilibili Gaming,lol-we-blg-2026-06-13,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,75,116,2026-06-14 16:15,BO5,LPL Playoffs,Top Esports vs Bilibili Gaming,lol-tes-blg-2026-06-14,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,71,3,2026-06-01 23:00,BO5,LEC Playoffs,Karmine Corp vs GIANTX,lol-kc-gx-2026-06-01,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,71,30,2026-06-06 23:00,BO5,LEC Playoffs,Movistar KOI vs Karmine Corp,lol-mkoi-kc-2026-06-06,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,71,37,2026-06-07 23:20,BO5,LEC Playoffs,G2 Esports vs Karmine Corp,lol-g2-kc-2026-06-07,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,69,1,2026-06-01 04:00,BO5,LCS Playoffs,Team Liquid vs Shopify Rebellion,lol-tl2-sr-2026-05-31,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,69,33,2026-06-07 04:00,BO5,LCS Playoffs,FlyQuest vs Team Liquid,lol-fly-tl2-2026-06-06,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,69,40,2026-06-08 04:00,BO5,LCS Playoffs,Cloud9 vs LYON,lol-c9-ly-2026-06-07,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,69,114,2026-06-14 04:10,BO5,LCS Playoffs,Team Liquid vs Cloud9,lol-tl2-c9-2026-06-13,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+A 重点研究池,69,120,2026-06-15 04:00,BO5,LCS Playoffs,LYON vs Team Liquid,lol-ly-tl2-2026-06-14,5,4,适合做盘口/概率校准，优先看 series，必要时拆 Game 1。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+B 观察验证池,65,21,2026-06-05 17:00,BO5,LCP Playoffs,MVK Esports vs GAM Esports,lol-mvk-gam-2026-06-05,5,4,可作为样本池或轻量机会池，除非价格明显偏差，否则不优先投入。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+B 观察验证池,65,28,2026-06-06 17:00,BO5,LCP Playoffs,Deep Cross Gaming vs GAM Esports,lol-dcg-gam-2026-06-06,5,4,可作为样本池或轻量机会池，除非价格明显偏差，否则不优先投入。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+B 观察验证池,65,35,2026-06-07 17:00,BO5,LCP Playoffs,Team Secret Whales vs Deep Cross Gaming,lol-tsw-dcg-2026-06-07,5,4,可作为样本池或轻量机会池，除非价格明显偏差，否则不优先投入。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好；双方队伍可研究性较强
+B 观察验证池,55,119,2026-06-15 00:00,BO5,Esports World Cup South America & LATAM Qualifier Playoffs,RED Canids vs LOS,lol-red-los-2026-06-14,5,4,可作为样本池或轻量机会池，除非价格明显偏差，否则不优先投入。,BO5 样本更稳定且有 series+小局联动；双方队伍可研究性较强
+B 观察验证池,49,32,2026-06-07 00:15,BO5,CBLOL Playoffs,FURIA Esports vs LOS,lol-fur-los-2026-06-06,5,4,可作为样本池或轻量机会池，除非价格明显偏差，否则不优先投入。,BO5 样本更稳定且有 series+小局联动；双方队伍可研究性较强
+C 低优先/剔除池,47,109,2026-06-13 23:00,BO5,EMEA Masters Playoffs,Galions vs Misa Esports,lol-gal-me1-2026-06-13,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,47,110,2026-06-13 23:00,BO5,EMEA Masters Playoffs,Solary vs G2 NORD,lol-sly-g2nord-2026-06-13,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,47,111,2026-06-13 23:00,BO5,EMEA Masters Playoffs,UCAM Esports Club vs Karmine Corp Blue,lol-ucam1-kcb-2026-06-13,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,47,112,2026-06-13 23:00,BO5,EMEA Masters Playoffs,Team Heretics Academy vs Eintracht Spandau,lol-hrts-es1-2026-06-13,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,47,117,2026-06-14 23:00,BO5,EMEA Masters Playoffs,Galions vs Eintracht Spandau,lol-gal-es1-2026-06-14,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,47,118,2026-06-14 23:00,BO5,EMEA Masters Playoffs,Solary vs UCAM Esports Club,lol-sly-ucam1-2026-06-14,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,47,124,2026-06-15 23:00,BO5,EMEA Masters Playoffs,Solary vs Galions,lol-sly-gal-2026-06-15,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；次级欧洲赛事，资料中等
+C 低优先/剔除池,45,38,2026-06-08 00:00,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,LOUD vs Vivo Keyd Stars,lol-lll-vks-2026-06-07,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；双方队伍可研究性较强
+C 低优先/剔除池,45,67,2026-06-09 03:15,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,LOS vs Vivo Keyd Stars,lol-los-vks-2026-06-08,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；双方队伍可研究性较强
+C 低优先/剔除池,45,89,2026-06-11 05:15,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,LOS vs paiN Gaming,lol-los-png1-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；双方队伍可研究性较强
+C 低优先/剔除池,45,100,2026-06-12 02:00,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,Vivo Keyd Stars vs RED Canids,lol-vks-red-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；双方队伍可研究性较强
+C 低优先/剔除池,45,101,2026-06-12 05:15,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,LOUD vs LOS,lol-lll-los-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；双方队伍可研究性较强
+C 低优先/剔除池,45,113,2026-06-14 00:00,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,Vivo Keyd Stars vs LOS,lol-vks-los-2026-06-13,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；双方队伍可研究性较强
+C 低优先/剔除池,45,125,2026-06-17 14:00,BO5,Asia Masters Playoffs,KT Rolster Challengers vs Dplus KIA Challengers,lol-ktc-dkc-2026-06-17,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,45,126,2026-06-17 17:40,BO5,Asia Masters Playoffs,Nongshim Esports Academy vs T1 Academy,lol-nsea-t1a-2026-06-17,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,45,127,2026-06-18 14:00,BO5,Asia Masters Playoffs,Dplus KIA Challengers vs T1 Academy,lol-dkc-t1a-2026-06-18,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,45,128,2026-06-18 18:30,BO5,Asia Masters Playoffs,KT Rolster Challengers vs Nongshim Esports Academy,lol-ktc-nsea-2026-06-18,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,45,129,2026-06-19 17:00,BO5,Asia Masters Playoffs,T1 Academy vs KT Rolster Challengers,lol-t1a-ktc-2026-06-19,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,45,130,2026-06-21 17:00,BO5,Asia Masters Playoffs,Dplus KIA Challengers vs T1 Academy,lol-dkc-t1a-2026-06-21,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,43,131,2026-06-26 17:10,BO1,Cross Regional Group Stage,Kiwoom DRX vs LOS,lol-drx-los-2026-06-26,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,132,2026-06-26 18:10,BO1,Cross Regional Group Stage,DN SOOPers vs Cloud9,lol-dnf-c9-2026-06-26,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,133,2026-06-26 20:00,BO1,Cross Regional Group Stage,Kiwoom DRX vs Cloud9,lol-drx-c9-2026-06-26,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,134,2026-06-26 20:40,BO1,Cross Regional Group Stage,DN SOOPers vs FlyQuest,lol-dnf-fly-2026-06-26,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,135,2026-06-27 17:00,BO1,Cross Regional Group Stage,Dplus KIA vs LOS,lol-dk-los-2026-06-27,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,136,2026-06-27 17:50,BO1,Cross Regional Group Stage,Kiwoom DRX vs FlyQuest,lol-drx-fly-2026-06-27,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,137,2026-06-27 18:45,BO1,Cross Regional Group Stage,DN SOOPers vs LOS,lol-dnf-los-2026-06-27,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,43,138,2026-06-27 19:40,BO1,Cross Regional Group Stage,Dplus KIA vs Cloud9,lol-dk-c9-2026-06-27,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；赛事关注度/信息可得性较好；双方队伍可研究性较强
+C 低优先/剔除池,39,39,2026-06-08 03:15,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,RED Canids vs Leviatan Esports,lol-red-lev-2026-06-07,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；至少一方有较好资料
+C 低优先/剔除池,39,41,2026-06-08 05:30,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,Fluxo W7M vs paiN Gaming,lol-fxw7-png1-2026-06-07,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；至少一方有较好资料
+C 低优先/剔除池,39,54,2026-06-09 00:00,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,Leviatan Esports vs paiN Gaming,lol-lev-png1-2026-06-08,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；至少一方有较好资料
+C 低优先/剔除池,39,70,2026-06-09 05:50,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,RED Canids vs Fluxo W7M,lol-red-fxw7-2026-06-08,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；至少一方有较好资料
+C 低优先/剔除池,39,88,2026-06-11 02:00,BO3,Esports World Cup South America & LATAM Qualifier Playoffs,Fluxo W7M vs LOUD,lol-fxw7-lll-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；至少一方有较好资料
+C 低优先/剔除池,37,6,2026-06-02 04:15,BO5,Circuito Desafiante Playoffs,Vivo Keyd Stars Academy vs KaBuM! Ilha das Lendas,lol-vksa-kbm-2026-06-01,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,8,2026-06-02 22:00,BO5,Hitpoint Masters Playoffs,NightBirds vs eSuba,lol-nbs-esb-2026-06-02,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,9,2026-06-03 00:00,BO5,Road Of Legends Playoffs,The Bandits vs mCon esports,lol-ban2-mcn-2026-06-02,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,10,2026-06-03 02:15,BO5,LPLOL Playoffs,Crusaders vs Bubliki,lol-crz-bublik-2026-06-02,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动；赛事关注度/信息可得性较好
+C 低优先/剔除池,37,14,2026-06-03 23:00,BO5,LES Playoffs,Team Heretics Academy vs Barça eSports,lol-hrts-bar-2026-06-03,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,15,2026-06-04 00:00,BO5,LFL Playoffs,Solary vs Galions,lol-sly-gal-2026-06-03,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,16,2026-06-04 00:00,BO5,NLC Playoffs,Deer Gaming vs The Ruddy Sack,lol-deer-rs-2026-06-03,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,18,2026-06-04 23:00,BO5,LES Playoffs,Movistar KOI Fénix vs UCAM Esports Club,lol-koia-ucam1-2026-06-04,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,19,2026-06-05 04:00,BO5,North American Challengers League Playoffs,Winthrop University vs CCG Esports,lol-wu-ccg-2026-06-04,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,23,2026-06-05 22:45,BO5,TCL Playoffs,Misa Esports vs PCIFIC,lol-me1-pcific-2026-06-05,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,24,2026-06-05 23:50,BO5,LES Playoffs,Team Heretics Academy vs UCAM Esports Club,lol-hrts-ucam1-2026-06-05,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,25,2026-06-06 00:00,BO5,NLC Playoffs,Verdant vs The Ruddy Sack,lol-vdn-rs-2026-06-05,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,26,2026-06-06 04:00,BO5,North American Challengers League Playoffs,Conviction vs CCG Esports,lol-cnv-ccg-2026-06-05,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,37,31,2026-06-07 00:00,BO5,Road Of Legends Playoffs,Frites Esports Club vs mCon esports,lol-fec-mcn-2026-06-06,5,4,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO5 样本更稳定且有 series+小局联动
+C 低优先/剔除池,29,74,2026-06-09 23:00,BO3,EMEA Masters Play-In,CITA Kaizen vs Partizan Sangal,lol-ckz-ps1-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,29,75,2026-06-09 23:00,BO3,EMEA Masters Play-In,E WIE EINFACH E-SPORTS vs GOAL,lol-ewi-goal-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,29,76,2026-06-10 00:50,BO3,EMEA Masters Play-In,Frites Esports Club vs BOMBA Team,lol-fec-bombat-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,29,77,2026-06-10 01:00,BO3,EMEA Masters Play-In,Karmine Corp Blue vs Verdant,lol-kcb-vdn-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,29,121,2026-06-15 14:00,BO3,Asia Masters Last Chance Qualifier,KT Rolster Challengers vs Saigon Warriors,lol-ktc-sgw-2026-06-15,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,29,122,2026-06-15 16:00,BO3,Asia Masters Last Chance Qualifier,Top Esports Challenger vs KT Rolster Challengers,lol-tesc-ktc-2026-06-15,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,29,123,2026-06-15 17:40,BO3,Asia Masters Last Chance Qualifier,Saigon Warriors vs Top Esports Challenger,lol-sgw-tesc-2026-06-15,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,27,4,2026-06-02 00:00,BO3,NLC Playoffs,The Ruddy Sack vs Arctic Pandas,lol-rs-ap-2026-06-01,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,27,5,2026-06-02 02:00,BO3,NLC Playoffs,Verdant vs Deer Gaming,lol-vdn-deer-2026-06-01,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,27,22,2026-06-05 21:00,BO3,LES Playoffs,Barça eSports vs Movistar KOI Fénix,lol-bar-koia-2026-06-05,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,26,80,2026-06-10 23:00,BO3,EMEA Masters Group D,Solary vs BOMBA Team,lol-sly-bombat-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,81,2026-06-10 23:00,BO3,EMEA Masters Group A,Misa Esports vs E WIE EINFACH E-SPORTS,lol-me1-ewi-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,82,2026-06-10 23:00,BO3,EMEA Masters Group A,UCAM Esports Club vs HMBLE,lol-ucam1-hmble-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,83,2026-06-10 23:00,BO3,EMEA Masters Group C,G2 NORD vs Partizan Sangal,lol-g2nord-ps1-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,84,2026-06-11 00:45,BO3,EMEA Masters Group B,Team Heretics Academy vs Karmine Corp Blue,lol-hrts-kcb-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,85,2026-06-11 00:45,BO3,EMEA Masters Group D,Eintracht Spandau vs Anubis Gaming,lol-es1-anb-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,86,2026-06-11 00:55,BO3,EMEA Masters Group B,PCIFIC vs Forsaken,lol-pcific-fsk-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,87,2026-06-11 01:40,BO3,EMEA Masters Group C,Galions vs WLGaming Esports,lol-gal-wlg-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,92,2026-06-11 23:00,BO3,EMEA Masters Group D,BOMBA Team vs Anubis Gaming,lol-bombat-anb-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,93,2026-06-11 23:00,BO3,EMEA Masters Group A,Misa Esports vs UCAM Esports Club,lol-me1-ucam1-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,94,2026-06-11 23:00,BO3,EMEA Masters Group D,Solary vs Eintracht Spandau,lol-sly-es1-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,95,2026-06-11 23:00,BO3,EMEA Masters Group C,G2 NORD vs Galions,lol-g2nord-gal-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,96,2026-06-12 00:45,BO3,EMEA Masters Group C,Partizan Sangal vs WLGaming Esports,lol-ps1-wlg-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,97,2026-06-12 01:10,BO3,EMEA Masters Group B,Team Heretics Academy vs Forsaken,lol-hrts-fsk-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,98,2026-06-12 01:20,BO3,EMEA Masters Group B,Karmine Corp Blue vs PCIFIC,lol-kcb-pcific-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,99,2026-06-12 01:30,BO3,EMEA Masters Group A,E WIE EINFACH E-SPORTS vs HMBLE,lol-ewi-hmble-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,103,2026-06-12 23:00,BO3,EMEA Masters Group C,G2 NORD vs WLGaming Esports,lol-g2nord-wlg-2026-06-12,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,104,2026-06-12 23:00,BO3,EMEA Masters Group A,Misa Esports vs E WIE EINFACH E-SPORTS,lol-me1-ewi-2026-06-12,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,105,2026-06-13 00:50,BO3,EMEA Masters Group D,Eintracht Spandau vs Anubis Gaming,lol-es1-anb-2026-06-12,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,26,106,2026-06-13 02:10,BO3,EMEA Masters Group B,Forsaken vs Karmine Corp Blue,lol-fsk-kcb-2026-06-12,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；次级欧洲赛事，资料中等
+C 低优先/剔除池,25,71,2026-06-09 14:00,BO3,Asia Masters Group A,Dplus KIA Challengers vs Top Esports Challenger,lol-dkc-tesc-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,25,72,2026-06-09 16:00,BO3,Asia Masters Group B,Bilibili Gaming Junior vs T1 Academy,lol-blgj-t1a-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,25,73,2026-06-09 17:30,BO3,Asia Masters Group C,Nongshim Esports Academy vs Weibo Gaming Youth Team,lol-nsea-wbgy-2026-06-09,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,25,78,2026-06-10 15:45,BO3,Asia Masters Group B,FENNEL vs KT Rolster Challengers,lol-fnl-ktc-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,25,79,2026-06-10 18:00,BO3,Asia Masters Group A,EDward Gaming Youth Team vs CTBC Flying Oyster Academy,lol-edgy-ctbca-2026-06-10,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,25,90,2026-06-11 14:00,BO3,Asia Masters Group C,Weibo Gaming Youth Team vs Saigon Warriors,lol-wbgy-sgw-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,25,91,2026-06-11 18:00,BO3,Asia Masters Group A,Top Esports Challenger vs CTBC Flying Oyster Academy,lol-tesc-ctbca-2026-06-11,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性
+C 低优先/剔除池,11,11,2026-06-03 16:00,BO3,LJL Regular Season,DetonatioN FocusMe Academy vs Arneb,lol-dfma-arb1-2026-06-03,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；常规赛优先级较低
+C 低优先/剔除池,11,13,2026-06-03 18:15,BO3,LJL Regular Season,Uwinks vs New Meta,lol-uwinks-newmet-2026-06-03,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；常规赛优先级较低
+C 低优先/剔除池,11,17,2026-06-04 16:10,BO3,LJL Regular Season,L Guide Gaming vs RAYN Clocks,lol-lguide-rck-2026-06-04,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO3 有一定可建模性；常规赛优先级较低
+C 低优先/剔除池,7,42,2026-06-08 16:50,BO1,Asia Masters Group C,Weibo Gaming Youth Team vs Saigon Dino,lol-wbgy-dino-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高
+C 低优先/剔除池,7,44,2026-06-08 17:50,BO1,Asia Masters Group B,T1 Academy vs KT Rolster Challengers,lol-t1a-ktc-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高
+C 低优先/剔除池,7,45,2026-06-08 18:40,BO1,Asia Masters Group A,CTBC Flying Oyster Academy vs Top Esports Challenger,lol-ctbca-tesc-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高
+C 低优先/剔除池,3,46,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,Karmine Corp Blue vs Partizan Sangal,lol-kcb-ps1-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,47,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,GMBLERS ESPORTS vs NightBirds,lol-gmb-nbs-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,48,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,GOAL vs mCon esports,lol-goal-mcn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,49,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,BOMBA Team vs MAGAZA,lol-bombat-mgz-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,50,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,Frites Esports Club vs The Ruddy Sack,lol-fec-rs-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,51,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,CITA Kaizen vs Bubliki,lol-ckz-bublik-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,52,2026-06-08 23:00,BO1,EMEA Masters Swiss Stage,FN Esports vs Verdant,lol-fn-vdn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,53,2026-06-08 23:15,BO1,EMEA Masters Swiss Stage,E WIE EINFACH E-SPORTS vs The Otter Side,lol-ewi-tos-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,55,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,Karmine Corp Blue vs CITA Kaizen,lol-kcb-ckz-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,56,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,GOAL vs Verdant,lol-goal-vdn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,57,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,E WIE EINFACH E-SPORTS vs NightBirds,lol-ewi-nbs-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,58,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,FN Esports vs mCon esports,lol-fn-mcn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,59,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,GMBLERS ESPORTS vs The Otter Side,lol-gmb-tos-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,60,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,Partizan Sangal vs Bubliki,lol-ps1-bublik-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,61,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,Frites Esports Club vs MAGAZA,lol-fec-mgz-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,62,2026-06-09 00:30,BO1,EMEA Masters Swiss Stage,BOMBA Team vs The Ruddy Sack,lol-bombat-rs-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,63,2026-06-09 02:00,BO1,EMEA Masters Swiss Stage,Karmine Corp Blue vs Verdant,lol-kcb-vdn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,64,2026-06-09 02:00,BO1,EMEA Masters Swiss Stage,BOMBA Team vs The Otter Side,lol-bombat-tos-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,65,2026-06-09 02:00,BO1,EMEA Masters Swiss Stage,FN Esports vs Frites Esports Club,lol-fn-fec-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,66,2026-06-09 03:10,BO1,EMEA Masters Swiss Stage,BOMBA Team vs Frites Esports Club,lol-bombat-fec-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,68,2026-06-09 03:20,BO1,EMEA Masters Swiss Stage,The Otter Side vs mCon esports,lol-tos-mcn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,3,69,2026-06-09 04:25,BO1,EMEA Masters Swiss Stage,BOMBA Team vs mCon esports,lol-bombat-mcn-2026-06-08,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；次级欧洲赛事，资料中等
+C 低优先/剔除池,0,144,2026-06-30 21:00,BO2,HLL Regular Season,Valerion vs ALMO Players,lol-vlr-almo-2026-06-30,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO2 规则/结算复杂度高；常规赛优先级较低
+C 低优先/剔除池,0,145,2026-06-30 23:00,BO1,Prime League 1st Division Regular Season,E WIE EINFACH E-SPORTS vs BIG,lol-ewi-big1-2026-06-30,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；常规赛优先级较低
+C 低优先/剔除池,0,146,2026-06-30 23:00,BO2,HLL Regular Season,Gamespace Mediterranean College Esports vs WLGaming Esports,lol-gsmc-wlg-2026-06-30,3,2,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO2 规则/结算复杂度高；常规赛优先级较低
+C 低优先/剔除池,0,147,2026-07-01 00:15,BO1,Prime League 1st Division Regular Season,Eintracht Frankfurt vs Unicorns Of Love Sexy Edition,lol-sge-use1-2026-06-30,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；常规赛优先级较低
+C 低优先/剔除池,0,148,2026-07-01 01:15,BO1,Prime League 1st Division Regular Season,G2 NORD vs ROSSMANN Centaurs,lol-g2nord-ross-2026-06-30,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；常规赛优先级较低
+C 低优先/剔除池,0,149,2026-07-01 02:15,BO1,Prime League 1st Division Regular Season,Kaufland Hangry Knights vs Eintracht Spandau,lol-khk-es1-2026-06-30,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；常规赛优先级较低
+C 低优先/剔除池,0,150,2026-07-01 03:15,BO1,Prime League 1st Division Regular Season,VfB eSports vs Team Orange Gaming,lol-vfb-tog-2026-06-30,1,0,信息噪音或方差偏高，默认不做深度策略，只保留监控。,BO1 方差高；常规赛优先级较低

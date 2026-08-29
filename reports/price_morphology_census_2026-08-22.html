@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电竞盘口价格形态普查 · 80+ 场 / 710 序列</title>
+<style>
+  :root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#6e6e73;--accent:#0071e3;--line:#e8e8ed;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,
+    "SF Pro SC","PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+    line-height:1.65;padding:28px 16px 64px;}
+  .wrap{max-width:1020px;margin:0 auto;}
+  header{padding:12px 4px 20px;}
+  header h1{font-size:26px;font-weight:700;letter-spacing:-.2px;}
+  header p{color:var(--sub);font-size:14px;margin-top:6px;}
+  .tag{display:inline-block;background:#e8f1ff;color:var(--accent);border-radius:999px;
+    padding:3px 12px;font-size:12px;font-weight:600;margin-bottom:10px;}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:26px;}
+  @media(min-width:720px){.stats{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:var(--card);border-radius:16px;padding:18px 16px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .stat .num{font-size:30px;font-weight:700;color:var(--accent);line-height:1.1;}
+  .stat .lbl{font-size:13px;color:var(--sub);margin-top:4px;}
+  .card{background:var(--card);border-radius:18px;padding:22px 20px;margin-bottom:20px;
+    box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .card h2{font-size:19px;font-weight:700;margin-bottom:4px;}
+  .card .sub{color:var(--sub);font-size:13px;margin-bottom:16px;}
+  .morph-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media(min-width:760px){.morph-grid{grid-template-columns:repeat(2,1fr);}}
+  .mc{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fbfbfd;}
+  .mc-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px;}
+  .mc-name{font-weight:700;font-size:14px;}
+  .mc-n{color:var(--sub);font-size:12px;}
+  .mc-cap{color:var(--sub);font-size:11px;margin-top:6px;word-break:break-all;}
+  .curve{width:100%;height:auto;display:block;}
+  .donut-wrap{display:flex;flex-wrap:wrap;gap:20px;align-items:center;}
+  .donut{width:190px;height:auto;}
+  .legend{flex:1;min-width:230px;}
+  .lg{display:flex;align-items:center;gap:8px;font-size:13px;padding:4px 0;}
+  .lg .dot{width:12px;height:12px;border-radius:4px;flex:none;}
+  .lg b{margin-left:auto;}
+  .stack{width:100%;height:auto;display:block;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th{text-align:left;color:var(--sub);font-weight:600;font-size:12.5px;
+    border-bottom:1px solid var(--line);padding:8px;white-space:nowrap;}
+  td{padding:8px;border-bottom:1px solid #f0f0f4;}
+  tr:last-child td{border-bottom:none;}
+  ul{margin:8px 0 0 18px;} li{margin-bottom:8px;font-size:14px;}
+  footer{color:var(--sub);font-size:12px;padding:10px 4px;}
+  .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+    background:#f2f2f5;padding:2px 6px;border-radius:6px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">策略研究 · 数据普查</span>
+    <h1>电竞盘口价格形态普查</h1>
+    <p>80+ 场比赛 · 710 条双边 1 分钟价格序列 · 2026-08-22 · 数据源：Polymarket CLOB 价格历史</p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="num">80+</div><div class="lbl">已归档比赛</div></div>
+    <div class="stat"><div class="num">710</div><div class="lbl">双侧价格序列</div></div>
+    <div class="stat"><div class="num">6</div><div class="lbl">基础形态（全覆盖）</div></div>
+    <div class="stat"><div class="num">44</div><div class="lbl">细分形态（真实存在）</div></div>
+  </div>
+
+  <div class="card">
+    <h2>六种基础形态，每一条都是真实比赛的价格曲线</h2>
+    <div class="sub">横轴 = 比赛进程 0%→100%，纵轴 = 价格 0→1；每张图是一条真实序列</div>
+    <div class="morph-grid"><div class="mc"><div class="mc-head"><span class="mc-name" style="color:#0071e3">W1 直通上行</span><span class="mc-n">n=129</span></div><svg viewBox="0 0 300 150" class="curve" role="img"><line x1="12" y1="138.0" x2="288" y2="138.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="141.0" font-size="9" fill="#8e8e93">0</text><line x1="12" y1="75.0" x2="288" y2="75.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="78.0" font-size="9" fill="#8e8e93">0.5</text><line x1="12" y1="12.0" x2="288" y2="12.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="15.0" font-size="9" fill="#8e8e93">1.0</text><text x="12" y="147" font-size="9" fill="#8e8e93">0%</text><text x="140" y="147" font-size="9" fill="#8e8e93">50%</text><text x="266" y="147" font-size="9" fill="#8e8e93">100%</text><polyline points="12.0,20.2 19.1,20.2 26.2,20.2 33.2,20.2 40.3,20.2 47.4,20.2 54.5,20.2 61.5,20.8 68.6,21.4 75.7,22.7 82.8,22.7 89.8,22.7 96.9,23.3 104.0,23.3 111.1,23.3 118.2,23.3 125.2,23.3 132.3,23.3 139.4,23.3 146.5,23.3 153.5,23.3 160.6,23.3 167.7,23.3 174.8,23.3 181.8,23.3 188.9,23.3 196.0,23.3 203.1,23.3 210.2,23.3 217.2,23.3 224.3,23.3 231.4,23.3 238.5,23.3 245.5,23.3 252.6,23.3 259.7,22.1 266.8,22.1 273.8,22.1 280.9,22.1 288.0,12.6" fill="none" stroke="#0071e3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mc-cap">lol-gen-kt-2026-08-19 · match · Gen.G</div></div><div class="mc"><div class="mc-head"><span class="mc-name" style="color:#5aa7e8">W2 回踩上行</span><span class="mc-n">n=109</span></div><svg viewBox="0 0 300 150" class="curve" role="img"><line x1="12" y1="138.0" x2="288" y2="138.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="141.0" font-size="9" fill="#8e8e93">0</text><line x1="12" y1="75.0" x2="288" y2="75.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="78.0" font-size="9" fill="#8e8e93">0.5</text><line x1="12" y1="12.0" x2="288" y2="12.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="15.0" font-size="9" fill="#8e8e93">1.0</text><text x="12" y="147" font-size="9" fill="#8e8e93">0%</text><text x="140" y="147" font-size="9" fill="#8e8e93">50%</text><text x="266" y="147" font-size="9" fill="#8e8e93">100%</text><polyline points="12.0,95.8 19.1,71.8 26.2,71.8 33.2,71.8 40.3,71.8 47.4,74.4 54.5,74.4 61.5,74.4 68.6,74.4 75.7,74.4 82.8,74.4 89.8,74.4 96.9,74.4 104.0,72.5 111.1,73.1 118.2,73.1 125.2,73.1 132.3,73.1 139.4,73.1 146.5,73.1 153.5,73.1 160.6,73.1 167.7,73.1 174.8,73.1 181.8,73.1 188.9,73.1 196.0,73.1 203.1,73.1 210.2,73.1 217.2,73.1 224.3,71.8 231.4,76.9 238.5,68.1 245.5,54.2 252.6,41.0 259.7,52.9 266.8,63.0 273.8,42.2 280.9,24.0 288.0,12.1" fill="none" stroke="#5aa7e8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mc-cap">lol-drx-bro2-2026-08-16 · game2 · Kiwoom DRX</div></div><div class="mc"><div class="mc-head"><span class="mc-name" style="color:#7fc4f5">W3 深V反转</span><span class="mc-n">n=117</span></div><svg viewBox="0 0 300 150" class="curve" role="img"><line x1="12" y1="138.0" x2="288" y2="138.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="141.0" font-size="9" fill="#8e8e93">0</text><line x1="12" y1="75.0" x2="288" y2="75.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="78.0" font-size="9" fill="#8e8e93">0.5</text><line x1="12" y1="12.0" x2="288" y2="12.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="15.0" font-size="9" fill="#8e8e93">1.0</text><text x="12" y="147" font-size="9" fill="#8e8e93">0%</text><text x="140" y="147" font-size="9" fill="#8e8e93">50%</text><text x="266" y="147" font-size="9" fill="#8e8e93">100%</text><polyline points="12.0,61.8 19.1,59.9 26.2,60.5 33.2,71.2 40.3,71.2 47.4,94.5 54.5,104.0 61.5,107.8 68.6,102.1 75.7,103.3 82.8,103.3 89.8,102.1 96.9,97.0 104.0,83.2 111.1,81.9 118.2,73.1 125.2,73.1 132.3,46.0 139.4,36.6 146.5,47.9 153.5,40.3 160.6,40.3 167.7,69.3 174.8,75.6 181.8,75.6 188.9,76.3 196.0,70.6 203.1,61.8 210.2,115.3 217.2,117.2 224.3,117.2 231.4,100.8 238.5,94.5 245.5,93.9 252.6,93.9 259.7,96.4 266.8,21.4 273.8,21.4 280.9,35.9 288.0,12.6" fill="none" stroke="#7fc4f5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mc-cap">lol-edg-tt-2026-08-21 · game1 · EDward Gaming</div></div><div class="mc"><div class="mc-head"><span class="mc-name" style="color:#ff453a">L1 冲高回落归零</span><span class="mc-n">n=161</span></div><svg viewBox="0 0 300 150" class="curve" role="img"><line x1="12" y1="138.0" x2="288" y2="138.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="141.0" font-size="9" fill="#8e8e93">0</text><line x1="12" y1="75.0" x2="288" y2="75.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="78.0" font-size="9" fill="#8e8e93">0.5</text><line x1="12" y1="12.0" x2="288" y2="12.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="15.0" font-size="9" fill="#8e8e93">1.0</text><text x="12" y="147" font-size="9" fill="#8e8e93">0%</text><text x="140" y="147" font-size="9" fill="#8e8e93">50%</text><text x="266" y="147" font-size="9" fill="#8e8e93">100%</text><polyline points="12.0,87.6 19.1,89.5 26.2,87.0 33.2,81.9 40.3,86.3 47.4,85.7 54.5,85.7 61.5,88.2 68.6,87.0 75.7,93.3 82.8,85.1 89.8,101.5 96.9,108.4 104.0,99.6 111.1,99.6 118.2,109.7 125.2,100.8 132.3,122.2 139.4,98.3 146.5,94.5 153.5,85.7 160.6,97.0 167.7,78.2 174.8,61.8 181.8,60.5 188.9,61.8 196.0,63.0 203.1,61.8 210.2,75.0 217.2,76.9 224.3,95.8 231.4,108.4 238.5,95.2 245.5,104.0 252.6,116.0 259.7,112.2 266.8,92.0 273.8,74.4 280.9,60.5 288.0,137.4" fill="none" stroke="#ff453a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mc-cap">cs2-fut-mouz-2026-08-14 · match · MOUZ</div></div><div class="mc"><div class="mc-head"><span class="mc-name" style="color:#ff7a6e">L2 阴跌归零</span><span class="mc-n">n=188</span></div><svg viewBox="0 0 300 150" class="curve" role="img"><line x1="12" y1="138.0" x2="288" y2="138.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="141.0" font-size="9" fill="#8e8e93">0</text><line x1="12" y1="75.0" x2="288" y2="75.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="78.0" font-size="9" fill="#8e8e93">0.5</text><line x1="12" y1="12.0" x2="288" y2="12.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="15.0" font-size="9" fill="#8e8e93">1.0</text><text x="12" y="147" font-size="9" fill="#8e8e93">0%</text><text x="140" y="147" font-size="9" fill="#8e8e93">50%</text><text x="266" y="147" font-size="9" fill="#8e8e93">100%</text><polyline points="12.0,64.3 19.1,68.1 26.2,78.2 33.2,80.7 40.3,90.8 47.4,99.6 54.5,102.1 61.5,109.7 68.6,110.9 75.7,110.9 82.8,110.9 89.8,110.9 96.9,110.9 104.0,110.9 111.1,110.9 118.2,112.2 125.2,112.2 132.3,110.9 139.4,110.9 146.5,109.7 153.5,107.1 160.6,108.4 167.7,106.5 174.8,105.9 181.8,102.1 188.9,104.6 196.0,100.8 203.1,102.1 210.2,107.1 217.2,119.7 224.3,113.4 231.4,118.5 238.5,119.7 245.5,114.7 252.6,119.7 259.7,119.7 266.8,117.2 273.8,114.7 280.9,124.8 288.0,137.9" fill="none" stroke="#ff7a6e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mc-cap">dota2-ts8-aur1-2026-08-13 · moneyline · Aurora</div></div><div class="mc"><div class="mc-head"><span class="mc-name" style="color:#d70015">L3 快崩归零</span><span class="mc-n">n=6</span></div><svg viewBox="0 0 300 150" class="curve" role="img"><line x1="12" y1="138.0" x2="288" y2="138.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="141.0" font-size="9" fill="#8e8e93">0</text><line x1="12" y1="75.0" x2="288" y2="75.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="78.0" font-size="9" fill="#8e8e93">0.5</text><line x1="12" y1="12.0" x2="288" y2="12.0" stroke="#e8e8ed" stroke-width="1"/><text x="291" y="15.0" font-size="9" fill="#8e8e93">1.0</text><text x="12" y="147" font-size="9" fill="#8e8e93">0%</text><text x="140" y="147" font-size="9" fill="#8e8e93">50%</text><text x="266" y="147" font-size="9" fill="#8e8e93">100%</text><polyline points="12.0,127.9 19.1,129.2 26.2,129.2 33.2,129.2 40.3,129.2 47.4,126.0 54.5,126.0 61.5,126.0 68.6,126.0 75.7,126.0 82.8,80.0 89.8,126.0 96.9,126.0 104.0,126.0 111.1,123.5 118.2,123.5 125.2,123.5 132.3,123.5 139.4,123.5 146.5,125.4 153.5,124.8 160.6,123.5 167.7,123.5 174.8,123.5 181.8,71.2 188.9,109.7 196.0,109.0 203.1,109.0 210.2,109.7 217.2,109.7 224.3,121.6 231.4,121.6 238.5,109.0 245.5,92.6 252.6,109.7 259.7,79.4 266.8,112.2 273.8,114.7 280.9,114.1 288.0,137.3" fill="none" stroke="#d70015" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="mc-cap">cs2-shu1-nrg-2026-08-07 · game2 · Spirit HU</div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>形态分布</h2>
+    <div class="sub">710 条双侧序列全部归属，无例外</div>
+    <div class="donut-wrap"><svg viewBox="0 0 220 220" class="donut" role="img"><circle cx="110.0" cy="110.0" r="70" fill="none" stroke="#0071e3" stroke-width="26" stroke-dasharray="79.91 359.91" stroke-dashoffset="-0.00"/><circle cx="110.0" cy="110.0" r="70" fill="none" stroke="#5aa7e8" stroke-width="26" stroke-dasharray="67.52 372.30" stroke-dashoffset="-79.91"/><circle cx="110.0" cy="110.0" r="70" fill="none" stroke="#7fc4f5" stroke-width="26" stroke-dasharray="72.48 367.35" stroke-dashoffset="-147.43"/><circle cx="110.0" cy="110.0" r="70" fill="none" stroke="#ff453a" stroke-width="26" stroke-dasharray="99.73 340.09" stroke-dashoffset="-219.91"/><circle cx="110.0" cy="110.0" r="70" fill="none" stroke="#ff7a6e" stroke-width="26" stroke-dasharray="116.46 323.36" stroke-dashoffset="-319.65"/><circle cx="110.0" cy="110.0" r="70" fill="none" stroke="#d70015" stroke-width="26" stroke-dasharray="3.72 436.11" stroke-dashoffset="-436.11"/><text x="110.0" y="106.0" text-anchor="middle" font-size="26" font-weight="700" fill="#1d1d1f">710</text><text x="110.0" y="126.0" text-anchor="middle" font-size="11" fill="#6e6e73">条序列</text></svg><div class="legend"><div class="lg"><span class="dot" style="background:#0071e3"></span><span>W1 直通上行</span><b>129</b></div><div class="lg"><span class="dot" style="background:#5aa7e8"></span><span>W2 回踩上行</span><b>109</b></div><div class="lg"><span class="dot" style="background:#7fc4f5"></span><span>W3 深V反转</span><b>117</b></div><div class="lg"><span class="dot" style="background:#ff453a"></span><span>L1 冲高回落归零</span><b>161</b></div><div class="lg"><span class="dot" style="background:#ff7a6e"></span><span>L2 阴跌归零</span><b>188</b></div><div class="lg"><span class="dot" style="background:#d70015"></span><span>L3 快崩归零</span><b>6</b></div></div></div>
+  </div>
+
+  <div class="card">
+    <h2>局中价格带 → 最终形态（边打边认）</h2>
+    <div class="sub">比赛进行到 25% / 50% / 75% 时，价格落在哪个带，最终变成哪种形态（堆叠条）
+      ——绿色系 = 最终上行，红色系 = 最终归零</div>
+    <h3 style="font-size:14px;margin:18px 0 8px;">25% 赛程</h3><svg viewBox="0 0 640 320" class="stack" role="img"><text x="0" y="27.0" font-size="12" fill="#1d1d1f"><0.20</text><rect x="110.0" y="0" width="7.4" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 3</title></rect><rect x="117.4" y="0" width="41.8" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 17</title></rect><rect x="159.2" y="0" width="19.7" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 8</title></rect><rect x="178.9" y="0" width="125.4" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 51</title></rect><rect x="304.3" y="0" width="14.8" height="46" fill="#d70015" rx="3"><title>L3 快崩归零: 6</title></rect><text x="575.0" y="27.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 24%</text><text x="0" y="91.0" font-size="12" fill="#1d1d1f">0.20-0.40</text><rect x="110.0" y="64" width="14.8" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 6</title></rect><rect x="124.8" y="64" width="49.2" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 20</title></rect><rect x="173.9" y="64" width="78.7" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 32</title></rect><rect x="252.6" y="64" width="108.2" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 44</title></rect><rect x="360.9" y="64" width="199.2" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 81</title></rect><text x="575.0" y="91.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 32%</text><text x="0" y="155.0" font-size="12" fill="#1d1d1f">0.40-0.60</text><rect x="110.0" y="128" width="61.5" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 25</title></rect><rect x="171.5" y="128" width="68.9" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 28</title></rect><rect x="240.4" y="128" width="78.7" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 32</title></rect><rect x="319.1" y="128" width="103.3" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 42</title></rect><rect x="422.4" y="128" width="105.8" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 43</title></rect><text x="575.0" y="155.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 50%</text><text x="0" y="219.0" font-size="12" fill="#1d1d1f">0.60-0.80</text><rect x="110.0" y="192" width="130.4" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 53</title></rect><rect x="240.4" y="192" width="110.7" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 45</title></rect><rect x="351.0" y="192" width="68.9" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 28</title></rect><rect x="419.9" y="192" width="115.6" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 47</title></rect><rect x="535.5" y="192" width="29.5" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 12</title></rect><text x="575.0" y="219.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 68%</text><text x="0" y="283.0" font-size="12" fill="#1d1d1f">>0.80</text><rect x="110.0" y="256" width="110.7" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 45</title></rect><rect x="220.7" y="256" width="32.0" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 13</title></rect><rect x="252.6" y="256" width="19.7" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 8</title></rect><rect x="272.3" y="256" width="49.2" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 20</title></rect><rect x="321.5" y="256" width="2.5" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 1</title></rect><text x="575.0" y="283.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 76%</text></svg><h3 style="font-size:14px;margin:18px 0 8px;">50% 赛程</h3><svg viewBox="0 0 640 320" class="stack" role="img"><text x="0" y="27.0" font-size="12" fill="#1d1d1f"><0.20</text><rect x="110.0" y="0" width="52.7" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 19</title></rect><rect x="162.7" y="0" width="38.8" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 14</title></rect><rect x="201.6" y="0" width="227.5" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 82</title></rect><rect x="429.1" y="0" width="16.6" height="46" fill="#d70015" rx="3"><title>L3 快崩归零: 6</title></rect><text x="575.0" y="27.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 16%</text><text x="0" y="91.0" font-size="12" fill="#1d1d1f">0.20-0.40</text><rect x="110.0" y="64" width="8.3" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 3</title></rect><rect x="118.3" y="64" width="44.4" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 16</title></rect><rect x="162.7" y="64" width="58.3" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 21</title></rect><rect x="221.0" y="64" width="144.3" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 52</title></rect><rect x="365.2" y="64" width="199.8" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 72</title></rect><text x="575.0" y="91.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 24%</text><text x="0" y="155.0" font-size="12" fill="#1d1d1f">0.40-0.60</text><rect x="110.0" y="128" width="38.8" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 14</title></rect><rect x="148.8" y="128" width="66.6" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 24</title></rect><rect x="215.4" y="128" width="91.6" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 33</title></rect><rect x="307.0" y="128" width="127.6" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 46</title></rect><rect x="434.6" y="128" width="63.8" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 23</title></rect><text x="575.0" y="155.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 51%</text><text x="0" y="219.0" font-size="12" fill="#1d1d1f">0.60-0.80</text><rect x="110.0" y="192" width="119.3" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 43</title></rect><rect x="229.3" y="192" width="119.3" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 43</title></rect><rect x="348.6" y="192" width="91.6" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 33</title></rect><rect x="440.2" y="192" width="83.2" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 30</title></rect><rect x="523.4" y="192" width="30.5" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 11</title></rect><text x="575.0" y="219.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 74%</text><text x="0" y="283.0" font-size="12" fill="#1d1d1f">>0.80</text><rect x="110.0" y="256" width="191.4" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 69</title></rect><rect x="301.4" y="256" width="72.1" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 26</title></rect><rect x="373.6" y="256" width="30.5" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 11</title></rect><rect x="404.1" y="256" width="52.7" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 19</title></rect><text x="575.0" y="283.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 85%</text></svg><h3 style="font-size:14px;margin:18px 0 8px;">75% 赛程</h3><svg viewBox="0 0 640 320" class="stack" role="img"><text x="0" y="27.0" font-size="12" fill="#1d1d1f"><0.20</text><rect x="110.0" y="0" width="8.6" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 3</title></rect><rect x="118.6" y="0" width="20.2" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 7</title></rect><rect x="138.8" y="0" width="103.7" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 36</title></rect><rect x="242.5" y="0" width="316.8" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 110</title></rect><rect x="559.2" y="0" width="5.8" height="46" fill="#d70015" rx="3"><title>L3 快崩归零: 2</title></rect><text x="575.0" y="27.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 6%</text><text x="0" y="91.0" font-size="12" fill="#1d1d1f">0.20-0.40</text><rect x="110.0" y="64" width="17.3" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 6</title></rect><rect x="127.3" y="64" width="11.5" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 4</title></rect><rect x="138.8" y="64" width="51.8" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 18</title></rect><rect x="190.6" y="64" width="178.5" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 62</title></rect><rect x="369.2" y="64" width="118.1" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 41</title></rect><rect x="487.2" y="64" width="11.5" height="46" fill="#d70015" rx="3"><title>L3 快崩归零: 4</title></rect><text x="575.0" y="91.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 21%</text><text x="0" y="155.0" font-size="12" fill="#1d1d1f">0.40-0.60</text><rect x="110.0" y="128" width="51.8" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 18</title></rect><rect x="161.8" y="128" width="37.4" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 13</title></rect><rect x="199.3" y="128" width="86.4" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 30</title></rect><rect x="285.7" y="128" width="97.9" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 34</title></rect><rect x="383.6" y="128" width="80.6" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 28</title></rect><text x="575.0" y="155.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 50%</text><text x="0" y="219.0" font-size="12" fill="#1d1d1f">0.60-0.80</text><rect x="110.0" y="192" width="77.8" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 27</title></rect><rect x="187.8" y="192" width="123.8" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 43</title></rect><rect x="311.6" y="192" width="109.4" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 38</title></rect><rect x="421.0" y="192" width="63.4" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 22</title></rect><rect x="484.4" y="192" width="17.3" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 6</title></rect><text x="575.0" y="219.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 79%</text><text x="0" y="283.0" font-size="12" fill="#1d1d1f">>0.80</text><rect x="110.0" y="256" width="224.6" height="46" fill="#0071e3" rx="3"><title>W1 直通上行: 78</title></rect><rect x="334.6" y="256" width="132.5" height="46" fill="#5aa7e8" rx="3"><title>W2 回踩上行: 46</title></rect><rect x="467.1" y="256" width="69.1" height="46" fill="#7fc4f5" rx="3"><title>W3 深V反转: 24</title></rect><rect x="536.2" y="256" width="20.2" height="46" fill="#ff453a" rx="3"><title>L1 冲高回落归零: 7</title></rect><rect x="556.4" y="256" width="8.6" height="46" fill="#ff7a6e" rx="3"><title>L2 阴跌归零: 3</title></rect><text x="575.0" y="283.0" font-size="12" font-weight="600" fill="#0a8f4c">上行 94%</text></svg>
+  </div>
+
+  <div class="card">
+    <h2>基础形态对比 · LoL 单局（中位时长 27 分钟）</h2>
+    <div class="sub">真实分钟时间线：开局后第 5/10/15/20/25 分钟价格中位——边打边认形态</div>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>分钟</th><th>W1 直通</th><th>W2 回踩</th><th>W3 深V</th><th>L1 冲高回落</th><th>L2 阴跌</th></tr>
+      <tr><td>第 0 分钟</td><td>0.60</td><td>0.40</td><td>0.50</td><td>0.50</td><td>0.40</td></tr>
+      <tr><td>第 5 分钟</td><td>0.70</td><td>0.60</td><td>0.40</td><td>0.60</td><td>0.30</td></tr>
+      <tr><td>第 10 分钟</td><td>0.80</td><td>0.60</td><td>0.50</td><td>0.50</td><td>0.20</td></tr>
+      <tr><td>第 15 分钟</td><td>0.90</td><td>0.60</td><td>0.50</td><td>0.50</td><td>0.10</td></tr>
+      <tr><td>第 20 分钟</td><td>0.90</td><td>0.80</td><td>0.70</td><td>0.30</td><td>0.10</td></tr>
+      <tr><td>第 25 分钟</td><td>1.00</td><td>1.00</td><td>0.80</td><td>0.10</td><td>0.00</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>关键时点与 0.2-0.4 买入判断（LoL 单局）</h2>
+    <div class="sub">每个形态的关键转折发生在第几分钟，直接决定 0.2-0.4 能不能买</div>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>形态</th><th>低点/高点时刻</th><th>首触 0.75</th><th>0.2-0.4 买入判断</th></tr>
+      <tr><td>W1 直通</td><td>低点第 4 分钟</td><td>第 6 分钟</td><td>基本不出现 0.2-0.4（低开直通属赛前价值位）</td></tr>
+      <tr><td>W2 回踩</td><td>低点第 4 分钟</td><td>第 17 分钟</td><td>只在第 4 分钟前后回踩到 0.3-0.4，确认回升可快进</td></tr>
+      <tr><td>W3 深V</td><td><b>低点第 11 分钟</b></td><td>第 19 分钟</td><td><b>唯一主流买点：第 11-15 分钟、0.25-0.35、反弹确认后</b></td></tr>
+      <tr><td>L1 冲高回落</td><td><b>高点第 8 分钟</b></td><td>第 2 分钟</td><td>0.2-0.4 出现在下跌途中（第 8-22 分钟）= 接飞刀，禁买</td></tr>
+      <tr><td>L2 阴跌</td><td>高点第 3 分钟</td><td>第 12 分钟（假反弹）</td><td>0.2-0.4 是必经之路（第 1-11 分钟）= 等死，禁买</td></tr>
+    </table>
+    </div>
+    <p style="margin-top:12px;font-size:14px;">总规则：值得买的 0.2-0.4 窗口 = <b>第 8-15 分钟</b>（W3 低点前后）；
+      第 15 分钟以后仍在 0.4 以下 = 基本排除 W3，禁止买入。</p>
+  </div>
+
+  <div class="card">
+    <h2>时间换算：赛程百分比 → 真实分钟</h2>
+    <div class="sub">局中价格带表的百分比对应到具体分钟，按游戏类型</div>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>游戏</th><th>单局中位时长</th><th>25% 赛程 ≈</th><th>50% 赛程 ≈</th><th>75% 赛程 ≈</th></tr>
+      <tr><td>LoL 单局</td><td>27 分钟</td><td>第 7 分钟</td><td>第 13-14 分钟</td><td>第 20 分钟</td></tr>
+      <tr><td>Dota2 单局</td><td>44 分钟</td><td>第 11 分钟</td><td>第 22 分钟</td><td>第 33 分钟</td></tr>
+      <tr><td>Valorant 单局</td><td>37 分钟</td><td>第 9 分钟</td><td>第 19 分钟</td><td>第 28 分钟</td></tr>
+      <tr><td>CS2 单图</td><td>约 35-45（口径待修）</td><td>约 9-11</td><td>约 18-22</td><td>约 27-34</td></tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>五种主要形态的比赛窗口签名</h2>
+    <div class="sub">开局价、最大回撤发生在赛程哪个点，是认形态的关键</div>
+    <div style="overflow-x:auto">
+    <table>
+      <tr><th>形态</th><th>样本</th><th>开局中位</th><th>最大回撤（赛程点）</th><th>最大回升（赛程点）</th><th>时长中位</th></tr>
+      <tr><td>W1 直通上行</td><td>129</td><td>0.66</td><td>0.06（21%）</td><td>最后定局</td><td>31min</td></tr>
+      <tr><td>W2 回踩上行</td><td>109</td><td>0.53</td><td>0.10（12% 早段）</td><td>0.47（最后）</td><td>42min</td></tr>
+      <tr><td>W3 深V反转</td><td>117</td><td>0.47</td><td>0.24（42% 中段）</td><td>0.52（最后）</td><td>56min</td></tr>
+      <tr><td>L1 冲高回落归零</td><td>161</td><td>0.55</td><td>0.53（末段）</td><td>0.19（35% 冲高）</td><td>45min</td></tr>
+      <tr><td>L2 阴跌归零</td><td>188</td><td>0.41</td><td>0.40（全程）</td><td>仅 0.03</td><td>32min</td></tr>
+    </table>
+    </div>
+    <p style="margin-top:12px;font-size:14px;">判别窗口在 <b>35%–45% 赛程</b>：W3 的低点与 L1 的冲高点都出现在这里；
+      75% 赛程后 &lt;0.20 基本判死（上行约 6%），&gt;0.80 基本锁定（约 94%）。</p>
+  </div>
+
+  <div class="card">
+    <h2>数据告诉我们的 5 条规律</h2>
+    <ul>
+      <li><b>阴跌归零是最大族</b>（188 条）：中/高开 + 晚段才死占多数——开局定价不低，却慢慢磨到 0。</li>
+      <li><b>直通上行与开局价无关</b>（高/中/低开 ≈ 46/41/40）：关键特征是早段（&lt;33% 赛程）不回头。</li>
+      <li><b>深V反转集中在"高开 + 中/晚段见低点"</b>：反转更多是强队盘中深跌后的修复，不是深水抄底者的专利。</li>
+      <li><b>快崩 86% 是"低开早崩"</b>：开局低于 0.20 的，大部分是等死，只是快慢之别。</li>
+      <li><b>冲高回落是低价反弹陷阱</b>：多数从低/中开冲高到 0.4–0.6 再归零，对应"接反弹刀"的风险。</li>
+    </ul>
+  </div>
+
+  <footer>
+    复算：<span class="code">tools/morphology_census.py</span> / <span class="code">tools/path_morphology_live.py</span>；
+    页面生成：<span class="code">tools/build_morphology_html.py</span>；
+    明细：reports/morphology_census_2026-08-22.json；文档：docs/forensics/PRICE_MORPHOLOGY_CENSUS.md、
+    PRICE_PATH_PLAYBOOK.md（5A/5B 前瞻分类与 0.2–0.4 买入规则）。
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily Polymarket esports scan + site update
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/danmu-intel
+ExecStart=/opt/danmu-intel/.venv/bin/python tools/market_scanner.py --live --output-events /opt/danmu-intel/data/watchlist_events.json --output-report /opt/danmu-intel/reports/opportunity_scan_$(date +%F).md
+ExecStart=/opt/danmu-intel/.venv/bin/python tools/daily_intel_check.py --date $(date +%F)
+ExecStart=/opt/danmu-intel/.venv/bin/python tools/update_site_today.py --date $(date +%F)
+ExecStart=/opt/danmu-intel/.venv/bin/python tools/publish_intel_pages.py --push

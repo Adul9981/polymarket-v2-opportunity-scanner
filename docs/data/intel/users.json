@@ -1,0 +1,169 @@
+{
+ "schema_version": "1.0",
+ "updated_at": "2026-08-24T22:15:00+08:00",
+ "description": "高价值弹幕用户情报库：跨平台（虎牙/SOOP）聚合，按专业特征分型，跨场累计可信度。",
+ "users": [
+  {
+   "id": "huya_tokyoll1",
+   "platform": "huya",
+   "nick": "TokyoLll",
+   "type": "游戏理解型",
+   "notes": "点出关键失误（皇子该拿龙、发条没学大）",
+   "samples": [
+    "皇子拿龙不就好了"
+   ],
+   "first_seen": "2026-08-17",
+   "credibility": 0.8
+  },
+  {
+   "id": "huya_lulu13",
+   "platform": "huya",
+   "nick": "LuLu13",
+   "type": "战术流",
+   "notes": "阵容/资源判断（'右边是我见过最怂的队伍'）",
+   "samples": [
+    "wei和牛头强开阵容就没主动开过几次"
+   ],
+   "first_seen": "2026-08-17",
+   "credibility": 0.8
+  },
+  {
+   "id": "huya_haergongliudehua",
+   "platform": "huya",
+   "nick": "哈工刘德华1",
+   "type": "盘口+选手型",
+   "notes": "盘口数字 + 选手评价",
+   "samples": [
+    "48？",
+    "这个hype是真菜"
+   ],
+   "first_seen": "2026-08-17",
+   "credibility": 0.7
+  },
+  {
+   "id": "huya_dadayuan",
+   "platform": "huya",
+   "nick": "大牙掉了0078",
+   "type": "反转观点者",
+   "notes": "与主流情绪相反（'不要被解说误导，这把TH翻了'）——市场情绪 vs 实际走势的分歧标记",
+   "samples": [],
+   "first_seen": "2026-08-18",
+   "credibility": 0.6
+  },
+  {
+   "id": "huya_inshawn",
+   "platform": "huya",
+   "nick": "Inshawn",
+   "type": "数据/结果型",
+   "notes": "报结果与比分细节，适合赛果交叉核对",
+   "samples": [
+    "最后82结束游戏"
+   ],
+   "first_seen": "2026-08-18",
+   "credibility": 0.7
+  },
+  {
+   "id": "huya_woshiyikexiaohuya",
+   "platform": "huya",
+   "nick": "我是一颗小虎牙",
+   "type": "全程点评+盘口型",
+   "notes": "操作评价 + 盘口/比分判断（'看起来3:0了'）；K杯决赛单日 130+ 条",
+   "samples": [
+    "39.5都扫好了",
+    "换打野后赢了很多把了"
+   ],
+   "first_seen": "2026-08-18",
+   "credibility": 0.8
+  },
+  {
+   "id": "soop_jaeneungpandokgi",
+   "platform": "soop",
+   "nick": "재능판독기（天赋解读机）",
+   "type": "BP 复盘型",
+   "notes": "不甩锅选手，归因选角/教练组（'NS 没打错，BP 问题'）",
+   "samples": [
+    "拿 Rell 打 Camille 才是问题"
+   ],
+   "first_seen": "2026-08-18",
+   "credibility": 0.8
+  },
+  {
+   "id": "soop_letsgiritman",
+   "platform": "soop",
+   "nick": "렛츠기릿맨（Let's Go）",
+   "type": "战况复核型",
+   "notes": "实时跟进关键操作并给结论（Enosh/卡莎/Kled）",
+   "samples": [
+    "抓到 Jin 就算成功"
+   ],
+   "first_seen": "2026-08-18",
+   "credibility": 0.8
+  },
+  {
+   "id": "soop_1q2w3e4r5t",
+   "platform": "soop",
+   "nick": "1q2w3e4r5t",
+   "type": "逆转/预测观察型",
+   "notes": "G1 喊'NS 逆转苗头'，G2 判定'NS 碾压'；跨局预测转向样本",
+   "samples": [
+    "NS 第二局会赢"
+   ],
+   "first_seen": "2026-08-18",
+   "credibility": 0.7
+  },
+  {
+   "id": "soop_c9bongdari",
+   "platform": "soop",
+   "nick": "[C9]봉달이",
+   "type": "预测型",
+   "notes": "BP 定胜负判断（'阵容出来 DNS 就压胜'）",
+   "samples": [
+    "逆转打死都没有"
+   ],
+   "first_seen": "2026-08-18",
+   "credibility": 0.7
+  },
+  {
+   "id": "huya_zuoshankelv",
+   "platform": "huya",
+   "nick": "座山客绿",
+   "type": "盘口/资金流型",
+   "notes": "盘口诱客判断：BFX.Y vs HLE.C 系列方向判断与市场收敛一致",
+   "samples": [
+    "这盘口一直在诱客队，大概率3-1。3-0带走",
+    "左边实力可以，这盘口一直在诱客队"
+   ],
+   "first_seen": "2026-08-24",
+   "credibility": 0.65,
+   "evidence_ts": "2026-08-24"
+  },
+  {
+   "id": "soop_kolalacoca",
+   "platform": "soop",
+   "nick": "콜라는코카지",
+   "type": "节奏/阵容判断型",
+   "notes": "SOOP 韩文流：三连招体系预判后立即应验；多局节奏/CS差距判断准确",
+   "samples": [
+    "마오궁에 카밀궁 직스궁이면 1초컷",
+    "상체cs가 말안됨"
+   ],
+   "first_seen": "2026-08-24",
+   "credibility": 0.7,
+   "evidence_ts": "2026-08-24"
+  },
+  {
+   "id": "huya_kabuda",
+   "platform": "huya",
+   "nick": "卡布达",
+   "type": "灰信号观察型",
+   "notes": "G2 提前识别不敢赢灰信号簇；对 Kangin 卡山特对位判断准",
+   "samples": [
+    "右边很明显不敢赢 不知道你们看出来没",
+    "其实是五个演员 只是另外两个还没开始表演"
+   ],
+   "first_seen": "2026-08-24",
+   "credibility": 0.6,
+   "evidence_ts": "2026-08-24"
+  }
+ ]
+}

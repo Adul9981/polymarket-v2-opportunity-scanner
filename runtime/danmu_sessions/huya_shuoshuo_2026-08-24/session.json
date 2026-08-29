@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "session": "huya_shuoshuo_2026-08-24",
+  "title": "硕硕直播间弹幕（2026-08-24 BFX.Y vs HLE.C）",
+  "state": "running",
+  "updated_at": "2026-08-24T13:09:37+00:00",
+  "report": "reports/intel_danmu_live_huya_shuoshuo_2026-08-24.html",
+  "intel_json": "runtime/danmu_sessions/huya_shuoshuo_2026-08-24/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "shuoshuo_323444",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-08-24T12:18:27+00:00",
+      "heartbeat_at": "2026-08-24T13:09:29+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "LCK CL！HLE BFX！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-24T12:18:27+00:00",
+      "restart_count": 6
+    }
+  ]
+}

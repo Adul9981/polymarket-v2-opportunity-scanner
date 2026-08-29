@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "session": "cs_ewc_2026-08-19",
+  "title": "CS2 EWC 弹幕实时情报（CSBOY官方 + Mo二路）",
+  "state": "running",
+  "updated_at": "2026-08-20T00:13:11+00:00",
+  "report": "reports/intel_danmu_live_cs_ewc_2026-08-19.html",
+  "intel_json": "runtime/danmu_sessions/cs_ewc_2026-08-19/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_123321",
+      "url": "https://www.huya.com/123321",
+      "state": "preflight",
+      "started_at": "2026-08-20T00:13:01+00:00",
+      "heartbeat_at": "2026-08-20T00:13:01+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null,
+      "restart_count": 248
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "captainmo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "preflight",
+      "started_at": "2026-08-20T00:12:46+00:00",
+      "heartbeat_at": "2026-08-20T00:12:46+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null,
+      "restart_count": 240
+    }
+  ]
+}

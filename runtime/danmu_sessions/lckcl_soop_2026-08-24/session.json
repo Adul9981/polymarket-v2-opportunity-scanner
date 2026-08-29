@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "session": "lckcl_soop_2026-08-24",
+  "title": "SOOP LCK CL 弹幕实时情报（2026-08-24 DNS vs KRX）",
+  "state": "running",
+  "updated_at": "2026-08-24T13:09:41+00:00",
+  "report": "reports/intel_danmu_live_lckcl_soop_2026-08-24.html",
+  "intel_json": "runtime/danmu_sessions/lckcl_soop_2026-08-24/intel.json",
+  "rooms": [
+    {
+      "source": "soop_afchall",
+      "restart_count": 0
+    }
+  ]
+}

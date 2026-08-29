@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "total": 33703,
+    "active_users": 8117,
+    "window_utc": [
+      "2026-08-27 11:23",
+      "2026-08-27 20:03"
+    ],
+    "density_per_min": 64.9,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 68,
+      "pos": 10,
+      "neg": 4,
+      "samples": [
+        "JL为什么离开navi",
+        "a队没散，navi还真不一定夺冠",
+        "navi还有个大毒枭呢",
+        "navi还有个卖白面的",
+        "9z是弱学院派肌肉队，navi是强学院派软无力"
+      ]
+    },
+    "T1": {
+      "mentions": 34,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "有薯驴在孩神这辈子不可能t1",
+        "有薯驴在孩神这辈子不可能t1",
+        "有薯驴在孩神这辈子不可能t1",
+        "有薯驴在孩神这辈子不可能t1",
+        "有薯驴在孩神这辈子不可能t1"
+      ]
+    },
+    "Vitality": {
+      "mentions": 311,
+      "pos": 6,
+      "neg": 11,
+      "samples": [
+        "小蜜蜂已经输了？",
+        "小蜜蜂完犊子了啊",
+        "小蜜蜂亡朝了,载物top1谁也抢不走",
+        "小蜜蜂输三线的来了",
+        "小蜜蜂在藏战术吗？"
+      ]
+    },
+    "Spirit": {
+      "mentions": 387,
+      "pos": 24,
+      "neg": 21,
+      "samples": [
+        "今天有绿龙比赛吗？",
+        "绿龙呢？",
+        "绿龙呢",
+        "绿龙呢",
+        "绿龙呢"
+      ]
+    },
+    "G2": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "G2昨天才小镇",
+        "G2男模队",
+        "以前g2那个杰克也帅阿",
+        "g2以前一堆帅哥",
+        "热知识，上海major，g2输3dmax后改了赛制"
+      ]
+    },
+    "NAVI": {
+      "mentions": 68,
+      "pos": 10,
+      "neg": 4,
+      "samples": [
+        "JL为什么离开navi",
+        "a队没散，navi还真不一定夺冠",
+        "navi还有个大毒枭呢",
+        "navi还有个卖白面的",
+        "9z是弱学院派肌肉队，navi是强学院派软无力"
+      ]
+    },
+    "FaZe": {
+      "mentions": 18,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "faze叉车世界第一",
+        "叉车现在最强的是faze clan",
+        "为啥没faze",
+        "faze没参赛？",
+        "为什么这次BLAST没faze"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 310,
+      "pos": 14,
+      "neg": 13,
+      "samples": [
+        "老鼠如果输了呢",
+        "老鼠准备亡朝",
+        "老鼠下去奖励一个小蜜蜂",
+        "老鼠9z输的的小蜜蜂，闹麻了",
+        "我超威，给我干爆老鼠"
+      ]
+    },
+    "Liquid": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "液体总监",
+        "液体总监",
+        "纯肌肉队的巅峰也就液体了",
+        "以前液体王朝的"
+      ]
+    },
+    "FURIA": {
+      "mentions": 35,
+      "pos": 1,
+      "neg": 2,
+      "samples": [
+        "ewc明明能赢黑豹的",
+        "9z跟黑豹算是绝活op",
+        "老鼠和黑豹都随便打9z",
+        "m80和的黑豹败者吧",
+        "这不是黑豹的一线烟吗？"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "蒙古怎么没有",
+        "蒙古呢？",
+        "ewc？第一届冠军navi，第二届蒙古，第三届绿龙啊",
+        "会的东西太少了，这张图比原来的蒙古还夸张",
+        "蒙古人"
+      ]
+    },
+    "EF": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "永恒之火打蒙古",
+        "上一个这么野的还是永恒之火打蒙古"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "1w",
+        "1w",
+        "1w"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 1,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "第一次看，zywoo和faker谁强？我觉得faker强"
+      ]
+    },
+    "Chovy": {
+      "mentions": 14,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "我超威，给我干爆老鼠",
+        "9Z大哥 我超威 猛的很",
+        "陆超威冲着送？",
+        "超威",
+        "让超威手感起来就好看了"
+      ]
+    },
+    "Zeus": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Zeus",
+        "宙斯？牛排猎手",
+        "宙斯[扶额]",
+        "宙斯这笔",
+        "宙斯是牛排那个吗"
+      ]
+    },
+    "Niko": {
+      "mentions": 395,
+      "pos": 9,
+      "neg": 2,
+      "samples": [
+        "这球Niko指挥的",
+        "这球Niko指挥的",
+        "这球Niko指挥的",
+        "这球Niko指挥的",
+        "niko"
+      ]
+    },
+    "Apex": {
+      "mentions": 12,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "刚来apex又送首杀了吗",
+        "让他玩apex",
+        "apex",
+        "apex",
+        "apex"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 359,
+      "pos": 18,
+      "neg": 9,
+      "samples": [
+        "小蜜蜂亡朝了,载物top1谁也抢不走",
+        "看载物啊，三角洲开了",
+        "载物也要生了吗",
+        "载物不想玩cs就自己退役，别影响donk拿top1",
+        "刚来，载物赢了吗"
+      ]
+    },
+    "donk": {
+      "mentions": 557,
+      "pos": 33,
+      "neg": 11,
+      "samples": [
+        "赵心donk",
+        "看赵心donk看赵心donk看赵心donk看赵心donk看赵",
+        "看桌球donk",
+        "看桌球donk，搞快点",
+        "看桌球donk，搞快点"
+      ]
+    },
+    "ropz": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "ropz",
+        "年轻的ropz是真帅吧",
+        "ropz老师说他走另一条路没准能拿诺贝尔",
+        "宗主的电脑是ropz给的吗",
+        "刚来，怪豆豆还是ropz，刚来，怪龙哥还是大表哥？"
+      ]
+    },
+    "33": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我33，我也是这样，合理",
+        "弹幕赌狗是不是不知道fut这图胜率只有33",
+        "33天王朝闹麻了 还有30天休赛期",
+        "33",
+        "最后一个五杀才1.33啊"
+      ]
+    },
+    "Yatoro": {
+      "mentions": 19,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "雨神呢",
+        "雨神",
+        "雨神",
+        "雨神",
+        "雨神"
+      ]
+    },
+    "Collapse": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "把五杀对手看了是不是很崩溃",
+        "我知道一个被串到崩溃只好爬山的哥们",
+        "导播最崩溃的一集"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 25,
+    "samples": [
+      "@马西西不马但傻 蝴蝶最早时候500到700块",
+      "肯定队友打了关键人头啊",
+      "关键人头",
+      "很多不是关键人头呗",
+      "队友太强了，导致人头不关键",
+      "adr低，捡的人头",
+      "队友太强了，导致人头不关键",
+      "没有关键人头，首杀也少"
+    ]
+  },
+  "situation": {
+    "count": 186,
+    "samples": [
+      "gg",
+      "gg",
+      "经济下行，你还搞收费。。",
+      "这个报数的 和比分对不上啊",
+      "老鼠得翻盘率好像是最高得",
+      "马总觉得今年top123是谁分析一波",
+      "这不一波",
+      "最伟大的翻盘"
+    ]
+  },
+  "gray_signals": {
+    "count": 128,
+    "samples": [
+      "买了你的短袖可以签名吗",
+      "小蜜蜂怎么又故意去败者组逮捕猎鹰嘛？",
+      "猎鹰肯定不能爆冷击败狮子的，蜜蜂故意去败者组等猎鹰呐",
+      "对我来说无所谓 我只买买得起的皮肤买了也不卖的",
+      "商量剧本？？？？",
+      "故意的搞人心态呢，真贱啊",
+      "故意的搞人心态呢，真贱啊",
+      "故意的搞人心态呢，真贱啊"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "16:32",
+      "count": 1044,
+      "samples": [
+        "？？？？？？",
+        "菊花快赢了吧，让猎鹰战胜自己",
+        "坏",
+        "啊？"
+      ]
+    },
+    {
+      "minute_utc": "16:29",
+      "count": 573,
+      "samples": [
+        "??????????",
+        "？？？",
+        "？？？？？？",
+        "？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "15:20",
+      "count": 565,
+      "samples": [
+        "能看见这样精彩的比赛，就算死也值回票价了",
+        "5秒死了7个",
+        "legacy顶住啊",
+        "11:11"
+      ]
+    },
+    {
+      "minute_utc": "16:25",
+      "count": 564,
+      "samples": [
+        "？？？？？？？？？",
+        "？？？？？？？？？",
+        "翻",
+        "？？？？？？？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "15:15",
+      "count": 459,
+      "samples": [
+        "？？？？？？",
+        "66666666666666",
+        "精彩",
+        "？？？？？？？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "15:12",
+      "count": 387,
+      "samples": [
+        "真是旗鼓相当的臭鱼烂虾。",
+        "干",
+        "这么纯粹？",
+        "真准"
+      ]
+    },
+    {
+      "minute_utc": "16:07",
+      "count": 379,
+      "samples": [
+        "开虐",
+        "666",
+        "好卡",
+        "准备三擒猎鹰了，猎鹰吓尿了"
+      ]
+    },
+    {
+      "minute_utc": "16:27",
+      "count": 375,
+      "samples": [
+        "这个逼",
+        "玩弄了",
+        "害队友闪光",
+        "1"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      927
+    ],
+    [
+      "CCCC",
+      228
+    ],
+    [
+      "蓝芯-",
+      152
+    ],
+    [
+      "图特卡蒙",
+      144
+    ],
+    [
+      "寒风细语小羊",
+      143
+    ],
+    [
+      "防愁浊如泥",
+      130
+    ],
+    [
+      "塔塔丸",
+      125
+    ],
+    [
+      "steelseries",
+      100
+    ]
+  ],
+  "sources": {
+    "huya_csboy_official": 29799,
+    "huya_csboy_mo": 2910,
+    "huya_blast": 994
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "offline_waiting",
+      "started_at": "2026-08-27T20:19:05+00:00",
+      "heartbeat_at": "2026-08-28T02:36:04+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】1点10 LVG-Falcons",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-27T20:19:06+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/321123",
+      "state": "offline_waiting",
+      "started_at": "2026-08-27T20:47:53+00:00",
+      "heartbeat_at": "2026-08-28T02:36:11+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】1点10 LVG-Falcons",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-27T20:47:56+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "huya_blast",
+      "url": "https://www.huya.com/blast",
+      "state": "offline_waiting",
+      "started_at": "2026-08-27T20:18:40+00:00",
+      "heartbeat_at": "2026-08-28T02:36:04+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 660729,
+      "channel_id": 1758878234,
+      "nickname": "BLAST赛事主舞台",
+      "introduction": "LVG vs Falcons BLAST波尔图公开赛",
+      "room_name": "【预告】17:00直播 BLAST波尔图公开赛",
+      "page_live": false,
+      "checked_at": "2026-08-27T20:18:46+00:00"
+    }
+  ]
+}

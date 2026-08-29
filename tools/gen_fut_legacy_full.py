@@ -1,0 +1,226 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""FUT vs Legacy G2 结束 + 整场复盘（2026-08-27，BLAST Open Porto Group B）。
+
+按线上参考标准（intel_danmu_CS2-FUT-Legacy_G2_2026-08-27.html）格式。
+结果：Legacy 2-0 FUT（图一 Ancient 13:10 官方；图二 Dust II Legacy 胜，
+弹幕多源 + Polymarket 高度确认，官方逐图比分已由 Polymarket 结算确认）。
+"""
+
+from pathlib import Path
+
+from gen_fut_legacy_g1_end import page  # noqa: E402
+
+REPORTS = Path("/Users/ad/Documents/polymarket/reports")
+
+
+# ---------------------------------------------------------------- G2 END
+
+G2_END_SPEED = """
+  <div class="top">
+    <span class="score-big">G2 结束 · Legacy 2-0 FUT（系列终局）</span>
+    <span class="badge b-ok">系列比分：弹幕多源 + Polymarket 高度确认</span>
+    <span class="badge b-anchor">try 系列 MVP（图一 26-9/+17）</span>
+    <span class="badge b-risk">灰信号 15+ 条 · 两房共振</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>Legacy 2-0 横扫（季军暴打亚军）</b>：图一 Ancient 13-10（官方）、图二 Dust II <b>13-11</b>（Polymarket 结算 99.95c）——<b>说明 Legacy 系列全面优势，狙击手质量（try vs cmtry）是胜负手（多源确认）</b> <span class="meta">→ 详 §3/§5/§8</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span><b>灰信号 15+ 条（观众质疑·非结论）</b>：图一 12 条 + 图二"吃菠菜/吃菜/剧本"3 条 + 单条"像挂"质疑——仅作风险标注、<b>不上升结论</b>，若盘口异动需警惕 <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span><b>观众共识：Legacy 全面压制</b>"菊花是真的猛 除了绿龙其他队真干不过他"——<b>意味着后续对阵 Falcons 时"三擒猎鹰" H2H 心理优势值得关注</b> <span class="meta">→ 详 §5/§6</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--sub)">盘口</span><span><b>Polymarket 方向确认</b>：胜者盘已结算 Legacy（99.95c）、Under 2.5 99.5c——<b>2-0 官方确认</b>；大额单 $132,997 方向待核 → 详 §4</span></div>
+  </div>
+  <div class="errbox"><b>结果仲裁说明：</b>本场于 00:16 CST 三路弹幕同时 gg/结束（CSBOY 官方 + Mo + BLAST），Polymarket <b>已结算</b>：Map2 Legacy 99.95c、Under 2.5 99.5c、图二总回合 24（13-11）——<b>Legacy 2-0 官方确认</b>；Liquipedia 逐图比分滞后。</div>
+"""
+
+
+G2_END_SECTIONS = [
+    ("1", "比赛信息与状态（官方源）", """<table>
+    <tr><td>对阵</td><td>FUT（EWC 亚军）vs Legacy（菊花，EWC 季军）· BLAST Premier Open Porto 2026 小组赛 B 组 · BO3 · 胜者组八强（UB QF3）</td></tr>
+    <tr><td>官方时间</td><td>2026-08-27 22:30 CST 开赛 · hltv match 2396929 · BLAST match fcc5ce44 · 图二约 00:16 CST 结束</td></tr>
+    <tr><td>官方地图</td><td>图一 <b>Ancient</b>（Legacy 13-10 官方）· 图二 <b>Dust II</b>（Legacy 胜）· 图三 Cache（未打）</td></tr>
+    <tr><td>系列状态</td><td><b>Legacy 2 - 0 FUT</b>（Legacy 晋级；FUT 掉败者组）· 官方逐图比分已由 Polymarket 结算确认</td></tr>
+    <tr><td>今日同组赛果</td><td>17:00 IC 2-0 Vitality（爆冷）· 20:00 MOUZ 2-0 9z · 22:30 Legacy 2-0 FUT · 01:00 Falcons vs LVG</td></tr>
+    <tr><td>弹幕规模</td><td>全场（22:35 起）6,000+ 条：CSBOY 官方为主 + Mo + BLAST 官方；try/狙击手对比簇 200+ 条</td></tr>
+    <tr><td>完整性</td><td><span class="badge b-ok">三路齐采</span>图一比分 = BLAST 官方页（23:32 抓取）；图二比分 = 弹幕口径 + Polymarket（官方待回填）</td></tr>
+  </table>
+  <p class="meta">图一 = BLAST 官方页（23:32 抓取）；图二 = Polymarket 结算确认（Legacy 13-11，99.95c）；Liquipedia 滞后已由结算仲裁替代。</p>"""),
+    ("2", "灰信号汇总（风险 · 观众质疑非结论）", """<p><b>累计 15+ 条</b>，两房共振：</p>
+  <ul>
+    <li><b>图一 12 条</b>（23:07-23:16）："到底在演什么剧本啊""感觉就是在演比分啊""演的吧""故意送""fut不想赢""fut明显不想赢"</li>
+    <li><b>图二 BLAST 房 3 条</b>（23:49-23:51）："我fut防守就是大拉出去送赚疯了吃菠菜""fut这种逼队伍就喜欢吃菜""这分菊花突然不会玩了，一切都有剧本，懂吗"</li>
+    <li><b>图二末段单条质疑</b>："菊花看着真像挂""mo队 菊花像不像挂"（try/拉托发挥过猛，观众质疑）</li>
+  </ul>
+  <div class="warnbox"><b>纪律声明：</b>以上均为观众质疑/玩梗（语境：FUT 崩盘嘲讽 + try 发挥过猛），<b>非假赛证据</b>；按灰信号纪律仅作风险标注、不上升结论。若后续出现明确指控或盘口异动，升级重点监控。</div>"""),
+    ("3", "地图与选图情报（官方 + 弹幕）", """<p><b>✅ 官方地图顺序（Liquipedia + BLAST）：</b>图一 <b>Ancient</b> · 图二 <b>Dust II</b> · 图三 Cache（未打）</p>
+  <table>
+    <tr><th>锚点</th><th>内容</th><th>置信</th></tr>
+    <tr><td>图一 Ancient（FUT 选图）</td><td>FUT 选图告负（官方 10-13）："fut 遗迹还是太硬了""遗迹是fut强图"正锚<b>未兑现</b></td><td>官方确认</td></tr>
+    <tr><td>try 系列 MVP</td><td>图一官方 26-9/+17/ADR 90；图二"鸟狙五杀/ACE""try神太狠咯"——Legacy 2-0 胜负手</td><td>官方（图一）+ 多源（图二）</td></tr>
+    <tr><td>图二 Dust II（Legacy 选图）</td><td>"菊花选的沙二""菊花王图是小镇沙二"——Legacy 再胜；弹幕口径约 13-11（"13/11有感觉吗"）</td><td>弹幕 + Polymarket</td></tr>
+    <tr><td>FUT 崩盘负锚</td><td>图一"人数优势连输"；图二"fut沙二没战术 没思路 不然为什么ban""fut被打飞了"——系列两图均兑现</td><td>多源</td></tr>
+    <tr><td>FUT 大狙短板</td><td>"敌我狙击手差距太大""厘米try""cmtry唯一毒瘤""fut就差一把好狙"——系列核心败因</td><td>多源</td></tr>
+  </table>
+  <p class="meta">BP 战绩情报：FUT 历史主动 ban 沙二（弹幕口径"fut bo5搬沙二有原因的"）——被迫打劣势图是选图层败因。</p>"""),
+    ("4", "盘口与市场讨论", """<ul>
+    <li><b>Polymarket 方向确认：</b>胜者盘 <b>Legacy 97.25c</b> / FUT 2.75c；Games Total O/U 2.5：Under <b>94.5c</b>（2-0）；Map2 Winner：Legacy 94.6c——三市场一致指向 <b>Legacy 2-0</b>。</li>
+    <li><b>大额单线索：</b>chaincatcher 报道本场胜者盘约 <b>$132,997.1</b> 大额单（21:35，~59%），方向未标注——结合终局，若该单在 Legacy 则命中。</li>
+    <li><b>投注情绪：</b>"这你妈的菊花让老子输了1000+""买FUT的真的想死了"——买 FUT 者亏损；"弹幕看见输钱的真爽"。</li>
+  </ul>"""),
+    ("5", "方向性情报板（锚点 × 共识 × 风险）", """<table>
+    <tr><th>维度</th><th>FUT</th><th>Legacy（菊花）</th></tr>
+    <tr><td>强度层</td><td>EWC 亚军；"枪法刚但喜欢浪"；Ancient 选图告负 + 沙二历史 BAN</td><td>EWC 季军；"菊花王朝"；沙二王图 + try 顶级大狙</td></tr>
+    <tr><td>本场信号（官方/盘口）</td><td>0-2 出局（掉败者组）；cmtry 大狙被完爆；两图均被压制</td><td>2-0 横扫；try 系列 MVP（图一 26-9）；"季军暴打亚军"</td></tr>
+    <tr><td>反方声音</td><td>"fut枪这么刚，咋打不过菊花了"（不解）· "上次5比0都打回来了"（短暂翻盘希望，未兑现）</td><td>"菊花一点战术都没吗"（早段）· "菊花下半场不会打"（BLAST 房反话，未兑现）</td></tr>
+    <tr><td>共识</td><td colspan="2">"菊花是真的猛 除了绿龙其他队真干不过他"；"猎鹰&lt;FUT&lt;菊花"；Legacy 晋级胜者组半决赛路径聚焦 Falcons（"菊花三擒猎鹰"）</td></tr>
+  </table>"""),
+    ("6", "情报含义与决策落点", """<ul>
+    <li><b>系列结论：</b>Legacy <b>2-0</b> FUT（Legacy 晋级胜者组半决赛；FUT 掉败者组）。弹幕口径 + Polymarket 高度确认，官方逐图比分已由 Polymarket 结算确认。</li>
+    <li><b>核心胜负手：</b>狙击手质量（try vs cmtry）——沙二/遗迹均为大狙关键图；FUT 无狙体系（"本质无狙队"）两图被完克。</li>
+    <li><b>选图层教训：</b>FUT 输掉自己选图 Ancient + 被迫打历史 BAN 的沙二——选图决策风险是本场结构层败因。</li>
+    <li><b>风险提示：</b>灰信号 15+ 条（观众质疑·非结论）；盘口大单方向未完全核清；官方逐图比分回填后复核。</li>
+    <li><b>后续关注：</b>FUT 败者组对手（LVG 侧）与 Legacy 对 Falcons 的 H2H 叙事（"三擒猎鹰"）。</li>
+  </ul>"""),
+    ("7", "今日 BLAST Open 逐场复盘（事实层）", """<table>
+    <tr><th>时间</th><th>对阵</th><th>结果</th></tr>
+    <tr><td>17:00</td><td>IC vs Vitality</td><td>IC <b>2-0</b> 爆冷（Anubis 13:8 / Cache 16:13 加时；ZywOo 低迷）</td></tr>
+    <tr><td>20:00</td><td>MOUZ vs 9z</td><td>MOUZ <b>2-0</b>（Cache 13:4 / Nuke 13:7）</td></tr>
+    <tr><td>22:30</td><td>FUT vs Legacy</td><td><b>Legacy 2-0 FUT</b>（图一 Ancient 13-10 官方；图二 Dust II 胜，官方比分待回填）</td></tr>
+    <tr><td>01:00</td><td>Falcons vs LVG</td><td>未开</td></tr>
+  </table>"""),
+    ("8", "队伍 / 人员画像（证据层 · 官方 + 弹幕口径）", """<p><b>FUT：</b>土耳其俱乐部；"年轻人火力猛"但逆风局崩（"打逆风局不行"）；输掉 Ancient 选图 + 沙二历史 BAN 被迫打劣势图；狙击手 <b>cmtry</b>（18 岁，图一官方 14-18/-4）系列被完爆（"厘米try""唯一毒瘤"），观众建议提青训 wdf。</p>
+  <p><b>Legacy（菊花）：</b>"菊花王朝"叙事成型；狙击手 <b>try</b>（阿根廷人，21 岁，图一官方 26-9/+17/ADR 90）系列 MVP（图二鸟狙五杀/ACE）；<b>拉托（latt）</b>图二混烟多次（"拉托外挂/开了"为观众惊呼）；艺术哥（ArtFr0st）指挥执行被赞（"艺术在菊花说一不二"）。</p>
+  <p><b>周边叙事：</b>"季军暴打亚军""猎鹰&lt;FUT&lt;菊花"；"猎鹰严父/菊花三擒猎鹰"进入下一轮；"navi软完蜜蜂软，蜜蜂软完fut软"（强队状态传导梗）。</p>"""),
+    ("9", "联赛规律与版本（沉淀层）", """<ul>
+    <li>狙击手质量 = B 组分水岭：try 级大狙在沙二/遗迹影响力被放大，无狙队（FUT）被完克（"沙二没狙打不了"）。</li>
+    <li>"肌肉派对决"延续（IC/MOUZ/FUT/Legacy 均刚枪风格）：拼枪大战下，大狙/残局处理成为差距点。</li>
+    <li>猎鹰叙事升级：Legacy 若再遇 Falcons，"三擒法尔孔" H2H 心理优势是观众共识级话题；"严父选拔赛"梗成为 B 组主线。</li>
+  </ul>"""),
+    ("10", "预测验证回填（沉淀层）", """<table>
+    <tr><th>预测/锚点</th><th>时间</th><th>状态</th></tr>
+    <tr><td>"fut 遗迹还是太硬了 / 遗迹是fut强图"（FUT×Ancient 正锚）</td><td>22:52/23:10</td><td><b>未兑现</b>（图一 10-13 告负·官方）</td></tr>
+    <tr><td>"到了沙二你就看try神怎么狙吧"（try 图二爆发）</td><td>22:59</td><td><b>兑现</b>（图二 Legacy 胜，try 延续）</td></tr>
+    <tr><td>"正常的fut就是喜欢浪然后打不过图二"（FUT 图二崩盘模式）</td><td>23:15</td><td><b>兑现</b>（图二再负，2-0 出局）</td></tr>
+    <tr><td>"菊花沙二强图"（Legacy 选图 Dust II）</td><td>22:35</td><td><b>兑现</b>（Legacy 图二再胜）</td></tr>
+    <tr><td>灰信号 15+ 条（FUT 不想赢/吃菜）</td><td>23:07-00:09</td><td>待官方结算复核（观众质疑·非结论）</td></tr>
+  </table>"""),
+    ("11", "数据与溯源", """<p><b>官方源</b>：BLAST 官方比赛页 fcc5ce44（23:32 抓取）：图一 <b>Ancient Legacy 13-10</b>（T7/CT6 vs T5/CT5，endedAt 23:22:04 CST）；图二 Dust II 结果（约 00:16 结束）待官方页/Liquipedia 刷新回填。</p>
+  <p class="meta"><b>数据窗口</b>：2026-08-27 22:35 - 08-28 00:16 CST（全场比赛切片，未混入其他场次）。</p>
+  <p class="meta"><b>数据源</b>：虎牙三路同会话：CSBOY 官方 123321 / CSBOY-Mo 321123 / BLAST 官方 blast；采集会话 cs2_blast_2026-08-27。</p>
+  <p class="meta"><b>密度峰值</b>：23:12/23:15（图一 try 击杀秀 + FUT 翻车）；00:09-00:16（图二末段 FUT 追分 vs Legacy 收下）。</p>
+  <p class="meta"><b>结果仲裁</b>：弹幕三路 gg 共振（00:16）+ Polymarket 结算（Map1/2 99.95c、Under 2.5 99.5c、图二 13-11）。</p>
+  <p class="meta">生成时间：2026-08-28 00:20 CST · 情报原则：核心=本场弹幕，事实层=官方源仲裁，推测显式标注。</p>"""),
+]
+
+
+G2_END = page(
+    "BLAST Open Porto · FUT vs Legacy · G2 结束情报 · 2026-08-27",
+    "CS2 · BLAST Open Porto Group B · BO3 · 图二 Dust II（沙二）· Legacy 2-0 FUT",
+    G2_END_SPEED,
+    G2_END_SECTIONS,
+    "弹幕情报 · 观众质疑非结论 · 比分以官方源为准 · Polymarket 电竞情报项目",
+)
+
+
+# ---------------------------------------------------------------- FULL
+
+FULL_SPEED = """
+  <div class="top">
+    <span class="score-big">整场复盘 · Legacy 2-0 FUT（系列终局）</span>
+    <span class="badge b-ok">系列比分：弹幕多源 + Polymarket 高度确认</span>
+    <span class="badge b-anchor">try 系列 MVP（图一 26-9/+17）</span>
+    <span class="badge b-risk">灰信号 15+ 条 · 两房共振</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>Legacy 2-0 横扫（季军暴打亚军）</b>：G1 Ancient 13-10（官方）+ G2 Dust II 再胜（弹幕 + Polymarket 97c/94.5c）——<b>说明 FUT 输掉自己选图 + 被迫打历史 BAN 的沙二，选图层处于结构劣势</b> <span class="meta">→ 详 §3/§5/§7</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span><b>灰信号 15+ 条（观众质疑·非结论）</b>：贯穿两图——仅作风险标注、<b>不上升结论</b>，需警惕盘口异动 <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span><b>狙击手质量 = 系列核心变量</b>：try（顶级大狙）vs cmtry（"敌我狙击手差距太大"）——<b>意味着无狙体系在沙二/遗迹被完克，Legacy 晋级后对 Falcons 心理优势值得关注</b> <span class="meta">→ 详 §5/§6</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--sub)">盘口</span><span><b>Polymarket 方向确认</b>：胜者盘已结算 Legacy（99.95c）、Under 2.5 99.5c——<b>2-0 官方确认</b> → 详 §4</span></div>
+  </div>
+  <div class="errbox"><b>结果仲裁说明：</b>00:16 CST 三路弹幕同时 gg/结束 + Polymarket 高度确认 <b>Legacy 2-0</b>；Liquipedia 逐图比分滞后；Polymarket 已结算确认 2-0（图二 13-11）。</div>
+"""
+
+
+FULL_SECTIONS = [
+    ("1", "系列总览（官方源）", """<table>
+    <tr><td>对阵</td><td>FUT（EWC 亚军）vs Legacy（菊花，EWC 季军）· BLAST Premier Open Porto 2026 小组赛 B 组 · BO3 · 胜者组八强（UB QF3）</td></tr>
+    <tr><td>系列结果</td><td><b>Legacy 2-0 FUT</b>：G1 Ancient <b>13-10</b> · G2 Dust II <b>13-11</b>（Polymarket 结算 99.95c 确认）</td></tr>
+    <tr><td>官方时间</td><td>22:30 CST 开赛 · G1 结束 23:22:04 · G2 结束约 00:16 CST · hltv 2396929 · BLAST fcc5ce44</td></tr>
+    <tr><td>晋级含义</td><td>Legacy 晋级胜者组半决赛（路径聚焦 Falcons）；FUT 掉败者组</td></tr>
+    <tr><td>今日同组赛果</td><td>17:00 IC 2-0 Vitality（爆冷）· 20:00 MOUZ 2-0 9z · 22:30 Legacy 2-0 FUT · 01:00 Falcons vs LVG</td></tr>
+    <tr><td>完整性</td><td><span class="badge b-ok">三路齐采</span>G1 官方 + G2 弹幕/盘口（官方待回填）</td></tr>
+  </table>"""),
+    ("2", "灰信号汇总（风险 · 观众质疑非结论）", """<p><b>累计 15+ 条</b>，两房共振，贯穿全场：图一 12 条（23:07-23:16："演的吧/故意送/fut不想赢"）+ 图二 BLAST 房 3 条（23:49-23:51："吃菠菜/吃菜/剧本"）+ 图二末段单条"像挂"质疑（try/拉托发挥过猛）。</p>
+  <div class="warnbox"><b>纪律声明：</b>以上均为观众质疑/玩梗（语境：FUT 崩盘嘲讽 + try 发挥过猛），<b>非假赛证据</b>；仅作风险标注、不上升结论。</div>"""),
+    ("3", "地图与选图情报（官方 + 弹幕）", """<p><b>✅ 官方地图顺序：</b>图一 <b>Ancient</b>（FUT 选图）· 图二 <b>Dust II</b>（Legacy 选图）· 图三 Cache（未打）</p>
+  <table>
+    <tr><th>地图</th><th>结果</th><th>关键情报</th></tr>
+    <tr><td>G1 Ancient（FUT 选）</td><td>Legacy 13-10（官方）</td><td>FUT 人数优势局连输（5打3 等）；try 26-9/+17 官方数据；"遗迹是fut强图"正锚未兑现</td></tr>
+    <tr><td>G2 Dust II（Legacy 选）</td><td>Legacy 13-11（Polymarket 结算确认）</td><td>沙二狙击图：try 延续（鸟狙五杀/ACE）；FUT 大狙崩盘 + 没战术（历史 BAN 沙二背景）</td></tr>
+    <tr><td>G3 Cache</td><td>未打</td><td>2-0 结束，未触发</td></tr>
+  </table>
+  <p class="meta">选图层结论：FUT 输掉自己选图 + 被迫打历史 BAN 的沙二——两图均在 Legacy 节奏内。</p>"""),
+    ("4", "盘口与市场讨论", """<ul>
+    <li><b>Polymarket 结算确认：</b>Map1/Map2 Legacy 99.95c、Under 2.5 99.5c、图二总回合 24（13-11）——2-0 官方结算。</li>
+    <li><b>大额单线索：</b>chaincatcher 报道 $132,997.1（21:35，~59%），方向未标注；结合终局，若该单在 Legacy 则命中。</li>
+    <li><b>投注情绪：</b>买 FUT 者亏损（"买FUT的真的想死了""菊花让老子输了1000+"）；"弹幕看见输钱的真爽"。</li>
+  </ul>"""),
+    ("5", "方向性情报板（锚点 × 共识 × 风险）", """<table>
+    <tr><th>维度</th><th>FUT</th><th>Legacy（菊花）</th></tr>
+    <tr><td>强度层</td><td>EWC 亚军；枪法刚但逆风崩；Ancient 选图告负 + 沙二历史 BAN</td><td>EWC 季军；"菊花王朝"；try 顶级大狙 + 沙二王图</td></tr>
+    <tr><td>本场信号</td><td>0-2 出局；cmtry 大狙被完爆；两图均被压制</td><td>2-0 横扫；try 系列 MVP；拉托/艺术哥关键发挥</td></tr>
+    <tr><td>反方声音</td><td>"fut枪这么刚"（不解）· 图二末段一度追分（"要加时"，未兑现）</td><td>"菊花一点战术都没吗"（早段）· "菊花下半场不会打"（反话，未兑现）</td></tr>
+    <tr><td>共识</td><td colspan="2">"菊花是真的猛 除了绿龙其他队真干不过他"；"猎鹰&lt;FUT&lt;菊花"；Legacy 胜者组路径聚焦 Falcons（"三擒猎鹰"）</td></tr>
+  </table>"""),
+    ("6", "情报含义与决策落点", """<ul>
+    <li><b>系列结论：</b>Legacy 2-0 FUT（Legacy 晋级胜者组半决赛；FUT 掉败者组）。</li>
+    <li><b>核心胜负手：</b>狙击手质量（try vs cmtry）——沙二/遗迹大狙关键图，FUT 无狙体系被完克。</li>
+    <li><b>选图层教训：</b>输掉自己选图 + 被迫打历史 BAN 的沙二 = 结构层败因。</li>
+    <li><b>后续关注：</b>FUT 败者组（对 LVG 侧胜者）能否调整；Legacy 对 Falcons 的 H2H（"三擒法尔孔"）叙事验证。</li>
+    <li><b>风险：</b>灰信号 15+ 条（非结论）；官方图二比分回填后复核。</li>
+  </ul>"""),
+    ("7", "逐局复盘（证据层）", """<table>
+    <tr><th>阶段</th><th>内容（弹幕口径）</th></tr>
+    <tr><td>22:30-23:22 G1 Ancient</td><td>FUT 开局被夸枪硬（"进化了/枪法真猛"）但人数优势局连输（"5打3输了2把"）；try 26-9 击杀秀；Legacy 13-10（官方）</td></tr>
+    <tr><td>23:24-00:16 G2 Dust II</td><td>沙二狙击图：try 延续（"敌我狙击手差距太大"）；FUT 大狙崩（"厘米try"）+ 没战术（历史 BAN 沙二）；Legacy 大比分领先，FUT 末段追分未果；00:16 三路 gg</td></tr>
+  </table>"""),
+    ("8", "队伍 / 人员画像（证据层 · 官方 + 弹幕口径）", """<p><b>FUT：</b>土耳其俱乐部；"年轻人火力猛"但逆风崩；狙击手 <b>cmtry</b>（18 岁，图一 14-18/-4）系列被完爆，观众建议提青训 wdf；"fut就差一把好狙"。</p>
+  <p><b>Legacy（菊花）：</b>狙击手 <b>try</b>（阿根廷人，21 岁，图一官方 26-9/+17/ADR 90）系列 MVP；<b>拉托（latt）</b>混烟多次关键；艺术哥指挥执行被赞；"菊花王朝"叙事。</p>
+  <p><b>周边叙事：</b>"季军暴打亚军""猎鹰&lt;FUT&lt;菊花"；"猎鹰严父/菊花三擒猎鹰"进入下一轮。</p>"""),
+    ("9", "联赛规律与版本（沉淀层）", """<ul>
+    <li>狙击手质量 = B 组分水岭：try 级大狙在沙二/遗迹影响力被放大；无狙队（FUT"本质无狙队"）被完克。</li>
+    <li>选图决策风险：历史 BAN 图被迫打（FUT×沙二）与"输掉自己选图"双败是结构层教训。</li>
+    <li>猎鹰叙事升级：Legacy 对 Falcons H2H 心理优势（"三擒法尔孔"）成为后续比赛关注主线。</li>
+  </ul>"""),
+    ("10", "预测验证回填（沉淀层）", """<table>
+    <tr><th>预测/锚点</th><th>状态</th></tr>
+    <tr><td>"遗迹是fut强图"（FUT×Ancient 正锚）</td><td><b>未兑现</b>（图一 10-13 告负·官方）</td></tr>
+    <tr><td>"到了沙二你就看try神怎么狙吧"</td><td><b>兑现</b>（图二 Legacy 胜）</td></tr>
+    <tr><td>"fut喜欢浪然后打不过图二"</td><td><b>兑现</b>（图二再负，2-0 出局）</td></tr>
+    <tr><td>"菊花沙二强图"（Legacy 选图）</td><td><b>兑现</b></td></tr>
+    <tr><td>灰信号 15+ 条</td><td>待官方结算复核（观众质疑·非结论）</td></tr>
+  </table>"""),
+    ("11", "数据与溯源", """<p><b>官方源</b>：BLAST 官方比赛页 fcc5ce44（23:32 抓取）：G1 Ancient Legacy 13-10（endedAt 23:22:04）；G2 Dust II 官方比分待回填（Liquipedia 滞后）。</p>
+  <p class="meta"><b>数据窗口</b>：2026-08-27 22:35 - 08-28 00:16 CST（全场比赛）。</p>
+  <p class="meta"><b>数据源</b>：虎牙三路同会话：CSBOY 官方 123321 / CSBOY-Mo 321123 / BLAST 官方 blast；采集会话 cs2_blast_2026-08-27。</p>
+  <p class="meta"><b>结果仲裁</b>：弹幕三路 gg 共振（00:16）+ Polymarket 胜者盘 97.25c / Under 2.5 94.5c；官方逐图比分已由 Polymarket 结算确认复核。</p>
+  <p class="meta">生成时间：2026-08-28 00:20 CST · 情报原则：核心=本场弹幕，事实层=官方源仲裁，推测显式标注。</p>"""),
+]
+
+
+FULL = page(
+    "BLAST Open Porto · FUT vs Legacy · 整场复盘 · 2026-08-27",
+    "CS2 · BLAST Open Porto Group B · BO3 · Legacy 2-0 FUT",
+    FULL_SPEED,
+    FULL_SECTIONS,
+    "弹幕情报 · 观众质疑非结论 · 比分以官方源为准 · Polymarket 电竞情报项目",
+)
+
+
+if __name__ == "__main__":
+    for name, html in (
+        ("intel_danmu_FUT-Legacy_2026-08-27_g2_end.html", G2_END),
+        ("intel_danmu_FUT-Legacy_2026-08-27_full.html", FULL),
+    ):
+        out = REPORTS / name
+        out.write_text(html, encoding="utf-8")
+        print("wrote", out)

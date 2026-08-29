@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-08-10",
+    "event_slug": "lol-hle1-gen-2026-08-10",
+    "market_type": "match",
+    "side": "Over",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 150,
+    "realized_pnl_usd": 0,
+    "final_pnl_usd": null,
+    "outcome": "win",
+    "exit_executed": false,
+    "lesson_tags": ["conviction_ok", "pre_position_ok"],
+    "notes": "赛前买入总局数 >2.5（O/U Over，低开 28-30c，投入约 150 美金口述；早先记录 180 以本次口径为准）；理由：KeSPA 表演赛/娱乐局、预期大开大合；前 10-15 分钟噪音窗口（最低 22.5c）未乱动，关键人物（HLE 中单）信号确认后拿住到底；账户 500+ 单笔约 30% 未 all-in（仓位克制）；Over 15:45 锁定 0.995（G2 1:1），G3 终局后回填终值与盈利金额。"
+  },
+  {
+    "date": "2026-08-10",
+    "event_slug": "lol-gen-dnf-2026-08-10",
+    "market_type": "game2",
+    "side": "Gen.G",
+    "strategy": "probe",
+    "template": "none",
+    "total_invested_usd": 30,
+    "realized_pnl_usd": 0,
+    "final_pnl_usd": null,
+    "outcome": "loss",
+    "exit_executed": true,
+    "lesson_tags": ["pre_position_ok"],
+    "notes": "G2 小额试仓买 Gen.G（20-40 美金，口述估值 30，DNS 2:0 横扫 GEN）；试仓后发现 GEN 不对劲（状态低迷）未加仓、部分卖出；方向错误但小仓控制损失（结果未量化，小额亏损）；正面纪律样本：试仓=探测非盈利，方向不对不加仓。"
+  }
+]

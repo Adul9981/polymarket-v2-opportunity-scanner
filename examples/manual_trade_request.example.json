@@ -1,0 +1,13 @@
+{
+  "market_slug": "lol-t1-bfx-game2-example",
+  "market_title": "LoL: T1 vs BNK FEARX - Game 2 Winner",
+  "league": "LCK",
+  "side": "T1",
+  "strategy": "B",
+  "pre_match_price": 0.87,
+  "current_price": 0.72,
+  "match_budget": 100,
+  "cycle_budget": 25,
+  "amount_mode": "fixed_usd",
+  "operator_note": "用户判断为强队临时低估，70-80% 区间。"
+}

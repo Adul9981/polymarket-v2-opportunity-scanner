@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "total": 29415,
+    "active_users": 5731,
+    "window_utc": [
+      "2026-08-26 08:25",
+      "2026-08-26 15:52"
+    ],
+    "density_per_min": 65.8,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "kc这就给了呀",
+        "KC"
+      ]
+    },
+    "TH": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "堪比 shft 打 th"
+      ]
+    },
+    "Navi": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "navi的薇的玩法 就是不交大"
+      ]
+    },
+    "T1": {
+      "mentions": 187,
+      "pos": 13,
+      "neg": 12,
+      "samples": [
+        "bb克烈被单杀，单纯t1太给机会发育起来了，不一定比希沃他们",
+        "KT弱点太明显了，BDD被压，这个队就等死，和T1太像了",
+        "t1现在中单还有啥画面，还跟t1一样",
+        "人家意思肯定是跟t1",
+        "你看看多兰场场被单杀 T1队友那还有心态玩游戏"
+      ]
+    },
+    "DNS": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 2,
+      "samples": [
+        "dns第三赛段表现的不错 但完全打不了bro",
+        "dns第二胜就是左边这群野狗送的",
+        "涅槃也就dns有点机会其他几个队一把也赢不了的",
+        "DNS真可惜，为什么是bro这个垃圾队伍上来啊",
+        "玩的不如dns"
+      ]
+    },
+    "KT": {
+      "mentions": 1214,
+      "pos": 84,
+      "neg": 172,
+      "samples": [
+        "第一把KT已经走远了",
+        "Kt打太贪了，稍微推一会儿可以走了。",
+        "要死啊。kt",
+        "kt真的太逆天了",
+        "不是BDD找了2波节奏，KT炸的更快"
+      ]
+    },
+    "HLE": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Hle呢",
+        "那世界赛应该是：GEN HLE T1跟DK 了",
+        "今年KT进不了世界赛，GEN T1 HLE DK进世界赛",
+        "HLE进了",
+        "t1不可能进不去的，hle赢一局，躺着进"
+      ]
+    },
+    "GEN": {
+      "mentions": 33,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "今年geng跟bfx",
+        "geng的卡列赢了吧",
+        "右边换gen来团战早把左边虐了",
+        "geng粉丝还拿cuzz换三叔吗？",
+        "那世界赛应该是：GEN HLE T1跟DK 了"
+      ]
+    },
+    "WBG": {
+      "mentions": 50,
+      "pos": 1,
+      "neg": 7,
+      "samples": [
+        "ig打wbg",
+        "只能说还不如WBG",
+        "只能说还不如WBG",
+        "只能说还不如WBG",
+        "感觉比我们WBG都不如啊"
+      ]
+    },
+    "LNG": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "lng来lck 虐完了",
+        "这个逼队有点像以前LNG",
+        "lng剧本"
+      ]
+    },
+    "WE": {
+      "mentions": 52,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "感觉要和we战队要合作了。",
+        "WE今年买票吗？",
+        "看好we今年去世界赛",
+        "比如第二赛段的WE",
+        "感觉WE能虐bro"
+      ]
+    },
+    "EDG": {
+      "mentions": 10,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "不对，TT比EDG排名高啊",
+        "这皇子和edg的有一拼",
+        "懂了 EDG吊打NIP",
+        "edg都上单兰博大招更夸张",
+        "礼物去了edg菜的要死"
+      ]
+    },
+    "BLG": {
+      "mentions": 35,
+      "pos": 3,
+      "neg": 1,
+      "samples": [
+        "blg名宿还不拔网线",
+        "BLG五打五随便能打赢团的就是分开了送哈哈家也不要了",
+        "LPL只有BLG能看",
+        "BLG今年有希望吗",
+        "今年除了blg，别的队伍感觉都不可能赢lck啊"
+      ]
+    },
+    "TES": {
+      "mentions": 21,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "lgd能赢tes吗",
+        "TES也是痘痘你吗？",
+        "BRO能虐TES",
+        "bro感觉能把tes打出shi来 有感觉吗",
+        "bro能把TES打爆了"
+      ]
+    },
+    "IG": {
+      "mentions": 36,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "有点 IG没有复活甲",
+        "IG没有复活甲",
+        "赶紧改规则给我ig一个复活甲",
+        "ig打wbg",
+        "kt也就打打涅槃，ig都能把他速通"
+      ]
+    },
+    "Spirit": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "恭喜雪碧",
+        "支持雪碧",
+        "牢张飞升半年了 巧乐兹+雪碧代言人了"
+      ]
+    },
+    "G2": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "g2的狗头"
+      ]
+    },
+    "NAVI": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "navi的薇的玩法 就是不交大"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "学会个词就天天讲，人家那不叫宫斗，叫清理掉老鼠4"
+      ]
+    },
+    "AG": {
+      "mentions": 10,
+      "pos": 10,
+      "neg": 0,
+      "samples": [
+        "AG无敌",
+        "AG无敌",
+        "AG无敌",
+        "AG无敌",
+        "AG无敌"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "KT也太怂了吧 忘记之前那把 被T1落后1W翻盘了吗",
+        "逆天 1w翻盘",
+        "伤害肯定不低呀 后面3波都有1W一波",
+        "这tm领先1w都能被翻"
+      ]
+    }
+  },
+  "players": {
+    "Oscar": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "奥斯卡之夜",
+        "奥斯卡之夜",
+        "有奥斯卡之夜内味了",
+        "奥斯卡之夜",
+        "奥斯卡"
+      ]
+    },
+    "Guma": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "暗示姑妈菜",
+        "大米暗示姑妈菜",
+        "大米暗示姑妈菜",
+        "你们别欺负姑妈了好吧",
+        "姑妈不给面子"
+      ]
+    },
+    "Faker": {
+      "mentions": 21,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "所以你也不要怪老李能不能赢",
+        "faker好像有三星集团35%股份",
+        "扎克是飞科",
+        "cuzz是当年宫斗Faker的那个吗",
+        "这一赛段 cuzz 就是野区的 faker"
+      ]
+    },
+    "Chovy": {
+      "mentions": 16,
+      "pos": 0,
+      "neg": 2,
+      "samples": [
+        "秀妹和超威的冰鸟这赛段都输了.,bro有资格用.?",
+        "我超威",
+        "我Chovy，放大给我放好了啊",
+        "lck中单chovy 许哥 大飞都退了我都不知道谁来，ai？",
+        "AD：我超威"
+      ]
+    },
+    "Zeus": {
+      "mentions": 22,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "宙斯好像23",
+        "zeus多大",
+        "为啥宙斯玩的好呢？",
+        "所以宙斯就是大满贯上单啊",
+        "kingen学的宙斯"
+      ]
+    },
+    "Niko": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Niko开都"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "鸡窝走路都在掉血。什么载物曾经的队友"
+      ]
+    },
+    "33": {
+      "mentions": 26,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "这不会打到33分钟吧",
+        "大龙团灭一波了还大个毛33分钟",
+        "不打大龙33拖到33很正常",
+        "不打大龙33拖到33很正常",
+        "33又了"
+      ]
+    },
+    "Collapse": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "有点像AL下路被突破辐射到中野，全线崩溃"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 87,
+    "samples": [
+      "KT一落后人头就开始单带",
+      "20分钟3个人头，真龟",
+      "27.5不是随便开的",
+      "看人头和助攻在总人头的占比啊[偷笑]",
+      "五个人不敢all in这个人头？",
+      "关过一次灯，送了3个人头",
+      "就是杀让人头？",
+      "皇子下来也是废物啥都没操作就送人头"
+    ]
+  },
+  "situation": {
+    "count": 2178,
+    "samples": [
+      "克烈优势奥拉夫基本废了",
+      "优势放龙么",
+      "左边不拿小龙，等下又弱悲了",
+      "优势放龙么",
+      "bro 经济领先了",
+      "经济有啥用",
+      "火龙魂又不厉害",
+      "小龙就算不要，也不能给的这么简单啊"
+    ]
+  },
+  "gray_signals": {
+    "count": 249,
+    "samples": [
+      "lpl没落还不是因为假赛太多",
+      "开局就大表小头按着剧本打的",
+      "小学不打假赛可能还行",
+      "这皇子假赛",
+      "皇子假赛",
+      "这个皇子专业打假赛 的",
+      "现在的电竞就是猜剧本了",
+      "还有暂停剧本"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "12:29",
+      "count": 631,
+      "samples": [
+        "儿童节",
+        "泽丽怎么能上去的",
+        "这去1打4啊？",
+        "本质涅槃ad"
+      ]
+    },
+    {
+      "minute_utc": "12:28",
+      "count": 560,
+      "samples": [
+        "懦夫选前期阵容太抽象了",
+        "？？？？？？",
+        "？？？？？",
+        "看都看不了，来了就收汁"
+      ]
+    },
+    {
+      "minute_utc": "12:39",
+      "count": 545,
+      "samples": [
+        "感觉清算开始了",
+        "能结束吗",
+        "所以说不要4保1啊",
+        "四保一是错的"
+      ]
+    },
+    {
+      "minute_utc": "12:45",
+      "count": 524,
+      "samples": [
+        "右边ad为啥不是重伤穿透啊？",
+        "就这一个龙了",
+        "？？？？",
+        "偷家"
+      ]
+    },
+    {
+      "minute_utc": "12:42",
+      "count": 492,
+      "samples": [
+        "我的天哪",
+        "还要打一波远古龙",
+        "Bro完了",
+        "太墨迹了"
+      ]
+    },
+    {
+      "minute_utc": "12:38",
+      "count": 457,
+      "samples": [
+        "界弓出了出不了大穿",
+        "9个闪现都没有了",
+        "不要小看炼金龙的坦度",
+        "杀剪号放心看"
+      ]
+    },
+    {
+      "minute_utc": "12:30",
+      "count": 421,
+      "samples": [
+        "团输了小龙全拿了，牛逼",
+        "两队神人",
+        "鸡窝还是太能送了",
+        "4保巨魔吧"
+      ]
+    },
+    {
+      "minute_utc": "12:46",
+      "count": 400,
+      "samples": [
+        "不喜欢一波 活该",
+        "风暴龙王决胜，捏马还能回家的",
+        "前面不舍得一波 远古龙只能去偷 打不了的",
+        "尼玛领先八千。大龙加远古龙都能输"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      1150
+    ],
+    [
+      "你好呀白鹿my",
+      266
+    ],
+    [
+      "Lulu淕",
+      154
+    ],
+    [
+      "敏感的小乌龟",
+      134
+    ],
+    [
+      "山海小子",
+      132
+    ],
+    [
+      "失乐小吴",
+      109
+    ],
+    [
+      "霆葉",
+      109
+    ],
+    [
+      "asdwdasdsad",
+      99
+    ]
+  ],
+  "sources": {
+    "we957_890001": 6819,
+    "shuoshuo_323444": 9305,
+    "remember_528222": 4833,
+    "mile_149361": 8458
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "we957_890001",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T16:26:33+00:00",
+      "heartbeat_at": "2026-08-27T00:20:06+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "看会TES.C vs WBG.Y！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-26T16:26:34+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "shuoshuo_323444",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T16:26:43+00:00",
+      "heartbeat_at": "2026-08-27T00:20:06+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "LDL世界赛预选赛！WBG TES！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-26T16:26:44+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "remember_528222",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T16:26:53+00:00",
+      "heartbeat_at": "2026-08-27T00:20:06+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[LCK]季后赛 KTvsBRO 决胜局",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-26T16:26:54+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "mile_149361",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T16:27:03+00:00",
+      "heartbeat_at": "2026-08-27T00:20:06+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "BO5决胜局！KT BRO~!",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-26T16:27:04+00:00"
+    }
+  ]
+}

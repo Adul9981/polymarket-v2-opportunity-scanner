@@ -1,0 +1,1173 @@
+{
+ "captured_at": "20260815T070105Z",
+ "x": 1.0,
+ "groups": [
+  {
+   "ts": 1786777293,
+   "group": "pro-football-2027-champion-20260729185915366",
+   "negRiskMarketID": "0xb1a47cd91daefb91311575bf564742cd675018af7430786314e475d854411000",
+   "n_legs": 32,
+   "ask_sump": 31.941,
+   "subgroup_sump_fillable": 31.941,
+   "x": 1.0,
+   "no_cost": 30.974,
+   "no_theory": 31.0,
+   "no_gross": 0.026,
+   "no_net": -0.59848,
+   "no_net_rebate": -0.28874,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "yes_cost": 1.085,
+   "yes_gross": -0.085,
+   "yes_net": -0.1117,
+   "yes_net_rebate": -0.10085,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "YES",
+   "verdict": "fail",
+   "notes": "",
+   "legs": [
+    {
+     "title": "Arizona Cardinals",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.008,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Atlanta Falcons",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.007,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Baltimore Ravens",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.074,
+     "no_cost": 0.927,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Buffalo Bills",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.09,
+     "no_cost": 0.92,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Carolina Panthers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.008,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Chicago Bears",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.037,
+     "no_cost": 0.964,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cincinnati Bengals",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.036,
+     "no_cost": 0.965,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cleveland Browns",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.009,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Dallas Cowboys",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.045,
+     "no_cost": 0.956,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Denver Broncos",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.044,
+     "no_cost": 0.957,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Detroit Lions",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.044,
+     "no_cost": 0.957,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Green Bay Packers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.033,
+     "no_cost": 0.968,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Houston Texans",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.04,
+     "no_cost": 0.961,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Indianapolis Colts",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.011,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Jacksonville Jaguars",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.034,
+     "no_cost": 0.967,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Kansas City Chiefs",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.06,
+     "no_cost": 0.941,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Las Vegas Raiders",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.008,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Los Angeles Chargers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.048,
+     "no_cost": 0.953,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Los Angeles Rams",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.14,
+     "no_cost": 0.87,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Miami Dolphins",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Minnesota Vikings",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.016,
+     "no_cost": 0.985,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New England Patriots",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.037,
+     "no_cost": 0.964,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New Orleans Saints",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New York Giants",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.012,
+     "no_cost": 0.989,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New York Jets",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.007,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Philadelphia Eagles",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.045,
+     "no_cost": 0.956,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Pittsburgh Steelers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.013,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "San Francisco 49ers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.039,
+     "no_cost": 0.962,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Seattle Seahawks",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.09,
+     "no_cost": 0.92,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Tampa Bay Buccaneers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.013,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Tennessee Titans",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.007,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Washington Commanders",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": 1786777321,
+   "group": "nba-2027-champion",
+   "negRiskMarketID": "0xbb01d92208e308f14eb9917889bb2b449395207a26fe2a7990c3d5def7f74c00",
+   "n_legs": 30,
+   "ask_sump": 29.934,
+   "subgroup_sump_fillable": 29.934,
+   "x": 1.0,
+   "no_cost": 28.985,
+   "no_theory": 29.0,
+   "no_gross": 0.015,
+   "no_net": -0.5697,
+   "no_net_rebate": -0.27985,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "yes_cost": 1.081,
+   "yes_gross": -0.081,
+   "yes_net": -0.10762,
+   "yes_net_rebate": -0.09681,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "YES",
+   "verdict": "fail",
+   "notes": "",
+   "legs": [
+    {
+     "title": "Atlanta Hawks",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.991,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Boston Celtics",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.05,
+     "no_cost": 0.96,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Brooklyn Nets",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Charlotte Hornets",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.006,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Chicago Bulls",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cleveland Cavaliers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.033,
+     "no_cost": 0.968,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Detroit Pistons",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.031,
+     "no_cost": 0.97,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Indiana Pacers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.018,
+     "no_cost": 0.983,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Miami Heat",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.032,
+     "no_cost": 0.969,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Milwaukee Bucks",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New York Knicks",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.11,
+     "no_cost": 0.9,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Orlando Magic",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.009,
+     "no_cost": 0.992,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Philadelphia 76ers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.133,
+     "no_cost": 0.868,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Toronto Raptors",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.038,
+     "no_cost": 0.963,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Washington Wizards",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.013,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Dallas Mavericks",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.006,
+     "no_cost": 0.995,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Denver Nuggets",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.033,
+     "no_cost": 0.968,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Golden State Warriors",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.011,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Houston Rockets",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.02,
+     "no_cost": 0.981,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Los Angeles Clippers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Los Angeles Lakers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.021,
+     "no_cost": 0.98,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Memphis Grizzlies",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Minnesota Timberwolves",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.034,
+     "no_cost": 0.967,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New Orleans Pelicans",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Oklahoma City Thunder",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.22,
+     "no_cost": 0.79,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Phoenix Suns",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.007,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Portland Trail Blazers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.011,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Sacramento Kings",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "San Antonio Spurs",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.21,
+     "no_cost": 0.8,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Utah Jazz",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.008,
+     "no_cost": 0.993,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  },
+  {
+   "ts": 1786777348,
+   "group": "mlb-world-series-champion-2026",
+   "negRiskMarketID": "0x85de20785f24956ff4ce1471e80f7d379d97f3fb8a20fb5dd881d03aac38df00",
+   "n_legs": 30,
+   "ask_sump": 29.952,
+   "subgroup_sump_fillable": 29.952,
+   "x": 1.0,
+   "no_cost": 22.004,
+   "no_theory": 29.0,
+   "no_gross": 6.996,
+   "no_net": 6.55092,
+   "no_net_rebate": 6.77096,
+   "no_depth_ok": true,
+   "no_fillable_min": 1.0,
+   "yes_cost": 1.065,
+   "yes_gross": -0.065,
+   "yes_net": -0.0913,
+   "yes_net_rebate": -0.08065,
+   "yes_depth_ok": true,
+   "yes_fillable_min": 1.0,
+   "side": "NO",
+   "verdict": "pass",
+   "notes": "",
+   "legs": [
+    {
+     "title": "New York Yankees",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.11,
+     "no_cost": 0.9,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "Toronto Blue Jays",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.01,
+     "no_cost": 0.994,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Tampa Bay Rays",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.082,
+     "no_cost": 0.926,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Baltimore Orioles",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Boston Red Sox",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.059,
+     "no_cost": 0.942,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cleveland Guardians",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.012,
+     "no_cost": 0.99,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Chicago White Sox",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.024,
+     "no_cost": 0.977,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Minnesota Twins",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.005,
+     "no_cost": 0.996,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Detroit Tigers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.022,
+     "no_cost": 0.979,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Kansas City Royals",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Houston Astros",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.033,
+     "no_cost": 0.971,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Seattle Mariners",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.014,
+     "no_cost": 0.987,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Los Angeles Angels",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Texas Rangers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.013,
+     "no_cost": 0.988,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Athletics",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Atlanta Braves",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.073,
+     "no_cost": 0.928,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "New York Mets",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Philadelphia Phillies",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.04,
+     "no_cost": 0.963,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Miami Marlins",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.004,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Washington Nationals",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "St. Louis Cardinals",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.003,
+     "no_cost": 0.998,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Milwaukee Brewers",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.085,
+     "no_cost": 0.916,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Chicago Cubs",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.066,
+     "no_cost": 0.936,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Cincinnati Reds",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Pittsburgh Pirates",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.002,
+     "no_cost": 0.999,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Los Angeles Dodgers",
+     "yes_ask": 0.99,
+     "no_ask": 0.99,
+     "yes_cost": 0.35,
+     "no_cost": 0.66,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": []
+    },
+    {
+     "title": "San Diego Padres",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.03,
+     "no_cost": 0.974,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "San Francisco Giants",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Arizona Diamondbacks",
+     "yes_ask": 0.999,
+     "no_ask": 0.999,
+     "yes_cost": 0.016,
+     "no_cost": 0.985,
+     "yes_filled": 1.0,
+     "no_filled": 1.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    },
+    {
+     "title": "Colorado Rockies",
+     "yes_ask": 0.999,
+     "no_ask": null,
+     "yes_cost": 0.001,
+     "no_cost": 0.0,
+     "yes_filled": 1.0,
+     "no_filled": 0.0,
+     "flags": [
+      "degenerate_both_sides_0.995+"
+     ]
+    }
+   ]
+  }
+ ]
+}

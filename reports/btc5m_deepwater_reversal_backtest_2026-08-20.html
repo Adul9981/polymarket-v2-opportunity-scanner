@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BTC 5 分钟盘｜深水反转回测（更新 2026-08-20）</title>
+  <style>
+    :root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--muted:#6e6e73;--line:#e5e5e7;--blue:#0a66c2;--green:#138a5b;--red:#c63c35;--amber:#9a6700;--soft-red:#fff1ef;--soft-amber:#fff7e6;--shadow:0 10px 32px rgba(0,0,0,.055);--r:20px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.6}
+    .wrap{width:min(1160px,calc(100% - 32px));margin:auto}.hero{padding:64px 0 30px}.eyebrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.badge{font-size:12px;font-weight:750;letter-spacing:.04em;padding:5px 10px;border-radius:999px;background:#e8f2ff;color:#0759a7}.badge.neutral{background:#ebebed;color:#505057}
+    h1{font-size:clamp(36px,6vw,68px);letter-spacing:-.045em;line-height:1.05;margin:18px 0 16px;max-width:920px}.lede{font-size:clamp(17px,2.2vw,23px);color:var(--muted);max-width:820px;margin:0}.meta{color:#85858b;font-size:13px;margin-top:18px}
+    .verdict{display:grid;grid-template-columns:1.7fr 1fr;gap:22px;padding:28px;border:1px solid #f0d191;background:linear-gradient(135deg,#fffaf0,#fff);border-radius:var(--r);box-shadow:var(--shadow);margin:22px 0 30px}.verdict h2{font-size:30px;line-height:1.18;margin:7px 0 10px;letter-spacing:-.025em}.verdict p{margin:0;color:#625646}.stamp{display:flex;flex-direction:column;align-items:flex-end;justify-content:center}.stamp strong{font-size:48px;line-height:1;color:var(--amber);letter-spacing:-.04em}.stamp span{font-size:13px;color:var(--muted);margin-top:8px;text-align:right}
+    section{margin:28px 0 48px}h2.section-title{font-size:28px;letter-spacing:-.025em;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 20px}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(4,1fr)}.card{background:var(--card);border:1px solid rgba(0,0,0,.055);border-radius:var(--r);padding:22px;box-shadow:var(--shadow)}.kpi .value{font-size:34px;line-height:1.1;letter-spacing:-.03em;font-weight:750}.kpi .label{font-size:13px;color:var(--muted);margin-top:8px}.kpi .note{font-size:12px;color:#999;margin-top:5px}
+    .plays{grid-template-columns:repeat(3,1fr)}.play{position:relative;min-height:160px}.play.active{border:1.5px solid #87b8ea;background:linear-gradient(145deg,#fff,#f2f8ff)}.play .num{font-size:12px;font-weight:750;color:#999}.play h3{font-size:21px;margin:8px 0 7px}.play p{font-size:14px;color:var(--muted);margin:0}.play .tag{position:absolute;right:16px;top:16px;color:#0759a7;background:#e8f2ff;padding:4px 8px;border-radius:99px;font-size:11px;font-weight:700}
+    .methods{grid-template-columns:repeat(4,1fr)}.method h3{font-size:15px;margin:6px 0}.method p{font-size:13px;color:var(--muted);margin:0}.icon{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:#edf5ff;color:var(--blue);font-weight:800}
+    .compare{grid-template-columns:1fr 1fr}.metric-panel{padding:26px}.metric-panel h3{margin:0 0 14px;font-size:19px}.metric-row{display:flex;align-items:flex-end;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line)}.metric-row:last-child{border:0}.metric-row span{font-size:13px;color:var(--muted)}.metric-row strong{font-size:25px;letter-spacing:-.025em}.neg{color:var(--red)}.pos{color:var(--green)}.warn{color:var(--amber)}.micro{font-size:12px;color:var(--muted);margin-top:12px}
+    .funnel{display:grid;grid-template-columns:repeat(4,1fr);align-items:stretch}.step{position:relative;padding:22px 19px;background:#fff;border:1px solid var(--line)}.step:first-child{border-radius:16px 0 0 16px}.step:last-child{border-radius:0 16px 16px 0}.step:not(:last-child):after{content:"→";position:absolute;z-index:2;right:-11px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:var(--bg);border-radius:50%;display:grid;place-items:center;color:#999}.step .big{font-size:29px;font-weight:760;letter-spacing:-.025em}.step small{display:block;color:var(--muted);margin-top:5px}.step.bad{background:#fff5f3}.step.good{background:#f0faf6}
+    .chart-card{padding:24px}.chart-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:14px}.chart-head h3{margin:0;font-size:19px}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.chart{width:100%;height:300px;display:block}.chart text{font-family:inherit;fill:#777;font-size:11px}.chart .gridline{stroke:#e7e7ea;stroke-width:1}.chart .axis{stroke:#b8b8bd;stroke-width:1}.chart .zero{stroke:#999;stroke-dasharray:4 4}.chart-tip{font-size:12px;color:var(--muted);margin-top:8px}
+    table{width:100%;border-collapse:collapse;font-size:14px}th{text-align:left;font-size:12px;color:var(--muted);font-weight:650;padding:11px 12px;border-bottom:1px solid var(--line)}td{padding:14px 12px;border-bottom:1px solid #ededee}tbody tr:last-child td{border-bottom:0}.pill{font-size:11px;font-weight:700;padding:4px 8px;border-radius:99px;background:#f0f0f2}.pill.red{background:var(--soft-red);color:var(--red)}
+    .risks{grid-template-columns:repeat(2,1fr)}.risk{display:flex;gap:14px}.risk .mark{flex:0 0 34px;width:34px;height:34px;border-radius:11px;background:var(--soft-red);color:var(--red);display:grid;place-items:center;font-weight:800}.risk h3{font-size:16px;margin:1px 0 4px}.risk p{font-size:13px;color:var(--muted);margin:0}
+    .decision{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:0;overflow:hidden}.decision .left{padding:30px;background:#17212b;color:#fff}.decision .left p{color:#bcc7d2}.decision .right{padding:30px;background:#fff}.decision h3{font-size:23px;margin:0 0 12px}.checklist{padding:0;margin:16px 0 0;list-style:none}.checklist li{position:relative;padding:9px 0 9px 28px;border-top:1px solid rgba(255,255,255,.12);font-size:14px}.checklist li:before{content:"○";position:absolute;left:2px;color:#7fb7ed}.decision .right .checklist li{border-color:var(--line)}.decision .right .checklist li:before{color:var(--red);content:"×"}
+    .foot{padding:0 0 56px;color:var(--muted);font-size:12px}.foot a{color:var(--blue);text-decoration:none}.note-box{border-left:4px solid var(--blue);background:#eef6ff;padding:16px 18px;border-radius:4px 14px 14px 4px;color:#304b66;font-size:14px}.nowrap{white-space:nowrap}
+    @media(max-width:860px){.verdict,.compare,.decision{grid-template-columns:1fr}.stamp{align-items:flex-start}.stamp span{text-align:left}.kpis,.methods{grid-template-columns:repeat(2,1fr)}.plays{grid-template-columns:1fr}.funnel{grid-template-columns:1fr 1fr}.step:first-child{border-radius:16px 0 0 0}.step:nth-child(2){border-radius:0 16px 0 0}.step:nth-child(3){border-radius:0 0 0 16px}.step:last-child{border-radius:0 0 16px 0}.step:nth-child(2):after{content:"↓";right:auto;left:-11px;top:auto;bottom:-11px;transform:none}.chart{height:270px}}
+    @media(max-width:560px){.wrap{width:min(100% - 22px,1160px)}.hero{padding-top:38px}.kpis,.methods,.risks{grid-template-columns:1fr}.card{padding:18px}.verdict{padding:21px}.verdict h2{font-size:25px}.stamp strong{font-size:39px}.funnel{grid-template-columns:1fr}.step,.step:first-child,.step:nth-child(2),.step:nth-child(3),.step:last-child{border-radius:0}.step:first-child{border-radius:14px 14px 0 0}.step:last-child{border-radius:0 0 14px 14px}.step:not(:last-child):after{content:"↓";right:18px;left:auto;top:auto;bottom:-11px;transform:none}.chart-card{padding:16px}.table-scroll{overflow-x:auto}table{min-width:650px}}
+    @media print{body{background:#fff}.wrap{width:100%;max-width:none}.card,.verdict{box-shadow:none;break-inside:avoid}section{break-inside:avoid;margin:22px 0}.hero{padding-top:15px}.foot{padding-bottom:0}}
+    </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow"><span class="badge">BTC5M</span><span class="badge neutral">回测更新 · 2026-08-20</span><span class="badge neutral">只读研究</span></div>
+      <h1>深水反转：现象是真的，利润仍未被证明。</h1>
+      <p class="lede">新增 08-19 下午至 08-20 的独立样本后重跑。结论没有改变：按可真实执行的保守口径，候选规则仍为负期望；差距集中在“我们能按多低的价格成交”。</p>
+      <div class="meta">数据区间：2026-08-11 00:00 — 2026-08-20 13:00 UTC · Polymarket BTC 5-minute Up/Down · 生成于 2026-08-20 21:07</div>
+    </header>
+
+    <div class="verdict">
+      <div>
+        <span class="badge" style="background:#fff0cc;color:#875c00">最终判定</span>
+        <h2>暂不可实盘；保留为 L2 纸面候选</h2>
+        <p>20¢ 首触 + 240 秒内恢复至 35¢ 的候选，全样本每笔期望 <b class="neg">-0.68¢</b>，新增样本 <b class="neg">-1.94¢</b>；计入 1¢ 成本压力后约 <b class="neg">-1.68¢</b>。全样本观察成交上界为 +1.75¢，但新增样本上界仅 +0.00¢，连理想成交假设也没有延续出优势。</p>
+      </div>
+      <div class="stamp"><strong>0 / 32</strong><span>通过“全样本 + 新增样本<br>计 1¢ 成本后均为正”的参数组合</span></div>
+    </div>
+
+    <section>
+      <h2 class="section-title">这次重点复查三种玩法中的第二种</h2>
+      <p class="sub">三条路线的技术门槛不同；本报告只回答“深水反转是否有可执行正期望”。</p>
+      <div class="grid plays">
+        <article class="card play"><span class="num">玩法 01</span><h3>动量埋伏型</h3><p>窗口前或极早阶段单向下注，依赖低延迟与方向预测；本轮未展开。</p></article>
+        <article class="card play active"><span class="tag">本轮重点</span><span class="num">玩法 02</span><h3>深水反转型</h3><p>某侧跌至 5–20¢ 后买入，等待路径恢复或持有结算；检验入场、恢复确认与超时退出。</p></article>
+        <article class="card play"><span class="num">玩法 03</span><h3>高频做市型</h3><p>双边报价赚价差与返佣，需要订单簿、库存与队列管理基础设施；本轮未展开。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">数据覆盖与自检</h2>
+      <p class="sub">更新后逐窗核对连续性；异常空窗口不当作“无交易”，而是排除并披露。</p>
+      <div class="grid kpis">
+        <div class="card kpi"><div class="value">2,748</div><div class="label">五分钟窗口</div><div class="note">连续元数据，无重复、无缺段</div></div>
+        <div class="card kpi"><div class="value">2,740</div><div class="label">可用窗口</div><div class="note">10 个原始空窗中修复 2 个</div></div>
+        <div class="card kpi"><div class="value">4,620,903</div><div class="label">真实成交记录</div><div class="note">逐笔明细汇总</div></div>
+        <div class="card kpi"><div class="value">365</div><div class="label">新增样本窗口</div><div class="note">自 08-19 06:35 UTC 起留出</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">四条保守原则</h2>
+      <p class="sub">这四条共同解释了为何结论比旧纸面结果低很多。</p>
+      <div class="grid methods">
+        <div class="card method"><div class="icon">01</div><h3>只用真实成交路径</h3><p>触发、反弹、止损和超时都由成交时间序列决定，不用事后收盘曲线替代。</p></div>
+        <div class="card method"><div class="icon">02</div><h3>买入按完整限价</h3><p>看到市场曾以低价成交，不等于我们的限价单能按该价格排队成交。</p></div>
+        <div class="card method"><div class="icon">03</div><h3>严格因果时序</h3><p>只承认第 240 秒前发生的反弹；更晚恢复不能倒推成“已及时确认”。</p></div>
+        <div class="card method"><div class="icon">04</div><h3>单列成本压力</h3><p>结果另测每笔 0.5¢ 与 1¢ 的费用、滑点和队列成本，不把零成本当实盘。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">最有希望的路径规则，卡在成交价</h2>
+      <p class="sub">规则：首次触及 ≤20¢ 买入；若第 240 秒前恢复到 ≥35¢，则持有结算，否则到时退出。</p>
+      <div class="grid compare">
+        <div class="card metric-panel">
+          <h3>可执行保守口径 · 买入按 20¢</h3>
+          <div class="metric-row"><span>全样本 EV / 笔</span><strong class="neg">-0.68¢</strong></div>
+          <div class="metric-row"><span>新增样本 EV / 笔</span><strong class="neg">-1.94¢</strong></div>
+          <div class="metric-row"><span>全样本 + 1¢ 成本</span><strong class="neg">-1.68¢</strong></div>
+          <div class="metric-row"><span>正收益天数</span><strong class="warn">4 / 10</strong></div>
+          <p class="micro">全样本 2,703 次触发；最长连续亏损 36 次。该口径更接近“挂 20¢ 限价单”的真实成本上限。</p>
+        </div>
+        <div class="card metric-panel">
+          <h3>观察成交上界 · 假设拿到首笔低价</h3>
+          <div class="metric-row"><span>全样本 EV / 笔</span><strong class="pos">+1.75¢</strong></div>
+          <div class="metric-row"><span>新增样本 EV / 笔</span><strong class="pos">+0.00¢</strong></div>
+          <div class="metric-row"><span>全样本 + 1¢ 成本</span><strong class="pos">+0.75¢</strong></div>
+          <div class="metric-row"><span>新增样本正收益天数</span><strong class="warn">1 / 2</strong></div>
+          <p class="micro">新增样本的上界收益已经接近零，说明“低价成交本身”在新数据里也不再构成优势；这个上界只能说明执行研究仍有价值，不能作为策略依据。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">旧结果为何从 +3.55¢ 降到现在</h2>
+      <p class="sub">不是市场突然失效，而是逐步移除了两个会放大收益的假设。</p>
+      <div class="funnel">
+        <div class="step"><div class="big pos">+3.55¢</div><small>旧路径脚本：首笔低价 + 非因果恢复判断（历史档案）</small></div>
+        <div class="step"><div class="big pos">+1.75¢</div><small>修正时序后，仍假设吃到观察到的首笔成交价</small></div>
+        <div class="step bad"><div class="big neg">-0.68¢</div><small>入场按 20¢ 完整限价，更接近实际挂单成本</small></div>
+        <div class="step bad"><div class="big neg">-1.68¢</div><small>再加入每笔 1¢ 成本压力</small></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card chart-card">
+        <div class="chart-head"><div><h3>恢复至 35¢ 路径规则：不同深水阈值</h3><p class="sub" style="margin:3px 0 0">每笔 EV（¢）；虚线为盈亏平衡</p></div><div class="legend"><span><i class="dot" style="background:#c63c35"></i>20¢ 完整限价·全样本</span><span><i class="dot" style="background:#ef8a84"></i>完整限价·新增</span><span><i class="dot" style="background:#0a66c2"></i>首笔价上界·全样本</span><span><i class="dot" style="background:#70a8e2"></i>首笔价上界·新增</span></div></div>
+        <svg id="thresholdChart" class="chart" role="img" aria-label="不同买入阈值的每笔期望收益"></svg>
+        <p class="chart-tip">观察上界在部分阈值仍为正，但按完整限价全部为负；阈值本身不能解决成交价格差。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="card chart-card">
+        <div class="chart-head"><div><h3>20¢ 路径规则逐日稳定性</h3><p class="sub" style="margin:3px 0 0">每笔 EV（¢）；蓝线仍是不可直接执行的成交上界</p></div><div class="legend"><span><i class="dot" style="background:#c63c35"></i>完整限价</span><span><i class="dot" style="background:#0a66c2"></i>观察上界</span><span><i class="dot" style="background:#138a5b"></i>观察上界减 1¢</span></div></div>
+        <svg id="dailyChart" class="chart" role="img" aria-label="按日每笔期望收益"></svg>
+        <p class="chart-tip">样本并非每天稳定：完整限价口径 10 天中仅 4 天为正；新增样本两个自然日均为负，不能用单日强表现替代稳定性验证。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">主要规则横向比较</h2>
+      <p class="sub">以下均按完整限价买入、未计额外费用；未通过门槛的组合以红标列出。</p>
+      <div class="card table-scroll">
+        <table>
+          <thead><tr><th>入场 / 路径</th><th>全样本次数</th><th>全样本 EV</th><th>新增样本 EV</th><th>判定</th></tr></thead>
+          <tbody>
+            <tr><td>20¢ · 持有至结算</td><td>2,703</td><td class="neg">-1.24¢</td><td class="neg">-3.14¢</td><td><span class="pill red">否决</span></td></tr>
+<tr><td>20¢ · 240 秒前恢复至 30¢，否则退出</td><td>2,703</td><td class="neg">-0.71¢</td><td class="neg">-2.25¢</td><td><span class="pill red">否决</span></td></tr>
+<tr class="main"><td><b>20¢ · 240 秒前恢复至 35¢，否则退出</b></td><td>2,703</td><td class="neg">-0.68¢</td><td class="neg">-1.94¢</td><td><span class="pill">继续纸面验证</span></td></tr>
+<tr><td>20¢ · 2× 止盈，否则 240 秒退出</td><td>2,703</td><td class="neg">-2.52¢</td><td class="neg">-2.19¢</td><td><span class="pill red">否决</span></td></tr>
+<tr><td>15¢ · 240 秒前恢复至 35¢，否则退出</td><td>2,701</td><td class="neg">-1.27¢</td><td class="neg">-2.32¢</td><td><span class="pill red">否决</span></td></tr>
+<tr><td>5¢ · 240 秒前恢复至 35¢，否则退出</td><td>2,700</td><td class="neg">-0.16¢</td><td class="neg">-0.04¢</td><td><span class="pill red">否决</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">现在还不能跨过的四个风险</h2>
+      <div class="grid risks">
+        <div class="card risk"><div class="mark">!</div><div><h3>成交能力没有被历史成交证明</h3><p>历史记录告诉我们有人成交，却不告诉我们自己的订单排在第几、能成交多少。入场价差足以翻转结论。</p></div></div>
+        <div class="card risk"><div class="mark">!</div><div><h3>成本余量不足</h3><p>完整限价下已是负期望；再加入费用、滑点或延迟，只会扩大亏损。</p></div></div>
+        <div class="card risk"><div class="mark">!</div><div><h3>短期样本外波动大</h3><p>新增样本约 365 个窗口；上界结果也并非每天为正，尚不足以证明稳定。</p></div></div>
+        <div class="card risk"><div class="mark">!</div><div><h3>数据缺口已排除但仍需补采</h3><p>8 个异常空窗已排除并披露。当前结论不依赖它们，但持续采集需继续告警。</p></div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="card decision">
+        <div class="left">
+          <h3>保留的研究候选</h3>
+          <p><b>20¢ 首触 + 240 秒内恢复至 35¢ 则持有，否则退出。</b>它不是已验证策略，而是最值得做成交仿真的一条窄路线。</p>
+          <ul class="checklist">
+            <li>连续 1–2 周记录真实订单簿与队列变化</li>
+            <li>用固定美元金额模拟挂单，记录可成交率与实际均价</li>
+            <li>纳入手续费、滑点、部分成交和撤单延迟</li>
+            <li>在新的独立样本上重新通过正期望门槛</li>
+          </ul>
+        </div>
+        <div class="right">
+          <h3>当前明确不做</h3>
+          <p class="sub">在成交仿真通过前，维持 L2 纸面验证，不进入小额实盘。</p>
+          <ul class="checklist">
+            <li>不把观察到的首笔成交价当作自己的成交价</li>
+            <li>不使用旧脚本 +3.55¢ 作为交易依据</li>
+            <li>不因单日表现强就跳过样本外验证</li>
+            <li>不在没有深度与并发风险模型时扩大下注</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section><div class="note-box"><b>一句话结论：</b>“跌到深水后经常会反弹”是可观察的市场结构，但“我们能在反弹前以足够低的价格成交”才是策略利润来源；后者目前没有被证明。</div></section>
+
+    <footer class="foot">
+      <div>生成时间：2026-08-20 21:07 · 研究用途，不构成交易建议。</div>
+      <div>计算结果：<a href="btc5m_deepwater_reversal_backtest_2026-08-20.json">btc5m_deepwater_reversal_backtest_2026-08-20.json</a> · 明细交易：docs/forensics/data/btc5m-multiday/deepwater_reversal_trades_2026-08-20.csv</div>
+      <div>异常处理：8 个异常空窗已排除并披露。</div>
+    </footer>
+  </main>
+
+  <script>
+    
+    const NS='http://www.w3.org/2000/svg';
+    const S=(tag,attrs={},text='')=>{const e=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text)e.textContent=text;return e};
+    function base(svg,minY,maxY,labels){const W=1000,H=300,m={l:48,r:18,t:18,b:38};svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML='';const x=i=>m.l+i*(W-m.l-m.r)/(labels.length-1),y=v=>m.t+(maxY-v)*(H-m.t-m.b)/(maxY-minY);for(let v=Math.ceil(minY);v<=maxY;v++){if(v%1)continue;svg.append(S('line',{x1:m.l,y1:y(v),x2:W-m.r,y2:y(v),class:v===0?'zero':'gridline'}));svg.append(S('text',{x:m.l-8,y:y(v)+4,'text-anchor':'end'},String(v)))}labels.forEach((d,i)=>svg.append(S('text',{x:x(i),y:H-13,'text-anchor':'middle'},d)));return{W,H,m,x,y}}
+    function lineChart(id,labels,series,minY,maxY){const svg=document.getElementById(id),b=base(svg,minY,maxY,labels);series.forEach(z=>{const pts=z.data.map((v,i)=>`${b.x(i)},${b.y(v)}`).join(' ');svg.append(S('polyline',{points:pts,fill:'none',stroke:z.color,'stroke-width':z.width||3,'stroke-linecap':'round','stroke-linejoin':'round'}));z.data.forEach((v,i)=>{const c=S('circle',{cx:b.x(i),cy:b.y(v),r:4,fill:'#fff',stroke:z.color,'stroke-width':2});c.append(S('title',{},`${labels[i]}：${v>0?'+':''}${v.toFixed(2)}¢`));svg.append(c)})})}
+
+    lineChart('thresholdChart',['5¢','10¢','15¢','20¢'],[
+      {color:'#c63c35',data:[-0.1644,-0.6544,-1.2653,-0.6802]},
+      {color:'#ef8a84',data:[-0.0426,0.1769,-2.322,-1.9422]},
+      {color:'#0a66c2',data:[0.4734,0.5869,0.5998,1.749]},
+      {color:'#70a8e2',data:[0.5878,1.184,-0.7646,0.0013]}
+    ],-3,3);
+    lineChart('dailyChart',["08/11","08/12","08/13","08/14","08/15","08/16","08/17","08/18","08/19","08/20"],[
+      {color:'#c63c35',data:[3.5012,1.4089,-0.5793,1.4362,-5.1079,-3.4521,0.8086,-3.5003,-1.0138,-0.062]},
+      {color:'#0a66c2',data:[6.1015,3.3667,1.9758,3.5554,-2.2068,-0.6444,3.0393,-0.8336,1.4762,1.5283]},
+      {color:'#138a5b',data:[5.1015,2.3667,0.9758,2.5554,-3.2068,-1.6444,2.0393,-1.8336,0.4762,0.5283]}
+    ],-6,10);
+  </script>
+</body>
+</html>

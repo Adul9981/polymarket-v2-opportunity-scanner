@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>观众集体智慧 · 电竞弹幕情报库｜思路与首日成果</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#6e6e73;--accent:#0071e3;--line:#e8e8ed;--warn:#ff9500}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.hero{background:linear-gradient(160deg,#0a0a0f 0%,#111122 55%,#0d2b52 100%);color:#fff;padding:90px 24px 80px;text-align:center}
+.hero .kicker{color:#64b5f6;font-size:15px;letter-spacing:3px;font-weight:600;margin-bottom:22px}
+.hero h1{font-size:44px;font-weight:800;letter-spacing:-1px;line-height:1.15}
+.hero .sub{margin-top:16px;font-size:19px;color:#c8c8d0;max-width:640px;margin-left:auto;margin-right:auto}
+.hero .date{margin-top:26px;font-size:13px;color:#8a8a96}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+section{padding:56px 0 8px}
+.sec-no{color:var(--accent);font-size:14px;font-weight:700;letter-spacing:2px}
+h2{font-size:30px;font-weight:800;letter-spacing:-.5px;margin:6px 0 10px}
+.lead{color:var(--sub);font-size:16px;max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:26px}
+.card{background:var(--card);border-radius:20px;padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.05);border:1px solid var(--line)}
+.card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14px;color:var(--sub)}
+.card .big{font-size:40px;font-weight:800;color:var(--accent);line-height:1.1;margin-bottom:4px}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;margin-top:26px}
+.step{flex:1;min-width:130px;background:var(--card);border-radius:16px;padding:18px 14px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05);border:1px solid var(--line)}
+.step .n{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;width:26px;height:26px;line-height:26px;font-size:13px;font-weight:700;margin-bottom:8px}
+.step b{display:block;font-size:15px}
+.step span{font-size:12px;color:var(--sub)}
+.arrow{align-self:center;color:var(--sub);font-size:20px;flex:0 0 auto}
+.hl{background:#f0f7ff;border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;margin:22px 0;font-size:15px}
+.warnbox{background:#fff7f0;border-left:4px solid var(--warn);border-radius:12px;padding:18px 20px;margin:22px 0;font-size:15px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:24px}
+.kpi .card{text-align:center;padding:22px 12px}
+.kpi .big{font-size:38px}
+.timeline{margin-top:26px}
+.tl-item{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tl-item:last-child{border-bottom:none}
+.tl-time{flex:0 0 92px;font-weight:700;color:var(--accent);font-size:14px;padding-top:2px}
+.tl-body b{font-size:15px}
+.tl-body p{font-size:13px;color:var(--sub);margin-top:2px}
+.tag{display:inline-block;background:#f0f4ff;color:var(--accent);border-radius:999px;padding:2px 10px;font-size:12px;font-weight:600;margin:2px 4px 2px 0}
+.footer{background:#0a0a0f;color:#c8c8d0;text-align:center;padding:56px 24px;margin-top:60px}
+.footer h3{color:#fff;font-size:24px;font-weight:800;margin-bottom:10px}
+.footer .link{color:#64b5f6;font-size:16px;text-decoration:none;word-break:break-all}
+.footer .meta{font-size:12px;color:#8a8a96;margin-top:14px;line-height:1.8}
+@media(max-width:700px){.hero h1{font-size:32px}.hero .sub{font-size:16px}h2{font-size:24px}.flow{flex-direction:column}.arrow{transform:rotate(90deg);align-self:center;margin:-6px 0}}
+</style></head><body>
+
+<div class="hero">
+  <div class="kicker">INTELLIGENCE · DANMAKU · ESPORTS</div>
+  <h1>观众集体智慧<br>电竞弹幕情报库</h1>
+  <p class="sub">从直播弹幕中提炼"集体的判断"，为预测市场决策提供信息差引擎</p>
+  <div class="date">2026-08-18 · 思路展示 + 首日实战成果</div>
+</div>
+
+<div class="wrap">
+
+<section id="why">
+  <div class="sec-no">01 · WHY</div>
+  <h2>为什么做这件事</h2>
+  <p class="lead">预测市场的胜负，本质是信息差的竞争。职业解说的直播间弹幕里，藏着最实时、最廉价、也最被低估的"集体智慧"——观众在看比赛时，会用嘴投票。</p>
+  <div class="grid">
+    <div class="card"><h3>实时性</h3><p>弹幕秒级反映比赛进程，先于多数公开数据；密度峰值 = 关键时刻。</p></div>
+    <div class="card"><h3>集体性</h3><p>单条弹幕不可信，但几百人的共识、分歧与情绪反转是有统计意义的信号。</p></div>
+    <div class="card"><h3>信息差</h3><p>观众常比盘面更早感知"这支队伍不对劲"——灰信号、卡盘质疑、版本洞察都在弹幕里。</p></div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="sec-no">02 · HOW</div>
+  <h2>完整链路</h2>
+  <p class="lead">一条从"弹幕"到"情报"再到"交易辅助"的流水线，全部自动化、可回溯。</p>
+  <div class="flow">
+    <div class="step"><div class="n">1</div><b>抓取</b><span>虎牙 / SOOP 实时 WebSocket，轻量无浏览器</span></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">2</div><b>监控</b><span>多直播间并发，自动重连，持续落盘</span></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">3</div><b>分析</b><span>队伍 / 选手 / BP / 盘口 / 局势 / 灰信号</span></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">4</div><b>画像</b><span>队伍画像 + 高价值用户 + 跨场可信度</span></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">5</div><b>复盘</b><span>每场结构化 HTML 报告，结论可溯源</span></div>
+    <div class="arrow">→</div>
+    <div class="step"><div class="n">6</div><b>决策</b><span>对接预测市场，辅助挂单决策</span></div>
+  </div>
+  <div class="hl"><b>核心信念：</b>价格先行，弹幕不预测价格；弹幕提供的是解释层、微观信息层与闭盘情绪层——这是信息差的来源。</div>
+</section>
+
+<section id="sources">
+  <div class="sec-no">03 · SOURCES</div>
+  <h2>数据源：多平台多视角</h2>
+  <p class="lead">今天打通了 5 路直播间——虎牙中文解说 + SOOP 韩文官方流，同一场比赛可三视角交叉验证。</p>
+  <div class="grid">
+    <div class="card"><h3>虎牙 · 957</h3><p>前 WE 职业上单 · 二路解说 · 房间 890001 ✅ 已实测</p></div>
+    <div class="card"><h3>虎牙 · 硕硕</h3><p>英雄联盟解说 · 房间 323444 ✅ 已打通</p></div>
+    <div class="card"><h3>虎牙 · 毛毛 / 米勒</h3><p>官方解说直播间 ✅ 房间号已核验（毛毛待开播实测）</p></div>
+    <div class="card"><h3>SOOP · LCK_CL</h3><p>LCK 二线联赛官方流（韩文）✅ 实时 + VOD 历史回捞全通</p></div>
+  </div>
+</section>
+
+<section id="tech">
+  <div class="sec-no">04 · TECH</div>
+  <h2>轻量技术方案</h2>
+  <div class="grid">
+    <div class="card"><h3>只抓弹幕，不碰视频</h3><p>WebSocket 直连聊天通道，数据量极小，可长期挂机。</p></div>
+    <div class="card"><h3>自动重连</h3><p>聊天服务器轮换时自动重连续写，今天单场自动重连 27 次零丢失。</p></div>
+    <div class="card"><h3>VOD 历史回捞</h3><p>SOOP 回放带完整聊天记录，直播结束后可回捞全量历史弹幕。</p></div>
+    <div class="card"><h3>韩文自动翻译</h3><p>韩文弹幕全量中文化后再分析，情报输出为中文。</p></div>
+    <div class="card"><h3>多直播间并发</h3><p>一条命令同时开多个直播间，各自落盘互不影响。</p></div>
+    <div class="card"><h3>已开源</h3><p>虎牙弹幕采集器已发布 GitHub 公开仓库。</p></div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="sec-no">05 · RESULTS</div>
+  <h2>首日成果：一场决赛的全程情报</h2>
+  <p class="lead">今天从零跑通全链路，并完整跟踪了 LCK 凯斯帕杯决赛 DNS vs NS（BO5，DNS 3:0 横扫夺冠）。</p>
+  <div class="kpi">
+    <div class="card"><div class="big">10,593</div><div class="lbl" style="font-size:12px;color:var(--sub)">弹幕（不含回放样本）</div></div>
+    <div class="card"><div class="big">5</div><div class="lbl" style="font-size:12px;color:var(--sub)">路直播间</div></div>
+    <div class="card"><div class="big">2</div><div class="lbl" style="font-size:12px;color:var(--sub)">场赛事全程跟踪</div></div>
+    <div class="card"><div class="big">11</div><div class="lbl" style="font-size:12px;color:var(--sub)">份结构化报告</div></div>
+  </div>
+
+  <div class="hl"><b>最有价值的一次命中：</b>赛前观众一致看衰 DNS 的 BP（"二队杰斯必败"），但赛后复盘发现——观众真正认可的是 <b>DNS 打野 shavel 的盲僧</b>（"世界第一野王""盲僧和其他九个不是一个档次的"），以及 <b>NS 三 FMVP 阵容的集体拉胯</b>（"两个 S 赛冠军 + 一个 MSI 冠军打成这样"）。判断层级比单场胜负深一层。</div>
+
+  <h2 style="font-size:22px;margin-top:34px">决赛全程时间线（弹幕视角）</h2>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-time">G1 · 17:08</div><div class="tl-body"><b>BP：烬/VN/克烈热议，"DNS 背靠背没体力"被反复提及</b><p>观众对 DNS 体力与 BP 存疑。</p></div></div>
+    <div class="tl-item"><div class="tl-time">G1 · 17:31</div><div class="tl-body"><b>DNS 打野 shavel 盲僧天秀：抢龙 + 满血单杀奥拉夫</b><p>"今年头号天秀操作""这打野 T1/WBG/EDG/TES/JDG/BLG 都要了"——个人秀刷屏。</p></div></div>
+    <div class="tl-item"><div class="tl-time">G1 · 17:39</div><div class="tl-body"><b>峰值 378 条/分：决胜期混战 + 灰信号出现</b><p>NS 打野 0-5、AD 的 EZ 整场不交闪成为最大梗。</p></div></div>
+    <div class="tl-item"><div class="tl-time">G1 · 17:44</div><div class="tl-body"><b>人头盘"大 39.5"全收，最终约 39:5</b><p>观众从"小 36.5"转向"大"，盘口讨论与高击杀局重合。</p></div></div>
+    <div class="tl-item"><div class="tl-time">G2 · 18:20</div><div class="tl-body"><b>暂停争议 + 灰信号集中爆发（数十条）</b><p>"DNS 一直暂停""第二把剧本赛前没商量好？""假赛退钱""回溯冠军"——与盘口玩梗"暂停大 2.5"绑定。</p></div></div>
+    <div class="tl-item"><div class="tl-time">G3 · 18:44</div><div class="tl-body"><b>Kingen 一抢杰斯被提前判死刑</b><p>"看到杰斯那 3-0 了"——观众对第三局 BP 的即时判断与结果一致。</p></div></div>
+    <div class="tl-item"><div class="tl-time">19:04</div><div class="tl-body"><b>DNS 3:0 横扫夺冠，弹幕确认</b><p>"倒数第一拿到冠军""16:1""MVP 给打野"——整场 10593 条弹幕沉淀。</p></div></div>
+  </div>
+
+  <div class="warnbox"><b>灰信号纪律（重要原则）：</b>今天捕获大量"假赛 / 做局 / 卡盘"类观众质疑（G1 人头盘、G2 暂停争议）。按项目红线，这类灰信号<b>只作风险标注与盘口对照素材，绝不作假赛结论</b>——这正是"集体智慧"的边界：把怀疑变成可验证的数据，而不是断言。</div>
+</section>
+
+<section id="library">
+  <div class="sec-no">06 · LIBRARY</div>
+  <h2>沉淀成库：情报库平台</h2>
+  <p class="lead">所有数据与结论都沉淀为结构化知识库，可检索、可溯源、可跨场累计。</p>
+  <div class="grid">
+    <div class="card"><h3>直播间注册表</h3><p>5 路直播间档案：房间号 / uid / 关注赛事 / 采集状态，数据库留档。</p></div>
+    <div class="card"><h3>高价值用户池</h3><p>从弹幕中识别"BP 复盘型 / 战况复核型 / 预测型"用户，跨场累计可信度。</p></div>
+    <div class="card"><h3>队伍画像</h3><p>DNS（打野单核、背靠背体力隐患）、NS（三 FMVP 阵容低于预期）等画像持续更新。</p></div>
+    <div class="card"><h3>灰信号指数</h3><p>把"暂停次数 × 离谱失误 × 盘口讨论"沉淀为可对照的集体质疑指数。</p></div>
+  </div>
+</section>
+
+<section id="next">
+  <div class="sec-no">07 · NEXT</div>
+  <h2>下一步</h2>
+  <div class="grid">
+    <div class="card"><h3>Polymarket 对接</h3><p>弹幕情绪 × 行情价格逐阶段对照，形成决策闭环。</p></div>
+    <div class="card"><h3>假赛识别辅助</h3><p>灰信号与盘口、官方数据的自动对照验证。</p></div>
+    <div class="card"><h3>自动监控</h3><p>开赛自动开抓、局间自动小结、结束自动复盘。</p></div>
+    <div class="card"><h3>扩大覆盖</h3><p>更多直播间、更多赛区（LPL/LCK/LEC/LCK CL）全量覆盖。</p></div>
+  </div>
+</section>
+
+</div>
+
+<div class="footer">
+  <h3>开源地址</h3>
+  <a class="link" href="https://github.com/Adul9981/huya-danmu-crawler">github.com/Adul9981/huya-danmu-crawler</a>
+  <div class="meta">预测市场 · 电竞板块：<a style="color:#64b5f6" href="https://polymarket.com/esports?via=serene77mc-g6kj">polymarket.com/esports?via=serene77mc-g6kj</a><br>
+  情报库平台 · 报告索引 · 知识库 · 数据全部留档可溯源</div>
+</div>
+</body></html>

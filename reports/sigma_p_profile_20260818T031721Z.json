@@ -1,0 +1,183 @@
+{
+ "captured_at": "20260818T031721Z",
+ "groups": [
+  {
+   "group": "mls-chi-vwh-2026-07-16-exact-score",
+   "n_legs": 15,
+   "no_theory_per_x": 14,
+   "depth_min": 4055.6,
+   "depth_max": 24260.4,
+   "max_full_set_x": 4055.6,
+   "rows": [
+    {
+     "x": 1,
+     "cost": 14.692,
+     "fee": 0.0146,
+     "gross": -0.692,
+     "net": -0.7576,
+     "gross_pct": -4.943
+    },
+    {
+     "x": 2,
+     "cost": 29.384,
+     "fee": 0.0292,
+     "gross": -1.384,
+     "net": -1.4652,
+     "gross_pct": -4.943
+    },
+    {
+     "x": 5,
+     "cost": 73.46,
+     "fee": 0.0731,
+     "gross": -3.46,
+     "net": -3.5881,
+     "gross_pct": -4.943
+    },
+    {
+     "x": 10,
+     "cost": 146.92,
+     "fee": 0.1462,
+     "gross": -6.92,
+     "net": -7.1262,
+     "gross_pct": -4.943
+    },
+    {
+     "x": 25,
+     "cost": 368.3795,
+     "fee": 0.3173,
+     "gross": -18.3795,
+     "net": -18.7718,
+     "gross_pct": -5.251
+    },
+    {
+     "x": 50,
+     "cost": 738.9045,
+     "fee": 0.5345,
+     "gross": -38.9045,
+     "net": -39.539,
+     "gross_pct": -5.558
+    },
+    {
+     "x": 100,
+     "cost": 1480.229,
+     "fee": 0.9527,
+     "gross": -80.229,
+     "net": -81.3317,
+     "gross_pct": -5.731
+    },
+    {
+     "x": 200,
+     "cost": 2967.7957,
+     "fee": 1.5576,
+     "gross": -167.7957,
+     "net": -169.6032,
+     "gross_pct": -5.993
+    },
+    {
+     "x": 500,
+     "cost": 7439.6513,
+     "fee": 2.9459,
+     "gross": -439.6513,
+     "net": -443.1471,
+     "gross_pct": -6.281
+    }
+   ]
+  },
+  {
+   "group": "precipitation-in-seattle-in-august-20260728162301077",
+   "error": "no tradable group"
+  },
+  {
+   "group": "highest-temperature-in-busan-on-august-18-2026",
+   "n_legs": 7,
+   "no_theory_per_x": 6,
+   "depth_min": 0,
+   "depth_max": 817.7,
+   "max_full_set_x": 0,
+   "rows": [
+    {
+     "x": 1,
+     "cost": null
+    },
+    {
+     "x": 2,
+     "cost": null
+    },
+    {
+     "x": 5,
+     "cost": null
+    },
+    {
+     "x": 10,
+     "cost": null
+    },
+    {
+     "x": 25,
+     "cost": null
+    },
+    {
+     "x": 50,
+     "cost": null
+    },
+    {
+     "x": 100,
+     "cost": null
+    },
+    {
+     "x": 200,
+     "cost": null
+    },
+    {
+     "x": 500,
+     "cost": null
+    }
+   ]
+  },
+  {
+   "group": "pro-football-2026-27-interceptions-leader-team-20260720200752789",
+   "n_legs": 12,
+   "no_theory_per_x": 11,
+   "depth_min": 0,
+   "depth_max": 883.3,
+   "max_full_set_x": 0,
+   "rows": [
+    {
+     "x": 1,
+     "cost": null
+    },
+    {
+     "x": 2,
+     "cost": null
+    },
+    {
+     "x": 5,
+     "cost": null
+    },
+    {
+     "x": 10,
+     "cost": null
+    },
+    {
+     "x": 25,
+     "cost": null
+    },
+    {
+     "x": 50,
+     "cost": null
+    },
+    {
+     "x": 100,
+     "cost": null
+    },
+    {
+     "x": 200,
+     "cost": null
+    },
+    {
+     "x": 500,
+     "cost": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>集体智慧层 · 弹幕共识预测情报</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:860px;margin:0 auto}
+.hero{background:linear-gradient(135deg,#0071e3,#4aa3ff);border-radius:20px;padding:36px 28px;color:#fff;margin-bottom:22px}
+.hero h1{font-size:27px;font-weight:700;margin-bottom:8px;color:#fff}
+.hero .tag{font-size:16px;opacity:.95;line-height:1.7}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:12px;border-left:4px solid var(--accent);padding-left:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+ul{margin:0 0 8px 20px}li{margin-bottom:6px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600;background:#fafafa}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+.step{background:#fafafa;border:1px solid var(--line);border-radius:14px;padding:16px}
+.step .n{font-size:20px;font-weight:700;color:var(--accent)}
+.step .t{font-weight:600;margin:4px 0 4px}
+.step .d{color:var(--sub);font-size:12.5px}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin:10px 0}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin:10px 0}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.steps{grid-template-columns:1fr}}
+</style></head>
+<body><div class="wrap">
+<div class="hero">
+<h1>集体智慧层</h1>
+<div class="tag">Crowd Consensus Layer · 弹幕共识预测情报<br><b>比分告诉你发生了什么，集体智慧告诉你将要发生什么。</b></div>
+</div>
+
+<section class="card"><h2>一、它是什么</h2>
+<ul>
+<li>一个叠加在比赛之上的<b>预测情报层</b>：用观众群体的实时判断，输出"谁会赢、这个 BP 行不行、这局有没有问题"的共识信号</li>
+<li>本质是预测：把上万名观众的集体直觉，变成可检验、可校准的赛果倾向</li>
+<li>弹幕只是原料，产品输出的是"共识"——不是转述谁说了什么</li>
+</ul></section>
+
+<section class="card"><h2>二、一条链路（三步）</h2>
+<div class="steps">
+<div class="step"><div class="n">1</div><div class="t">弹幕 · 原料</div><div class="d">直播间观众实时发言，上万双眼睛同时在看。原始媒介。</div></div>
+<div class="step"><div class="n">2</div><div class="t">共识 · 提炼</div><div class="d">聚合为集体判断：看好方向、BP 正负锚点、灰信号集中度。带样本量与置信。</div></div>
+<div class="step"><div class="n">3</div><div class="t">预测 · 输出</div><div class="d">赛果倾向 + 风险标注 + 可溯源时间窗；赛后回填兑现率，持续校准。</div></div>
+</div>
+<p style="color:var(--sub);font-size:12.5px;margin-top:10px">弹幕是什么（产品内说明）：直播间观众的实时评论。我们不做"转述弹幕"，而是把上万条发言聚合成"集体共识"——弹幕是原料，共识是产品。</p></section>
+
+<section class="card"><h2>三、产品里你会看到什么</h2>
+<table>
+<tr><th>模块</th><th>内容</th></tr>
+<tr><td>共识指数</td><td>观众看好方向的占比与强度（谁被看好多、共识是否集中）</td></tr>
+<tr><td>关键锚点</td><td>BP 后战绩情报：选手×英雄历史战绩/胜率（正锚点 / 负锚点），如"该英雄 7-0，观众判胜"</td></tr>
+<tr><td>灰信号风险</td><td>剧本/假赛/卡盘质疑的集中度——永远标注"观众质疑，非结论"</td></tr>
+<tr><td>溯源与置信</td><td>每条共识带：置信度 + 样本量 + 时间窗口 + 数据来源</td></tr>
+</table></section>
+
+<section class="card"><h2>四、为什么有价值</h2>
+<ul>
+<li><b>提前量</b>：BP 刚锁定、比赛刚开打，观众的判断就出来了——比数据网站和盘口重定价更早</li>
+<li><b>大样本</b>：上万条实时发言聚合，方向稳定，噪音可被稀释</li>
+<li><b>真实情绪</b>：数据网站给不了"观众此刻怎么看"——这是行为信号</li>
+<li><b>灰信号维度</b>：剧本/假赛质疑是传统数据源完全缺失的一层，且可对照兑现率检验</li>
+<li><b>验证闭环</b>：每条预测赛后回填，形成可统计的兑现率——"共识靠不靠谱"有数据说话</li>
+</ul></section>
+
+<section class="card"><h2>五、边界与纪律（清清爽爽）</h2>
+<div class="ok">只给事实与统计 · 每条可溯源 · 无样本不硬撑（显示"样本不足"）· 无信号不硬造（显示"今日无信号"）</div>
+<div class="warn">灰信号（剧本/假赛质疑）只作风险标注，不作结论；不展示弹幕流与用户身份，只给聚合结论。</div>
+<ul>
+<li>覆盖：LoL（LPL/LCK/LEC 等）、CS2、DOTA2 等主流电竞联赛</li>
+<li>校准：所有"共识预测"赛后回填兑现/未兑现，持续更新统计页</li>
+<li>诚实：弹幕反映的是"观赛人群的集体反应"，不是全部观众——大样本下方向稳定，但永远带置信与样本量</li>
+</ul></section>
+
+<p class="note">集体智慧层 · Crowd Consensus Layer · 2026-08-22 产品包装 v1 · 数据源：直播弹幕（虎牙/SOOP 等）· 关联：弹幕情报库（TASK6）、灰信号兑现率统计、队伍/选手画像库。</p>
+</div></body></html>

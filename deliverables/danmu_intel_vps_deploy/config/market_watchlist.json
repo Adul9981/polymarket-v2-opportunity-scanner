@@ -1,0 +1,78 @@
+{
+  "version": "watchlist-0.1",
+  "principles": {
+    "volume_prefilter": false,
+    "volume_note": "赛前低成交量不作为剔除条件；很多电竞市场在比赛开始后才积累成交量。",
+    "primary_time_window": "优先扫描未来2天内即将开始，或最近2天内已经开始但仍未关闭的比赛。"
+  },
+  "time_window": {
+    "upcoming_days": 2,
+    "recent_started_days": 2,
+    "include_unknown_start_time": true
+  },
+  "esports": {
+    "tag_id": "64",
+    "enabled": true,
+    "note": "Gamma 公共接口的电竞赛事标签；按此标签全量抓取后本地按真实开赛时间过滤。"
+  },
+  "games": {
+    "lol": {
+      "name": "League of Legends",
+      "priority": 100,
+      "include_keywords": [
+        "LoL:",
+        "League of Legends"
+      ],
+      "league_keywords": [
+        " - LCK ",
+        " LCK ",
+        "LCK Challengers",
+        "LCK Challengers League",
+        " - LPL ",
+        " LPL ",
+        " - LCP ",
+        " LCP ",
+        "LCP Group Stage",
+        "LCP Playoffs",
+        "LCP Regular Season",
+        " - LEC ",
+        " LEC ",
+  "LEC Regular Season",
+  "LEC Playoffs",
+  "LEC Summer",
+  " - LCS ",
+  " LCS ",
+  "LCS Regular Season",
+  "LCS Playoffs",
+  "KeSPA Cup",
+  "Kespa Cup"
+]
+    },
+    "cs2": {
+      "name": "Counter-Strike 2",
+      "priority": 70,
+      "include_keywords": [
+        "CS2:",
+        "Counter-Strike"
+      ],
+      "league_keywords": [
+        "IEM",
+        "BLAST",
+        "Esports World Cup",
+        "EWC"
+      ]
+    },
+    "dota2": {
+      "name": "Dota 2",
+      "priority": 70,
+      "include_keywords": [
+        "Dota 2:",
+        "Dota2"
+      ],
+      "league_keywords": [
+        "The International",
+        "ESL One"
+      ]
+    }
+  }
+}

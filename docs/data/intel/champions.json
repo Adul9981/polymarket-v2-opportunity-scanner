@@ -1,0 +1,471 @@
+{
+ "schema_version": "1.0",
+ "description": "英雄/角色情报层（LoL；CS 地图见 maps 概念，暂并入 bp_signals）。版本符号=观众共识（非官方 meta），锚点必须带 match+验证。",
+ "updated_at": "2026-08-27T17:40:00+08:00",
+ "champions": [
+  {
+   "id": "jayce",
+   "name": "杰斯",
+   "game": "lol",
+   "roles": [
+    "上单",
+    "中单"
+   ],
+   "version_sign": {
+    "label": "负锚（弱队判负）",
+    "period": "2026-08",
+    "evidence": "各大赛区杰斯十几连跪；'弱队杰斯=团队落后'；Zeus 例外",
+    "samples": 12
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": null,
+     "team": "th",
+     "match_id": "2026-08-23_th_gx_g1",
+     "quote": "炮没中过/0输出/团战一秒死",
+     "verified": "应验"
+    },
+    {
+     "polarity": "正",
+     "player_id": "zeus",
+     "team": "hle",
+     "match_id": "2026-08-23_t1_hle_g1",
+     "quote": "宙斯的杰斯今年没输过",
+     "verified": "应验"
+    }
+   ],
+   "team_fit": [
+    {
+     "team_id": "th",
+     "note": "弱队杰斯=判负样本"
+    },
+    {
+     "team_id": "hle",
+     "note": "Zeus 例外=正锚"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "cassiopeia",
+   "name": "蛇女",
+   "game": "lol",
+   "roles": [
+    "中单"
+   ],
+   "version_sign": {
+    "label": "版本符号（双因素：英雄×选手执行）",
+    "period": "2026-08",
+    "evidence": "T1/GENG 放蛇女+盲僧皆败；'蛇女打一切中路'；执行差则失效"
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": "zeka",
+     "team": "hle",
+     "match_id": "2026-08-23_t1_hle_g1",
+     "quote": "Zeka 蛇女团战完美",
+     "verified": "应验"
+    },
+    {
+     "polarity": "负",
+     "player_id": null,
+     "team": "kc",
+     "match_id": "2026-08-24_kc_shft_g1",
+     "quote": "蛇女明牌被集火/没伤害",
+     "verified": "未应验（单局输但系列 KC 2:1）"
+    }
+   ],
+   "counters": [
+    {
+     "vs": "anivia",
+     "note": "能打蛇女的只有高手冰鸟"
+    }
+   ],
+   "pairing": [
+    {
+     "with": "lee_sin",
+     "note": "蛇女+盲僧中野=当日强组合（Zeka+Kanavi）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "anivia",
+   "name": "冰鸟",
+   "game": "lol",
+   "roles": [
+    "中单"
+   ],
+   "version_sign": {
+    "label": "正锚（熟练度英雄）",
+    "period": "2026-08",
+    "evidence": "'老李冰鸟7-0'；菜鸟勿玩"
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": "faker",
+     "team": "t1",
+     "match_id": "2026-08-21_t1_kt_g3",
+     "quote": "老李冰鸟7胜0负（两路共振）",
+     "verified": "应验"
+    }
+   ],
+   "counters": [
+    {
+     "vs": "cassiopeia",
+     "note": "冰鸟>蛇女"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "lucian",
+   "name": "卢锡安",
+   "game": "lol",
+   "roles": [
+    "ADC"
+   ],
+   "version_sign": {
+    "label": "体系依赖（无米利欧/娜美=判负）",
+    "period": "2026-08",
+    "evidence": "'没有米利欧的卢锡安伤害一坨'；'卢锡安必须配娜美'"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": null,
+     "team": "th",
+     "match_id": "2026-08-23_th_gx_g2",
+     "quote": "单卢锡安没用/不交闪",
+     "verified": "应验"
+    },
+    {
+     "polarity": "正",
+     "player_id": "diable",
+     "team": "ns",
+     "match_id": "2026-08-23_bfx_ns_g2",
+     "quote": "大菠萝卢锡安13杀爆砍",
+     "verified": "应验"
+    }
+   ],
+   "pairing_needs": [
+    {
+     "with": "milio|nami",
+     "note": "必配其一，否则负锚"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "aatrox",
+   "name": "剑魔",
+   "game": "lol",
+   "roles": [
+    "上单",
+    "打野"
+   ],
+   "version_sign": {
+    "label": "位置决定（上单强/打野负锚）",
+    "period": "2026-08",
+    "evidence": "TH 上单剑魔速通（08-21）vs 剑魔打野'抽象/翡翠水平'（08-23）"
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": null,
+     "team": "th",
+     "match_id": "2026-08-21_sk_th_g2",
+     "quote": "招牌剑魔 放了就知道输了（上单）",
+     "verified": "应验"
+    },
+    {
+     "polarity": "负",
+     "player_id": "daglas",
+     "team": "th",
+     "match_id": "2026-08-23_th_gx_g2",
+     "quote": "剑魔打野真他妈抽象/一到中期就送",
+     "verified": "应验"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "yone",
+   "name": "永恩",
+   "game": "lol",
+   "roles": [
+    "中单",
+    "上单"
+   ],
+   "version_sign": {
+    "label": "双锚（版本强但熟练度决定）",
+    "period": "2026-08",
+    "evidence": "'永恩这两天各大联赛没输过' vs 'SK会玩个锤子的永恩'"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": "wunder",
+     "team": "sk",
+     "match_id": "2026-08-21_sk_th_g2",
+     "quote": "SK 永恩负锚（没有纳尔直接输一半）",
+     "verified": "应验"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "twisted_fate",
+   "name": "卡牌",
+   "game": "lol",
+   "roles": [
+    "上单",
+    "中单"
+   ],
+   "version_sign": {
+    "label": "上单正锚候选（压制型）",
+    "period": "2026-08",
+    "evidence": "SHFT 卡牌上单压纳尔（'死两次经济还领先'）"
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": null,
+     "team": "shft",
+     "match_id": "2026-08-24_kc_shft_g2",
+     "quote": "卡牌压纳尔这么多/卡牌上单又是",
+     "verified": "部分（压制但队伍输）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "lee_sin",
+   "name": "盲僧",
+   "game": "lol",
+   "roles": [
+    "打野"
+   ],
+   "version_sign": {
+    "label": "弱队正锚候选（逆版本强打）",
+    "period": "2026-08",
+    "evidence": "SHFT 盲僧4头（'打破LEC弱队无盲僧魔咒'）；'Lec的kanavi'"
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": "sheo",
+     "team": "shft",
+     "match_id": "2026-08-24_kc_shft_g2",
+     "quote": "这盲僧真可以/瞎子四个头",
+     "verified": "待验证（压制但局输）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "gnar",
+   "name": "纳尔",
+   "game": "lol",
+   "roles": [
+    "上单"
+   ],
+   "version_sign": {
+    "label": "开团能力决定（操作批评高发）",
+    "period": "2026-08",
+    "evidence": "Tracyn 纳尔'冒充48/多兰/复活甲/永远不来正面'；Wunder 纳尔依赖"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": null,
+     "team": "th",
+     "match_id": "2026-08-23_th_gx_g2",
+     "quote": "纳尔打团从来不想进去拍",
+     "verified": "应验（TH 输）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "viktor",
+   "name": "维克托",
+   "game": "lol",
+   "roles": [
+    "中单"
+   ],
+   "version_sign": {
+    "label": "后期接管正锚",
+    "period": "2026-08",
+    "evidence": "SHFT 维克托'会控大招比某些中单强/帽子就无敌'"
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": null,
+     "team": "shft",
+     "match_id": "2026-08-24_kc_shft_g1",
+     "quote": "维克托无敌了",
+     "verified": "应验（G1 翻盘核心）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "ryze",
+   "name": "瑞兹",
+   "game": "lol",
+   "roles": [
+    "中单"
+   ],
+   "version_sign": {
+    "label": "执行负锚（补刀都不会）",
+    "period": "2026-08",
+    "evidence": "KC 中单瑞兹'补刀都不会/太假了'"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": null,
+     "team": "kc",
+     "match_id": "2026-08-24_kc_shft_g2",
+     "quote": "瑞兹太假了/中单不想赢",
+     "verified": "未应验（KC 赢 G2）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "caitlyn",
+   "name": "女警",
+   "game": "lol",
+   "roles": [
+    "ADC"
+   ],
+   "version_sign": {
+    "label": "肥而输负样本（输出环境依赖）",
+    "period": "2026-08",
+    "evidence": "KC 天肥女警（近3k/15:13）被翻；'女警不放夹子就是明演'"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": null,
+     "team": "kc",
+     "match_id": "2026-08-24_kc_shft_g1",
+     "quote": "天肥女警赢不了",
+     "verified": "应验（KC 输 G1）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "xin_zhao",
+   "name": "赵信",
+   "game": "lol",
+   "roles": [
+    "打野"
+   ],
+   "version_sign": {
+    "label": "出装负锚（巨九/全输出）",
+    "period": "2026-08",
+    "evidence": "'巨九赵信十把输九把'；Yike 全输出赵信被批"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": "yike",
+     "team": "kc",
+     "match_id": "2026-08-24_kc_shft_g2",
+     "quote": "全输出赵信不像人能出的装备",
+     "verified": "部分（KC 仍赢）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "jhin",
+   "name": "烬",
+   "game": "lol",
+   "roles": [
+    "ADC"
+   ],
+   "version_sign": {
+    "label": "转位置选手负锚样例",
+    "period": "2026-08",
+    "evidence": "Vincenzo 排位 Jhin 7 连败（13:11:43 弹幕）"
+   },
+   "anchors": [
+    {
+     "polarity": "负",
+     "player_id": "vincenzo",
+     "team": "krx",
+     "match_id": "2026-08-24_dns_krx_cl",
+     "quote": "빈센조 솔랭 진 7전전패",
+     "verified": "应验方向（G1 下路被压制）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "ksante",
+   "name": "卡山特",
+   "game": "lol",
+   "roles": [
+    "上单"
+   ],
+   "version_sign": {
+    "label": "CL 后期翻盘正锚",
+    "period": "2026-08",
+    "evidence": "Lancer K'Sante 被弹幕评为\"기인급/MVP 랜서\""
+   },
+   "anchors": [
+    {
+     "polarity": "正",
+     "player_id": "lancer",
+     "team": "dns",
+     "match_id": "2026-08-24_dns_krx_cl",
+     "quote": "랜서 크산테는 거의 기인급",
+     "verified": "应验（G2 翻盘核心）"
+    }
+   ],
+   "memory_tier": "LONG"
+  },
+  {
+   "id": "locke",
+   "name": "洛克",
+   "game": "lol",
+   "roles": [
+    "中单"
+   ],
+   "note": "2026 新英雄「灰烬驱魔人·洛克」，近战 AP 刺客；官方英文 ID Locke；2026-08-27 NS Scout G2 使用被弹幕批'洛克是一点不会/被打爆'",
+   "memory_tier": "SHORT"
+  },
+  {
+   "id": "yunara",
+   "name": "芸阿娜",
+   "game": "lol",
+   "roles": [
+    "ADC"
+   ],
+   "note": "2025 新英雄「不破之誓·芸阿娜」，ADC；官方英文 ID Yunara（原译名永岚）；2026-08-27 NS Diable G2 使用，9 分被抓后 BFX 滚雪球",
+   "memory_tier": "SHORT"
+  },
+  {
+   "id": "ambessa",
+   "name": "安蓓萨",
+   "game": "lol",
+   "roles": [
+    "上单"
+   ],
+   "nicknames": [
+    "狼母"
+   ],
+   "note": "官方英文 ID Ambessa；弹幕常用外号'狼母'；2026-08-27 NS Kingen G2 使用被批'菜狗狼母就别拿出来丢人现演了'",
+   "memory_tier": "SHORT"
+  }
+ ]
+}

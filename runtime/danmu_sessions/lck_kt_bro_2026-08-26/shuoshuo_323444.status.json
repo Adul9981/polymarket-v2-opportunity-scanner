@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "shuoshuo_323444",
+  "url": "https://www.huya.com/323444",
+  "state": "offline_waiting",
+  "started_at": "2026-08-26T16:26:43+00:00",
+  "heartbeat_at": "2026-08-27T00:20:16+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 323444,
+  "channel_id": 35184381630871,
+  "nickname": "解说硕硕",
+  "introduction": "LDL世界赛预选赛！WBG TES！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-26T16:26:44+00:00"
+}

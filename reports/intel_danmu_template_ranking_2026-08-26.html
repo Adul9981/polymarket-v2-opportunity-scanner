@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>弹幕情报 HTML 模板排名（2026-08-26）</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --warn:#b45309; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.6; padding:24px 14px 60px; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:22px 24px; margin:16px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:24px; font-weight:700; }
+  h2 { font-size:18px; font-weight:650; margin:14px 0 10px; }
+  .meta { color:var(--sub); font-size:13px; margin-top:8px; }
+  .tag { display:inline-block; background:#eaf2fb; color:var(--accent); border-radius:999px; padding:2px 10px; font-size:12px; margin:2px 4px 2px 0; }
+  .tag.top { background:#fdeaea; color:#c0392b; }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:12px; padding:8px 8px; border-bottom:1px solid var(--line); }
+  td { padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .num { font-weight:700; color:var(--accent); text-align:center; }
+  .sub { color:var(--sub); font-size:11px; }
+  .score { text-align:center; font-weight:650; }
+  .best { background:#f0faf3; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:14px; }
+  .footer { color:var(--sub); font-size:12px; text-align:center; margin-top:24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+  <h1>弹幕情报 HTML 模板排名（2026-08-26）</h1>
+  <div class="meta">评估对象：reports/ 下 102 个 intel_danmu_*.html 弹幕情报页<br>
+  评估维度：① 信息价值度（情报密度/决策可用/可沉淀）② 信息完整性（10 段骨架/数据带量/闭环回填）③ 信息易读性（框架清晰、不复杂）<br>
+  方法：结构化标记统计（章节数/表格数/灰信号/锚点/回填/盘口/命中引用）+ 头部页面内容抽检</div>
+</div>
+
+<div class="card">
+  <h2>排名（高 → 低）</h2>
+  <table>
+    <tr><th>#</th><th>页面</th><th>类型</th><th>价值度</th><th>完整性</th><th>易读性</th><th>综合</th><th>入选理由</th></tr>
+    <tr class="best"><td class='num'>1</td><td>BFX.Y-HLE.C 整场<br><span class='sub'>intel_danmu_BFX.Y-HLE.C_2026-08-24.html</span></td><td>A 整场复盘</td><td class='score'>10</td><td class='score'>10</td><td class='score'>8.5</td><td class='score'>9.5</td><td>十段完整骨架 + 弹幕规模/密度 + 三局逐局 BP 阵容拆解 + 灰信号簇 + MVP 候选 + Polymarket 结算交叉 + 跨源一致性提示 + LONG/SHORT + 溯源。闭环数据最全（命中 21 处引用）。</td></tr><tr class="best"><td class='num'>2</td><td>DNS-DRX 整场<br><span class='sub'>intel_danmu_DNS-DRX_2026-08-24.html</span></td><td>A 整场复盘</td><td class='score'>9.5</td><td class='score'>9.5</td><td class='score'>9</td><td class='score'>9.3</td><td>盘口交叉最强：Polymarket 逐市场结算价（O/U3.5/4.5、让分）与弹幕多信号一致；BP 后战绩情报（Vincenzo 烬 7 连败负锚）；8 个表格结构密；主动标注切片数据警示（透明）。</td></tr><tr class="best"><td class='num'>3</td><td>NAVI-FNC 局中<br><span class='sub'>intel_danmu_NAVI-FNC_2026-08-24.html</span></td><td>B 局中快照（A 骨架）</td><td class='score'>9.5</td><td class='score'>9.5</td><td class='score'>9</td><td class='score'>9.3</td><td>局中页标杆 + 防错示范：结束判定四类信号逐项核对（verify_match_end 评分）、分源条数明细（caedrel/otplol_/lec 官方）、跨场噪音剔除、方向性情报板（锚点×共识×灰信号）、用户提示口径核验。</td></tr><tr><td class='num'>4</td><td>HLE-BFX 局中<br><span class='sub'>intel_danmu_HLE-BFX_2026-08-24.html</span></td><td>B 局中快照</td><td class='score'>9</td><td class='score'>9.5</td><td class='score'>8.5</td><td class='score'>9.0</td><td>十二段 A 型骨架局中版：盘口讨论 13 处、BP/英雄锚点 17 处、队伍情绪画像、可验证悬念框架。</td></tr><tr><td class='num'>5</td><td>SK-TH 整场<br><span class='sub'>intel_danmu_SK-TH_2026-08-21.html</span></td><td>A 整场复盘</td><td class='score'>8.5</td><td class='score'>9</td><td class='score'>9</td><td class='score'>8.8</td><td>灰信号兑现样本最典型（17 条指向 SK 输家方向连续兑现）+ 标准十段 + 命中回填。</td></tr><tr><td class='num'>6</td><td>KC-SHFT 整场<br><span class='sub'>intel_danmu_KC-SHFT_full_2026-08-24.html</span></td><td>A 整场复盘</td><td class='score'>8.5</td><td class='score'>9</td><td class='score'>9</td><td class='score'>8.8</td><td>灰信号浓度最高（25 处引用，榜首爆冷+卡时间跨场规律）；标准十段。</td></tr><tr><td class='num'>7</td><td>T1-KT 整场<br><span class='sub'>intel_danmu_T1-KT_2026-08-21.html</span></td><td>A 整场复盘</td><td class='score'>8</td><td class='score'>9</td><td class='score'>9</td><td class='score'>8.7</td><td>让一追二共识命中 + 三局复盘 + 联赛规律沉淀（充电宝叙事/单核体系）。</td></tr><tr><td class='num'>8</td><td>WE-LGD 整场<br><span class='sub'>intel_danmu_WE-LGD_2026-08-22.html</span></td><td>A 整场复盘</td><td class='score'>8</td><td class='score'>9</td><td class='score'>9</td><td class='score'>8.7</td><td>灰信号+盘口+锚点均衡（8/8/7）；标准十段。</td></tr><tr><td class='num'>9</td><td>DOTA-BB-PV 局中深度<br><span class='sub'>intel_danmu_DOTA-BB-PV_2026-08-20.html</span></td><td>B 局中深度</td><td class='score'>8.5</td><td class='score'>8</td><td class='score'>8.5</td><td class='score'>8.3</td><td>局中深度标杆：阵容 BP 深度拆解 + 组织背景/盘口情绪（'你没考虑到的维度'）+ 可验证悬念。</td></tr><tr><td class='num'>10</td><td>TEAMS-BB-PV 画像<br><span class='sub'>intel_danmu_TEAMS-BB-PV_2026-08-20.html</span></td><td>C 队伍画像</td><td class='score'>7.5</td><td class='score'>8</td><td class='score'>9.5</td><td class='score'>8.3</td><td>画像页标杆：极简四段（LONG 画像×2 + 对位版本 + 灰信号纪律），长期资产复用。</td></tr><tr><td class='num'>11</td><td>IG-NIP 整场<br><span class='sub'>intel_danmu_IG-NIP_2026-08-22.html</span></td><td>A 整场复盘</td><td class='score'>8</td><td class='score'>9</td><td class='score'>8.5</td><td class='score'>8.5</td><td>BP 锚点 14 处（锚点体系丰富）；标准十段。</td></tr><tr><td class='num'>12</td><td>LEC-FNC-NAVI G1 修正版<br><span class='sub'>intel_danmu_LEC-FNC-NAVI_G1_2026-08-24.html</span></td><td>局后（防错修正示范）</td><td class='score'>7.5</td><td class='score'>7</td><td class='score'>8.5</td><td class='score'>7.7</td><td>修正声明+根因+防错规则固化，为'错误修正流程'示范页；完整性中等。</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>标准模板结论（后续以此为准）</h2>
+  <table>
+    <tr><th>类型</th><th>标准模板</th><th>核心特征</th></tr>
+    <tr class="best"><td><b>A 整场复盘</b></td><td><b>BFX.Y-HLE.C 整场</b>（备选：DNS-DRX，盘口交叉更强）</td><td>十段完整骨架；弹幕规模/密度带量；逐局 BP 阵容拆解；灰信号簇+预警；MVP 候选；Polymarket 结算交叉；跨源一致性提示；LONG/SHORT；溯源+待确认项</td></tr>
+    <tr class="best"><td><b>B 局中快照</b></td><td><b>NAVI-FNC 局中</b>（A 骨架局中版）</td><td>结论先行+状态核验四类信号；分源条数明细；跨场噪音剔除；方向性情报板（锚点×共识×灰信号）；防错流程示范</td></tr>
+    <tr><td><b>B 局中深度</b></td><td>DOTA-BB-PV 局中深度</td><td>BP 深度拆解 + 组织背景/盘口情绪 + 可验证悬念（用于单场深挖场景）</td></tr>
+    <tr><td><b>C 队伍/选手画像</b></td><td>TEAMS-BB-PV 画像</td><td>极简四段：LONG 画像×2 + 对位版本 + 灰信号纪律（长期资产复用）</td></tr>
+  </table>
+  <ul>
+    <li><b>硬性门槛（沿用 INTEL_HTML_TEMPLATE.md）</b>：10 段骨架缺一不可；数据带量（条数/提及/密度）；灰信号显著展示+纪律；结果标"弹幕口径·待官方"；BP 后战绩情报必抓；MD 镜像必出；<b>结果判定门禁必过（match_state_guard）</b>；</li>
+    <li><b>排名方法沉淀</b>：价值度看"锚点/灰信号/盘口/预测命中"密度；完整性看"章节数+表格数+回填验证+溯源"；易读性看"编号骨架+结论先行+表格化"；</li>
+    <li>本次会话轻量页（GX-G2、LCKCL-KRXC-BFXY 等）为快速交付版，信息完整但未达标杆密度——后续应直接按 A/B 标杆模板产出。</li>
+  </ul>
+</div>
+<div class="footer">模板排名 · 2026-08-26 · 依据 102 个情报页结构化统计 + 头部内容抽检</div>
+</div>
+</body>
+</html>

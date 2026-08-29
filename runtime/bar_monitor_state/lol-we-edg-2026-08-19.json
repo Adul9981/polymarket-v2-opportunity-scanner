@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "slug": "lol-we-edg-2026-08-19",
+  "targets": {
+    "lol-we-edg-2026-08-19-game1|Team WE": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.735,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-we-edg-2026-08-19-game2|Team WE": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.735,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-we-edg-2026-08-19|Team WE": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.815,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-we-edg-2026-08-19-game1|EDward Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.275,
+      "last_pattern_labels": [
+        "A5_W型双底"
+      ]
+    },
+    "lol-we-edg-2026-08-19-game2|EDward Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.275,
+      "last_pattern_labels": [
+        "A5_W型双底"
+      ]
+    },
+    "lol-we-edg-2026-08-19|EDward Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.205,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    }
+  }
+}

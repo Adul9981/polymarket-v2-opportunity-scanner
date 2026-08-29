@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS BLAST Open Porto · FURIA vs M80 · G1 Cache 复盘（弹幕口径 13:8 M80）· 2026-08-29</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:940px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 24px; height:24px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 58px; font-size:11px; font-weight:650; padding-top:2px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- 0 核心情报速览 -->
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="top">
+    <span class="score-big">FURIA 0-1 M80 · G1 Cache 结束（弹幕口径 13:8）</span>
+    <span class="badge b-ok">虎牙三路齐采</span>
+    <span class="badge b-risk">爆冷样本</span>
+    <span class="badge b-anchor">图二 Dust2 开局</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--bad)">爆冷</span><span><b>大热 FURIA 图一翻车</b>：赛前弹幕"毫无悬念的2:0""m80怎么赢"一边倒，实际 M80 纪律性拉满（"M80现在真猛，好有纪律"），JBa 突破主导（"jba把B冲烂了"）拿下 Cache <span class="meta">→ 详 §3/§6</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>KSCERATO 一拖四</b>："卡神 C麻了 人也麻了""他们根本拼不过卡萨瑞托"——个人强 vs 团队执行差，FURIA 单核依赖暴露 <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">预测</span><span><b>赛前 2 条预测未兑现</b>：FURIA 2-0（"毫无悬念"）、M80 无法取胜——G1 已反例，图二为修正窗口 <span class="meta">→ 详 §9</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--warn)">盘口</span><span><b>盘口异动信号</b>："这个盘开的就像知道结果一样"（LEC 串台参考）；CS 侧观众提及"大分""双飞"等让分口，M80 爆冷叙事有资金端呼应（待行情核对）<span class="meta">→ 详 §8</span></span></div>
+  </div>
+</div>
+
+<!-- 1 比赛信息 -->
+<div class="card">
+  <h2><span class="no">1</span>比赛信息与结果总览 / 状态核验</h2>
+  <table>
+    <tr><td>对阵</td><td>FURIA（黑豹）vs M80 · BLAST Premier Open Porto 2026 · 胜者组半决赛（Winner 晋级 playoffs）· BO3 · HLTV 2396934</td></tr>
+    <tr><td>G1 结果</td><td><b>M80 胜 Cache</b>（弹幕口径 13:8；HLTV 半场 7:5、BLAST 官方页 12:8 快照佐证；终局比分待官方最终回填）</td></tr>
+    <tr><td>系列状态</td><td>M80 1-0 FURIA · 图二 Dust2（FURIA 自选）开局 · 图三 Mirage</td></tr>
+    <tr><td>官方时间</td><td>2026-08-29 01:10 CST 开赛 · G1 约 46 分钟结束（01:55-01:56 弹幕 GG 共振）</td></tr>
+    <tr><td>完整性</td><td><span class="badge b-ok">三路齐采</span>CSBOY 官方 123321 / CSBOY-Mo 321123 / BLAST 660729；G1 全程覆盖，BLAST 房流量较低（651 条）</td></tr>
+  </table>
+</div>
+
+<!-- 2 弹幕数据 -->
+<div class="card">
+  <h2><span class="no">2</span>弹幕数据概览（01:09-01:56 CST）</h2>
+  <table>
+    <tr><th>指标</th><th>数值</th></tr>
+    <tr><td>弹幕</td><td>官方+Mo 两路约 3,000+ 条（G1 全程）；BLAST 房 651 条</td></tr>
+    <tr><td>峰值</td><td>01:45-01:56 末段刷屏（"？？？/GG/跑打"），M80 赛点与终结段密度最高</td></tr>
+    <tr><td>关键词</td><td>jba 30+ · 黑豹/黑小豹 20+ · 卡神/KSCERATO 10+ · 女武神 10+ · 送/浪 10+ · m80 硬/纪律 8+</td></tr>
+    <tr><td>情绪</td><td>末段 FURIA 支持者破防（"黑豹没分了""再见喽黑小豹"）；M80 口碑反转（"好有纪律"）</td></tr>
+  </table>
+</div>
+
+<!-- 3 人员情报 -->
+<div class="card">
+  <h2><span class="no">3</span>人员情报板（弹幕口径）</h2>
+  <table>
+    <tr><th>对象</th><th>提及</th><th>情绪</th><th>样本</th></tr>
+    <tr><td>JBa（M80 突破手）</td><td>30+</td><td>正（硬）</td><td>"jba太硬了""jba把B冲烂了""用jba摧毁了黑豹""跑打王"——图一胜负手</td></tr>
+    <tr><td>KSCERATO（卡神/卡萨瑞托，FURIA）</td><td>10+</td><td>正（带不动）</td><td>"卡神C麻了 人也麻了""卡神杀人还要下包？""他们根本拼不过卡萨瑞托"——单核依赖</td></tr>
+    <tr><td>molodoy（FURIA 狙击）</td><td>8</td><td>负</td><td>"水蛭不杀人啊""molodoy 步枪更拉""小雪没实力"——状态被批</td></tr>
+    <tr><td>yuurih / YEKINDAR（FURIA）</td><td>6</td><td>负</td><td>"尤里不像人""yuurih 26 ADR"（HLTV 评论）——火力哑火</td></tr>
+    <tr><td>FalleN（FURIA IGL）</td><td>4</td><td>中</td><td>"卡神别让忠诚害了你""FalleN 太老"——指挥/年龄讨论</td></tr>
+  </table>
+</div>
+
+<!-- 4 地图情报 -->
+<div class="card">
+  <h2><span class="no">4</span>地图 × 队伍情报</h2>
+  <table>
+    <tr><th>地图</th><th>状态</th><th>信息</th></tr>
+    <tr><td>G1 Cache（M80 自选）</td><td>M80 胜 13:8（弹幕口径）</td><td>M80 纪律性执行；JBa 突破 B 区主导；FURIA 末段追分未果（"差一分啊嗨豹"）</td></tr>
+    <tr><td>G2 Dust2（FURIA 自选）</td><td>开局</td><td>观众："沙漠算是黑豹最强图""图二我去哈基豹"——FURIA 自选图扳回窗口</td></tr>
+    <tr><td>G3 Mirage</td><td>待定</td><td>若 1-1，决胜图 Mirage</td></tr>
+  </table>
+</div>
+
+<!-- 5 灰信号 -->
+<div class="card">
+  <h2><span class="no">5</span>灰信号汇总（观众质疑 · 非结论）</h2>
+  <p><b>0 条实质灰信号。</b>末段"黑豹今天会故意输，因为不敢打绿龙""黑豹不想赢"为输家情绪/避战调侃，无指向性指控；"司马电池不敢赢"为喷子用语，均不升格为假赛质疑。</p>
+</div>
+
+<!-- 6 方向板 -->
+<div class="card">
+  <h2><span class="no">6</span>方向性情报板</h2>
+  <table>
+    <tr><th>维度</th><th>FURIA</th><th>M80</th></tr>
+    <tr><td>G1 共识</td><td>大热但执行崩（"黑豹好多失误，不然比分是反的"）</td><td>纪律+JBa 突破（"好有纪律""M80 现在真猛"）</td></tr>
+    <tr><td>风险</td><td>单核 KSCERATO 依赖；FalleN 指挥老龄化</td><td>浪局隐患（"M80继续浪"）——领先被追分样本</td></tr>
+    <tr><td>G2 预期</td><td>自选 Dust2 扳回窗口（观众略回偏）</td><td>延续纪律可 2-0；但"浪"是变数</td></tr>
+  </table>
+</div>
+
+<!-- 7 决策落点 -->
+<div class="card">
+  <h2><span class="no">7</span>情报含义与决策落点</h2>
+  <ul>
+    <li><b>图一结论：</b>M80 爆冷拿下自选图，赛前"大热必死"叙事再现（NAVI→FURIA 连续爆冷样本）。</li>
+    <li><b>G2 决策：</b>FURIA 自选 Dust2 为修正窗口，但团队执行未见好转则 0-2 风险上升；M80 若"浪"则 1-1 概率上升——盘口若给 FURIA 让分，谨慎。</li>
+    <li><b>动作：</b>G2 开局 5 分钟抓 FURIA 自选图士气/BP 情报；终局官方比分回填；JBa/KSCERATO 选手画像更新。</li>
+  </ul>
+</div>
+
+<!-- 8 时间线 -->
+<div class="card">
+  <h2><span class="no">8</span>关键节点时间线</h2>
+  <table>
+    <tr><th>时间</th><th>事件</th></tr>
+    <tr><td>01:09-01:13</td><td>赛前：FURIA 一边倒（"毫无悬念的2:0"）；黑闪被批太狂</td></tr>
+    <tr><td>01:45-01:46</td><td>中段转折：FURIA 强打 B 被 M80 防住（"打b也太蠢了吧"）；M80 追分/领先（"M80打完navi打醒了"）</td></tr>
+    <tr><td>01:49-01:53</td><td>FURIA 追分：11 分僵持（"黑豹11分就要僵了"）；M80 赛点（"赶紧赛点"）</td></tr>
+    <tr><td>01:55-01:56</td><td>GG 共振："再见喽黑小豹""M80赢了黑豹"；JBa 终结表现刷屏</td></tr>
+  </table>
+</div>
+
+<!-- 9 预测登记 -->
+<div class="card">
+  <h2><span class="no">9</span>预测登记（已入 predictions.json · 待回填）</h2>
+  <table>
+    <tr><th>预测</th><th>方向</th><th>类型</th><th>状态</th></tr>
+    <tr><td>"毫无悬念的2:0"（01:10）</td><td>FURIA 2-0</td><td>result_pred</td><td>G1 未兑现（M80 先下一城）；图二可部分修正</td></tr>
+    <tr><td>"这个m80怎么赢"（01:09）</td><td>M80 无法取胜</td><td>team_anchor</td><td>G1 未兑现（M80 胜 Cache）</td></tr>
+  </table>
+</div>
+
+<!-- 10 规律 -->
+<div class="card">
+  <h2><span class="no">10</span>联赛规律与版本（沉淀层）</h2>
+  <ul>
+    <li>BLAST Open Porto 连续爆冷：NAVI 1-2 M80、FURIA 0-1 M80——"排名差 35 位"差距缩小的实际样本。</li>
+    <li>大热方"浪/单核"是统一风险画像：NAVI makazze 波动、FURIA KSCERATO 单核——激进位依赖型队伍在生死局脆弱。</li>
+    <li>JBa 突破手画像（B 区推进+赛点终结）可沉淀为 M80 核心锚。</li>
+  </ul>
+</div>
+
+<!-- 11 溯源 -->
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <table>
+    <tr><td>官方源</td><td>HLTV 2396934（01:56 抓取）：Cache 半场 7:5 M80；BLAST 官方页 12:8 快照；地图池 Cache/Dust2/Mirage</td></tr>
+    <tr><td>弹幕源</td><td>虎牙三路 cs2_blast_2026-08-28：CSBOY 官方 123321 / Mo 321123 / BLAST 660729；01:09-01:56 全程</td></tr>
+    <tr><td>缺口</td><td>终局精确比分（13:8 为弹幕口径，官方页快照 12:8，待终局回填）；BLAST 房低流量；FURIA 选手对象（黑闪=molodoy？）需官方 lineup 二次确认</td></tr>
+  </table>
+  <p class="meta">生成时间：2026-08-29 01:59 CST · 情报原则：事实层=官方源，弹幕作佐证，灰信号不升格。</p>
+</div>
+
+<p class="footer">弹幕情报 · 观众质疑非结论 · 比分以官方源为准 · Polymarket 电竞情报项目</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IG vs NIP · LPL 弹幕情报（整场：NIP 2:0）（v2 决策导向版）</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 22px; height:22px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 52px; font-size:11px; font-weight:650; padding-top:2px; }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:11px 14px; margin-top:10px; font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  details { margin:6px 0; }
+  summary { cursor:pointer; color:var(--accent); font-size:12.5px; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="top">
+    <span class="score-big">7:5</span>
+    <span class="badge b-pend">弹幕口径 · 官方待回填</span>
+    <span class="badge b-risk">灰信号见 §2</span>
+    <span class="badge b-anchor">锚点见 §3</span>
+    <span class="badge b-odds">盘口见 §4</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span>控分/故意输叙事 11+ 条（IG 拿涅槃第二博弈），无盘口联动，甄别中 <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span>TheShy 奥拉夫负锚 + NIP 佳琪烬正锚（G1 战绩情报） <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--good)">盘口</span><span>无具体数字盘；'IG太热门不好整'+'加号捡钱'情绪词；控分若成立=价格失真候选成立，"热门队故意输"= 价格失真候选（风险标注，待官方）… <span class="meta">→ 详 §4</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">共识</span><span>七、预测验证 预测（弹幕） 结果 命中 "IG太热门了，不好整"（赛前） NIP 2:0 横扫 命中（热门翻车） "下波团战IG必输"（18:30） G1 NIP 拿下 命中 "2… <span class="meta">→ 详 §5/§10</span></span></div>
+  </div>
+  <div class="act"><b>决策落点：</b>LONG/SHORT：沉淀候选） ：G1 后"控分拿涅槃第二"叙事 11+ 条，IG 两局全输——若为实力问题则"豪华阵容失效"画像；若为控分则进入重点灰信号留痕（待官方） 选手负锚点双样本 ：TheS…</div>
+</div>
+<div class="card">
+  <h2><span class="no">1</span>比赛信息与结果总览 / 状态核验</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">header</h3><!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IG vs NIP · LPL 弹幕情报（整场：NIP 2:0）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+.block{margin-bottom:16px}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>IG vs NIP · LPL 整场弹幕复盘</h1>
+<p class="sub">比赛：LPL 第三赛段（IG vs NIP，BO3）· 数据源：官方流(660000) · <b>结果：NIP 2:0 IG（官方确认；G1 中段 17:53–18:25 数据缺口）</b></p>
+<div class="stats">
+<div class="stat"><div class="num">NIP 2:0</div><div class="lbl">横扫（弹幕+标题）</div></div>
+<div class="stat"><div class="num">控分 11+</div><div class="lbl">IG 叙事</div></div>
+<div class="stat"><div class="num">Meiko 巴德</div><div class="lbl">G2 负锚点</div></div>
+<div class="stat"><div class="num">爆冷日</div><div class="lbl">今日第二场冷门</div></div>
+</div>
+
+<div class="warn"><b>核心：NIP 2:0 横扫 IG，今天第二个冷门。</b>G1 TheShy 奥拉夫被批（"上单差距"刷屏）、G2 TheShy 掘墓对线被杰斯压爆（"职业掘墓不是可以爆打杰斯嘛？还是说有人不是职业？"）+ Meiko 巴德负锚点（"妹妹的巴德你就享受吧"）；IG"三个世界冠军一个msi冠军"阵容发挥失常（"右边三个世界冠军一个msi冠军解散吧"）。赛后核心叙事：<b>IG 控分</b>（11+ 条："IG故意控分，拿涅槃第二，骑士之路对手更菜"）——排名博弈解读，非定向假赛。</div>
+
+<div class="ok"><b>灰信号纪律：</b>控分/故意输叙事（11+ 条）+ "IG教练跟妹扣演得好"（玩梗）——无盘口/庄家联动，按排名博弈灰信号留痕待验证；观众质疑非结论。G1 中段（17:53–18:25）采集中断，完整性受影响。</div>
+
+<section class="card"><h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">一、结果总览</h3><table>
+<tr><th>小局</th><th>结果</th><th>要点</th></tr>
+<tr><td>G1（17:50–18:45）</td><td>NIP 胜</td><td>"NIP拿下了""上单差距"刷屏（18:45 峰值 1050 条/分）；TheShy 奥拉夫负锚点；IG BP/辅助/教练被批</td></tr>
+<tr><td>G2（19:09–19:32）</td><td>NIP 胜（2:0）</td><td>"让我们恭喜NIP""2比0了""GG"；TheShy 掘墓对线被压爆、Meiko 巴德负锚点、NIP 波比（"这就是放波比的代价"）；"IG就这，基本上 NIP 2:0 IG 不会变了"</td></tr>
+</table>
+<ul>
+<li>系列 NIP 2:0（"恭喜NIP""2 0拿下"、官方房间标题"NIP 2:0 iG"；官方赛果待回填）</li>
+<li>爆冷日：WE-LGD（LGD 2:1）+ IG-NIP（NIP 2:0）双冷门</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（风险 · 观众质疑非结论）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">五、灰信号汇总（观众质疑，非结论）</h3><ul>
+<li>控分/故意输叙事 11+ 条："IG故意控分，拿涅槃第二""IG在控分""控分打tt吗那可太好了一轮游吗"——排名博弈解读（G1 后出现并持续到 G2）</li>
+<li>玩梗级："0封了，IG教练跟妹扣演得好"（18:55）、"奥斯卡之夜"（G1）、"ig故意防水的，可以和末尾的打"（19:2x）</li>
+<li>甄别：无盘口/庄家联动、无多路密集共振——按"排名博弈灰信号"留痕；若官方确认 IG 有意控排名，再升级</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  
+</div>
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">八、盘口讨论</h3><ul>
+<li>无具体数字盘；"IG太热门不好整"（热度判断）；"加号捡钱"（盘口情绪词）</li>
+<li>控分叙事若成立，"热门队故意输"= 价格失真候选（风险标注，待官方）</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板（锚点×共识×灰信号）</h2>
+  <p class="meta">今日无方向板章节</p>
+</div>
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点（LONG/SHORT）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">九、情报含义与后续观察点</h3><ul>
+<li><b>IG 控分/排名博弈（长期沉淀候选）</b>：G1 后"控分拿涅槃第二"叙事 11+ 条，IG 两局全输——若为实力问题则"豪华阵容失效"画像；若为控分则进入重点灰信号留痕（待官方）</li>
+<li><b>选手负锚点双样本</b>：TheShy 奥拉夫+掘墓、Meiko 巴德——BP 后战绩情报再添 2 个应验样本</li>
+<li>观察点：官方赛果与 MVP、IG 后续是否继续"控分"、NIP"严父"叙事跨场验证</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">7</span>逐局复盘（证据层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">二、逐局复盘</h3><div class="block"><h3>G1（17:50–18:45）—— NIP 胜</h3>
+<ul>
+<li>BP 后战绩情报：TheShy 奥拉夫负锚点（"ts奥拉夫真垃圾""奥拉夫拉完了"）；NIP 佳琪烬正锚点（"这个烬确实可以""全靠佳琪"）</li>
+<li>局中：IG"BP永远低人一等""完全不会打团""辅助和教到底干了个啥"；18:29:30 大龙团"翻中翻"（rookie！/妹妹立功）但 NIP 最终拿下</li>
+</ul>
+</div>
+<div class="block"><h3>G2（19:09–19:32）—— NIP 胜，2:0</h3>
+<ul>
+<li>BP：IG Meiko 巴德（负锚点，"看到巴德我就知道无了""妹妹的巴德你就享受吧"）+ TheShy 康特位掘墓（"康特位就选个掘墓"）；NIP 波比（"这就是放波比的代价"）；IG 教练 BP 再被批（"把把BP被爆烂""宁王都在喷"）+ 异常 ban（"ban龙女为啥要ban"）</li>
+<li>局中：TheShy 掘墓对线被杰斯压爆（"掘墓打杰斯优势是怎么做到的？"）；"2-0没悬念"共识（19:20）兑现；19:26 Meiko 巴德"好秀"一次（小亮点）；终局 19:30–19:33"恭喜NIP/GG/2 0拿下"</li>
+</ul>
+</div></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（证据层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">三、队伍画像（本场 + 长期库）</h3><table>
+<tr><th>队伍</th><th>画像</th></tr>
+<tr><td>IG（负 0:2）</td><td>流量队但两局被横扫：上单（奥拉夫/掘墓双负锚点）、辅助（Meiko 巴德）、教练 BP 三处背锅；"三个世界冠军一个msi冠军"豪华阵容发挥失常；控分叙事（拿涅槃第二避强敌）待官方验证</td></tr>
+<tr><td>NIP（胜 2:0）</td><td>"严父/克星"叙事成立（"NIP简直就是怎么研究打IG的"）；佳琪烬正锚点、波比体系（"放波比的代价"）；"NIP打团更默契"——打 IG 有心得</td></tr>
+</table></section>
+
+<section class="card"><h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">四、人员画像（提及量，官方流）</h3><table>
+<tr><th>选手/对象</th><th>提及</th><th>评价</th></tr>
+<tr><td>Meiko（IG 辅助）</td><td>90+</td><td>两局背锅焦点（"IG辅助除了混还会什么""妹妹又抢人头"）；G2 巴德负锚点（87 提及）；19:26 曾"好秀"</td></tr>
+<tr><td>TheShy（IG 上单）</td><td>80+</td><td>G1 奥拉夫 + G2 掘墓双负锚点（"码头蒸菜""掘墓打杰斯优势是怎么做到的？"）；"IG不换上单包输"</td></tr>
+<tr><td>Rookie（IG 中单）</td><td>15+</td><td>"糯米鸡尽力了，队友都是涅槃"（尽力论）vs "糯米鸡不会拖发育"（反方）</td></tr>
+<tr><td>佳琪（NIP AD）</td><td>10+</td><td>G1 烬正锚点（"全靠佳琪"）；"佳琪真不如阿萨姆"（反方）</td></tr>
+<tr><td>IG 教练组</td><td>40+</td><td>"把把BP被爆烂""这BP宁王都在喷""教练老有点子了"（反讽）——BP 背锅主体</td></tr>
+</table></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本（沉淀层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">六、联赛规律与版本</h3><ul>
+<li>LPL 排名博弈："ig想第二名，骑士之路对手更加菜，为了世界赛"——IG 控分动机（观众口径）；"那IG涅槃2比涅槃1好"</li>
+<li>版本/BP：奥拉夫/掘墓（TheShy 双负锚点）、巴德（Meiko）、波比（NIP 体系）、杰斯（对位压制）</li>
+<li>爆冷日：今日 WE-LGD + IG-NIP 双冷门（"LGD竟然赢了"→"NIP拿下了"）——热门队集体翻车</li>
+</ul></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填明细（沉淀层）</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">七、预测验证</h3><table>
+<tr><th>预测（弹幕）</th><th>结果</th><th>命中</th></tr>
+<tr><td>"IG太热门了，不好整"（赛前）</td><td>NIP 2:0 横扫</td><td>命中（热门翻车）</td></tr>
+<tr><td>"下波团战IG必输"（18:30）</td><td>G1 NIP 拿下</td><td>命中</td></tr>
+<tr><td>"2-0没悬念"（19:20）</td><td>NIP 2:0 兑现</td><td>命中</td></tr>
+<tr><td>"IG故意控分"（G1 后）</td><td>IG 两局全输</td><td>方向待官方（控分 vs 实力）</td></tr>
+</table></section>
+
+<section class="card">
+</div>
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <h3 style="font-size:13.5px;color:var(--sub);margin:8px 0 4px">十、数据与溯源</h3><ul>
+<li>数据源：docs/data/danmu/huya/2026-08-22_official_660000.jsonl（G1 后期 18:26–18:45 + G2 全程 19:09–19:33 + 赛前 17:45–17:53）</li>
+<li>数据缺口：17:53–18:25（G1 BP/中段，33 分钟）采集中断——完整性受影响，已记录；如需补全走 VOD 回放</li>
+<li>待官方确认：系列赛果与 MVP、双方阵容、控分叙事真伪</li>
+</ul></section>
+
+<p class="note">生成时间：2026-08-22 22:30 前后 · 灰信号纪律：观众质疑非结论 · 结果口径为弹幕多信号+官方标题，官方回填后再校。</p>
+</div></body></html>
+</div>
+<div class="footer">v2 决策导向重排 · 弹幕口径 · 灰信号仅为观众质疑非结论 · 由 tools/reformat_intel_template.py 生成</div>
+</div>
+</body>
+</html>

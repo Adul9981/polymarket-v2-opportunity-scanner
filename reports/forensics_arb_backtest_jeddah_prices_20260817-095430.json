@@ -1,0 +1,49 @@
+{
+  "input": "docs/forensics/data/e46m3/jeddah_prices.json",
+  "params": {
+    "input": "docs/forensics/data/e46m3/jeddah_prices.json",
+    "x": 10.0,
+    "entry_threshold": 0.02,
+    "fee_rate": 0.05,
+    "gas_usd": 0.05,
+    "slip_bps": 100,
+    "convert_fee_bps": 0,
+    "taker_rebate": 0.0,
+    "step_s": 60,
+    "max_stale_s": 900,
+    "budget_usd": 50.0,
+    "out_dir": null
+  },
+  "legs": 11,
+  "window": [
+    1786379532.0,
+    1786465872.0
+  ],
+  "sigmaP": {
+    "min": 0.989,
+    "max": 1.0835,
+    "mean": 1.0324711805555575,
+    "median": 1.0345,
+    "time_above": 1061,
+    "time_below": 0
+  },
+  "yes_side": {
+    "min_sump": 0.989,
+    "edge_per_x": 0.01100000000000001
+  },
+  "episodes": 31,
+  "rounds": 31,
+  "totals": {
+    "net": -18.863642,
+    "gross_edge": 8.315,
+    "friction": 27.1781,
+    "outlay": 3118.863642,
+    "taker_fees": 8.953642,
+    "gas": 1.55,
+    "convert_fee": 0.0,
+    "slip_cost": 16.701,
+    "roi_pct": -0.604824
+  },
+  "verdict": "non_positive",
+  "reality_check": {}
+}

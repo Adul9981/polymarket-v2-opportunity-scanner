@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "total": 1605,
+    "active_users": 145,
+    "window_utc": [
+      "2026-08-24 14:44",
+      "2026-08-24 18:58"
+    ],
+    "density_per_min": 6.3,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@bogusmartins JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches",
+        "@GeovaneRamos JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches"
+      ]
+    },
+    "Spirit": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@bogusmartins JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches",
+        "@GeovaneRamos JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches"
+      ]
+    },
+    "G2": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@bogusmartins JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches",
+        "@GeovaneRamos JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches"
+      ]
+    },
+    "NAVI": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@bogusmartins JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches",
+        "@GeovaneRamos JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches"
+      ]
+    },
+    "FURIA": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "@bogusmartins JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches",
+        "@GeovaneRamos JOGOS 26/08 -> BLAST Open Porto || MD3 || Aurora x G2 às 06h00 || Spirit x DENDELE às 08h30 || NaVi x M80 às 11h00 || FURIA x paiN às 12h30 || OS HORÁRIOS/JOGOS PODEM SOFRER ALTERAÇÕES! MAIS INFOS EM -> https://www.hltv.org/matches"
+      ]
+    }
+  },
+  "players": {
+    "Hype": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "[emote:4148074:HYPERCLAP]",
+        "[emote:5748030:collectibleswideHYPERS]",
+        "[emote:5748030:collectibleswideHYPERS]",
+        "[emote:5748030:collectibleswideHYPERS]"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 146,
+    "samples": [
+      "[emote:5748103:collectiblesTssk]",
+      "[emote:5748022:collectiblesWidePeepoVibey]",
+      "[emote:4148081:Sadge]",
+      "[emote:4148081:Sadge]",
+      "[emote:5748083:collectiblespeepoFAT]",
+      "[emote:5748079:collectiblesNOPERS]",
+      "[emote:5748111:collectibleshappie]",
+      "[emote:5748013:collectiblesRAGEY]"
+    ]
+  },
+  "situation": {
+    "count": 33,
+    "samples": [
+      "Conheça os novos planos do Sócio Fundador do G3X e ajude a construir nosso CT: https://g3x.gg",
+      "gg",
+      "gg",
+      "COMUNIDADE OFICIAL AGON BY AOC! Entre no Discord: https://discord.gg/agon",
+      "Conheça os novos planos do Sócio Fundador do G3X e ajude a construir nosso CT: https://g3x.gg",
+      "Conheça os novos planos do Sócio Fundador do G3X e ajude a construir nosso CT: https://g3x.gg",
+      "Conheça os novos planos do Sócio Fundador do G3X e ajude a construir nosso CT: https://g3x.gg",
+      "COMUNIDADE OFICIAL AGON BY AOC! Entre no Discord: https://discord.gg/agon"
+    ]
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "15:01",
+      "count": 16,
+      "samples": [
+        "[emote:5747908:collectiblespeepoS]",
+        "!loja",
+        "[emote:5748088:collectiblesPepeLaugh]",
+        "@Kyoraku369 Acesse a Lojinha e troque seus Gaupoints da Kick! https://gaupoints.com.br/"
+      ]
+    },
+    {
+      "minute_utc": "15:20",
+      "count": 14,
+      "samples": [
+        "[emote:1730759:emojiCool]",
+        "[emote:1730769:emojiDJ]",
+        "[emote:1730754:emojiAwake]",
+        "Mande a sua mensagem de voz na live com o seus gaupoints -> https://streamelements.com/gaules/store"
+      ]
+    },
+    {
+      "minute_utc": "15:53",
+      "count": 14,
+      "samples": [
+        "[emote:1730769:emojiDJ]",
+        "[emote:5747850:collectibles5Head]",
+        "Confira os periféricos da Corsair https://corsairbr.short.gy/Gauleshs80",
+        "[emote:4760741:gaulesG]"
+      ]
+    },
+    {
+      "minute_utc": "15:03",
+      "count": 13,
+      "samples": [
+        "[emote:4795086:gaulescongelado]",
+        "COMUNIDADE OFICIAL AGON BY AOC! Entre no Discord: https://discord.gg/agon",
+        "[emote:1579033:emojiAstonished]",
+        "[emote:5748096:collectiblesW]"
+      ]
+    },
+    {
+      "minute_utc": "16:34",
+      "count": 13,
+      "samples": [
+        "[emote:5273243:lowCortisol]",
+        "Conheça os novos planos do Sócio Fundador do G3X e ajude a construir nosso CT: https://g3x.gg",
+        "[emote:1730752:emojiAngel]",
+        "kKK"
+      ]
+    },
+    {
+      "minute_utc": "15:17",
+      "count": 12,
+      "samples": [
+        "[emote:1730753:emojiAngry]",
+        "[emote:5747913:collectiblespeepoCozy]",
+        "Aproveite as ofertas no dia do pagamento com o cupom 8DO8 no Kabum: https://kb1.me/gaupayday8do8",
+        "Essa galera que fica mandando emoti no rerun é automatico?"
+      ]
+    },
+    {
+      "minute_utc": "15:50",
+      "count": 12,
+      "samples": [
+        "[emote:1730754:emojiAwake]",
+        "Venha torcer junto na nova casa do Povo, Isso é G3X 🤍💙 https://sociosofredor.com",
+        "[emote:1730752:emojiAngel]",
+        "OneBlade. Feito para cortar o pelo, não a pele! https://link.amazon/B06qLXLip"
+      ]
+    },
+    {
+      "minute_utc": "16:33",
+      "count": 12,
+      "samples": [
+        "COMUNIDADE OFICIAL AGON BY AOC! Entre no Discord: https://discord.gg/agon",
+        "[emote:39265:EDMusiC]",
+        "kkkKk",
+        "[emote:5273243:lowCortisol]"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "BotRix",
+      333
+    ],
+    [
+      "Haalzz",
+      69
+    ],
+    [
+      "qaPcs",
+      65
+    ],
+    [
+      "zznobre",
+      50
+    ],
+    [
+      "vortexstrider",
+      46
+    ],
+    [
+      "Gaules",
+      44
+    ],
+    [
+      "BlPOLAR",
+      44
+    ],
+    [
+      "Ember_Paladin",
+      35
+    ]
+  ],
+  "sources": {
+    "kick_eslcs": 60,
+    "kick_gaules": 1545
+  },
+  "capture_health": [
+    {
+      "channel": "eslcs",
+      "source": "kick_eslcs",
+      "chatroom_id": 101198156,
+      "connected_at": "2026-08-24T18:48:27+00:00",
+      "messages": 59,
+      "state": "connected"
+    },
+    {
+      "channel": "gaules",
+      "source": "kick_gaules",
+      "chatroom_id": 66973867,
+      "connected_at": "2026-08-24T18:58:30+00:00",
+      "messages": 1512,
+      "state": "connected"
+    }
+  ]
+}

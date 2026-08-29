@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  假赛案例公告页标准模板（CASE_STANDARD.md 第二节，2026-08-25 固化）
+  用法：复制本文件，替换 {{占位符}}，另存 intel/case_<slug>.html；
+  保持五段结构不变；运行 tools/add_site_nav.py 后推送。
+  样例：intel/case_gx_g2_2026-08-24.html
+-->
+<meta name="description" content="公告 · {{TEAM_A}} vs {{TEAM_B}}（{{DATE}} {{LEAGUE}}）假赛疑似案例：灰信号、赔率路径与临场分析">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<title>公告 · {{TEAM_A}} vs {{TEAM_B}} 案例 · 弹幕情报库</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#6e6e73;--line:#e5e5ea;--accent:#0071e3;--amber:#b45309}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px 16px 60px}
+.wrap{max-width:900px;margin:0 auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(245,245,247,.86);backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line);margin-bottom:18px}
+nav .inner{display:flex;align-items:center;gap:16px;max-width:900px;margin:0 auto;padding:11px 16px;flex-wrap:wrap}
+nav a{color:var(--sub);text-decoration:none;font-size:13px;font-weight:500}
+nav a:hover{color:var(--accent)}
+nav .crumb{color:var(--sub);font-size:12px}
+.tag{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--amber);border-radius:999px;padding:3px 11px;margin-bottom:12px}
+h1{font-size:25px;font-weight:800;letter-spacing:-.3px;margin-bottom:8px}
+.sub{color:var(--sub);font-size:13.5px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:16px}
+.card h2{font-size:16px;font-weight:800;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.card h2 .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:#e8f1fd;color:var(--accent);font-size:12px;font-weight:800}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600;font-size:12px}
+td b{color:var(--ink)}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;border-radius:10px;padding:13px 16px;font-size:13px;color:#3a3a3c;margin-top:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--accent);text-decoration:none;font-weight:600}
+.chip:hover{background:#e8f1fd}
+footer{margin-top:18px;font-size:11.5px;color:var(--sub);border-top:1px solid var(--line);padding-top:12px}
+@media(max-width:640px){h1{font-size:21px}table{font-size:12px}}
+</style></head><body><div class="wrap">
+<nav><div class="inner">
+  <a href="../index.html" style="font-weight:700;color:var(--ink)">弹幕情报库</a>
+  <span class="crumb">首页 › <a href="history.html" style="color:var(--sub)">历史情报库</a> › <b style="color:var(--ink)">案例公告</b></span>
+  <span style="margin-left:auto"><a href="today.html">今日比赛</a> <a href="history.html">历史情报库</a> <a href="market_links.html">市场链接</a> <a href="../subscribe.html">订阅</a></span>
+</div></nav>
+
+<span class="tag">案例公告 · {{STATUS}}</span>
+<h1>{{TEAM_A}} vs {{TEAM_B}}（{{DATE}} · {{LEAGUE}}）{{CASE_TITLE}}</h1>
+<p class="sub">{{SUMMARY}}</p>
+
+<div class="card"><h2><span class="n">1</span>情报库提示</h2>
+  <p style="font-size:13.5px;margin-bottom:8px">本场完整弹幕情报（赛前 / 局中 / 整场复盘节点）已入库；灰信号统计与兑现率、假赛疑似案例库同步更新。</p>
+  <div class="chips">
+    <a class="chip" href="{{MATCH_PAGE}}">本场情报页 →</a>
+    <a class="chip" href="intel_gray_signals_stats.html">灰信号统计 →</a>
+    <a class="chip" href="intel_gray_verification_stats.html">灰信号兑现率 →</a>
+    <a class="chip" href="history.html">历史情报库 →</a>
+  </div>
+  <div class="warn">数据完整性说明：{{DATA_INTEGRITY_NOTE}}</div>
+</div>
+
+<div class="card"><h2><span class="n">2</span>我们观察到的赔率变化（Polymarket 系列盘 · {{FAV}} 胜出 · UTC）</h2>
+  <table>
+    <tr><th>时间</th><th>{{FAV}} 胜出价</th><th>节点</th></tr>
+    {{ODDS_ROWS}}
+  </table>
+  <p style="font-size:13px;margin-top:10px">关联盘口结算：{{RELATED_MARKETS}}</p>
+  <p style="font-size:13px;margin-top:6px;color:var(--sub)">观察：{{ODDS_OBSERVATION}}</p>
+</div>
+
+<div class="card"><h2><span class="n">3</span>灰信号汇总（观众质疑，非结论）</h2>
+  <p style="font-size:13.5px;margin-bottom:8px"><b>灰信号 · {{GRAY_FOCUS}}</b></p>
+  <p style="font-size:13px;color:#3a3a3c;margin-bottom:10px">{{GRAY_SUMMARY}}</p>
+  <table>
+    <tr><th style="width:90px">方向</th><td>{{GRAY_DIRECTION}}</td></tr>
+    <tr><th>预警等级</th><td>{{GRAY_LEVEL}}</td></tr>
+    <tr><th>市场含义</th><td>{{GRAY_MARKET_MEANING}}</td></tr>
+    <tr><th>兑现状态</th><td>{{GRAY_OUTCOME}}</td></tr>
+  </table>
+  <div class="warn">纪律：以上均为观众质疑与玩梗，非假赛证据；不据此作结论，仅作风险标注与盘口对照素材。</div>
+</div>
+
+<div class="card"><h2><span class="n">4</span>双方临场情况与选手实力差异</h2>
+  <table>
+    <tr><th>队伍</th><th>账面 / 临场</th><th>关键信息</th></tr>
+    {{TEAMS_ROWS}}
+  </table>
+  <p style="font-size:13px;margin-top:10px;color:var(--sub)">{{TEAMS_NOTE}}</p>
+</div>
+
+<div class="card"><h2><span class="n">5</span>纪律声明</h2>
+  <p style="font-size:13.5px">灰信号是观众质疑与玩梗，<b>不是假赛证据</b>；本公告只作风险标注与盘口对照素材，不据此作结论。案例定性为"{{STATUS}}" ，需官方调查 / 选手回应 / 盘口资金异动等外部证据确认。交易提醒：{{RISK_NOTE}}</p>
+</div>
+
+<footer>弹幕情报库 · 有情报、有数据、有闭环 · 案例库：FIXED_MATCH_SUSPECT_CASES.md（案例 {{CASE_NO}}）</footer>
+</div></body></html>

@@ -1,0 +1,4031 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-29T15:42:03+08:00",
+  "description": "弹幕情报比赛记录：每场含结果推断、关键信号、数据文件、报告链接；结果以官方为准。",
+  "matches": [
+    {
+      "id": "cs2-furia-m80-2026-08-28",
+      "slug": "cs2-furia-m80-2026-08-28",
+      "event_slug": "cs2-furia-m80-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "FURIA",
+        "M80"
+      ],
+      "league": "CS2 · BLAST Open Porto Group A（败者组）",
+      "status": "进行中",
+      "result_inferred": "进行中（G1 Cache 01:10 开赛；Liquipedia 地图池 Cache/Dust II/Mirage）",
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(321123)",
+        "BLAST官方(blast)"
+      ],
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "reports": [
+        "reports/intel_danmu_CS2-FURIA-M80_G1_2026-08-28.html",
+        "reports/intel_danmu_live_cs2_blast_2026-08-28.html"
+      ],
+      "pending": "G1 进行中；FURIA 大热（弹幕'毫无悬念的2:0'）",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T01:14:00+08:00",
+      "start_time": "2026-08-28T17:10:00+00:00"
+    },
+    {
+      "id": "lec-vit-fnc-2026-08-28",
+      "slug": "lec-vit-fnc-2026-08-28",
+      "event_slug": "lec-vit-fnc-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "VIT",
+        "FNC"
+      ],
+      "league": "LEC",
+      "status": "进行中",
+      "result_inferred": "进行中（G1 官方阵容 FNC 蓝 兰博/赵信/瑞兹/芸阿娜/璐璐 vs VIT 红 杰斯/皇子/辛德拉/女警/巴德；gameWins 0-0）",
+      "streamers": [
+        "Remember(528222)"
+      ],
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "reports": [
+        "reports/intel_danmu_LEC-VIT-FNC_G1_2026-08-28.html",
+        "reports/intel_danmu_live_lec_2026-08-28.html"
+      ],
+      "pending": "硕硕/毛毛未开播=单源缺口（Remember）；01:15 CST 开赛",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T01:01:00+08:00",
+      "start_time": "2026-08-28T17:15:00+00:00"
+    },
+    {
+      "id": "lec-th-shft-2026-08-28",
+      "slug": "lec-th-shft-2026-08-28",
+      "event_slug": "lol-shft-th-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "TH",
+        "SHFT"
+      ],
+      "league": "LEC",
+      "status": "已结束",
+      "result_inferred": "SHFT 2:0 TH（官方 gameWins；G1/G2 SHFT 胜；TH 淘汰；G2 杰克斯+小炮体系制胜）",
+      "streamers": [
+        "Remember(528222)"
+      ],
+      "danmu_count": 1400,
+      "gray_signals_count": 0,
+      "reports": [
+        "reports/intel_danmu_LEC-TH-SHFT_G1_2026-08-28.html",
+        "reports/intel_danmu_LEC-TH-SHFT_full_2026-08-28.html",
+        "reports/intel_danmu_live_lec_2026-08-28.html"
+      ],
+      "pending": "已结束；硕硕/毛毛未开播=单源缺口（Remember）；LEC 打满规律未触发（反例）",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:37:00+08:00",
+      "start_time": "2026-08-28T15:00:00+00:00"
+    },
+    {
+      "id": "cs2-pain-navi-2026-08-28",
+      "slug": "cs2-pain-navi-2026-08-28",
+      "event_slug": "cs2-navi-pain-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "paiN",
+        "NAVI"
+      ],
+      "league": "CS2 · BLAST Open Porto Group A",
+      "status": "已结束",
+      "result_inferred": "NAVI 2:0 paiN（官方：G1 Nuke 13:9 / G2 Mirage 13:11；paiN 出局；灰信号剧本论/吃质疑未兑现）",
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(321123)",
+        "BLAST官方(blast)"
+      ],
+      "danmu_count": 20831,
+      "gray_signals_count": 0,
+      "reports": [
+        "reports/intel_danmu_CS2-paiN-NAVI_G2_2026-08-28.html",
+        "reports/intel_danmu_CS2-paiN-NAVI_full_2026-08-28.html",
+        "reports/intel_danmu_live_cs2_blast_2026-08-28.html"
+      ],
+      "pending": "已结束；NAVI 下一轮赛程待官方；灰信号兑现率：剧本论/吃质疑 0 兑现（反向修正）",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:37:00+08:00",
+      "start_time": "2026-08-28T14:30:00+00:00"
+    },
+    {
+      "id": "cs2-spirit-g2-2026-08-28",
+      "slug": "cs2-spirit-g2-2026-08-28",
+      "event_slug": "cs2-g2-ts7-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "Spirit",
+        "G2"
+      ],
+      "league": "CS2 · BLAST Open Porto Group A（UB 半决赛1）",
+      "status": "已结束",
+      "result_inferred": "Spirit 2:0 G2（官方：Dust2 13:6 / Cache 13:9；donk 31-23/1.45 Rating；Spirit 晋级淘汰赛，G2 掉败者组）",
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(321123)",
+        "BLAST官方(blast)"
+      ],
+      "danmu_count": 84,
+      "gray_signals_count": 0,
+      "reports": [
+        "reports/intel_danmu_CS2-Spirit-G2_G2_2026-08-28.html",
+        "reports/intel_danmu_CS2-Spirit-G2_full_2026-08-28.html"
+      ],
+      "pending": "已结束（Liquipedia+HLTV+战报多源）；弹幕 Kick gaules 单源、虎牙缺采=缺口；弹幕局中 Cache 4-13 误读已按官方 13-9 修正",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:47+08:00",
+      "start_time": "2026-08-28T11:50:00+00:00"
+    },
+    {
+      "id": "lck-bro-bfx-2026-08-28",
+      "slug": "lck-bro-bfx-2026-08-28",
+      "event_slug": "lol-bro2-fox1-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "BRO",
+        "BFX"
+      ],
+      "league": "LCK 入围赛（BO5）",
+      "status": "已结束",
+      "result_inferred": "BFX 3:2 BRO（官方+直播吧：G1 BFX / G2-G3 BRO / G4 BFX 逆转（Taeyoon 芸阿娜五杀、VicLa 发条三杀）/ G5 BFX 运营取胜（Clear 女刀）；BFX 晋级 LCK 季后赛）",
+      "streamers": [
+        "硕硕(323444)",
+        "米勒(149361)",
+        "Remember(528222)"
+      ],
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "reports": [
+        "reports/intel_danmu_live_lck_bro_bfx_2026-08-28.html",
+        "reports/intel_danmu_LCK-BRO-BFX_G3_2026-08-28.html",
+        "reports/intel_danmu_LCK-BRO-BFX_G4_BP_2026-08-28.html",
+        "reports/intel_danmu_LCK-BRO-BFX_full_2026-08-28.html"
+      ],
+      "pending": "已结束；米勒/Remember 离线=数据缺口（单源：硕硕）；G4/G5 局中弹幕已采（20:14 前）",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:47+08:00",
+      "start_time": "2026-08-28T08:00:00+00:00"
+    },
+    {
+      "id": "lpl-tt-ig-2026-08-28",
+      "slug": "lpl-tt-ig-2026-08-28",
+      "event_slug": "lol-tt-ig1-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "TT",
+        "IG"
+      ],
+      "league": "LPL 骑士之路（BO5）",
+      "status": "已结束",
+      "result_inferred": "IG 3:0 TT（官方 gameWins 0/3：G1 约 24:08 / G2 约 24:05 / G3 约 19:45 速通；TheShy 上野体系+下路佳琪碾压；IG 晋级骑士之路，TT 淘汰无缘世界赛）",
+      "streamers": [
+        "官方(660000)",
+        "957(890001)"
+      ],
+      "danmu_count": 55197,
+      "gray_signals_count": 91,
+      "reports": [
+        "reports/intel_danmu_live_lpl_2026-08-28.html",
+        "reports/intel_danmu_LPL-TT-IG_full_2026-08-28.html"
+      ],
+      "pending": "已结束（Riot gameWins+Polymarket 结算）；957/毛毛/米勒/Remember 缺源=缺口；G2 单源待验证；官方战报细节待回填",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:47+08:00",
+      "start_time": "2026-08-28T09:00:00+00:00"
+    },
+    {
+      "id": "lpl-edg-nip-2026-08-28",
+      "slug": "lpl-edg-nip-2026-08-28",
+      "event_slug": "lol-edg-nip-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "EDG",
+        "NIP"
+      ],
+      "league": "LPL 骑士之路（BO5）",
+      "status": "已结束",
+      "result_inferred": "NIP 3:0 EDG（官方 gameWins 3/0：G1 Care 蛇女+Guwon 大虫子 / G2 Guwon 琪亚娜 29:59 卡线 / G3 Guwon 龙女；NIP 晋级，EDG 淘汰；灰信号指向 EDG 侧=观众质疑非结论）",
+      "streamers": [
+        "官方(660000)",
+        "957(890001)"
+      ],
+      "danmu_count": 13000,
+      "gray_signals_count": 8,
+      "reports": [
+        "reports/intel_danmu_live_lpl_2026-08-28.html",
+        "reports/intel_danmu_LPL-EDG-NIP_full_2026-08-28.html"
+      ],
+      "pending": "已结束（Riot gameWins+Polymarket 结算）；弹幕单源（官方房 660000）；卡30剧本/3龙诱盘=盘口类质疑待平台验证",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:47+08:00",
+      "start_time": "2026-08-28T06:00:00+00:00"
+    },
+    {
+      "id": "2026-08-17_th_navi",
+      "date": "2026-08-17",
+      "league": "LEC",
+      "teams": [
+        "TH",
+        "Navi"
+      ],
+      "streamers": [
+        "硕硕(323444)"
+      ],
+      "result_inferred": "NAVI 2:0 TH（官方确认）",
+      "danmu_count": 2262,
+      "key_signals": [
+        "观众嘴上看衰但比分领先的信息差信号",
+        "放资源换发育打法（20 分钟三龙听牌）"
+      ],
+      "gray_signals_count": 0,
+      "data_files": [
+        "docs/data/danmu/shuoshuo/2026-08-17_323444.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_full_2026-08-17_323444.html"
+      ],
+      "pending": "已确认",
+      "event_slug": "lol-navi-th-2026-08-17"
+    },
+    {
+      "id": "2026-08-18_kc_gx",
+      "date": "2026-08-18",
+      "league": "LEC",
+      "teams": [
+        "KC",
+        "GX"
+      ],
+      "streamers": [
+        "硕硕(323444)"
+      ],
+      "result_inferred": "KC 2:0 GX（官方确认，KC 7-0 不败）",
+      "danmu_count": 1903,
+      "key_signals": [
+        "KC 卡时间打法（领先 1 万拖到 32 分钟）",
+        "灰信号 69 条（做任务/演大时间/四场全卡）",
+        "盘口讨论：让分 +9.5/-8.5、总时长、总人头 23 个"
+      ],
+      "gray_signals_count": 69,
+      "data_files": [
+        "docs/data/danmu/shuoshuo/2026-08-18_323444.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_KC-GX_full_2026-08-18.html"
+      ],
+      "pending": "已确认",
+      "event_slug": ""
+    },
+    {
+      "id": "2026-08-18_dns_ns_kcup",
+      "date": "2026-08-18",
+      "league": "KeSPA Cup 决赛（BO5）",
+      "teams": [
+        "DNS",
+        "NS"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "957(890001)",
+        "LCK_CL(SOOP)"
+      ],
+      "result_inferred": "DNS 3:0 NS（官方确认，DNS 夺冠）",
+      "danmu_count": 6800,
+      "key_signals": [
+        "G1：DNS 打野 shavel 盲僧天秀（抢龙/单杀/救AD），人头约 39:5，总人头盘大 39.5 全收",
+        "G2：DNS 频繁暂停触发灰信号集中爆发（做局/假赛/回溯冠军），暂停盘玩梗",
+        "G3：NS 上单 Kingen 一抢杰斯被提前判死刑，观众判断与结果一致",
+        "NS 三 FMVP 阵容（Kingen/学弟/莲子）低于预期",
+        "灰信号合计 40+ 条（观众质疑，非结论）",
+        "官方补充：DNS K杯征程 2:0 GEN 全主力、3-0 HLE（二队）、3-1 T1（二队）、决赛 3:0 NS",
+        "官方确认：DNS 3:0 横扫 NS 夺得 KeSPA Cup 2026（egamersworld）"
+      ],
+      "gray_signals_count": 40,
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-18_323444.jsonl",
+        "docs/data/danmu/huya/2026-08-18_890001.jsonl",
+        "docs/data/danmu/soop/2026-08-18_afchall_296450537_full.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_DNS-NS_G1_2026-08-18.html",
+        "reports/intel_danmu_DNS-NS_G2_2026-08-18.html"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-18_gga_bro",
+      "date": "2026-08-18",
+      "league": "LCK CL ROUND 4",
+      "teams": [
+        "GGA",
+        "BRO"
+      ],
+      "streamers": [
+        "LCK_CL(SOOP)",
+        "硕硕(323444)"
+      ],
+      "result_inferred": "BRO 2:1 GGA（G1/G3 BRO、G2 GGA；官方确认：BSportFan 08-18 GGA 1-2 BRO.C，LCK CL ROUND 4）",
+      "danmu_count": 4886,
+      "key_signals": [
+        "GGA（GEN 学院）3胜21败弱队共识，'二队杰斯灾难'",
+        "GEN 二队被放养（无宿舍/教练/在家比赛）",
+        "BRO 奥拉夫/塞恩/卡莎体系被看好，Kemisi 阿卡丽受期待",
+        "G2 GGA 翻盘扳平（女警/卡尔玛体系，BRO 优势不控龙被翻）",
+        "联赛规律：LCK CL 很少 2:0，强队第二局必给一盘（观众观察，待统计验证）",
+        "G2 灰信号集中（瑞兹/狼母被质疑演，观众'给一盘'叙事）",
+        "G3 反复'翻/假翻'，GGA 31 分钟打大龙送团灭落败；盘口 13.5 人头差讨论",
+        "规律验证：本场打满 2:1，'CL 少 2:0'规律首个命中样本",
+        "G2 两路弹幕指 BRO 中单瑞兹+上单故意送（案例 4 高度疑似）",
+        "G3 BRO 63.5c->99.5c 两次经受反扑收下；用户恐慌卖出 BRO + 20U 反手"
+      ],
+      "gray_signals_count": 60,
+      "data_files": [
+        "docs/data/danmu/soop/2026-08-18_afchall_296450537_full.jsonl",
+        "docs/data/danmu/huya/2026-08-18_323444_lckcl.jsonl"
+      ],
+      "reports": [
+        "reports/intel_soop_GGA-BRO_2026-08-18.html",
+        "reports/intel_soop_GGA-BRO_G2_pre_2026-08-18.html"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "reviews": [
+        "knowledge/reviews/2026-08-18_lol-genga-bro1-2026-08-18_genga.md"
+      ]
+    },
+    {
+      "id": "2026-08-19_wbg_lng",
+      "date": "2026-08-19",
+      "league": "LPL 第三赛段组内赛",
+      "teams": [
+        "WBG",
+        "LNG"
+      ],
+      "streamers": [
+        "虎牙官方赛事流(660000)"
+      ],
+      "result_inferred": "WBG 2:1 LNG（官方确认，LNG 六连败收官）——修正：非 2:0",
+      "danmu_count": 6546,
+      "key_signals": [
+        "灰信号 104 条：主线'WBG 不敢赢/杀减号（让分盘）/做任务/庄家指令'（15:37-15:55 密集）",
+        "盘口：小28.5/小25.5/+8.5/48；'减号'让分盘与灰信号共振",
+        "小虎被集中批（360 提及）：'虎大捞比''大招 K 完就送'",
+        "观众'WBG 基本不可能 2:0'判断——若 2:0 兑现则被打脸（待官方确认）",
+        "官方确认：G1 WBG 胜（小虎维克托）、G2 LNG 扳回（sheer 奎桑提）、G3 WBG 胜；观众\"不可能 2:0\"判断部分命中（打到 G3）"
+      ],
+      "gray_signals_count": 104,
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-19_official_660000.jsonl（15:12-16:40 段）"
+      ],
+      "reports": [
+        "reports/intel_danmu_WBG-LNG_2026-08-19.html"
+      ],
+      "pending": "已确认",
+      "reviews": [
+        "knowledge/reviews/2026-08-19_lol-lng-wb-2026-08-19_wbg.md"
+      ]
+    },
+    {
+      "id": "2026-08-19_gen_kt",
+      "date": "2026-08-19",
+      "league": "LCK",
+      "teams": [
+        "GEN",
+        "KT"
+      ],
+      "streamers": [
+        "米勒(149361)",
+        "记得(rememberlol)",
+        "硕硕(323444)",
+        "957(890001)"
+      ],
+      "result_inferred": "GEN 2:1 KT（官方确认，让一追二）",
+      "danmu_count": 4362,
+      "key_signals": [
+        "排名博弈'GEN 演'讨论 10+ 条（GEN 赢=晋级+推 T1；KT 输=第五）",
+        "G1 GEN 1:0（KT 炸弹人中单被批）；G2 GEN 换 Chovy 冰女点控（皇子+冰女+尺子炸弹人）",
+        "Kiin 奥拉夫压制 Perfect 克烈（30-40 刀）；KT ADC'鸡窝'被集中质疑",
+        "场外：T1 宫斗传闻（Faker 与大O 争执）",
+        "官方确认：G1 Kiin 奥拉夫+Ruler 芸阿娜、G2 PerfecT 奎桑提/Jiwoo 伊泽（KT 扳平，弹幕\"1-1\"判断正确）、G3 Ruler 女警翻盘；GEN 锁定传奇组前二，KT 五连败"
+      ],
+      "gray_signals_count": 10,
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-19_mile_149361.jsonl",
+        "docs/data/danmu/huya/2026-08-19_remember_528222.jsonl（16:00-17:15 段）"
+      ],
+      "reports": [
+        "reports/intel_danmu_GEN-KT_2026-08-19.html"
+      ],
+      "pending": "已确认",
+      "reviews": [
+        "knowledge/reviews/2026-08-19_lol-gen-kt-2026-08-19_gen.md"
+      ],
+      "event_slug": "lol-gen-kt-2026-08-19"
+    },
+    {
+      "id": "2026-08-19_tes_al",
+      "date": "2026-08-19",
+      "league": "LPL 登峰大战",
+      "teams": [
+        "TES",
+        "AL"
+      ],
+      "streamers": [
+        "虎牙官方赛事流(660000)",
+        "米勒(149361)",
+        "记得(rememberlol)"
+      ],
+      "result_inferred": "TES 2:1 AL（官方确认）",
+      "danmu_count": 6500,
+      "key_signals": [
+        "决胜局一波定胜负（20:40'翻了'波折 → 20:42-45 TES 拿下）",
+        "TES 打野'玉玉'（小天）全程被集火：'赢的局跟玉玉没关系，输的局永远带崩全队''打野互换滔博早赢了'",
+        "灰信号 49 条：'TES 放水/演'叙事 + 局内异常（AL 巨魔不控龙）——结果 TES 赢，灰信号未兑现为翻盘",
+        "盘口：大26.5（人头盘）；'今天没有一场追二'（LPL 今日观察，AL 追二失败）",
+        "数据缺口：17:32-19:56 三路采集断档（约 2 小时 24 分），G1 中后段-G3 前段弹幕缺失；结论以官方结果+前后两段为准",
+        "官方确认：G1 ZUI 纳尔、G2 Breathe 奎桑提 3/0/7（AL 扳平，POG）、G3 TES 拿下；\"今天没有一场追二\"观察命中（AL 追二失败）"
+      ],
+      "gray_signals_count": 49,
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-19_official_660000.jsonl（17:00 后段）",
+        "docs/data/danmu/huya/2026-08-19_mile_149361.jsonl",
+        "docs/data/danmu/huya/2026-08-19_remember_528222.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_TES-AL_2026-08-19.html"
+      ],
+      "pending": "已确认；G2 弹幕断档待 VOD 回捞补全（可选）",
+      "reviews": [
+        "knowledge/reviews/2026-08-19_lol-al-tes-2026-08-19_tes.md"
+      ]
+    },
+    {
+      "id": "2026-08-19_dns_bro",
+      "date": "2026-08-19",
+      "league": "LCK（LCK CL 二队场次，SOOP carrylck 中文流）",
+      "teams": [
+        "DNS",
+        "BRO"
+      ],
+      "streamers": [
+        "LCK_CL(carrylck 296474407)"
+      ],
+      "result_inferred": "BRO 2:0 DNS（官方确认；LCK Round 3-4 Rise Group，非 CL）",
+      "danmu_count": 20,
+      "key_signals": [
+        "仅捕获 G2 开局 20 条弹幕（20:16-20:49），样本严重不足",
+        "唯一信息点：'史迦納被康爆欸，BRO解題解的真好'——BRO 反制体系被认可",
+        "无灰信号；采集 20:49 中断，后续局未覆盖"
+      ],
+      "gray_signals_count": 0,
+      "data_files": [
+        "docs/data/danmu/soop/2026-08-19_carrylck_296474407.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_DNS-BRO_2026-08-19.html"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "reviews": [
+        "knowledge/reviews/2026-08-19_lol-bro2-dnf-2026-08-19_bro.md"
+      ]
+    },
+    {
+      "id": "2026-08-19_we_edg",
+      "date": "2026-08-19",
+      "league": "LPL",
+      "teams": [
+        "WE",
+        "EDG"
+      ],
+      "streamers": [
+        "虎牙官方赛事流(660000)",
+        "米勒(149361)",
+        "记得(rememberlol)"
+      ],
+      "result_inferred": "EDG 2:0 WE（官方确认）",
+      "danmu_count": 18630,
+      "gray_signals_count": 554,
+      "key_signals": [
+        "EDG 2:0 横扫（弹幕口径）：'赛季首胜''开局就说了必2-0''不会打第三把'",
+        "G1：WE 领先约一万经济被翻（'领先一万不一波'刷屏），EDG 翻盘，MVP 讨论：jiejie（EDG）候选 vs Monki（WE 打野）反讽",
+        "G2：永恩（EDG 侧）后期成型+大龙结束，MVP 给永恩；WE 巨魔/女枪/超雄打野被批",
+        "灰信号 554 条（3.0%，13 词口径：G1 299 + G2 255），全场最高级之一：'打钱/明演/收米/内定/剧本'指向 WE 打野/野辅",
+        "用户交易：G2 灰信号出现时买入 EDG 整场 → 2:0 兑现（案例 5 待官方确认归档）",
+        "规律验证：'今天没有一场追二' 4/4 命中（WE 未追二）；'打满'共识被证伪、'2-0 内定'派命中"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "EDG 胜",
+          "duration_min": 46,
+          "gray_count": 462,
+          "timeline": [
+            "21:35 进入对线",
+            "21:49-21:56 WE 领先被质疑/崩盘窗口",
+            "22:03-22:04 '不一波'刷屏",
+            "22:05-22:06 GG/MVP 讨论（jiejie 候选/Monki 反讽）"
+          ],
+          "turning_points": [
+            "WE 领先一万被翻"
+          ],
+          "abnormal_signals": [
+            "灰信号峰值 21:55-21:56",
+            "EDG 暂停梗 93 条"
+          ]
+        },
+        {
+          "game_no": 2,
+          "result": "EDG 胜",
+          "duration_min": 56,
+          "gray_count": 354,
+          "timeline": [
+            "22:23 BP 落定",
+            "22:30 开局（巨魔/女枪被嘲）",
+            "22:5x 永恩成型",
+            "23:01 大龙团 EDG 拿下",
+            "23:02 结束"
+          ],
+          "turning_points": [
+            "WE 推不了塔，EDG 拖后期永恩成型"
+          ],
+          "abnormal_signals": [
+            "灰信号峰值 23:01（67 条/分）",
+            "内定/剧本/没人查叙事"
+          ]
+        }
+      ],
+      "teams_intel": [
+        {
+          "team": "EDG",
+          "style": "韧性翻盘/永恩体系",
+          "core_players": [
+            "jiejie"
+          ],
+          "trust": "中"
+        },
+        {
+          "team": "WE",
+          "style": "领先守不住/BP 争议",
+          "core_players": [
+            "Monki(超雄)"
+          ],
+          "problems": [
+            "打野稳定性",
+            "G2 BP"
+          ],
+          "trust": "低-中"
+        }
+      ],
+      "players_intel": [
+        {
+          "id": "monki",
+          "nicknames": [
+            "Monki",
+            "MONKI"
+          ],
+          "team": "WE",
+          "role": "打野",
+          "tone": "负",
+          "notes": "WE 打野；'超雄'为弹幕嘲讽（莽/冲动）非外号；灰信号核心对象；G1 'MVP:Monki' 为反讽"
+        },
+        {
+          "id": "jiejie",
+          "nicknames": [
+            "杰杰",
+            "jiejie",
+            "杰出"
+          ],
+          "team": "EDG",
+          "role": "打野",
+          "tone": "正",
+          "notes": "MVP 讨论中心（EDG 打野）"
+        },
+        {
+          "id": "cube",
+          "nicknames": [
+            "cube",
+            "粗老师"
+          ],
+          "team": "WE",
+          "role": "上单",
+          "tone": "负",
+          "notes": "杰斯 pick 被批"
+        },
+        {
+          "id": "leave",
+          "nicknames": [
+            "Leave"
+          ],
+          "team": "EDG",
+          "role": "ADC",
+          "tone": "分歧",
+          "notes": "零散批评"
+        }
+      ],
+      "gray_signals": {
+        "total": 816,
+        "per_game": [
+          {
+            "game_no": 1,
+            "count": 462
+          },
+          {
+            "game_no": 2,
+            "count": 354
+          }
+        ],
+        "correlated_markets": [
+          "整场胜负（EDG）",
+          "2-0 让分叙事"
+        ],
+        "alert_level": "高",
+        "market_implication": "被质疑侧 WE 价格可能失真；反手买入对侧 EDG 兑现（用户案例）",
+        "discipline": "观众质疑，非结论"
+      },
+      "league_patterns": [
+        {
+          "pattern": "LPL 今日没有一场追二",
+          "validation": "命中（4/4，WE 未追二）"
+        }
+      ],
+      "prediction_validation": [
+        {
+          "prediction": "打满 2:1（赛前多数）",
+          "result": "2:0",
+          "hit": false
+        },
+        {
+          "prediction": "2-0 内定/速通（少数）",
+          "result": "2:0",
+          "hit": true
+        },
+        {
+          "prediction": "1:1 要图三（G2 BP 时）",
+          "result": "2:0",
+          "hit": false
+        }
+      ],
+      "odds_discussion": [
+        {
+          "line": "整场胜负",
+          "direction": "EDG",
+          "result": "命中（用户案例）"
+        }
+      ],
+      "implications": [
+        "灰信号连续两局指向同队+结果反向兑现=质疑不反转案例",
+        "EDG 连败终结后状态拐点观察",
+        "WE 打野/BP 稳定性后续观察"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-19_official_660000.jsonl（21:20-23:02 段）",
+          "docs/data/danmu/huya/2026-08-19_mile_149361.jsonl",
+          "docs/data/danmu/huya/2026-08-19_remember_528222.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_WE-EDG_full_2026-08-19.html",
+          "reports/intel_danmu_WE-EDG_G1_2026-08-19.html",
+          "reports/intel_danmu_WE-EDG_G2_2026-08-19.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_WE-EDG_full_2026-08-19.md",
+          "knowledge/intel_pages/intel_danmu_WE-EDG_G1_2026-08-19.md",
+          "knowledge/intel_pages/intel_danmu_WE-EDG_G2_2026-08-19.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "reviews": [
+        "knowledge/reviews/2026-08-19_lol-we-edg-2026-08-19_edg.md"
+      ],
+      "event_slug": "lol-we-edg-2026-08-19"
+    },
+    {
+      "id": "2026-08-19_ewc_astralis_g2",
+      "date": "2026-08-19",
+      "league": "EWC CS2 十六强",
+      "teams": [
+        "Astralis",
+        "G2"
+      ],
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(captainmo)"
+      ],
+      "result_inferred": "G2 2:1 Astralis（官方确认；A 队 Ancient 先胜，G2 Dust2/Inferno 连下两图晋级八强）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "结束信号 00:55-01:00：'A队回家了/蛇鼠兄弟终于回家了'高频 + 主播确认'A队回家了'",
+        "G2 晋级（'G2这阵容比之前强化了，理应晋级'）；此前'A队两图晋级'为预测/玩梗（误判源，已修正）",
+        "G2 新狙 rinkle 有争议但系列赢；A队 phzy 独木难支",
+        "异常：22:17 '真重赛了'（技术事件待核查）；灰信号 0"
+      ],
+      "pending": "已回填（官方确认：G2 2:1）",
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-19_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-19_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_CS-EWC_2026-08-19.html",
+          "reports/intel_danmu_CS-ASTRALIS-G2_2026-08-19.html"
+        ],
+        "pending": [
+          "比赛结束后官方确认",
+          "重赛事件核查"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_CS-EWC_2026-08-19.md",
+          "knowledge/intel_pages/intel_danmu_CS-ASTRALIS-G2_2026-08-19.md"
+        ]
+      }
+    },
+    {
+      "id": "2026-08-19_ewc_magic_fut",
+      "date": "2026-08-19",
+      "league": "EWC CS2 十六强",
+      "teams": [
+        "Magic",
+        "FUT"
+      ],
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(captainmo)"
+      ],
+      "result_inferred": "FUT 2:1 magic（官方确认；magic 图一 Ancient 拿下，FUT 后两图逆转晋级八强）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "结束信号 01:08-01:12：'魔术/阿伟回家了'+GG，01:24 '魔术输了'",
+        "Magic 失利主因：阿伟状态崩塌；FUT 图三强图兑现",
+        "灰信号 0；低置信'开子/挂比'质疑 9 条（非结论）",
+        "Polymarket 快照结算：G1 magic 99.95c、G2 FUT 99.95c、整场 FUT 99.5c（cs2-fut-mgc-2026-08-19）"
+      ],
+      "pending": "已回填（官方确认：FUT 2:1；Polymarket 快照结算一致）",
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-19_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-19_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_CS-EWC_2026-08-19.html",
+          "reports/intel_danmu_CS-MAGIC-FUT_2026-08-19.html"
+        ],
+        "pending": [
+          "比赛结束后官方确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_CS-EWC_2026-08-19.md",
+          "knowledge/intel_pages/intel_danmu_CS-MAGIC-FUT_2026-08-19.md"
+        ]
+      },
+      "reviews": [
+        "knowledge/reviews/2026-08-19_cs2-fut-mgc-2026-08-19_fut.md"
+      ]
+    },
+    {
+      "id": "2026-08-19_ewc_faze_vitality",
+      "date": "2026-08-19",
+      "league": "EWC CS2 十六强",
+      "teams": [
+        "FaZe",
+        "Vitality"
+      ],
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(captainmo)"
+      ],
+      "result_inferred": "Vitality 2:0 FaZe（官方确认；FaZe 淘汰，Vitality 晋级八强）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "下一场：Aurora vs FURIA（黑豹）01:40（直播间标题）",
+        "FaZe vs Vitality 是否已另路开打待确认（00:21-00:25 有'小蜜蜂输了吗'疑问）",
+        "赛前共识 FaZe 图池优势 + 小蜜蜂沙二 25% 被看衰；爆冷日主题",
+        "旁路信号澄清：当晚\"小蜜蜂输了\"对应后续 QF（Vitality 1:2 Team Spirit），非 R16 本场"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-19_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-19_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_CS-EWC_2026-08-19.html"
+        ],
+        "pending": [
+          "比赛进行中"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_CS-EWC_2026-08-19.md"
+        ]
+      },
+      "pending": "已回填（官方确认：Vitality 2:0）"
+    },
+    {
+      "id": "2026-08-19_ewc_mouz_gl",
+      "date": "2026-08-19",
+      "league": "EWC CS2 十六强",
+      "teams": [
+        "MOUZ",
+        "GL"
+      ],
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(captainmo)"
+      ],
+      "result_inferred": "MOUZ 2:1 GamerLegion（官方确认；GL 淘汰，MOUZ 晋级八强）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "系列 1:1 后图三决胜：图一 GL 赢（'老鼠图一也输了'），MOUZ 让一追二",
+        "结束信号 05:29-05:32：'恭喜老鼠🐭'+GG 高频，'K3呼吸snax全部回家'（GL/K3 出局）",
+        "MOUZ 状态共识差但晋级：'换完阵老鼠没以前强了'，新援评价低",
+        "换血叙事：K3（前猎鹰指挥，现 GL）评价两极；小吉米（前 MOUZ，现 Aurora）被批",
+        "灰信号 0"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-19_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-19_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_CS-R2_2026-08-20.html"
+        ],
+        "pending": [
+          "官方结果确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_CS-R2_2026-08-20.md"
+        ]
+      },
+      "pending": "已回填（官方确认：MOUZ 2:1）"
+    },
+    {
+      "id": "2026-08-19_ewc_aurora_furia",
+      "date": "2026-08-19",
+      "league": "EWC CS2 十六强",
+      "teams": [
+        "Aurora",
+        "FURIA"
+      ],
+      "streamers": [
+        "CSBOY官方(123321)",
+        "CSBOY-Mo(captainmo)"
+      ],
+      "result_inferred": "FURIA 2:1 Aurora（官方确认；此前弹幕口径误记欧若拉胜，已按官方修正——FURIA 晋级八强后 QF 再 2:1 胜 G2）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "结束信号 04:39-04:46：'欧若拉啊/肯定是欧若拉'+'黑蛆/黑宝回家了'（FURIA 出局）",
+        "Aurora 赢但状态被批：图一 8:4 大优被翻后仍拿下系列；'欧若拉明显不会 CT'",
+        "FURIA 老将 fallen/教父 发挥（'教父还没老啊'）但独木难支；黑闪被批",
+        "小吉米（Aurora 新援）状态低迷成争议焦点；下轮对手 MOUZ（'欧若拉打老鼠，手刃小吉米'）",
+        "灰信号 0",
+        "【官方修正】FURIA 2:1 Aurora——弹幕\"欧若拉晋级\"口径误读（观众预测当结果），已按官方赛果修正为 FURIA 晋级；FURIA QF 再 2:1 胜 G2"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-19_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-19_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_CS-R2_2026-08-20.html"
+        ],
+        "pending": [
+          "官方结果确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_CS-R2_2026-08-20.md"
+        ]
+      },
+      "pending": "已回填（官方确认：FURIA 2:1 Aurora；误判修正留痕）"
+    },
+    {
+      "id": "2026-08-20_ironwing_tspirit",
+      "date": "2026-08-20",
+      "league": "Dota2 TI2026",
+      "teams": [
+        "Iron Wing",
+        "Team Spirit"
+      ],
+      "streamers": [
+        "TI 官方流(660118)",
+        "超哥 maybeee(211888)"
+      ],
+      "result_inferred": "Team Spirit 2:0 Iron Wing（官方确认；TI2026 胜者组首轮，G1 44 分钟拉锯后横扫，Yatoro 影魔）",
+      "danmu_count": 6634,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "G1（OpenDota 8955197224）：TS 45:34 IW，62:24；德鲁伊 12 神装+偷家结束；IW 卡尔（本泽马）尽力局",
+        "G2：TS 速推压制，Yatoro 影魔教学局（'丫头肉真影魔教学了吧'）；IW 推不了塔、破三路被平推",
+        "BP 兑现：卡尔被 ban（IW 火力塌方）；观众'bp 就赢了''雪碧到淘汰赛不装了'",
+        "IW 败因：末日再选被质疑（'输了的末日怎么还在选啊'）、推塔无力、BP 劣势",
+        "赛后：TS 下轮打 PV；XG 已淘汰（旁路讨论）",
+        "灰信号 0（'故意输了就是吃了'为玩梗）",
+        "官方确认：Spirit 横扫 IW 后晋级胜者组半决赛迎战 VISION；IW 掉败者组"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "TS 胜",
+          "duration_min": 62,
+          "notes": "德鲁伊 12 神装+偷家；IW 卡尔尽力"
+        },
+        {
+          "game_no": 2,
+          "result": "TS 胜",
+          "notes": "影魔速推；IW 破三路；'bp就赢了'"
+        }
+      ],
+      "bp_intel": [
+        {
+          "game_no": 2,
+          "evaluation": "IW 针对性 BP（小精灵克德鲁伊/大屁股）但整体 BP 劣势",
+          "proficiency_doubts": [
+            "IW 卡尔被 ban 后火力塌方"
+          ],
+          "abnormal_picks": [
+            "IW 末日再选被质疑"
+          ],
+          "coach_responsibility": "中",
+          "bp_verdict": {
+            "prediction": "TS 倾向（赛前）",
+            "result": "应验（TS 2:0）"
+          }
+        }
+      ],
+      "teams_intel": [
+        {
+          "team": "Team Spirit",
+          "style": "小组赛装怂/淘汰赛爆发；速推压制+影魔体系",
+          "core_players": [
+            "Yatoro"
+          ],
+          "trust": "中"
+        },
+        {
+          "team": "Iron Wing",
+          "style": "依赖卡尔；推塔无力",
+          "core_players": [
+            "本泽马"
+          ],
+          "problems": [
+            "BP 劣势",
+            "推塔"
+          ],
+          "trust": "低-中"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-20_ti_stage1_660118.jsonl",
+          "docs/data/danmu/huya/2026-08-20_maybeee_211888.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_DOTA-IW-TS_2026-08-20.html"
+        ],
+        "pending": [
+          "官方结果确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_DOTA-IW-TS_2026-08-20.md"
+        ]
+      },
+      "pending": "已回填（官方确认：Spirit 2:0；17173/sportal/rdy.gg 一致）"
+    },
+    {
+      "id": "2026-08-20_bro_krx",
+      "date": "2026-08-20",
+      "league": "LCK CL ROUND 4",
+      "teams": [
+        "BRO",
+        "KRX"
+      ],
+      "streamers": [
+        "SOOP LCK_CL(afchall 296495953)"
+      ],
+      "result_inferred": "KRX 2:1 BRO（G1 KRX、G2 BRO、G3 KRX；用户确认+弹幕多信号共振，官方赛程/VOD 待回补）",
+      "danmu_count": 0,
+      "gray_signals_count": 12,
+      "key_signals": [
+        "G1：KRX 胜（13:31 弹幕信号'BRO 淘汰/KRX 刷屏'；事后'1 セット Rich 卡蜜尔赢'）",
+        "G2：BRO 胜（用户确认）——瑞兹发力+中路差距；KRX Jarvan 送、Rich 犯病",
+        "G3：KRX 2:1 终结——马拉松局（多次远古龙+男爵仍难终结），BRO 多次'该赢'未兑现（'브리온은 항상 유리하다가 지네'）",
+        "G3 转折：LazyFeel 急于终结失误（'远古龙男爵前冲脸死了'），Rich 远古龙团超级操作（'리치 장로전 슈퍼플레이'）",
+        "BRO 画像强化：能拖后期/阵容价值高但无法终结（G1 让4龙/G3 该赢不赢）",
+        "灰信号 0；BRO 为留痕对象本场无假赛质疑",
+        "G3 灰信号：Naafiri 打野被集中指控故意送（不惩戒/让龙/不开大），'져주기하면 프로 안짤림?'；观众质疑非结论，待官方/录像核查",
+        "G3 灰信号 12 条（Naafiri 被指故意送/不惩戒/让龙）与 BRO 输 G3 方向一致；用户确认系列 KRX 2:1"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "KRX 胜",
+          "notes": "Rich 卡蜜尔（15:55 弹幕）；BRO 让 4 龙/奥拉夫死即崩"
+        },
+        {
+          "game_no": 2,
+          "result": "BRO 胜（用户确认）",
+          "notes": "瑞兹发力/中路差距；Rumble 再选被批但 carry"
+        },
+        {
+          "game_no": 3,
+          "result": "KRX 胜",
+          "notes": "马拉松局；BRO 无法终结；Rich 远古龙超级操作"
+        }
+      ],
+      "bp_intel": [
+        {
+          "game_no": 2,
+          "evaluation": "BRO 打架阵容（Nocturne/Ryze/Kalista-Renata/Rumble）执行成功",
+          "proficiency_doubts": [
+            "Rumble 再选被批（开局 carry 打脸）"
+          ],
+          "abnormal_picks": [],
+          "coach_responsibility": "低",
+          "bp_verdict": {
+            "prediction": "BRO 打架阵能否执行存疑",
+            "result": "部分应验（BRO 赢 G2）"
+          }
+        }
+      ],
+      "teams_intel": [
+        {
+          "team": "BRO",
+          "style": "后期阵容/打架阵，但无法终结",
+          "core_players": [
+            "瑞兹(Ryze)",
+            "Rumble(따혁)",
+            "LazyFeel"
+          ],
+          "problems": [
+            "终结能力",
+            "G1 打野/Deny"
+          ],
+          "trust": "低-中"
+        },
+        {
+          "team": "KRX",
+          "style": "前期强/靠上下路，Rich 关键局爆发",
+          "core_players": [
+            "Rich(K'Sante/卡蜜尔)"
+          ],
+          "problems": [
+            "Rich 波动大",
+            "无前排"
+          ],
+          "trust": "中"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/soop/2026-08-20_afchall_296495953.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_LCKCL_BRO-KRX_2026-08-20.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_LCKCL_BRO-KRX_2026-08-20.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-20_hle_dk",
+      "date": "2026-08-20",
+      "league": "LCK",
+      "teams": [
+        "HLE",
+        "DK"
+      ],
+      "streamers": [
+        "毛毛(149346)",
+        "硕硕(323444)",
+        "957(890001)",
+        "米勒(149361)"
+      ],
+      "result_inferred": "HLE 2:0 DK（官方确认；G1/G2 HLE 赢，整场 HLE 99.95c）",
+      "danmu_count": 11585,
+      "gray_signals_count": 54,
+      "key_signals": [
+        "G1 HLE 翻盘：Delight 牛头 MVP（多次开 DK 核心芸阿娜）；'DK 必赢'共识被打脸",
+        "G2 HLE 再胜：DK 选杰斯被集体判负（'下班杰斯''杰斯一出就输了''杰斯这几天全输了'）→ 应验",
+        "DK 问题：送麻了/失误多/掉点（'DK 经典，第一局优势被翻，第二局直接拉到底'）",
+        "排名影响：DK 输后要和 KT 抢名额，T1 全赢第二（场外博弈）",
+        "盘口：'减六点五拿下了舒服了'（让分 -6.5 兑现）；G1 出现过 +8.5 讨论",
+        "灰信号类 4 条：'假赛之王 DK''韩华真的太假了'等——无共识，低",
+        "G1 DK 48.5c->98.5c 峰值->0.5c 归零（HLE 16:34 翻盘）",
+        "用户 G1 买 DK 100U @~63c 浮盈 55% 未止盈全亏=高位未止盈反样本",
+        "灰信号 54 条强关键词（假赛/剧本/演员/诱盘）指向 DK 演/送，G1 翻盘段+G2 段集中",
+        "用户本场合计 -160U：G1 DK 100U @~63c 浮盈 55% 未止盈归零 + G2 整局 DK 60U @~20-25c 追损归零（连亏加注反样本）"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "HLE 胜",
+          "notes": "翻盘；Delight 牛头 MVP；芸阿娜被秒即崩"
+        },
+        {
+          "game_no": 2,
+          "result": "HLE 胜",
+          "notes": "DK 杰斯判负应验；DK 送麻"
+        }
+      ],
+      "players_intel": [
+        {
+          "id": "delight",
+          "nicknames": [
+            "大胖",
+            "迪莱特"
+          ],
+          "team": "HLE",
+          "role": "辅助",
+          "tone": "极正",
+          "notes": "牛头 MVP，多次开 DK 核心"
+        },
+        {
+          "id": "zeus",
+          "nicknames": [
+            "宙斯",
+            "小神王"
+          ],
+          "team": "HLE",
+          "role": "上单",
+          "tone": "正",
+          "notes": "青钢影/上野 carry，'世一上'"
+        },
+        {
+          "id": "guma",
+          "nicknames": [
+            "姑妈",
+            "鸡蛋",
+            "Guma"
+          ],
+          "team": "DK",
+          "role": "ADC",
+          "tone": "负",
+          "notes": "炸弹人被反复单杀（赛季第76次线杀梗）；G1 躺赢论破灭"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-20_maomao_149346.jsonl",
+          "docs/data/danmu/huya/2026-08-20_shuoshuo_323444.jsonl",
+          "docs/data/danmu/huya/2026-08-20_we957_890001.jsonl",
+          "docs/data/danmu/huya/2026-08-20_mile_149361.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_HLE-DK_2026-08-20.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_HLE-DK_2026-08-20.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "bp_intel": [
+        {
+          "game_no": 1,
+          "evaluation": "HLE 强开链 vs DK 单核芸阿娜",
+          "proficiency_doubts": [],
+          "abnormal_picks": [],
+          "coach_responsibility": "低",
+          "bp_verdict": {
+            "prediction": "HLE 开团优势",
+            "result": "应验"
+          }
+        },
+        {
+          "game_no": 2,
+          "evaluation": "DK 选杰斯被集体判负",
+          "proficiency_doubts": [
+            "杰斯几天全输"
+          ],
+          "abnormal_picks": [
+            "DK 杰斯"
+          ],
+          "coach_responsibility": "中",
+          "bp_verdict": {
+            "prediction": "DK 杰斯=判负",
+            "result": "应验（DK 输 G2）"
+          }
+        }
+      ],
+      "teams_intel": [
+        {
+          "team": "HLE",
+          "style": "强开/翻盘/领先爱浪",
+          "core_players": [
+            "Delight",
+            "Zeus",
+            "Zeka"
+          ],
+          "trust": "中"
+        },
+        {
+          "team": "DK",
+          "style": "送/掉点/杰斯体系输",
+          "core_players": [
+            "Guma"
+          ],
+          "problems": [
+            "上单",
+            "稳定性",
+            "杰斯体系"
+          ],
+          "trust": "中"
+        }
+      ],
+      "reports": [
+        "reports/intel_danmu_dk_hle_2026-08-20.html"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-20_lol-dk-hle1-2026-08-20_dk.md"
+      ],
+      "event_slug": "lol-dk-hle1-2026-08-20"
+    },
+    {
+      "id": "2026-08-20_ns_krx",
+      "date": "2026-08-20",
+      "league": "LCK（资格相关）",
+      "teams": [
+        "NS",
+        "KRX"
+      ],
+      "streamers": [
+        "硕硕(323444) 等四路"
+      ],
+      "result_inferred": "NS 2:0 KRX（官方确认；G1 Scout 瑞兹兜底、G2 Scout 加里奥，Kingen 克烈；KRX 输后无缘 Play-In 竞争，NS 第九胜）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "G1 NS 胜：'KINGEN 都在秀''这 KRX 连农心都打不过'；KRX 上单 RIC 0-6-1 狼母",
+        "NS 赢法：大菠萝（Diable，NS ADC）卢锡安滑脸送多次但队伍中期稳住；观众'农心会送'刷屏（玩梗）",
+        "英雄：安妮(41)/瞎子盲僧(101)/克烈(28)/奥拉夫(27)/瑞兹(11) 讨论",
+        "资格含义：Aiming（KRX ADC）赢了才能在骑士之路碰 BDD（KRX 输 G1 后压力大）",
+        "灰信号：无实质（'送/开送'为观众对 NS 风格玩梗）；NS 为留痕对象继续盯",
+        "G2 NS 再胜 → NS 2:0（'感觉要2-0了呢''相信农心''结束'）；KRX 输后进季后赛悬念（'KRX这把输了就进不了季后赛了吗'）",
+        "'鸡窝等着干 NS'（下轮对手）；'农心终结比赛能力不行'（赛后批评）",
+        "官方确认：G1 Scout 瑞兹 1换4 终结、G2 Scout 加里奥逼退 KRX 拆基地；KRX 阵容 Frog/Willer/Ucal/Aiming/Andil"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "NS 胜",
+          "notes": "Kingen 剑魔秀；RIC 0-6-1；大菠萝送但赢"
+        },
+        {
+          "game_no": 2,
+          "result": "NS 胜",
+          "notes": "'感觉要2-0了''相信农心'；大根/大菠萝持续被批"
+        }
+      ],
+      "players_intel": [
+        {
+          "id": "daboluo",
+          "team": "NS",
+          "role": "ADC",
+          "tone": "负",
+          "notes": "大菠萝= Diable；卢锡安送/出辅助装被批"
+        },
+        {
+          "id": "aiming",
+          "team": "KRX",
+          "role": "ADC",
+          "tone": "正偏质疑",
+          "notes": "Aiming 是 KRX ADC（用户纠正）"
+        },
+        {
+          "id": "kingen",
+          "team": "NS",
+          "role": "上单",
+          "tone": "正",
+          "notes": "22 年剑魔本体，G1 胜利关键"
+        },
+        {
+          "id": "krx_ric",
+          "team": "KRX",
+          "role": "上单",
+          "tone": "负",
+          "notes": "0-6-1 狼母"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-20_shuoshuo_323444.jsonl 等四路"
+        ],
+        "reports": [
+          "reports/intel_danmu_NS-KRX_2026-08-20.html"
+        ],
+        "pending": [
+          "官方确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_NS-KRX_2026-08-20.md"
+        ]
+      },
+      "pending": "已回填（官方确认：NS 2:0，直播吧/虎扑一致）",
+      "predictions": []
+    },
+    {
+      "id": "2026-08-20_tt_jdg",
+      "date": "2026-08-20",
+      "league": "LPL",
+      "teams": [
+        "TT",
+        "JDG"
+      ],
+      "streamers": [
+        "米勒/硕硕/957/毛毛 四路"
+      ],
+      "result_inferred": "JDG 2:1 TT（官方确认；G1 TT Junhao 潘森/Feather 钩爆，G2 JDG HongQ 阿卡丽，G3 JDG GALA 卡莎+V 神妮蔻 让一追二）",
+      "danmu_count": 0,
+      "gray_signals_count": 5,
+      "key_signals": [
+        "G1 TT 胜 → G2 JDG 胜 → G3 JDG 胜（'京东赢了'）；TT 完整兑现'只赢第一把/第三把直接送'老剧本",
+        "TT 规律升级灰信号：'TT 真就是假赛狗，次次第一把赢第二把惜败第三把直接送''TT 第三把永远直接送'（观众质疑，非结论）",
+        "排名影响：TT 输 → WE 稳季后赛/前六；JDG 赢 → 大概率第四",
+        "G1 曾出现 +8.5 让分讨论",
+        "官方确认：G1 TT、G2/G3 JDG（让一追二）；G3 GALA 卡莎 + V 神妮蔻 一波推平"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "TT 胜",
+          "notes": "'只赢第一把'开局"
+        },
+        {
+          "game_no": 2,
+          "result": "JDG 胜"
+        },
+        {
+          "game_no": 3,
+          "result": "JDG 胜",
+          "notes": "TT 第三把直接送（观众口径）"
+        }
+      ],
+      "teams_intel": [
+        {
+          "team": "TT",
+          "style": "只赢第一把/第三把崩（跨场规律）",
+          "trust": "低-中"
+        },
+        {
+          "team": "JDG",
+          "style": "拖后期/排名战",
+          "trust": "中"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-20_*（四路）"
+        ],
+        "reports": [
+          "reports/intel_danmu_TT-JDG_2026-08-20.html"
+        ],
+        "pending": [
+          "官方确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_TT-JDG_2026-08-20.md"
+        ]
+      },
+      "pending": "已回填（官方确认：JDG 2:1，直播吧战报一致）",
+      "event_slug": "lol-jdg-tt-2026-08-20"
+    },
+    {
+      "id": "2026-08-20_navi_juhua",
+      "date": "2026-08-20",
+      "league": "EWC CS2",
+      "teams": [
+        "NAVI",
+        "Legacy"
+      ],
+      "streamers": [
+        "CSBOY官方(123321)",
+        "Mo二路(captainmo)"
+      ],
+      "result_inferred": "Legacy（菊花）2:0 NAVI（官方确认；图一 Inferno、图二 Ancient 13-2 碾压；NAVI 9-16 出局）",
+      "danmu_count": 0,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "菊花胜 NAVI：'菊花炸 navi''被菊花暴打''全世界都知道 NAVI 变强了只有菊花不知道'",
+        "小镇(Inferno)是菊花强图/自选图（'菊花小镇强的啊''菊花选的地图他赢'）",
+        "菊花'拿赛点故意保枪'被吐槽（战术，非灰信号）；'不会防守/守了一分'",
+        "NAVI 问题：火力/换人（'换人换到现在就换了个 jL'）、狙击手'魔咒'叙事、依赖发哥/王德发单点",
+        "后续：猎鹰 vs 菊花复仇线；今日冷门日（NAVI/蜜蜂/绿龙输）",
+        "官方确认：菊花=Legacy（巴西队，n1ssim/dumau 图二合砍 41 杀，13-2 碾压）；图一 Inferno"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-20_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-20_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_NAVI-JUHUA_2026-08-20.html"
+        ],
+        "pending": [
+          "队名/比分/官方确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_NAVI-JUHUA_2026-08-20.md"
+        ]
+      },
+      "pending": "已回填（官方确认：Legacy 2:0；5eplay/虎扑/17173 一致）"
+    },
+    {
+      "id": "2026-08-20_lgd_blg",
+      "date": "2026-08-20",
+      "league": "LPL Group Ascend",
+      "teams": [
+        "LGD",
+        "BLG"
+      ],
+      "result_inferred": "BLG 2:1 LGD（G1 LGD、G2/G3 BLG；整场 BLG 99.95c）",
+      "danmu_count": null,
+      "gray_signals_count": null,
+      "key_signals": [
+        "G1 LGD 48c->71.5c->18.5c 掉点->100c 反转",
+        "用户 G1 LGD 赢 30U @76c 赚 10U + LGD +1.5 均50 x80 深水扛住",
+        "G2 用户 29c 买/35c 追/49c 全卖 170+ 份，卖出后崩回 7.5c=阶段高点止盈",
+        "G3 BLG 22:20-22:26 锁定（整场 LGD 15.5c->4.5c）"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-lgd-blg-2026-08-20/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-20_lol-lgd-blg-2026-08-20_lgd.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "event_slug": "lol"
+    },
+    {
+      "id": "2026-08-20_ns_drx",
+      "date": "2026-08-20",
+      "league": "LCK Round 3-4 Rise Group",
+      "teams": [
+        "NS",
+        "DRX"
+      ],
+      "result_inferred": "NS 2:0 DRX（官方确认；整场 NS 99.95c）",
+      "danmu_count": null,
+      "gray_signals_count": null,
+      "key_signals": [
+        "G1 NS 49c->99.9c：用户小仓买 NS 赚 60U 全利出",
+        "G2 NS 51.5c 开局落后->44c->36.5c 深水->99.5c：用户赛前 200+U @~51-52c，44c 止损全卖保本（卖飞涨幅），止损执行正样本"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-ns-drx-2026-08-20/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-20_lol-ns-drx-2026-08-20_ns.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "event_slug": "lol-ns-drx-2026-08-20"
+    },
+    {
+      "id": "2026-08-20_g2_furia",
+      "date": "2026-08-20",
+      "league": "EWC CS2 Playoffs",
+      "teams": [
+        "G2",
+        "FURIA"
+      ],
+      "result_inferred": "FURIA 2:1 G2（官方确认；图一 FURIA、图二 G2、图三 FURIA；Over 2.5 打满结算）",
+      "danmu_count": null,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "图二 G2 9-3->12-3 大优赢（1:1）",
+        "图三 G2 42.5c 一路阴跌到 6c->0.05c，FURIA 收下",
+        "用户 Over 2.5 @97c 拿到 + G2 整场 720+ 份均价 28c 归零 -200U（近因外推+补仓陷阱反样本）"
+      ],
+      "data_files": [
+        "docs/data/snapshots/cs2-g2-furia-2026-08-20/",
+        "runtime/observe_cs2-g2-furia-2026-08-20.jsonl"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-20_cs2-g2-furia-2026-08-20_furia.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "event_slug": "cs2-g2-furia-2026-08-20"
+    },
+    {
+      "id": "2026-08-21_bro_bfx",
+      "date": "2026-08-21",
+      "league": "LCK Round 3-4 Rise Group",
+      "teams": [
+        "BRO",
+        "BFX"
+      ],
+      "streamers": [
+        "硕硕(323444)"
+      ],
+      "result_inferred": "BFX 2:1 BRO（G1 BFX、G2 BRO、G3 BFX；官方已确认：Polymarket 结算一致）",
+      "danmu_count": 2356,
+      "gray_signals_count": 47,
+      "key_signals": [
+        "开局 2 分钟灰信号爆发（41%）：奥拉夫'买了/假赛/收钱/保KDA'",
+        "BRO 留痕对象再犯升级观察",
+        "选手 ID 待官方",
+        "BFX 2:1；G1 奥拉夫灰信号质疑方向兑现（BRO 输 G1）；BFX 侧也有双向质疑；盘口 BFX 1.7 独赢兑现",
+        "G1 BRO 28.5c->87.5c 大优被 BFX 翻盘",
+        "G2 BRO 13.5c 深水->99.5c：用户卖 BFX 抄底 BRO 小赚 30+U（纠错正样本）",
+        "G3 用户全仓 BRO @~42c 归零 -220U（全仓+近因外推反样本），两场合计 -190U"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-21_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_BRO-BFX_2026-08-21.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_BRO-BFX_2026-08-21.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "games": [
+        {
+          "game_no": 1,
+          "result": "BFX 胜",
+          "notes": "BRO 奥拉夫灰信号爆发（47 条/41%），BRO 负"
+        },
+        {
+          "game_no": 2,
+          "result": "BRO 胜",
+          "notes": "BRO 翻盘，系列 1:1"
+        },
+        {
+          "game_no": 3,
+          "result": "BFX 胜",
+          "notes": "'下班了/本来2-0'，BFX 拿下"
+        }
+      ],
+      "predictions": [],
+      "event_slug": "lol-bro2-fox1-2026-08-21",
+      "data_files": [
+        "docs/data/snapshots/lol-bro2-fox1-2026-08-21/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-21_lol-bro2-fox1-2026-08-21_bro.md"
+      ]
+    },
+    {
+      "id": "2026-08-21_we_al",
+      "date": "2026-08-21",
+      "league": "LPL",
+      "teams": [
+        "WE",
+        "AL"
+      ],
+      "streamers": [
+        "官方流(660000)",
+        "957(890001)"
+      ],
+      "result_inferred": "WE 2:1 AL（G1 AL、G2 WE、G3 WE 让一追二；官方已确认：Polymarket 结算 + 官方战报一致）",
+      "danmu_count": 9000,
+      "gray_signals_count": 45,
+      "key_signals": [
+        "WE 2:1 让一追二（G1 AL、G2 WE、G3 WE）；About（WE AD）G3 卢锡安三杀收官",
+        "Monki（超雄）灰信号再犯（昨日 WE-EDG 816 条主角），但\"WE 送\"方向未兑现（WE 赢系列）",
+        "塔赞（AL 打野）G1 被批送（AL 仍赢）、G3 被批不控龙/送（AL 输）",
+        "AL -1.5 盘口讨论 -> 未兑现；WE\"劫富济贫/经典剧本\"规律再添样本"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-21_official_660000.jsonl",
+          "docs/data/danmu/huya/2026-08-21_we957_890001.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_WE-AL_2026-08-21.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_WE-AL_2026-08-21.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "games": [
+        {
+          "game_no": 1,
+          "result": "AL 胜",
+          "notes": "AL 赢首局（Shanks 瑞兹三杀 33 分钟）；WE Monki 灰信号贯穿、WE 输（质疑方向 G1 兑现）"
+        },
+        {
+          "game_no": 2,
+          "result": "WE 胜",
+          "notes": "WE 13.5c 天崩逆转扳回一城（Tarzan 连续阵亡）"
+        },
+        {
+          "game_no": 3,
+          "result": "WE 胜",
+          "notes": "WE 后期接管（About 卢锡安三杀/电龙魂）；Monki \"WE 送\"方向整体未兑现；AL -1.5 未兑现"
+        }
+      ],
+      "correction_note": "2026-08-22 局次修正：初版写 G1 WE/G2 AL，实际 G1 AL/G2 WE/G3 WE（Polymarket 结算 + 官方战报一致）",
+      "reviews": [
+        "knowledge/reviews/2026-08-21_lol-we-al-2026-08-21_we.md"
+      ],
+      "event_slug": "lol-al-we-2026-08-21"
+    },
+    {
+      "id": "2026-08-21_t1_kt",
+      "date": "2026-08-21",
+      "league": "LCK Round 3-4 Legend Group",
+      "teams": [
+        "T1",
+        "KT"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "957(890001)"
+      ],
+      "result_inferred": "T1 2:1 KT（G1 KT、G2/G3 T1；官方已确认：Polymarket 结算 + 直播吧/KMIB 一致）",
+      "danmu_count": 15399,
+      "gray_signals_count": 86,
+      "key_signals": [
+        "T1 2:1 KT（让一追二）：G1 KT 胜（BDD 瑞兹偷家）、G2 T1 胜（Peyz 岩雀 9-0 翻盘）、G3 T1 胜（Faker 冰鸟+Peyz 女警后期接管，KT Perfect 鳄鱼优势被翻）",
+        "G1：多兰武器 0-3-0 / 大O 皇子 0-7；'死一次基地爆炸'两路 30 条共振；'T1 上中野最菜'",
+        "G2：KT 一度领先（'kt2-0很稳'落空）；Peyz 岩雀 9-0 + Keria 游走翻盘；Oner 20:48-20:52 定向灰信号（演/收钱/假赛）方向未兑现",
+        "G3：21:24 峰值 298 条/分（多兰格温被鳄鱼压/送）；后期女警/冰鸟接管（'已经结束了 女警无敌了'）；KT 侧灰信号弱兑现（'鳄鱼收钱了，最强的两波他去送了'，KT 输）",
+        "灰信号合计：G1 实质 3-5（低）、G2 两路约 40（低-中，Oner 定向未兑现）、G3 两路约 41（中，KT 侧弱兑现）；新增实体 Oner（T1 打野）、Perfect（KT 上单）",
+        "排名影响：T1 终结三连败；DK 因 T1 赢进季后赛（'赢了dk进了'）；KT 掉入围赛（'KT输了就打入围赛了'）",
+        "规律候选：'Peyz 死一次基地爆炸'（G1 应验、G2/G3 未触发=没死）；'资源倾斜多兰=无效'（G2 VN 7.6k / G3 格温送）；KT '纯不敢赢/充电宝'（G2/G3 领先被翻）",
+        "G1 KT 40.5c->19.5c 深水->99.5c 反转（BDD 瑞兹偷家）",
+        "G2 T1 47c->99.2c 强势收下（KT 两次反抽失败）",
+        "G3 T1 后期接管（Faker 冰鸟 7-0 战绩情报应验 + Peyz 女警）；T1 2:1 让一追二",
+        "整场 T1 33.5c(G1 后)->99.95c；O/U 2.5 打满；T1 -1.5 未兑现"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "KT 胜",
+          "notes": "BDD 瑞兹偷家；Peyz 死一次基地爆炸；多兰 0-3-0"
+        },
+        {
+          "game_no": 2,
+          "result": "T1 胜",
+          "notes": "Peyz 岩雀 9-0；KT 领先被翻；Oner 灰信号未兑现"
+        },
+        {
+          "game_no": 3,
+          "result": "T1 胜",
+          "notes": "Faker 冰鸟+Peyz 女警后期接管；KT Perfect 鳄鱼优势送；KT 侧灰信号弱兑现"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-21_shuoshuo_323444.jsonl",
+          "docs/data/danmu/huya/2026-08-21_we957_890001.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_T1-KT_2026-08-21.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_T1-KT_2026-08-21.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "reviews": [
+        "knowledge/reviews/2026-08-21_lol-kt-t1-2026-08-21_kt_t1.md"
+      ],
+      "predictions": [
+        {
+          "text": "kt2比0结束",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（19:20，赛前） G1 兑现；G2 领先期\"稳稳2-0\"复现但被翻 G1"
+        },
+        {
+          "text": "KT 有机会是 3.8 倍水",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（19:48） G1 KT 3.8x 翻盘兑现"
+        },
+        {
+          "text": "我说白了这把T1赢不了",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（19:41） G1 KT 胜 G1"
+        },
+        {
+          "text": "史上最毫无悬念的让一追二",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（20:36–20:54） G2/G3 T1 连胜，系列 2:1 兑现"
+        }
+      ],
+      "event_slug": "lol-kt-t1-2026-08-21",
+      "data_files": [
+        "docs/data/snapshots/lol-kt-t1-2026-08-21/"
+      ]
+    },
+    {
+      "id": "2026-08-21_sk_th",
+      "date": "2026-08-21",
+      "league": "LEC",
+      "teams": [
+        "SK",
+        "TH"
+      ],
+      "streamers": [
+        "硕硕(323444)"
+      ],
+      "result_inferred": "TH 2:0 SK（G1/G2 TH 胜；官方已确认：Polymarket 结算 + 官方赛果一致）",
+      "danmu_count": 1237,
+      "gray_signals_count": 83,
+      "key_signals": [
+        "TH 2:0 横扫：G1 TH 后期翻盘（SK 开局 3-0/5-1 领先被翻）、G2 TH 剑魔+炼金龙魂 23 分钟速通（'恭喜th'00:19/'速通局'00:25）",
+        "两局灰信号 83 条均指向 SK（输家）：G1 29 条（狗熊明演/左边收钱/到点就送/大优势水位不动）、G2 54 条（皇子明着演/wunder演员/纯假赛/都买了对面赢）——被质疑方两局均输，方向连续兑现",
+        "BP 后战绩情报全应验：G1 潘森胜率低/Wunder 纳尔；G2 SK 永恩负锚点（'没有纳尔直接输一半'）+ TH 剑魔正锚点",
+        "误判修正（2026-08-22）：G1 曾误判 SK 胜，根因=把灰话'sk赚了/吃一局/水位不动'当胜负信号；已按用户确认修正为 TH 2:0",
+        "TH '放龙剧本'为 TH 上周边延续（观众口径）；'LPL今天7场AD击杀总和小9.5，6场吃满'作跨联赛盘口观察"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "TH 胜",
+          "notes": "SK 开局 3-0 领先被翻；'sk赚了'为灰话；灰信号指向 SK"
+        },
+        {
+          "game_no": 2,
+          "result": "TH 胜",
+          "notes": "SK 团战阵放龙被速通；灰信号 54 条指向 SK"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-21_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_SK-TH_2026-08-21.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_SK-TH_2026-08-21.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "correction_note": "2026-08-22 误判修正：G1 原判 SK 胜，实际 TH 胜；原因=盘口灰话当胜负信号（灰话禁用词已入 CAPTURE_RULES 12.7）",
+      "reviews": [
+        "knowledge/reviews/2026-08-21_lol-th-sk-2026-08-21_th.md"
+      ],
+      "predictions": [
+        {
+          "text": "sk包翻",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（23:33:21） SK 两局均输（未翻） 未兑现 \"右边后期不知道怎么输\"（23:27:15） TH（右边）后期强度 G1 兑现"
+        },
+        {
+          "text": "要2-0了/2-0结束了/2-0了",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（23:59–00:02） TH 2:0 横扫"
+        },
+        {
+          "text": "感觉1-1呢/还在1-1",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（00:01） 无 G3，1:1 未发生 未兑现 \"SK会玩个锤子的永恩\"（00:01:25，负锚点） SK 永恩输 G2（\"没有纳尔直接输一半\"）"
+        },
+        {
+          "text": "招牌剑魔 放了就知道输了",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（00:24:31，正锚点） TH 剑魔+炼金龙魂拿下"
+        }
+      ],
+      "event_slug": "lol-th-sk-2026-08-21"
+    },
+    {
+      "id": "2026-08-21_edg_tt",
+      "date": "2026-08-21",
+      "league": "LPL",
+      "teams": [
+        "EDG",
+        "TT"
+      ],
+      "streamers": [],
+      "result_inferred": "EDG 2:0 TT（G1/G2 EDG；官方已确认：Polymarket 结算 + 官方战报一致）",
+      "danmu_count": null,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "EDG 2:0 横扫 TT（第三赛段常规赛两连胜收官）",
+        "G1 拉锯三波后 EDG 翻盘（keshi 兰博致命掉点成转折）；G2 龙魂团 EDG 团灭 TT",
+        "MVP：BuLLDoG（双 C 兜底）",
+        "数据缺口：本场 15:00 开赛，早于当日弹幕会话启动，无弹幕；价格+官方双源确认"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "EDG 胜",
+          "notes": "拉锯三波（EDG 28.5c-80.5c）后翻盘锁定"
+        },
+        {
+          "game_no": 2,
+          "result": "EDG 胜",
+          "notes": "一路碾压（52.5c->100c），龙魂团团灭 TT"
+        }
+      ],
+      "data": {
+        "files": [],
+        "reports": [],
+        "pending": []
+      },
+      "reviews": [
+        "knowledge/reviews/2026-08-21_lol-edg-tt-2026-08-21_edg.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "event_slug": "lol-edg-tt-2026-08-21"
+    },
+    {
+      "id": "2026-08-21_tes_blg",
+      "date": "2026-08-21",
+      "league": "LPL",
+      "teams": [
+        "TES",
+        "BLG"
+      ],
+      "streamers": [
+        "官方流(660000)"
+      ],
+      "result_inferred": "BLG 2:0 TES（G1/G2 BLG；官方已确认：Polymarket 结算 + 官方战报一致）",
+      "danmu_count": 3972,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "BLG 零封 TES（G1 翻盘、G2 回撤 47c 后再锁定 99.5c）",
+        "Bin 回归首秀（\"世一上 bin\"正面声量）+ 左手（knight）配合被反复点名",
+        "TES 两局优势/反超窗口全部崩掉（G2 TES 53c 反抽失败）；小天丝血送人头被调侃（叙事非灰信号）",
+        "弹幕提及量：TES 566 / BLG 823（官方流）"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "BLG 胜",
+          "notes": "TES 开局略优（54.5c）-> BLG 翻盘 100c"
+        },
+        {
+          "game_no": 2,
+          "result": "BLG 胜",
+          "notes": "BLG 回撤 47c 未破位后锁定 99.5c；TES 反抽失败归零"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-21_official_660000.jsonl"
+        ],
+        "reports": [],
+        "pending": []
+      },
+      "reviews": [
+        "knowledge/reviews/2026-08-21_lol-tes-blg-2026-08-21_blg.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "event_slug": "lol-tes-blg-2026-08-21"
+    },
+    {
+      "id": "2026-08-22_we_lgd",
+      "date": "2026-08-22",
+      "league": "LPL",
+      "teams": [
+        "WE",
+        "LGD"
+      ],
+      "streamers": [
+        "官方流(660000)",
+        "957(890001)"
+      ],
+      "result_inferred": "LGD 2:1 WE（官方确认；让一追二，LGD 晋级季后赛；Tangyuan 中野差距）",
+      "danmu_count": 3000,
+      "gray_signals_count": 20,
+      "key_signals": [
+        "官方确认：LGD 让一追二（G1 WE 翻盘、G2/G3 LGD；Tangyuan 杀疯）",
+        "Monki 灰信号三连（WE 输系列，2/3 兑现）",
+        "盘口：lgd6倍拿下了（冷门兑现）"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "WE 胜",
+          "notes": "弹幕未录制（采集 16:05 恢复），官方标题口径"
+        },
+        {
+          "game_no": 2,
+          "result": "LGD 胜",
+          "notes": "资本告诉你1:1兑现；WE 下路被压"
+        },
+        {
+          "game_no": 3,
+          "result": "LGD 胜",
+          "notes": "21-4 碾压；6倍盘兑现"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-22_official_660000.jsonl",
+          "docs/data/danmu/huya/2026-08-22_we957_890001.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_WE-LGD_2026-08-22.html"
+        ],
+        "pending": [
+          "官方确认",
+          "G1 补录"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_WE-LGD_2026-08-22.md"
+        ]
+      },
+      "pending": "已回填（官方确认）",
+      "predictions": [
+        {
+          "text": "资本告诉你1:1",
+          "time": "16:08",
+          "category": "result",
+          "status": "hit",
+          "note": "LGD 扳平 G2"
+        },
+        {
+          "text": "让一追二",
+          "time": "16:52-55",
+          "category": "result",
+          "status": "hit",
+          "note": "LGD 2:1 完成系列"
+        },
+        {
+          "text": "lgd的比赛每次都打满",
+          "time": "16:43",
+          "category": "result",
+          "status": "hit",
+          "note": "系列打满三局"
+        },
+        {
+          "text": "给我干翻we",
+          "time": "16:5x",
+          "category": "result",
+          "status": "hit",
+          "note": "G3 LGD 21-4 碾压"
+        },
+        {
+          "text": "第三把WE捡钱了",
+          "time": "16:57",
+          "category": "odds",
+          "status": "miss",
+          "note": "G3 WE 侧盘口情绪落空"
+        }
+      ],
+      "event_slug": "lol-we-lgd-2026-08-22"
+    },
+    {
+      "id": "2026-08-22_gen_dk",
+      "date": "2026-08-22",
+      "league": "LCK",
+      "teams": [
+        "GEN",
+        "DK"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "米勒(149361)"
+      ],
+      "result_inferred": "DK 2:1 GEN（官方确认；许哥狐狸游龙三擒 Chovy）",
+      "danmu_count": 2900,
+      "gray_signals_count": 2,
+      "key_signals": [
+        "官方确认：DK 让一追二（G1 GEN、G2/G3 DK）",
+        "GEN 锁第一后收尾乱打（无意义局）",
+        "ShowMaker 正锚点应验"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "GEN 胜",
+          "notes": "Gen先拿一局"
+        },
+        {
+          "game_no": 2,
+          "result": "DK 胜",
+          "notes": "GEN 下路被批；2:0 共识落空"
+        },
+        {
+          "game_no": 3,
+          "result": "DK 胜",
+          "notes": "ShowMaker carry；GEN 锁第一后收尾乱打"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-22_shuoshuo_323444.jsonl",
+          "docs/data/danmu/huya/2026-08-22_mile_149361.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_GEN-DK_2026-08-22.html"
+        ],
+        "pending": [
+          "G3 结果",
+          "官方确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_GEN-DK_2026-08-22.md"
+        ]
+      },
+      "pending": "已回填（官方确认）",
+      "predictions": [
+        {
+          "text": "Gen先拿一局",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（16:5x） G1 GEN 胜"
+        },
+        {
+          "text": "超威2比0带走吧/三星速通2:0",
+          "time": "",
+          "category": "result",
+          "status": "miss",
+          "note": "G2/G3 DK 连胜，2:0"
+        },
+        {
+          "text": "geng大哥放一局吧",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "G2 GEN 输（让局玩梗弱兑现） 弱兑现 \"第三把我就看好三星\"（17:38） G3 DK 胜 未兑现 \"许哥越猛 LPL越有机会\"（18:2x） G3 DK 胜（ShowMak"
+        }
+      ],
+      "event_slug": ""
+    },
+    {
+      "id": "2026-08-22_ig_nip",
+      "date": "2026-08-22",
+      "league": "LPL",
+      "teams": [
+        "IG",
+        "NIP"
+      ],
+      "streamers": [
+        "官方流(660000)"
+      ],
+      "result_inferred": "NIP 2:0 IG（官方确认；NIP 6-0 锁定涅槃组第一，全胜进骑士之路）",
+      "danmu_count": 4000,
+      "gray_signals_count": 15,
+      "key_signals": [
+        "官方确认：NIP 2:0（G1 36 分钟翻盘；hoya 冰鸟封墙、Care 洛克）",
+        "IG 控分叙事（待官方验证动机；方向与 IG 输一致）",
+        "TheShy 奥拉夫/掘墓 + Meiko 巴德负锚点"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "NIP 胜",
+          "notes": "TheShy 奥拉夫负锚点；上单差距"
+        },
+        {
+          "game_no": 2,
+          "result": "NIP 胜",
+          "notes": "TheShy 掘墓/Meiko 巴德负锚点；NIP 波比"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-22_official_660000.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_IG-NIP_2026-08-22.html"
+        ],
+        "pending": [
+          "官方确认",
+          "控分叙事验证"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_IG-NIP_2026-08-22.md"
+        ]
+      },
+      "pending": "已回填（官方确认）",
+      "predictions": [
+        {
+          "text": "IG太热门了",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（赛前） NIP 2:0 横扫"
+        },
+        {
+          "text": "下波团战IG必输",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（18:30） G1 NIP 拿下"
+        },
+        {
+          "text": "2-0没悬念",
+          "time": "",
+          "category": "result",
+          "status": "hit",
+          "note": "（19:20） NIP 2:0 兑现"
+        }
+      ],
+      "event_slug": ""
+    },
+    {
+      "id": "2026-08-22_dns_krx",
+      "date": "2026-08-22",
+      "league": "LCK",
+      "teams": [
+        "DNS",
+        "KRX"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "米勒(149361)"
+      ],
+      "result_inferred": "DNS 2:0 KRX（官方确认；DNS 常规赛收官胜）",
+      "danmu_count": 500,
+      "gray_signals_count": 25,
+      "key_signals": [
+        "官方确认：DNS 2:0（G1 DNS 逆转、G2 完胜）",
+        "DNS K杯冠军后质疑（剧本/低水）→ 质疑方向未兑现（DNS 赢）",
+        "G2 片段：DNS 疑似换打野"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "待确认",
+          "notes": "KRX 翻盘方候选；灰信号高浓度"
+        },
+        {
+          "game_no": 2,
+          "result": "待确认",
+          "notes": "DNS 疑似换打野"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-22_shuoshuo_323444.jsonl",
+          "docs/data/danmu/huya/2026-08-22_mile_149361.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_DNS-KRX_2026-08-22.html"
+        ],
+        "pending": [
+          "系列结果",
+          "G1/G2 详情"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_DNS-KRX_2026-08-22.md"
+        ]
+      },
+      "pending": "已回填（官方确认）",
+      "event_slug": ""
+    },
+    {
+      "id": "2026-08-22_jdg_tes",
+      "date": "2026-08-22",
+      "league": "LPL",
+      "teams": [
+        "JDG",
+        "TES"
+      ],
+      "streamers": [
+        "官方流(660000)",
+        "957(890001)",
+        "硕硕(323444)"
+      ],
+      "result_inferred": "JDG 2:0 TES（官方确认；GALA 烬 MVP；TES 锁定第三/JDG 进前四）",
+      "danmu_count": 800,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "官方确认：JDG 2:0（G1 GALA 烬三杀、G2 34 分钟一波）",
+        "TES 两连败收官（小天/教练 BP 被批）",
+        "灰信号低"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "JDG 胜",
+          "notes": "官方标题口径"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-22_official_660000.jsonl",
+          "docs/data/danmu/huya/2026-08-22_we957_890001.jsonl",
+          "docs/data/danmu/huya/2026-08-22_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_JDG-TES_2026-08-22.html"
+        ],
+        "pending": [
+          "G2/G3 结果",
+          "官方确认"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_JDG-TES_2026-08-22.md"
+        ]
+      },
+      "pending": "已回填（官方确认）",
+      "predictions": [],
+      "event_slug": ""
+    },
+    {
+      "id": "2026-08-22_sk_mkoi",
+      "date": "2026-08-22",
+      "league": "LEC Regular Season",
+      "teams": [
+        "SK",
+        "MKOI"
+      ],
+      "result_inferred": "SK 2:0 MKOI（官方确认；G1/G2 SK 赢，整场 SK 99.5c，Under 2.5）",
+      "danmu_count": null,
+      "gray_signals_count": 45,
+      "key_signals": [
+        "G1 SK 13.5c 深水->99.5c（弹幕\"MKOI 送\"）",
+        "G2 SK 3.5c 深水->99.5c（02:25 一分钟 +63c，MKOI 4 龙优势连续送）",
+        "用户 G1 弹幕情报买 SK 80U 赚约 230U（正样本）；G2 追高 60-70c 放弃=正确"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-sk-mkoi-2026-08-22/",
+        "runtime/observe_lol-sk-mkoi-2026-08-22.jsonl"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-23_lol-sk-mkoi-2026-08-22_g1_sk.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-22_lgc_ts7",
+      "date": "2026-08-22",
+      "league": "EWC CS2 Playoffs",
+      "teams": [
+        "Legacy",
+        "Spirit"
+      ],
+      "result_inferred": "Spirit 2:0 Legacy（官方确认；整场 Spirit 100c，Under 2.5）",
+      "danmu_count": null,
+      "gray_signals_count": null,
+      "key_signals": [
+        "图一 Legacy 54.5c 短暂领先被 Spirit 收下",
+        "图二 Spirit 42c 深水->98c（Legacy 03:35 反超 58c 后 Spirit 03:47 收下）",
+        "用户图二 0.4 买 Spirit->0.65 出大部分赚十几 U（\"0.2-0.4 买落后强队\"样本+1）"
+      ],
+      "data_files": [
+        "docs/data/snapshots/cs2-lgc-ts7-2026-08-22/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-23_cs2-lgc-ts7-2026-08-22_spirit.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-22_fnc_shft",
+      "date": "2026-08-22",
+      "league": "LEC",
+      "teams": [
+        "FNC",
+        "SHFT"
+      ],
+      "streamers": [
+        "硕硕(323444)"
+      ],
+      "result_inferred": "FNC 2:0 SHFT（官方确认；SHFT 0-6 出局，FNC 3-3）",
+      "danmu_count": 1800,
+      "gray_signals_count": 30,
+      "key_signals": [
+        "官方确认：FNC 2:0（SHFT 0-6 季后赛出局；FNC 3-3）",
+        "卡盘/卡时间灰信号（观众口径）：两局均约 33 分钟准时收（'时间一到马上结束'）、8.5 让分卡线讨论（'卡8.5/就吃34'）、G2 FNC -7.5 兑现、AD 击杀小 8.5 输盘（观众实盘 3 万）",
+        "灰话：'做任务/假赛无疑/都设计好的/这个赛区全在打盘口'——高浓度但无官方证据",
+        "G2 SK 场同理：'领先被翻'叙事（另一场，见 sk_mkoi）"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "FNC 胜",
+          "notes": "33 分钟收、12 个头、卡 8.5"
+        },
+        {
+          "game_no": 2,
+          "result": "FNC 胜",
+          "notes": "33 分钟收、30 个头、FNC -7.5 兑现"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-22_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_LEC-晚场_2026-08-22.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_LEC-晚场_2026-08-22.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-18_lckcl_dns_ns",
+      "date": "2026-08-18",
+      "league": "LCK CL ROUND 4",
+      "teams": [
+        "DNS.C",
+        "NS.EA"
+      ],
+      "streamers": [
+        "LCK_CL(SOOP afchall)"
+      ],
+      "result_inferred": "DNS 首局胜（弹幕口径）；系列打满 3 局，完整比分待官方 VOD 回补",
+      "danmu_count": 174,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "G1 尾声观众一致看 DNS 压胜（'组合出来 DNS 就压胜''DNS 大胜'），归因辅助差距 + Enosh 卡莎（11-0 生涯记录）",
+        "NS 负面为主（'NS 还是不行''阵容后期太差'），BP 拿 Rell 配 Jhin 被质疑",
+        "局间出现'第二局 NS 应该轻松赢？第一局是让的'预判——作为 G2 情绪锚点（同日另有 K 杯决赛 DNS vs NS，注意区分两场）",
+        "SOOP 高亮存在 game1/2/3（系列打满 3 局），完整比分待回补"
+      ],
+      "data_files": [
+        "docs/data/danmu/soop/2026-08-18_afchall_296450537_full.jsonl"
+      ],
+      "reports": [
+        "reports/intel_soop_DNS-NS_G1_2026-08-18.html"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-20_bb_pv",
+      "date": "2026-08-20",
+      "league": "The International 2026（胜者组首轮）",
+      "teams": [
+        "BoomBoys",
+        "Team Vision"
+      ],
+      "streamers": [
+        "TI2026舞台一(660118)",
+        "Maybeee111(211888)"
+      ],
+      "result_inferred": "Team Vision 2:1 BoomBoys（官方确认；VISION 晋级胜者组半决赛迎战 Team Spirit，BB 掉入败者组对阵 Iron Wing）",
+      "danmu_count": 40668,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "弹幕焦点：PV 赏金体系（'喜欢放 PV 的赏金''赢了MVP必给酱油'）与 BB 正面处理不了熊拆家（'BB输团赢团都处理不了熊的拆家不可能赢'）",
+        "gpk 焦点、'妖刀'无控阵容 BP 讨论；让分 +1.5 盘口讨论",
+        "官方确认：VISION 2-1 BoomBoys（17173/rdy.gg 一致；BB 掉败者组）"
+      ],
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-20_ti_stage1_660118.jsonl",
+        "docs/data/danmu/huya/2026-08-20_maybeee_211888.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_DOTA-BB-PV_2026-08-20.html"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-23_tt_lgd",
+      "date": "2026-08-23",
+      "league": "LPL 第三赛段组内赛最后一日",
+      "teams": [
+        "TT",
+        "LGD"
+      ],
+      "streamers": [
+        "官方流(660000)",
+        "957(890001)",
+        "硕硕(323444)"
+      ],
+      "result_inferred": "LGD 2:0 TT（三源确认：Polymarket 结算 LGD 1.0 + 直播吧战报横扫收官 + 弹幕；G1 洛克 15-2-6、G2 汤圆瑞兹+Heng 皇子）",
+      "danmu_count": 4333,
+      "gray_signals_count": 34,
+      "key_signals": [
+        "G1 25 分钟大龙团 TT 先杀 LGD 双人，Tangyuan 洛克反手三杀，LGD 2 换 5 团灭+拿大龙，约 15:44 收尾（直播吧战报）",
+        "BP 后战绩情报强应验：'洛克=汤圆绝活/拿就有/放必炸'（跨场 08-22 洛克 11/1/5 POG + 本场 15-2-6）",
+        "TT 教练放洛克+自选杰斯体系被集中批评（'弱队教练只会点外卖'）",
+        "灰信号低实质：演60/送78/打钱63/假赛9/剧本7/卧底9，多为玩梗+暂停梗",
+        "盘口：G2 让 5.5 讨论、大 30.5 人头趋势；Polymarket G2 未 close（LGD 0.575）、Under 2.5 0.575",
+        "教训固化：15:44-45 '拿下'为 G1 收尾，二路切台+流量降 ≠ 系列结束（CAPTURE_RULES 12.13）",
+        "Polymarket 结算确认：G1/G2/BO3 均 LGD 1.0，O/U 2.5 Under 1.0（2-0）"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "LGD 胜",
+          "notes": "官方媒体确认；洛克 15-2-6；25 分钟大龙团反手三杀翻盘；约 15:44 收尾"
+        },
+        {
+          "game_no": 2,
+          "result": "LGD 胜",
+          "notes": "官方口径：汤圆瑞兹+Heng 皇子一骑当千；约 16:44 收尾"
+        }
+      ],
+      "predictions": [
+        {
+          "text": "老干爹速度 2-0 看下一场了",
+          "time": "15:32-34",
+          "category": "result",
+          "status": "pending",
+          "note": "G1 已兑现 LGD 胜；G2 进行中待验证"
+        },
+        {
+          "text": "洛克拿就有/放必炸",
+          "time": "15:13 起",
+          "category": "bp",
+          "status": "hit",
+          "note": "G1 15-2-6 应验"
+        }
+      ],
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-23_official_660000.jsonl",
+        "docs/data/danmu/huya/2026-08-23_we957_890001.jsonl",
+        "docs/data/danmu/huya/2026-08-23_shuoshuo_323444.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_TT-LGD_2026-08-23.html"
+      ],
+      "pending": "已回填（Polymarket 结算 + 直播吧战报）",
+      "event_slug": "lol-tt-lgd-2026-08-23",
+      "updated_at": "2026-08-23T18:10:00+08:00"
+    },
+    {
+      "id": "2026-08-23_t1_hle",
+      "date": "2026-08-23",
+      "league": "LCK 常规赛收官轮（Legend Group，抢二）",
+      "teams": [
+        "T1",
+        "HLE"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "957(890001)"
+      ],
+      "result_inferred": "HLE 2:0 T1（官方双源：G1 直播吧战报 Zeus 杰斯单杀+Peyz 被针对 0 换 4；G2 直播吧 20:27 战报 \"Mid Gap！Zeka 辛德拉+Zeus 凯南无处不在 HLE 仅用 22 分钟横扫 T1\"）",
+      "danmu_count": 170,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "BP 后战绩情报应验：'宙斯的杰斯今年没输过'（16:12:10）→ G1 2:51 对位单杀多兰（直播吧战报）",
+        "G2 Zeus 凯南'神王降临/万雷天牢引'0 换 4，T1 葫芦娃救爷爷崩盘（17:12 密度 453/分）",
+        "T1 单核体系验证：'Peyz 被针对就 G'——G1 EZ 被留 0 换 4；多兰连场负锚点（奎桑提被单杀/格温无用）",
+        "Faker 两局被集火（'大飞抽象/玩得跟僵尸一样'，弹幕情绪非结论）；Oner 打野节奏被批",
+        "排名：HLE 锁传奇组第二/直通第二轮，T1 常规赛第三（弹幕口径，官方待回填）",
+        "赛前'多兰替补'传闻未兑现（首发）——假消息证伪；灰信号 0；未检索到 Polymarket 事件"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "HLE 胜",
+          "notes": "官方战报：Zeus 杰斯单杀多兰；Zeka 蛇女+Kanavi 盲僧团战完美；0 换 4 一波"
+        },
+        {
+          "game_no": 2,
+          "result": "HLE 胜",
+          "notes": "官方战报（直播吧 20:27）：Zeka 辛德拉+Zeus 凯南无处不在，HLE 仅用 22 分钟横扫 T1；T1 上中野崩盘、Peyz 独木难支"
+        }
+      ],
+      "pending": "已回填（官方战报确认）；Polymarket slug 未挂牌（已关闭不追）",
+      "reports": [
+        "reports/intel_danmu_T1-HLE_S0_2026-08-23.html"
+      ],
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-23_shuoshuo_323444.jsonl",
+        "docs/data/danmu/huya/2026-08-23_we957_890001.jsonl"
+      ],
+      "predictions": [
+        {
+          "text": "虎扑预测 HLE 2-0 T1",
+          "time": "赛前",
+          "category": "result",
+          "status": "hit",
+          "note": "系列 2:0（G2 待官方）"
+        },
+        {
+          "text": "宙斯杰斯今年没输过（BP 后战绩情报）",
+          "time": "16:12:10",
+          "category": "bp",
+          "status": "hit",
+          "note": "G1 单杀多兰应验"
+        },
+        {
+          "text": "T1 如果 2:1 赢就是第二",
+          "time": "赛前",
+          "category": "result",
+          "status": "miss",
+          "note": "T1 被 2:0，落第三"
+        }
+      ],
+      "event_slug": null,
+      "updated_at": "2026-08-24T00:22:05+08:00"
+    },
+    {
+      "id": "2026-08-23_edg_jdg",
+      "date": "2026-08-23",
+      "league": "LPL 第三赛段登峰组收官",
+      "teams": [
+        "EDG",
+        "JDG"
+      ],
+      "streamers": [
+        "官方流(660000)"
+      ],
+      "result_inferred": "JDG 2:1 EDG（官方三源确认：直播吧 19:49 战报 \"JDG2-1EDG\" + EDG 官博赛后战报 \"EDG 1:2 JDG\" + 弹幕 \"还是京东赢，京东打满的神\"）",
+      "danmu_count": 8292,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "官方战报：BuLLDoG 洛克被 HongQ 发条开大拉住击杀；小徐贾克斯带队冲 EDG 高地一波推平；Jiejie 蔚被融化",
+        "BP 跨场情报：洛克今日两场两命（LGD 汤圆 15-2-6 vs EDG BuLLDoG 被教育）——使用者决定",
+        "超长暂停（耗时 1 小时+，官方微博口径）——暂停梗密集但无实质灰信号",
+        "jiejie 被集中批评（116+66 条提及）：\"登峰第一菜打野/刷野一局/一龙不拿\"",
+        "G2：JDG 大后期阵容碾压 EDG 前期阵容（\"虽然赢了京东打野还是菜\"）",
+        "ScoreGG 确认 G2 EDG 扳平（1:1）；打满局样本；JDG 状态波动（昨天 2:0 TES 今天被拖入决胜）",
+        "G3 官方战报：JDG 锤石钩爆 EDG 下路 Leave，GALA 无尽屠戮，JDG 2-1 拿下（约 19:49 结束）",
+        "\"京东打满的神\" 打满共识兑现（G3 弹幕 19:01 密集）；JDG 状态波动再样本：昨天 2:0 TES、今天被 EDG 拖入决胜后拿下",
+        "跨场战绩情报：BuLLDoG 洛克同日两场两命（汤圆 15-2-6 vs BuLLDoG 被教育）——\"英雄强度+使用者执行\"双因素模型",
+        "灰信号 0 实质：演 57/送 98/演员 5 多为对 jiejie/操作的批评玩梗，无定向假赛/剧本质疑"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "JDG 胜",
+          "notes": "官方：小徐贾克斯 4/0/1 POG，29:30（17:9），超长暂停"
+        },
+        {
+          "game_no": 2,
+          "result": "EDG 胜",
+          "notes": "ScoreGG：第三条大龙后中路推进团灭 JDG，扳平 1:1"
+        },
+        {
+          "game_no": 3,
+          "result": "JDG 胜",
+          "notes": "官方战报：JDG 锤石钩爆 Leave + GALA 无尽屠戮，约 19:49 收尾；\"还是京东赢，京东打满的神\""
+        }
+      ],
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-23_official_660000.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_EDG-JDG_2026-08-23.html"
+      ],
+      "pending": "已回填（官方战报确认）；Polymarket slug 未挂牌（已关闭不追）",
+      "event_slug": null,
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-23T21:48:41+08:00"
+    },
+    {
+      "id": "2026-08-23_bfx_ns",
+      "date": "2026-08-23",
+      "league": "LCK Round 3-4（恩怨局）",
+      "teams": [
+        "BFX",
+        "NS"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "957(890001)"
+      ],
+      "result_inferred": "NS 2:1 BFX（官方双源确认：直播吧 20:27 \"NS 击败 BFX\" + 虎扑 G2 赛后 \"NS 1-1 BFX\"；G2 Diable 卢锡安 13 杀爆砍扳平、G3 Scout 辛德拉团战伤害拉满）",
+      "danmu_count": 1139,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "AD 互换恩怨局：Diable（大菠萝，NS）vs Taeyoon（BFX）——\"等下有事大菠萝打泰永啊\"",
+        "NS 近期：第九胜/双杀 DRX-KRX（Scout 瑞兹/加里奥、Kingen 克烈、大菠萝送但赢）",
+        "BFX：2:1 BRO 收官（Raptor 季后赛表态）；赛前预测 BFX 2-1（打满）",
+        "弹幕采集待接入——无样本不硬撑",
+        "AD 互换恩怨主线兑现：泰永（BFX）对位压制大菠萝（NS）；NS 打野/大菠萝状态差",
+        "AD 互换主线反转：G1 泰永(Taeyoon) 女警 10-0 骑脸大菠萝 → G2 大菠萝(Diable) 卢锡安 13 杀爆砍扳平 → G3 Scout 辛德拉收官，NS 2:1",
+        "G2 官方战报（虎扑）：Diable 卢锡安下路对线早早打穿、13 杀双 C 发力，NS 扳平 1-1（19:44）",
+        "G3 官方战报（直播吧 20:27）：Scout 辛德拉团战伤害拉满，NS 2:1；BFX 小分劣势排本组第二，骑士之路第一轮 vs NS 打 BO5 生死战",
+        "预测验证：赛前\"BFX 2-1 打满\"→ 打满兑现但胜者相反（NS 2:1）；\"大菠萝老了/不行\"共识 G1 兑现、G2 反转——单局状态结论需谨慎",
+        "灰信号 0 实质：演 7/送 28/假赛 1/演员 5 多为玩梗；\"演员\"为情绪用词非指向"
+      ],
+      "data_files": [
+        "docs/data/danmu/huya/2026-08-23_shuoshuo_323444.jsonl",
+        "docs/data/danmu/huya/2026-08-23_we957_890001.jsonl"
+      ],
+      "reports": [
+        "reports/intel_danmu_BFX-NS_2026-08-23.html"
+      ],
+      "pending": "已回填（官方战报确认）；Polymarket slug 未挂牌（已关闭不追）",
+      "event_slug": null,
+      "games": [
+        {
+          "game_no": 1,
+          "result": "BFX 胜",
+          "notes": "官方（yinglidianzi 18:53）：Taeyoon 女警 10-0 超神，Kellin 巴德+夹子秒 Scout 冰鸟，BFX 0 换 3 中路一波"
+        },
+        {
+          "game_no": 2,
+          "result": "NS 胜",
+          "notes": "官方（虎扑 19:44）：Diable 卢锡安 13 杀爆砍，NS 双 C 发力扳平 1-1；大菠萝回暖"
+        },
+        {
+          "game_no": 3,
+          "result": "NS 胜",
+          "notes": "官方（直播吧 20:27）：Scout 辛德拉团战伤害拉满，27:53 结束，NS 2:1；两队骑士之路 BO5 再相逢"
+        }
+      ],
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-23T21:48:41+08:00"
+    },
+    {
+      "id": "2026-08-23_blg_al",
+      "date": "2026-08-23",
+      "league": "LPL Group Ascend",
+      "teams": [
+        "BLG",
+        "AL"
+      ],
+      "result_inferred": "BLG 2:1 AL（官方确认；G1 AL、G2/G3 BLG；整场 BLG 100c，Over 2.5）",
+      "danmu_count": null,
+      "gray_signals_count": null,
+      "key_signals": [
+        "G1 AL 翻盘（BLG 74.5c->8.5c->0.5c）",
+        "G2 用户 0.67 全仓 AL 110U 归零（高位追上一局赢家反样本）",
+        "整场 BLG 21:44 深水 17.5c->100c：用户反思\"0.2-0.3 买 BLG 才对\"验证成立"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-blg-al-2026-08-23/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-23_lol-blg-al-2026-08-23_blg.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-23_th_gx",
+      "date": "2026-08-23",
+      "league": "LEC Regular Season W5",
+      "teams": [
+        "TH",
+        "GX"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "官方流(660000)"
+      ],
+      "result_inferred": "GX 2:0 TH（官方确认：Polymarket lol-th-gx-2026-08-23 closed 全市场 settled）",
+      "danmu_count": 973,
+      "gray_signals_count": 37,
+      "key_signals": [
+        "GX 2:0 横扫：G1 TH 领先约 5k 被翻（女警连送三波+道格拉斯赵信开送，'右边又翻回来了'23:48）、G2 TH 剑魔打野+纳尔+卢锡安体系中期崩（数波'翻啦'全是'假翻'，GX 资源团不送收走'这把gx输不了'00:51）",
+        "BP 后战绩情报双应验：G1 弱队杰斯负锚（'杰斯各大赛区10几连跪/这几天杰斯都被翻了'，唯一例外 Zeus）、G2 卢锡安无米利欧负锚（'没有米利欧的卢锡安伤害一坨'）——TH 两局均输",
+        "灰信号 ~37 条宽口径（假/演/送/剧本/做任务）集中于 TH'假翻'表演段，无实质定向质疑——区别于 08-21 SK-TH 83 条指向输家；MKOI 昨日假赛质疑 5 条跨场留痕（连续两日被提及）",
+        "盘口：Polymarket game1/game2/BO3/让分 GX-1.5/总局数 Under 2.5 全部收敛 GX（99.95%）；赛前共识 GX 86% 命中；'th要连胜'热手叙事未兑现",
+        "TH 上野负面留痕再 +1：Daglas（G1 赵信送 / G2 剑魔打野'翡翠水平/根本不会一到中期就送'）、Tracyn 纳尔开团无能（'冒充48/多兰/复活甲/永远不来正面'）",
+        "LEC 弱队三负锚样本：杰斯 / 卢锡安无体系 / 剑魔打野——本场全部由 TH 一队集齐",
+        "官方回填：Polymarket lol-th-gx-2026-08-23 closed（game1/game2/BO3 GX 1.0、Under 2.5、GX-1.5 让分兑现）"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "GX 胜",
+          "notes": "TH（杰斯+女警+赵信）一度领先约 5k，23:40-42 开送被翻；Oscarinin 兰博大招两空；23:56 gg；杰斯负锚应验"
+        },
+        {
+          "game_no": 2,
+          "result": "GX 胜",
+          "notes": "TH 剑魔打野+纳尔+卢锡安+发条体系（右侧）中期崩；'假翻'数波；GX 控资源纪律（'第三条龙拿不到就感觉gx不放水了'）；00:53 gg；卢锡安无米利欧负锚应验"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-23_shuoshuo_323444.jsonl",
+          "docs/data/danmu/huya/2026-08-24_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_TH-GX_2026-08-23.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_TH-GX_2026-08-23.md"
+        ]
+      },
+      "pending": "已回填（Polymarket closed 官方确认 GX 2:0）；MVP/选手 ID 待官方（已关闭不追）",
+      "event_slug": "lol-th-gx-2026-08-23",
+      "predictions": [
+        {
+          "text": "赛前共识 GX（Polymarket 86% / Strafe 74.7%）",
+          "category": "result",
+          "status": "hit",
+          "note": "GX 2:0"
+        },
+        {
+          "text": "'这团战打的像人类吗 2-0了啊' 局中预判横扫",
+          "time": "00:45:39",
+          "category": "result",
+          "status": "hit",
+          "note": "GX 2:0"
+        },
+        {
+          "text": "'这把gx输不了 资源团不送 永远不可能输'",
+          "time": "00:51:44",
+          "category": "result",
+          "status": "hit",
+          "note": "GX 拿下 G2"
+        },
+        {
+          "text": "BP 负锚：G1 杰斯 / G2 卢锡安无米利欧",
+          "category": "bp",
+          "status": "hit",
+          "note": "TH 两局均输，双应验"
+        },
+        {
+          "text": "'th要连胜' 热手叙事（刚 2:0 SK）",
+          "category": "form",
+          "status": "miss",
+          "note": "TH 被横扫，弱队连胜叙事打断"
+        }
+      ],
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-24T09:28:34+08:00"
+    },
+    {
+      "id": "2026-08-23_ewc_cs2_final_spirit_fut",
+      "date": "2026-08-23",
+      "league": "EWC CS2 总决赛（BO5）",
+      "teams": [
+        "Spirit",
+        "FUT"
+      ],
+      "streamers": [
+        "CSBOY(123321)",
+        "Mo二路(captainmo)"
+      ],
+      "result_inferred": "Spirit 3:1 FUT（官方确认：虎扑赛后帖 + 直播吧逐图战报；让一追三夺冠）",
+      "danmu_count": 22628,
+      "gray_signals_count": 0,
+      "key_signals": [
+        "Spirit 让一追三 3:1 夺冠：图一 Cache FUT 13-10（Spirit 手枪局白送）→ 图二 Anubis Spirit 16-13（tN1R 29 杀）→ 图三 Ancient 16-14 加时（zont1x 残局强拆，FUT 两图赛点全丢）→ 图四 Nuke 速通（FUT 今年零胜率图）",
+        "图池战绩情报双应验：Spirit×Ancient 正锚（'绿龙从里约到现在的遗迹没输过/世界第一遗迹'）→ 图三拿下；FUT×Nuke 负锚（'Fut今年这张图胜率是零胜率/昨晚被狂虐' + '不搬零胜率的核子搬33胜率的沙二吗'）→ 图四速通",
+        "FUT 三大软肋实体化：关键局心理波动（两图赛点全丢/'5打3输了'）、狙击手灾难（'fut的狙纯区/换王德发真王朝了'30+ 条）、图池短板（Ban 沙二不 Ban Nuke 被全场拷问）",
+        "Spirit 同日双冠：CS2 EWC + DOTA2 TI15（'一天双冠/绿龙王朝'）；donk 决赛发挥争议（'决赛又泯/不配这rt' vs '少爷关键枪加时接管'）；手枪局弱项全场暴露（'永远送三分'）",
+        "巴黎主场环境：全场嘘 Spirit（'全球客场'）→ 夺冠后'巴黎图书馆'——情绪面对照素材",
+        "灰信号 0 实质：'定制冠军/不敢赢吗FUT'为情绪/浪的调侃，无假赛质疑"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "map": "Cache",
+          "result": "FUT 胜",
+          "notes": "FUT 13-10（Spirit 手枪局白送，挽回四赛点仍劣势过大；donk 绝境开杀难挽狂澜）"
+        },
+        {
+          "game_no": 2,
+          "map": "Anubis",
+          "result": "Spirit 胜",
+          "notes": "Spirit 16-13（tN1R 阿努比斯 29 杀；sh1ro 大狙守 A；扳平 1-1）"
+        },
+        {
+          "game_no": 3,
+          "map": "Ancient",
+          "result": "Spirit 胜",
+          "notes": "Spirit 16-14 加时（zont1x 残局强拆；FUT 连丢赛点；Spirit 2-1 冠军点）"
+        },
+        {
+          "game_no": 4,
+          "map": "Nuke",
+          "result": "Spirit 胜",
+          "notes": "FUT 今年 Nuke 零胜率；Spirit 速通夺冠 3:1；'巴黎图书馆'；00:33-34 GG"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-23_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-24_csboy_123321.jsonl",
+          "docs/data/danmu/huya/2026-08-23_captainmo.jsonl",
+          "docs/data/danmu/huya/2026-08-24_captainmo.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_SPIRIT-FUT_2026-08-23.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_SPIRIT-FUT_2026-08-23.md"
+        ]
+      },
+      "pending": "官方 MVP/FUT 狙击手 ID 待回填 + Polymarket slug 未检索到（已关闭不追）",
+      "event_slug": "",
+      "predictions": [
+        {
+          "text": "'蛋总预言绿龙3比1' / '绿龙3比1FUT'（早盘共识）",
+          "category": "result",
+          "status": "hit",
+          "note": "Spirit 3:1"
+        },
+        {
+          "text": "图池战绩：Spirit×Ancient 正锚（'遗迹没输过'）",
+          "category": "bp",
+          "status": "hit",
+          "note": "图三 16-14 加时拿下"
+        },
+        {
+          "text": "图池战绩：FUT×Nuke 负锚（'今年零胜率'）",
+          "category": "bp",
+          "status": "hit",
+          "note": "图四速通"
+        },
+        {
+          "text": "'图三谁赢谁冠军'",
+          "category": "result",
+          "status": "partial",
+          "note": "Spirit 图三拿下后图四收尾，无图五"
+        }
+      ],
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-24T01:11:57+08:00"
+    },
+    {
+      "id": "2026-08-23_shft_kc",
+      "date": "2026-08-23",
+      "league": "LEC Regular Season",
+      "teams": [
+        "SHFT",
+        "KC"
+      ],
+      "result_inferred": "KC 2:1 SHFT（官方确认；G1 SHFT、G2/G3 KC；整场 KC 100c，Over 2.5）",
+      "danmu_count": null,
+      "gray_signals_count": 15,
+      "key_signals": [
+        "G1 SHFT 5.5c 深水->100c（KC 中单\"不想赢\"灰信号兑现，用户全仓 +260U）",
+        "G2 SHFT 36.5c 盘中高点->0.5c（灰信号未跨局延续，KC 队友响应赢 G2，用户全仓 -200+U）",
+        "个人灰信号与团队结果分离样本；\"KC 换中单\"待核查"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-shft-kc-2026-08-23/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-24_lol-shft-kc-2026-08-23_shft.md"
+      ],
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）"
+    },
+    {
+      "id": "2026-08-24_kc_shft",
+      "date": "2026-08-24",
+      "league": "LEC Regular Season W5",
+      "teams": [
+        "KC",
+        "SHFT"
+      ],
+      "streamers": [
+        "硕硕(323444)",
+        "官方流(660000)"
+      ],
+      "result_inferred": "KC 2:1 SHFT（官方确认：Polymarket lol-shft-kc-2026-08-23 全 settled；G1 SHFT/G2 KC/G3 KC 让一追二）",
+      "danmu_count": 3112,
+      "gray_signals_count": 100,
+      "key_signals": [
+        "KC 让一追二 2:1：G1 SHFT 爆冷（KC 领先5k/天肥女警被翻）→ G2 KC 马拉松 49 分钟扳平 → G3 KC 速通后波动收尾",
+        "灰信号方向整体未兑现（关键反例）：三局高浓度定向 KC（~100 条宽口径，中单三局负锚），G1 兑现（KC 输）但 G2/G3 未兑现（KC 赢）——'被质疑方必输'不成立",
+        "蛇女 BP 正锚未应验（单局）：HLE Zeka 蛇女赢 vs KC 蛇女输——版本符号需叠加选手执行；系列靠 G2/G3 逆转",
+        "KC 卡时间规律实锤：三局 34/49/27 分钟（'打谁都要30几分钟'应验）",
+        "SHFT 领先守不住画像：G1 维克托翻盘后 G2 被翻/G3 未守住；'弱队盲僧'正锚候选（SHFT 盲僧 4 头强打）",
+        "盘口：Polymarket 全 settled（game1 SHFT/game2 KC/BO3 KC/Over2.5）；G2 击杀让分 -9.5 结算；'1-2梭哈15倍' G1 命中但系列未成"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "SHFT 胜",
+          "notes": "KC 领先 5k/天肥女警被翻；泰坦抢龙+ACE；灰信号兑现（KC 输）"
+        },
+        {
+          "game_no": 2,
+          "result": "KC 胜",
+          "notes": "49 分钟马拉松；SHFT 卡牌/盲僧/EZ 主导后 KC 翻盘；灰信号未兑现"
+        },
+        {
+          "game_no": 3,
+          "result": "KC 胜",
+          "notes": "KC 前期速通/29-7 领先，中期波动，03:42 收尾；灰信号延续但未兑现"
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-24_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_KC-SHFT_BP_2026-08-24.html",
+          "reports/intel_danmu_KC-SHFT_G1_2026-08-24.html",
+          "reports/intel_danmu_KC-SHFT_G2_2026-08-24.html",
+          "reports/intel_danmu_KC-SHFT_full_2026-08-24.html"
+        ],
+        "pending": [],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_KC-SHFT_BP_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_KC-SHFT_G1_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_KC-SHFT_G2_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_KC-SHFT_full_2026-08-24.md"
+        ]
+      },
+      "pending": "已关闭（用户确认：非关键项不追，数据不补不硬造）",
+      "event_slug": "lol-shft-kc-2026-08-23",
+      "predictions": [
+        {
+          "text": "赛前共识 KC 2:0（默认2-0）",
+          "category": "result",
+          "status": "miss",
+          "note": "G1 被 SHFT 爆冷；最终 2:1"
+        },
+        {
+          "text": "打满（G3 预期）",
+          "category": "result",
+          "status": "hit",
+          "note": "Over 2.5 = 1.0"
+        },
+        {
+          "text": "蛇女正锚'一出直接赢'（KC）",
+          "category": "bp",
+          "status": "miss",
+          "note": "G1 输；单局负锚≠系列"
+        },
+        {
+          "text": "灰信号方向'被质疑方输球'",
+          "category": "gray",
+          "status": "miss",
+          "note": "G1 兑现/G2+G3 未兑现；KC 2:1"
+        },
+        {
+          "text": "KC 卡时间'打谁都要30几分钟'",
+          "category": "pattern",
+          "status": "hit",
+          "note": "三局 34/49/27 分钟"
+        }
+      ],
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-24T10:46:08+08:00"
+    },
+    {
+      "id": "2026-08-24_dns_krx_cl",
+      "date": "2026-08-24",
+      "league": "LCK CL（Challengers League）",
+      "teams": [
+        "DNS.C",
+        "KRX.C"
+      ],
+      "streamers": [
+        "SOOP afchall(296597621)"
+      ],
+      "result_inferred": "DNS.C 3:1 KRX.C（Polymarket 多市场 99.95c 结算价 + 弹幕多信号共振：G1/G2/G4 DNS.C、G3 KRX.C；官方战报待回填）",
+      "danmu_count": 10613,
+      "gray_signals_count": 1,
+      "key_signals": [
+        "DNS.C 3:1 晋级（Play-In Upper R1）：G1 DNS.C 下路压制、G2 Lancer 卡山特翻盘 MVP、G3 KRX.C 胜（市场押中 Over3.5 92.5c）、G4 DNS.C 干净收尾（约 16:41 结束）",
+        "残阵规则主线：Rich/LazyFeel 一军出场过多被 CL 季后赛禁赛（弹幕口径，待官方确认）→ Vincenzo（CL 常规赛 MVP 打野）临时转 ADC；弹幕反复称\"有 LazyFeel 早碾压/单核掉核\"",
+        "BP 锚点验证：①Vincenzo×Jhin 排位 7 连败负锚 → G1 应验方向（下路被压、Vincenzo 背锅）；②\"CL 杰斯必败(제필패)\" → G2 Frog 杰斯应验（后期隐形）；③Lancer×K'Sante 正锚 → G2 MVP 级翻盘",
+        "灰信号 1 条（轻）：G3 15:38 \"수상하다(可疑)\"，未定向未升级；\"던짐\"29 条甄别为失误吐槽非假赛指控",
+        "弹幕共识验证：G1 前 3-0 共识未完全兑现（KRX.C 拿 G3）；Polymarket 系列 64.5→83.5→99.95c"
+      ],
+      "games": [
+        {
+          "game_no": 1,
+          "result": "DNS.C 胜",
+          "notes": "Vincenzo Jhin 负锚应验方向；KRX.C 下路被 Kalista/Renata 压制；BP 技术暂停重开一次"
+        },
+        {
+          "game_no": 2,
+          "result": "DNS.C 胜",
+          "notes": "KRX.C 前期 2500 经济优势，无坦阵容打不动 Lancer K'Sante → DNS.C 翻盘；제필패 负锚应验；Lancer MVP 呼声"
+        },
+        {
+          "game_no": 3,
+          "result": "KRX.C 胜",
+          "notes": "Winner 打野 3 级领先、DNS.C 茂凯失误多；市场 O/U3.5 Over 92.5c 押中"
+        },
+        {
+          "game_no": 4,
+          "result": "DNS.C 胜",
+          "notes": "约 16:05-16:41；DNS.C 4 龙/长者龙收尾，约 16:41 结束；弹幕\"플옵 축하(晋级祝贺)\""
+        }
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/soop/2026-08-24_soop_afchall.jsonl"
+        ],
+        "reports": [
+          "intel_danmu_DNS-KRX_2026-08-24.html",
+          "intel_danmu_DNS-KRX_G1_2026-08-24.html"
+        ],
+        "pending": [
+          "官方战报/局分",
+          "Rich/LazyFeel 禁赛规则官方确认",
+          "Vincenzo CL MVP 头衔"
+        ],
+        "gaps": [
+          "15:39-15:47 采集中断约 8 分钟（已恢复，缺口记录）"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_DNS-KRX_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_DNS-KRX_G1_2026-08-24.md"
+        ]
+      },
+      "pending": "进行中",
+      "event_slug": "lol-dnsc-drxc-2026-08-24",
+      "memory_tier": "SHORT（比赛细节）/ LONG（残阵规则、CL 杰斯、Lancer 卡山特等沉淀项另记）",
+      "verification": {
+        "bp_anchors": [
+          {
+            "anchor": "Vincenzo Jhin 排位 7 连败（负）",
+            "verdict": "应验方向（G1 KRX.C 下路被压制）"
+          },
+          {
+            "anchor": "CL 杰斯必败 제필패（负）",
+            "verdict": "应验（G2 Frog 杰斯后期隐形）"
+          },
+          {
+            "anchor": "Lancer K'Sante（正）",
+            "verdict": "应验（G2 翻盘核心，弹幕 MVP）"
+          }
+        ],
+        "gray": {
+          "count": 1,
+          "verdict": "未升级、未指向假赛"
+        },
+        "market": "系列 DNS.C 99.95c；Over3.5 99.95c（4 局）；-2.5 让分 KRX.C 99.95c（非 3-0）",
+        "status": "Polymarket 结算价锁定，官方战报待回填"
+      }
+    },
+    {
+      "id": "2026-08-24_bfxy_hlec",
+      "date": "2026-08-24",
+      "league": "LCK CL（Challengers League）",
+      "teams": [
+        "BFX.Y",
+        "HLE.C"
+      ],
+      "streamers": [
+        "SOOP afchall（待切流确认直播号）"
+      ],
+      "result_inferred": "BFX.Y 2:0 领先（G1/G2 99.95c 结算），G3 进行中（弹幕口径·官方待回填）",
+      "danmu_count": 20538,
+      "gray_signals_count": null,
+      "key_signals": [
+        "G1/G2 BFX.Y 胜（Polymarket 99.95c）；奥拉夫负锚应验；G2 嘉文/巴德被批出现\"买了/演员/不敢赢\"灰信号群",
+        "G3 进行中：BFX.Y 实验阵容（卡蜜尔+茂凯+崔丝塔娜+吉格斯 3 射手体系）反而领先（2k 经济/上中野 CS 2 倍/茂凯 2 级差）；\"마오궁+카밀궁+직스궁 1초컷\"三连招秒卢锡安",
+        "弹幕\"3:0犯法/放一局/明牌送\"叙事 vs 市场 Under 3.5 57c（3-0 概率 56c）直接对立",
+        "灰信号（观众质疑非结论）：硕硕流 演24/买了21/内鬼13/假赛12/演员18，多指向 HLE.C（G2 皇子/巴德、G1 汉化）；SOOP 1 条\"자칼 의심（打野可疑）\"",
+        "HLE.C 连续三局打野/中单被质疑，Pyeonsik 卢锡安是唯一被认可点（G3 被三连招秒）"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/soop/2026-08-24_soop_afchall.jsonl",
+          "docs/data/danmu/huya/2026-08-24_shuoshuo_323444.jsonl"
+        ],
+        "reports": [
+          "intel_danmu_BFXY-HLEC_G3_2026-08-24.html",
+          "intel_danmu_BFXY-HLEC_G2_2026-08-24.html",
+          "intel_danmu_BFXY-HLEC_G1_2026-08-24.html",
+          "intel_danmu_BFXY-HLEC_pre_2026-08-24.html"
+        ],
+        "pending": [
+          "官方阵容/选人",
+          "G1/G2 官方战报",
+          "G3 结果",
+          "灰信号官方定性（不追证）"
+        ],
+        "gaps": [
+          "虎牙 19:34-19:35 网络抖动约 1 分钟"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_BFXY-HLEC_G3_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_BFXY-HLEC_G2_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_BFXY-HLEC_G1_2026-08-24.md",
+          "knowledge/intel_pages/intel_danmu_BFXY-HLEC_pre_2026-08-24.md"
+        ]
+      },
+      "pending": "赛前",
+      "event_slug": "lol-foxy-hle-2026-08-24",
+      "memory_tier": "SHORT（局中）",
+      "games": [
+        {
+          "game_no": 1,
+          "result": "BFX.Y 胜",
+          "notes": "后期价值翻盘；奥拉夫负锚应验"
+        },
+        {
+          "game_no": 2,
+          "result": "BFX.Y 胜",
+          "notes": "灰信号高发局（皇子/巴德）；HLE.C 输兑现方向"
+        },
+        {
+          "game_no": 3,
+          "result": "进行中",
+          "notes": "BFX.Y 实验阵容领先；\"放一局\"叙事 vs 市场横扫定价"
+        }
+      ]
+    },
+    {
+      "id": "2026-08-24_fnc_navi_g1",
+      "date": "2026-08-24",
+      "league": "LEC",
+      "stage": "Regular Season Week 5",
+      "teams": [
+        "FNC",
+        "NAVI"
+      ],
+      "format": "BO3",
+      "status": "已结束",
+      "note": "LEC 常规赛第 5 周；同日并行 GX vs G2（0-0）。NAVI 赢则 KOI 出局（弹幕口径）。",
+      "sources": [
+        "twitch_caedrel",
+        "twitch_lec"
+      ],
+      "created_at": "2026-08-24T15:07:33+00:00",
+      "score": "NAVI 2-0 FNC（官方比分机器确认 2026-08-25 01:13）",
+      "g1_result": "NAVI 胜（官方）",
+      "gray_signal_g1": "有（明着假赛/演戏/避战放资源质疑簇，详见 gray_signals.json）",
+      "g2_result": "NAVI 胜（官方）",
+      "rosters": "FNC: Soboro/Razork/Vladi/Upset/Lospa；NAVI: Maynter/Rhilech/Poby/SamD/Parus（官方 rosters）",
+      "correction_log": "2026-08-25 修正：G1 归属由 FNC 改为 NAVI（误读英文弹幕反讽）；G2 由'已结束+G3'改为'进行中'",
+      "final_result": "NAVI 2-0 FNC（横扫）",
+      "series_notes": "FNC 两局均输；灰信号连续两局指向 FNC 上野（G1 8 条/G2 10 条，兑现方向待官方/盘口验证）；Caps 名人堂叙事为下一场 GX-G2 伏笔；NAVI 赢后 KOI 出局、NAVI 锁季后赛（弹幕口径）",
+      "anchor_backfill": "Rhilech 三绝正锚 G1 应验（NAVI 胜）；Locke 负锚应验（FNC 连输两局）",
+      "result_inferred": "NAVI（Natus Vincere）胜（Polymarket 结算）"
+    },
+    {
+      "id": "2026-08-25_gx_g2",
+      "date": "2026-08-25",
+      "league": "LEC",
+      "stage": "Regular Season Week 5",
+      "teams": [
+        "GX",
+        "G2"
+      ],
+      "format": "BO3",
+      "status": "已结束",
+      "note": "LEC 常规赛第 5 周；紧随 FNC-NAVI（NAVI 2-0）之后。Caps 名人堂首秀（Hall of Legends）被 Jackies 反复单杀（阿卡丽）。",
+      "sources": [
+        "twitch_caedrel",
+        "twitch_lec",
+        "huya_maomao",
+        "huya_remember",
+        "huya_shuoshuo"
+      ],
+      "created_at": "2026-08-24T17:15:54+00:00",
+      "score": "GX 2-1 G2（官方积分榜：GX 4-3 / G2 6-3；比分机器时间线 G2 1-0 -> 1-1）",
+      "g1_result": "G2 胜（比分机器 02:07 G2 1-0 GX；Hans Sama 卢锡安 carry）",
+      "g2_result": "GX 胜（比分机器 02:39 G2 1-1 GX；G2 早期阵容 cook + 灰信号）",
+      "g3_result": "GX 胜（官方积分榜确认，GX 2-1 赢系列）",
+      "gray_signal_g2": "G2 侧 5-6 条（selling games/fixers/tactical throw，02:38-02:41，Caedrel 房）",
+      "notes": "Caps 名人堂首秀 G1 被单杀但 G2 靠下路赢（叙事未兑现）；G2 早期阵容 20 分钟失效模式；GX 爆冷榜首区（LEC 榜尾爆冷规律再样本）",
+      "result_inferred": "GIANTX 胜（Polymarket 结算）"
+    },
+    {
+      "id": "lol-blg-al-2026-08-23",
+      "slug": "lol-blg-al-2026-08-23",
+      "date": "2026-08-23",
+      "teams": [
+        "Bilibili Gaming",
+        "Anyone's Legend"
+      ],
+      "league": "LPL",
+      "result_inferred": "Bilibili Gaming 胜（Polymarket 结算）"
+    },
+    {
+      "id": "lol-navi-fnc-2026-08-24",
+      "slug": "lol-navi-fnc-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Natus Vincere",
+        "Fnatic"
+      ],
+      "league": "LEC",
+      "result_inferred": "Natus Vincere 胜（Polymarket 结算）",
+      "event_slug": "lol-navi-fnc-2026-08-24"
+    },
+    {
+      "id": "cs2-baks-color-2026-08-24",
+      "slug": "cs2-baks-color-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "BakS eSports",
+        "Color"
+      ],
+      "league": "CS2",
+      "result_inferred": "Color 胜（Polymarket 结算）",
+      "event_slug": "cs2-baks-color-2026-08-24"
+    },
+    {
+      "id": "cs2-100t-inox-2026-08-24",
+      "slug": "cs2-100t-inox-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "100 Thieves",
+        "INOX Division"
+      ],
+      "league": "CS2",
+      "result_inferred": "100 Thieves 胜（Polymarket 结算）",
+      "event_slug": "cs2-100t-inox-2026-08-24"
+    },
+    {
+      "id": "cs2-ntr-tsa-2026-08-24",
+      "slug": "cs2-ntr-tsa-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Nuclear TigeRES",
+        "Spirit Academy"
+      ],
+      "league": "CS2",
+      "result_inferred": "Nuclear TigeRES 胜（Polymarket 结算）",
+      "event_slug": "cs2-ntr-tsa-2026-08-24"
+    },
+    {
+      "id": "cs2-qua1-nemi1-2026-08-24",
+      "slug": "cs2-qua1-nemi1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "QUAZAR",
+        "Nemiga"
+      ],
+      "league": "CS2",
+      "result_inferred": "Nemiga 胜（Polymarket 结算）",
+      "event_slug": "cs2-qua1-nemi1-2026-08-24"
+    },
+    {
+      "id": "cs2-ins-eac-2026-08-24",
+      "slug": "cs2-ins-eac-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Insiders Esport",
+        "Esport Academy Copenhagen"
+      ],
+      "league": "CS2",
+      "result_inferred": "Esport Academy Copenhagen 胜（Polymarket 结算）",
+      "event_slug": "cs2-ins-eac-2026-08-24"
+    },
+    {
+      "id": "cs2-ace1-pha-2026-08-24",
+      "slug": "cs2-ace1-pha-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Acend",
+        "Phantom"
+      ],
+      "league": "CS2",
+      "result_inferred": "Acend 胜（Polymarket 结算）",
+      "event_slug": "cs2-ace1-pha-2026-08-24"
+    },
+    {
+      "id": "cs2-echo-cs1-2026-08-24",
+      "slug": "cs2-echo-cs1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "ECHO",
+        "CYBERSHOKE Esports"
+      ],
+      "league": "CS2",
+      "result_inferred": "CYBERSHOKE Esports 胜（Polymarket 结算）",
+      "event_slug": "cs2-echo-cs1-2026-08-24"
+    },
+    {
+      "id": "cs2-color-eac-2026-08-24",
+      "slug": "cs2-color-eac-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Color",
+        "Esport Academy Copenhagen"
+      ],
+      "league": "CS2",
+      "result_inferred": "Color 胜（Polymarket 结算）",
+      "event_slug": "cs2-color-eac-2026-08-24"
+    },
+    {
+      "id": "lol-gx-g2-2026-08-24",
+      "slug": "lol-gx-g2-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "GIANTX",
+        "G2 Esports"
+      ],
+      "league": "LEC",
+      "result_inferred": "GIANTX 胜（Polymarket 结算）",
+      "event_slug": "lol-gx-g2-2026-08-24"
+    },
+    {
+      "id": "2026-08-25_krxc_bfxy_cl",
+      "date": "2026-08-25",
+      "league": "LCK CL",
+      "stage": "2026 LCK CL Play-ins（入围赛）",
+      "teams": [
+        "KRX.C",
+        "BFX.Y"
+      ],
+      "format": "BO5",
+      "status": "已结束",
+      "note": "LCK CL 入围赛 KRX.C vs BFX.Y；SOOP 官方流 title='[CC] KRX vs BFX | 2026 LCK CL PLAY-INS'；弹幕话题：Slayer 卢锡安 pick 讨论。多路同抓：SOOP afchall + 957 + Remember + 硕硕。",
+      "sources": [
+        "soop_afchall",
+        "huya_we957",
+        "huya_remember",
+        "huya_shuoshuo"
+      ],
+      "created_at": "2026-08-25T09:04:45+00:00",
+      "score": "KRX.C 3-2 BFX.Y（SOOP 官方流 19:27 '키움 플옵 진출 확정'；打满五局）",
+      "final_result": "KRX.C 晋级 LCK CL 季后赛（3-2）",
+      "games": "G1 KRX.C 胜；G2 BFX.Y 胜；G3 KRX.C 胜；G4 BFX.Y 胜；G5 KRX.C 胜（BFX 选亚索，'亚索必败'锚点应验）",
+      "gray_signals": "G2 窗口三房 20+ 条假赛质疑（'0909/演戏/故意送双大/CK比LDL更假'），指向对象待复核，预警高",
+      "bp_anchors": "G5 亚索必败（야필패）应验；Slayer 卢锡安负锚观察；Vincenzo（KRX 补位 ADC）자헨/卢锡安",
+      "data_gap": "18:18-18:40 采集会话中断（约 23 分钟缺口，已记录）",
+      "result_inferred": "KRX.C 3-2 BFX.Y（KRX.C 晋级 LCK CL 季后赛；SOOP 官方流口径，官方待回填）"
+    },
+    {
+      "id": "2026-08-26_kt_bro",
+      "date": "2026-08-26",
+      "league": "LCK",
+      "stage": "季后赛入围赛（Play-in）",
+      "teams": [
+        "KT",
+        "BRO"
+      ],
+      "format": "BO5",
+      "status": "已结束",
+      "note": "G1 KT 胜（用户确认）；G2/G3 BRO 胜（弹幕口径）；灰信号连续两局指向输家侧 KT（G2 26 条打野 + G3 9 条放资源）；G4 BRO 赛点 + Teddy 招牌 EZ。",
+      "sources": [
+        "twitch_lck",
+        "huya_we957",
+        "huya_shuoshuo",
+        "huya_remember",
+        "huya_mile"
+      ],
+      "created_at": "2026-08-26T08:31:52+00:00",
+      "score": "KT 3-2 BRO（KT 晋级；Polymarket lol-kt-bro2-2026-08-26 结算 KT 99.95c 交叉确认）",
+      "g1_result": "KT 胜（修正 2026-08-26：初版误判 BRO 胜——英文俚语 bro 误当战队信号 + 无结构源即声明）",
+      "g1_note": "BRO 早期领先（克烈/冰鸟）未转化；KT 中后期 BDD 节奏接管并拿下；灰信号 1 条指向 KT（赢家侧）；KT 胜但观众批终结拖沓。",
+      "correction_log": "2026-08-26 二次修正：G5 由 BRO 3-2 改为 KT 3-2（20:38 提前判终局误读'一波了/恭喜bro'；未用 Polymarket 结算交叉；教训：终局判定必须以结构源仲裁+等真终局）",
+      "g2_result": "BRO 胜（弹幕口径：KT 大龙送优势，BRO 卡列反打；官方待回填）",
+      "g2_gray": "26 条指向 KT 打野（输家侧，'被质疑方输球'模式再样本）",
+      "g3_result": "BRO 胜（弹幕口径：10k+龙魂碾压 KT；官方待回填）",
+      "g3_gray": "9 条指向 KT 放资源（输家侧，连续两局模式）",
+      "g4_result": "KT 胜（寒冰游龙；BRO 自己送输；Cuzz 盲僧'不上大龙明牌2-2'）",
+      "g4_gray": "4+ 条指向 Cuzz 盲僧（赢家侧质疑）——实体三连升级",
+      "updated_at": "2026-08-26T12:58:40+00:00",
+      "g5_result": "KT 胜（BRO 领先8k+双龙但未能终结，KT 鳄鱼偷家翻盘——弹幕+Polymarket 交叉；20:45 终局）",
+      "g5_gray": "8+ 条指向 BRO（质疑方赢家侧，方向未兑现输球）",
+      "final_result": "KT 3-2 BRO（KT 晋级第5种子/进季后赛；BRO 出局）",
+      "result_inferred": "KT 3-2 BRO（KT 晋级；Polymarket lol-kt-bro2-2026-08-26 结算 KT 99.95c 交叉确认）"
+    },
+    {
+      "id": "cs2-ts7-dendel-2026-08-26",
+      "slug": "cs2-ts7-dendel-2026-08-26",
+      "date": "2026-08-26",
+      "teams": [
+        "Spirit",
+        "DENDELE CS"
+      ],
+      "league": "CS2 · BLAST Open Porto Group A",
+      "result_inferred": "Spirit 2:0 DENDELE CS（Polymarket 结算：系列 Spirit 99.95c / Games Total Under 2.5）",
+      "games": [
+        {
+          "game_no": 1,
+          "map": "Ancient（遗迹，弹幕口径）",
+          "result": "Spirit 胜",
+          "score": "13-8（弹幕明确；市场：总回合21/净胜4-6一致）",
+          "notes": "过程被批送分/经济差；sh1ro 残局高光；灰信号 10 条（跨节点去重约 8）"
+        },
+        {
+          "game_no": 2,
+          "map": "Cache（叉车，弹幕口径）",
+          "result": "Spirit 胜",
+          "score": "13-7/13-8（市场推算：总回合19-21/净胜4-6；弹幕无明确比分）",
+          "notes": "历史弱图拿下；观众'送分'叙事升级；GG 13:44-13:47"
+        }
+      ],
+      "gray_signals_count": 16,
+      "key_signals": [
+        "Spirit 2:0 横扫，但'领先送分/经济管理差'跨图持续（观众口径）",
+        "灰信号约 14 条（去重）：G1 开局 4 + 局中 6 + G2 局中 6 + 末段 2，集中 Spirit'送分/吃/操控'叙事，无实锤",
+        "G1 遗迹 13-8（优势图兑现但过程难看）；G2 叉车（历史弱图）拿下——弱图叙事修正",
+        "donk 手枪局正向（'都是手枪为什么donk打的那么牛逼'）；sh1ro 残局强；tN1R 被批"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-26_huya_csboy_official.jsonl",
+          "docs/data/danmu/huya/2026-08-26_huya_csboy_mo.jsonl",
+          "docs/data/danmu/huya/2026-08-26_huya_blast.jsonl"
+        ],
+        "reports": [
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_g1_bp.html",
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_g1_mid.html",
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_g1_end.html",
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_g2_bp.html",
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_g2_mid.html",
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_g2_end.html",
+          "reports/intel_danmu_Spirit-DENDELE_2026-08-26_full.html"
+        ],
+        "md": [
+          "knowledge/intel_pages/intel_danmu_Spirit-DENDELE_2026-08-26_full.md"
+        ],
+        "pending": [
+          "官方地图名/MVP/小组排名待回填",
+          "灰信号兑现率统计待回填"
+        ]
+      },
+      "predictions": [
+        {
+          "text": "观众预期 Spirit 大胜（绿龙雄起）",
+          "category": "result",
+          "status": "hit",
+          "note": "2:0 横扫"
+        },
+        {
+          "text": "'一百胜率遗迹要没了'（12:08）",
+          "category": "bp",
+          "status": "miss",
+          "note": "遗迹仍 13-8 拿下"
+        },
+        {
+          "text": "'叉车绿龙应该能大比分获胜'（13:01）",
+          "category": "bp",
+          "status": "hit",
+          "note": "叉车净胜 4-6"
+        },
+        {
+          "text": "灰信号约 14 条（送分/吃/操控）",
+          "category": "gray",
+          "status": "pending",
+          "note": "0 实锤；兑现率统计待回填"
+        }
+      ],
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-26T14:30:00+08:00",
+      "reports": [
+        "intel_danmu_Spirit-DENDELE_2026-08-26_g1_bp.html",
+        "intel_danmu_Spirit-DENDELE_2026-08-26_g1_mid.html",
+        "intel_danmu_Spirit-DENDELE_2026-08-26_g1_end.html",
+        "intel_danmu_Spirit-DENDELE_2026-08-26_g2_bp.html",
+        "intel_danmu_Spirit-DENDELE_2026-08-26_g2_mid.html",
+        "intel_danmu_Spirit-DENDELE_2026-08-26_g2_end.html",
+        "intel_danmu_Spirit-DENDELE_2026-08-26_full.html"
+      ],
+      "event_slug": "cs2-ts7-dendel-2026-08-26"
+    },
+    {
+      "id": "cs2-aur1-g2-2026-08-26",
+      "slug": "cs2-aur1-g2-2026-08-26",
+      "date": "2026-08-26",
+      "teams": [
+        "Aurora Gaming",
+        "G2"
+      ],
+      "league": "CS2",
+      "intel_voided": true,
+      "void_reason": "跨联赛混源/分类错误：该场为《英雄联盟》比赛误放至 CS 板块（教训 2026-08-26），整场情报作废，不展示、不统计、不参与队伍沉淀",
+      "updated_at": "2026-08-26T14:30:00+08:00",
+      "event_slug": "cs2-aur1-g2-2026-08-26",
+      "result_inferred": "G2 胜（Polymarket 结算）"
+    },
+    {
+      "id": "2026-08-26_navi_m80",
+      "date": "2026-08-26",
+      "league": "CS2",
+      "stage": "BLAST 波尔图公开赛（Porto Open）",
+      "teams": [
+        "NAVI",
+        "M80"
+      ],
+      "format": "BO3",
+      "status": "进行中（选图/开局阶段）",
+      "note": "BLAST 波尔图公开赛；虎牙三路同播（CSBOY-Mo 321123 / 马西西 maxixi / BLAST 官方 blast）；前场 Spirit vs DENDELE 已结束。",
+      "sources": [
+        "huya_csboy_mo",
+        "huya_maxixi",
+        "huya_blast"
+      ],
+      "created_at": "2026-08-26T14:28:26+00:00"
+    },
+    {
+      "id": "cs2-furia-pain-2026-08-26",
+      "slug": "cs2-furia-pain-2026-08-26",
+      "date": "2026-08-26",
+      "teams": [
+        "FURIA",
+        "paiN"
+      ],
+      "league": "CS2 · BLAST Open Porto Group A",
+      "result_inferred": "FURIA 2:0 paiN（Polymarket 结算：系列 FURIA / Under 2.5）",
+      "games": [
+        {
+          "game_no": 1,
+          "map": "图一（待官方核对）",
+          "result": "FURIA 胜",
+          "score": "13-2（弹幕'2分？赢了11分？'；市场总回合15/净胜11）",
+          "notes": "paiN 图一仅 2 分，碾压"
+        },
+        {
+          "game_no": 2,
+          "map": "图二（待官方核对）",
+          "result": "FURIA 胜",
+          "score": "13-6（市场总回合19/净胜7）",
+          "notes": "paiN 经济受限，2-0 收官"
+        }
+      ],
+      "gray_signals_count": 0,
+      "key_signals": [
+        "FURIA 2-0 碾压（图一 13-2 / 图二 13-6），观众与市场一致",
+        "灰信号 0 有效（'腾讯买CS'为玩梗剔除）",
+        "paiN 弱旅定位（'pain都打不过天禄'）全系列兑现"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-26_huya_csboy_official.jsonl",
+          "docs/data/danmu/huya/2026-08-26_huya_csboy_mo.jsonl"
+        ],
+        "reports": [
+          "intel_danmu_FURIA-paiN_2026-08-26_g1_bp.html",
+          "intel_danmu_FURIA-paiN_2026-08-26_g1_mid.html",
+          "intel_danmu_FURIA-paiN_2026-08-26_g1_end.html",
+          "intel_danmu_FURIA-paiN_2026-08-26_g2_bp.html",
+          "intel_danmu_FURIA-paiN_2026-08-26_g2_mid.html",
+          "intel_danmu_FURIA-paiN_2026-08-26_g2_end.html",
+          "intel_danmu_FURIA-paiN_2026-08-26.html"
+        ],
+        "pending": [
+          "官方地图名/MVP 待回填"
+        ]
+      },
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-27T00:30:00+08:00",
+      "event_slug": "cs2-furia-pain-2026-08-26"
+    },
+    {
+      "id": "cs2-navi-m80-2026-08-26",
+      "slug": "cs2-navi-m80-2026-08-26",
+      "date": "2026-08-26",
+      "teams": [
+        "Natus Vincere",
+        "M80"
+      ],
+      "league": "CS2 · BLAST Open Porto Group A",
+      "result_inferred": "M80 2:1 NAVI（Polymarket 结算：系列 M80 / NAVI -1.5 未过）",
+      "games": [
+        {
+          "game_no": 1,
+          "map": "Anubis（弹幕口径）",
+          "result": "NAVI 胜",
+          "score": "13-5/13-4（市场：总回合≤18/净胜≥7）",
+          "notes": "M80 自选图翻车；'匪图一分不得'"
+        },
+        {
+          "game_no": 2,
+          "map": "Mirage（弹幕口径）",
+          "result": "M80 胜",
+          "score": "13-6/13-7（市场推算）",
+          "notes": "'navi经典输图二自选图'应验"
+        },
+        {
+          "game_no": 3,
+          "map": "图三（待官方核对）",
+          "result": "M80 胜",
+          "score": "13-x（≤8）",
+          "notes": "17:11 密度峰值；NAVI 被质疑'故意/买了'（灰信号）"
+        }
+      ],
+      "gray_signals_count": 15,
+      "key_signals": [
+        "M80 2-1 爆冷（图一 NAVI 大胜后连丢两图）",
+        "'NAVI 图二自选图翻车'历史叙事兑现",
+        "系列尾声 NAVI'故意/买了'灰信号约 15 条（0 实锤，兑现统计待回填）"
+      ],
+      "data": {
+        "files": [
+          "docs/data/danmu/huya/2026-08-26_huya_csboy_official.jsonl",
+          "docs/data/danmu/huya/2026-08-26_huya_csboy_mo.jsonl"
+        ],
+        "reports": [
+          "intel_danmu_Natus Vincere-M80_2026-08-26_pre.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g1_bp.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g1_mid.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g1_end.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g2_bp.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g2_mid.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g2_end.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g3_bp.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g3_mid.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26_g3_end.html",
+          "intel_danmu_Natus Vincere-M80_2026-08-26.html"
+        ],
+        "pending": [
+          "官方逐图比分/地图名/MVP 待回填"
+        ]
+      },
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-27T00:30:00+08:00",
+      "event_slug": "cs2-navi-m80-2026-08-26"
+    },
+    {
+      "id": "cs2-ace1-nemi1-2026-08-24",
+      "slug": "cs2-ace1-nemi1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Acend",
+        "Nemiga"
+      ],
+      "league": "CS2",
+      "result_inferred": "Nemiga 胜（Polymarket 结算）",
+      "event_slug": "cs2-ace1-nemi1-2026-08-24"
+    },
+    {
+      "id": "cs2-100t-ef1-2026-08-24",
+      "slug": "cs2-100t-ef1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "100 Thieves",
+        "Eternal Fire"
+      ],
+      "league": "CS2",
+      "result_inferred": "Eternal Fire 胜（Polymarket 结算）",
+      "event_slug": "cs2-100t-ef1-2026-08-24"
+    },
+    {
+      "id": "cs2-ntr-cs1-2026-08-24",
+      "slug": "cs2-ntr-cs1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Nuclear TigeRES",
+        "CYBERSHOKE Esports"
+      ],
+      "league": "CS2",
+      "result_inferred": "Nuclear TigeRES 胜（Polymarket 结算）",
+      "event_slug": "cs2-ntr-cs1-2026-08-24"
+    },
+    {
+      "id": "lol-drxc-foxy-2026-08-25",
+      "slug": "lol-drxc-foxy-2026-08-25",
+      "date": "2026-08-25",
+      "teams": [
+        "Kiwoom DRX Challengers",
+        "BNK FearX Youth"
+      ],
+      "league": "LoL",
+      "result_inferred": "Kiwoom DRX Challengers 胜（Polymarket 结算）",
+      "event_slug": "lol-drxc-foxy-2026-08-25"
+    },
+    {
+      "id": "cs2-mornin-ra1-2026-08-24",
+      "slug": "cs2-mornin-ra1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Morningstar",
+        "Rare Atom"
+      ],
+      "league": "CS2",
+      "result_inferred": "Rare Atom 胜（Polymarket 结算）",
+      "event_slug": "cs2-mornin-ra1-2026-08-24"
+    },
+    {
+      "id": "cs2-5s-kg-2026-08-24",
+      "slug": "cs2-5s-kg-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "5star",
+        "Kaleido Gaming"
+      ],
+      "league": "CS2",
+      "result_inferred": "Kaleido Gaming 胜（Polymarket 结算）",
+      "event_slug": "cs2-5s-kg-2026-08-24"
+    },
+    {
+      "id": "cs2-the9-nas-2026-08-24",
+      "slug": "cs2-the9-nas-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "The Huns Esports",
+        "Not A Squad Esports"
+      ],
+      "league": "CS2",
+      "result_inferred": "The Huns Esports 胜（Polymarket 结算）",
+      "event_slug": "cs2-the9-nas-2026-08-24"
+    },
+    {
+      "id": "cs2-ef1-ruby1-2026-08-24",
+      "slug": "cs2-ef1-ruby1-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "Eternal Fire",
+        "ex"
+      ],
+      "league": "CS2",
+      "result_inferred": "Eternal Fire 胜（Polymarket 结算）",
+      "event_slug": "cs2-ef1-ruby1-2026-08-24"
+    },
+    {
+      "id": "lol-kt-bro2-2026-08-26",
+      "slug": "lol-kt-bro2-2026-08-26",
+      "date": "2026-08-26",
+      "teams": [
+        "KT Rolster",
+        "HANJIN BRION"
+      ],
+      "league": "LoL",
+      "result_inferred": "KT Rolster 胜（Polymarket 结算）",
+      "event_slug": "lol-kt-bro2-2026-08-26"
+    },
+    {
+      "id": "lol-foxy-hle-2026-08-24",
+      "slug": "lol-foxy-hle-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "BNK FearX Youth",
+        "Hanwha Life Esports Challengers"
+      ],
+      "league": "LoL",
+      "result_inferred": "BNK FearX Youth 胜（Polymarket 结算）",
+      "event_slug": "lol-foxy-hle-2026-08-24"
+    },
+    {
+      "id": "lol-dnsc-drxc-2026-08-24",
+      "slug": "lol-dnsc-drxc-2026-08-24",
+      "date": "2026-08-24",
+      "teams": [
+        "DN SOOPers Challengers",
+        "Kiwoom DRX Challengers"
+      ],
+      "league": "LoL",
+      "result_inferred": "DN SOOPers Challengers 胜（Polymarket 结算）",
+      "event_slug": "lol-dnsc-drxc-2026-08-24"
+    },
+    {
+      "id": "lol-ns-fox1-2026-08-27",
+      "slug": "lol-ns-fox1-2026-08-27",
+      "date": "2026-08-27",
+      "teams": [
+        "Nongshim Red Force",
+        "BNK FEARX"
+      ],
+      "league": "LCK Play-In（骑士之路 R1）",
+      "status": "已结束",
+      "reports": [
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_pre.html",
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_g1_bp.html",
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_g1_mid.html",
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_g1_end.html",
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_g2_bp.html",
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_g2_end.html",
+        "intel_danmu_Nongshim Red Force-BNK FEARX_2026-08-27_g3_bp.html"
+      ],
+      "event_slug": "lol-ns-fox1-2026-08-27",
+      "memory_tier": "SHORT",
+      "updated_at": "2026-08-27T08:30:00+00:00",
+      "result_inferred": "BFX 3:1 NS（BFX 晋级；Polymarket 结算：G1 NS / G2-G4 BFX 99.95c、O/U3.5 Over、O/U4.5 Under）"
+    },
+    {
+      "id": "cs2-vit-ice-2026-08-27",
+      "slug": "cs2-vit-ice-2026-08-27",
+      "event_slug": "cs2-vit-ice-2026-08-27",
+      "date": "2026-08-27",
+      "teams": [
+        "Vitality",
+        "Inner Circle Esports"
+      ],
+      "league": "CS2 · BLAST Open Porto Group B",
+      "status": "已结束",
+      "result_inferred": "Inner Circle Esports 2:0 Vitality（Polymarket 结算：Map1/2 IC 99.95c、Under 2.5；Anubis 13:8 / Cache 16:13 加时）",
+      "memory_tier": "SHORT"
+    },
+    {
+      "id": "cs2-mouz-9z-2026-08-27",
+      "slug": "cs2-mouz-9z-2026-08-27",
+      "event_slug": "cs2-mouz-9z-2026-08-27",
+      "date": "2026-08-27",
+      "teams": [
+        "MOUZ",
+        "9z"
+      ],
+      "league": "CS2 · BLAST Open Porto Group B",
+      "status": "已结束",
+      "result_inferred": "MOUZ 2:0 9z（Liquipedia 官方：Cache 13:4 / Nuke 13:7；弹幕共识'9z 纯三线队'兑现）",
+      "final_result": "MOUZ 2-0 9z",
+      "memory_tier": "TRANSIENT",
+      "start_time": "2026-08-27T12:00:00+00:00",
+      "updated_at": "2026-08-27T22:50:00+08:00"
+    },
+    {
+      "id": "cs2-lgc-fut-2026-08-27",
+      "slug": "cs2-lgc-fut-2026-08-27",
+      "event_slug": "cs2-lgc-fut-2026-08-27",
+      "date": "2026-08-27",
+      "teams": [
+        "Legacy",
+        "FUT Esports"
+      ],
+      "league": "CS2 · BLAST Open Porto Group B",
+      "status": "已结束",
+      "result_inferred": "Legacy 2:0 FUT（G1 Ancient 13-10；G2 Dust II 13-11；Polymarket 结算：Map1/Map2 Legacy 99.95c、Under 2.5 99.5c）",
+      "reports": [
+        "reports/intel_danmu_CS2-FUT-Legacy_G1_2026-08-27.html",
+        "reports/intel_danmu_CS2-FUT-Legacy_G2_2026-08-27.html",
+        "reports/intel_danmu_CS2-FUT-Legacy_full_2026-08-27.html"
+      ],
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-28T00:41:00+08:00",
+      "start_time": "2026-08-27T14:30:00+00:00",
+      "final_result": "Legacy 2-0 FUT"
+    },
+    {
+      "id": "cs2-fal2-lvg-2026-08-27",
+      "slug": "cs2-fal2-lvg-2026-08-27",
+      "event_slug": "cs2-fal2-lvg-2026-08-27",
+      "date": "2026-08-27",
+      "teams": [
+        "Team Falcons",
+        "LVG"
+      ],
+      "league": "CS2 · BLAST Open Porto Group B",
+      "status": "未开始",
+      "memory_tier": "TRANSIENT"
+    },
+    {
+      "id": "2026-08-27_ns_fox",
+      "date": "2026-08-27",
+      "league": "LCK Play-In（BO5）",
+      "teams": [
+        "NS",
+        "BFX"
+      ],
+      "result_inferred": "BFX 3:1 NS（官方确认；G1 NS、G2-G4 BFX；四局，Over 3.5/Under 4.5）",
+      "key_signals": [
+        "NS 三局领先被翻（G2 63.5c/G3 61.5c/G4 77.5c 均归零）",
+        "BFX 让一追三",
+        "整场 NS 60.5c->0；BFX 落后强队低吸（~40c）到 100c",
+        "NS 领先不稳画像强化"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-ns-fox1-2026-08-27/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-27_lol-ns-fox1-2026-08-27_bfx.md"
+      ]
+    },
+    {
+      "id": "2026-08-24_dnsc_krxc",
+      "date": "2026-08-24",
+      "league": "LCK CL（BO5）",
+      "teams": [
+        "DNS.C",
+        "KRX.C"
+      ],
+      "result_inferred": "DNS.C 3:1 KRX.C（官方确认；G1/G2/G4 DNS.C、G3 KRX.C）",
+      "data_granularity": "10 分钟（CLOB 限制）",
+      "key_signals": [
+        "G2 DNS.C 39.5c 深水->100c 反超",
+        "G3 DNS.C 67.5c->0.1c 高位崩",
+        "G4 DNS.C 收下 3:1",
+        "整场 63.5c->98.9c"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-dnsc-drxc-2026-08-24/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-24_lol-dnsc-drxc-2026-08-24_dnsc.md"
+      ]
+    },
+    {
+      "id": "2026-08-24_foxy_hlec",
+      "date": "2026-08-24",
+      "league": "LCK CL（BO5）",
+      "teams": [
+        "BFX.Y",
+        "HLE.C"
+      ],
+      "result_inferred": "BFX.Y 3:0 HLE.C（官方确认；G1-G3 BFX.Y）",
+      "data_granularity": "10 分钟（CLOB 限制）",
+      "key_signals": [
+        "G2/G3 BFX.Y 深水 50c/42.5c 反超",
+        "整场 70.5c->100c 强势横扫"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-foxy-hle-2026-08-24/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-24_lol-foxy-hle-2026-08-24_foxy.md"
+      ]
+    },
+    {
+      "id": "2026-08-25_krxc_foxy",
+      "date": "2026-08-25",
+      "league": "LCK CL（BO5）",
+      "teams": [
+        "KRX.C",
+        "BFX.Y"
+      ],
+      "result_inferred": "KRX.C 3:1 BFX.Y（官方确认；G1/G3/G4 KRX.C、G2 BFX.Y）",
+      "data_granularity": "10 分钟（CLOB 限制）",
+      "key_signals": [
+        "G1/G4 KRX.C 深水 27.5c/26c->100c 双反转",
+        "G2 KRX.C 6c 归零",
+        "整场 30c->100c"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-drxc-foxy-2026-08-25/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-25_lol-drxc-foxy-2026-08-25_krxc.md"
+      ]
+    },
+    {
+      "id": "2026-08-28_navi_pain",
+      "date": "2026-08-28",
+      "league": "BLAST Open Porto（CS2）",
+      "teams": [
+        "NAVI",
+        "paiN"
+      ],
+      "result_inferred": "NAVI 2:0 paiN（Polymarket 结算仲裁；G1/G2 NAVI，第二局 NAVI 13-11 追分赢，整场 NAVI 99.95c）",
+      "gray_signals_count": 4,
+      "key_signals": [
+        "G2 paiN 一度领先（NAVI 19.5c 深水）-> NAVI 下半场 13-11 追分赢",
+        "弹幕\"NAVI 想送派\"（23:49）信号存在但未兑现",
+        "用户买整场 paiN 75U @23c 归零（灰信号整场外推反样本；对手 NAVI 赛前 84.5c 大热）",
+        "用户口述\"paiN 13-11\"方向已按结算修正"
+      ],
+      "data_files": [
+        "docs/data/snapshots/cs2-navi-pain-2026-08-28/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-29_cs2-navi-pain-2026-08-28_pain.md"
+      ],
+      "pending": "用户成交明细待核对"
+    },
+    {
+      "id": "cs2-aurora-dendele-2026-08-28",
+      "slug": "cs2-aurora-dendele-2026-08-28",
+      "event_slug": "cs2-aur1-dendel-2026-08-28",
+      "date": "2026-08-28",
+      "teams": [
+        "Aurora",
+        "DENDELE"
+      ],
+      "league": "CS2 · BLAST Open Porto 2026（败者组 R1）",
+      "status": "已结束",
+      "result_inferred": "Aurora 2:0 DENDELE（官方：Cache 13:7 / Mirage 16:12 OT；jimpphat 39-21/1.49 Rating；Aurora 败者组存活，DENDELE 淘汰第 13-16 名；灰信号 322/pix 中预警=观众质疑非结论）",
+      "streamers": [
+        "KICK gaules(gaules)",
+        "KICK eslcs(eslcs)"
+      ],
+      "danmu_count": 3307,
+      "gray_signals_count": 5,
+      "reports": [
+        "reports/intel_danmu_CS2-Aurora-DENDELE_full_2026-08-28.html"
+      ],
+      "pending": "已结束（Liquipedia+HLTV+多源战报）；弹幕 Kick gaules 单源、虎牙缺采=缺口；Liquipedia 图二滞后（12:12）已按 16:12 OT 修正",
+      "memory_tier": "SHORT（局级）",
+      "updated_at": "2026-08-29T00:47+08:00",
+      "start_time": "2026-08-28T09:00:00+00:00"
+    },
+    {
+      "id": "2026-08-28_shft_th",
+      "date": "2026-08-28",
+      "league": "LEC Regular Season",
+      "teams": [
+        "SHFT",
+        "TH"
+      ],
+      "result_inferred": "SHFT 2:0 TH（官方确认；G1/G2 SHFT，Under 2.5 结算）",
+      "key_signals": [
+        "G1 SHFT 54c->79.5c 中段拉开",
+        "G2 SHFT 22c 深水->00:15 一分钟反转（+44c）->92.5c",
+        "整场 SHFT 45.5c->97.5c，G2 回撤 58.5c 为低吸点"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-shft-th-2026-08-28/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-29_lol-shft-th-2026-08-28_shft.md"
+      ],
+      "pending": ""
+    },
+    {
+      "id": "2026-08-28_vit_fnc",
+      "date": "2026-08-28",
+      "league": "LEC Regular Season",
+      "teams": [
+        "VIT",
+        "FNC"
+      ],
+      "result_inferred": "VIT 2:1 FNC（官方确认；G1 FNC、G2/G3 VIT，Over 2.5 打满）",
+      "key_signals": [
+        "G2 FNC 74.5c->7.5c 归零（用户追买 -160U 反样本）",
+        "G3 用户 150U 方向待确认（FNC 归零/VIT 获利，数据倾向 VIT）",
+        "整场 VIT 36.5c->99.9c"
+      ],
+      "data_files": [
+        "docs/data/snapshots/lol-vit-fnc-2026-08-28/"
+      ],
+      "reviews": [
+        "knowledge/reviews/2026-08-29_lol-vit-fnc-2026-08-28_vit.md"
+      ],
+      "pending": "G3 用户买入方向待确认"
+    }
+  ]
+}

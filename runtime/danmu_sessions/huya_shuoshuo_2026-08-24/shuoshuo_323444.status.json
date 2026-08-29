@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "shuoshuo_323444",
+  "url": "https://www.huya.com/323444",
+  "state": "offline_waiting",
+  "started_at": "2026-08-24T12:18:27+00:00",
+  "heartbeat_at": "2026-08-24T13:09:39+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "room_id": 323444,
+  "channel_id": 35184381630871,
+  "nickname": "解说硕硕",
+  "introduction": "LCK CL！HLE BFX！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-24T12:18:27+00:00"
+}

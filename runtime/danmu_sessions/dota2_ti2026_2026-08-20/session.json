@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "session": "dota2_ti2026_2026-08-20",
+  "title": "Dota2 TI2026 双直播间弹幕实时情报",
+  "state": "running",
+  "updated_at": "2026-08-20T15:16:59+00:00",
+  "report": "reports/intel_danmu_live_dota2_ti2026_2026-08-20.html",
+  "intel_json": "runtime/danmu_sessions/dota2_ti2026_2026-08-20/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "ti_stage1_660118",
+      "url": "https://www.huya.com/660118",
+      "state": "capturing",
+      "started_at": "2026-08-20T04:29:31+00:00",
+      "heartbeat_at": "2026-08-20T15:16:59+00:00",
+      "last_message_at": "2026-08-20T15:16:56+00:00",
+      "message_count": 11239,
+      "warning": null,
+      "error": null,
+      "room_id": 660118,
+      "channel_id": 1541541294,
+      "nickname": "TI2026舞台一",
+      "introduction": "TI2026 主赛事Day1",
+      "room_name": "TI2026 小组赛舞台一",
+      "page_live": true,
+      "checked_at": "2026-08-20T04:29:31+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "maybeee_211888",
+      "url": "https://www.huya.com/211888",
+      "state": "capturing",
+      "started_at": "2026-08-20T04:29:31+00:00",
+      "heartbeat_at": "2026-08-20T15:16:58+00:00",
+      "last_message_at": "2026-08-20T15:16:57+00:00",
+      "message_count": 26856,
+      "warning": null,
+      "error": null,
+      "room_id": 211888,
+      "channel_id": 2381472418,
+      "nickname": "Maybeee111",
+      "introduction": "国际邀请赛",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-20T04:29:31+00:00",
+      "restart_count": 0
+    }
+  ]
+}

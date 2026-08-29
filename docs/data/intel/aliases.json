@@ -1,0 +1,529 @@
+{
+ "schema_version": "1.0",
+ "description": "弹幕昵称 → 官方实体名 映射（地基层）。所有条目必须带证据来源/时间；未核实条目标 confidence=待核实，禁止猜名。",
+ "updated_at": "2026-08-26T14:03:24+00:00",
+ "aliases": [
+  {
+   "alias": "绿龙",
+   "official": "spirit",
+   "game": "cs2+dota2",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕(CS/DOTA 决赛)",
+   "note": "Team Spirit；'雪碧'同指"
+  },
+  {
+   "alias": "雪碧",
+   "official": "spirit",
+   "game": "dota2",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "同日 TI15+EWC 双冠"
+  },
+  {
+   "alias": "菊花",
+   "official": "legacy",
+   "game": "cs2",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-20",
+   "source": "弹幕+官方战报",
+   "note": "Legacy(巴西队)"
+  },
+  {
+   "alias": "黑豹",
+   "official": "furia",
+   "game": "cs2",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-20",
+   "source": "弹幕+官方战报",
+   "note": "FURIA"
+  },
+  {
+   "alias": "米人队",
+   "official": "mkoi",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-22",
+   "source": "弹幕+官方",
+   "note": "Movistar KOI；'米人的比赛'同指"
+  },
+  {
+   "alias": "超雄",
+   "official": "monki",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-19",
+   "source": "用户纠正(2026-08-19)",
+   "note": "WE 打野 Monki 的嘲讽词（莽/冲动），非外号"
+  },
+  {
+   "alias": "大菠萝",
+   "official": "diable",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-20",
+   "source": "弹幕+官方战报",
+   "note": "NS ADC Diable；'daboluo' 同指"
+  },
+  {
+   "alias": "泰永",
+   "official": "taeyoon",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "官方战报(虎扑)",
+   "note": "BFX ADC Taeyoon（女警10-0）"
+  },
+  {
+   "alias": "杰杰",
+   "official": "jiejie",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-19",
+   "source": "用户纠正",
+   "note": "EDG 打野 jiejie"
+  },
+  {
+   "alias": "道格拉斯",
+   "official": "daglas",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "TH 打野（G1 赵信/G2 剑魔打野）；'Daglas' 同指"
+  },
+  {
+   "alias": "isma",
+   "official": "isma",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "GX 打野"
+  },
+  {
+   "alias": "奥斯卡",
+   "official": "oscarinin",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "GX 上单（兰博大招两空）"
+  },
+  {
+   "alias": "jun",
+   "official": "jun",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "GX 辅助"
+  },
+  {
+   "alias": "G2初代ad",
+   "official": "flakked",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "GX AD Flakked（'gx这ad竟然还在打'）"
+  },
+  {
+   "alias": "老李",
+   "official": "faker",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-21",
+   "source": "弹幕",
+   "note": "T1 Faker（冰鸟 7-0）"
+  },
+  {
+   "alias": "多兰",
+   "official": "doran",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-21",
+   "source": "弹幕+官方",
+   "note": "T1 上单（连场负锚）"
+  },
+  {
+   "alias": "宙斯",
+   "official": "zeus",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕+官方战报",
+   "note": "HLE 上单（杰斯正锚）；'小宙'同指"
+  },
+  {
+   "alias": "王德",
+   "official": "wunder",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-21",
+   "source": "弹幕",
+   "note": "SK 上单 Wunder（纳尔依赖）"
+  },
+  {
+   "alias": "汤圆",
+   "official": "tangyuan",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕+官方",
+   "note": "LGD 中单（洛克绝活 15-2-6）"
+  },
+  {
+   "alias": "大超",
+   "official": "chovy",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-22",
+   "source": "弹幕",
+   "note": "GEN 中单；'超威'同指"
+  },
+  {
+   "alias": "塔赞",
+   "official": "tarzan",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "AL 打野"
+  },
+  {
+   "alias": "臭克斯",
+   "official": "shanks",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "AL 中单 Shanks；'香克斯'同指"
+  },
+  {
+   "alias": "批枪",
+   "official": "flandre",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "AL 上单 Flandre；'圣枪/老枪'同指"
+  },
+  {
+   "alias": "呼吸",
+   "official": "breathe",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "AL 上单（呼吸哥）"
+  },
+  {
+   "alias": "左手",
+   "official": "knight",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "BLG 中单"
+  },
+  {
+   "alias": "gala",
+   "official": "gala",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "官方战报",
+   "note": "JDG AD（无尽屠戮）"
+  },
+  {
+   "alias": "jiejie",
+   "official": "jiejie",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕+官方",
+   "note": "EDG 打野（登峰第一菜打野批评）"
+  },
+  {
+   "alias": "leave",
+   "official": "leave",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-23",
+   "source": "官方战报",
+   "note": "EDG AD"
+  },
+  {
+   "alias": "poby",
+   "official": "poby",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "LEC/LCK 选手（'跟poby学的'负面对照）"
+  },
+  {
+   "alias": "黑衣人",
+   "official": null,
+   "game": "lol",
+   "confidence": "待核实",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕",
+   "note": "TH 侧 G1 杰斯+G2 卢锡安使用者；'蒙面人'同指；疑似 TH 中/AD，ID 待官方"
+  },
+  {
+   "alias": "啪哒克",
+   "official": null,
+   "game": "lol",
+   "confidence": "待核实",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "'啪哒克/帕达克/Puduk'同指；被批 ADC；归属与官方 ID 待核实"
+  },
+  {
+   "alias": "少爷",
+   "official": null,
+   "game": "lol",
+   "confidence": "待核实",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "SHFT EZ 使用者（'少爷的ez/少爷ez太尽力了'）；与啪哒克是否同一人待核实"
+  },
+  {
+   "alias": "洛克",
+   "official": null,
+   "game": "lol",
+   "confidence": "待核实",
+   "evidence_ts": "2026-08-23",
+   "source": "弹幕+战报",
+   "note": "汤圆绝活英雄（'洛克15-2-6'）；英雄官方名待核（可能为英雄昵称）"
+  },
+  {
+   "alias": "shifter",
+   "official": "shft",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "Shifters；'shit/shift/shif'为嘲讽变体"
+  },
+  {
+   "alias": "sheo",
+   "official": "sheo",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "SHFT 打野（TH 旧将，'在TH的时候就是'）；'shoe'同指"
+  },
+  {
+   "alias": "canna",
+   "official": "canna",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KC 上单（G1 朗姆/G3 阿卡丽）"
+  },
+  {
+   "alias": "yike",
+   "official": "yike",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KC 打野（全输出赵信被批）"
+  },
+  {
+   "alias": "vincenzo",
+   "official": "vincenzo",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KRX.C 打野→临时 ADC（빈센조）"
+  },
+  {
+   "alias": "lancer",
+   "official": "lancer",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "DNS.C 上单（랜서）"
+  },
+  {
+   "alias": "enosh",
+   "official": "enosh",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "DNS.C ADC（애노쉬/에노시）"
+  },
+  {
+   "alias": "frog",
+   "official": "frog",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KRX.C 上单（프로그，顶替 Rich）"
+  },
+  {
+   "alias": "akaje",
+   "official": "akaje",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KRX.C 辅助（아카제）"
+  },
+  {
+   "alias": "winner",
+   "official": "winner",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KRX.C 打野（위너；勿与 1 军 Willer 混淆）"
+  },
+  {
+   "alias": "ddoiv",
+   "official": "ddoiv",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "DNS.C 打野（또이브）"
+  },
+  {
+   "alias": "flip",
+   "official": "flip",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "DNS.C 中单（플립）"
+  },
+  {
+   "alias": "lazyfeel",
+   "official": "lazyfeel",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KRX.C ADC（레이지필/레필；禁赛缺阵）"
+  },
+  {
+   "alias": "rich",
+   "official": "rich",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "KRX 1 军上单（리치；禁赛缺阵）"
+  },
+  {
+   "alias": "quantum",
+   "official": "quantum",
+   "game": "lol",
+   "confidence": "待核实",
+   "evidence_ts": "2026-08-24",
+   "source": "弹幕",
+   "note": "DNS.C 辅助（퀀텀）"
+  },
+  {
+   "alias": "bfx.y",
+   "official": "bfx.y",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK CL 二队 BFX.Y（BNK FearX Youth）；一队=BFX（BNK FearX），勿混"
+  },
+  {
+   "alias": "hle.c",
+   "official": "hle.c",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK CL 二队 HLE.C（Hanwha Life Esports Challengers）；一队=HLE（Hanwha Life Esports），勿混"
+  },
+  {
+   "alias": "dns.c",
+   "official": "dns.c",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK CL 二队 DNS.C（DN SOOPers Challengers）；一队=DNS（DN SOOPers），勿混"
+  },
+  {
+   "alias": "krx.c",
+   "official": "krx.c",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK CL 二队 KRX.C（Kiwoom DRX Challengers）；一队=KRX（Kiwoom DRX），勿混"
+  },
+  {
+   "alias": "bfx",
+   "official": "bfx",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK 一队 BNK FearX；二队=BFX.Y（BNK FearX Youth），勿混"
+  },
+  {
+   "alias": "hle",
+   "official": "hle",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK 一队 Hanwha Life Esports；二队=HLE.C，勿混"
+  },
+  {
+   "alias": "dns",
+   "official": "dns",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK 一队 DN SOOPers；二队=DNS.C，勿混（08-22 DNS 2:0 KRX 为 LCK 一队场次）"
+  },
+  {
+   "alias": "krx",
+   "official": "krx",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-24",
+   "source": "官方",
+   "note": "LCK 一队 Kiwoom DRX；二队=KRX.C，勿混（08-20 BRO/KRX、08-20 NS/KRX 为 LCK CL 二队场次）"
+  },
+  {
+   "alias": "鸡窝",
+   "official": "jiwoo",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-26",
+   "source": "弹幕(LCK KT vs BRO 系列)",
+   "note": "KT 替补 AD jiwoo；'鸡窝工作没了'等弹幕高频"
+  },
+  {
+   "alias": "泰迪",
+   "official": "teddy",
+   "game": "lol",
+   "confidence": "已确认",
+   "evidence_ts": "2026-08-26",
+   "source": "弹幕(LCK KT vs BRO 系列)",
+   "note": "BRO AD Teddy；'泰迪两大招牌 ez和飞机'"
+  }
+ ]
+}

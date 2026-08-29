@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>交易优势审计 · 收益率期望版 · 2026-08-21</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--warn:#a1420c;--warnbg:#fff1e8;--ok:#1a7f37;--okbg:#eaf6ee;--line:#e8e8ed;}
+*{box-sizing:border-box;margin:0;padding:0;}body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.55;padding:28px 16px 60px;}
+.wrap{max-width:920px;margin:0 auto;}h1{font-size:25px;font-weight:700;}.sub{color:var(--sub);font-size:13px;margin-top:6px;}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0;}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr);}}
+.stat{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+.stat b{display:block;font-size:24px;font-weight:700;}.stat span{font-size:12px;color:var(--sub);}
+.card{background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin:14px 0;}
+h2{font-size:16px;margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);}th{background:#fafafc;color:var(--sub);font-weight:600;font-size:11.5px;}tr:last-child td{border-bottom:none;}
+.warnbox{background:var(--warnbg);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--warn);}
+.okbox{background:var(--okbg);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ok);}
+.foot{margin-top:22px;color:var(--sub);font-size:11.5px;}
+</style></head><body><div class="wrap">
+<h1>交易优势审计（收益率期望版）</h1>
+<div class="sub">基于 knowledge/trades/ 历史 70 笔有投入+盈亏数据（08-04 至 08-15）· 更新 2026-08-21 · 每笔按收益率计算，非绝对金额</div>
+<div class="stats">
+<div class="stat"><b>52.9%</b><span>胜率（37/70）</span></div>
+<div class="stat"><b>+6.7%</b><span>每笔等权期望收益率</span></div>
+<div class="stat"><b>-6.2%</b><span>金额加权收益率（实际账户）</span></div>
+<div class="stat"><b>+1,772U</b><span>模拟：亏损限仓后总盈亏（原 -663U）</span></div>
+</div>
+<div class="card"><h2>核心数据</h2><table>
+<tr><th>口径</th><th>盈利笔</th><th>亏损笔</th><th>结论</th></tr>
+<tr><td>笔数</td><td>37</td><td>33</td><td>胜率 52.9%</td></tr>
+<tr><td>平均收益率</td><td>+75.1%</td><td>-70.0%</td><td>盈亏比 1.07</td></tr>
+<tr><td>平均投入</td><td>141U</td><td>167U</td><td>亏损笔投入大 18%</td></tr>
+<tr><td>合计</td><td>+3,928U</td><td>-4,591U</td><td>净 -663U</td></tr>
+</table></div>
+<div class="card"><h2>为什么"收益率期望正、账户却亏"</h2>
+<div class="okbox"><b>你的优势真实存在：</b>赢的时候平均 +75%（买入位置不差，多为深水/中位买进）；胜率 53% × 盈亏比 1.07 = 每笔正期望 +6.7%。</div>
+<div class="warnbox" style="margin-top:10px;"><b>被两个执行问题吞噬：</b>① 亏损笔仓位比盈利笔大（167U vs 141U，且含 1650U 级巨亏）；② 亏损笔平均 -70%（接近归零，极少止损）。金额加权后正期望翻负。</div>
+</div>
+<div class="card"><h2>行动规则（保优势三件事）</h2>
+<div class="okbox">① 亏损笔投入 ≤ 盈利笔均值（限仓）；② 止损线 -30%（把 -70% 压住）；③ 盈利时拿住（+75% 已很好，不提前砍）。<br>
+模拟验证：仅执行第①条（亏损限仓 141U），历史净值 -663U → +1,772U。</div>
+</div>
+<div class="foot">数据：knowledge/trades/*.json（78 笔，70 笔有效）· 结论：问题不在"找优势"，在"保护优势"· 每次下单前可回看本卡。</div>
+</div></body></html>

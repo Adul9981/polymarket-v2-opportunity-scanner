@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "slug": "lol-drxc-hle-2026-08-17",
+  "targets": {
+    "lol-drxc-hle-2026-08-17-game1|Kiwoom DRX Challengers": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.645,
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-drxc-hle-2026-08-17-game2|Kiwoom DRX Challengers": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "last_action_key": "skip_liquidity|buy|",
+      "last_pattern_labels": [
+        "C1_中位震荡",
+        "A5_W型双底"
+      ],
+      "high_water": 0.625
+    },
+    "lol-drxc-hle-2026-08-17|Kiwoom DRX Challengers": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.655,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-drxc-hle-2026-08-17-game1|Hanwha Life Esports Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.395,
+      "last_pattern_labels": [
+        "C1_中位震荡",
+        "A5_W型双底"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-drxc-hle-2026-08-17-game2|Hanwha Life Esports Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "last_action_key": "skip_liquidity|buy|",
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ],
+      "high_water": 0.405
+    },
+    "lol-drxc-hle-2026-08-17|Hanwha Life Esports Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.38,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    }
+  }
+}

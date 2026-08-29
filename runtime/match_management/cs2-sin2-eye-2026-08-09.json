@@ -1,0 +1,22 @@
+{
+  "slug": "cs2-sin2-eye-2026-08-09",
+  "title": "Counter-Strike: Sinners vs EYEBALLERS (BO3) - Esports World Cup Open Qualifier Play-Ins",
+  "league": "CS2 EWC",
+  "bo": 3,
+  "date": "2026-08-09",
+  "series": {
+    "games_played": 0,
+    "series_score": "",
+    "series_finished": false,
+    "note": "未开赛（endDate 今晚 23:00 北京时间）；流动性不足，决定不交易"
+  },
+  "games": [
+    {
+      "game": 1,
+      "game_status": "not_started",
+      "order_status": "no_opportunity",
+      "note": "未开赛；G1 预挂盘 spread 27c 流动性不足，按纪律不交易"
+    }
+  ],
+  "last_updated": "2026-08-09T09:10:44+00:00"
+}

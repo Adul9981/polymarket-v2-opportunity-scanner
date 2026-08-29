@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "we957_890001",
+  "url": "https://www.huya.com/890001",
+  "state": "offline_waiting",
+  "started_at": "2026-08-21T17:32:38+00:00",
+  "heartbeat_at": "2026-08-22T02:48:07+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "room_id": 890001,
+  "channel_id": 968316902,
+  "nickname": "WE957",
+  "introduction": "KT vs T1！老李大战BDD！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-21T17:32:38+00:00"
+}

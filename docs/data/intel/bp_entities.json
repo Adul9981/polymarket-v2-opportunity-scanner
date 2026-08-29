@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-08-21T22:30:00+08:00",
+  "description": "BP 环节主体留痕（教练优先）：BP 被集中质疑的教练/选手长期跟踪，再犯自动升级关注。BP 灰信号只作风险标注，不作假赛结论。",
+  "entities": [
+    {
+      "id": "we_coach",
+      "type": "coach",
+      "name": "WE 教练",
+      "team": "WE",
+      "bp_records": [
+        "we_edg_g1_jayce",
+        "we_edg_g2_trundle"
+      ],
+      "doubt_level": "高",
+      "notes": "两局 BP 被集中质疑（杰斯/巨魔），观众直指'从 BP 就在演''内定首胜怎么选也没用'；结果均输。倒推视角的重点观察对象。",
+      "status": "重点标记"
+    },
+    {
+      "id": "ns_coach",
+      "type": "coach",
+      "name": "NS 教练",
+      "team": "NS",
+      "bp_records": [
+        "dns_ns_g3_jayce"
+      ],
+      "doubt_level": "中",
+      "notes": "Kingen 一抢杰斯被观众提前判死刑，结果 DNS 3:0。",
+      "status": "关注"
+    },
+    {
+      "id": "gga_coach",
+      "type": "coach",
+      "name": "GGA 教练",
+      "team": "GGA",
+      "bp_records": [
+        "gga_bro_jayce"
+      ],
+      "doubt_level": "中",
+      "notes": "二队杰斯=灾难共识；结果 GGA 1:2 负。",
+      "status": "关注"
+    },
+    {
+      "id": "cube",
+      "type": "player",
+      "name": "cube（WE 上单）",
+      "team": "WE",
+      "bp_records": [
+        "we_edg_g1_jayce"
+      ],
+      "doubt_level": "高",
+      "notes": "杰斯历史 2 胜仍被硬选，观众质疑熟练度。",
+      "status": "重点标记"
+    },
+    {
+      "id": "monki",
+      "type": "player",
+      "name": "Monki（WE 打野，超雄）",
+      "team": "WE",
+      "bp_records": [
+        "we_edg_g2_trundle"
+      ],
+      "doubt_level": "高",
+      "notes": "对面无前排选巨魔被嘲'明牌票'；灰信号 816 条核心对象。",
+      "status": "重点标记"
+    },
+    {
+      "id": "kingen",
+      "type": "player",
+      "name": "Kingen（NS 上单）",
+      "team": "NS",
+      "bp_records": [
+        "dns_ns_g3_jayce"
+      ],
+      "doubt_level": "中",
+      "notes": "一抢杰斯被提前判死刑。",
+      "status": "关注"
+    },
+    {
+      "id": "k3",
+      "type": "player",
+      "name": "K3（GL 指挥）",
+      "team": "GL",
+      "bp_records": [
+        "cs_mouz_gl_selfpick"
+      ],
+      "doubt_level": "中",
+      "notes": "CS 图池/战术安排被质疑（'自选图打不过''指挥一坨'），GL 被淘汰。",
+      "status": "关注"
+    },
+    {
+      "id": "t1_coach",
+      "type": "coach",
+      "name": "T1 教练组",
+      "team": "T1",
+      "bp_records": [
+        "t1_kt_g3_anivia"
+      ],
+      "doubt_level": "中",
+      "notes": "G3 BP 时机质疑：Faker 冰鸟 7-0 战绩下'7-0的凤凰前面不选'（21:20-21:22 共 4 条）——观众认为该王牌 BP 应更早亮；结果 G3 赢（冰鸟应验）；BP 延迟/藏招是否常态待跨场观察。",
+      "status": "关注"
+    }
+  ]
+}

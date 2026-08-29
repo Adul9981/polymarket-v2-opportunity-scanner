@@ -1,0 +1,22 @@
+{
+  "slug": "cs2-1win-tl1-2026-08-09",
+  "title": "Counter-Strike: 1WIN vs Liquid (BO3) - Esports World Cup Open Qualifier Play-Ins",
+  "league": "CS2 EWC",
+  "bo": 3,
+  "date": "2026-08-09",
+  "series": {
+    "games_played": 0,
+    "series_score": "",
+    "series_finished": false,
+    "note": "未开赛（endDate 今晚 23:00 北京时间）；Liquid 整场 S2 盯盘中"
+  },
+  "games": [
+    {
+      "game": 1,
+      "game_status": "not_started",
+      "order_status": "none",
+      "note": "预挂盘未开赛；Liquid 整场 65.5c 热门侧，S2 盯盘中"
+    }
+  ],
+  "last_updated": "2026-08-09T11:04:23+00:00"
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=Danmaku capture daemon (Polymarket intel)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/danmu
+EnvironmentFile=/opt/danmu-pkg/rooms.env
+ExecStart=/bin/sh -c 'exec /opt/danmu/venv/bin/python /opt/danmu/tools/capture_server.py --session server --room $ROOMS'
+Restart=always
+RestartSec=5
+Environment=PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+
+[Install]
+WantedBy=multi-user.target

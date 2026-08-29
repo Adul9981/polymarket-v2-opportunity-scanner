@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "slug": "lol-dnsc-nsea-2026-08-18",
+  "targets": {
+    "lol-dnsc-nsea-2026-08-18-game1|DN SOOPers Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "spread_too_wide",
+      "last_action_key": "skip_liquidity|buy|",
+      "last_pattern_labels": [
+        "C1_中位震荡",
+        "A5_W型双底"
+      ],
+      "high_water": 0.45
+    },
+    "lol-dnsc-nsea-2026-08-18-game2|DN SOOPers Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "spread_too_wide",
+      "last_action_key": "skip_liquidity|buy|",
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ],
+      "high_water": 0.455
+    },
+    "lol-dnsc-nsea-2026-08-18|DN SOOPers Challengers": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.445,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-dnsc-nsea-2026-08-18-game1|Nongshim Esports Academy": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "last_action_key": "skip_liquidity|buy|",
+      "last_pattern_labels": [
+        "未知"
+      ],
+      "high_water": 0.585
+    },
+    "lol-dnsc-nsea-2026-08-18-game2|Nongshim Esports Academy": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "last_action_key": "skip_liquidity|buy|",
+      "last_pattern_labels": [
+        "未知"
+      ],
+      "high_water": 0.56
+    },
+    "lol-dnsc-nsea-2026-08-18|Nongshim Esports Academy": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.595,
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "huya_csboy_official",
+  "url": "https://www.huya.com/123321",
+  "state": "offline_waiting",
+  "started_at": "2026-08-27T20:19:05+00:00",
+  "heartbeat_at": "2026-08-28T02:36:14+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 123321,
+  "channel_id": 20540844,
+  "nickname": "CSBOY",
+  "introduction": "【直播】1点10 LVG-Falcons",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-27T20:19:06+00:00"
+}

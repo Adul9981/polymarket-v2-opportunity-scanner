@@ -1,0 +1,532 @@
+{
+  "meta": {
+    "total": 47008,
+    "active_users": 11692,
+    "window_utc": [
+      "2026-08-20 11:35",
+      "2026-08-20 15:16"
+    ],
+    "density_per_min": 212.9,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 367,
+      "pos": 48,
+      "neg": 38,
+      "samples": [
+        "没了 navi",
+        "回家吧navi",
+        "navi火力是真垃圾，这还不换人",
+        "navi废",
+        "navi要死了"
+      ]
+    },
+    "T1": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "玛卡则 T1 好牛B 的.....",
+        "上海T1"
+      ]
+    },
+    "WBG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "微博来的，谁是张元英"
+      ]
+    },
+    "WE": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "we are falcons",
+        "we are falcons"
+      ]
+    },
+    "BLG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "blg辣鸡玩意儿"
+      ]
+    },
+    "TES": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "tes真不是人",
+        "cs的tes，超级大陀螺"
+      ]
+    },
+    "Vitality": {
+      "mentions": 334,
+      "pos": 21,
+      "neg": 13,
+      "samples": [
+        "就像 小蜜蜂 和 VG 一样",
+        "复刻 小蜜蜂 和 VG 一样",
+        "小蜜蜂 和 VG 一样？",
+        "复刻 小蜜蜂 和 VG 一样",
+        "翻是不可能翻的，以为都有小蜜蜂韧性啊"
+      ]
+    },
+    "Spirit": {
+      "mentions": 1339,
+      "pos": 58,
+      "neg": 52,
+      "samples": [
+        "蒙古也就绿龙打的吃力",
+        "绿龙差一个大表哥",
+        "猎鹰也就能打打蒙古这种三线队了，碰到绿龙就老实了",
+        "猎鹰也就能打打蒙古这种三线队了，碰到绿龙就老实了",
+        "绿龙打谁不吃力？？？一不留神还会被抬走"
+      ]
+    },
+    "G2": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "长得像G2教练说saw",
+        "G2上软路由了",
+        "g2",
+        "g2等下是哪边啊",
+        "g2是哪边啊"
+      ]
+    },
+    "NAVI": {
+      "mentions": 367,
+      "pos": 48,
+      "neg": 38,
+      "samples": [
+        "没了 navi",
+        "回家吧navi",
+        "navi火力是真垃圾，这还不换人",
+        "navi废",
+        "navi要死了"
+      ]
+    },
+    "FaZe": {
+      "mentions": 1093,
+      "pos": 56,
+      "neg": 27,
+      "samples": [
+        "西西，faze接哪场",
+        "西西，faze接哪场",
+        "西西，faze接哪场",
+        "faze的含金量还在提高",
+        "faze的含金量还在提高"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 13,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "老鼠洗完头",
+        "老鼠洗完头",
+        "老鼠台一搜不就有了",
+        "老鼠台一搜不就有了",
+        "老鼠台一搜不就有了"
+      ]
+    },
+    "Liquid": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "液体呢  谁能给我解答一下",
+        "液体百科",
+        "液体百科有",
+        "液体百科才有",
+        "快来个指挥吧，妃子太缺指挥了，把坚哥还到液体去。"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 276,
+      "pos": 13,
+      "neg": 33,
+      "samples": [
+        "蒙古也就绿龙打的吃力",
+        "猎鹰也就能打打蒙古这种三线队了，碰到绿龙就老实了",
+        "fw蒙古给莪跪下fw蒙古给莪跪下",
+        "蒙古扫反炸鱼吧",
+        "fw蒙古给莪跪下fw蒙古给莪跪下"
+      ]
+    },
+    "AG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "上面下死命令了，跟ag没差多少，cs这边得拿分"
+      ]
+    },
+    "白鲨": {
+      "mentions": 4,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "看看白鲨打falcons",
+        "看猎鹰打白鲨",
+        "这是白鲨",
+        "白鲨还是牛逼"
+      ]
+    },
+    "EP": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "ep回家了"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "宗主1W了经济真好啊"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 15,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Faker来了",
+        "请faker",
+        "请了个飞科哈哈哈哈",
+        "faker",
+        "Faker"
+      ]
+    },
+    "Chovy": {
+      "mentions": 10,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我Chovy",
+        "我超威",
+        "别他妈daB了 我超威",
+        "别他妈打B了我超威",
+        "超威你老妈呢"
+      ]
+    },
+    "Niko": {
+      "mentions": 152,
+      "pos": 3,
+      "neg": 10,
+      "samples": [
+        "niko怎么死的",
+        "niko現在是真菜",
+        "nikokkk",
+        "niko指挥的",
+        "niko指挥的"
+      ]
+    },
+    "Apex": {
+      "mentions": 58,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "舞台这么近， 等下APEX 上台会不会被打",
+        "看apex和Niko测谎",
+        "Apex",
+        "跟apex打过吗",
+        "apex人怎么样"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 592,
+      "pos": 42,
+      "neg": 12,
+      "samples": [
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "单论狙，小孩第一，黑闪第二，载物第三，客观评价"
+      ]
+    },
+    "donk": {
+      "mentions": 1145,
+      "pos": 50,
+      "neg": 43,
+      "samples": [
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "Donk>Zywoo>魔了豆>Monesy，有认同的吗？",
+        "donk人称小京介[666]"
+      ]
+    },
+    "Twistzz": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "twistzz去死吧",
+        "twistzz？"
+      ]
+    },
+    "ropz": {
+      "mentions": 132,
+      "pos": 6,
+      "neg": 15,
+      "samples": [
+        "ropz play",
+        "ropz与老东家之战",
+        "ropz还在断后",
+        "总监刚才看ropz，然后ropz看总监",
+        "总监刚才看ropz，然后ropz看总监"
+      ]
+    },
+    "sh1ro": {
+      "mentions": 31,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "直接去绿龙把 sh1ro 和 tinr 换不玩了",
+        "西若打辅助",
+        "西若打辅助",
+        "sh1ro什么表情",
+        "科隆西若限时回归吗"
+      ]
+    },
+    "33": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "33",
+        "载大哥33安全箱都做出来了不得狠狠洲到底",
+        "33",
+        "33",
+        "33"
+      ]
+    },
+    "Yatoro": {
+      "mentions": 78,
+      "pos": 4,
+      "neg": 0,
+      "samples": [
+        "雨神呢",
+        "不愧是继雨神之后的手枪王。",
+        "这雅各布的手枪真和雨神的一样强吧，太准了。",
+        "雨神",
+        "雨神开始请神"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 26,
+    "samples": [
+      "32个人头",
+      "换的两个人都是4人头",
+      "蒙古没一个人头数过两位数的",
+      "杀了4个才10个人头",
+      "donk本质彩笔，人头全靠特",
+      "700 的大狙开玩笑呢",
+      "我要举报这个逼开挂700块的大局",
+      "这个马西西跟宗主开场前两局就这个人头数现在还是这个"
+    ]
+  },
+  "situation": {
+    "count": 292,
+    "samples": [
+      "土耳其人昨天比赛就证明了猎鹰被翻盘就是k3指挥的问题",
+      "亚洲比分了",
+      "见证史上最伟大的翻盘",
+      "gg",
+      "gg",
+      "gg",
+      "gg",
+      "gg"
+    ]
+  },
+  "gray_signals": {
+    "count": 42,
+    "samples": [
+      "买了吧哈哈",
+      "买了没通知王德发",
+      "NV其他人，收钱了",
+      "牛掰，买了没给发哥说",
+      "都说了买了没通知德发",
+      "买了王德发当森破用",
+      "全队都买了 就发哥不知道 发哥要害他们破产",
+      "这不是故意送"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "14:26",
+      "count": 973,
+      "samples": [
+        "是区",
+        "能不能别喷宗÷了 每次打比赛都要涂脸容易吗",
+        "沙鹰杀完了",
+        "蜜蜂太人才了"
+      ]
+    },
+    {
+      "minute_utc": "14:19",
+      "count": 923,
+      "samples": [
+        "哈利一如既往的稳定",
+        "🚁💥🚁💥🚁💥",
+        "放包点啊",
+        "？？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "14:27",
+      "count": 864,
+      "samples": [
+        "牛杯",
+        "牛杯",
+        "载物基本功下滑太多了",
+        "牛杯"
+      ]
+    },
+    {
+      "minute_utc": "11:40",
+      "count": 726,
+      "samples": [
+        "菜b蒙古给我跪下",
+        "不爽",
+        "没意思不是熟悉的猎鹰了",
+        "拉完了"
+      ]
+    },
+    {
+      "minute_utc": "14:25",
+      "count": 726,
+      "samples": [
+        "前面的给我虎柱了",
+        "可是宗主让队友很舒服啊",
+        "为啥绿龙每次都有摊子呢",
+        "这么多领先关键局全白给，弱悲"
+      ]
+    },
+    {
+      "minute_utc": "14:10",
+      "count": 689,
+      "samples": [
+        "加油👏",
+        "牛逼6666666666666",
+        "喊加油",
+        "牛杯"
+      ]
+    },
+    {
+      "minute_utc": "14:16",
+      "count": 677,
+      "samples": [
+        "载物就这？",
+        "肯定怪mo，不来解说，害绿龙输",
+        "玩的什么",
+        "fywoo"
+      ]
+    },
+    {
+      "minute_utc": "13:50",
+      "count": 649,
+      "samples": [
+        "绿龙这个队夸不得",
+        "？？？？？？？？？？？？？？",
+        "猎鹰冠军了",
+        "害人精"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      1954
+    ],
+    [
+      "记得开心一点wx",
+      170
+    ],
+    [
+      "不想见你",
+      151
+    ],
+    [
+      "西门吹洞",
+      136
+    ],
+    [
+      "小虎牙-q5Fjx5MKCT",
+      129
+    ],
+    [
+      "吾十开锦绣",
+      122
+    ],
+    [
+      "化工專区泰達米爾",
+      112
+    ],
+    [
+      "随便你",
+      105
+    ]
+  ],
+  "sources": {
+    "csboy_123321": 31919,
+    "captainmo": 15089
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_123321",
+      "url": "https://www.huya.com/123321",
+      "state": "capturing",
+      "started_at": "2026-08-20T11:35:58+00:00",
+      "heartbeat_at": "2026-08-20T15:16:44+00:00",
+      "last_message_at": "2026-08-20T15:16:44+00:00",
+      "message_count": 31919,
+      "warning": null,
+      "error": null,
+      "room_id": 123321,
+      "channel_id": 10748220,
+      "nickname": "CSBOY",
+      "introduction": "【直播】猎鹰 Vs mongoz",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-20T11:35:58+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "captainmo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-08-20T11:35:58+00:00",
+      "heartbeat_at": "2026-08-20T15:16:44+00:00",
+      "last_message_at": "2026-08-20T15:16:44+00:00",
+      "message_count": 15089,
+      "warning": null,
+      "error": null,
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】Legacy-NAVI",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-20T11:35:58+00:00"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+TH vs GX · 赛前速览
+
+# TH vs GX · 赛前速览
+
+赛前速览 · 结合弹幕情报库既有数据自动生成 · 比赛开始后本页信息需以实际 BP/局势为准
+
+TH vs GX对阵
+LEC联赛
+2026-08-23日期
+lol-th-gx-2026-08-23Polymarket
+
+## 队伍 · TH
+
+- 基调：未记录
+- 信任：未定
+- 灰历史：无记录
+- 近期走势：样本不足
+
+### 选手
+
+- [](intel_profile_player_gideon.html)gideon（待确认）
+- [](intel_profile_player_daglas.html)daglas（打野）
+- [](intel_profile_player_tracyn.html)tracyn（上单）
+
+## 队伍 · GX
+
+- 基调：未记录
+- 信任：未定
+- 灰历史：无记录
+- 近期走势：样本不足
+
+### 选手
+
+- [](intel_profile_player_isma.html)isma（打野）
+- [](intel_profile_player_jun.html)jun（辅助）
+- [](intel_profile_player_flakked.html)flakked（ADC）
+- [](intel_profile_player_oscarinin.html)oscarinin（上单）
+
+## 相关英雄锚点（两队）
+暂无两队直接相关的英雄锚点。
+
+## 体系偏好
+暂无登记体系。
+
+## 联赛背景 · LEC
+
+- 灰风险：中-高
+- 特征：打满率 49.2%（G1/G2 赢家方向相反 ⟺ 打满，65/65 全对）；假赛/剧本疑似局集中（KC 卡时间质疑）；2026-08-21 SK-TH 两局灰信号 83 条指向 SK（输家）方向连续兑现；08-23 TH-GX：GX 2:0 横扫（Polymarket 价格收敛），TH 弱队三负锚集齐（杰斯/卢锡安无体系/剑魔打野）——'弱队杰斯判负'跨赛区规律再强化（唯一例外 Zeus）；MKOI 假赛质疑连续两日被提及（08-22 45 条 + 08-23 5 条）重点跟踪；LEC 大龙决策烂（'拿了大龙就逛街/送'）跨场规律候选；08-24 KC vs SHFT：榜首 KC 被垫底 SHFT 爆冷（G1 弹幕口径 SHFT 胜），灰信号高预警定向 KC（蛇女/女警明演 24 条，'被质疑方输球'兑现）——KC 卡时间+领先不推进跨场规律再样本（08-18 → 08-24）；'欧洲自古倒数第一吃第一'榜尾爆冷传统；蛇女版本锚本场反向（需叠加选手执行）；08-24 KC vs SHFT 系列 1:1 进行中（G1 SHFT 爆冷/G2 KC 马拉松扳平，Polymarket lol-shft-kc-2026-08-23 交叉）：KC 中单双局负锚（蛇女/瑞兹）+ 灰信号方向混合（G1 兑现/G2 未兑现）；'欧洲自古倒数第一吃第一'榜尾爆冷样本；08-24 KC 2:1 SHFT（官方，让一追二）：G1 榜首爆冷后逆转——灰信号高浓度定向 KC（~100 条）但方向整体未兑现（重要反例，入库 refuted）；KC 卡时间跨场规律实锤（三局 27+ 分钟）；'榜首输榜尾'G1 兑现但系列反转；SHFT 领先守不住画像
+
+## 历史交手
+暂无同对阵建档记录。
+
+## BP 看点 / 可验证悬念
+暂无锚点级看点。
+
+数据来源：docs/data/intel/（teams/players/champions/compositions/leagues/matches）· 生成：tools/build_intel_pregame.py · 灰信号纪律：观众质疑非结论。

@@ -1,0 +1,469 @@
+{
+  "meta": {
+    "total": 12651,
+    "active_users": 2500,
+    "window_utc": [
+      "2026-08-25 09:02",
+      "2026-08-25 13:12"
+    ],
+    "density_per_min": 50.6,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "等着吧，kc二队涛哥是次级第一上单，等着世一次血虐ldl",
+        "等着吧，kc二队涛哥是次级第一上单，等着世一次血虐ldl",
+        "等着吧，kc二队涛哥是次级第一上单，等着世一次血虐ldl"
+      ]
+    },
+    "Navi": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "感觉navi是会选人马的人"
+      ]
+    },
+    "T1": {
+      "mentions": 12,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "老张想看区王杯的意思是，他想体现自己T1粉丝的优越感",
+        "如果t1没进世界赛，可以搞一个",
+        "张神 左边ad是原t1打野吗",
+        "BFX这打野以前是不是T1的",
+        "这个萨勒芬妮不是t1二队的打野吗"
+      ]
+    },
+    "DNS": {
+      "mentions": 4,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "DNS吧",
+        "어제는 DNS 였으니까용",
+        "CK那边 DNS后面要把一队的打野换回来拿冠军了",
+        "CK选手质量就是比ldl好啊，你看dns二队打野上来之后很猛"
+      ]
+    },
+    "KT": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "季后赛入围不是明天吗kt🤡",
+        "在KT",
+        "不好意思，是kt打bro"
+      ]
+    },
+    "HLE": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这是一队比赛还是二队啊。昨天的hle都不是一队选手啊这是一队",
+        "这是一队比赛还是二队啊。昨天的hle都不是一队选手啊",
+        "这是一队比赛还是二队啊。昨天的hle都不是一队选手啊。",
+        "这是一队比赛还是二队啊。昨天的hle都不是一队选手啊"
+      ]
+    },
+    "GEN": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "都是我geng二队的玩具"
+      ]
+    },
+    "WBG": {
+      "mentions": 14,
+      "pos": 1,
+      "neg": 3,
+      "samples": [
+        "wbg又在被虐",
+        "wbg有小虎",
+        "WBG现在13楼，摸了20块，不然看得没劲",
+        "WBG现在13楼，摸了20块，不然看得没劲",
+        "可以去wbg了这包假赛的"
+      ]
+    },
+    "WE": {
+      "mentions": 13,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "你是有多看不起WE啊",
+        "we真不一定打得过",
+        "现在的we不是谁都可能输的吗",
+        "都TM次级去的we能厉害到哪去",
+        "we"
+      ]
+    },
+    "EDG": {
+      "mentions": 27,
+      "pos": 2,
+      "neg": 3,
+      "samples": [
+        "之前不是在edg",
+        "0909在EDG打过吧",
+        "edg现在有那些人",
+        "这个0909在EDG上过场，现在还在二队打啊，年不小了",
+        "edg"
+      ]
+    },
+    "BLG": {
+      "mentions": 18,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "blg谁上？文波吗",
+        "blg怎么没上文波",
+        "BLG稳定1个名额",
+        "blg还有上单[笑哭][笑哭]",
+        "次级最厉害的是不是BLG和TES"
+      ]
+    },
+    "TES": {
+      "mentions": 19,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "次级最厉害的是不是BLG和TES",
+        "tes加油",
+        "tes深井冰",
+        "二队tes还是独一档吧",
+        "tes这什么几把阵容"
+      ]
+    },
+    "IG": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "那年s赛半决赛在西班牙fpx打ig 还有和你的合影",
+        "这个岩雀我ig要了",
+        "wen是之前ig那个船长吗",
+        "wen是之前ig那个吗"
+      ]
+    },
+    "G2": {
+      "mentions": 8,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "昨天g2又吃",
+        "G2谁是韩国人",
+        "骚硕昨天g2赢了输了",
+        "昨天g2老吃家疼吗各位",
+        "人马带慎带球进场 也就g2可以输了"
+      ]
+    },
+    "NAVI": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "感觉navi是会选人马的人"
+      ]
+    },
+    "Liquid": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "液体百科都看不到这场赛事，这也太野鸡了"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "内蒙古一哥 老张"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "这亚索这把能打1w输出的啊纯菜b随便换个绝活都乱杀"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "世界第一ADC老李",
+        "世界第一ADC老李",
+        "说韩国假赛坐牢的，LCK老大Faker都在警司了"
+      ]
+    },
+    "Chovy": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "我超威",
+        "我超威，打龙你给我打好了呀",
+        "我chovy",
+        "世界赛坑超威的",
+        "小超威"
+      ]
+    },
+    "Zeus": {
+      "mentions": 10,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "宙斯是神王",
+        "宙斯把世一上让给bin哥了，你没看过短剧吗？",
+        "这个纳尔真的像宙斯。",
+        "杰斯真没赢过，除了宙斯",
+        "主播比宙斯强有感觉吗"
+      ]
+    },
+    "33": {
+      "mentions": 9,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "大33没压力",
+        "牛逼 又是33到了！ 精准！",
+        "33一到直接推平",
+        "33分钟吗",
+        "바텀 33인데"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 57,
+    "samples": [
+      "盘口局那边多那边死",
+      "看盘口呢，2哥",
+      "游戏可以输。人头+别给我输啊",
+      "左边辅助一看右边人头落后 马上就要送",
+      "人头永远不敢领先bfx哈哈哈",
+      "+7.5也很慌",
+      "左边这辅助玩个米利欧就负责送死然后抢人头，太变态了",
+      "+7.5很慌怎么办？"
+    ]
+  },
+  "situation": {
+    "count": 502,
+    "samples": [
+      "这小狐狸团战好臭",
+      "喜欢出门，最后一波在家都不是0",
+      "gg杰斯输了",
+      "杰斯来了 2-0了",
+      "第一把什么比分",
+      "2-0了",
+      "这不一波？",
+      "继续拿小龙"
+    ]
+  },
+  "gray_signals": {
+    "count": 174,
+    "samples": [
+      "ldl不是全是假赛吗",
+      "硕没有房管吗聊菠菜的封聊呀",
+      "上吧ez就是打假赛",
+      "这回怎么不演了",
+      "跟上把剧本一模一样兄弟们",
+      "故意不撞塔？",
+      "这ad绝对买了0-3",
+      "众所周知韩国假赛坐牢，但是从不查假赛，只要不查就是没有假赛"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "11:21",
+      "count": 410,
+      "samples": [
+        "听牌龙也没了",
+        "张狗比赛没看几天，一直在这早说早说早说，你说你…",
+        "바론 왜던지냐 얘네",
+        "文森佐太菜了"
+      ]
+    },
+    {
+      "minute_utc": "09:39",
+      "count": 265,
+      "samples": [
+        "不敢打架玩你妹的游戏 菜逼",
+        "感觉右边好菜啊",
+        "这杰斯打人真的没感觉啊",
+        "这是次级，富贵这种老帮菜谁要啊"
+      ]
+    },
+    {
+      "minute_utc": "11:28",
+      "count": 255,
+      "samples": [
+        "这塞拉斯差点反杀",
+        "小头坐不住了",
+        "龙没了",
+        "有没有人知道奇亚娜q吃不吃帝国"
+      ]
+    },
+    {
+      "minute_utc": "11:32",
+      "count": 242,
+      "samples": [
+        "못끝내",
+        "肉搏的神",
+        "akaje老师",
+        "早说了呀哼无敌"
+      ]
+    },
+    {
+      "minute_utc": "11:20",
+      "count": 232,
+      "samples": [
+        "哈哈哈 大表哥9我",
+        "翻",
+        "翻了",
+        "翻中翻。[扶额][扶额][扶额]"
+      ]
+    },
+    {
+      "minute_utc": "11:33",
+      "count": 211,
+      "samples": [
+        "사일 ㅈㅈ이야!!",
+        "KRXXXX",
+        "원딜 없어도 맨날지네 ㅋㅋㅋㅋ 걍 계속 져라",
+        "슬레이어는 집에 가자 ㅋㅋㅋㅋㅋㅋ"
+      ]
+    },
+    {
+      "minute_utc": "09:43",
+      "count": 210,
+      "samples": [
+        "이거 레전드다",
+        "막혔는데?",
+        "??",
+        "이러면안"
+      ]
+    },
+    {
+      "minute_utc": "11:15",
+      "count": 198,
+      "samples": [
+        "레오나가 잘햇네",
+        "压缩玩什么几把",
+        "完全披萨",
+        "亚索有啥用"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      305
+    ],
+    [
+      "거나다라다",
+      163
+    ],
+    [
+      "코봉뒤m억주",
+      160
+    ],
+    [
+      "Yooniiiiii",
+      159
+    ],
+    [
+      "zxy",
+      144
+    ],
+    [
+      "옵시매스",
+      134
+    ],
+    [
+      "리버풀팬판다",
+      120
+    ],
+    [
+      "아령하시요",
+      118
+    ]
+  ],
+  "sources": {
+    "we957_890001": 1932,
+    "remember_528222": 1063,
+    "shuoshuo_323444": 5234
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "we957_890001",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-08-25T15:46:19+00:00",
+      "heartbeat_at": "2026-08-25T22:55:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "EDG.Y 大战 TES.C",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-25T15:46:20+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "remember_528222",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-08-25T12:44:14+00:00",
+      "heartbeat_at": "2026-08-25T22:55:11+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[WSCI] LPL赛区资格赛",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-25T12:44:14+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "shuoshuo_323444",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-08-25T12:35:13+00:00",
+      "heartbeat_at": "2026-08-25T22:55:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "LDL世界赛预选赛！TES EDG！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-25T12:35:13+00:00"
+    }
+  ]
+}

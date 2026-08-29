@@ -1,0 +1,28 @@
+{
+  "slug": "lol-t1-gen-2026-08-16",
+  "title": "LoL: T1 vs Gen.G (BO3) - LCK Round 3-4 Legend Group",
+  "startTime": "2026-08-16T08:00:00Z",
+  "startDate": "2026-08-09T03:31:51Z",
+  "active": true,
+  "closed": false,
+  "markets": [
+    {
+      "slug": "lol-t1-gen-2026-08-16-game1",
+      "groupItemTitle": "Game 1 Winner",
+      "outcomes": ["T1", "Gen.G"],
+      "clobTokenIds": ["t1-token", "gen-token"],
+      "outcomePrices": ["0.72", "0.28"],
+      "active": true,
+      "closed": false
+    },
+    {
+      "slug": "lol-t1-gen-2026-08-16",
+      "groupItemTitle": "Match Winner",
+      "outcomes": ["T1", "Gen.G"],
+      "clobTokenIds": ["m-t1", "m-gen"],
+      "outcomePrices": ["0.68", "0.32"],
+      "active": true,
+      "closed": false
+    }
+  ]
+}

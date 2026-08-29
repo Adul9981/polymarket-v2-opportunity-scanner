@@ -1,0 +1,132 @@
+# 形态分类器 Golden Set（人工复核标准集）
+
+生成时间：2026-08-11T14:57:29.397026+00:00
+
+序列数：107。复核流程：逐行确认 labels 是否符合形态定义；确认后把
+review_status 改为 已复核，labels 有异议的在 note 里写修正建议。
+
+## 标签频率
+
+- B4_直线阴跌: 38
+- A2_中位U型反转: 20
+- A1_V型极值反转: 17
+- A3_折价修复: 14
+- 热门全程压制: 14
+- 未知: 10
+- B2_死亡螺旋: 5
+- A6_反弹确认: 4
+- A4_下狗整场反转: 4
+- A5_W型双底: 3
+- C2_五五开开局碾压: 2
+
+## 逐序列
+
+| 快照 | 序列 | 标签 | 低点 | 高点 | 低点时间 | 复核状态 | 备注 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-08-05_cs2-tl1-fnc | game1_fnatic_price_5m.jsonl | B4_直线阴跌 | 0.0005 | 0.83 | 13:50 | 待复核 |  |
+| 2026-08-05_cs2-tl1-fnc | game1_liquid_price_5m.jsonl | A2_中位U型反转 | 0.165 | 0.9995 | 13:25 | 待复核 |  |
+| 2026-08-05_cs2-tl1-fnc | game2_fnatic_price_5m.jsonl | B4_直线阴跌 | 0.0005 | 0.445 | 14:40 | 待复核 |  |
+| 2026-08-05_cs2-tl1-fnc | game2_liquid_price_5m.jsonl | A3_折价修复/热门全程压制 | 0.55 | 0.9995 | 14:05 | 待复核 |  |
+| 2026-08-05_cs2-tl1-fnc | moneyline_fnatic_price_5m.jsonl | B4_直线阴跌 | 0.0005 | 0.495 | 14:35 | 待复核 |  |
+| 2026-08-05_cs2-tl1-fnc | moneyline_liquid_price_5m.jsonl | A3_折价修复 | 0.505 | 0.9995 | 13:25 | 待复核 |  |
+| 2026-08-06_lol-we-al | game1_we_price_1m.jsonl | A1_V型极值反转 | 0.065 | 0.9995 | 13:58 | 待复核 |  |
+| 2026-08-06_lol-we-al | game2_we_price_1m.jsonl | A1_V型极值反转/A6_反弹确认 | 0.0065 | 0.9995 | 15:16 | 待复核 |  |
+| 2026-08-06_lol-we-al | moneyline_we_price_1m.jsonl | A2_中位U型反转/A4_下狗整场反转 | 0.135 | 0.9995 | 13:57 | 待复核 |  |
+| 2026-08-07_lol-blg-tes | game1_blg_price_1m.jsonl | B2_死亡螺旋/B4_直线阴跌 | 0.0005 | 0.955 | 13:32 | 待复核 |  |
+| 2026-08-07_lol-blg-tes | game1_tes_price_1m.jsonl | A1_V型极值反转/A6_反弹确认 | 0.045 | 0.9995 | 13:11 | 待复核 |  |
+| 2026-08-07_lol-blg-tes | game2_blg_price_1m.jsonl | B4_直线阴跌 | 0.0005 | 0.655 | 14:18 | 待复核 |  |
+| 2026-08-07_lol-blg-tes | game2_tes_price_1m.jsonl | A2_中位U型反转 | 0.345 | 0.9995 | 15:24 | 待复核 |  |
+| 2026-08-07_lol-blg-tes | moneyline_blg_price_1m.jsonl | B2_死亡螺旋/B4_直线阴跌 | 0.0005 | 0.855 | 14:18 | 待复核 |  |
+| 2026-08-07_lol-blg-tes | moneyline_tes_price_1m.jsonl | A2_中位U型反转/A4_下狗整场反转 | 0.145 | 0.9995 | 13:12 | 待复核 |  |
+| 2026-08-07_lol-fox1-bro2 | game1_bfx_price_1m.jsonl | B2_死亡螺旋/B4_直线阴跌 | 0.0005 | 0.985 | 10:51 | 待复核 |  |
+| 2026-08-07_lol-fox1-bro2 | game1_bro_price_1m.jsonl | A1_V型极值反转/A6_反弹确认 | 0.015 | 0.9995 | 10:49 | 待复核 |  |
+| 2026-08-07_lol-fox1-bro2 | game2_bfx_price_1m.jsonl | B4_直线阴跌 | 0.0005 | 0.595 | 11:49 | 待复核 |  |
+| 2026-08-07_lol-fox1-bro2 | game2_bro_price_1m.jsonl | 未知 | 0.405 | 0.9995 | 17:09 | 待复核 |  |
+| 2026-08-07_lol-fox1-bro2 | moneyline_bfx_price_1m.jsonl | B4_直线阴跌 | 0.0005 | 0.785 | 11:49 | 待复核 |  |
+| 2026-08-07_lol-fox1-bro2 | moneyline_bro_price_1m.jsonl | A2_中位U型反转/A4_下狗整场反转 | 0.215 | 0.9995 | 10:46 | 待复核 |  |
+| 2026-08-07_lol-hle-drxc | game1_hle_price_1m.jsonl | B4_直线阴跌 | 0.0005 | 0.545 | 05:37 | 待复核 |  |
+| 2026-08-07_lol-hle-drxc | game2_hle_price_1m.jsonl | A2_中位U型反转/A5_W型双底 | 0.165 | 0.9995 | 06:01 | 待复核 |  |
+| 2026-08-07_lol-hle-drxc | moneyline_hle_price_1m.jsonl | 未知 | 0.055 | 0.865 | 06:14 | 待复核 |  |
+| 2026-08-07_lol-we-tt | game1_tt_price_1m.jsonl | A2_中位U型反转 | 0.325 | 0.9995 | 09:31 | 待复核 |  |
+| 2026-08-07_lol-we-tt | game1_we_price_1m.jsonl | B4_直线阴跌 | 0.0005 | 0.675 | 10:11 | 待复核 |  |
+| 2026-08-07_lol-we-tt | moneyline_tt_price_1m.jsonl | A2_中位U型反转/A4_下狗整场反转 | 0.275 | 0.9995 | 09:31 | 待复核 |  |
+| 2026-08-07_lol-we-tt | moneyline_we_price_1m.jsonl | B4_直线阴跌 | 0.0005 | 0.725 | 12:07 | 待复核 |  |
+| cs2-ace1-van1-2026-08-07 | cs2-ace1-van1-2026-08-07_acend_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.595 | 0.9995 | 06:29 | 待复核 |  |
+| cs2-ace1-van1-2026-08-07 | cs2-ace1-van1-2026-08-07_vandulken_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.405 | 17:42 | 待复核 |  |
+| cs2-ace1-van1-2026-08-07 | game1_acend_price_1min.jsonl | 未知 | 0.465 | 0.9995 | 06:26 | 待复核 |  |
+| cs2-ace1-van1-2026-08-07 | game1_vandulken_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.535 | 16:59 | 待复核 |  |
+| cs2-ace1-van1-2026-08-07 | game2_acend_price_1min.jsonl | 未知 | 0.485 | 0.9995 | 06:26 | 待复核 |  |
+| cs2-ace1-van1-2026-08-07 | game2_vandulken_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.515 | 17:42 | 待复核 |  |
+| cs2-fnc-k271-2026-08-09 | moneyline_k27_price_1m.jsonl | A1_V型极值反转 | 0.06 | 1.0 | 01:08 | 待复核 |  |
+| cs2-fnc-k271-2026-08-09 | map2_k27_price_1m.jsonl | A1_V型极值反转 | 0.11 | 1.0 | 01:07 | 待复核 |  |
+| cs2-fnc-k271-2026-08-09 | map1_k27_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.43 | 00:10 | 待复核 |  |
+| cs2-fokus-par3-2026-08-07 | cs2-fokus-par3-2026-08-07_fokus_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.695 | 0.9995 | 17:10 | 待复核 |  |
+| cs2-fokus-par3-2026-08-07 | cs2-fokus-par3-2026-08-07_partizan_esport_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.305 | 18:10 | 待复核 |  |
+| cs2-fokus-par3-2026-08-07 | game1_fokus_price_1min.jsonl | A1_V型极值反转/A6_反弹确认 | 0.09 | 0.9995 | 17:14 | 待复核 |  |
+| cs2-fokus-par3-2026-08-07 | game1_partizan_esport_price_1min.jsonl | B2_死亡螺旋/B4_直线阴跌 | 0.0005 | 0.855 | 17:26 | 待复核 |  |
+| cs2-fokus-par3-2026-08-07 | game2_fokus_price_1min.jsonl | A3_折价修复 | 0.465 | 0.9995 | 16:19 | 待复核 |  |
+| cs2-fokus-par3-2026-08-07 | game2_partizan_esport_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.535 | 18:15 | 待复核 |  |
+| cs2-lone-pha-2026-08-07 | cs2-lone-pha-2026-08-07_levelone_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.225 | 17:40 | 待复核 |  |
+| cs2-lone-pha-2026-08-07 | cs2-lone-pha-2026-08-07_phantom_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.775 | 0.9995 | 06:26 | 待复核 |  |
+| cs2-lone-pha-2026-08-07 | game1_levelone_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.44 | 16:51 | 待复核 |  |
+| cs2-lone-pha-2026-08-07 | game1_phantom_price_1min.jsonl | 未知 | 0.565 | 0.9995 | 06:26 | 待复核 |  |
+| cs2-lone-pha-2026-08-07 | game2_levelone_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.505 | 17:41 | 待复核 |  |
+| cs2-lone-pha-2026-08-07 | game2_phantom_price_1min.jsonl | A3_折价修复 | 0.495 | 0.9995 | 16:03 | 待复核 |  |
+| cs2-shu1-nrg-2026-08-07 | cs2-shu1-nrg-2026-08-07_nrg_price_1min.jsonl | 未知 | 0.513 | 0.9995 | 19:46 | 待复核 |  |
+| cs2-shu1-nrg-2026-08-07 | cs2-shu1-nrg-2026-08-07_spirit_hu_price_1min.jsonl | 未知 | 0.0005 | 0.486 | 17:44 | 待复核 |  |
+| cs2-shu1-nrg-2026-08-07 | game1_nrg_price_1min.jsonl | C2_五五开开局碾压 | 0.44 | 0.9995 | 13:54 | 待复核 |  |
+| cs2-shu1-nrg-2026-08-07 | game1_spirit_hu_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.56 | 17:09 | 待复核 |  |
+| cs2-shu1-nrg-2026-08-07 | game2_nrg_price_1min.jsonl | C2_五五开开局碾压/A5_W型双底 | 0.45 | 0.9995 | 16:00 | 待复核 |  |
+| cs2-shu1-nrg-2026-08-07 | game2_spirit_hu_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.535 | 17:44 | 待复核 |  |
+| cs2-vael-og1-2026-08-07 | cs2-vael-og1-2026-08-07_og_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.775 | 0.9995 | 06:21 | 待复核 |  |
+| cs2-vael-og1-2026-08-07 | cs2-vael-og1-2026-08-07_vael_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.225 | 17:44 | 待复核 |  |
+| cs2-vael-og1-2026-08-07 | game1_og_price_1min.jsonl | 未知 | 0.49 | 0.9995 | 15:38 | 待复核 |  |
+| cs2-vael-og1-2026-08-07 | game1_vael_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.51 | 17:02 | 待复核 |  |
+| cs2-vael-og1-2026-08-07 | game2_og_price_1min.jsonl | 未知 | 0.48 | 0.9995 | 15:37 | 待复核 |  |
+| cs2-vael-og1-2026-08-07 | game2_vael_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.52 | 17:45 | 待复核 |  |
+| dota2-mouz-re-2026-08-11 | game2_re_price_1m.jsonl | A2_中位U型反转 | 0.27 | 1.0 | 21:14 | 待复核 |  |
+| dota2-mouz-re-2026-08-11 | moneyline_re_price_1m.jsonl | A1_V型极值反转 | 0.175 | 0.615 | 21:15 | 待复核 |  |
+| dota2-mouz-re-2026-08-11 | game1_re_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.55 | 20:45 | 待复核 |  |
+| dota2-pr1-mouz-2026-08-10 | moneyline_mouz_price_1m.jsonl | A1_V型极值反转 | 0.11 | 0.835 | 18:21 | 待复核 |  |
+| dota2-pr1-mouz-2026-08-10 | game2_mouz_price_1m.jsonl | A2_中位U型反转 | 0.185 | 1.0 | 18:22 | 待复核 |  |
+| dota2-pr1-mouz-2026-08-10 | game1_mouz_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.58 | 17:49 | 待复核 |  |
+| dota2-yes-lvlup1-2026-08-10 | moneyline_levelup_price_1m.jsonl | A1_V型极值反转 | 0.095 | 1.0 | 00:32 | 待复核 |  |
+| dota2-yes-lvlup1-2026-08-10 | game2_levelup_price_1m.jsonl | A2_中位U型反转 | 0.18 | 1.0 | 00:30 | 待复核 |  |
+| dota2-yes-lvlup1-2026-08-10 | game1_levelup_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.535 | 23:58 | 待复核 |  |
+| lol-cfo-gz-2026-08-09 | game3_cfo_price_1m.jsonl | A2_中位U型反转 | 0.35 | 0.925 | 19:27 | 待复核 |  |
+| lol-cfo-gz-2026-08-09 | game2_cfo_price_1m.jsonl | A2_中位U型反转 | 0.245 | 1.0 | 18:54 | 待复核 |  |
+| lol-dk-kt-2026-08-09 | game2_dk_price_1m.jsonl | A2_中位U型反转 | 0.37 | 1.0 | 17:13 | 待复核 |  |
+| lol-dk-kt-2026-08-09 | moneyline_dk_price_1m.jsonl | A2_中位U型反转 | 0.235 | 0.985 | 17:13 | 待复核 |  |
+| lol-dk-kt-2026-08-09 | game1_dk_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.585 | 16:34 | 待复核 |  |
+| lol-dnf-drx-2026-08-10 | game2_dns_price_1m.jsonl | A5_W型双底 | 0.195 | 0.995 | 18:35 | 待复核 |  |
+| lol-dnf-drx-2026-08-10 | moneyline_dns_price_1m.jsonl | A1_V型极值反转 | 0.115 | 1.0 | 18:35 | 待复核 |  |
+| lol-dnf-drx-2026-08-10 | game1_dns_price_1m.jsonl | B2_死亡螺旋 | 0.001 | 0.775 | 17:41 | 待复核 |  |
+| lol-dnf-drx-2026-08-10 | ou_over_price_1m.jsonl | A2_中位U型反转 | 0.185 | 1.0 | 18:35 | 待复核 |  |
+| lol-drxc-foxy-2026-08-11 | game2_drxc_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.705 | 17:29 | 待复核 |  |
+| lol-drxc-foxy-2026-08-11 | game1_drxc_price_1m.jsonl | A2_中位U型反转 | 0.295 | 1.0 | 16:16 | 待复核 |  |
+| lol-fnc-kc-2026-08-09 | game1_kc_price_1m.jsonl | A3_折价修复/热门全程压制 | 0.725 | 1.0 | 01:19 | 待复核 |  |
+| lol-fnc-kc-2026-08-09 | game2_kc_price_1m.jsonl | A3_折价修复/热门全程压制 | 0.66 | 1.0 | 02:14 | 待复核 |  |
+| lol-fnc-kc-2026-08-09 | moneyline_kc_price_1m.jsonl | 热门全程压制 | 0.645 | 1.0 | 08-05 15:40 | 待复核 |  |
+| lol-fox1-drx-2026-08-09 | game2_drx_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.615 | 20:36 | 待复核 |  |
+| lol-fox1-drx-2026-08-09 | moneyline_drx_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.565 | 20:36 | 待复核 |  |
+| lol-fox1-drx-2026-08-09 | handicap_drx_plus1_5_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.785 | 20:36 | 待复核 |  |
+| lol-gen-dnf-2026-08-10 | moneyline_dns_price_1m.jsonl | A1_V型极值反转 | 0.055 | 0.925 | 19:59 | 待复核 |  |
+| lol-gen-dnf-2026-08-10 | game1_dns_price_1m.jsonl | A1_V型极值反转 | 0.075 | 1.0 | 20:05 | 待复核 |  |
+| lol-gen-dnf-2026-08-10 | game2_dns_price_1m.jsonl | A2_中位U型反转 | 0.13 | 0.995 | 20:06 | 待复核 |  |
+| lol-hle1-dnf-2026-08-11 | moneyline_dns_price_1m.jsonl | A3_折价修复 | 0.185 | 0.755 | 15:32 | 待复核 |  |
+| lol-hle1-dnf-2026-08-11 | game1_dns_price_1m.jsonl | 热门全程压制 | 0.275 | 1.0 | 14:52 | 待复核 |  |
+| lol-hle1-dnf-2026-08-11 | game2_dns_price_1m.jsonl | 热门全程压制 | 0.275 | 1.0 | 02:54 | 待复核 |  |
+| lol-hle1-dnf-2026-08-11 | game3_dns_price_1m.jsonl | 热门全程压制 | 0.28 | 1.0 | 04:18 | 待复核 |  |
+| lol-hle1-gen-2026-08-10 | ou_over_price_1m.jsonl | A2_中位U型反转 | 0.225 | 0.995 | 15:16 | 待复核 |  |
+| lol-hle1-gen-2026-08-10 | moneyline_hle_price_1m.jsonl | A1_V型极值反转 | 0.115 | 1.0 | 15:15 | 待复核 |  |
+| lol-hle1-gen-2026-08-10 | game2_hle_price_1m.jsonl | A2_中位U型反转 | 0.215 | 1.0 | 15:16 | 待复核 |  |
+| lol-hle1-gen-2026-08-10 | game1_hle_price_1m.jsonl | B4_直线阴跌 | 0.001 | 0.61 | 14:45 | 待复核 |  |
+| lol-jdg-edg-2026-08-07 | game1_edward_gaming_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.285 | 08:08 | 待复核 |  |
+| lol-jdg-edg-2026-08-07 | game1_jd_gaming_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.715 | 0.9995 | 06:22 | 待复核 |  |
+| lol-jdg-edg-2026-08-07 | game2_edward_gaming_price_1min.jsonl | B4_直线阴跌 | 0.0005 | 0.275 | 09:07 | 待复核 |  |
+| lol-jdg-edg-2026-08-07 | game2_jd_gaming_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.725 | 0.9995 | 06:21 | 待复核 |  |
+| lol-jdg-edg-2026-08-07 | moneyline_edward_gaming_price_1min.jsonl | 未知 | 0.0005 | 0.18 | 09:03 | 待复核 |  |
+| lol-jdg-edg-2026-08-07 | moneyline_jd_gaming_price_1min.jsonl | A3_折价修复/热门全程压制 | 0.82 | 0.9995 | 07:56 | 待复核 |  |
+| lol-nsea-dkc-2026-08-11 | ou_over_price_1m.jsonl | A1_V型极值反转 | 0.055 | 1.0 | 20:18 | 待复核 |  |
+| lol-nsea-dkc-2026-08-11 | game2_dk_price_1m.jsonl | A1_V型极值反转 | 0.045 | 1.0 | 20:18 | 待复核 |  |
+| lol-nsea-dkc-2026-08-11 | moneyline_dk_price_1m.jsonl | A1_V型极值反转 | 0.015 | 1.0 | 20:18 | 待复核 |  |

@@ -1,0 +1,127 @@
+{
+  "input": "docs/forensics/data/e46m3/jeddah_prices.json",
+  "params": {
+    "input": "docs/forensics/data/e46m3/jeddah_prices.json",
+    "x": 10.0,
+    "entry_threshold": 0.02,
+    "fee_rate": 0.05,
+    "gas_usd": 0.05,
+    "slip_bps": 100,
+    "convert_fee_bps": 0,
+    "taker_rebate": 0.0,
+    "step_s": 60,
+    "max_stale_s": 900,
+    "budget_usd": 50.0,
+    "activity": "docs/forensics/data/e46m3/jeddah_activity.json",
+    "trades": "docs/forensics/data/e46m3/jeddah_trades.json",
+    "out_dir": null
+  },
+  "legs": 11,
+  "window": [
+    1786379532.0,
+    1786465872.0
+  ],
+  "sigmaP": {
+    "min": 0.989,
+    "max": 1.0835,
+    "mean": 1.0324711805555575,
+    "median": 1.0345,
+    "time_above": 1061,
+    "time_below": 0
+  },
+  "yes_side": {
+    "min_sump": 0.989,
+    "edge_per_x": 0.01100000000000001
+  },
+  "episodes": 31,
+  "rounds": 31,
+  "totals": {
+    "net": -18.863642,
+    "gross_edge": 8.315,
+    "friction": 27.1781,
+    "outlay": 3118.863642,
+    "taker_fees": 8.953642,
+    "gas": 1.55,
+    "convert_fee": 0.0,
+    "slip_cost": 16.701,
+    "roi_pct": -0.604824
+  },
+  "verdict": "non_positive",
+  "reality_check": {
+    "conversions_actual": {
+      "count": 13,
+      "count_in_backtest_window": 13,
+      "window": [
+        "2026-08-11 12:30:54Z",
+        "2026-08-11 16:26:18Z"
+      ]
+    },
+    "actual_buy_rounds": [
+      {
+        "ts": "2026-08-11 12:30:37Z",
+        "n_fills": 3,
+        "notional_usd": 61.1,
+        "shares": 65.05,
+        "avg_fill_price": 0.9393,
+        "sigmaP_at_grid": 1.0475
+      },
+      {
+        "ts": "2026-08-11 12:50:08Z",
+        "n_fills": 3,
+        "notional_usd": 27.52,
+        "shares": 38.4,
+        "avg_fill_price": 0.7167,
+        "sigmaP_at_grid": 1.06
+      },
+      {
+        "ts": "2026-08-11 14:53:31Z",
+        "n_fills": 3,
+        "notional_usd": 16.18,
+        "shares": 18.75,
+        "avg_fill_price": 0.8627,
+        "sigmaP_at_grid": 1.064
+      },
+      {
+        "ts": "2026-08-11 15:02:12Z",
+        "n_fills": 3,
+        "notional_usd": 45.64,
+        "shares": 66.79,
+        "avg_fill_price": 0.6833,
+        "sigmaP_at_grid": 1.0695
+      },
+      {
+        "ts": "2026-08-11 16:21:36Z",
+        "n_fills": 6,
+        "notional_usd": 9.52,
+        "shares": 11.76,
+        "avg_fill_price": 0.8093,
+        "sigmaP_at_grid": 1.059
+      },
+      {
+        "ts": "2026-08-11 16:25:10Z",
+        "n_fills": 3,
+        "notional_usd": 21.51,
+        "shares": 26.58,
+        "avg_fill_price": 0.8093,
+        "sigmaP_at_grid": 1.064
+      }
+    ]
+  },
+  "sensitivity": [
+    {
+      "slip_bps": 0,
+      "net_rebate0": -2.8392,
+      "net_rebate1": 6.765
+    },
+    {
+      "slip_bps": 50,
+      "net_rebate0": -12.8876,
+      "net_rebate1": -3.7142
+    },
+    {
+      "slip_bps": 100,
+      "net_rebate0": -18.8636,
+      "net_rebate1": -9.91
+    }
+  ]
+}

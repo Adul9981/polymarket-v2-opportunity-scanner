@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LNG vs WBG · 弹幕警报情报（2026-08-19）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed;--warn:#ff9500}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:840px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:23px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:4px}
+.meta{color:var(--sub);font-size:12px;margin-bottom:14px}
+.block{margin-bottom:16px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+ul{margin:0 0 8px 18px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid var(--warn);padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>LNG vs WBG · 弹幕警报情报</h1>
+<p class="sub">比赛：LPL 第三赛段组内赛（LNG vs WBG）· 数据源：虎牙官方赛事流(660000) + 米勒(149361) + 记得(rememberlol) · 数据窗口 15:12 ~ 15:39 · 比赛进行中</p>
+<div class="stats">
+<div class="stat"><div class="num">4,138</div><div class="lbl">弹幕总量</div></div>
+<div class="stat"><div class="num">30</div><div class="lbl">灰信号（本场）</div></div>
+<div class="stat"><div class="num">15:36</div><div class="lbl">密度峰值(301条/分)</div></div>
+<div class="stat"><div class="num">3/3</div><div class="lbl">采集健康</div></div>
+</div>
+
+<div class="warn"><b>当前最重要警报：观众将"减号（让分盘）"与 WB 的运营节奏绑定，并出现"不敢赢/让了/庄家指令"质疑。</b>15:28-15:38 官方流弹幕密集刷"杀减号/减号没了/微博也配开减号/这微博就是杀减号"，15:37 集中出现"右边不敢赢""微博主场不敢赢！""这让了?"，15:38 出现"lng 纯的任务队""lng 的目的就是按照庄家的指令打比赛"——盘口×灰信号共振是本场警报主线。</div>
+
+<div class="ok"><b>纪律声明：</b>以上均为观众主观质疑，只作风险标注与盘口对照素材，<b>不作假赛结论</b>；相关记录按标准写入 gray_signals 情报库。</div>
+
+<section class="card"><h2>一、采集健康状态</h2>
+<table>
+<tr><th>数据源</th><th>弹幕</th><th>状态</th><th>告警</th></tr>
+<tr><td>虎牙官方赛事流（660000）</td><td>2,344</td><td>capturing</td><td>无</td></tr>
+<tr><td>解说米勒（149361）</td><td>1,136</td><td>capturing</td><td>无</td></tr>
+<tr><td>记得（rememberlol）</td><td>367</td><td>capturing</td><td>无</td></tr>
+</table>
+<div class="meta">三路均无断线/假死告警，数据完整（run_danmu_session 托管自动重启）。</div>
+</section>
+
+<section class="card"><h2>二、灰信号警报（本场相关，30 条）</h2>
+<table>
+<tr><th>类型</th><th>条数</th><th>代表样本</th><th>集中时段</th></tr>
+<tr><td>不敢赢 / 让分质疑</td><td>20</td><td>"右边不敢赢""微博主场不敢赢！""这让了？""放一把吧微博"</td><td>15:28-15:38</td></tr>
+<tr><td>假赛 / 剧本</td><td>6</td><td>"故意送""假赛，畜生""故意演的，准备一波"</td><td>15:34-15:37</td></tr>
+<tr><td>庄家 / 任务</td><td>2</td><td>"lng 纯的任务队""lng 的目的就是按照庄家的指令打比赛"</td><td>15:37-15:38</td></tr>
+<tr><td>买了 / 吃菜</td><td>2</td><td>"你买了大头吗？这么急？""这 wbg 吃菜吧就"</td><td>15:28-15:31</td></tr>
+</table>
+<div class="meta">另识别到"小 CK 世纪假赛"等跨场话题（观众聊昨日 LCK CL），不计入本场警报，单独归类。</div>
+</section>
+
+<section class="card"><h2>三、盘口关联（警报主线）</h2>
+<ul>
+<li><b>"减号"（让分盘）密集讨论</b>："杀减号/减号没了/微博吃减号/我的微博减号怎么办"——观众认为 WB 在按让分盘节奏打，是灰信号与盘口最强绑定点</li>
+<li><b>+8.5</b>（让分数字盘）被弹幕重复提及</li>
+<li><b>48 / 4-8</b>：数字盘/人头差讨论</li>
+<li><b>"大头"</b>：人头盘方向质疑（"你买了大头吗"）</li>
+</ul>
+<div class="meta">要点：盘口数字（减号/+8.5/48/大头）与"不敢赢/让了"质疑同向出现，符合"灰数据 × 盘口共振"模式（与昨日 GGA vs BRO 一致）。</div>
+</section>
+
+<section class="card"><h2>四、密度异常（关键事件锚点）</h2>
+<ul>
+<li><b>15:36 峰值 301 条/分</b>：女警推进/关键团阶段，与"杀减号""不敢赢"质疑集中时段重合</li>
+<li>密度峰值 = 关键事件检测信号：后续可与本场盘口价格序列对照（待接入）</li>
+</ul></section>
+
+<section class="card"><h2>五、情报含义与后续观察点</h2>
+<ul>
+<li>若"减号/让分"质疑延续到终局，需核对官方人头差/让分结果——验证观众"杀减号"叙事是否兑现</li>
+<li>四点 GEN vs KT（LCK）开打后米勒/记得转台，官方流继续覆盖本场收尾</li>
+<li>本场警报已可作为"灰信号 × 盘口"样本入库（同昨日 GGA vs BRO 的 13.5 人头差模式）</li>
+</ul></section>
+
+<p class="note">数据说明：原始数据 docs/data/danmu/huya/2026-08-19_official_660000.jsonl、2026-08-19_mile_149361.jsonl、2026-08-19_remember_528222.jsonl；
+聚合情报 runtime/danmu_sessions/lpl_lck_2026-08-19/intel.json；会话页 reports/intel_danmu_live_lpl_lck_2026-08-19.html。
+灰信号纪律：观众质疑非结论，只作风险标注与盘口对照素材。</p>
+</div></body></html>

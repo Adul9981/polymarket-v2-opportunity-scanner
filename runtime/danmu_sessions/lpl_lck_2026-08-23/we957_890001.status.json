@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "we957_890001",
+  "url": "https://www.huya.com/890001",
+  "state": "offline_waiting",
+  "started_at": "2026-08-23T16:24:13+00:00",
+  "heartbeat_at": "2026-08-24T07:39:14+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "room_id": 890001,
+  "channel_id": 968316902,
+  "nickname": "WE957",
+  "introduction": "AL大战BLG决胜局！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-23T16:24:13+00:00"
+}

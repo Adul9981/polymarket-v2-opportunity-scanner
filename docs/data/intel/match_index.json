@@ -1,0 +1,2415 @@
+{
+  "updated_at": "2026-08-29",
+  "matches": [
+    {
+      "date": "2026-08-28",
+      "league": "LCK",
+      "teams": [
+        "BRO",
+        "BFX"
+      ],
+      "result": "BFX 3:2 BRO（官方+直播吧：G1 BFX / G2-G3 BRO / G4 BFX 逆转（Taeyoon 芸阿娜五杀、VicLa 发条三杀）/ G5 BFX 运营取胜（Clear 女刀）；BFX 晋级 LCK 季后赛）",
+      "report": "intel_danmu_LCK-BRO-BFX_full_2026-08-28.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-bro2-fox1-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "CS2",
+      "teams": [
+        "paiN",
+        "NAVI"
+      ],
+      "result": "NAVI 2:0 paiN（官方：G1 Nuke 13:9 / G2 Mirage 13:11；paiN 出局；灰信号剧本论/吃质疑未兑现）",
+      "report": "intel_danmu_CS2-paiN-NAVI_full_2026-08-28.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-navi-pain-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "CS2",
+      "teams": [
+        "Spirit",
+        "G2"
+      ],
+      "result": "Spirit 2:0 G2（官方：Dust2 13:6 / Cache 13:9；donk 31-23/1.45 Rating；Spirit 晋级淘汰赛，G2 掉败者组）",
+      "report": "intel_danmu_CS2-Spirit-G2_full_2026-08-28.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-g2-ts7-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "LEC",
+      "teams": [
+        "TH",
+        "SHFT"
+      ],
+      "result": "SHFT 2:0 TH（官方 gameWins；G1/G2 SHFT 胜；TH 淘汰；G2 杰克斯+小炮体系制胜）",
+      "report": "intel_danmu_LEC-TH-SHFT_G1_2026-08-28.html",
+      "detail": "match_lec-th-shft-2026-08-28.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ],
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "slug": "lec-th-shft-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "LPL",
+      "teams": [
+        "TT",
+        "IG"
+      ],
+      "result": "IG 3:0 TT（官方 gameWins 0/3：G1 约 24:08 / G2 约 24:05 / G3 约 19:45 速通；TheShy 上野体系+下路佳琪碾压；IG 晋级骑士之路，TT 淘汰无缘世界赛）",
+      "report": "intel_danmu_LPL-TT-IG_full_2026-08-28.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-tt-ig1-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "CS2",
+      "teams": [
+        "Aurora",
+        "DENDELE"
+      ],
+      "result": "Aurora 2:0 DENDELE（官方：Cache 13:7 / Mirage 16:12 OT；jimpphat 39-21/1.49 Rating；Aurora 败者组存活，DENDELE 淘汰第 13-16 名；灰信号 322/pix 中预警=观众质疑非结论）",
+      "report": "intel_danmu_CS2-Aurora-DENDELE_full_2026-08-28.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-aur1-dendel-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "LPL",
+      "teams": [
+        "EDG",
+        "NIP"
+      ],
+      "result": "NIP 3:0 EDG（官方 gameWins 3/0：G1 Care 蛇女+Guwon 大虫子 / G2 Guwon 琪亚娜 29:59 卡线 / G3 Guwon 龙女；NIP 晋级，EDG 淘汰；灰信号指向 EDG 侧=观众质疑非结论）",
+      "report": "intel_danmu_LPL-EDG-NIP_full_2026-08-28.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-edg-nip-2026-08-28"
+    },
+    {
+      "date": "2026-08-28",
+      "league": "LEC",
+      "teams": [
+        "VIT",
+        "FNC"
+      ],
+      "result": "未开（官方 01:15 CST）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "lec-vit-fnc-2026-08-28",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-27",
+      "league": "CS2",
+      "teams": [
+        "MOUZ",
+        "9z"
+      ],
+      "result": "MOUZ 2:0 9z（Liquipedia 官方：Cache 13:4 / Nuke 13:7；弹幕共识'9z 纯三线队'兑现）",
+      "report": "intel_danmu_MOUZ-9z_2026-08-27.html",
+      "detail": "match_cs2-mouz-9z-2026-08-27.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-mouz-9z-2026-08-27"
+    },
+    {
+      "date": "2026-08-27",
+      "league": "CS2",
+      "teams": [
+        "Legacy",
+        "FUT Esports"
+      ],
+      "result": "Legacy 2:0 FUT（G1 Ancient 13-10；G2 Dust II 13-11；Polymarket 结算：Map1/Map2 Legacy 99.95c、Under 2.5 99.5c）",
+      "report": "",
+      "detail": "match_cs2-lgc-fut-2026-08-27.html",
+      "nodes": 0,
+      "slug": "cs2-lgc-fut-2026-08-27",
+      "node_labels": [
+        [
+          "G1 · BP 后",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G1 · 局中",
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "league": "CS2",
+      "teams": [
+        "Vitality",
+        "Inner Circle Esports"
+      ],
+      "result": "Inner Circle Esports 2:0 Vitality（Polymarket 结算：Map1/2 IC 99.95c、Under 2.5；Anubis 13:8 / Cache 16:13 加时）",
+      "report": "",
+      "detail": "match_cs2-vit-ice-2026-08-27.html",
+      "nodes": 0,
+      "slug": "cs2-vit-ice-2026-08-27",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G1 · BP 后",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "G1 · 局中",
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          "G1 · 结束",
+          [
+            0,
+            3
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "league": "LCK",
+      "teams": [
+        "Nongshim Red Force",
+        "BFX"
+      ],
+      "result": "BFX 3:1 NS（BFX 晋级；Polymarket 结算：G1 NS / G2-G4 BFX 99.95c、O/U3.5 Over、O/U4.5 Under）",
+      "report": "",
+      "detail": "match_lol-ns-fox1-2026-08-27.html",
+      "nodes": 0,
+      "slug": "lol-ns-fox1-2026-08-27",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G1 · BP 后",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "G1 · 局中",
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          "G1 · 结束",
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          "G2 · BP 后",
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          "G2 · 局中",
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          "G2 · 结束",
+          [
+            0,
+            6
+          ]
+        ],
+        [
+          "G3 · BP 后",
+          [
+            0,
+            7
+          ]
+        ],
+        [
+          "G3 · 局中",
+          [
+            0,
+            8
+          ]
+        ],
+        [
+          "G3 · 结束",
+          [
+            0,
+            9
+          ]
+        ],
+        [
+          "G4 · BP 后",
+          [
+            0,
+            10
+          ]
+        ],
+        [
+          "G4 · 局中",
+          [
+            0,
+            11
+          ]
+        ],
+        [
+          "G4 · 结束",
+          [
+            0,
+            12
+          ]
+        ],
+        [
+          "G5 · 局中",
+          [
+            0,
+            13
+          ]
+        ],
+        [
+          "G5 · 结束",
+          [
+            0,
+            14
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            15
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "league": "CS2",
+      "teams": [
+        "Team Falcons",
+        "LVG"
+      ],
+      "result": "",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "cs2-fal2-lvg-2026-08-27",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-27",
+      "league": "LCK",
+      "teams": [
+        "NS",
+        "BFX"
+      ],
+      "result": "BFX 3:1 NS（官方确认；G1 NS、G2-G4 BFX；四局，Over 3.5/Under 4.5）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-26",
+      "league": "LoL 其他",
+      "teams": [
+        "KT",
+        "BRO"
+      ],
+      "result": "KT Rolster 胜（Polymarket 结算）",
+      "report": "intel_danmu_LCK-KT-BRO_G3_2026-08-26.html",
+      "detail": "match_lol-kt-bro2-2026-08-26.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          "G5·情报",
+          [
+            5,
+            4
+          ]
+        ],
+        [
+          "G2·情报",
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          "G3·情报",
+          [
+            3,
+            4
+          ]
+        ]
+      ],
+      "slug": "lol-kt-bro2-2026-08-26"
+    },
+    {
+      "date": "2026-08-26",
+      "league": "CS2",
+      "teams": [
+        "FURIA",
+        "paiN"
+      ],
+      "result": "FURIA 2:0 paiN（Polymarket 结算：系列 FURIA / Under 2.5）",
+      "report": "intel_danmu_FURIA-paiN_2026-08-26.html",
+      "detail": "match_cs2-furia-pain-2026-08-26.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-furia-pain-2026-08-26"
+    },
+    {
+      "date": "2026-08-26",
+      "league": "CS2",
+      "teams": [
+        "NAVI",
+        "M80"
+      ],
+      "result": "M80 2:1 NAVI（Polymarket 结算：系列 M80 / NAVI -1.5 未过）",
+      "report": "",
+      "detail": "match_cs2-navi-m80-2026-08-26.html",
+      "nodes": 0,
+      "slug": "cs2-navi-m80-2026-08-26",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G1 · BP 后",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "G1 · 局中",
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          "G1 · 结束",
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          "G2 · BP 后",
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          "G2 · 局中",
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          "G2 · 结束",
+          [
+            0,
+            6
+          ]
+        ],
+        [
+          "G3 · BP 后",
+          [
+            0,
+            7
+          ]
+        ],
+        [
+          "G3 · 局中",
+          [
+            0,
+            8
+          ]
+        ],
+        [
+          "G3 · 结束",
+          [
+            0,
+            9
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            10
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "league": "CS2",
+      "teams": [
+        "Spirit",
+        "DENDELE"
+      ],
+      "result": "Spirit 2:0 DENDELE CS（Polymarket 结算：系列 Spirit 99.95c / Games Total Under 2.5）",
+      "report": "",
+      "detail": "match_cs2-ts7-dendel-2026-08-26.html",
+      "nodes": 0,
+      "slug": "cs2-ts7-dendel-2026-08-26",
+      "node_labels": [
+        [
+          "G1 · BP 后",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G1 · 局中",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "G1 · 结束",
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          "G2 · BP 后",
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          "G2 · 局中",
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          "G2 · 结束",
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          "整场复盘",
+          [
+            0,
+            6
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "league": "CS2",
+      "teams": [
+        "Spirit",
+        "DENDELE CS"
+      ],
+      "result": "Spirit 2:0 DENDELE CS（Polymarket 结算：系列 Spirit 99.95c / Games Total Under 2.5）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "cs2-ts7-dendel-2026-08-26",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-25",
+      "league": "LoL 其他",
+      "teams": [
+        "KRX.C",
+        "BFX.Y"
+      ],
+      "result": "Kiwoom DRX Challengers 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_lol-drxc-foxy-2026-08-25.html",
+      "nodes": 0,
+      "slug": "lol-drxc-foxy-2026-08-25",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G1 · BP 后",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "G1 · 局中",
+          [
+            0,
+            2
+          ]
+        ],
+        [
+          "G1 · 结束",
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          "G2 · BP 后",
+          [
+            0,
+            4
+          ]
+        ],
+        [
+          "G2 · 局中",
+          [
+            0,
+            5
+          ]
+        ],
+        [
+          "G2 · 结束",
+          [
+            0,
+            6
+          ]
+        ],
+        [
+          "G3 · BP 后",
+          [
+            0,
+            7
+          ]
+        ],
+        [
+          "G3 · 局中",
+          [
+            0,
+            8
+          ]
+        ],
+        [
+          "G3 · 结束",
+          [
+            0,
+            9
+          ]
+        ],
+        [
+          "G4 · BP 后",
+          [
+            0,
+            10
+          ]
+        ],
+        [
+          "G4 · 局中",
+          [
+            0,
+            11
+          ]
+        ],
+        [
+          "G4 · 结束",
+          [
+            0,
+            12
+          ]
+        ],
+        [
+          "v2",
+          [
+            0,
+            13
+          ]
+        ],
+        [
+          "g4_mid_v2",
+          [
+            0,
+            14
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            15
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LEC",
+      "teams": [
+        "KC",
+        "SHFT"
+      ],
+      "result": "KC 2:1 SHFT（官方确认：Polymarket lol-shft-kc-2026-08-23 全 settled；G1 SHFT/G2 KC/G3 KC 让一追二）",
+      "report": "intel_danmu_KC-SHFT_G2_2026-08-24.html",
+      "detail": "match_2026-08-24_kc_shft.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ],
+        [
+          "BP",
+          [
+            1,
+            0
+          ]
+        ],
+        [
+          "G2·情报",
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "slug": "lol-shft-kc-2026-08-23"
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LEC",
+      "teams": [
+        "FNC",
+        "NAVI"
+      ],
+      "result": "Natus Vincere 胜（Polymarket 结算）",
+      "report": "intel_danmu_LEC-FNC-NAVI_G1_2026-08-24.html",
+      "detail": "match_2026-08-24_fnc_navi_g1.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ],
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "slug": "lol-navi-fnc-2026-08-24"
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LCK CL",
+      "teams": [
+        "BFX.Y",
+        "HLE.C"
+      ],
+      "result": "BFX.Y 2:0 领先（G1/G2 99.95c 结算），G3 进行中（弹幕口径·官方待回填）",
+      "report": "intel_danmu_BFXY-HLEC_pre_2026-08-24.html",
+      "detail": "match_2026-08-24_bfxy_hlec.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "G2·情报",
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          "G3·情报",
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            50,
+            0
+          ]
+        ],
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-foxy-hle-2026-08-24"
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Acend",
+        "Phantom"
+      ],
+      "result": "Acend 胜（Polymarket 结算）",
+      "report": "intel_danmu_Acend-Phantom_2026-08-24.html",
+      "detail": "match_cs2-ace1-pha-2026-08-24.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-ace1-pha-2026-08-24"
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LCK",
+      "teams": [
+        "DNS",
+        "DRX"
+      ],
+      "result": "局中情报·结果待定（等整场复盘回填）",
+      "report": "intel_danmu_DNS-DRX_2026-08-24.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "QUAZAR",
+        "Nemiga"
+      ],
+      "result": "Nemiga 胜（Polymarket 结算）",
+      "report": "intel_danmu_QUAZAR-Nemiga_2026-08-24.html",
+      "detail": "match_cs2-qua1-nemi1-2026-08-24.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-qua1-nemi1-2026-08-24"
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LCK CL",
+      "teams": [
+        "DNS",
+        "KRX"
+      ],
+      "result": "局中情报·结果待定（等整场复盘回填）",
+      "report": "intel_danmu_DNS-KRX_2026-08-24.html",
+      "detail": "",
+      "nodes": 2,
+      "node_labels": [
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LCK",
+      "teams": [
+        "HLE",
+        "BFX"
+      ],
+      "result": "局中情报·结果待定（等整场复盘回填）",
+      "report": "intel_danmu_HLE-BFX_2026-08-24.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Morningstar",
+        "Rare Atom"
+      ],
+      "result": "Rare Atom 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-mornin-ra1-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-mornin-ra1-2026-08-24",
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Nuclear TigeRES",
+        "Spirit Academy"
+      ],
+      "result": "Nuclear TigeRES 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-ntr-tsa-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-ntr-tsa-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "5star",
+        "Kaleido Gaming"
+      ],
+      "result": "Kaleido Gaming 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-5s-kg-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-5s-kg-2026-08-24",
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LEC",
+      "teams": [
+        "GX",
+        "G2"
+      ],
+      "result": "GIANTX 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_lol-gx-g2-2026-08-24.html",
+      "nodes": 0,
+      "slug": "lol-gx-g2-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中 03:57",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "LoL 其他",
+      "teams": [
+        "DNS.C",
+        "KRX.C"
+      ],
+      "result": "DN SOOPers Challengers 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_2026-08-24_dns_krx_cl.html",
+      "nodes": 0,
+      "slug": "lol-dnsc-drxc-2026-08-24",
+      "node_labels": [
+        [
+          "G1 · 情报",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "100 Thieves",
+        "INOX Division"
+      ],
+      "result": "100 Thieves 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-100t-inox-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-100t-inox-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "The Huns Esports",
+        "Not A Squad Esports"
+      ],
+      "result": "The Huns Esports 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-the9-nas-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-the9-nas-2026-08-24",
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Insiders Esport",
+        "Esport Academy Copenhagen"
+      ],
+      "result": "Esport Academy Copenhagen 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-ins-eac-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-ins-eac-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "BakS eSports",
+        "Color"
+      ],
+      "result": "Color 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-baks-color-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-baks-color-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Eternal Fire",
+        "ex"
+      ],
+      "result": "Eternal Fire 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-ef1-ruby1-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-ef1-ruby1-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Color",
+        "Esport Academy Copenhagen"
+      ],
+      "result": "Color 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-color-eac-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-color-eac-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "ECHO",
+        "CYBERSHOKE Esports"
+      ],
+      "result": "CYBERSHOKE Esports 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "match_cs2-echo-cs1-2026-08-24.html",
+      "nodes": 0,
+      "slug": "cs2-echo-cs1-2026-08-24",
+      "node_labels": [
+        [
+          "赛前",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "局中快照",
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            0,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Acend",
+        "Nemiga"
+      ],
+      "result": "Nemiga 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "cs2-ace1-nemi1-2026-08-24",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "100 Thieves",
+        "Eternal Fire"
+      ],
+      "result": "Eternal Fire 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "cs2-100t-ef1-2026-08-24",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-24",
+      "league": "CS2",
+      "teams": [
+        "Nuclear TigeRES",
+        "CYBERSHOKE Esports"
+      ],
+      "result": "Nuclear TigeRES 胜（Polymarket 结算）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "cs2-ntr-cs1-2026-08-24",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-23",
+      "league": "LCK",
+      "teams": [
+        "T1",
+        "HLE"
+      ],
+      "result": "HLE 2:0 T1（官方双源：G1 直播吧战报 Zeus 杰斯单杀+Peyz 被针对 0 换 4；G2 直播吧 20:27 战报 \"Mid Gap！Zeka 辛德拉+Zeus 凯南无处不在 HLE 仅用 22 分钟横扫 T1\"）",
+      "report": "intel_danmu_T1-HLE_S0_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "S0",
+          [
+            60,
+            0
+          ]
+        ]
+      ],
+      "slug": null
+    },
+    {
+      "date": "2026-08-23",
+      "league": "LCK",
+      "teams": [
+        "BFX",
+        "NS"
+      ],
+      "result": "NS 2:1 BFX（官方双源确认：直播吧 20:27 \"NS 击败 BFX\" + 虎扑 G2 赛后 \"NS 1-1 BFX\"；G2 Diable 卢锡安 13 杀爆砍扳平、G3 Scout 辛德拉团战伤害拉满）",
+      "report": "intel_danmu_BFX-NS_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": null
+    },
+    {
+      "date": "2026-08-23",
+      "league": "LPL",
+      "teams": [
+        "EDG",
+        "JDG"
+      ],
+      "result": "JDG 2:1 EDG（官方三源确认：直播吧 19:49 战报 \"JDG2-1EDG\" + EDG 官博赛后战报 \"EDG 1:2 JDG\" + 弹幕 \"还是京东赢，京东打满的神\"）",
+      "report": "intel_danmu_EDG-JDG_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": null
+    },
+    {
+      "date": "2026-08-23",
+      "league": "LPL",
+      "teams": [
+        "TT",
+        "LGD"
+      ],
+      "result": "LGD 2:0 TT（三源确认：Polymarket 结算 LGD 1.0 + 直播吧战报横扫收官 + 弹幕；G1 洛克 15-2-6、G2 汤圆瑞兹+Heng 皇子）",
+      "report": "intel_danmu_TT-LGD_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-tt-lgd-2026-08-23"
+    },
+    {
+      "date": "2026-08-23",
+      "league": "CS2",
+      "teams": [
+        "Spirit",
+        "FUT"
+      ],
+      "result": "Spirit 3:1 FUT（官方确认：虎扑赛后帖 + 直播吧逐图战报；让一追三夺冠）",
+      "report": "intel_danmu_SPIRIT-FUT_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-23",
+      "league": "CS2",
+      "teams": [
+        "Legacy",
+        "Spirit"
+      ],
+      "result": "Spirit 2:0 Legacy（官方确认；整场 Spirit 100c，Under 2.5）",
+      "report": "intel_danmu_CS-绿龙-Legacy_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-23",
+      "league": "LEC",
+      "teams": [
+        "TH",
+        "GX"
+      ],
+      "result": "GX 2:0 TH（官方确认：Polymarket lol-th-gx-2026-08-23 closed 全市场 settled）",
+      "report": "intel_danmu_TH-GX_2026-08-23.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-th-gx-2026-08-23"
+    },
+    {
+      "date": "2026-08-23",
+      "league": "LPL",
+      "teams": [
+        "BLG",
+        "AL"
+      ],
+      "result": "BLG 2:1 AL（官方确认；G1 AL、G2/G3 BLG；整场 BLG 100c，Over 2.5）",
+      "report": "intel_danmu_BLG-AL_2026-08-23.html",
+      "detail": "match_lol-blg-al-2026-08-23.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LEC",
+      "teams": [
+        "SK",
+        "MKOI"
+      ],
+      "result": "SK 2:0 MKOI（官方确认；G1/G2 SK 赢，整场 SK 99.5c，Under 2.5）",
+      "report": "intel_danmu_SK-MKOI_2026-08-22.html",
+      "detail": "match_2026-08-22_sk_mkoi.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LCK",
+      "teams": [
+        "GEN",
+        "DK"
+      ],
+      "result": "DK 2:1 GEN（官方确认；许哥狐狸游龙三擒 Chovy）",
+      "report": "intel_danmu_GEN-DK_2026-08-22.html",
+      "detail": "match_2026-08-22_gen_dk.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LCK",
+      "teams": [
+        "DNS",
+        "KRX"
+      ],
+      "result": "DNS 2:0 KRX（官方确认；DNS 常规赛收官胜）",
+      "report": "intel_danmu_DNS-KRX_2026-08-22.html",
+      "detail": "match_2026-08-22_dns_krx.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LPL",
+      "teams": [
+        "WE",
+        "LGD"
+      ],
+      "result": "LGD 2:1 WE（官方确认；让一追二，LGD 晋级季后赛；Tangyuan 中野差距）",
+      "report": "intel_danmu_WE-LGD_2026-08-22.html",
+      "detail": "match_2026-08-22_we_lgd.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-we-lgd-2026-08-22"
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LPL",
+      "teams": [
+        "JDG",
+        "TES"
+      ],
+      "result": "JDG 2:0 TES（官方确认；GALA 烬 MVP；TES 锁定第三/JDG 进前四）",
+      "report": "intel_danmu_JDG-TES_2026-08-22.html",
+      "detail": "match_2026-08-22_jdg_tes.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LPL",
+      "teams": [
+        "IG",
+        "NIP"
+      ],
+      "result": "NIP 2:0 IG（官方确认；NIP 6-0 锁定涅槃组第一，全胜进骑士之路）",
+      "report": "intel_danmu_IG-NIP_2026-08-22.html",
+      "detail": "match_2026-08-22_ig_nip.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-22",
+      "league": "LEC",
+      "teams": [
+        "FNC",
+        "SHFT"
+      ],
+      "result": "FNC 2:0 SHFT（官方确认；SHFT 0-6 出局，FNC 3-3）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-21",
+      "league": "LCK",
+      "teams": [
+        "T1",
+        "KT"
+      ],
+      "result": "T1 2:1 KT（G1 KT、G2/G3 T1；官方已确认：Polymarket 结算 + 直播吧/KMIB 一致）",
+      "report": "intel_danmu_T1-KT_2026-08-21.html",
+      "detail": "match_2026-08-21_t1_kt.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-kt-t1-2026-08-21"
+    },
+    {
+      "date": "2026-08-21",
+      "league": "LCK",
+      "teams": [
+        "BRO",
+        "BFX"
+      ],
+      "result": "BFX 2:1 BRO（G1 BFX、G2 BRO、G3 BFX；官方已确认：Polymarket 结算一致）",
+      "report": "intel_danmu_BRO-BFX_2026-08-21.html",
+      "detail": "match_2026-08-21_bro_bfx.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-bro2-fox1-2026-08-21"
+    },
+    {
+      "date": "2026-08-21",
+      "league": "LEC",
+      "teams": [
+        "SK",
+        "TH"
+      ],
+      "result": "TH 2:0 SK（G1/G2 TH 胜；官方已确认：Polymarket 结算 + 官方赛果一致）",
+      "report": "intel_danmu_SK-TH_2026-08-21.html",
+      "detail": "match_2026-08-21_sk_th.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-th-sk-2026-08-21"
+    },
+    {
+      "date": "2026-08-21",
+      "league": "LPL",
+      "teams": [
+        "WE",
+        "AL"
+      ],
+      "result": "WE 2:1 AL（G1 AL、G2 WE、G3 WE 让一追二；官方已确认：Polymarket 结算 + 官方战报一致）",
+      "report": "intel_danmu_WE-AL_2026-08-21.html",
+      "detail": "match_2026-08-21_we_al.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-al-we-2026-08-21"
+    },
+    {
+      "date": "2026-08-21",
+      "league": "LPL",
+      "teams": [
+        "EDG",
+        "TT"
+      ],
+      "result": "EDG 2:0 TT（G1/G2 EDG；官方已确认：Polymarket 结算 + 官方战报一致）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "lol-edg-tt-2026-08-21",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-21",
+      "league": "LPL",
+      "teams": [
+        "TES",
+        "BLG"
+      ],
+      "result": "BLG 2:0 TES（G1/G2 BLG；官方已确认：Polymarket 结算 + 官方战报一致）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "lol-tes-blg-2026-08-21",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LCK",
+      "teams": [
+        "NS",
+        "DRX"
+      ],
+      "result": "NS 2:0 DRX（官方确认；整场 NS 99.95c）",
+      "report": "intel_danmu_NS-DRX_2026-08-20.html",
+      "detail": "match_2026-08-20_ns_drx.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-ns-drx-2026-08-20"
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LEC",
+      "teams": [
+        "NAVI",
+        "Legacy"
+      ],
+      "result": "Legacy（菊花）2:0 NAVI（官方确认；图一 Inferno、图二 Ancient 13-2 碾压；NAVI 9-16 出局）",
+      "report": "intel_danmu_NAVI-JUHUA_2026-08-20.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LPL",
+      "teams": [
+        "TT",
+        "JDG"
+      ],
+      "result": "JDG 2:1 TT（官方确认；G1 TT Junhao 潘森/Feather 钩爆，G2 JDG HongQ 阿卡丽，G3 JDG GALA 卡莎+V 神妮蔻 让一追二）",
+      "report": "intel_danmu_TT-JDG_2026-08-20.html",
+      "detail": "match_2026-08-20_tt_jdg.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-jdg-tt-2026-08-20"
+    },
+    {
+      "date": "2026-08-20",
+      "league": "Dota2",
+      "teams": [
+        "BoomBoys",
+        "Team Vision"
+      ],
+      "result": "Team Vision 2:1 BoomBoys（官方确认；VISION 晋级胜者组半决赛迎战 Team Spirit，BB 掉入败者组对阵 Iron Wing）",
+      "report": "intel_danmu_TEAMS-BB-PV_2026-08-20.html",
+      "detail": "",
+      "nodes": 2,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LEC",
+      "teams": [
+        "G2",
+        "FURIA"
+      ],
+      "result": "FURIA 2:1 G2（官方确认；图一 FURIA、图二 G2、图三 FURIA；Over 2.5 打满结算）",
+      "report": "intel_danmu_G2-FURIA_2026-08-20.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "cs2-g2-furia-2026-08-20"
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LCK",
+      "teams": [
+        "HLE",
+        "DK"
+      ],
+      "result": "HLE 2:0 DK（官方确认；G1/G2 HLE 赢，整场 HLE 99.95c）",
+      "report": "intel_danmu_HLE-DK_2026-08-20.html",
+      "detail": "match_2026-08-20_hle_dk.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-dk-hle1-2026-08-20"
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LCK",
+      "teams": [
+        "NS",
+        "KRX"
+      ],
+      "result": "NS 2:0 KRX（官方确认；G1 Scout 瑞兹兜底、G2 Scout 加里奥，Kingen 克烈；KRX 输后无缘 Play-In 竞争，NS 第九胜）",
+      "report": "intel_danmu_NS-KRX_2026-08-20.html",
+      "detail": "match_2026-08-20_ns_krx.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LPL",
+      "teams": [
+        "LGD",
+        "BLG"
+      ],
+      "result": "BLG 2:1 LGD（G1 LGD、G2/G3 BLG；整场 BLG 99.95c）",
+      "report": "intel_danmu_LGD-BLG_2026-08-20.html",
+      "detail": "match_2026-08-20_lgd_blg.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol"
+    },
+    {
+      "date": "2026-08-20",
+      "league": "Dota2",
+      "teams": [
+        "Iron Wing",
+        "Spirit"
+      ],
+      "result": "Team Spirit 2:0 Iron Wing（官方确认；TI2026 胜者组首轮，G1 44 分钟拉锯后横扫，Yatoro 影魔）",
+      "report": "intel_danmu_DOTA-IW-TS_2026-08-20.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-20",
+      "league": "LCK CL",
+      "teams": [
+        "BRO",
+        "KRX"
+      ],
+      "result": "KRX 2:1 BRO（G1 KRX、G2 BRO、G3 KRX；用户确认+弹幕多信号共振，官方赛程/VOD 待回补）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-19",
+      "league": "LEC",
+      "teams": [
+        "Astralis",
+        "G2"
+      ],
+      "result": "G2 2:1 Astralis（官方确认；A 队 Ancient 先胜，G2 Dust2/Inferno 连下两图晋级八强）",
+      "report": "intel_danmu_CS-ASTRALIS-G2_2026-08-19.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-19",
+      "league": "LPL",
+      "teams": [
+        "WBG",
+        "LNG"
+      ],
+      "result": "WBG 2:1 LNG（官方确认，LNG 六连败收官）——修正：非 2:0",
+      "report": "intel_danmu_WBG-LNG_2026-08-19.html",
+      "detail": "match_2026-08-19_wbg_lng.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-19",
+      "league": "LPL",
+      "teams": [
+        "WE",
+        "EDG"
+      ],
+      "result": "EDG 2:0 WE（官方确认）",
+      "report": "intel_danmu_WE-EDG_G2_2026-08-19.html",
+      "detail": "match_2026-08-19_we_edg.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ],
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ],
+        [
+          "G2·情报",
+          [
+            2,
+            4
+          ]
+        ]
+      ],
+      "slug": "lol-we-edg-2026-08-19"
+    },
+    {
+      "date": "2026-08-19",
+      "league": "CS2",
+      "teams": [
+        "Magic",
+        "FUT"
+      ],
+      "result": "FUT 2:1 magic（官方确认；magic 图一 Ancient 拿下，FUT 后两图逆转晋级八强）",
+      "report": "intel_danmu_CS-MAGIC-FUT_2026-08-19.html",
+      "detail": "",
+      "nodes": 1,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-19",
+      "league": "LPL",
+      "teams": [
+        "TES",
+        "AL"
+      ],
+      "result": "TES 2:1 AL（官方确认）",
+      "report": "intel_danmu_TES-AL_2026-08-19.html",
+      "detail": "match_2026-08-19_tes_al.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-19",
+      "league": "LCK",
+      "teams": [
+        "GEN",
+        "KT"
+      ],
+      "result": "GEN 2:1 KT（官方确认，让一追二）",
+      "report": "intel_danmu_GEN-KT_2026-08-19.html",
+      "detail": "match_2026-08-19_gen_kt.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "S0",
+          [
+            60,
+            0
+          ]
+        ],
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": "lol-gen-kt-2026-08-19"
+    },
+    {
+      "date": "2026-08-19",
+      "league": "LCK CL",
+      "teams": [
+        "DNS",
+        "BRO"
+      ],
+      "result": "BRO 2:0 DNS（官方确认；LCK Round 3-4 Rise Group，非 CL）",
+      "report": "intel_danmu_DNS-BRO_2026-08-19.html",
+      "detail": "match_2026-08-19_dns_bro.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "系列复盘",
+          [
+            99,
+            0
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-18",
+      "league": "LEC",
+      "teams": [
+        "KC",
+        "GX"
+      ],
+      "result": "KC 2:0 GX（官方确认，KC 7-0 不败）",
+      "report": "intel_danmu_KC-GX_G1_2026-08-18.html",
+      "detail": "match_2026-08-18_kc_gx.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "整场复盘",
+          [
+            98,
+            0
+          ]
+        ],
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-18",
+      "league": "KeSPA Cup",
+      "teams": [
+        "DNS",
+        "NS"
+      ],
+      "result": "DNS 3:0 NS（官方确认，DNS 夺冠）",
+      "report": "intel_danmu_DNS-NS_G1_2026-08-18.html",
+      "detail": "match_2026-08-18_dns_ns_kcup.html",
+      "nodes": 0,
+      "node_labels": [
+        [
+          "G2·情报",
+          [
+            2,
+            4
+          ]
+        ],
+        [
+          "G1·情报",
+          [
+            1,
+            4
+          ]
+        ]
+      ],
+      "slug": ""
+    },
+    {
+      "date": "2026-08-18",
+      "league": "LCK CL",
+      "teams": [
+        "DNS.C",
+        "NS"
+      ],
+      "result": "DNS 首局胜（弹幕口径）；系列打满 3 局，完整比分待官方 VOD 回补",
+      "report": "",
+      "detail": "match_2026-08-18_lckcl_dns_ns.html",
+      "nodes": 0,
+      "slug": "",
+      "node_labels": [
+        [
+          "G1 · 情报",
+          [
+            0,
+            0
+          ]
+        ],
+        [
+          "G2 · 情报",
+          [
+            0,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "league": "LCK CL",
+      "teams": [
+        "GGA",
+        "BRO"
+      ],
+      "result": "BRO 2:1 GGA（G1/G3 BRO、G2 GGA；官方确认：BSportFan 08-18 GGA 1-2 BRO.C，LCK CL ROUND 4）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "",
+      "no_intel": true
+    },
+    {
+      "date": "2026-08-17",
+      "league": "LEC",
+      "teams": [
+        "TH",
+        "Navi"
+      ],
+      "result": "NAVI 2:0 TH（官方确认）",
+      "report": "",
+      "detail": "",
+      "nodes": 0,
+      "node_labels": [],
+      "slug": "lol-navi-th-2026-08-17",
+      "no_intel": true
+    }
+  ]
+}

@@ -1,0 +1,547 @@
+{
+  "meta": {
+    "total": 34478,
+    "active_users": 7568,
+    "window_utc": [
+      "2026-08-20 08:14",
+      "2026-08-20 15:16"
+    ],
+    "density_per_min": 81.6,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 48,
+      "pos": 0,
+      "neg": 6,
+      "samples": [
+        "Navi有头还是比小两有说法的",
+        "t1双畜又在坑navi",
+        "t1双畜又在坑navi",
+        "Navi去卖东西",
+        "navi一按TAB看到这刷野数就要开始发狂了"
+      ]
+    },
+    "T1": {
+      "mentions": 152,
+      "pos": 4,
+      "neg": 15,
+      "samples": [
+        "卵王离开T1就是一坨",
+        "t1还好换了胚子，不然现在的t1和农心没什么区别",
+        "记住我的id，世界赛t1必定进不去，lpl必定夺冠",
+        "记住我的id，世界赛t1必定进不去，lpl必定夺冠",
+        "guma 的地位还不如在 t1"
+      ]
+    },
+    "DNS": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "现在的dk，不如dns",
+        "dns刚被bro2比0",
+        "又跟dns一样",
+        "dns一波翻",
+        "dns 有实力啊"
+      ]
+    },
+    "KT": {
+      "mentions": 30,
+      "pos": 0,
+      "neg": 2,
+      "samples": [
+        "ewc回来就赢了t1和kt",
+        "本质彩笔，和kt一样",
+        "爱明已经准备好kt队服了",
+        "dk还是机会大，kt太菜了",
+        "t1哥应该完蛋了。过不了kt。滚蛋了"
+      ]
+    },
+    "HLE": {
+      "mentions": 120,
+      "pos": 14,
+      "neg": 23,
+      "samples": [
+        "这把hle没了",
+        "弹幕戾气好大啊人家hle想怎么玩就怎么玩",
+        "hle的比赛是一点都不管下路",
+        "hle和blg大爹都在上路，",
+        "hle有门票了我相信会给的"
+      ]
+    },
+    "GEN": {
+      "mentions": 28,
+      "pos": 3,
+      "neg": 3,
+      "samples": [
+        "打线下路只有t1和gen能和dk碰一碰",
+        "现在DK真挺猛的，打HLE和GEN都不虚",
+        "hle输一小局gen就常规赛第一了",
+        "gen尺子上把玩的炸弹，什么下场。不是被鸡窝打成狗？",
+        "gen尺子上把玩的炸弹，什么下场。不信邪还尼玛玩，赶紧输"
+      ]
+    },
+    "WBG": {
+      "mentions": 47,
+      "pos": 1,
+      "neg": 4,
+      "samples": [
+        "id一遮，微博艾鸽",
+        "主播觉得bin哥今天微博发什么",
+        "主播觉得bin哥今天微博发什么",
+        "杨洋就是喜羊羊斌哥微博头像",
+        "krx这教练不就是把WBG带入涅槃的吗"
+      ]
+    },
+    "LNG": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "今年的京东去年的李宁",
+        "昨天那状态打不过lng",
+        "海涛得妖姬把lng骗得好惨，400万啊",
+        "之前说的跟李宁换AD，还他妈不换"
+      ]
+    },
+    "WE": {
+      "mentions": 111,
+      "pos": 8,
+      "neg": 4,
+      "samples": [
+        "昨天看we比赛给我看红温了",
+        "腿哥你一路WE就输",
+        "we也有吉祥物",
+        "我we就没吉祥物了吗",
+        "WE战队把人都气死了。"
+      ]
+    },
+    "EDG": {
+      "mentions": 35,
+      "pos": 1,
+      "neg": 4,
+      "samples": [
+        "把id遮了，就是we打edg",
+        "edg都打不赢  谈什么世界赛",
+        "要用，新的中单下场就是edg，一场不赢，昨天才赢一场",
+        "套套跟EDG本来就不应该出现在登峰里面的",
+        "edg  和 ttt"
+      ]
+    },
+    "BLG": {
+      "mentions": 380,
+      "pos": 23,
+      "neg": 28,
+      "samples": [
+        "hle和blg大爹都在上路，",
+        "世一上不是在blg吗",
+        "blg大家强",
+        "赶紧一波，别耽误我看blg虐泉",
+        "赶紧一波，别耽误我看blg虐泉"
+      ]
+    },
+    "TES": {
+      "mentions": 21,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "tes打野来了",
+        "TES后遗症",
+        "tes出品你就享受去吧",
+        "TES后遗症",
+        "这两队感觉也没比tes强多少呀 有感觉吗"
+      ]
+    },
+    "IG": {
+      "mentions": 37,
+      "pos": 1,
+      "neg": 3,
+      "samples": [
+        "ig必定夺冠",
+        "菜鸡互啄，让ig来虐一下就老实了",
+        "大米老师，敢问ig能进冒泡赛吗",
+        "真现实啊，自己本土选手随便串。IG上单串一下直接被罚",
+        "IG骑士之路是不是要打TT"
+      ]
+    },
+    "Vitality": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我也觉得 昨天晚上的小蜜蜂也是被我买死的 买的太大了"
+      ]
+    },
+    "Spirit": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "喝的大瓶装雪碧[拥抱][拥抱][拥抱][拥抱][拥抱][拥抱]"
+      ]
+    },
+    "G2": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "打完G2就不对了",
+        "G2也带过两次盾，都输了",
+        "G2克烈也带过两次盾，都输了",
+        "菠萝自从g2之后回来就拉了"
+      ]
+    },
+    "NAVI": {
+      "mentions": 48,
+      "pos": 0,
+      "neg": 6,
+      "samples": [
+        "Navi有头还是比小两有说法的",
+        "t1双畜又在坑navi",
+        "t1双畜又在坑navi",
+        "Navi去卖东西",
+        "navi一按TAB看到这刷野数就要开始发狂了"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 2,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "这阵容死老鼠真的活不了",
+        "死老鼠牛逼"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我张神一辈子？蒙古10万头牛和你开玩笑的？"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "直播间投票的只有1千多人，不是有1w人吗",
+        "领先1w跟tm均势一样"
+      ]
+    }
+  },
+  "players": {
+    "Guma": {
+      "mentions": 188,
+      "pos": 7,
+      "neg": 21,
+      "samples": [
+        "云在叠q，guma在等死",
+        "姑妈有屎？",
+        "姑妈越来越臭了",
+        "姑妈:落了",
+        "guma又被杀了"
+      ]
+    },
+    "Faker": {
+      "mentions": 32,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "臭鸡蛋本质运气好的UZI。抱着faker混了几个S冠",
+        "老李都有人黑成那样 鸡蛋不能黑了？今年哪一把像人",
+        "许哥现在真比faker强多了",
+        "许哥这波待遇就是老李的待遇",
+        "许哥这波待遇就是飞科的待遇，边线来就有"
+      ]
+    },
+    "Chovy": {
+      "mentions": 21,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "zeka打chovy也不虚啊",
+        "zeka前几天打chovy野不虚啊",
+        "zeka前几天打chovy也不虚啊",
+        "超威",
+        "我了超威"
+      ]
+    },
+    "Zeus": {
+      "mentions": 238,
+      "pos": 19,
+      "neg": 18,
+      "samples": [
+        "zeus这青钢影真臭",
+        "zeus",
+        "宙斯往死了叫人啊",
+        "宙斯本来可以不用死的",
+        "那位置要怎么guma，别一直骂大胖，宙斯比鸡蛋更值得帮"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "zywoo？",
+        "zywoo？",
+        "载物附体有感觉吗？"
+      ]
+    },
+    "m0NESY": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "你的小孩哥啊"
+      ]
+    },
+    "33": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "33大表都有",
+        "33"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 495,
+    "samples": [
+      "48一辈子",
+      "48份就粘好",
+      "4杯水了还6.5",
+      "就是做任务，杀人头而已",
+      "不送人头怎么来？？",
+      "不亏 干燥人头换复活甲",
+      "大龙没了 这人头改变时间线了",
+      "依旧48"
+    ]
+  },
+  "situation": {
+    "count": 1220,
+    "samples": [
+      "真的把把被单杀或者劣势 优势都没几次 作为粉丝都没得洗了",
+      "三人路平刀被压经济",
+      "玩个卡牌，经济不能领先已经废了",
+      "鸡蛋这比赛看下来 十局能c一局还是队友大优势蹭",
+      "许哥支援了一波",
+      "这不一波？",
+      "一碰就碎的团战，又弱悲了",
+      "许处玩卡牌经济还落后"
+    ]
+  },
+  "gray_signals": {
+    "count": 257,
+    "samples": [
+      "韩华已经锁定世界赛了，就看他怎么演了",
+      "瞎子不出黑切假赛",
+      "发达国家假赛要终身监禁死缓",
+      "卡纳维：支付宝到账，我买了不行吗？",
+      "看片绝对买了",
+      "这样送不是买了？",
+      "今年连普通观众都看得出这些狗都在按剧本打",
+      "假赛狗"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "08:21",
+      "count": 918,
+      "samples": [
+        "汉化这阵容 就没想着赢吧",
+        "navi被反烂了",
+        "老张呢",
+        "云路感觉胜率很低"
+      ]
+    },
+    {
+      "minute_utc": "10:32",
+      "count": 681,
+      "samples": [
+        "不会又杰斯进攻吧",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "minute_utc": "10:37",
+      "count": 462,
+      "samples": [
+        "2",
+        "？？？？？？",
+        "连",
+        "这广告真是卡着点弹啊"
+      ]
+    },
+    {
+      "minute_utc": "12:53",
+      "count": 363,
+      "samples": [
+        "谁开的、",
+        "原神净化了",
+        "你在放屁",
+        "绝对一波了"
+      ]
+    },
+    {
+      "minute_utc": "13:40",
+      "count": 360,
+      "samples": [
+        "永恩少一只",
+        "???????????",
+        "？？？？？？？？？？？？？？？",
+        "少爷的烬大招中过吗？"
+      ]
+    },
+    {
+      "minute_utc": "08:42",
+      "count": 328,
+      "samples": [
+        "最后一脚",
+        "变羊呢？",
+        "牛",
+        "这个瞎子牛逼"
+      ]
+    },
+    {
+      "minute_utc": "12:33",
+      "count": 317,
+      "samples": [
+        "舒服了",
+        "哈哈哈",
+        "单吃2次",
+        "nice"
+      ]
+    },
+    {
+      "minute_utc": "08:31",
+      "count": 316,
+      "samples": [
+        "来了，有了，翻了",
+        "大胖！！",
+        "翻了",
+        "黑蛋道歉"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      1799
+    ],
+    [
+      "岁月流年",
+      545
+    ],
+    [
+      "山海小子",
+      309
+    ],
+    [
+      "你好呀白鹿my",
+      243
+    ],
+    [
+      "你说什么？七夕搞事情！",
+      174
+    ],
+    [
+      "忘川难忆",
+      149
+    ],
+    [
+      "Anti matter",
+      131
+    ],
+    [
+      "粉笔擦",
+      128
+    ]
+  ],
+  "sources": {
+    "maomao_149346": 2087,
+    "shuoshuo_323444": 6847,
+    "we957_890001": 10521,
+    "mile_149361": 15023
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "maomao_149346",
+      "url": "https://www.huya.com/149346",
+      "state": "preflight",
+      "started_at": "2026-08-20T15:16:49+00:00",
+      "heartbeat_at": "2026-08-20T15:16:49+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "shuoshuo_323444",
+      "url": "https://www.huya.com/323444",
+      "state": "capturing",
+      "started_at": "2026-08-20T08:14:17+00:00",
+      "heartbeat_at": "2026-08-20T15:16:57+00:00",
+      "last_message_at": "2026-08-20T15:16:56+00:00",
+      "message_count": 6847,
+      "warning": null,
+      "error": null,
+      "room_id": 323444,
+      "channel_id": 1279512307519,
+      "nickname": "解说硕硕",
+      "introduction": "LCK！HLE DK！大胖儿回来了！！",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-20T08:14:17+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "we957_890001",
+      "url": "https://www.huya.com/890001",
+      "state": "capturing",
+      "started_at": "2026-08-20T08:14:17+00:00",
+      "heartbeat_at": "2026-08-20T15:16:57+00:00",
+      "last_message_at": "2026-08-20T15:16:19+00:00",
+      "message_count": 10521,
+      "warning": null,
+      "error": null,
+      "room_id": 890001,
+      "channel_id": 1001276654,
+      "nickname": "WE957",
+      "introduction": "4点DK vs HLE！许哥大战ZEKA",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-20T08:14:17+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "mile_149361",
+      "url": "https://www.huya.com/149361",
+      "state": "capturing",
+      "started_at": "2026-08-20T08:14:17+00:00",
+      "heartbeat_at": "2026-08-20T15:16:57+00:00",
+      "last_message_at": "2026-08-20T14:50:18+00:00",
+      "message_count": 15023,
+      "warning": null,
+      "error": null,
+      "room_id": 149361,
+      "channel_id": 1690094984,
+      "nickname": "解说米勒",
+      "introduction": "四点DK vs HLE ~!",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-20T08:14:17+00:00"
+    }
+  ]
+}

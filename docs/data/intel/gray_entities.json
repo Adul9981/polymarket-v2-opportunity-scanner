@@ -1,0 +1,679 @@
+{
+ "schema_version": "1.0",
+ "updated_at": "2026-08-29T00:59+08:00",
+ "description": "灰信号主体留痕库：涉事队伍/选手一旦被标记即长期跟踪，再犯自动升级关注。",
+ "principle": "凡走过必有痕迹：犯过一次的实体默认会再犯（观众叙事视角），每次新灰信号都回写本库并升级。",
+ "entities": [
+  {
+   "id": "we",
+   "type": "team",
+   "name": "WE",
+   "gray_records": [
+    "2026-08-19_we_edg"
+   ],
+   "total_signals": 816,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-19",
+   "max_severity": "高",
+   "keywords": [
+    "打钱",
+    "钱到账",
+    "收米",
+    "明演",
+    "开盘",
+    "吃菠菜",
+    "查赌",
+    "内定",
+    "剧本",
+    "没人查",
+    "下班",
+    "收菜",
+    "演"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "monki",
+   "type": "player",
+   "name": "Monki（WE 打野，弹幕嘲讽\"超雄\"=莽/冲动）",
+   "gray_records": [
+    "2026-08-19_we_edg",
+    "2026-08-21_we_al_g1",
+    "2026-08-22_we_lgd"
+   ],
+   "total_signals": 881,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-22",
+   "max_severity": "高",
+   "keywords": [
+    "打钱",
+    "钱到账",
+    "收米",
+    "明演",
+    "开盘",
+    "吃菠菜",
+    "查赌",
+    "内定",
+    "剧本",
+    "没人查",
+    "下班",
+    "收菜",
+    "演"
+   ],
+   "watch_notes": "凡走过必有痕迹：WE-EDG 816 条 + WE-AL G1 45 条，两次涉事，再犯升级（多次）",
+   "status": "重点标记（多次再犯·2/3 兑现）",
+   "doubt_level": "高（多次涉事）",
+   "notes": "；2026-08-21 WE-AL G1 再犯（超雄开演/带着送），多次涉事升级；08-22 WE-LGD 再犯兑现（WE 输系列 1:2）：跨场统计 08-19 兑现 / 08-21 未兑现 / 08-22 兑现"
+  },
+  {
+   "id": "th",
+   "type": "team",
+   "name": "TH",
+   "gray_records": [
+    "2026-08-17_th_navi"
+   ],
+   "total_signals": 248,
+   "first_seen": "2026-08-17",
+   "last_seen": "2026-08-17",
+   "max_severity": "中",
+   "keywords": [
+    "带任务",
+    "剧本",
+    "故意送",
+    "演",
+    "假赛"
+   ],
+   "watch_notes": "凡走过必有痕迹：TH 三次涉事（08-17 TH-Navi 248 条 / 08-21 SK-TH 29 条），'领先被翻+终局送'灰信号画像稳定，方向连续弱兑现",
+   "status": "重点标记",
+   "notes": "08-17 TH-Navi 248 条（TH 带任务/0:2 被横扫）；2026-08-21 SK-TH 灰信号实际指向 SK（误判已修正），TH 本场不新增"
+  },
+  {
+   "id": "wbg",
+   "type": "team",
+   "name": "WBG",
+   "gray_records": [
+    "2026-08-19_wbg_lng"
+   ],
+   "total_signals": 104,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-19",
+   "max_severity": "高",
+   "keywords": [
+    "不敢赢",
+    "杀减号",
+    "庄家指令",
+    "任务队",
+    "故意送",
+    "剧本",
+    "吃菜"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "lng",
+   "type": "team",
+   "name": "LNG",
+   "gray_records": [
+    "2026-08-19_wbg_lng"
+   ],
+   "total_signals": 104,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-19",
+   "max_severity": "高",
+   "keywords": [
+    "不敢赢",
+    "杀减号",
+    "庄家指令",
+    "任务队",
+    "故意送",
+    "剧本",
+    "吃菜"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "kc",
+   "type": "team",
+   "name": "KC",
+   "gray_records": [
+    "2026-08-18_kc_gx",
+    "2026-08-24_kc_shft_g1"
+   ],
+   "total_signals": 169,
+   "first_seen": "2026-08-18",
+   "last_seen": "2026-08-24",
+   "max_severity": "高",
+   "keywords": [
+    "任务联赛",
+    "演大时间",
+    "四场全卡",
+    "太假了",
+    "卡盘",
+    "明牌假赛",
+    "蛇女买了",
+    "吃低保",
+    "送一小局"
+   ],
+   "watch_notes": "凡走过必有痕迹（注意方向反例）：08-18 卡时间 69 条 → 08-24 系列三局 ~100 条定向（中单/队伍），G1 兑现但系列 KC 2:1 赢——高浓度灰信号≠必输；后续仍重点跟踪但不得仅凭浓度判方向",
+   "status": "重点标记（高浓度·方向反例）"
+  },
+  {
+   "id": "tes",
+   "type": "team",
+   "name": "TES",
+   "gray_records": [
+    "2026-08-19_tes_al"
+   ],
+   "total_signals": 49,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-19",
+   "max_severity": "中",
+   "keywords": [
+    "放水",
+    "演",
+    "安排剧本",
+    "拖时间",
+    "必赢"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "al",
+   "type": "team",
+   "name": "AL",
+   "gray_records": [
+    "2026-08-19_tes_al"
+   ],
+   "total_signals": 49,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-19",
+   "max_severity": "中",
+   "keywords": [
+    "放水",
+    "演",
+    "安排剧本",
+    "拖时间",
+    "必赢"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "ns",
+   "type": "team",
+   "name": "NS",
+   "gray_records": [
+    "2026-08-18_dns_ns_g1",
+    "2026-08-18_dns_ns_g2"
+   ],
+   "total_signals": 48,
+   "first_seen": "2026-08-18",
+   "last_seen": "2026-08-18",
+   "max_severity": "高",
+   "keywords": [
+    "做局",
+    "庄家",
+    "资本",
+    "演员",
+    "明演",
+    "假赛队",
+    "假赛退钱",
+    "纯假赛",
+    "给场外发信号",
+    "回溯冠军",
+    "打钱"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "dns",
+   "type": "team",
+   "name": "DNS",
+   "gray_records": [
+    "2026-08-18_dns_ns_g2",
+    "2026-08-22_dns_krx_g1"
+   ],
+   "total_signals": 55,
+   "first_seen": "2026-08-18",
+   "last_seen": "2026-08-22",
+   "max_severity": "高",
+   "keywords": [
+    "假赛退钱",
+    "纯假赛",
+    "给场外发信号",
+    "回溯冠军",
+    "打钱"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记",
+   "notes": "08-22 DNS-KRX：K杯冠军后被质疑剧本/低水被虐，灰信号高浓度"
+  },
+  {
+   "id": "bro",
+   "type": "team",
+   "name": "BRO",
+   "gray_records": [
+    "2026-08-18_gga_bro",
+    "2026-08-20_bro_krx_g3"
+   ],
+   "total_signals": 30,
+   "first_seen": "2026-08-18",
+   "last_seen": "2026-08-18",
+   "max_severity": "高",
+   "keywords": [
+    "明牌演",
+    "严查瑞兹",
+    "演员",
+    "买了",
+    "弱爆是暗号",
+    "纯假赛"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记",
+   "bp_records": [],
+   "notes": "；2026-08-20 G3 Naafiri 打野被指控故意送（选手 ID 待确认，见 krx_naafiri_jg）"
+  },
+  {
+   "id": "bro_ryze_pending",
+   "type": "player",
+   "name": "BRO 中单瑞兹",
+   "gray_records": [
+    "2026-08-18_gga_bro"
+   ],
+   "total_signals": 30,
+   "first_seen": "2026-08-18",
+   "last_seen": "2026-08-18",
+   "max_severity": "高",
+   "keywords": [
+    "明牌演",
+    "严查瑞兹",
+    "演员",
+    "买了",
+    "弱爆是暗号",
+    "纯假赛"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "gen",
+   "type": "team",
+   "name": "GEN",
+   "gray_records": [
+    "2026-08-19_gen_kt"
+   ],
+   "total_signals": 10,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-19",
+   "max_severity": "中",
+   "keywords": [
+    "故意输",
+    "演",
+    "剧本",
+    "挤下去"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记"
+  },
+  {
+   "id": "kt",
+   "type": "team",
+   "name": "KT",
+   "gray_records": [
+    "2026-08-19_gen_kt",
+    "2026-08-21_t1_kt_g2",
+    "2026-08-21_t1_kt_g3"
+   ],
+   "total_signals": 22,
+   "first_seen": "2026-08-19",
+   "last_seen": "2026-08-21",
+   "max_severity": "中",
+   "keywords": [
+    "故意输",
+    "演",
+    "剧本",
+    "挤下去"
+   ],
+   "watch_notes": "凡走过必有痕迹：已有灰信号记录，后续比赛出现同类质疑时预警等级自动提升一档",
+   "status": "重点标记",
+   "notes": "2026-08-21 T1-KT G1/G2：'kt太假了/假翻/kt很爱打假赛/kt明着送'，KT 输 G2; 2026-08-21 T1-KT：G2 'kt很爱打假赛/kt明着送'（KT 输 G2 弱兑现）+ G3 Perfect 鳄鱼/鸡窝烬/中单 '送' 质疑（KT 输 G3 弱兑现）"
+  },
+  {
+   "id": "dota2_33",
+   "type": "player",
+   "name": "33（Iron Wing 三号位）",
+   "gray_records": [
+    "2026-08-20_iron-wing_team-spirit_g1"
+   ],
+   "total_signals": 4,
+   "first_seen": "2026-08-20",
+   "last_seen": "2026-08-20",
+   "max_severity": "低",
+   "keywords": [
+    "假赛",
+    "严查",
+    "表演性人格"
+   ],
+   "watch_notes": "G1 收尾 4 条质疑全部来自同一直播间、4 名用户，未形成双源共振；触发点是买活/大招/守家决策争议，只作低级风险留痕，不是假赛证据",
+   "status": "重点标记"
+  },
+  {
+   "id": "krx_naafiri_jg",
+   "type": "player",
+   "name": "KRX Naafiri 打野（ID 待确认）",
+   "team": "KRX(待确认)",
+   "gray_records": [
+    "2026-08-20_bro_krx_g3"
+   ],
+   "doubt_level": "中-高",
+   "notes": "G3 被指控故意送（不惩戒/让龙/不开大）；凡走过必有痕迹待归人",
+   "status": "重点标记(待归人)"
+  },
+  {
+   "id": "dk",
+   "type": "team",
+   "name": "DK（Dplus KIA）",
+   "gray_records": [
+    "2026-08-20_dk_hle"
+   ],
+   "total_signals": 54,
+   "first_seen": "2026-08-20",
+   "last_seen": "2026-08-20",
+   "max_severity": "高",
+   "keywords": [
+    "假赛",
+    "剧本",
+    "演员",
+    "演",
+    "诱盘",
+    "杀猪",
+    "lck最假赛区"
+   ],
+   "watch_notes": "凡走过必有痕迹：DK 被灰信号标记（G1 翻盘+G2 段 54 条），后续出现同类质疑自动升级",
+   "status": "重点标记"
+  },
+  {
+   "id": "oner",
+   "type": "player",
+   "name": "Oner（T1 打野）",
+   "gray_records": [
+    "2026-08-21_t1_kt_g2"
+   ],
+   "total_signals": 10,
+   "first_seen": "2026-08-21",
+   "last_seen": "2026-08-21",
+   "max_severity": "中",
+   "keywords": [
+    "演",
+    "收钱",
+    "假赛",
+    "明着送",
+    "严查"
+   ],
+   "watch_notes": "T1 打野首次留痕（2026-08-21 T1-KT G2）：20:48-20:52 定向质疑集中爆发，结果 T1 胜、方向未兑现；凡走过必有痕迹：后续同类质疑自动升级观察",
+   "status": "重点标记（首次）",
+   "notes": "2026-08-21 G3 未再定向（多兰成为主要被嘲对象），保持观察"
+  },
+  {
+   "id": "perfect_kt_top",
+   "type": "player",
+   "name": "Perfect（KT 上单，'小完美'）",
+   "gray_records": [
+    "2026-08-21_t1_kt_g3"
+   ],
+   "total_signals": 8,
+   "first_seen": "2026-08-21",
+   "last_seen": "2026-08-21",
+   "max_severity": "中",
+   "keywords": [
+    "鳄鱼收钱",
+    "明着送",
+    "买了多少",
+    "送了几波"
+   ],
+   "watch_notes": "KT 上单首次留痕（T1-KT G3）：'鳄鱼收钱了，最强的两波他去送了/这鳄鱼买了多少/明着送'，KT 输 G3（方向弱兑现）；凡走过必有痕迹：后续同类质疑自动升级",
+   "status": "重点标记（首次）"
+  },
+  {
+   "id": "sk_th_orianna_mid",
+   "type": "player",
+   "name": "LEC 中单·发条（Orianna，归属待确认/疑 SK 侧）",
+   "team": "待确认",
+   "gray_records": [
+    "2026-08-21_sk_th"
+   ],
+   "total_signals": 6,
+   "first_seen": "2026-08-21",
+   "last_seen": "2026-08-21",
+   "max_severity": "中",
+   "keywords": [
+    "演员发条",
+    "发条绝对买了",
+    "R键坏了",
+    "不放大"
+   ],
+   "watch_notes": "SK-TH 第一局被两波质疑（23:21-22/23:40-42）：'发条不放大/演员/绝对买了'；TH 输 G1 方向弱兑现；待官方名单归人后升级",
+   "status": "重点标记（待归人）",
+   "notes": "SK-TH G1 被两波质疑（23:21-22/23:40-42）：'发条不放大/演员/绝对买了'；SK 输 G1 方向弱兑现；归属待官方名单"
+  },
+  {
+   "id": "wunder",
+   "type": "player",
+   "name": "Wunder（Team Heretics 上单）",
+   "team": "SK",
+   "gray_records": [
+    "2026-08-21_sk_th_g2"
+   ],
+   "total_signals": 3,
+   "first_seen": "2026-08-21",
+   "last_seen": "2026-08-21",
+   "max_severity": "中",
+   "keywords": [
+    "wunder是演员",
+    "演技逆天",
+    "没有纳尔直接输一半"
+   ],
+   "watch_notes": "SK-TH G2 被指'演员/演技逆天'（00:32:27/00:32:56），SK 输 G2 方向兑现；G2 永恩负锚点应验（无纳尔输一半）——凡走过必有痕迹 2026-08-22 修正归属：TH 上单（非 SK）",
+   "status": "重点标记（首次）"
+  },
+  {
+   "id": "sk",
+   "type": "team",
+   "name": "SK Gaming（SK）",
+   "gray_records": [
+    "2026-08-21_sk_th",
+    "2026-08-21_sk_th_g2"
+   ],
+   "total_signals": 83,
+   "first_seen": "2026-08-21",
+   "last_seen": "2026-08-21",
+   "max_severity": "高",
+   "keywords": [
+    "狗熊明演",
+    "左边收钱",
+    "到点就送",
+    "大优势sk还是水位不动",
+    "皇子明着演",
+    "wunder是演员",
+    "纯假赛",
+    "都买了对面赢"
+   ],
+   "watch_notes": "SK-TH 系列两局灰信号均指向 SK（83 条，G1 29 + G2 54），被质疑方两局均输——方向连续兑现；'大优势水位不动'盘口联动；再犯自动升级",
+   "status": "重点标记（首次）",
+   "notes": "2026-08-21 SK-TH：G1 领先被翻+G2 速通，灰信号连续指向 SK"
+  },
+  {
+   "id": "ig",
+   "type": "team",
+   "name": "IG",
+   "gray_records": [
+    "2026-08-22_ig_nip"
+   ],
+   "total_signals": 15,
+   "first_seen": "2026-08-22",
+   "last_seen": "2026-08-22",
+   "max_severity": "低-中",
+   "keywords": [
+    "控分",
+    "故意防水",
+    "演得好"
+   ],
+   "watch_notes": "IG-NIP：控分/故意输叙事（排名博弈），IG 0:2 输——方向与'不认真打'一致但控分 vs 实力待官方；凡走过必有痕迹",
+   "status": "关注"
+  },
+  {
+   "id": "lec_miren_team",
+   "type": "team",
+   "name": "LEC 米人队（队名待官方确认）",
+   "team": null,
+   "gray_records": [
+    "2026-08-23_sk_lec_s2"
+   ],
+   "total_signals": 40,
+   "first_seen": "2026-08-23",
+   "last_seen": "2026-08-23",
+   "max_severity": "高",
+   "keywords": [
+    "领先被翻",
+    "一样的剧本",
+    "送两波",
+    "带线",
+    "做任务",
+    "假赛"
+   ],
+   "watch_notes": "两局领先被翻+被疑演（Pattern A 双样本）：G1/G2 均'领先→被翻→输'，赛后归因集中（EZ/supa/jojo/奥拉夫）；凡走过必有痕迹——待官方队名归人后升级",
+   "status": "重点标记（待归人）"
+  },
+  {
+   "id": "mkoi",
+   "type": "team",
+   "name": "MKOI（Movistar KOI）",
+   "gray_records": [
+    "2026-08-22_sk_mkoi",
+    "2026-08-23_th_gx_cross"
+   ],
+   "total_signals": 50,
+   "first_seen": "2026-08-22",
+   "last_seen": "2026-08-23",
+   "max_severity": "高",
+   "keywords": [
+    "假赛",
+    "有任务",
+    "演",
+    "送",
+    "故意不开大"
+   ],
+   "watch_notes": "凡走过必有痕迹：MKOI 被灰信号标记（08-22 SK-MKOI 45 条，SK 2:0）；08-23 TH-GX 直播弹幕再次提及'听说昨晚MKOI又打假赛了'（5 条，跨场留痕）——连续两日被观众质疑，后续同类质疑自动升级",
+   "status": "重点标记"
+  },
+  {
+   "id": "kc_mid",
+   "type": "player",
+   "name": "KC 中单（换人疑云，ID 待确认）",
+   "gray_records": [
+    "2026-08-23_shft_kc"
+   ],
+   "total_signals": 15,
+   "first_seen": "2026-08-23",
+   "last_seen": "2026-08-23",
+   "max_severity": "高",
+   "keywords": [
+    "不想赢",
+    "演",
+    "菜",
+    "大龙逛街"
+   ],
+   "watch_notes": "凡走过必有痕迹：KC 中单被灰信号标记（G1 演/G2 未延续），且弹幕提及\"换中单\"，待官方名单核对后续比赛",
+   "status": "重点标记"
+  },
+  {
+   "id": "hle.c",
+   "type": "team",
+   "name": "HLE.C（韩华二队）",
+   "gray_records": [
+    "2026-08-24_bfxy_hlec_g2",
+    "2026-08-24_bfxy_hlec_g3"
+   ],
+   "total_signals": 78,
+   "first_seen": "2026-08-24",
+   "last_seen": "2026-08-24",
+   "max_severity": "高",
+   "keywords": [
+    "演",
+    "买了",
+    "内鬼",
+    "假赛",
+    "不敢赢",
+    "放一局",
+    "严查"
+   ],
+   "watch_notes": "2026-08-24 对 BFX.Y 系列：硕硕流 G2 皇子/巴德质疑簇（演24/买了21/内鬼13/假赛12 宽口径）+ G3 开局\"放一局\"叙事；G2 方向兑现（HLE.C 输）；观众质疑非结论，待系列结束回填",
+   "status": "新留痕·观察"
+  },
+  {
+   "id": "jackal",
+   "type": "player",
+   "name": "Jackal（HLE.C 打野，자칼）",
+   "gray_records": [
+    "2026-08-24_bfxy_hlec_g2",
+    "2026-08-24_bfxy_hlec_g3"
+   ],
+   "total_signals": 3,
+   "first_seen": "2026-08-24",
+   "last_seen": "2026-08-24",
+   "max_severity": "中",
+   "keywords": [
+    "의심（可疑）",
+    "皇子不开大",
+    "蔚迷路",
+    "买了"
+   ],
+   "watch_notes": "三局打野操作被批（嘉文不开大/蔚送）；SOOP 19:33\"자칼 얘 의심되는데 이번판도 똑같네\"轻灰信号 1 条；若系列后仍被同类质疑则升级",
+   "status": "观察"
+  },
+  {
+   "id": "edg_zdz",
+   "type": "player",
+   "name": "Zdz（EDG 上单，ZDZ）",
+   "team": "EDG",
+   "gray_records": [
+    "2026-08-28_lpl_edg_nip"
+   ],
+   "total_signals": 3,
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "max_severity": "中"
+  },
+  {
+   "id": "edg_leave",
+   "type": "player",
+   "name": "Leave（EDG 下路）",
+   "team": "EDG",
+   "gray_records": [
+    "2026-08-28_lpl_edg_nip"
+   ],
+   "total_signals": 4,
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "max_severity": "中"
+  },
+  {
+   "id": "dendele_luqueta",
+   "type": "staff",
+   "name": "Luquetá（DENDELE 管理层/老板，观众口径待官方核实）",
+   "team": "DENDELE",
+   "gray_records": [
+    "2026-08-28_cs2_aurora_dendele"
+   ],
+   "total_signals": 4,
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "max_severity": "中"
+  }
+ ]
+}

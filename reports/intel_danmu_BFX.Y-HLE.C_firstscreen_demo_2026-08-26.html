@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>模板优化演示 · 核心情报速览 + 决策导向排序 · 2026-08-26</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.6; padding:24px 14px 60px; }
+  .wrap { max-width:900px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:17px; font-weight:650; margin:12px 0 8px; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-risk { background:#fdf0e6; color:var(--warn); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-odds { background:#e8f6ec; color:var(--good); }
+  .b-con { background:#f3f0fa; color:#6d4fc4; }
+  .b-act { background:#fdeaea; color:#c0392b; }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:7px 8px; border-bottom:1px solid var(--line); }
+  td { padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 64px; font-size:11px; font-weight:650; padding-top:2px; }
+  .act { background:#f0faf3; border:1px solid #cfe8d8; border-radius:12px; padding:12px 14px; margin-top:10px; font-size:14px; }
+  .old { color:var(--sub); font-size:12px; text-decoration:line-through; }
+  .new { color:var(--good); font-weight:650; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .footer { color:var(--sub); font-size:12px; text-align:center; margin-top:20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="card">
+  <h1>模板优化演示：第一屏改造（BFX.Y-HLE.C 为例）</h1>
+  <div class="meta">目标：用户进入页面 5 秒内拿到「比赛什么情况 + 有什么信号 + 该关注什么」，再决定是否深挖。<br>
+  改动：① 新增核心情报速览（第一屏）② 段落顺序改为「决策导向」③ 信号/证据分层。</div>
+</div>
+
+<div class="card speed">
+  <h2 style="margin-top:0">0 · 核心情报速览（新增，第一屏）</h2>
+  <div class="top">
+    <span class="score-big">BFX.Y 3:0 HLE.C</span>
+    <span class="badge b-con">弹幕口径 · 官方待回填</span>
+    <span class="badge b-odds">G1 Polymarket 99.95c 已结算</span>
+    <span class="badge b-risk">灰信号 2 簇 · 预警中</span>
+    <span class="badge b-anchor">BP 负锚已应验</span>
+  </div>
+  <div style="margin-top:10px">
+    <div class="sig"><span class="tag" style="color:var(--warn)">风险</span><span><b>灰信号 2 簇约 16 条，指向 HLE.C 侧</b>（G1 AD Pyeonsik 玩梗向·低；G2 打野 Jackal 龙坑·中）——输方操作质疑，未见反手盘口反转信号 <span class="meta">→ 详 §2</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>Rock 选角「필패」负锚应验</b>（G3 中单）；「CL 杰斯必败」共识延续 <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--good)">盘口</span><span><b>让分 7.5 / G2 韩华 860 张未兑现 / 3:0 高赔不给</b>；市场 G2 短时反向（62.5→57.5c）后 BFX.Y 仍胜 <span class="meta">→ 详 §4</span></span></div>
+    <div class="sig"><span class="tag" style="color:#6d4fc4">共识</span><span><b>观众「3:0」赛前共识命中</b>；高价值用户 콜라 赛前预言 3:0 并兑现 <span class="meta">→ 详 §5</span></span></div>
+  </div>
+  <div class="act"><b>决策落点：</b>BFX.Y 强势侧已被市场定价（G1 99.95c），边际信息在 <b>HLE.C 执行/灰信号风险</b>（两场 BP 好评全输 = 纸面强执行弱）；后续 HLE.C 场次若 C2 灰信号再现 → 升级观察。反手需盘口验证，不裸赌灰信号。</div>
+</div>
+
+<div class="card">
+  <h2>新段落顺序（决策导向）—— 对比旧顺序</h2>
+  <table>
+    <tr><th>新序</th><th>章节</th><th>定位</th><th>旧序（对照）</th></tr>
+    <tr><td>0</td><td class="new">核心情报速览</td><td>决策层 · 第一屏</td><td class="old">无（新增）</td></tr>
+    <tr><td>1</td><td class="new">结果总览</td><td>决策层 · 比分/进度/MVP</td><td>1</td></tr>
+    <tr><td>2</td><td class="new">灰信号汇总</td><td>决策层 · 风险红线</td><td class="old">5</td></tr>
+    <tr><td>3</td><td class="new">BP 锚点与选人情报</td><td>决策层 · 赛前强信号</td><td class="old">（并入 2/5）</td></tr>
+    <tr><td>4</td><td class="new">盘口与市场讨论</td><td>决策层 · 机会信号</td><td class="old">8</td></tr>
+    <tr><td>5</td><td class="new">方向性情报板（锚点×共识×灰信号）</td><td>决策层 · 一屏看方向</td><td class="old">（B 类 7，A 类缺失）</td></tr>
+    <tr><td>6</td><td class="new">情报含义与决策落点（LONG/SHORT）</td><td>决策层 · 行动建议</td><td class="old">9</td></tr>
+    <tr><td>7</td><td>逐局复盘</td><td>证据层</td><td>2</td></tr>
+    <tr><td>8</td><td>队伍/人员画像</td><td>证据层</td><td>3/4</td></tr>
+    <tr><td>9</td><td>联赛规律与版本</td><td>沉淀层</td><td>6</td></tr>
+    <tr><td>10</td><td>预测验证回填明细</td><td>沉淀层 · 闭环</td><td>7</td></tr>
+    <tr><td>11</td><td>数据与溯源</td><td>沉淀层</td><td>10</td></tr>
+  </table>
+  <div class="meta">核心逻辑：<b>决策层（0-6）回答「什么情况/有什么信号/该看什么」→ 证据层（7-8）回答「为什么」→ 沉淀层（9-11）回答「可信度/可复用」</b>。旧顺序是"比赛叙事序"（结果→过程→画像→信号），新顺序是"决策序"（信号→含义→证据）。</div>
+</div>
+
+<div class="card">
+  <h2>同步做的密度调整（配合顺序）</h2>
+  <ul>
+    <li><b>弹幕原文样本收敛</b>：每条信号保留 1-2 条原文 + 计数，不再整段罗列（原文仍在溯源层可查）；</li>
+    <li><b>画像折叠</b>：队伍/人员长画像默认折叠，展开才看（移动端优先显示信号层）；</li>
+    <li><b>速览可溯源</b>：每条速览信号带「→ 详 §N」锚点跳转，速览 ≠ 无源结论；</li>
+    <li><b>灰信号纪律不变</b>：速览中灰信号仍带「观众质疑·非结论」标签。</li>
+  </ul>
+</div>
+
+<div class="footer">模板优化演示 · 待确认后推广 · 2026-08-26</div>
+</div>
+</body>
+</html>

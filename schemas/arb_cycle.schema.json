@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "arb_cycle",
+  "description": "S-F1 完整集套利：每组每轮评估/执行的审计记录字段契约（runtime/forensics/scan_*.jsonl 与 state/*.json 共用）。",
+  "type": "object",
+  "required": ["ts", "group", "n_legs", "mark_sump", "verdict"],
+  "properties": {
+    "ts": {"type": "integer", "description": "评估时间戳（UTC 秒）"},
+    "group": {"type": "string", "description": "负风险组标识，建议用 event slug"},
+    "event_title": {"type": "string"},
+    "n_legs": {"type": "integer", "minimum": 1},
+    "end_date": {"type": "string", "description": "事件预计结算时间（ISO8601）"},
+    "category": {"type": "string"},
+    "mark_sump": {"type": "number", "description": "一级粗筛：标记价 Σp"},
+    "side": {"type": "string", "enum": ["NO", "YES"], "description": "买完整 NO 侧（Σp>1）或 YES 侧（Σp<1）"},
+    "ask_cost": {"type": "number", "description": "二级精筛：订单簿 ask 加权可成交总成本（美元）"},
+    "notional": {"type": "number", "description": "规则兑付名义值（NO 侧 (n-1)*X；YES 侧 X）"},
+    "net_est": {"type": "number", "description": "估算毛利 = notional - ask_cost（未计摩擦）"},
+    "depth_ok": {"type": "boolean", "description": "每腿 ask 深度是否足够 X"},
+    "verdict": {"type": "string", "enum": ["pass", "fail", "depth_insufficient", "suspect_aggregation"]},
+    "tx_hashes": {"type": "array", "items": {"type": "string"}},
+    "fees_usd": {"type": "number"},
+    "notes": {"type": "string"}
+  }
+}

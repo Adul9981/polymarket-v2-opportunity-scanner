@@ -1,0 +1,438 @@
+{
+  "meta": {
+    "total": 20776,
+    "active_users": 4843,
+    "window_utc": [
+      "2026-08-22 18:34",
+      "2026-08-22 21:11"
+    ],
+    "density_per_min": 132.7,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 30,
+      "pos": 3,
+      "neg": 3,
+      "samples": [
+        "宗主为了见navi青训这么拼吗",
+        "宗主为了见navi青训这么拼吗",
+        "宗主为了见navi青训这么拼吗",
+        "宗主想去打NAVI青训队了",
+        "绿龙现在就是以前的NAVI，是所有拼枪队伍严父"
+      ]
+    },
+    "T1": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这t1晕到现在了吧",
+        "T1今天咋镇晕"
+      ]
+    },
+    "WE": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "we have jin",
+        "we have jin",
+        "we are falcons！",
+        "we are falcons！",
+        "we are falcons！"
+      ]
+    },
+    "Vitality": {
+      "mentions": 42,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "冠军又是小蜜蜂的有感觉吗",
+        "冠军又是小蜜蜂的有感觉吗",
+        "冠军又是小蜜蜂的有感觉吗",
+        "冠军又是小蜜蜂的有感觉吗",
+        "冠军又是小蜜蜂的有感觉吗"
+      ]
+    },
+    "Spirit": {
+      "mentions": 1072,
+      "pos": 64,
+      "neg": 28,
+      "samples": [
+        "就这怎么输绿龙啊",
+        "就这怎么输绿龙啊",
+        "绿龙真要输吧",
+        "绿龙比赛，直播间这个安静啊",
+        "绿龙比赛，直播间这个安静啊"
+      ]
+    },
+    "G2": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "蜜蜂.猎鹰.老鼠.G2都回家了.绿龙就算输.无所谓"
+      ]
+    },
+    "NAVI": {
+      "mentions": 30,
+      "pos": 3,
+      "neg": 3,
+      "samples": [
+        "宗主为了见navi青训这么拼吗",
+        "宗主为了见navi青训这么拼吗",
+        "宗主为了见navi青训这么拼吗",
+        "宗主想去打NAVI青训队了",
+        "绿龙现在就是以前的NAVI，是所有拼枪队伍严父"
+      ]
+    },
+    "FaZe": {
+      "mentions": 17,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "这么猛的菊花居然被faze血虐",
+        "绿龙打faze嘛决赛",
+        "绿龙碰到faze就老实了",
+        "faze up",
+        "faze up"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "蜜蜂.猎鹰.老鼠.G2都回家了.绿龙就算输.无所谓",
+        "阿根廷烤老鼠",
+        "阿根廷有烤老鼠和拳击手",
+        "阿根廷有烤老鼠和拳击手",
+        "老鼠打洞"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "去年蒙古打阿若拉今年菊花打fut有感觉吗",
+        "25年蒙古确实可惜",
+        "遮住id我以为蒙古呢",
+        "印象最深的就是打蒙古阿努比斯那场马西西拉donk补",
+        "蒙古不行呀"
+      ]
+    },
+    "AG": {
+      "mentions": 65,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "不如Ag超玩会一诺一根",
+        "不如Ag超玩会一诺一根",
+        "ag反超了",
+        "Ag有机会吗？",
+        "怎么还有ag的事"
+      ]
+    },
+    "白鲨": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "a们运气太差了，全是全白鲨人"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 8,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "ban了加里奥吧 绿龙怕飞科的",
+        "绿龙ban了加里奥 我感觉怕飞科",
+        "绿龙ban了加里奥 我感觉怕飞科",
+        "绿龙ban了加里奥 我感觉怕飞科",
+        "绿龙ban了加里奥 我感觉怕飞科"
+      ]
+    },
+    "Chovy": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我超威的 给我看好的啊",
+        "這拉拖長得真像路超威啊"
+      ]
+    },
+    "Niko": {
+      "mentions": 97,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "niko附体了",
+        "这图能踩着niko拿的冠军能没东西吗翻盘开始",
+        "niko几点来",
+        "niko几点来颁奖",
+        "Niko一辈子"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 39,
+      "pos": 5,
+      "neg": 0,
+      "samples": [
+        "s1mple是梅西，载物是c罗",
+        "s1mple是梅西，载物是c罗",
+        "s1mple是梅西，载物是c罗",
+        "s1mple是梅西，载物是c罗",
+        "s1mple是梅西，载物是c罗"
+      ]
+    },
+    "donk": {
+      "mentions": 560,
+      "pos": 29,
+      "neg": 17,
+      "samples": [
+        "donk上身了",
+        "donk不是宗主那样的高手就玩得稳一点呗",
+        "宗主donk附体",
+        "donk抢机器了",
+        "我刚来，走流程还是直接怪哈利还是donk 发烧"
+      ]
+    },
+    "ropz": {
+      "mentions": 22,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "跟ropz打完铲除心魔了",
+        "打赢ropz心魔破除了",
+        "今天宗祖是ropz上的号",
+        "打赢ropz心魔破除了",
+        "ropz play"
+      ]
+    },
+    "sh1ro": {
+      "mentions": 32,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "sh1ro就是个菜b",
+        "西若你真是弱啊",
+        "菜逼西若",
+        "这二打一宗主浪了西若还迷之选位",
+        "除了sh1ro"
+      ]
+    },
+    "33": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "33包去抓人"
+      ]
+    },
+    "Collapse": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "人崩溃了",
+        "nissm崩溃了"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 20,
+    "samples": [
+      "关键人头",
+      "真的关键人头，打死了就输了",
+      "这把全是运气人头",
+      "为什么会变成关键人头",
+      "宗主关键人头",
+      "四个混烟人头",
+      "四个人头全是混烟",
+      "５个人头全是串死的"
+    ]
+  },
+  "situation": {
+    "count": 79,
+    "samples": [
+      "预测一波秒翻",
+      "这图能踩着niko拿的冠军能没东西吗翻盘开始",
+      "gg了",
+      "这图没经济.警优势更大",
+      "绿龙首杀还是落后的人",
+      "比赛打完了吗？第一局什么比分",
+      "绿龙遗址gg",
+      "FUT也不打小镇，图池绿龙优势吧"
+    ]
+  },
+  "gray_signals": {
+    "count": 9,
+    "samples": [
+      "绿龙故意输 让他们赢了再输 赛点没钱",
+      "下吧剧本宗主摊掉少爷站起来",
+      "少爷又买了是吧？",
+      "奴才买了",
+      "特尼尔真的买了吧",
+      "上把剧本？",
+      "绿色沙二图一剧本吗",
+      "这绝对买了"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "18:50",
+      "count": 874,
+      "samples": [
+        "牛",
+        "准备名场面",
+        "啊",
+        "别放了"
+      ]
+    },
+    {
+      "minute_utc": "18:40",
+      "count": 755,
+      "samples": [
+        "？？？？？？？？？？？？？？",
+        "？？？？？？？？？",
+        "？？？？？？？？？？？？",
+        "？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "19:58",
+      "count": 550,
+      "samples": [
+        "冠军稳了！爽",
+        "老鼠洗完头",
+        "牛逼！",
+        "舒服了"
+      ]
+    },
+    {
+      "minute_utc": "18:34",
+      "count": 481,
+      "samples": [
+        "？？？？？？？？？？？？？",
+        "666",
+        "HHAHA",
+        "66666"
+      ]
+    },
+    {
+      "minute_utc": "18:41",
+      "count": 462,
+      "samples": [
+        "啊啊啊啊啊啊",
+        "跳起来给你一枪头，气不气？",
+        "哈哈哈哈，飞起来还给爆头了",
+        "吓到了"
+      ]
+    },
+    {
+      "minute_utc": "19:57",
+      "count": 461,
+      "samples": [
+        "啊啊啊啊啊啊啊啊啊啊啊啊",
+        "？？？？？？？？？",
+        "666666666",
+        "植物人呢"
+      ]
+    },
+    {
+      "minute_utc": "20:03",
+      "count": 461,
+      "samples": [
+        "神TM5万",
+        "明天地图呢",
+        "今天就好几千了",
+        "猎鹰明天复活赛"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      759
+    ],
+    [
+      "杏花春欲破",
+      110
+    ],
+    [
+      "莱恩哈肯",
+      94
+    ],
+    [
+      "季冬成羽翼",
+      92
+    ],
+    [
+      "差易姜茶",
+      88
+    ],
+    [
+      "而唯望京华",
+      85
+    ],
+    [
+      "狂鸟、贱客-90327",
+      85
+    ],
+    [
+      "吾十开锦绣",
+      84
+    ]
+  ],
+  "sources": {
+    "csboy_123321": 19846,
+    "captainmo": 930
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_123321",
+      "url": "https://www.huya.com/123321",
+      "state": "capturing",
+      "started_at": "2026-08-22T18:34:34+00:00",
+      "heartbeat_at": "2026-08-22T21:26:39+00:00",
+      "last_message_at": "2026-08-22T21:11:09+00:00",
+      "message_count": 19846,
+      "warning": null,
+      "error": null,
+      "room_id": 123321,
+      "channel_id": 10748220,
+      "nickname": "CSBOY",
+      "introduction": "【直播】1点45 绿龙-Legacy",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-22T18:34:35+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "captainmo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-08-22T18:34:34+00:00",
+      "heartbeat_at": "2026-08-22T21:26:39+00:00",
+      "last_message_at": "2026-08-22T20:24:14+00:00",
+      "message_count": 930,
+      "warning": null,
+      "error": null,
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】1点45 绿龙-Legacy",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-22T18:34:35+00:00"
+    }
+  ]
+}

@@ -44,6 +44,7 @@ def main() -> int:
 
     if diagnostics:
         print(f"- 抓取事件：{diagnostics.get('fetched_events', '-')}")
+        print(f"- 电竞标签抓取：{diagnostics.get('esports_tag_fetched', '-')}")
         print(f"- 标题过滤后：{diagnostics.get('after_title_filter', '-')}")
         print(f"- 时间窗口内：{diagnostics.get('within_time_window', '-')}")
         print(f"- Watchlist 匹配：{diagnostics.get('watchlist_matches', '-')}")
@@ -73,12 +74,17 @@ def main() -> int:
             print(f"{idx}. {title} | {phenomena or '-'} -> {strategy} | score {score}")
     elif diagnostics:
         fetched = int(diagnostics.get("fetched_events") or 0)
+        esports_fetched = int(diagnostics.get("esports_tag_fetched") or 0)
         matches = int(diagnostics.get("watchlist_matches") or 0)
         final_events = int(diagnostics.get("final_events") or 0)
         if fetched == 0:
             print("- 初步判断：active events 源头没有返回事件，可能需要补充其他事件源。")
+        elif esports_fetched == 0:
+            print("- 初步判断：电竞标签（Esports tag）抓取为 0，疑似标签接口失败或 tag_id 失效，"
+                  "结果不可信，勿当作“今日无比赛”。")
         elif matches == 0:
-            print("- 初步判断：事件源有数据，但 watchlist 关键词没有命中，需要调关键词。")
+            print("- 初步判断：有电竞事件但 watchlist 关键词 0 命中，疑似白名单缺失联赛关键词，"
+                  "需要核对 config/market_watchlist.json，勿当作“今日无比赛”。")
         elif final_events == 0:
             print("- 初步判断：watchlist 有匹配，但时间窗口过滤后为空，需要调整时间窗口或赛事状态判断。")
         else:

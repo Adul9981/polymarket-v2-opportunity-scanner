@@ -1,0 +1,308 @@
+{
+ "schema_version": "1.0",
+ "description": "队伍官方名册（首发/位置/生效期）。仅登记有证据的条目；证据不足标 待核实，禁止编造首发。阵容变动入 roster_changes。",
+ "updated_at": "2026-08-24T17:10:00+08:00",
+ "teams": [
+  {
+   "team_id": "gx",
+   "league": "LEC",
+   "roster": [
+    {
+     "player_id": "oscarinin",
+     "role": "上单",
+     "confidence": "高",
+     "evidence": "弹幕'奥斯卡'(2026-08-23)"
+    },
+    {
+     "player_id": "isma",
+     "role": "打野",
+     "confidence": "高",
+     "evidence": "弹幕'isma'(2026-08-23)"
+    },
+    {
+     "player_id": "jackies",
+     "role": "中单",
+     "confidence": "中",
+     "evidence": "交接口径"
+    },
+    {
+     "player_id": "flakked",
+     "role": "ADC",
+     "confidence": "高",
+     "evidence": "弹幕'G2初代ad'(2026-08-23)"
+    },
+    {
+     "player_id": "jun",
+     "role": "辅助",
+     "confidence": "高",
+     "evidence": "弹幕'jun'(2026-08-23)"
+    }
+   ],
+   "as_of": "2026-08-23"
+  },
+  {
+   "team_id": "th",
+   "league": "LEC",
+   "roster": [
+    {
+     "player_id": "tracyn",
+     "role": "上单",
+     "confidence": "中",
+     "evidence": "交接口径；弹幕'纳尔使用者'待挂"
+    },
+    {
+     "player_id": "daglas",
+     "role": "打野",
+     "confidence": "高",
+     "evidence": "弹幕'道格拉斯'(2026-08-23 赵信/剑魔打野)"
+    },
+    {
+     "player_id": "serin",
+     "role": "中单",
+     "confidence": "待核实",
+     "evidence": "交接口径；'黑衣人'是否=Serin 未证实"
+    },
+    {
+     "player_id": "ice",
+     "role": "ADC",
+     "confidence": "待核实",
+     "evidence": "交接口径；'黑衣人'是否=Ice 未证实"
+    },
+    {
+     "player_id": "way",
+     "role": "辅助",
+     "confidence": "待核实",
+     "evidence": "交接口径"
+    }
+   ],
+   "as_of": "2026-08-23",
+   "changes": [
+    {
+     "from": "sheo",
+     "to": "daglas",
+     "role": "打野",
+     "ts": "2026-08-23前",
+     "confidence": "中",
+     "note": "Sheo 转至 SHFT（弹幕'在TH的时候就是'）"
+    }
+   ]
+  },
+  {
+   "team_id": "kc",
+   "league": "LEC",
+   "roster": [
+    {
+     "player_id": "canna",
+     "role": "上单",
+     "confidence": "高",
+     "evidence": "弹幕'canna'(2026-08-24)"
+    },
+    {
+     "player_id": "yike",
+     "role": "打野",
+     "confidence": "高",
+     "evidence": "弹幕'yike'(2026-08-24)"
+    },
+    {
+     "player_id": "vladi",
+     "role": "中单",
+     "confidence": "待核实",
+     "evidence": "交接口径；蛇女/瑞兹使用者 ID 待官方"
+    },
+    {
+     "player_id": "caliste",
+     "role": "ADC",
+     "confidence": "待核实",
+     "evidence": "交接口径"
+    },
+    {
+     "player_id": "labrov",
+     "role": "辅助",
+     "confidence": "待核实",
+     "evidence": "交接口径"
+    }
+   ],
+   "as_of": "2026-08-24",
+   "changes": [
+    {
+     "note": "弹幕'kc怎么换中单了吗'(2026-08-24)——中单首发疑似变动，待官方",
+     "confidence": "待核实"
+    }
+   ]
+  },
+  {
+   "team_id": "shft",
+   "league": "LEC",
+   "roster": [
+    {
+     "player_id": "sheo",
+     "role": "打野",
+     "confidence": "高",
+     "evidence": "弹幕'sheo'(2026-08-24，TH 旧将)"
+    },
+    {
+     "player_id": null,
+     "role": "中单",
+     "confidence": "待核实",
+     "evidence": "维克托使用者疑似 Puduk（弹幕'啪哒克'）"
+    },
+    {
+     "player_id": null,
+     "role": "ADC",
+     "confidence": "待核实",
+     "evidence": "EZ/女枪使用者（'少爷'）"
+    },
+    {
+     "player_id": null,
+     "role": "上单",
+     "confidence": "待核实",
+     "evidence": "卡牌使用者（2026-08-24）"
+    }
+   ],
+   "as_of": "2026-08-24"
+  },
+  {
+   "team_id": "sk",
+   "league": "LEC",
+   "roster": [
+    {
+     "player_id": "wunder",
+     "role": "上单",
+     "confidence": "高",
+     "evidence": "弹幕'王德'(2026-08-21)"
+    }
+   ],
+   "as_of": "2026-08-21"
+  },
+  {
+   "team_id": "ns",
+   "league": "LCK",
+   "roster": [
+    {
+     "player_id": "kingen",
+     "role": "上单",
+     "confidence": "高",
+     "evidence": "弹幕+官方(2026-08-20)"
+    },
+    {
+     "player_id": "scout",
+     "role": "中单",
+     "confidence": "高",
+     "evidence": "官方战报(2026-08-23 辛德拉)"
+    },
+    {
+     "player_id": "diable",
+     "role": "ADC",
+     "confidence": "高",
+     "evidence": "官方战报+弹幕'大菠萝'(2026-08-23 卢锡安13杀)"
+    }
+   ],
+   "as_of": "2026-08-23"
+  },
+  {
+   "team_id": "bfx",
+   "league": "LCK",
+   "roster": [
+    {
+     "player_id": "taeyoon",
+     "role": "ADC",
+     "confidence": "高",
+     "evidence": "官方战报(2026-08-23 女警10-0)"
+    }
+   ],
+   "as_of": "2026-08-23"
+  },
+  {
+   "team_id": "dns.c",
+   "league": "LCK CL",
+   "roster": [
+    {
+     "player_id": "lancer",
+     "role": "上单",
+     "confidence": "高",
+     "evidence": "弹幕（랜서，G1 卡蜜尔/G2 卡山特）"
+    },
+    {
+     "player_id": "ddoiv",
+     "role": "打野",
+     "confidence": "高",
+     "evidence": "弹幕（또이브，G1 嘉文/G3 茂凯）"
+    },
+    {
+     "player_id": "flip",
+     "role": "中单",
+     "confidence": "高",
+     "evidence": "弹幕（플립，G1 阿卡丽/G2 安妮）"
+    },
+    {
+     "player_id": "enosh",
+     "role": "ADC",
+     "confidence": "高",
+     "evidence": "弹幕（애노쉬，G1 卡莉丝塔/G2 伊泽瑞尔/G4 亚娜拉）"
+    },
+    {
+     "player_id": "quantum",
+     "role": "辅助",
+     "confidence": "中",
+     "evidence": "弹幕（퀀텀，蕾娜塔组合被认可）"
+    }
+   ],
+   "as_of": "2026-08-24"
+  },
+  {
+   "team_id": "krx.c",
+   "league": "LCK CL",
+   "roster": [
+    {
+     "player_id": "frog",
+     "role": "上单",
+     "confidence": "高",
+     "evidence": "弹幕（프로그，G2 杰斯负锚；Rich 禁赛顶替）"
+    },
+    {
+     "player_id": "winner",
+     "role": "打野",
+     "confidence": "高",
+     "evidence": "弹幕（위너，G3 奇亚娜 3 级领先）"
+    },
+    {
+     "player_id": "minous",
+     "role": "中单",
+     "confidence": "待核实",
+     "evidence": "交接口径（미누스；弹幕 0 提及）"
+    },
+    {
+     "player_id": "vincenzo",
+     "role": "ADC（临时，原打野）",
+     "confidence": "高",
+     "evidence": "弹幕（빈센조，G1 烬 7 连败负锚；LazyFeel 禁赛顶替）"
+    },
+    {
+     "player_id": "akaje",
+     "role": "辅助",
+     "confidence": "高",
+     "evidence": "弹幕（아카제，Mel 空大被嘲）"
+    }
+   ],
+   "as_of": "2026-08-24",
+   "changes": [
+    {
+     "from": "lazyfeel",
+     "to": "vincenzo",
+     "role": "ADC",
+     "ts": "2026-08-24",
+     "confidence": "高",
+     "note": "一军出场超额禁赛（弹幕口径，待官方确认）"
+    },
+    {
+     "from": "rich",
+     "to": "frog",
+     "role": "上单",
+     "ts": "2026-08-24",
+     "confidence": "高",
+     "note": "一军出场超额禁赛（弹幕口径，待官方确认）"
+    }
+   ]
+  }
+ ]
+}

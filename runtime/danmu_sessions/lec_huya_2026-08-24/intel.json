@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "total": 18292,
+    "active_users": 3680,
+    "window_utc": [
+      "2026-08-23 16:24",
+      "2026-08-24 18:58"
+    ],
+    "density_per_min": 11.5,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 141,
+      "pos": 12,
+      "neg": 8,
+      "samples": [
+        "下周是KC主场？",
+        "你等下把kc打倒第一那必是2：1",
+        "Kc怎么打shift",
+        "kc真不会2：0kc要吃了2：1",
+        "信不信KC被shift2/0"
+      ]
+    },
+    "GX": {
+      "mentions": 55,
+      "pos": 4,
+      "neg": 10,
+      "samples": [
+        "gx这ad竟然还在打啊，G2初代ad啊",
+        "第三条龙拿不到 就感觉gx不放水了",
+        "这把gx输不了  资源团不送  永远不可能输",
+        "gx资源团不送  右边永远没机会的",
+        "阵容没用啊 刚刚gx th没看吗"
+      ]
+    },
+    "TH": {
+      "mentions": 10,
+      "pos": 0,
+      "neg": 4,
+      "samples": [
+        "能不能告诉我th两胜赢的谁",
+        "放心 th开始龟了",
+        "TH这个阵容打成这样",
+        "这个th是真菜的发瘟",
+        "kc比th还乌龟"
+      ]
+    },
+    "Navi": {
+      "mentions": 53,
+      "pos": 3,
+      "neg": 3,
+      "samples": [
+        "Lec的kanavi",
+        "Lec自己的kanavi",
+        "打野kanavi或者lucid",
+        "lucid不比Kanavi打的好",
+        "lucid一阵都没毛 navi老师犯病"
+      ]
+    },
+    "T1": {
+      "mentions": 47,
+      "pos": 1,
+      "neg": 3,
+      "samples": [
+        "绿龙等于T1",
+        "T1和GENG放蛇女+盲僧用赵信+发条打都输了",
+        "kc从t1把少爷买来了？",
+        "LeC倒数第一像特吗T1",
+        "LeC倒数第一像特吗T1"
+      ]
+    },
+    "DNS": {
+      "mentions": 11,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "dns能打三星 我们st就能打kc",
+        "dns能打三星 我们st就能打kc",
+        "dns打野比他厉害啊",
+        "DNS打野出场次数能评最佳阵容吗",
+        "dns"
+      ]
+    },
+    "KT": {
+      "mentions": 17,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "why不是在kt二队挺会找机会的吗 来lec就身不由己了？",
+        "谁喜欢kt没听清",
+        "梦回kt了",
+        "Kt 二队一群诈骗犯",
+        "统治了啥啊 次级是 dk t1 kt的天下啊"
+      ]
+    },
+    "HLE": {
+      "mentions": 23,
+      "pos": 0,
+      "neg": 4,
+      "samples": [
+        "这HLE没希望啊",
+        "这hle二队菜的一坨屎",
+        "次级联赛HLE GEN就是区",
+        "这hle二队菜的一坨屎",
+        "换hle一队左边这会已经被平推了"
+      ]
+    },
+    "GEN": {
+      "mentions": 14,
+      "pos": 2,
+      "neg": 2,
+      "samples": [
+        "T1和GENG放蛇女+盲僧用赵信+发条打都输了",
+        "次级联赛HLE GEN就是区",
+        "倒数第一gen 第二韩华 两个菜",
+        "韩华二队能被geng二队打个2-0是什么好人",
+        "再差也比阿鲍特强，在gen纯倒数第一"
+      ]
+    },
+    "WBG": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "爱笑今天发微博没？",
+        "这巴德我们wbg要了",
+        "买了买了wbg",
+        "这打野我wbg要了",
+        "这打野我们wbg要了"
+      ]
+    },
+    "LNG": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "完了，大巴黎0-2落后了，等同于LNG领先BLG一万",
+        "这些队打lng都要被乱炸"
+      ]
+    },
+    "WE": {
+      "mentions": 11,
+      "pos": 2,
+      "neg": 2,
+      "samples": [
+        "we来了",
+        "@国民大牛蛙 我们赛区也一样，特别是we和al  最恶心",
+        "六千算个P，blg领先8000都被we爆锤",
+        "我觉得we翻盘al比较牛逼",
+        "blg以前中单还是雅典娜的时候，11000翻过we"
+      ]
+    },
+    "EDG": {
+      "mentions": 21,
+      "pos": 5,
+      "neg": 0,
+      "samples": [
+        "SHFT打得过EDG吗",
+        "我觉得五五开EDG 也不是啥好鸟",
+        "张神，我问一下，kc可以打过edg嘛",
+        "张神，我问一下，kc可以打过edg嘛",
+        "张神，我问一下，kc可以打过edg嘛"
+      ]
+    },
+    "BLG": {
+      "mentions": 19,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "kc现在一股blg味道",
+        "blg是真的恶心",
+        "blg剧本 一人一把翻盘",
+        "明天全打满像BLG一样把把40分钟加班加死2哥",
+        "完了，大巴黎0-2落后了，等同于LNG领先BLG一万"
+      ]
+    },
+    "TES": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "这打野我TES要了",
+        "tes吧",
+        "不如tes三龙会一波被翻",
+        "假赛还是TES三龙汇高地送 比较假",
+        "假如冒泡赛打tes，jd，翻"
+      ]
+    },
+    "IG": {
+      "mentions": 51,
+      "pos": 0,
+      "neg": 6,
+      "samples": [
+        "直接打IG那场画个符",
+        "季后赛热度卖门票靠iG那几位啊",
+        "有没有董哥，ig后续咋样才能有概率去世界赛",
+        "IG拿夏季赛冠军就一号种子去世界赛了",
+        "ig打blg"
+      ]
+    },
+    "Vitality": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "ad又在发小蜜蜂信号了",
+        "fnc下周把小蜜蜂赢了感觉有世界赛实力",
+        "有小蜜蜂夸张吗，领先15,000被外卡战队翻盘",
+        "小蜜蜂领先2万多被翻",
+        "这fnc怎么赢的g2和小蜜蜂"
+      ]
+    },
+    "Spirit": {
+      "mentions": 19,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "骚硕  绿龙夺冠了",
+        "让我们恭喜绿龙",
+        "绿龙冠军！",
+        "绿龙夺冠了",
+        "CSGO绿龙拿EWC冠军了"
+      ]
+    },
+    "G2": {
+      "mentions": 243,
+      "pos": 9,
+      "neg": 18,
+      "samples": [
+        "gx这ad竟然还在打啊，G2初代ad啊",
+        "绿龙 马上收购G2",
+        "在KC主场 第三把G2领先七千被翻盘",
+        "lec第一输到一也是老传统了，有钱到一谁都打不过就能赢g2",
+        "这包是翻不了的局，看过k杯和g2大fnc就知道"
+      ]
+    },
+    "NAVI": {
+      "mentions": 53,
+      "pos": 3,
+      "neg": 3,
+      "samples": [
+        "Lec的kanavi",
+        "Lec自己的kanavi",
+        "打野kanavi或者lucid",
+        "lucid不比Kanavi打的好",
+        "lucid一阵都没毛 navi老师犯病"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这个老鼠这样飞",
+        "9.5感谢老鼠男孩"
+      ]
+    },
+    "AG": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "来ag 超玩会",
+        "这个打野我们ag 超玩会要了"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "lpl领先1w电龙魂也翻盘了",
+        "上海1w应该够 你给二哥点一个老张",
+        "每天都是1w经济翻盘的剧本不带换的",
+        "你在装你吗 右边15倍水压1w",
+        "天天都是1W经济翻盘"
+      ]
+    }
+  },
+  "players": {
+    "Canna": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "canna装b抗塔",
+        "canna是人吗",
+        "canna都能玩上阿卡丽了"
+      ]
+    },
+    "Oscar": {
+      "mentions": 21,
+      "pos": 0,
+      "neg": 2,
+      "samples": [
+        "奥斯卡这么多年唯一能看的就鳄鱼了",
+        "时间到了，收汁，奥斯卡之夜",
+        "都是奥斯卡",
+        "梦魇不是新人，原来他们的上路奥斯卡比他还能送",
+        "奥斯卡昨天赢了吗"
+      ]
+    },
+    "Poby": {
+      "mentions": 12,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "跟poby学的",
+        "前辈poby",
+        "这个poby太他妈菜了",
+        "navi这种队怎么可以菜成这样poby",
+        "poby强就在对面了"
+      ]
+    },
+    "Guma": {
+      "mentions": 28,
+      "pos": 0,
+      "neg": 2,
+      "samples": [
+        "巴德搭档过三冠王姑妈鱼丝",
+        "巴德搭档过三冠王姑妈鱼丝",
+        "巴德搭档过三冠王姑妈鱼丝",
+        "姑妈：小丑",
+        "姑妈抢龙那会儿哪有1400惩"
+      ]
+    },
+    "Faker": {
+      "mentions": 28,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "狼行经典上帝视角，以为自己是飞科，自己去操作唐逼一样",
+        "老李去吧",
+        "对面亚索是Faker",
+        "飞科",
+        "老李就算10冠，他今年lck联赛也是一坨狗屎。"
+      ]
+    },
+    "Chovy": {
+      "mentions": 25,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "i11我超威",
+        "中单肯定是超威",
+        "超威啊 联赛超",
+        "宙斯，卡纳威，超威，胚子，小K这个肯定是一阵",
+        "超威一般般啊这赛段"
+      ]
+    },
+    "Zeus": {
+      "mentions": 24,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "宙斯呢 na vi",
+        "咋上单不是宙斯啊",
+        "大米真把自己当宙斯了？？",
+        "对面宙斯，打不过正常",
+        "没办法啊 米神对面zeus"
+      ]
+    },
+    "Niko": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "超威和uzi niko一档的",
+        "超威和Uzi怎么和niko一档啊"
+      ]
+    },
+    "Apex": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "apex的吊服务器"
+      ]
+    },
+    "donk": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "donk"
+      ]
+    },
+    "33": {
+      "mentions": 40,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "33到了就推了",
+        "非要过 33 畜生",
+        "33-8=25",
+        "大33怎么输我想写本书",
+        "大33能不能投降？"
+      ]
+    },
+    "Larl": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "传奇中单拉尔森"
+      ]
+    },
+    "Collapse": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "开局不利→昏招频出→陷入苦战→败局已定→全盘崩溃→获胜发言",
+        "开局不利→昏招频出→陷入苦战→败局已定→全盘崩溃→获胜发言"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 139,
+    "samples": [
+      "老张现在不能低头一低头就是被说在看盘口[笑哭]",
+      "盘口是什么意思",
+      "纳尔冒充48了",
+      "纳尔冒充48了",
+      "纳尔是48在玩",
+      "纳尔真他妈和48一模一样",
+      "纳尔和48一样啊，永远不来正面",
+      "大27.5求输"
+    ]
+  },
+  "situation": {
+    "count": 1522,
+    "samples": [
+      "1-1了呀",
+      "妈的，一波一个头？",
+      "早说了翻了，这不一波？",
+      "这飞机就是上一波的画面呀",
+      "一波就结束了   本质差距",
+      "早说了翻了，这不一波？",
+      "把把翻盘吗",
+      "这团战是人啊"
+    ]
+  },
+  "gray_signals": {
+    "count": 334,
+    "samples": [
+      "自己买觉得主播也买，觉得其他观众也都买，看谁都是假赛",
+      "早说了上把剧本",
+      "听说昨晚MKOI又打假赛了",
+      "听说昨晚mkoi又打假赛了",
+      "飞机没闪没血，全队还要往前拱，只能说5人齐心假赛",
+      "飞机没闪没血，全队还要往前拱，只能说5人齐心假赛",
+      "KC老师别打假赛谢谢",
+      "高乐高里面那个玩具 我买了几十罐都没筹齐"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "15:43",
+      "count": 288,
+      "samples": [
+        "对面9个塔都还在 玩的什么玩意啊",
+        "还能再放一条小龙，没有大龙推不了",
+        "昨天BLG和AL三把膀胱局好久没见这是BO5的话直接干凌晨了",
+        "内人不会煮饭？"
+      ]
+    },
+    {
+      "minute_utc": "15:37",
+      "count": 257,
+      "samples": [
+        "翻了",
+        "翻了",
+        "翻了",
+        "翻了"
+      ]
+    },
+    {
+      "minute_utc": "15:47",
+      "count": 256,
+      "samples": [
+        "？",
+        "牛逼",
+        "一波",
+        "牛逼"
+      ]
+    },
+    {
+      "minute_utc": "15:55",
+      "count": 245,
+      "samples": [
+        "直接去一波还他妈打龙",
+        "卡莎最拿手",
+        "还是龙魂救命",
+        "还要拿龙啊？"
+      ]
+    },
+    {
+      "minute_utc": "15:48",
+      "count": 243,
+      "samples": [
+        "左边好急",
+        "来了结束咯",
+        "打野没了，龙魂了",
+        "➕9.5怎么输"
+      ]
+    },
+    {
+      "minute_utc": "15:57",
+      "count": 225,
+      "samples": [
+        "太变态了",
+        "5000分都是刷的吧 菜的要死",
+        "说过了不能开团 不能被开",
+        "哎呀不用换就这么玩"
+      ]
+    },
+    {
+      "minute_utc": "15:34",
+      "count": 220,
+      "samples": [
+        "smath",
+        "姑妈 ruler",
+        "胚子那个垃圾能一阵？纯吸血吸上来的",
+        "元宝大军驾到！元宝大军驾到！元宝大军驾到！"
+      ]
+    },
+    {
+      "minute_utc": "15:38",
+      "count": 210,
+      "samples": [
+        "返了",
+        "别弱悲啊",
+        "这个洛克会玩？",
+        "逆天洛克"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      550
+    ],
+    [
+      "zxy",
+      277
+    ],
+    [
+      "爱炮家族丶分析炮",
+      137
+    ],
+    [
+      "克神的肥婆初恋",
+      106
+    ],
+    [
+      "沐雨橙风",
+      92
+    ],
+    [
+      "无愧于心ih",
+      91
+    ],
+    [
+      "让你云开雾散",
+      85
+    ],
+    [
+      "耀阳黄金集团继承人-",
+      85
+    ]
+  ],
+  "sources": {
+    "maomao_149346": 2941,
+    "remember_528222": 1818,
+    "shuoshuo_323444": 13533
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "maomao_149346",
+      "url": "https://www.huya.com/149346",
+      "state": "capturing",
+      "started_at": "2026-08-24T15:32:10+00:00",
+      "heartbeat_at": "2026-08-24T18:58:39+00:00",
+      "last_message_at": "2026-08-24T18:58:36+00:00",
+      "message_count": 2941,
+      "warning": null,
+      "error": null,
+      "room_id": 149346,
+      "channel_id": 1173534659,
+      "nickname": "解说毛毛",
+      "introduction": "LEC NAVI VS FNC",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-24T15:32:11+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "remember_528222",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "capturing",
+      "started_at": "2026-08-24T15:32:10+00:00",
+      "heartbeat_at": "2026-08-24T18:58:39+00:00",
+      "last_message_at": "2026-08-24T18:58:36+00:00",
+      "message_count": 1818,
+      "warning": null,
+      "error": null,
+      "room_id": 528222,
+      "channel_id": 1708907089,
+      "nickname": "Remember",
+      "introduction": "[LEC] NAVI-FNC/GX-G2",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-24T15:32:11+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "shuoshuo_323444",
+      "url": "https://www.huya.com/323444",
+      "state": "capturing",
+      "started_at": "2026-08-24T15:32:10+00:00",
+      "heartbeat_at": "2026-08-24T18:58:39+00:00",
+      "last_message_at": "2026-08-24T18:58:39+00:00",
+      "message_count": 7060,
+      "warning": null,
+      "error": null,
+      "room_id": 323444,
+      "channel_id": 1279512307519,
+      "nickname": "解说硕硕",
+      "introduction": "LEC！NAVI FNC！5000分中单",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-08-24T15:32:10+00:00"
+    }
+  ]
+}

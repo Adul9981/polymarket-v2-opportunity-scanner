@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "huya_maomao",
+  "url": "https://www.huya.com/149346",
+  "state": "offline_waiting",
+  "started_at": "2026-08-28T09:01:41+00:00",
+  "heartbeat_at": "2026-08-28T09:27:32+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 149346,
+  "channel_id": 1267235383,
+  "nickname": "解说毛毛",
+  "introduction": "LEC G2 VS GX",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-28T09:01:42+00:00"
+}

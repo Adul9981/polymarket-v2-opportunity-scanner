@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "csboy_mo_321123",
+  "url": "https://www.huya.com/321123",
+  "state": "offline_waiting",
+  "started_at": "2026-08-26T19:57:45+00:00",
+  "heartbeat_at": "2026-08-27T00:20:17+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 321123,
+  "channel_id": 35184698021314,
+  "nickname": "CSBOY-Mo",
+  "introduction": "【直播】1:55paiN-FURIA",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-26T19:57:46+00:00"
+}

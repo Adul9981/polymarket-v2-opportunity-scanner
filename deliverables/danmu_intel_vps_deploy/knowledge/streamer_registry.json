@@ -1,0 +1,219 @@
+{
+ "version": "2026-08-20",
+ "description": "弹幕情报源直播间注册表（虎牙 + SOOP）。房间号用于实时弹幕抓取（fetch_huya_danmu / fetch_soop_danmu），uid 用于回放/录播列表（v.huya.com 视频页）。",
+ "streamers": [
+  {
+   "id": "huya_lol_official",
+   "platform": "huya",
+   "nickname": "虎牙英雄联盟赛事",
+   "uid": 1346609715,
+   "room_id": 660000,
+   "live_url": "https://www.huya.com/660000",
+   "video_url": "",
+   "role": "虎牙英雄联盟官方赛事直播间",
+   "focus": [
+    "LPL",
+    "英雄联盟官方赛事"
+   ],
+   "capture_status": "已实测（2026-08-19 WebSocket 实时入库）",
+   "replay_status": "未验证",
+   "priority": "关键（官方大样本源）",
+   "verified_at": "2026-08-19"
+  },
+  {
+   "id": "huya_we957",
+   "platform": "huya",
+   "nickname": "957（WE957）",
+   "uid": 1001276654,
+   "room_id": 890001,
+   "live_url": "https://www.huya.com/890001",
+   "video_url": "https://www.huya.com/video/u/1001276654?tabName=live&pageIndex=1",
+   "role": "前 WE 职业上单、二路解说",
+   "focus": [
+    "LPL",
+    "LCK",
+    "MSI",
+    "世界赛"
+   ],
+   "capture_status": "已实测（2026-08-18 并发抓取 15s 样本，见 docs/data/danmu/huya/2026-08-18_890001.jsonl）",
+   "replay_status": "录播已解析（长回放 6-9h/场，最新 vid=1121405272）",
+   "priority": "首选",
+   "verified_at": "2026-08-18"
+  },
+  {
+   "id": "huya_maomao",
+   "platform": "huya",
+   "nickname": "解说毛毛",
+   "uid": 1173534659,
+   "room_id": 149346,
+   "live_url": "https://www.huya.com/149346",
+   "video_url": "https://www.huya.com/video/u/1173534659?tabName=live&pageIndex=1",
+   "role": "LPL 官方解说",
+   "focus": [
+    "LPL",
+    "LCK",
+    "世界赛"
+   ],
+   "capture_status": "待验证（协议已由 957 实测证明通用，房间号已确认；2026-08-18 未开播）",
+   "replay_status": "以赛后锐评为主",
+   "priority": "高",
+   "verified_at": "2026-08-18"
+  },
+  {
+   "id": "huya_mile",
+   "platform": "huya",
+   "nickname": "解说米勒",
+   "uid": 1690094984,
+   "room_id": 149361,
+   "live_url": "https://www.huya.com/149361",
+   "video_url": "https://www.huya.com/video/u/1690094984?tabName=live&pageIndex=1",
+   "role": "LPL 王牌官方解说",
+   "focus": [
+    "LPL",
+    "LCK",
+    "世界赛"
+   ],
+   "capture_status": "已实测（2026-08-18 并发抓取 45s 样本，见 docs/data/danmu/huya/2026-08-18_149361.jsonl）",
+   "replay_status": "主页视频库为空，直播录像待确认",
+   "priority": "高",
+   "verified_at": "2026-08-19"
+  },
+  {
+   "id": "huya_remember",
+   "platform": "huya",
+   "nickname": "Remember（记得）",
+   "uid": 1708907089,
+   "room_id": 528222,
+   "live_url": "https://www.huya.com/rememberlol",
+   "video_url": "",
+   "role": "英雄联盟官方解说记得",
+   "focus": [
+    "LPL",
+    "LCK",
+    "世界赛"
+   ],
+   "capture_status": "已登记并用于实时采集（2026-08-19）",
+   "replay_status": "待验证",
+   "priority": "高",
+   "verified_at": "2026-08-19"
+  },
+  {
+   "id": "huya_shuoshuo",
+   "platform": "huya",
+   "nickname": "解说硕硕",
+   "uid": 1279512307519,
+   "room_id": 323444,
+   "live_url": "https://www.huya.com/323444",
+   "video_url": "https://www.huya.com/video/u/1279512307519?tabName=live&pageIndex=1",
+   "role": "英雄联盟解说/主播",
+   "focus": [
+    "LPL",
+    "LCK",
+    "T1/Faker 主题"
+   ],
+   "capture_status": "已打通（实时 WebSocket，TH vs Navi / KC vs GX 两场已入库）",
+   "replay_status": "视频剪辑为主",
+   "priority": "中",
+   "verified_at": "2026-08-18"
+  },
+  {
+   "id": "soop_lck_cl",
+   "platform": "soop",
+   "nickname": "LCK_CL",
+   "uid": "afchall",
+   "room_id": 296450537,
+   "live_url": "https://play.sooplive.com/afchall/296450537",
+   "video_url": "https://bjapi.afreecatv.com/api/afchall/vods/all",
+   "role": "LCK 二线联赛官方频道（LCK CL）",
+   "focus": [
+    "LCK CL",
+    "LCK 二线"
+   ],
+   "capture_status": "已打通（实时 WebSocket + VOD 历史弹幕回捞，DNS vs NS 已测）",
+   "replay_status": "VOD 全量聊天可回捞（ChatLoadSplit 分片）",
+   "priority": "关键（LCK 二线情报源）",
+   "verified_at": "2026-08-18"
+  },
+  {
+   "id": "huya_csboy_official",
+   "platform": "huya",
+   "nickname": "CSBOY官方直播间",
+   "uid": 10748220,
+   "room_id": 123321,
+   "live_url": "https://www.huya.com/123321",
+   "video_url": "",
+   "role": "CS2 官方解说直播间（CSBOY）",
+   "focus": [
+    "CS2",
+    "EWC",
+    "IEM",
+    "BLAST",
+    "Major"
+   ],
+   "capture_status": "已登记（2026-08-19 房间页验证：title=CSBOY官方直播间，CS2，EWC16强直播中）",
+   "replay_status": "待验证",
+   "priority": "关键（CS 官方大样本源）",
+   "verified_at": "2026-08-19"
+  },
+  {
+   "id": "huya_csboy_mo",
+   "platform": "huya",
+   "nickname": "CSBOY-Mo官方直播间",
+   "uid": 1199652774074,
+   "room_id": 321123,
+   "live_url": "https://www.huya.com/captainmo",
+   "video_url": "",
+   "role": "CS2 主播直播间（CaptainMo/CSBOY-Mo，入口 captainmo）",
+   "focus": [
+    "CS2",
+    "EWC",
+    "IEM",
+    "BLAST",
+    "Major"
+   ],
+   "capture_status": "已登记（2026-08-19 房间页验证：title=CSBOY-Mo官方直播间，CS2，EWC直播中；URL 别名 captainmo -> 房间 321123）",
+   "replay_status": "待验证",
+   "priority": "高",
+   "verified_at": "2026-08-19"
+  },
+  {
+   "id": "huya_ti2026_stage1",
+   "platform": "huya",
+   "nickname": "TI2026舞台一",
+   "uid": 1541541294,
+   "room_id": 660118,
+   "live_url": "https://www.huya.com/660118",
+   "video_url": "",
+   "role": "Dota2 TI2026 主赛事舞台一直播间",
+   "focus": [
+    "Dota2",
+    "TI2026",
+    "The International"
+   ],
+   "capture_status": "已实测（2026-08-20 WebSocket 实时入库；TI2026 Iron Wing vs Team Spirit 双源会话）",
+   "replay_status": "待验证",
+   "priority": "关键（TI 主舞台大样本源）",
+   "verified_at": "2026-08-20"
+  },
+  {
+   "id": "huya_maybeee111",
+   "platform": "huya",
+   "nickname": "Maybeee111",
+   "uid": 2381472418,
+   "room_id": 211888,
+   "live_url": "https://www.huya.com/211888",
+   "video_url": "",
+   "role": "Dota2 TI2026 赛事直播间（主播身份待进一步核验）",
+   "focus": [
+    "Dota2",
+    "TI2026",
+    "The International"
+   ],
+   "capture_status": "已实测（2026-08-20 WebSocket 实时入库；TI2026 Iron Wing vs Team Spirit 双源会话）",
+   "replay_status": "待验证",
+   "priority": "高（TI 二路交叉验证源）",
+   "verified_at": "2026-08-20"
+  }
+ ],
+ "updated_at": "2026-08-20T00:00:00+08:00"
+}

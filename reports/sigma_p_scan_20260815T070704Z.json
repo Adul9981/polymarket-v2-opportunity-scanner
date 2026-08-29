@@ -1,0 +1,1134 @@
+{
+ "captured_at": "20260815T070704Z",
+ "note": "mark-price level-1 coarse scan; level-2 order-book ask screening required before any action.",
+ "threshold": 0.02,
+ "groups": [
+  {
+   "negRiskMarketID": "0x56e40991a99c044c7b4bb646d24f66aab5c37f866fc0b9e3e6a3b551b8668100",
+   "sigmaP": 8.5,
+   "legs": 17,
+   "title": "Abbey Hey FC vs. Ossett United FC - Exact Score",
+   "slug": "efa-abb-oss-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x902bf845763327b50da126633f428e31639683633f117bc8a4f5373646de0a00",
+   "sigmaP": 8.4725,
+   "legs": 17,
+   "title": "Chattanooga Red Wolves SC vs. Spokane Velocity FC - Exact Score",
+   "slug": "usl1-cha-spo-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T23:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x17a635e02ba8ce5f7cdfc662f8d44a4f49ef305480dac7e9f376aa20c2ba5900",
+   "sigmaP": 8.4645,
+   "legs": 17,
+   "title": "Birmingham Legion FC vs. New Mexico United - Exact Score",
+   "slug": "uslc-bir-new-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T00:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8b615b59358df6234ca856ff24ada426f65360cc8fad05af5e3c0379df78b500",
+   "sigmaP": 8.4555,
+   "legs": 17,
+   "title": "Central Espanol FC vs. Liverpool Montevideo - Exact Score",
+   "slug": "uru1-esp-liv-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T15:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x72942a669bfde80f60ba4d65eb7d3ba7c78347a52ba3cc1552a1d92529a4f500",
+   "sigmaP": 8.451,
+   "legs": 17,
+   "title": "Mjallby AIF vs. Djurgardens IF - Exact Score",
+   "slug": "swe-mja-dju-2026-05-31-exact-score",
+   "category": "",
+   "endDate": "2026-05-31T14:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0x3545d626943ad8fd7b9cd2f7c69f036892c202df6545a3c96cbfe0233dfa5400",
+   "sigmaP": 8.451,
+   "legs": 17,
+   "title": "Sarasota Paradise vs. FC Naples - Exact Score",
+   "slug": "usl1-sar-nap-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T23:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0x654ef3d8822d87eb496719f4e98aac189848b410d6df56c89b2c7f8d8be68300",
+   "sigmaP": 8.451,
+   "legs": 17,
+   "title": "CD Limache vs. CD Ñublense - Exact Score",
+   "slug": "chi1-cdl-cdu-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-02T00:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x25ad4bddc7e06fc699384c0880a18abb4ccbd61b60c7386fd9784f351f19d700",
+   "sigmaP": 8.446,
+   "legs": 17,
+   "title": "Club Nacional de Football vs. CA Progreso - Exact Score",
+   "slug": "uru1-nac-pro-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-24T22:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0xb3bc50fab1cb30933e4f5c59a4e2d7e792e6b340162d1c7618376a9c3bb2c400",
+   "sigmaP": 8.4455,
+   "legs": 17,
+   "title": "FK Chornomorets Odesa vs. FK Kolos Kovalivka - Exact Score",
+   "slug": "ukr1-fco-kol-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T10:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa0fc8d00ef0a2af935e26606e0b5d4eb8022c451997c505c5a84f788b99ce300",
+   "sigmaP": 8.4285,
+   "legs": 17,
+   "title": "Defensor Sporting vs. CA Cerro - Exact Score",
+   "slug": "uru1-def-cer-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T18:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8d393f730eb90330e02a86b594e47d5133d39d4a84012763b3f2f78bbc643200",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Deportivo Maldonado vs. CA Juventud de Las Piedras - Exact Score",
+   "slug": "uru1-mal-juv-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T21:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xdfeec5f94826d30ad4fd41611614be9bd94c574e62d41d69d536fdccb9148e00",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Albion FC vs. Danubio FC - Exact Score",
+   "slug": "uru1-alb-dan-2026-07-26-exact-score",
+   "category": "",
+   "endDate": "2026-07-26T18:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x058b06f9f2823391a6fd57d14ac0b09fa6bc14a7a096b5c3bb857c2cc9355c00",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "St Andrews United FC vs. Jeanfield Swifts FC - Exact Score",
+   "slug": "scoc-and-jsw-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x0ce8e8dce7e635062d62470feb37f26e0a1c71e8cc93cb8dfcfb771d9fbda600",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Hawick Royal Albert United FC vs. Penicuik Athletic FC - Exact Score",
+   "slug": "scoc-haw-pen-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x14de31e2cd5ebbe739493341fc761d774d90a63ef67ae697cbdcbc8079745d00",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Whitletts Victoria FC vs. Sauchie Juniors FC - Exact Score",
+   "slug": "scoc-wv-sau-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x6a9f119e1f8d30ed928c2101b4315017d71402cadf3fd8c27cc0fa31960b6700",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Shortlees AFC vs. Dundee North End FC - Exact Score",
+   "slug": "scoc-sho-dne-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x64fb0064e9ab1b413004bdac5c06681fc5851ab8bd7a530c5e712be9d3885200",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Glenafton AFC vs. Stonehaven FC - Exact Score",
+   "slug": "scoc-gle-sto-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x65e434d2ea8f744d3f0f0b01987c6bbf441fe0895e50f6632bce4adead0fed00",
+   "sigmaP": 8.3915,
+   "legs": 17,
+   "title": "Orsomarso SC vs. Tigres FC - Exact Score",
+   "slug": "col2-ors-tig-2026-08-06-exact-score",
+   "category": "",
+   "endDate": "2026-08-06T23:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa2dc9eda07fa50c177b426b3ad565c99b43e8f42dd0f2a73be0cb6f429ad9600",
+   "sigmaP": 8.379,
+   "legs": 17,
+   "title": "Tianjin Jinmen Hu FC vs. Liaoning Tieren FC - Exact Score",
+   "slug": "chi-jin-tie-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x346c8e90f828b20d8da3451280cac278cd764d3945aeb367821c91f66b499500",
+   "sigmaP": 8.261,
+   "legs": 17,
+   "title": "FK Auda Riga vs. Ogre United - Exact Score",
+   "slug": "lva1-aud-ogr-2026-08-03-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T15:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x5c19f068425cfe96c33077c39bc4b171cf6cf1420b7fcc2aac15da460e152000",
+   "sigmaP": 8.216,
+   "legs": 17,
+   "title": "Boyacá Chicó FC vs. Alianza FC - Exact Score",
+   "slug": "col1-bcf-alf-2026-08-06-exact-score",
+   "category": "",
+   "endDate": "2026-08-06T21:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x79bb6f139b0a91228342feb73b86af25c5a8b8960da7c2cd70f525ed98caed00",
+   "sigmaP": 8.166,
+   "legs": 17,
+   "title": "Wuhan San Zhen FC vs. Henan FC - Exact Score",
+   "slug": "chi-wsz-hen-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x774dbd9baa353a70b3737d8a5a3b69c8233284627deb9b85d3b3a8c706ca7000",
+   "sigmaP": 8.1035,
+   "legs": 17,
+   "title": "CD Coquimbo Unido vs. CD Universidad de Concepción - Exact Score",
+   "slug": "chi1-ccu-cu1-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x531089c2923dc72f9020777e145b3dd3b535c6c8214cddf6c01cbed893b77600",
+   "sigmaP": 7.995,
+   "legs": 17,
+   "title": "Racing Club Montevideo vs. CA Boston River - Exact Score",
+   "slug": "uru1-rcm-bri-2026-07-26-exact-score",
+   "category": "",
+   "endDate": "2026-07-26T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xfe299bdababb7967c167c212b2d78e343c13136756194fa57e69f32759cae400",
+   "sigmaP": 7.83,
+   "legs": 17,
+   "title": "FK Dynamo Kyiv vs. FK Livyi Bereh - Exact Score",
+   "slug": "ukr1-dyn-liv-2026-08-02-exact-score",
+   "category": "",
+   "endDate": "2026-08-02T15:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x6d931bb66421cb415c48df3e55d2d2670794a3f54463eae8df0c55c979c7b100",
+   "sigmaP": 7.7865,
+   "legs": 17,
+   "title": "Deportivo Pereira vs. Independiente Santa Fe - Exact Score",
+   "slug": "col1-dep-isf-2026-08-05-exact-score",
+   "category": "",
+   "endDate": "2026-08-05T23:25:00Z"
+  },
+  {
+   "negRiskMarketID": "0x00ce5e2b3f291f431c9d235c431c5232719627cbdfaa7669ad0e67317bd92a00",
+   "sigmaP": 7.6945,
+   "legs": 17,
+   "title": "Shanghai Shenhua FC vs. Beijing Guoan FC - Exact Score",
+   "slug": "chi-sgr-bgu-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:35:00Z"
+  },
+  {
+   "negRiskMarketID": "0xed61bf7245ae78ae88549c5b4a304e7c4ea525d3818a4530856adb33d932d300",
+   "sigmaP": 7.57,
+   "legs": 17,
+   "title": "Zhejiang Zhiye FC vs. Wuhan San Zhen FC - Exact Score",
+   "slug": "chi-zhe-wsz-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T11:35:00Z"
+  },
+  {
+   "negRiskMarketID": "0x08a0306facc766d3b0e4249442a410b37683e755b69238106e7651f8137b1f00",
+   "sigmaP": 7.4615,
+   "legs": 17,
+   "title": "Boyacá Chicó FC vs. Atlético Nacional - Exact Score",
+   "slug": "col1-bcf-atn-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x9230b679cacec7292dd04bc5eb7af8f37f93944893568a3e8079de14e9dcb900",
+   "sigmaP": 6.2525,
+   "legs": 17,
+   "title": "Shanghai Haigang FC vs. Dalian Yingbo FC - Exact Score",
+   "slug": "chi-shp-ygb-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:35:00Z"
+  },
+  {
+   "negRiskMarketID": "0xdb3a6156448aafc4c15d4479bfb0c5c56b6635207ff6bad9e8b95a691ce82b00",
+   "sigmaP": 3.97,
+   "legs": 17,
+   "title": "IK Start vs. Vålerenga Fotball - Exact Score",
+   "slug": "nor-ik-vif-2026-05-25-exact-score",
+   "category": "",
+   "endDate": "2026-05-25T12:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0xd91cd468fada75ef9aaca63769d7e8edb0509d15ab6d8c1134d7310dec473100",
+   "sigmaP": 2.8665,
+   "legs": 17,
+   "title": "Marske United FC vs. Boro Rangers FC - Exact Score",
+   "slug": "efa-mar2-bor2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xf366b8f57feba29c3d7bb1c907daffd6b367dca9aff9e57db9aa16406dd06900",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "CA Guemes vs. CSD Tristan Suarez - Exact Score",
+   "slug": "argpn-gue-tri-2026-08-02-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T19:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x82a5b22257b8a6368f955ea377e9f1d020cc7be877db2a1393126ddfd8268d00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Badshot Lea FC vs. Brockenhurst FC - Exact Score",
+   "slug": "efa-bad-bro2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x288ee946ecdb0571d82cc50d6b842c2bb1164509b53a5ee44e57345b72d5e200",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Liversedge FC vs. Penistone Church FC - Exact Score",
+   "slug": "efa-liv2-pen-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa8ade5a8ddc8b138fa7be92480f2289a065472f1b075302229db2d8d90442900",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Haringey Borough FC vs. Sporting Bengal United FC - Exact Score",
+   "slug": "efa-har3-bng-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x1b111d4cd6a2367183ecbf07fe3aeb1da2634482a44db504cce65953f76ee200",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Bedfont vs. Glebe FC - Exact Score",
+   "slug": "efa-bedf-gle-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xb4a4c5b8a50a6db388e8e4d159d722e2ed99bc31365f0185a1ad82be7119d300",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Malmesbury Victoria FC vs. Longlevens AFC - Exact Score",
+   "slug": "efa-mlm-lon-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x44fbac821767b24f403f77ee08e8b6dc2c4e8655aeadfe22736a8eee5752d100",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Kimberley Miners Welfare FC vs. AFC Rushden & Diamonds - Exact Score",
+   "slug": "efa-kim-rdm-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x1ef999bf3fd3fce10b089bfa6145874bcbe99e29d54edd9cf5da6d2e13526800",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Stotfold FC vs. Basildon United FC - Exact Score",
+   "slug": "efa-sto4-bas2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xfc84fd84e5ef4dca6a1c8c7a23c964f81b3b676fe38d2f72d1d66bc8bbbd9100",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Lowestoft Town FC vs. Cambridge City FC - Exact Score",
+   "slug": "efa-low-cam2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8c8a596ba5765c5d4112715204b8c24fd39683156caf9355ec488d91dbbee700",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Thatcham Town FC vs. Cinderford Town AFC - Exact Score",
+   "slug": "efa-tha4-cin-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8519c3d206bf2880aa2b2d0c50f495385d32d06626cf5d902e07215b45717100",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Stafford Rangers FC vs. Tividale FC - Exact Score",
+   "slug": "efa-sta2-tiv-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x0a9696408ea16aee9f1ca1481ba88a10d42b1463c7d2f50fe93307a9e6c35000",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Hendon FC vs. Soul Tower Hamlets FC - Exact Score",
+   "slug": "efa-hen1-tow-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xf6083b28b4c2a55ab502bfac52796e757baf12d56e8850c8fa0625e5781cea00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Newark Town FC vs. Wellingborough Town FC - Exact Score",
+   "slug": "efa-new4-wbt-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x714caf0b89fff0bf39109b25841b43bf4e44293200f48e302539cfaa04f70e00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Willand Rovers FC vs. Wellington AFC - Exact Score",
+   "slug": "efa-wil-wel1-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xd870194256fc8913fdc9b55a5d085a9bf0e3ef49976b40676bc8cc4f227e8a00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Westfields FC vs. Nuneaton Town FC - Exact Score",
+   "slug": "efa-wsf-nun-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xdf1d6f060e28104e77697d6c87f0815cc97240371dd5f8fd747d1f13030e0a00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Faversham Town FC vs. Corinthian-Casuals FC - Exact Score",
+   "slug": "efa-fav-cor2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x5325447a921570dd46933e465fc4076c69e53a5f82ee63f581a0ccb80ddfed00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Steyning Town FC vs. Erith Town FC - Exact Score",
+   "slug": "efa-sty-eri-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa17fbabb43ba6f9fb4cddac99976111467617c288bf91aa907721ce91c18dc00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Crook Town AFC vs. Pickering Town FC - Exact Score",
+   "slug": "efa-cro2-pkr-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xbe5eeb22faeb0bc2324c78c0b4f6cd7dad9fa2f5dd9cb087a1feaa2501aeb800",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Brantham Athletic FC vs. Soham Town Rangers FC - Exact Score",
+   "slug": "efa-bra2-soh-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x942ae8eec485fb88ccc6d5c7bfbc7cf60e5fab818d6a839b96f43f5a91606600",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Northwood FC vs. Hutton FC - Exact Score",
+   "slug": "efa-nwd-hut-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x2cc887c97c6c30ed263be54902f9b269dec58cbc5963003474fde6c15da57b00",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Skegness Town AFC vs. Retford FC - Exact Score",
+   "slug": "efa-ske1-ret-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x4335d4cdc131e1febe3f6e1927c171d62174cd7a00071bffcb334aa067eb6300",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Corby Town FC vs. FC Peterborough - Exact Score",
+   "slug": "efa-cor1-pete-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x520d3119cde4eac01d57fe14e2c68981041b1e514d97ddb539443bc77e092300",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Nelson FC vs. Stockport Georgians AFC - Exact Score",
+   "slug": "efa-nel-sg-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x88d049814b00bae40bc68f41e1c531d15f29e9076166c4e80996d36f00c4c300",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Beaconsfield Town FC vs. Penn & Tylers Green FC - Exact Score",
+   "slug": "efa-bea1-ptg-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xae7b7b990af43d35233e126e4c952aa0789fca8d80021a653efa8910925c6700",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Lancing FC vs. South East Dons FC - Exact Score",
+   "slug": "efa-lnc-sed-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x410516a8c160fb2aa6c5679b3b8e6f298bb4fdfca32fa19735873380b8484100",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Portland United FC vs. Sturminster Newton United FC - Exact Score",
+   "slug": "efa-por-snu-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x6cffd9a2a01b83a4a45e226d70dd42ea7e7a5bc7deb90436fe9f1ee7ddc18700",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Ilford FC vs. Dunstable FC - Exact Score",
+   "slug": "efa-ilf-duns-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xc2372464a0715445140ce4ea15883b23413ce1a7f74e25f6a339ce5746395600",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Pershore Town FC vs. Brocton FC - Exact Score",
+   "slug": "efa-per-bro5-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xf12793991c1d08431a4802464b76d92ce6313ccc7ec1f06ecc38a3b3b01df000",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Horndean FC vs. Hartley Wintney FC - Exact Score",
+   "slug": "efa-hrn-har8-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xd70f94103891ea0e515ee6b84a33d5b6ae0301493e1d7bd8c3ec28da6bf1df00",
+   "sigmaP": 1.121,
+   "legs": 17,
+   "title": "Club Universitario de Deportes vs. CD Tolima - Exact Score",
+   "slug": "lib-uni-tol-2026-05-26-exact-score",
+   "category": "",
+   "endDate": "2026-05-27T00:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0xde1b13952cae626f3515e90336a09908d63d0ca134613c166e64d44047967100",
+   "sigmaP": 0.9995,
+   "legs": 17,
+   "title": "ZHFK Sisters vs. BSC Young Boys Frauen - Exact Score",
+   "slug": "uwcl-sis-byb-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T12:30:00Z"
+  }
+ ],
+ "hits": [
+  {
+   "negRiskMarketID": "0xdb3a6156448aafc4c15d4479bfb0c5c56b6635207ff6bad9e8b95a691ce82b00",
+   "sigmaP": 3.97,
+   "legs": 17,
+   "title": "IK Start vs. Vålerenga Fotball - Exact Score",
+   "slug": "nor-ik-vif-2026-05-25-exact-score",
+   "category": "",
+   "endDate": "2026-05-25T12:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0xd70f94103891ea0e515ee6b84a33d5b6ae0301493e1d7bd8c3ec28da6bf1df00",
+   "sigmaP": 1.121,
+   "legs": 17,
+   "title": "Club Universitario de Deportes vs. CD Tolima - Exact Score",
+   "slug": "lib-uni-tol-2026-05-26-exact-score",
+   "category": "",
+   "endDate": "2026-05-27T00:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0x72942a669bfde80f60ba4d65eb7d3ba7c78347a52ba3cc1552a1d92529a4f500",
+   "sigmaP": 8.451,
+   "legs": 17,
+   "title": "Mjallby AIF vs. Djurgardens IF - Exact Score",
+   "slug": "swe-mja-dju-2026-05-31-exact-score",
+   "category": "",
+   "endDate": "2026-05-31T14:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0x79bb6f139b0a91228342feb73b86af25c5a8b8960da7c2cd70f525ed98caed00",
+   "sigmaP": 8.166,
+   "legs": 17,
+   "title": "Wuhan San Zhen FC vs. Henan FC - Exact Score",
+   "slug": "chi-wsz-hen-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x00ce5e2b3f291f431c9d235c431c5232719627cbdfaa7669ad0e67317bd92a00",
+   "sigmaP": 7.6945,
+   "legs": 17,
+   "title": "Shanghai Shenhua FC vs. Beijing Guoan FC - Exact Score",
+   "slug": "chi-sgr-bgu-2026-07-11-exact-score",
+   "category": "",
+   "endDate": "2026-07-11T11:35:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa2dc9eda07fa50c177b426b3ad565c99b43e8f42dd0f2a73be0cb6f429ad9600",
+   "sigmaP": 8.379,
+   "legs": 17,
+   "title": "Tianjin Jinmen Hu FC vs. Liaoning Tieren FC - Exact Score",
+   "slug": "chi-jin-tie-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x9230b679cacec7292dd04bc5eb7af8f37f93944893568a3e8079de14e9dcb900",
+   "sigmaP": 6.2525,
+   "legs": 17,
+   "title": "Shanghai Haigang FC vs. Dalian Yingbo FC - Exact Score",
+   "slug": "chi-shp-ygb-2026-07-12-exact-score",
+   "category": "",
+   "endDate": "2026-07-12T11:35:00Z"
+  },
+  {
+   "negRiskMarketID": "0x25ad4bddc7e06fc699384c0880a18abb4ccbd61b60c7386fd9784f351f19d700",
+   "sigmaP": 8.446,
+   "legs": 17,
+   "title": "Club Nacional de Football vs. CA Progreso - Exact Score",
+   "slug": "uru1-nac-pro-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-24T22:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0x17a635e02ba8ce5f7cdfc662f8d44a4f49ef305480dac7e9f376aa20c2ba5900",
+   "sigmaP": 8.4645,
+   "legs": 17,
+   "title": "Birmingham Legion FC vs. New Mexico United - Exact Score",
+   "slug": "uslc-bir-new-2026-07-24-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T00:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8b615b59358df6234ca856ff24ada426f65360cc8fad05af5e3c0379df78b500",
+   "sigmaP": 8.4555,
+   "legs": 17,
+   "title": "Central Espanol FC vs. Liverpool Montevideo - Exact Score",
+   "slug": "uru1-esp-liv-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T15:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa0fc8d00ef0a2af935e26606e0b5d4eb8022c451997c505c5a84f788b99ce300",
+   "sigmaP": 8.4285,
+   "legs": 17,
+   "title": "Defensor Sporting vs. CA Cerro - Exact Score",
+   "slug": "uru1-def-cer-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T18:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x08a0306facc766d3b0e4249442a410b37683e755b69238106e7651f8137b1f00",
+   "sigmaP": 7.4615,
+   "legs": 17,
+   "title": "Boyacá Chicó FC vs. Atlético Nacional - Exact Score",
+   "slug": "col1-bcf-atn-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x774dbd9baa353a70b3737d8a5a3b69c8233284627deb9b85d3b3a8c706ca7000",
+   "sigmaP": 8.1035,
+   "legs": 17,
+   "title": "CD Coquimbo Unido vs. CD Universidad de Concepción - Exact Score",
+   "slug": "chi1-ccu-cu1-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T19:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8d393f730eb90330e02a86b594e47d5133d39d4a84012763b3f2f78bbc643200",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Deportivo Maldonado vs. CA Juventud de Las Piedras - Exact Score",
+   "slug": "uru1-mal-juv-2026-07-25-exact-score",
+   "category": "",
+   "endDate": "2026-07-25T21:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x531089c2923dc72f9020777e145b3dd3b535c6c8214cddf6c01cbed893b77600",
+   "sigmaP": 7.995,
+   "legs": 17,
+   "title": "Racing Club Montevideo vs. CA Boston River - Exact Score",
+   "slug": "uru1-rcm-bri-2026-07-26-exact-score",
+   "category": "",
+   "endDate": "2026-07-26T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xdfeec5f94826d30ad4fd41611614be9bd94c574e62d41d69d536fdccb9148e00",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Albion FC vs. Danubio FC - Exact Score",
+   "slug": "uru1-alb-dan-2026-07-26-exact-score",
+   "category": "",
+   "endDate": "2026-07-26T18:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x058b06f9f2823391a6fd57d14ac0b09fa6bc14a7a096b5c3bb857c2cc9355c00",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "St Andrews United FC vs. Jeanfield Swifts FC - Exact Score",
+   "slug": "scoc-and-jsw-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x0ce8e8dce7e635062d62470feb37f26e0a1c71e8cc93cb8dfcfb771d9fbda600",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Hawick Royal Albert United FC vs. Penicuik Athletic FC - Exact Score",
+   "slug": "scoc-haw-pen-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x14de31e2cd5ebbe739493341fc761d774d90a63ef67ae697cbdcbc8079745d00",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Whitletts Victoria FC vs. Sauchie Juniors FC - Exact Score",
+   "slug": "scoc-wv-sau-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x6a9f119e1f8d30ed928c2101b4315017d71402cadf3fd8c27cc0fa31960b6700",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Shortlees AFC vs. Dundee North End FC - Exact Score",
+   "slug": "scoc-sho-dne-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x64fb0064e9ab1b413004bdac5c06681fc5851ab8bd7a530c5e712be9d3885200",
+   "sigmaP": 8.415,
+   "legs": 17,
+   "title": "Glenafton AFC vs. Stonehaven FC - Exact Score",
+   "slug": "scoc-gle-sto-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x902bf845763327b50da126633f428e31639683633f117bc8a4f5373646de0a00",
+   "sigmaP": 8.4725,
+   "legs": 17,
+   "title": "Chattanooga Red Wolves SC vs. Spokane Velocity FC - Exact Score",
+   "slug": "usl1-cha-spo-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T23:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x3545d626943ad8fd7b9cd2f7c69f036892c202df6545a3c96cbfe0233dfa5400",
+   "sigmaP": 8.451,
+   "legs": 17,
+   "title": "Sarasota Paradise vs. FC Naples - Exact Score",
+   "slug": "usl1-sar-nap-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-01T23:30:00Z"
+  },
+  {
+   "negRiskMarketID": "0x654ef3d8822d87eb496719f4e98aac189848b410d6df56c89b2c7f8d8be68300",
+   "sigmaP": 8.451,
+   "legs": 17,
+   "title": "CD Limache vs. CD Ñublense - Exact Score",
+   "slug": "chi1-cdl-cdu-2026-08-01-exact-score",
+   "category": "",
+   "endDate": "2026-08-02T00:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xfe299bdababb7967c167c212b2d78e343c13136756194fa57e69f32759cae400",
+   "sigmaP": 7.83,
+   "legs": 17,
+   "title": "FK Dynamo Kyiv vs. FK Livyi Bereh - Exact Score",
+   "slug": "ukr1-dyn-liv-2026-08-02-exact-score",
+   "category": "",
+   "endDate": "2026-08-02T15:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x346c8e90f828b20d8da3451280cac278cd764d3945aeb367821c91f66b499500",
+   "sigmaP": 8.261,
+   "legs": 17,
+   "title": "FK Auda Riga vs. Ogre United - Exact Score",
+   "slug": "lva1-aud-ogr-2026-08-03-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T15:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xf366b8f57feba29c3d7bb1c907daffd6b367dca9aff9e57db9aa16406dd06900",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "CA Guemes vs. CSD Tristan Suarez - Exact Score",
+   "slug": "argpn-gue-tri-2026-08-02-exact-score",
+   "category": "",
+   "endDate": "2026-08-03T19:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x6d931bb66421cb415c48df3e55d2d2670794a3f54463eae8df0c55c979c7b100",
+   "sigmaP": 7.7865,
+   "legs": 17,
+   "title": "Deportivo Pereira vs. Independiente Santa Fe - Exact Score",
+   "slug": "col1-dep-isf-2026-08-05-exact-score",
+   "category": "",
+   "endDate": "2026-08-05T23:25:00Z"
+  },
+  {
+   "negRiskMarketID": "0x5c19f068425cfe96c33077c39bc4b171cf6cf1420b7fcc2aac15da460e152000",
+   "sigmaP": 8.216,
+   "legs": 17,
+   "title": "Boyacá Chicó FC vs. Alianza FC - Exact Score",
+   "slug": "col1-bcf-alf-2026-08-06-exact-score",
+   "category": "",
+   "endDate": "2026-08-06T21:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x65e434d2ea8f744d3f0f0b01987c6bbf441fe0895e50f6632bce4adead0fed00",
+   "sigmaP": 8.3915,
+   "legs": 17,
+   "title": "Orsomarso SC vs. Tigres FC - Exact Score",
+   "slug": "col2-ors-tig-2026-08-06-exact-score",
+   "category": "",
+   "endDate": "2026-08-06T23:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xb3bc50fab1cb30933e4f5c59a4e2d7e792e6b340162d1c7618376a9c3bb2c400",
+   "sigmaP": 8.4455,
+   "legs": 17,
+   "title": "FK Chornomorets Odesa vs. FK Kolos Kovalivka - Exact Score",
+   "slug": "ukr1-fco-kol-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T10:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xed61bf7245ae78ae88549c5b4a304e7c4ea525d3818a4530856adb33d932d300",
+   "sigmaP": 7.57,
+   "legs": 17,
+   "title": "Zhejiang Zhiye FC vs. Wuhan San Zhen FC - Exact Score",
+   "slug": "chi-zhe-wsz-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T11:35:00Z"
+  },
+  {
+   "negRiskMarketID": "0x82a5b22257b8a6368f955ea377e9f1d020cc7be877db2a1393126ddfd8268d00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Badshot Lea FC vs. Brockenhurst FC - Exact Score",
+   "slug": "efa-bad-bro2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x288ee946ecdb0571d82cc50d6b842c2bb1164509b53a5ee44e57345b72d5e200",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Liversedge FC vs. Penistone Church FC - Exact Score",
+   "slug": "efa-liv2-pen-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa8ade5a8ddc8b138fa7be92480f2289a065472f1b075302229db2d8d90442900",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Haringey Borough FC vs. Sporting Bengal United FC - Exact Score",
+   "slug": "efa-har3-bng-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x1b111d4cd6a2367183ecbf07fe3aeb1da2634482a44db504cce65953f76ee200",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Bedfont vs. Glebe FC - Exact Score",
+   "slug": "efa-bedf-gle-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xb4a4c5b8a50a6db388e8e4d159d722e2ed99bc31365f0185a1ad82be7119d300",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Malmesbury Victoria FC vs. Longlevens AFC - Exact Score",
+   "slug": "efa-mlm-lon-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x44fbac821767b24f403f77ee08e8b6dc2c4e8655aeadfe22736a8eee5752d100",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Kimberley Miners Welfare FC vs. AFC Rushden & Diamonds - Exact Score",
+   "slug": "efa-kim-rdm-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x1ef999bf3fd3fce10b089bfa6145874bcbe99e29d54edd9cf5da6d2e13526800",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Stotfold FC vs. Basildon United FC - Exact Score",
+   "slug": "efa-sto4-bas2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xfc84fd84e5ef4dca6a1c8c7a23c964f81b3b676fe38d2f72d1d66bc8bbbd9100",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Lowestoft Town FC vs. Cambridge City FC - Exact Score",
+   "slug": "efa-low-cam2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8c8a596ba5765c5d4112715204b8c24fd39683156caf9355ec488d91dbbee700",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Thatcham Town FC vs. Cinderford Town AFC - Exact Score",
+   "slug": "efa-tha4-cin-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x8519c3d206bf2880aa2b2d0c50f495385d32d06626cf5d902e07215b45717100",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Stafford Rangers FC vs. Tividale FC - Exact Score",
+   "slug": "efa-sta2-tiv-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x0a9696408ea16aee9f1ca1481ba88a10d42b1463c7d2f50fe93307a9e6c35000",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Hendon FC vs. Soul Tower Hamlets FC - Exact Score",
+   "slug": "efa-hen1-tow-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xf6083b28b4c2a55ab502bfac52796e757baf12d56e8850c8fa0625e5781cea00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Newark Town FC vs. Wellingborough Town FC - Exact Score",
+   "slug": "efa-new4-wbt-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x714caf0b89fff0bf39109b25841b43bf4e44293200f48e302539cfaa04f70e00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Willand Rovers FC vs. Wellington AFC - Exact Score",
+   "slug": "efa-wil-wel1-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xd870194256fc8913fdc9b55a5d085a9bf0e3ef49976b40676bc8cc4f227e8a00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Westfields FC vs. Nuneaton Town FC - Exact Score",
+   "slug": "efa-wsf-nun-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x56e40991a99c044c7b4bb646d24f66aab5c37f866fc0b9e3e6a3b551b8668100",
+   "sigmaP": 8.5,
+   "legs": 17,
+   "title": "Abbey Hey FC vs. Ossett United FC - Exact Score",
+   "slug": "efa-abb-oss-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xdf1d6f060e28104e77697d6c87f0815cc97240371dd5f8fd747d1f13030e0a00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Faversham Town FC vs. Corinthian-Casuals FC - Exact Score",
+   "slug": "efa-fav-cor2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x5325447a921570dd46933e465fc4076c69e53a5f82ee63f581a0ccb80ddfed00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Steyning Town FC vs. Erith Town FC - Exact Score",
+   "slug": "efa-sty-eri-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xa17fbabb43ba6f9fb4cddac99976111467617c288bf91aa907721ce91c18dc00",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Crook Town AFC vs. Pickering Town FC - Exact Score",
+   "slug": "efa-cro2-pkr-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xbe5eeb22faeb0bc2324c78c0b4f6cd7dad9fa2f5dd9cb087a1feaa2501aeb800",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Brantham Athletic FC vs. Soham Town Rangers FC - Exact Score",
+   "slug": "efa-bra2-soh-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x942ae8eec485fb88ccc6d5c7bfbc7cf60e5fab818d6a839b96f43f5a91606600",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Northwood FC vs. Hutton FC - Exact Score",
+   "slug": "efa-nwd-hut-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x2cc887c97c6c30ed263be54902f9b269dec58cbc5963003474fde6c15da57b00",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Skegness Town AFC vs. Retford FC - Exact Score",
+   "slug": "efa-ske1-ret-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x4335d4cdc131e1febe3f6e1927c171d62174cd7a00071bffcb334aa067eb6300",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Corby Town FC vs. FC Peterborough - Exact Score",
+   "slug": "efa-cor1-pete-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x520d3119cde4eac01d57fe14e2c68981041b1e514d97ddb539443bc77e092300",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Nelson FC vs. Stockport Georgians AFC - Exact Score",
+   "slug": "efa-nel-sg-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x88d049814b00bae40bc68f41e1c531d15f29e9076166c4e80996d36f00c4c300",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Beaconsfield Town FC vs. Penn & Tylers Green FC - Exact Score",
+   "slug": "efa-bea1-ptg-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xae7b7b990af43d35233e126e4c952aa0789fca8d80021a653efa8910925c6700",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Lancing FC vs. South East Dons FC - Exact Score",
+   "slug": "efa-lnc-sed-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x410516a8c160fb2aa6c5679b3b8e6f298bb4fdfca32fa19735873380b8484100",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Portland United FC vs. Sturminster Newton United FC - Exact Score",
+   "slug": "efa-por-snu-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0x6cffd9a2a01b83a4a45e226d70dd42ea7e7a5bc7deb90436fe9f1ee7ddc18700",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Ilford FC vs. Dunstable FC - Exact Score",
+   "slug": "efa-ilf-duns-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xc2372464a0715445140ce4ea15883b23413ce1a7f74e25f6a339ce5746395600",
+   "sigmaP": 1.5,
+   "legs": 17,
+   "title": "Pershore Town FC vs. Brocton FC - Exact Score",
+   "slug": "efa-per-bro5-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xf12793991c1d08431a4802464b76d92ce6313ccc7ec1f06ecc38a3b3b01df000",
+   "sigmaP": 0.5,
+   "legs": 17,
+   "title": "Horndean FC vs. Hartley Wintney FC - Exact Score",
+   "slug": "efa-hrn-har8-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  },
+  {
+   "negRiskMarketID": "0xd91cd468fada75ef9aaca63769d7e8edb0509d15ab6d8c1134d7310dec473100",
+   "sigmaP": 2.8665,
+   "legs": 17,
+   "title": "Marske United FC vs. Boro Rangers FC - Exact Score",
+   "slug": "efa-mar2-bor2-2026-08-08-exact-score",
+   "category": "",
+   "endDate": "2026-08-08T14:00:00Z"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>弹幕情报工作流 · 分层输出规范</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed;--warn-bg:#fff7f0;--warn:#ff9500;--ok:#34c759}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:920px;margin:0 auto}
+h1{font-size:26px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:24px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:12px;border-left:4px solid var(--accent);padding-left:10px}
+h3{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--accent)}
+ul{margin:0 0 8px 20px}li{margin-bottom:4px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600;background:#fafafa}
+.tree{background:#f7f9fc;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:13.5px;line-height:2.0;overflow-x:auto}
+.tree b{color:var(--accent)}
+.node{display:inline-block;background:#eef4ff;color:var(--accent);border-radius:20px;padding:0 10px;font-size:12px;margin-right:6px;white-space:nowrap}
+.tag{display:inline-block;background:#eef4ff;color:var(--accent);border-radius:20px;padding:1px 10px;font-size:12px;margin-right:6px;white-space:nowrap}
+.tag-v0{background:#fff7e6;color:#d97706}
+.tag-v1{background:#eef6ff;color:#0071e3}
+.tag-v2{background:#f2f9f2;color:#1d8a44}
+.warn{background:var(--warn-bg);border-left:4px solid var(--warn);padding:12px 14px;border-radius:8px;font-size:14px;margin:12px 0}
+.ok{background:#f2f9f2;border-left:4px solid var(--ok);padding:12px 14px;border-radius:8px;font-size:14px;margin:12px 0}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+.flex{display:flex;gap:10px;flex-wrap:wrap}
+.mini{flex:1;min-width:180px;background:#fafafa;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.mini .t{font-weight:600;font-size:14px;margin-bottom:4px}
+.mini .d{color:var(--sub);font-size:12px}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>弹幕情报工作流 · 分层输出规范</h1>
+<p class="sub">Danmaku Intel Workflow &amp; Layered Output Guide · 更新 2026-08-22 · 依据 <a href="../knowledge/DANMU_WORKFLOW.md" style="color:var(--accent)">DANMU_WORKFLOW.md</a> / <a href="../knowledge/INTEL_HTML_TEMPLATE.md" style="color:var(--accent)">INTEL_HTML_TEMPLATE.md</a></p>
+<div class="stats">
+<div class="stat"><div class="num">双层</div><div class="lbl">系列层 × 局层</div></div>
+<div class="stat"><div class="num">19</div><div class="lbl">输出触发点</div></div>
+<div class="stat"><div class="num">3 版</div><div class="lbl">速报/页面/库沉淀</div></div>
+<div class="stat"><div class="num">黄金窗口</div><div class="lbl">BP 锁定后 1-3 分钟</div></div>
+</div>
+
+<section class="card"><h2>一、核心思想</h2>
+<div class="warn"><b>情报的交易价值 = 信息增量 ÷ 距离市场重定价的时间。</b>输出节点必须贴着"信息释放时刻"（首发 / BP 锁定 / 关键团战 / 局间 / 终局）走，并在价格反应之前送达——BP 锁定后的 1–3 分钟是全场比赛唯一的黄金窗口。</div>
+<ul>
+<li><b>系列层（方向）</b>：谁赢、打几局、有没有剧本——管"判断方向"</li>
+<li><b>局层（时机）</b>：BP 锚点、事件、灰信号在哪一刻爆发——管"出手时机"</li>
+<li>局层每个输出都在喂系列层的下一个判断，两层互锁</li>
+</ul></section>
+
+<section class="card"><h2>二、五阶段 SOP（总览）</h2>
+<div class="tree">阶段0 准备（登记/词表/房间） → 阶段1 启动（会话/落盘/健康自检） → 阶段2 监控（60s 心跳/关键节点） → 阶段3 情报输出（按节点自动触发） → 阶段4 复盘入库（比赛结束自动） → 阶段5 交接接力（跨会话）</div>
+<p style="color:var(--sub);font-size:12px;margin-top:6px">一场比赛是处理单元；小局切换（G1→G2）不换比赛，只换局标签；新对阵才开新切片。</p></section>
+
+<section class="card"><h2>三、双层节点结构</h2>
+<div class="tree">
+系列层（BO3 整场）<br>
+　├── <span class="node">S0｜赛前｜PRE-MATCH</span> 开赛前 30-15 分钟（整场一次）<br>
+　├── 局层循环 ×3（每局一套完整节点）<br>
+　│　　　├── <span class="node">PRE｜局前｜PRE-GAME</span> 承接系列状态（G1 复用 S0）<br>
+　│　　　├── <span class="node">BP｜BP 锁定｜BP-LOCK</span> 选人落定 1-3 分钟 · 黄金窗口<br>
+　│　　　├── <span class="node">OPEN｜开局｜OPENING</span> 开局 5-10 分钟验证<br>
+　│　　　├── <span class="node">LIVE｜局中｜IN-GAME</span> 关键事件 / 灰信号爆发<br>
+　│　　　└── <span class="node">END｜局结束｜GAME-END</span> 归入系列层局间<br>
+　└── <span class="node">FINAL｜系列复盘｜SERIES-REVIEW</span> 整场结束 15 分钟内
+</div>
+<p style="color:var(--sub);font-size:12px;margin-top:8px">命名统一为 <b>简码｜中文名｜英文名</b>，情报页标题、速报开头、库字段全带中英文。</p></section>
+
+<section class="card"><h2>四、系列层节点（方向层）</h2>
+<table>
+<tr><th>节点</th><th>触发</th><th>必含</th><th>价值</th></tr>
+<tr><td><span class="node">S0｜赛前</span></td><td>开赛前 30-15 分钟</td><td>首发/换人、状态、排名博弈、历史对战、初盘对照、灰信号先验</td><td>提前埋伏</td></tr>
+<tr><td><span class="node">G1-END｜第一局结束</span></td><td>G1 结算后 5 分钟内</td><td>结果+关键进程、灰信号验证（被疑方输了没？）、横扫/给一盘/让一追二判断、G2 前瞻</td><td>系列盘重定价（第二高）</td></tr>
+<tr><td><span class="node">G2-END｜第二局结束</span></td><td>G2 结算后 5 分钟内</td><td>系列状态（2:0 / 1:1）、横扫 vs 决胜局预期、控分/剧本升级、决胜局 BP 前瞻</td><td>决胜局预期成形</td></tr>
+<tr><td><span class="node">FINAL｜系列复盘</span></td><td>整场结束 15 分钟内</td><td>逐局复盘、预测验证、灰信号兑现率回填、画像更新、情报库同步</td><td>学习价值（价格已结算）</td></tr>
+</table></section>
+
+<section class="card"><h2>五、局层节点（时机层，每局 5 个）</h2>
+<table>
+<tr><th>节点</th><th>触发</th><th>必含</th><th>价值</th></tr>
+<tr><td><span class="node">PRE｜局前</span></td><td>本局 BP 前（G2/G3 为局间前瞻）</td><td>上局复盘要点、变阵/换人预期、本局方向</td><td>承接系列状态</td></tr>
+<tr><td><span class="node">BP｜BP 锁定</span></td><td>选人落定 1-3 分钟</td><td>阵容、BP 后战绩情报（选手×英雄战绩，正负锚点）、判负/判胜共识、异常选角与 ban</td><td><b>全系列最高（黄金窗口）</b></td></tr>
+<tr><td><span class="node">OPEN｜开局</span></td><td>开局 5-10 分钟</td><td>BP 锚点应验/打脸（如"掘墓打杰斯是否真压不住"）、对线/初节奏</td><td>修正 BP 判断</td></tr>
+<tr><td><span class="node">LIVE｜局中</span></td><td>密度峰值/关键节点</td><td>事件类型、灰信号（做局/穿盘/收米/水位不动）、翻盘信号、密度峰值</td><td>反转交易（只标注）</td></tr>
+<tr><td><span class="node">END｜局结束</span></td><td>本局结算</td><td>归入系列层 G1-END / G2-END / FINAL，不单独出页</td><td>—</td></tr>
+</table></section>
+
+<section class="card"><h2>六、三局侧重（同节点、不同权重）</h2>
+<div class="flex">
+<div class="mini"><div class="t">G1 · 首次信息</div><div class="d">BP 信息增量最大（首次暴露阵容，战绩情报最重要）；局中灰信号初现。</div></div>
+<div class="mini"><div class="t">G2 · 调整反制</div><div class="d">看谁变阵谁头铁（"第二局给一盘"剧本）；BP 带 1:0/0:1 背景；灰信号延续/转向。</div></div>
+<div class="mini"><div class="t">G3 · 决胜局</div><div class="d">看心态/底牌/控分叙事；BP 为灰信号最高浓度节点；事件密度最高。</div></div>
+</div></section>
+
+<section class="card"><h2>七、输出版本（3 层）</h2>
+<table>
+<tr><th>版本</th><th>形态</th><th>用途</th><th>触发词</th></tr>
+<tr><td><span class="tag tag-v0">V0 速报</span></td><td>≤2 分钟，≤5 条，可直接交易</td><td>BP/事件/局间结果的即时决策</td><td>"快速输出"</td></tr>
+<tr><td><span class="tag tag-v1">V1 情报页</span></td><td>B 型局中 / A 型复盘，10 段标准模板</td><td>决策存档与深挖</td><td>"输出情报 / 复盘"</td></tr>
+<tr><td><span class="tag tag-v2">V2 库沉淀</span></td><td>matches/gray/entities/teams/players/leagues + 统计页</td><td>长期先验</td><td>比赛结束自动</td></tr>
+</table></section>
+
+<section class="card"><h2>八、SLA 与纪律</h2>
+<ul>
+<li>SLA：BP 速报 ≤3 分钟 · 局间页 ≤5 分钟 · 系列复盘 ≤15 分钟 · 局中事件 2 分钟内</li>
+<li>每个节点带置信标注（结果类尤其；低样本标"待确认"）</li>
+<li>灰信号只作风险标注，不下结论；数据断档必须显式记录，不因自动而省略</li>
+</ul></section>
+
+<section class="card"><h2>九、阶段自适应输出（用户中途要情报）</h2>
+<div class="ok"><b>规则：先定位 → 当前优先 → 前面补齐 → 后续观察。</b>用户任何时刻说"输出情报"，先判断当前在第几局/哪个阶段，先出当前节点情报，再分批发前面已发生但重要的情报（本局 BP 与战绩情报、关键事件、上一局结果与系列状态），每条带时间戳与置信；数据断档明说"该段未采集"。</div>
+<p style="font-size:13px;color:var(--sub)">例：G2 中段要情报 → 先给 G2-LIVE（局势/灰信号）→ 补 G1-BP（战绩情报）与 G1-END（系列状态）→ 最后给 G2-END 前瞻观察点。</p></section>
+
+<p class="note">关联文档：DANMU_WORKFLOW.md（SOP + 节点规范）· INTEL_HTML_TEMPLATE.md（页面模板）· DANMU_CAPTURE_RULES.md（规则红线）· LIVE_INTEL_SCHEMA.md / REVIEW_SCHEMA.md（局中/复盘结构）· 本页为框架速览，细节以文档为准。</p>
+</div></body></html>

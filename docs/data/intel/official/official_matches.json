@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "description": "客观层：官方结算/战报/比分（与弹幕主观层对照的基准）。来源优先 Polymarket closed / 官方战报站；只录已确认，未知不猜。",
+  "updated_at": "2026-08-24T08:28:00+08:00",
+  "matches": [
+    {"match_id": "2026-08-23_th_gx", "game": "lol", "league": "LEC", "result": "GX 2:0 TH", "games": [{"no": 1, "winner": "GX"}, {"no": 2, "winner": "GX"}], "source": "Polymarket lol-th-gx-2026-08-23 (closed)", "confirmed_ts": "2026-08-24"},
+    {"match_id": "2026-08-24_kc_shft", "game": "lol", "league": "LEC", "result": "KC 2:1 SHFT", "games": [{"no": 1, "winner": "SHFT"}, {"no": 2, "winner": "KC"}, {"no": 3, "winner": "KC"}], "source": "Polymarket lol-shft-kc-2026-08-23 (closed)", "confirmed_ts": "2026-08-24"},
+    {"match_id": "2026-08-23_ewc_cs2_final_spirit_fut", "game": "cs2", "league": "EWC CS2", "result": "Spirit 3:1 FUT", "maps": [{"no": 1, "map": "Cache", "winner": "FUT", "score": "13-10"}, {"no": 2, "map": "Anubis", "winner": "Spirit", "score": "16-13"}, {"no": 3, "map": "Ancient", "winner": "Spirit", "score": "16-14"}, {"no": 4, "map": "Nuke", "winner": "Spirit"}], "source": "虎扑赛后帖+直播吧逐图战报", "confirmed_ts": "2026-08-24"},
+    {"match_id": "2026-08-23_tt_lgd", "game": "lol", "league": "LPL", "result": "LGD 2:0 TT", "source": "Polymarket + 直播吧", "confirmed_ts": "2026-08-23"},
+    {"match_id": "2026-08-23_t1_hle", "game": "lol", "league": "LCK", "result": "HLE 2:0 T1", "source": "直播吧战报（G1/G2）", "confirmed_ts": "2026-08-23"},
+    {"match_id": "2026-08-23_edg_jdg", "game": "lol", "league": "LPL", "result": "JDG 2:1 EDG", "games": [{"no": 1, "winner": "JDG"}, {"no": 2, "winner": "EDG"}, {"no": 3, "winner": "JDG"}], "source": "直播吧+EDG官博", "confirmed_ts": "2026-08-23"},
+    {"match_id": "2026-08-23_bfx_ns", "game": "lol", "league": "LCK", "result": "NS 2:1 BFX", "games": [{"no": 1, "winner": "BFX"}, {"no": 2, "winner": "NS"}, {"no": 3, "winner": "NS"}], "source": "直播吧+虎扑", "confirmed_ts": "2026-08-23"},
+    {"match_id": "2026-08-23_blg_al", "game": "lol", "league": "LPL", "result": "BLG 2:1 AL", "source": "官方确认（交易快照）", "confirmed_ts": "2026-08-23"},
+    {"match_id": "2026-08-21_sk_th", "game": "lol", "league": "LEC", "result": "TH 2:0 SK", "source": "Polymarket 结算+官方赛果", "confirmed_ts": "2026-08-22"},
+    {"match_id": "2026-08-21_t1_kt", "game": "lol", "league": "LCK", "result": "T1 2:1 KT", "source": "Polymarket+直播吧", "confirmed_ts": "2026-08-22"}
+  ]
+}

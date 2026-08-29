@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DNS vs NS · K杯决赛第二局弹幕分析（硕硕 + 957）</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.7;padding:28px 16px 60px}
+.wrap{max-width:840px;margin:0 auto}
+h1{font-size:25px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:14px;margin-bottom:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}
+.stat{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:23px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px;margin-top:2px}
+.card{background:var(--card);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:18px;font-weight:700;margin-bottom:4px}
+.meta{color:var(--sub);font-size:12px;margin-bottom:14px}
+.block{margin-bottom:16px}
+h3{font-size:14px;font-weight:600;margin-bottom:6px;color:var(--accent)}
+ul{margin:0 0 8px 18px}li{margin-bottom:5px;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--sub);font-weight:600}
+.warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
+.note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<h1>DNS vs NS · K杯决赛第二局弹幕分析</h1>
+<p class="sub">比赛：LCK 凯斯帕杯决赛 DNS vs NS（BO5）· 数据源：硕硕（323444）+ 957（890001）· 窗口 18:05 开局 ~ 18:31 结束 · 推断结果：DNS 拿下第二局，总比分 DNS 2:0 领先（第三局后 3:0 横扫夺冠，待官方确认）</p>
+<div class="stats">
+<div class="stat"><div class="num">2346</div><div class="lbl">弹幕总数（G2 窗口）</div></div>
+<div class="stat"><div class="num">919</div><div class="lbl">活跃用户</div></div>
+<div class="stat"><div class="num">18:28</div><div class="lbl">峰值时刻(256条/分)</div></div>
+<div class="stat"><div class="num">2</div><div class="lbl">关键节点（暂停潮/收尾）</div></div>
+</div>
+
+<div class="warn"><b>本轮最重要信号：暂停争议 + 灰信号集中爆发。</b>G2 中段（18:20 前后）DNS 频繁暂停，弹幕瞬间引爆："DNS 一直暂停""稳定第二局开始暂停""第二把剧本赛前没商量好？""左边暂停完就开始赢"，并伴随大量假赛质疑（"假赛退钱""纯假赛""给场外发信号""回溯冠军""打钱"），甚至出现盘口玩梗（"暂停大 2.5""暂停大 0.5 狠狠收"）。这是本系列赛灰信号密度最高的时段，与 G1"人头盘大满水"形成连续两局的"质疑 × 盘口"共振。</div>
+
+<div class="ok"><b>灰信号纪律：</b>以下仅为观众主观质疑，不作结论："这不是演？""打野是不是买了""故意输而已啦""太假了""两个 FMVP 疯狂送"。按规则只作风险标注，与盘口/后续对照。</div>
+
+<section class="card"><h2>一、结果与比分（据弹幕推断，待官方确认）</h2>
+<ul>
+<li><b>DNS 拿下第二局，总比分 2:0</b>（18:31 弹幕"2-0"）；第三局 18:44"3:0"、19:04"3-0了"——DNS 横扫夺冠（推断）</li>
+<li>G2 时长约 26 分钟（18:05-18:31）；DNS 打野 shavel 延续第一局热度（"世一骑安娜""这打野太变态了"）</li>
+<li>局间出现过"1-1"弹幕（少数），但主流信号与后续第三局走向均指向 DNS 2:0 且最终 3:0</li>
+</ul></section>
+
+<section class="card"><h2>二、队伍情报</h2>
+<div class="block"><h3>DNS —— 节奏压制 + 暂停争议缠身</h3>
+<ul>
+<li>打野 shavel 琪亚娜继续 carry："这打野太变态了""世一骑安娜""不知道 DNS 怎么输"；DNS 阵容被认可（"左边这阵容随便杀人"）</li>
+<li><b>暂停争议是 DNS 侧最大话题</b>："DNS 一直暂停""DNS 怎么天天搞这种""左边暂停完就开始赢""昨天也是第二把开始频繁暂停"——观众把暂停与赢关联，质疑增多</li>
+<li>实力认知：观众认为 DNS 有"传奇组实力""王朝"（此前虐过 GEN）；但也有质疑"人菜屁事多"</li>
+</ul></div>
+<div class="block"><h3>NS —— 三 FMVP 阵容打成"最菜决赛队"</h3>
+<ul>
+<li>阵容含金量被点破："右边两个 S 赛冠军 + 一个季中赛 FMVP 打成这样"（Kingen/学弟/莲子等），观众直言"这五个人太垃圾了""一路漏风"</li>
+<li>操作灾难："兰博空大""潘森飞哪去了""琪亚娜走到一半支援去刷野""打野不来救""打了这么久没队友"（"队友呢"刷屏）</li>
+<li>资源分配被批："资源总分配到上中野""右边上野不如我"；教练组被质疑（BP 与调整）</li>
+</ul></div>
+</section>
+
+<section class="card"><h2>三、选手与英雄观察</h2>
+<table>
+<tr><th>选手/英雄</th><th>观众评价</th></tr>
+<tr><td>DNS 打野 shavel · 琪亚娜</td><td>"世一骑安娜""这打野太变态了""不知道 DNS 怎么输"——系列赛主角</td></tr>
+<tr><td>NS 上单 Kingen · 兰博</td><td>"兰博空大了不然岩雀就死了""K嗨是真的嗨""k嗨怎么不玩剑魔了""被岩雀追着打"——被集火</td></tr>
+<tr><td>NS 打野 · 潘森</td><td>"潘森飞哪去""打野是不是买了""打野不来救""明年还有工作吗"——与 G1 的"龙心"延续同一批评线</td></tr>
+<tr><td>NS 中单"学弟"</td><td>"学弟也冠军啊"（含金量讨论）；整体发挥被批</td></tr>
+<tr><td>NS 辅助"莲子"· 泰坦</td><td>"莲子是不会玩软辅吗""泰坦这把最少死6次"</td></tr>
+<tr><td>岩雀（DNS 中单）</td><td>开局拿一血（"岩雀一血赚了"），但中期"燕雀伤害真低还有人选"</td></tr>
+</table></section>
+
+<section class="card"><h2>四、局势时间线（第二局）</h2>
+<ul>
+<li><b>18:05 开局</b>：岩雀一血（"上来就干"）；"这不 2-0 了"提前预测出现；琪亚娜被 DNS 抢下</li>
+<li><b>18:15-18:19</b>：DNS 阵容联动（"抓边/巴德大招随便杀人"），NS 边线开始被压（"右边上野不如我"）</li>
+<li><b>18:20（暂停潮）</b>：DNS 暂停引发弹幕爆发——"又暂停""稳定第二局开始暂停""假赛退钱""打钱""回溯冠军"；盘口玩梗"暂停大 2.5/0.5"</li>
+<li><b>18:24-18:28（峰值 256 条/分）</b>：NS 团战连环失误——兰博空大、潘森迷路、琪亚娜失误；"两个 FMVP 疯狂送""队友呢"刷屏</li>
+<li><b>18:29-18:31</b>：收尾——"2-0""3-0""右边败了"；DNS 拿下第二局</li>
+</ul></section>
+
+<section class="card"><h2>五、盘口讨论（观众集体智慧）</h2>
+<table>
+<tr><th>时间</th><th>讨论内容</th><th>解读</th></tr>
+<tr><td>18:20</td><td>"暂停大 2.5""暂停大 0.5 狠狠收"</td><td>观众把暂停次数做成盘口梗——反映"暂停=比赛可控性"的质疑心理</td></tr>
+<tr><td>18:24</td><td>"48 了"</td><td>数字盘讨论（人头/时长待确认）</td></tr>
+<tr><td>19:01</td><td>"应该差不多 3 比 0 了"</td><td>系列赛总比分盘预期（最终弹幕指向 3:0）</td></tr>
+</table>
+<div class="meta">要点：G2 的盘口讨论弱于 G1（G1 总人头大满水），但"暂停盘"梗与灰信号绑定，是"观众认为比赛节奏可被操纵"的心理指标。</div>
+</section>
+
+<section class="card"><h2>六、灰信号（观众质疑，非结论）</h2>
+<ul>
+<li>本局灰信号密度为系列赛最高（18:20 一分钟内数十条）："假赛""假赛退钱""纯假赛""给场外发信号""打钱""回溯冠军""这赛事奖金少事故多"</li>
+<li>触发点：DNS 频繁暂停 + NS 团战离谱失误（"明显能打赢的团他送了"）——观众将两者串联成"剧本"叙事</li>
+<li>理性归因并存："打野差距太大了""资源分配问题""教练组问题"——灰信号与实力归因两条线并行</li>
+<li>处理：与 G1 灰信号合并存档，作为"观众集体质疑指数"素材（暂停次数 × 离谱失误 × 盘口讨论）</li>
+</ul></section>
+
+<section class="card"><h2>七、高价值用户（G2 窗口）</h2>
+<table>
+<tr><th>用户</th><th>直播间</th><th>发言</th><th>特征</th></tr>
+<tr><td>我是一颗小虎牙</td><td>硕硕</td><td>52</td><td>全程点评 + 盘口/比分判断（"2-0""3-0"节奏判断）</td></tr>
+<tr><td>失乐小吴</td><td>957</td><td>35</td><td>操作反应 + 局势跟进（"盲僧在飞"等延续）</td></tr>
+<tr><td>Juddd</td><td>957</td><td>21</td><td>选手批判型（Kingen 相关判断）</td></tr>
+<tr><td>黑张说话</td><td>硕硕</td><td>18</td><td>阵容/冠军含金量讨论（"学弟也冠军啊""K嗨你就看吧"）</td></tr>
+<tr><td>拔剑更何求</td><td>硕硕</td><td>16</td><td>资源分配观察型（"右边资源总分配到上中野"）</td></tr>
+</table></section>
+
+<section class="card"><h2>八、对系列赛与后续的情报含义</h2>
+<ul>
+<li>弹幕主流判定 DNS 3:0 横扫（"看到杰斯那 3-0 了"——第三局 NS 上单再选杰斯被提前判死刑）；若官方结果为 3:0，则"观众对第三局 BP 的即时判断"是高质量预测样本</li>
+<li>NS 的"三 FMVP 阵容"持续低于预期——若后续赛事 NS 调整阵容/状态，属于值得跟踪的反弹或持续塌方观察点</li>
+<li>暂停争议 × 灰信号 × 盘口"大"三线共振（G1 人头盘、G2 暂停盘）——这套"集体质疑指数"建议沉淀并与官方数据（暂停次数、比赛时长）对照验证</li>
+</ul></section>
+
+<p class="note">数据说明：本报告基于硕硕 + 957 双直播间 G2 窗口（18:05-18:31）弹幕 2346 条（919 活跃用户）。
+原始数据：docs/data/danmu/huya/2026-08-18_323444.jsonl、2026-08-18_890001.jsonl。
+比分与结果均为弹幕推断，待官方确认；灰信号仅作风险标注。</p>
+</div></body></html>

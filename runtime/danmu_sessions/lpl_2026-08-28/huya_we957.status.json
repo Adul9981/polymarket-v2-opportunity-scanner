@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "huya_we957",
+  "url": "https://www.huya.com/890001",
+  "state": "offline_waiting",
+  "started_at": "2026-08-28T14:23:51+00:00",
+  "heartbeat_at": "2026-08-29T07:44:34+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 890001,
+  "channel_id": 968316902,
+  "nickname": "WE957",
+  "introduction": "BRO大战BFX决胜局~！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-28T14:23:55+00:00"
+}

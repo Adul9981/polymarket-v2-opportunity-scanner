@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "slug": "lol-ig1-lng-2026-08-09",
+  "targets": {
+    "lol-ig1-lng-2026-08-09-game1|Invictus Gaming": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "high_water": 0.945,
+      "last_pattern_labels": [
+        "A3_折价修复",
+        "热门全程压制"
+      ],
+      "last_action_key": "no_entry_high|buy|"
+    },
+    "lol-ig1-lng-2026-08-09-game2|Invictus Gaming": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "high_water": 0.945,
+      "last_pattern_labels": [
+        "A3_折价修复",
+        "热门全程压制"
+      ],
+      "last_action_key": "no_entry_high|buy|"
+    },
+    "lol-ig1-lng-2026-08-09|Invictus Gaming": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "high_water": 0.945,
+      "last_pattern_labels": [
+        "A3_折价修复",
+        "热门全程压制"
+      ],
+      "last_action_key": "no_entry_high|buy|"
+    }
+  }
+}

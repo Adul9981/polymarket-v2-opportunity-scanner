@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS2 策略复盘 · EWC 系列</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1d1d1f;
+    --sub: #6e6e73;
+    --line: #e8e8ed;
+    --blue: #0071e3;
+    --blue-soft: #e8f1fd;
+    --green: #1d9e5b;
+    --green-soft: #e7f7ef;
+    --red: #e0342e;
+    --red-soft: #fdecea;
+    --amber: #b45309;
+    --amber-soft: #fdf3e3;
+    --shadow: 0 1px 3px rgba(0,0,0,.05), 0 10px 30px rgba(0,0,0,.06);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC",
+      "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 18px 64px; }
+
+  .hero { text-align: center; padding: 24px 8px 28px; }
+  .hero .kicker {
+    display: inline-block; font-size: 13px; letter-spacing: .08em;
+    color: var(--sub); background: #fff; border: 1px solid var(--line);
+    border-radius: 999px; padding: 4px 14px; margin-bottom: 14px;
+  }
+  .hero h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+  .hero p { color: var(--sub); font-size: 15px; margin-top: 10px; }
+
+  .sec { margin-top: 36px; }
+  .sec-title {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 17px; font-weight: 600; margin-bottom: 14px; padding-left: 2px;
+  }
+  .sec-title .dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+  .card {
+    background: var(--card); border-radius: 16px; padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .card + .card { margin-top: 12px; }
+  .card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 7px; }
+  .card p, .card li { font-size: 13.5px; color: var(--sub); }
+  .card ul { list-style: none; }
+  .card li { padding: 4px 0 4px 18px; position: relative; }
+  .card li::before { content: "·"; position: absolute; left: 4px; color: var(--blue); font-weight: 700; }
+  .card b { color: var(--ink); font-weight: 600; }
+
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (max-width: 620px) { .stats { grid-template-columns: 1fr; } }
+  .stat {
+    background: var(--card); border-radius: 18px; padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .stat .label { font-size: 12px; color: var(--sub); }
+  .stat .value { font-size: 26px; font-weight: 700; margin-top: 4px; letter-spacing: -0.01em; }
+  .stat .note { font-size: 12px; color: var(--sub); margin-top: 2px; }
+
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 600; border-radius: 999px;
+    padding: 2px 9px; margin-right: 6px; margin-top: 6px;
+  }
+  .tag.g { background: var(--green-soft); color: var(--green); }
+  .tag.r { background: var(--red-soft); color: var(--red); }
+  .tag.a { background: var(--amber-soft); color: var(--amber); }
+  .tag.b { background: var(--blue-soft); color: var(--blue); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--sub); font-weight: 600; font-size: 11.5px; white-space: nowrap; }
+  tr:last-child td { border-bottom: none; }
+  td .tag { margin-top: 0; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 620px) { .cols { grid-template-columns: 1fr; } }
+
+  .quote {
+    background: linear-gradient(135deg, #0071e3, #0a5dc2);
+    color: #fff; border-radius: 20px; padding: 22px 22px 20px; margin-top: 36px;
+    box-shadow: var(--shadow);
+  }
+  .quote .q-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .quote p { font-size: 14px; opacity: .92; }
+  .quote p + p { margin-top: 6px; }
+
+  footer {
+    text-align: center; color: var(--sub); font-size: 12px;
+    margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="kicker">CS2 · EWC 系列 · 2026-08-15</span>
+    <h1>CS2 策略复盘</h1>
+    <p>12 场比赛 · 每场 G1/G2/整场赔率 · 5 条可执行策略</p>
+  </header>
+
+  <!-- 核心数字 -->
+  <section class="sec">
+    <div class="stats">
+      <div class="stat"><div class="label">样本量</div><div class="value">12 场</div><div class="note">主赛事 BO1/BO3 + Open Qualifier</div></div>
+      <div class="stat"><div class="label">让一追二深反</div><div class="value">3 次</div><div class="note">全部出现在 BO3（K27 / paiN / MOUZ）</div></div>
+      <div class="stat"><div class="label">弱侧 B4 归零</div><div class="value">8 / 12 图</div><div class="note">"深水区多数归零"仍是基准</div></div>
+    </div>
+  </section>
+
+  <!-- 样本总览 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--blue)"></span>样本总览</div>
+    <div class="card">
+      <table>
+        <tr><th>比赛</th><th>赛事</th><th>赛果</th><th>整场路径</th><th>形态</th></tr>
+        <tr><td>OG vs Vael</td><td>OQ G9</td><td>OG 2:0</td><td>77.5c → 99.5c</td><td><span class="tag b">热门压制</span></td></tr>
+        <tr><td>Phantom vs levelONE</td><td>OQ G10</td><td>Phantom 2:0</td><td>79.5c → 99.5c</td><td><span class="tag b">热门压制</span></td></tr>
+        <tr><td>EYE vs PHA</td><td>OQ G10</td><td>EYE 2:1</td><td>5:5 → 86.5c → 逆转</td><td><span class="tag a">反复翻超</span></td></tr>
+        <tr><td>FOKUS vs Partizan</td><td>OQ G13</td><td>FOKUS 2:0</td><td>72c → 99.5c</td><td><span class="tag b">热门+G1 深反</span></td></tr>
+        <tr><td>NRG vs Spirit HU</td><td>OQ G14</td><td>NRG 2:0</td><td>93c → 97.75c</td><td><span class="tag b">热门压制</span></td></tr>
+        <tr><td>Acend vs Vandulken</td><td>OQ G14</td><td>Acend 2:0</td><td>62c → 98.5c</td><td><span class="tag b">中位热门</span></td></tr>
+        <tr><td>fnatic vs K27</td><td>Play-Ins</td><td>K27 2:1</td><td>6c → 100c</td><td><span class="tag g">让一追二深反</span></td></tr>
+        <tr><td>PRV vs B8</td><td>EWC C（BO1）</td><td>B8 赢</td><td>40c → 8.5c → 70c</td><td><span class="tag a">硬币波动</span></td></tr>
+        <tr><td>BetBoom vs FaZe</td><td>EWC B（BO1）</td><td>FaZe 赢</td><td>5:5 → 5/95 → 回拉</td><td><span class="tag a">硬币波动</span></td></tr>
+        <tr><td>FUT vs MOUZ</td><td>EWC C（BO3）</td><td>FUT 2:1</td><td>Map2 MOUZ 21.5c 反转</td><td><span class="tag g">深反对照</span></td></tr>
+        <tr><td>Wildcard vs paiN</td><td>EWC D（BO3）</td><td>paiN 2:1</td><td>29.5c → 98c</td><td><span class="tag g">让一追二深反</span></td></tr>
+        <tr><td>MGLZ vs NAVI</td><td>EWC D（BO3）</td><td>NAVI 2:1*</td><td>W 型</td><td><span class="tag a">G2 双底（*待结算）</span></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- 策略 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--green)"></span>可执行策略（5 条）</div>
+
+    <div class="card">
+      <h3>1 · S-CS1：BO3 让一追二深反 <span class="tag g">正期望</span></h3>
+      <p><b>结构：</b>强侧先赢 Map1，弱侧整场/单图被砸到深水。</p>
+      <ul>
+        <li>深水区（整场 ≤20c / 单图 ≤15c）小仓彩票预算买入</li>
+        <li>反转确认后加仓：单图价格上穿 0.5，或整场上穿 0.35</li>
+        <li>上穿 0.7 后止盈 60-80%，剩余搏系列赛</li>
+      </ul>
+      <p><b>样本：</b>K27 6c→100c · paiN 29.5c→98c · MGLZ G2 25c→100c · FUT Map2 21.5c→100c</p>
+      <p><b>风险：</b>深水无脑接 = 接刀（FUT Map1 37c 接刀归零反例）</p>
+    </div>
+
+    <div class="card">
+      <h3>2 · S-CS2：热门压制赛前早建仓 <span class="tag b">低回报但稳定</span></h3>
+      <ul>
+        <li>适用：资格赛/小组赛明显强弱分明（赛前整场 55-65c 档）</li>
+        <li>赛前 &lt;55c 早建仓（回报 &gt;80%）；&gt;75c 不追</li>
+        <li>Acend 62c（+61%）有价值；OG 77.5c / Phantom 79.5c / NRG 93c 无价值</li>
+        <li>单图开盘段（46-60c）是唯一低吸窗口，需容忍中段回撤</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>3 · S-CS3：五五开场观察不参与 <span class="tag a">方向不定</span></h3>
+      <ul>
+        <li>5:5 开盘强强对话（EYE/PHA、BetBoom/FaZe）不主动下注</li>
+        <li>等 Map1 方向确认后再决定</li>
+        <li>若持有：高位（86c+）必锁盈——EYE 86.5c 未锁盈回撤 38c 反例</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>4 · S-CS4：BO1 硬币波动只按彩票 <span class="tag a">无价格止损</span></h3>
+      <ul>
+        <li>主赛事小组赛 BO1（Group B/C 单图）波动剧烈</li>
+        <li>彩票预算（归零无感），不设价格止损（B8 40→8.5→70 卖飞反例）</li>
+        <li>或直接不参与</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>5 · S-CS5：弱侧反扑 = 锁盈/逃命窗口 <span class="tag g">不追高</span></h3>
+      <ul>
+        <li>弱势侧反扑到 50c+（或整场 45c+）是减仓窗口，不是加仓点</li>
+        <li>EYE 86.5c、Partizan 91c 高位未锁盈归零</li>
+        <li>paiN / NAVI 反扑后回落，反复印证</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 纪律对照 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--red)"></span>交易纪律对照</div>
+    <div class="cols">
+      <div class="card">
+        <h3 style="color:var(--red)">反面样本</h3>
+        <p>FUT vs MOUZ Map1：37c 中位接刀，全仓 350 归零。</p>
+        <p style="margin-top:8px">同日 MOUZ Map2 21.5c 反转 4.6 倍——位置与确认时机决定盈亏，不是"MOUZ 能不能翻"。</p>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--green)">规则强化</h3>
+        <ul>
+          <li>接位必须等启动确认（上穿 0.3/0.5），阴跌途中接 = 接刀</li>
+          <li>深水反转按彩票仓：单笔 ≤30%、归零可接受</li>
+          <li>高位（80c+）锁盈是规则不是选择</li>
+          <li>"以为能反弹"不是理由——反弹需要信号，不需要希望</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 自动化 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--blue)"></span>自动化捕捉（候选信号）</div>
+    <div class="card">
+      <p><b>信号：</b>BO3 中，落后方在 Map2 中段跌至 ≤15c（整场 ≤8c），随后 5-10 分钟内单局价格上穿 0.3/0.5 = 深水反转启动。</p>
+      <p style="margin-top:8px"><b>执行：</b>整场 ≤8c 小仓彩票买入，上穿 0.5 止盈 80%，未启动按归零。</p>
+      <p style="margin-top:8px"><b>状态：</b>1 分钟价格流可用；扫描规则待接入候选流程（dry-run 先行）。</p>
+      <p style="margin-top:8px"><b>风控：</b>autopilot 关闭，需显式开启 + 限额（每日 $75 / 单市场 $30）。</p>
+    </div>
+  </section>
+
+  <div class="quote">
+    <div class="q-title">CS2 一句话结论</div>
+    <p>深水区多数归零是基准，反转是少数；</p>
+    <p>让一追二的正期望在"确认后加仓段"，不在极值抄底段；</p>
+    <p>热门压制的价值由赛前档位决定——62c 值得买，93c 只是看。</p>
+  </div>
+
+  <footer>
+    数据源：12 场 EWC CS2 比赛 1 分钟赔率快照 · 完整文档：knowledge/leagues/CS2_STRATEGY_REVIEW.md<br>
+    生成时间：2026-08-15 · MGLZ vs NAVI 正式结算后回填
+  </footer>
+
+</div>
+</body>
+</html>

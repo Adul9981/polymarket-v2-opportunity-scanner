@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "description": "应验/反例双轨样本（可验证资产）。应验与未应验并列，用于校准置信度；每条必须带 match/锚点/验证来源。",
+  "updated_at": "2026-08-24T08:22:00+08:00",
+  "samples": [
+    {"id": "val_jayce_th_g1", "type": "bp_anchor", "polarity": "应验", "anchor": "弱队杰斯=判负", "match": "2026-08-23_th_gx_g1", "detail": "TH 杰斯局输 G1", "source": "官方结算+弹幕"},
+    {"id": "val_lucian_th_g2", "type": "bp_anchor", "polarity": "应验", "anchor": "卢锡安无米利欧=判负", "match": "2026-08-23_th_gx_g2", "detail": "TH 卢锡安局输 G2", "source": "官方结算+弹幕"},
+    {"id": "val_anivia_faker", "type": "bp_anchor", "polarity": "应验", "anchor": "老李冰鸟7-0 正锚", "match": "2026-08-21_t1_kt_g3", "detail": "冰鸟后期接管，T1 赢 G3", "source": "官方结算+弹幕"},
+    {"id": "val_cass_ze_ka", "type": "bp_anchor", "polarity": "应验", "anchor": "蛇女+盲僧中野（Zeka）", "match": "2026-08-23_t1_hle_g1", "detail": "HLE Zeka 蛇女团战完美取胜", "source": "官方战报"},
+    {"id": "val_cass_kc", "type": "bp_anchor", "polarity": "未应验（单局）", "anchor": "蛇女一出直接赢（KC 复制）", "match": "2026-08-24_kc_shft_g1", "detail": "KC 蛇女输 G1，但系列 KC 2:1 逆转——单局锚≠系列", "source": "官方结算"},
+    {"id": "val_fut_nuke", "type": "map_anchor", "polarity": "应验", "anchor": "FUT×Nuke 零胜率（负锚）", "match": "2026-08-23_ewc_cs2_final_spirit_fut", "detail": "图四 Nuke 被速通", "source": "官方战报"},
+    {"id": "val_spirit_ancient", "type": "map_anchor", "polarity": "应验", "anchor": "Spirit×Ancient 不败（正锚）", "match": "2026-08-23_ewc_cs2_final_spirit_fut", "detail": "图三 Ancient 16-14 加时拿下", "source": "官方战报"},
+    {"id": "val_kc_turtle", "type": "pattern", "polarity": "应验", "anchor": "KC 卡时间（打谁都要30几分钟）", "match": "2026-08-24_kc_shft", "detail": "三局 34/49/27 分钟", "source": "弹幕+时长"},
+    {"id": "val_kc_gray", "type": "gray_signal", "polarity": "未应验（反例）", "anchor": "被质疑方必输（KC 定向~100条）", "match": "2026-08-24_kc_shft", "detail": "G1 兑现但系列 KC 2:1 赢——高浓度灰信号≠结果方向", "source": "官方结算"},
+    {"id": "val_sk_yone", "type": "bp_anchor", "polarity": "应验", "anchor": "SK 永恩负锚", "match": "2026-08-21_sk_th_g2", "detail": "SK 永恩局输", "source": "官方结算"},
+    {"id": "val_diable_lucian", "type": "bp_anchor", "polarity": "应验", "anchor": "大菠萝卢锡安正锚", "match": "2026-08-23_bfx_ns_g2", "detail": "卢锡安 13 杀爆砍扳平", "source": "官方战报"}
+  ]
+}

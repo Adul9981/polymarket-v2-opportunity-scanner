@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-08-09T10:00:00+00:00",
+  "mode": "live_scan",
+  "count": 2,
+  "items": [
+    {
+      "queued_at": "2026-08-09T10:00:00+00:00",
+      "expires_at": "2026-08-09T14:00:00+00:00",
+      "event_slug": "lol-test-s2",
+      "event_title": "LoL: Team A vs Team B - LCK",
+      "market_slug": "lol-test-s2-game-1-winner",
+      "market_title": "Game 1 Winner",
+      "outcome": "TeamA",
+      "recommended_strategy": "S2_FAVORITE_DIP_GRID",
+      "recommended_strategy_detail": "S2_FAVORITE_DIP_GRID / E-B2",
+      "route_strategy": "S2_FAVORITE_DIP_GRID",
+      "strategy_maturity": "L3_SMALL_LIVE",
+      "action_recommendation": "can_prepare_trade_plan",
+      "opportunity_score": 79,
+      "liquidity_score": 72,
+      "reasons": ["强队折价修复"],
+      "metrics": {"last": 0.44, "min": 0.44, "rebound_from_min": 0.0}
+    },
+    {
+      "queued_at": "2026-08-09T10:00:00+00:00",
+      "expires_at": "2026-08-09T14:00:00+00:00",
+      "event_slug": "lol-test-s3",
+      "event_title": "LoL: Team C vs Team D - LCK",
+      "market_slug": "lol-test-s3-game-1-winner",
+      "market_title": "Game 1 Winner",
+      "outcome": "TeamC",
+      "recommended_strategy": "S3_DOMINANT_PULLBACK_GRID",
+      "recommended_strategy_detail": "S3_DOMINANT_PULLBACK_GRID",
+      "route_strategy": "S3_DOMINANT_PULLBACK_GRID",
+      "strategy_maturity": "L2_EXPERIMENTAL",
+      "action_recommendation": "manual_review_before_plan",
+      "opportunity_score": 55,
+      "liquidity_score": 65,
+      "reasons": ["实验策略需人工复核"]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "huya_shuoshuo",
+  "url": "https://www.huya.com/323444",
+  "state": "offline_waiting",
+  "started_at": "2026-08-28T13:02:56+00:00",
+  "heartbeat_at": "2026-08-29T07:44:37+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 323444,
+  "channel_id": 35184381630871,
+  "nickname": "解说硕硕",
+  "introduction": "LCK季后赛决胜局！BRO BFX！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-08-28T13:02:56+00:00"
+}

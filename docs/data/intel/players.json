@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "description": "选手情报库（2026-08-29 建立）· team_id 关联 team_names.json；anchors 为弹幕锚点（正/负）· 跨场累积",
+  "players": [
+    {
+      "id": "cs2-kscerato",
+      "name": "KSCERATO（卡神/卡萨瑞托）",
+      "game": "cs2",
+      "team_id": "furia",
+      "role": "rifler",
+      "danmu": {
+        "mentions_total": 2,
+        "anchors": ["稳定大腿（'他根本拼不过卡萨瑞托'）"],
+        "tone": "正"
+      },
+      "official": {"note": "2026-08-29 FURIA vs M80 G1"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-furia-heishan",
+      "name": "黑闪/黑蛆（FURIA 激进位·对象待确认）",
+      "game": "cs2",
+      "team_id": "furia",
+      "role": "unknown",
+      "danmu": {
+        "mentions_total": 10,
+        "anchors": ["太狂/出来拼抢被批（个人浪）——激进位画像"],
+        "tone": "负（浪）"
+      },
+      "official": {"note": "对象待确认（molodoy/yuurih 候选），确认后回填"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-fiesta",
+      "name": "FIESTA（VIT 中单）",
+      "game": "lol",
+      "team_id": "vit",
+      "role": "mid",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["辛德拉被批'空地交闪→送''除了刺客都是一坨'——非刺客英雄执行负锚"],
+        "tone": "负（单源）"
+      },
+      "official": {"note": "2026-08-29 VIT vs FNC G1 辛德拉"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-vladi",
+      "name": "Vladi（瓦拉迪·FNC 中单）",
+      "game": "lol",
+      "team_id": "fnc",
+      "role": "mid",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["瑞兹被赞'最近有点猛'——正锚候选"],
+        "tone": "正（单源）"
+      },
+      "official": {"note": "2026-08-29 VIT vs FNC G1 瑞兹"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-upset",
+      "name": "Upset（FNC ADC）",
+      "game": "lol",
+      "team_id": "fnc",
+      "role": "adc",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["G1 选芸阿娜（同日 Taeyoon 五杀同英雄）——版本 ADC 正锚候选"],
+        "tone": "待验证"
+      },
+      "official": {"note": "2026-08-29 VIT vs FNC G1 芸阿娜（官方 window）"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-soboro",
+      "name": "Soboro（骚波肉·FNC 上单）",
+      "game": "lol",
+      "team_id": "fnc",
+      "role": "top",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["G1 兰博（'师从晒哥'调侃）"],
+        "tone": "中"
+      },
+      "official": {"note": "2026-08-29 VIT vs FNC G1 兰博"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-nakanako",
+      "name": "Naak Nako（VIT 上单）",
+      "game": "lol",
+      "team_id": "vit",
+      "role": "top",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["G1 杰斯被批'失忆了'（表现质疑）"],
+        "tone": "负（单条）"
+      },
+      "official": {"note": "2026-08-29 VIT vs FNC G1 杰斯"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-makazze",
+      "name": "makazze（马卡泽）",
+      "game": "cs2",
+      "team_id": "navi",
+      "role": "rifler",
+      "danmu": {
+        "mentions_total": 160,
+        "anchors": ["被吹 TOP1 后情绪反转（吹→批）", "G2 Mirage 后期被批'蠢'，与 iM 轮流摊"],
+        "tone": "负（高波动）"
+      },
+      "official": {"note": "2026-08-28 NAVI 2-0 paiN；G1 Nuke 13:9 / G2 Mirage 13:11"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-b1t",
+      "name": "b1t（大b哥）",
+      "game": "cs2",
+      "team_id": "navi",
+      "role": "rifler",
+      "danmu": {
+        "mentions_total": 8,
+        "anchors": ["稳定大腿（'枪法比马卡泽高不少档次'）"],
+        "tone": "正"
+      },
+      "official": {},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-try",
+      "name": "try（潘帕斯闪光）",
+      "game": "cs2",
+      "team_id": "legacy",
+      "role": "awper",
+      "danmu": {
+        "mentions_total": 117,
+        "anchors": ["'敌我狙击手'正锚", "3打5 翻盘/5杀", "Dust II 强图预判兑现"],
+        "tone": "正（MVP）"
+      },
+      "official": {"note": "2026-08-27 Legacy 2-0 FUT：全场 42-22/+20/ADR87"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-cmtry",
+      "name": "cmtry（厘米try）",
+      "game": "cs2",
+      "team_id": "fut",
+      "role": "awper",
+      "danmu": {
+        "mentions_total": 40,
+        "anchors": ["'敌我狙击手'负锚（vs try）", "被质疑'FUT还不换掉cmtry吗'"],
+        "tone": "负"
+      },
+      "official": {"note": "2026-08-27 FUT 0-2 Legacy：全场 26-35/-9"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-tn1r",
+      "name": "tN1R",
+      "game": "cs2",
+      "team_id": "spirit",
+      "role": "rifler",
+      "danmu": {"mentions_total": null, "anchors": [], "tone": "正"},
+      "official": {"note": "2026-08-28 Spirit 2-0 G2：G1 16-12/+4"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-donk",
+      "name": "donk",
+      "game": "cs2",
+      "team_id": "spirit",
+      "role": "rifler",
+      "danmu": {"mentions_total": null, "anchors": ["状态平平无碍（非胜负手）"], "tone": "中"},
+      "official": {"note": "2026-08-28 G1 10-11/-1"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "cs2-r1nkle",
+      "name": "r1nkle",
+      "game": "cs2",
+      "team_id": "g2",
+      "role": "awper",
+      "danmu": {"mentions_total": null, "anchors": ["G2 唯一正分独苗（19-8/+11）"], "tone": "正（独木难支）"},
+      "official": {"note": "2026-08-28 G2 0-2 Spirit"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-vicla",
+      "name": "VicLa（大光）",
+      "game": "lol",
+      "team_id": "bfx",
+      "role": "mid",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["大法师正锚（发条 G4 三杀·兑现）", "刺客/加里奥执行被质疑"],
+        "tone": "分歧（大法师正/刺客负）"
+      },
+      "official": {"note": "2026-08-28 BFX 3-2 BRO：G4 发条三杀逆转"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-clear",
+      "name": "Clear（BFX 上单）",
+      "game": "lol",
+      "team_id": "bfx",
+      "role": "top",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["三图 carry（G1 奎桑提/G4 剑魔三杀/G5 女刀运营）"],
+        "tone": "正（系列 MVP）"
+      },
+      "official": {"note": "2026-08-28 BFX 3-2 BRO"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-taeyoon",
+      "name": "Taeyoon（泰勇）",
+      "game": "lol",
+      "team_id": "bfx",
+      "role": "adc",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["芸阿娜（Yunara）五杀收尾（G4·兑现）", "G3 卢锡安+悠米体系未兑现"],
+        "tone": "正（新英雄执行力）"
+      },
+      "official": {"note": "2026-08-28 BFX 3-2 BRO：G4 芸阿娜五杀"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-teddy",
+      "name": "Teddy（BRO 下路）",
+      "game": "lol",
+      "team_id": "bro",
+      "role": "adc",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["女警体系正锚（G2 乱杀）", "G3 德莱文高风险（被盯）"],
+        "tone": "正（体系依赖）"
+      },
+      "official": {"note": "2026-08-28 BRO 2-3 BFX：G2 女警乱杀扳平"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-nuc",
+      "name": "nuc（SHFT 中单）",
+      "game": "lol",
+      "team_id": "shft",
+      "role": "mid",
+      "danmu": {
+        "mentions_total": null,
+        "anchors": ["核心位延续（G1 维克托电龙魂 → G2 小炮）两局制胜"],
+        "tone": "正"
+      },
+      "official": {"note": "2026-08-28 SHFT 2-0 TH"},
+      "updated": "2026-08-29"
+    },
+    {
+      "id": "lol-daglas",
+      "name": "Daglas（TH 打野）",
+      "game": "lol",
+      "team_id": "th",
+      "role": "jungle",
+      "danmu": {"mentions_total": null, "anchors": ["悟空被批'演员'（表现差）"], "tone": "负"},
+      "official": {"note": "2026-08-28 TH 0-2 SHFT 淘汰"},
+      "updated": "2026-08-29"
+    }
+  ]
+}

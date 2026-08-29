@@ -1,0 +1,459 @@
+{
+  "meta": {
+    "total": 57562,
+    "active_users": 13758,
+    "window_utc": [
+      "2026-08-19 07:12",
+      "2026-08-20 00:13"
+    ],
+    "density_per_min": 56.4,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "al世界赛都进不去的，连kc都打不过"
+      ]
+    },
+    "TH": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这两个队比TH还能龟"
+      ]
+    },
+    "Navi": {
+      "mentions": 41,
+      "pos": 30,
+      "neg": 0,
+      "samples": [
+        "不如kanavi",
+        "因为：我和navi都不在了，lpl打野强度都降低不少",
+        "因为：我和navi都不在了，lpl打野强度都降低不少",
+        "感觉我和navi都不在了，lpl打野强度都降低不少",
+        "感觉我和navi都不在了，lpl打野强度都降低不少"
+      ]
+    },
+    "T1": {
+      "mentions": 116,
+      "pos": 5,
+      "neg": 5,
+      "samples": [
+        "老师 听说兵哥代替多兰去T1了 是阵得吗",
+        "t1报价多少",
+        "讲真虽然今年t1跟三星都拉了！但除了blg能稍微打一打其它别",
+        "看t1",
+        "二哥怎么看现在的t1"
+      ]
+    },
+    "DNS": {
+      "mentions": 18,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "dns",
+        "dns",
+        "dns赢了",
+        "dns的黄金之路",
+        "wbg打的还不如dns好看"
+      ]
+    },
+    "KT": {
+      "mentions": 185,
+      "pos": 12,
+      "neg": 15,
+      "samples": [
+        "看Gen打KT",
+        "看Gen 打KT 啊",
+        "KT赔率4.8了",
+        "KT赔率4.8了",
+        "KT赔率4.8了"
+      ]
+    },
+    "HLE": {
+      "mentions": 15,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "gg现在粉丝数量不如后起的hle 就是打法问题",
+        "都怪hle",
+        "HLE充的电",
+        "这阵容谁选谁输，hle，t1都输了，geng还选",
+        "hle阵容"
+      ]
+    },
+    "GEN": {
+      "mentions": 142,
+      "pos": 8,
+      "neg": 16,
+      "samples": [
+        "二哥 二哥 我真诚的发问 geng怎么样才能锁世界赛？",
+        "看Gen打KT",
+        "看Gen 打KT 啊",
+        "二哥 geng呢",
+        "Geng这把赢了就晋级了吗"
+      ]
+    },
+    "WBG": {
+      "mentions": 725,
+      "pos": 28,
+      "neg": 95,
+      "samples": [
+        "微博进世界赛了没",
+        "wbg怎么还在打",
+        "微博还没放假吗？",
+        "wbg淘汰了 还在打比赛吗",
+        "微博这一把输了就完了吗"
+      ]
+    },
+    "LNG": {
+      "mentions": 436,
+      "pos": 18,
+      "neg": 70,
+      "samples": [
+        "lng加油加油",
+        "LNG 打不过 WB，就在今天",
+        "lng[困]",
+        "weiwei还能打比赛啊，lng老板太仁慈了",
+        "这波就看出来LNG强度了"
+      ]
+    },
+    "WE": {
+      "mentions": 1248,
+      "pos": 47,
+      "neg": 153,
+      "samples": [
+        "we？",
+        "We战队在季后赛也可以挣积分啊。",
+        "Elk不行，回we战队吧。",
+        "我感觉elk有回WE战队的可能性啊！",
+        "Elk,明年不行，回WE战队吧。"
+      ]
+    },
+    "EDG": {
+      "mentions": 901,
+      "pos": 31,
+      "neg": 107,
+      "samples": [
+        "还有个最菜EDG",
+        "edg在登封是谁的责任",
+        "今天EDG能做到吗",
+        "edG",
+        "下一个解散的俱乐部就是EDG了"
+      ]
+    },
+    "BLG": {
+      "mentions": 351,
+      "pos": 22,
+      "neg": 4,
+      "samples": [
+        "你把寻给滔搏吊打Blg",
+        "elk是真的被blg验出来了，最菜的就是他",
+        "微博耽误了ELK，他之前在BLG多猛",
+        "blg有没有pik 不重要",
+        "这么高伤害的女警，我们BLG要了"
+      ]
+    },
+    "TES": {
+      "mentions": 391,
+      "pos": 28,
+      "neg": 8,
+      "samples": [
+        "tes都赢不了越南",
+        "TES",
+        "打TES要回归了Bin",
+        "在赛事模拟中被TES夺得头筹，下局等你来逆袭！",
+        "在赛事模拟中被TES夺得头筹，下局等你来逆袭！"
+      ]
+    },
+    "IG": {
+      "mentions": 77,
+      "pos": 4,
+      "neg": 3,
+      "samples": [
+        "下场ig也是这个场馆啊肯定人多",
+        "@二西MO肤 云玩了，ig在哪呢",
+        "大米，IG能进季后赛吗",
+        "李宁中单是不是之前ig那个，难怪ig会掉涅槃",
+        "Lng 打不过ig 不一定打不过wbg"
+      ]
+    }
+  },
+  "players": {
+    "Oscar": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "奥斯卡",
+        "奥斯卡之夜赖了",
+        "奥斯卡之夜"
+      ]
+    },
+    "Poby": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "原来TES的教练 是这个Poby 难怪"
+      ]
+    },
+    "Guma": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这谁怎么长得跟姑妈 有点像",
+        "姑妈玩炸弹人也赢不了啊"
+      ]
+    },
+    "Faker": {
+      "mentions": 168,
+      "pos": 10,
+      "neg": 8,
+      "samples": [
+        "Faker多大了，菜就滚",
+        "按现在的强度Faker能打到退休，打不了换个位置",
+        "和飞科的差不多",
+        "和faker差不多，都是老年永恩",
+        "小虎的永恩跟飞科差不多"
+      ]
+    },
+    "Chovy": {
+      "mentions": 66,
+      "pos": 10,
+      "neg": 2,
+      "samples": [
+        "我超威，你祝福祝福点好的呀。",
+        "超威现在确实是独一档的存在",
+        "你chovy 左手都能说得出厉害点 第一的叼的点你却说不出",
+        "职业选手亦有差距，你让超威，bdd，秀妹，Zeka和左手来说",
+        "虎大将军:我Chovy你们在玩什么"
+      ]
+    },
+    "Zeus": {
+      "mentions": 40,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "中国宙斯一盘不赢吗",
+        "Zeus呢",
+        "宙斯永恩最强",
+        "大米多看看宙斯大超的录像，说不定能上大师",
+        "中国宙斯这兰博玩的一塌糊涂"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 267,
+    "samples": [
+      "越了人头大了你负责？",
+      "人头呢",
+      "人头呢",
+      "10分钟没人头",
+      "小27.5肯定是保枪局",
+      "看看隔壁一场比赛40+人头，乌龟队一辈子学不会",
+      "也没人头也没打龙，一把训练赛打成这样",
+      "29.5-2=27.5"
+    ]
+  },
+  "situation": {
+    "count": 1665,
+    "samples": [
+      "老将多，说明生态差，电子竞技永远年轻是最大的优势，无论是",
+      "永恩打小虎百优势",
+      "wbg是没次前期都能打出来优势，不知道怎么扩大没次",
+      "不拿小龙",
+      "对线落后1k",
+      "对线落后这么多 真菜",
+      "速度推塔",
+      "小龙看戏"
+    ]
+  },
+  "gray_signals": {
+    "count": 363,
+    "samples": [
+      "小CK的假赛太疯狂了 石头人盯着蝎子R",
+      "小CK的假赛太疯狂了 石头人盯着蝎子R",
+      "二哥，隔壁小ck世纪假赛",
+      "你买了大头吗？这么急？女警阵容打架？",
+      "故意送",
+      "假赛，畜生",
+      "故意演的，准备一波",
+      "这皇子绝对假赛"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "15:01",
+      "count": 1381,
+      "samples": [
+        "就在今天",
+        "就在今天",
+        "就在今天",
+        "就在今天"
+      ]
+    },
+    {
+      "minute_utc": "12:53",
+      "count": 942,
+      "samples": [
+        "维鲁斯的q中过吗",
+        "TES赢了 呼吸肥赢不了",
+        "米神的股票今天大涨了",
+        "得k头才行吧"
+      ]
+    },
+    {
+      "minute_utc": "12:56",
+      "count": 845,
+      "samples": [
+        "陀螺赢了 好难受",
+        "Al双C是真腊鸡",
+        "太菜了",
+        "全靠哥哥"
+      ]
+    },
+    {
+      "minute_utc": "12:45",
+      "count": 746,
+      "samples": [
+        "看戏阿",
+        "琪亚娜就是双刃剑 失误一波就炸 右边拖到后期就无敌",
+        "鸽鸽滑彩太拉了",
+        "3c是人？"
+      ]
+    },
+    {
+      "minute_utc": "12:35",
+      "count": 738,
+      "samples": [
+        "？",
+        "玉马桶水军来了，你们聊",
+        "罪安大招往墙里扔0.0",
+        "小二只能吃吃杰补了"
+      ]
+    },
+    {
+      "minute_utc": "12:28",
+      "count": 705,
+      "samples": [
+        "粑粑干出来了！！",
+        "牢赞",
+        "输啦",
+        "陀螺gg"
+      ]
+    },
+    {
+      "minute_utc": "14:06",
+      "count": 685,
+      "samples": [
+        "666",
+        "jiejie首胜来了",
+        "6666",
+        "91"
+      ]
+    },
+    {
+      "minute_utc": "15:00",
+      "count": 663,
+      "samples": [
+        "女钱是人？",
+        "这AD是人？？",
+        "礼物大招拿去洗线了",
+        "女枪有闪现的，这都白给"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      2602
+    ],
+    [
+      "你好呀白鹿my",
+      306
+    ],
+    [
+      "遗憾",
+      231
+    ],
+    [
+      "天策天良",
+      196
+    ],
+    [
+      "电话无声无息",
+      176
+    ],
+    [
+      "五加皮酒乌鸫",
+      162
+    ],
+    [
+      "抢戏的跑龙套",
+      151
+    ],
+    [
+      "山海小子",
+      148
+    ]
+  ],
+  "sources": {
+    "official_660000": 40724,
+    "mile_149361": 11478,
+    "remember_528222": 5360
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "official_660000",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-08-20T00:10:02+00:00",
+      "heartbeat_at": "2026-08-20T00:13:31+00:00",
+      "last_message_at": "2026-08-20T00:13:14+00:00",
+      "message_count": 4,
+      "warning": null,
+      "error": null,
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】17点JDG vs TT 第三赛段组内赛",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-08-20T00:10:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "mile_149361",
+      "url": "https://www.huya.com/149361",
+      "state": "preflight",
+      "started_at": "2026-08-20T00:13:08+00:00",
+      "heartbeat_at": "2026-08-20T00:13:08+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "remember_528222",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "preflight",
+      "started_at": "2026-08-20T00:13:18+00:00",
+      "heartbeat_at": "2026-08-20T00:13:18+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null
+    }
+  ]
+}

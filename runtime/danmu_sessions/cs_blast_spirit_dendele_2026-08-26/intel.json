@@ -1,0 +1,476 @@
+{
+  "meta": {
+    "total": 17882,
+    "active_users": 4983,
+    "window_utc": [
+      "2026-08-26 12:52",
+      "2026-08-26 18:56"
+    ],
+    "density_per_min": 49.2,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 305,
+      "pos": 23,
+      "neg": 31,
+      "samples": [
+        "navi变成五坨了打fut两张图能拿十三分都难",
+        "看navi了",
+        "navi几点开呢",
+        "navi几点开啊",
+        "这里面G2最不好打，感觉NAVI和黑豹还比较好打"
+      ]
+    },
+    "T1": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "还有几个T1级别的赛事，不会真的被马西西说中今年绿龙5冠吧？",
+        "还有几个T1级别的赛事，不会真的被马西西说中今年绿龙5冠吧？"
+      ]
+    },
+    "WE": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "we are falcons"
+      ]
+    },
+    "Vitality": {
+      "mentions": 49,
+      "pos": 8,
+      "neg": 2,
+      "samples": [
+        "小蜜蜂感觉接下来几个赛事都没竞争力了",
+        "小蜜蜂加强了有感觉吗？",
+        "小蜜蜂只要有豆豆他永远是战术地位最高的，不用想",
+        "载物，小蜜蜂都是donk的玩物。别挣狙击枪的top1了[大哥][大哥][大哥]",
+        "载物，小蜜蜂一队都是donk的玩具[大哥][大哥][大哥]"
+      ]
+    },
+    "Spirit": {
+      "mentions": 385,
+      "pos": 27,
+      "neg": 47,
+      "samples": [
+        "其实让绿龙翻车看了更有意思",
+        "猎鹰 绿龙夺冠了",
+        "现在第一是绿龙吗",
+        "绿龙没几个比赛了",
+        "叉车要是打不过绿龙可以直接沉淀到明年再"
+      ]
+    },
+    "G2": {
+      "mentions": 16,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "学下G2",
+        "G2选小镇还是叉车",
+        "g2",
+        "G2又痛了",
+        "g2又想起了被绿龙支配的恐惧"
+      ]
+    },
+    "NAVI": {
+      "mentions": 305,
+      "pos": 23,
+      "neg": 31,
+      "samples": [
+        "navi变成五坨了打fut两张图能拿十三分都难",
+        "看navi了",
+        "navi几点开呢",
+        "navi几点开啊",
+        "这里面G2最不好打，感觉NAVI和黑豹还比较好打"
+      ]
+    },
+    "FaZe": {
+      "mentions": 29,
+      "pos": 7,
+      "neg": 2,
+      "samples": [
+        "猎鹰也就没碰到faze不然早没了",
+        "faze今年能有几个top20啊",
+        "faze今年很难，一个都没有都可能",
+        "今年像nert这些的都比faze的选手好（我感觉）别喷",
+        "faze全队最有指望进top的竟然还是指挥总监"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 26,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "老鼠打不过9z吧",
+        "老鼠打不过9z吧",
+        "老鼠打的过9Z吗",
+        "果然尼孩粉在哪都是过街老鼠",
+        "果然尼孩粉在哪都是过街老鼠"
+      ]
+    },
+    "Liquid": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "液体来了",
+        "不对吧，当时最好的不是液体么",
+        "tl是不是还拿过冠军呢，液体",
+        "液体二队",
+        "神秘液体"
+      ]
+    },
+    "FURIA": {
+      "mentions": 15,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "黑豹赛程好像挺多的",
+        "黑豹IEM北京怎么敢来的",
+        "黑豹麦乐迪装高冷比当嘉豪评分都高",
+        "考拉和马叉叉都是大哥，打黑豹赢了也是他们两个发挥",
+        "这个队什么赢的黑豹？"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "再找个蒙古的变成蒙古队得了",
+        "bcg要成蒙古队了",
+        "这比赛蒙古来不来",
+        "蒙古的布里茨KD也很高啊",
+        "蒙古的布里茨KD也很高啊"
+      ]
+    },
+    "EF": {
+      "mentions": 3,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "这个场馆和去年blast绿龙打永恒之火的那个场馆好像",
+        "不如永恒之火",
+        "永恒之火当时的阿努比斯才猛"
+      ]
+    },
+    "白鲨": {
+      "mentions": 5,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "白鲨轻敌？",
+        "这个五杀没啥难度吧，白鲨念旧轻松打这种操作",
+        "马总，你觉得donk 和白鲨念旧谁的商业价值和荣誉谁更强一些",
+        "刚看这个游戏请问donk 和白鲨念旧谁的商业价值和荣誉谁更强",
+        "刚看这个游戏请问donk 和白鲨念旧谁的商业价值和荣誉谁更强"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "faker给zeus跪一个，磕"
+      ]
+    },
+    "Zeus": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "faker给zeus跪一个，磕"
+      ]
+    },
+    "Niko": {
+      "mentions": 239,
+      "pos": 16,
+      "neg": 0,
+      "samples": [
+        "Niko有major了气不气？孩神已经锁定今年top1！~",
+        "Niko有major了气不气？孩神已经锁定今年top1！~",
+        "两年一冠 ，niko到死也就一个major了",
+        "尼公子史一步，科隆major一个顶三个冠军，小孩今年top1",
+        "尼公子史一步，科隆major一个顶三个冠军，小孩今年top1"
+      ]
+    },
+    "Apex": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "不是换apex吗",
+        "单论时间载物不如apex",
+        "apex"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 73,
+      "pos": 5,
+      "neg": 0,
+      "samples": [
+        "理性讨论，单论狙小孩>载物",
+        "南孚major跟你闹呢载物驴抢top2去吧",
+        "理性讨论，单论狙小孩>载物",
+        "理性讨论 小孩>载物",
+        "理性讨论，单论狙小孩>载物"
+      ]
+    },
+    "donk": {
+      "mentions": 415,
+      "pos": 24,
+      "neg": 14,
+      "samples": [
+        "海参永远活在donk的阴影里，年年被踩头，一辈子没top1",
+        "海参永远活在donk的阴影里，年年被踩头，一辈子没top1",
+        "理性讨论donk还能top1吗？",
+        "海参永远活在donk的阴影里，年年被踩头，一辈子没top1",
+        "Donk 今年怎样才能拿top1"
+      ]
+    },
+    "Twistzz": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "twistzz"
+      ]
+    },
+    "ropz": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这要是换了ropz这种根本不敢突烟雾弹",
+        "人人都是ROPZ吗？"
+      ]
+    },
+    "sh1ro": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "刚来 上把西若发挥怎么样",
+        "西若出来死一下",
+        "倒霉蛋啊sh1ro",
+        "sh1ro又没特到。。。",
+        "sh1ro变sh1ko"
+      ]
+    },
+    "Yatoro": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "绿龙有yatoro",
+        "怎么没有yatoro？"
+      ]
+    },
+    "Larl": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "那种拉尔"
+      ]
+    },
+    "Collapse": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "大b崩溃了"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 9,
+    "samples": [
+      "马喜喜这个人头肖像照的好抽象",
+      "让分呢？",
+      "稳赢局 让让分",
+      "爆头数比人家人头高",
+      "打个三线队，50个人头没有闹麻了",
+      "M80搁这花式送人头呢",
+      "jЬa a厅那两个人头加了点不然真不过1",
+      "马西西真的关键人头多"
+    ]
+  },
+  "situation": {
+    "count": 83,
+    "samples": [
+      "大比分1：0，绿龙2",
+      "叉车绿龙应该能大比分获胜，有感觉吗[嘴馋]",
+      "就得会特啊半起翻盘就难受了",
+      "图一什么比分 ？",
+      "图一什么比分啊？",
+      "一波1打五给打软了",
+      "没有一个队伍面对绿龙蹲拉有优势的",
+      "完啦，要被翻盘了"
+    ]
+  },
+  "gray_signals": {
+    "count": 17,
+    "samples": [
+      "我记得对面这队不是major连续给天禄送分的吗",
+      "有啥用 绿龙马上送分",
+      "故意的吧",
+      "故意的",
+      "暂停又送分",
+      "看来教练是买了",
+      "明着送分而已，",
+      "别在zhaoxintong打的时候吵就行 兄弟没毛"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "13:22",
+      "count": 792,
+      "samples": [
+        "？？？？？？？？？？？？？？",
+        "？？？？？",
+        "？？？？？？？？",
+        "？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "13:46",
+      "count": 449,
+      "samples": [
+        "都是先首ban炼狱叉车肯定被点啊",
+        "gg",
+        "TNIR是真菜",
+        "？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "13:04",
+      "count": 300,
+      "samples": [
+        "？？？？？？？",
+        "？？？？？？？？？",
+        "进攻方开？",
+        "我是瑞恩"
+      ]
+    },
+    {
+      "minute_utc": "13:11",
+      "count": 261,
+      "samples": [
+        "啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊",
+        "哈哈哈哈",
+        "？？？？？？？",
+        "？？？？？？？？？？？？？？？？"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      547
+    ],
+    [
+      "我欲乘风破浪",
+      120
+    ],
+    [
+      "翁达长臂猿",
+      120
+    ],
+    [
+      "Rwgjbzz",
+      100
+    ],
+    [
+      "蓝芯-",
+      96
+    ],
+    [
+      "-stood",
+      86
+    ],
+    [
+      "寒风细语小羊",
+      85
+    ],
+    [
+      "杏花春欲破",
+      79
+    ]
+  ],
+  "sources": {
+    "csboy_mo_321123": 1741,
+    "maxixi": 15790,
+    "blast_official": 351
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_mo_321123",
+      "url": "https://www.huya.com/321123",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T19:57:45+00:00",
+      "heartbeat_at": "2026-08-27T00:20:07+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】1:55paiN-FURIA",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-26T19:57:46+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "maxixi",
+      "url": "https://www.huya.com/maxixi",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T20:33:49+00:00",
+      "heartbeat_at": "2026-08-27T00:20:12+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】1:55paiN-FURIA",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-26T20:33:51+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "blast_official",
+      "url": "https://www.huya.com/blast",
+      "state": "offline_waiting",
+      "started_at": "2026-08-26T19:48:22+00:00",
+      "heartbeat_at": "2026-08-27T00:20:12+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 660729,
+      "channel_id": 1758878234,
+      "nickname": "BLAST赛事主舞台",
+      "introduction": "【预告】17:00直播 BLAST波尔图公开赛",
+      "room_name": "恭喜MOUZ夺得BLAST赏金赛S2冠军！",
+      "page_live": false,
+      "checked_at": "2026-08-26T19:48:23+00:00"
+    }
+  ]
+}

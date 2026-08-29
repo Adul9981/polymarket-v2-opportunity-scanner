@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DNS.C vs KRX.C · LCK CL 2026 G1 局中情报</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed;--warn-bg:#fff7f0;--warn:#ff9500;--ok-bg:#f2f9f2;--ok:#34c759;--red:#ff3b30}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.6;padding:28px 16px 60px}
+.wrap{max-width:900px;margin:0 auto}
+h1{font-size:24px;font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);font-size:13px;margin-bottom:18px}
+.pill{display:inline-block;background:#e8f0fe;color:var(--accent);border-radius:999px;padding:2px 10px;font-size:12px;margin-right:6px}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.pill.red{background:#fff0ee;color:var(--red)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px}
+.stat{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.stat .num{font-size:22px;font-weight:700;color:var(--accent)}
+.stat .lbl{color:var(--sub);font-size:12px}
+.card{background:var(--card);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+h2{font-size:16px;font-weight:600;margin-bottom:10px;border-left:3px solid var(--accent);padding-left:8px}
+h3{font-size:14px;font-weight:600;margin:10px 0 6px}
+.meta{color:var(--sub);font-size:12px;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--sub);font-weight:500;font-size:12px}
+tr:last-child td{border-bottom:none}
+.tag{display:inline-block;border-radius:6px;padding:1px 7px;font-size:12px;margin-right:6px}
+.tag.long{background:#e8f4ff;color:#0071e3}
+.tag.short{background:#fff0ee;color:#ff3b30}
+.note{color:var(--sub);font-size:12px;line-height:1.7;margin-top:12px}
+ul,ol{margin:6px 0 6px 20px;font-size:13.5px}
+li{margin:3px 0}
+.small{font-size:12px;color:var(--sub)}
+a{color:var(--accent);text-decoration:none}
+@media(max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+
+<div class="pill">局中情报 B 型</div><div class="pill warn">弹幕口径·官方待回填</div><div class="pill">G1 进行中</div>
+<h1>DNS.C vs KRX.C · LCK CL 2026 季后赛 G1</h1>
+<div class="sub">LCK Challengers League 2026 · Play-In Upper Bracket Round 1（BO5）· 2026-08-24 13:00 开赛<br>
+数据源：SOOP 官方频道 afchall（房间 296597621）· 更新至 13:15（G1 开局）</div>
+
+<div class="stats">
+<div class="stat"><div class="num">495</div><div class="lbl">弹幕累计</div></div>
+<div class="stat"><div class="num">100</div><div class="lbl">活跃用户</div></div>
+<div class="stat"><div class="num">54/分</div><div class="lbl">密度峰值(13:11)</div></div>
+<div class="stat"><div class="num">0</div><div class="lbl">灰信号(今日)</div></div>
+</div>
+<div class="card"><h2>一、结果总览（当前进度）</h2>
+<h3>当前进度</h3>
+<p><b>G1 进行中</b>（弹幕口径·官方待回填）：BP 阶段经历一次技术暂停并重开 BP，约 13:15 开局，弹幕出现"下路炸了"（KRX.C 下路疑似被压制）。</p>
+<h3>弹幕共识</h3>
+<ul>
+<li>多次出现 <b>"3:0 预期"</b>："3대떡임 / 3대0 각이네 / 뮤난하게 든숲 3ㄷ0임"（若无重大意外，DNS.C 3-0）。</li>
+<li>唯一分歧点：<b>KRX.C 上单 Frog 对位优势</b>与"Bo3 尚可一搏、Bo5 没戏"论。</li>
+<li>盘口方向一致：Polymarket 系列 DNS.C 64.5c / KRX.C 35.5c。</li>
+</ul>
+<div class="meta">进度结论仅基于弹幕流，不替代官方比分；系列结果与局分待官方/多源回填。</div>
+</div><div class="card"><h2>二、逐局复盘（G1）</h2>
+<h3>G1 阵容（弹幕口径推导 · 待官方选人确认）</h3>
+<table>
+<tr><th>位置</th><th>DNS.C（蓝方方向）</th><th>KRX.C</th></tr>
+<tr><td>上单</td><td>Lancer · 卡蜜尔（"탑 카밀"）</td><td>Frog · 待确认（弹幕曾提奥拉夫为旧场次梗）</td></tr>
+<tr><td>打野</td><td>DDoiV · 嘉文四世（"자르반"）</td><td>Winner · 待确认</td></tr>
+<tr><td>中单</td><td>Flip · 阿卡丽（"아칼리"）</td><td>Minous · 待确认</td></tr>
+<tr><td>ADC</td><td>Enosh · 卡莉丝塔（"칼리레나타"组合）</td><td>Vincenzo · 烬 Jhin（"진"）</td></tr>
+<tr><td>辅助</td><td>Quantum · 蕾娜塔</td><td>AKaJe · 待确认（弹幕建议娜美/牛头/卡尔玛类）</td></tr>
+</table>
+<p class="small">BP 曾重开：13:08 技术暂停后 13:11 重新选人（"왜 픽다시함? / 벤픽 망해서"）。</p>
+
+<h3>BP 后战绩情报（必抓项）</h3>
+<div class="meta">pick 锁定窗口 13:11-13:13 · 来源 SOOP 单源（无第二路共振）</div>
+<table>
+<tr><th>时间</th><th>弹幕（原文）</th><th>译文</th><th>锚点</th></tr>
+<tr><td>13:11:43</td><td>빔센조 솔랭 진 7전전패 ㅋㅋㅋ</td><td>Vincenzo 排位赛 Jhin <b>7 连败</b></td><td><span class="tag short">负锚点</span></td></tr>
+<tr><td>13:12:12</td><td>이즈하면 게임 셋이다</td><td>选伊泽瑞尔直接拿下（调侃）</td><td><span class="tag short">负向吐槽</span></td></tr>
+<tr><td>13:12:30-40</td><td>탑 카밀이네 / 진은 어케 살아남움??? 카밀 아칼리 자르반인데</td><td>面对卡蜜尔/阿卡丽/嘉文冲阵，烬怎么活</td><td><span class="tag short">体系质疑</span></td></tr>
+</table>
+<p>结论：<b>Vincenzo × Jhin 无正锚点，仅有排位 7 连败负锚点</b>；与"KRX.C 下路对线卡莉丝塔+蕾娜塔"叠加，弹幕认为 KRX.C 下路是最大风险点。赛后需回填该负锚点是否应验。</p>
+
+<h3>时间线（弹幕密度峰值 = 关键节点）</h3>
+<table>
+<tr><th>时间</th><th>密度</th><th>事件（弹幕口径）</th></tr>
+<tr><td>13:03-13:06</td><td>45 条/分</td><td>BP 讨论：Vincenzo 转 ADC、LazyFeel 缺席、选角猜想（好运姐/希维尔/烬）</td></tr>
+<tr><td>13:08</td><td>~35 条/分</td><td>技术暂停（테크 퍼즈），观众抱怨暂停与导播</td></tr>
+<tr><td>13:11</td><td>54 条/分</td><td>BP 重开峰值：Jhin 锁定 + <b>7 连败战绩弹幕</b> + "3-0" 共识集中出现</td></tr>
+<tr><td>13:14-13:15</td><td>41 条/分</td><td>开局：下路爆线信号（"바텀 벌써 터짐"）、上路对位讨论（Frog vs Lancer）</td></tr>
+</table>
+
+<h3>待观察（G1 后续）</h3>
+<ul>
+<li>下路对线：Jhin+辅助 vs Kalista+Renata，是否在 10 分钟内被击杀压制；</li>
+<li>上单 Lancer 卡蜜尔：弹幕称其"灾难级"，若被 Frog 单点突破，3-0 预期动摇；</li>
+<li>中野 2v2 与前期资源节奏（嘉文/阿卡丽冲阵体系 vs KRX.C 待确认阵容）。</li>
+</ul>
+</div><div class="card"><h2>三、队伍画像（引用长期库）</h2>
+<h3>DNS.C（DN SOOPers Challengers）</h3>
+<ul>
+<li>长期库画像：DNS 系 2026-08-18 K杯 3:0 NS 夺冠后被质疑"剧本/含金量"，08-19 被 BRO 2:0、常规赛垫底 → 灰信号<b>重点标记</b>队伍（30 条灰信号，最高严重度高）。</li>
+<li>本场弹幕口径：<b>看强</b>（"든프 승 / 어떤 픽이 나와도 DN 유리"）；近 10 场 40% 胜率（Ensigame 口径），1 连败。</li>
+<li>弱点：上单 Lancer 被高频吐槽（"30 死"梗、灾难级）；中野阿卡丽+嘉文的冲阵体系容错低。</li>
+</ul>
+<h3>KRX.C（Kiwoom DRX Challengers）</h3>
+<ul>
+<li>长期库画像：08-20 2:1 BRO（G3 远古龙超神）、08-20 0:2 NS、08-22 0:2 DNS（LCK 一军层面）。</li>
+<li>本场弹幕口径：<b>看衰</b>（"잘해야 1셋 / 3:0 各이네"）；但近 10 场 90% 胜率、4 连胜（Ensigame 口径，多为常规主力阵容）。</li>
+<li>核心变量：<b>Rich（上）与 LazyFeel（ADC）因一军出场过多被 CL 季后赛规则禁赛</b>（弹幕口径，待官方确认）→ 被迫启用替补：上单 Frog、打野 Vincenzo 转 ADC。</li>
+<li>弹幕称 KRX.C 是"LazyFeel 单核队"，缺阵后预测难度大；但有观众认为 Frog 比 Rich 更适合 CL 体系。</li>
+</ul>
+<div class="meta">长期画像引用 docs/data/intel/teams.json（DNS/KRX），信任等级：中。</div>
+</div><div class="card"><h2>四、人员画像（带提及量）</h2>
+<table>
+<tr><th>选手</th><th>提及量</th><th>本场评价（弹幕口径·中文化）</th></tr>
+<tr><td><b>Vincenzo（빈센조）</b></td><td>74</td><td>KRX.C 主力打野 / <b>CL 常规赛 MVP</b>（弹幕口径），被迫顶 ADC；"排位 Jhin 7 连败""정글 개잘하는데（打野很强）""즐겜（娱乐模式）"——观众既心疼又看衰</td></tr>
+<tr><td>Jhin（烬）</td><td>29</td><td>Vincenzo 本局 ADC 选角；7 连败负锚点 + 体系质疑（面对卡蜜尔/阿卡丽/嘉文）</td></tr>
+<tr><td><b>LazyFeel（레이지필）</b></td><td>24</td><td>KRX.C 正牌 ADC，因一军出场过多缺席；"KRX 是 LazyFeel 单核队"——缺阵影响被放大</td></tr>
+<tr><td><b>Frog（프로그）</b></td><td>19</td><td>KRX.C 上单（顶替 Rich）；"프로그 그래도 밥값하자나（至少对得起工资）""리치보단 프로그가 ㄱㅊ지（比 Rich 合适）"</td></tr>
+<tr><td><b>Enosh（애노쉬）</b></td><td>19</td><td>DNS.C ADC；"칼리레나타 잘한다（卡莉丝塔+蕾娜塔强）""덕담급? 폼 안좋은 페이즈?（比客套话更强/像状态差的Peyz）"</td></tr>
+<tr><td>Rich（리치）</td><td>15</td><td>KRX 一军上单，本场禁赛；"1군 경기 많이 뛰어서"（一军出场过多）</td></tr>
+<tr><td>Camille（卡蜜尔）</td><td>14</td><td>Lancer 上单选角；"탑카밀 개 사기 든프승 확정"与"랜서 재앙"两种声音并存</td></tr>
+<tr><td>Winner/Willer（위너/윌러）</td><td>13</td><td>KRX.C 打野（与一军 Willer 混淆）；观众调侃"윌러 얼굴 때문에 못 내림（因颜值不能被下放）"</td></tr>
+<tr><td>Lancer（랜서）</td><td>11</td><td>DNS.C 上单；"탑에서 30데스（上路 30 死）"梗、"랜서가 진짜 너무할 정도로 못함"</td></tr>
+<tr><td>Kalista（卡莉丝塔）</td><td>6</td><td>Enosh 下路压制锚点，与蕾娜塔组合被点名</td></tr>
+<tr><td>AKaJe（아카제）</td><td>2</td><td>KRX.C 辅助；提及少，样本不足</td></tr>
+</table>
+<div class="meta">提及量为弹幕字符串计数（关键词变体合并），非唯一用户数；样本窗口 13:03-13:15。</div>
+</div><div class="card"><h2>五、灰信号汇总</h2>
+<div class="meta">纪律声明：以下仅为观众质疑/调侃聚合，<b>不代表假赛结论</b>，只作风险标注与盘口对照素材。</div>
+<ul>
+<li>今日 <b>0 条灰信号</b>（假赛/剧本/卡盘类弹幕）——本场热点是"阵容合规/残阵"，无灰信号提及。</li>
+<li>关联历史：DNS 系为灰信号<b>重点标记</b>队伍（K杯冠军质疑、低水被虐、暂停争议等 30 条历史记录），本场暂无新增，持续观察盘口异动。</li>
+<li>甄别提示：大量"즐겜（娱乐模式）""3-0 떡（碾压）"等为<b>态度梗/预测</b>，不是灰信号，已按纪律区分。</li>
+</ul>
+</div><div class="card"><h2>六、联赛规律与版本</h2>
+<ul>
+<li><b>CL 季后赛资格规则是本系列核心变量</b>（弹幕口径）：一军（LCK）出场次数过多的选手不能参加 CL 季后赛 → Rich、LazyFeel 双双缺席，KRX.C 残阵。观众对此批评"规则晚到/俱乐部用人不当"。</li>
+<li>BO5 对板凳深度与状态延续要求更高："Bo3 尚可一搏、Bo5 没戏"是本场主流论据之一。</li>
+<li>LCK CL 频道（SOOP afchall）弹幕密度：BP/暂停/开局为三大峰值窗口；本场 13:11 BP 重开峰值 54 条/分。</li>
+</ul>
+</div><div class="card"><h2>七、预测验证框架（赛后回填）</h2>
+<table>
+<tr><th>维度</th><th>赛前/局中共识</th><th>待验证</th></tr>
+<tr><td>系列结果</td><td>DNS.C 3-0（弹幕主流）；Polymarket DNS.C 64.5c</td><td>赛后回填</td></tr>
+<tr><td>G1 下路</td><td>KRX.C 下路（Vincenzo Jhin）是最大风险点</td><td>Jhin 是否被打穿 / 战绩负锚点是否应验</td></tr>
+<tr><td>上路对位</td><td>Frog 对位优于 Lancer（弹幕）</td><td>是否成为 DNS.C 唯一突破口</td></tr>
+<tr><td>盘口</td><td>系列 DNS.C -1.5 让分 54.5c / -2.5 52.5c</td><td>是否 3-0 兑现</td></tr>
+</table>
+</div><div class="card"><h2>八、盘口讨论（Polymarket 实时）</h2>
+<div class="meta">Polymarket 事件 <a href="https://polymarket.com/event/lol-dnsc-drxc-2026-08-24">lol-dnsc-drxc-2026-08-24</a> · 快照 13:10 前后（G1 未开盘时）</div>
+<table>
+<tr><th>市场</th><th>DNS.C / Over</th><th>KRX.C / Under</th></tr>
+<tr><td>系列赢家（BO5）</td><td>64.5c</td><td>35.5c</td></tr>
+<tr><td>G1 赢家</td><td>57.5c</td><td>42.5c</td></tr>
+<tr><td>G2 赢家</td><td>57.5c</td><td>42.5c</td></tr>
+<tr><td>G3 赢家</td><td>60.0c</td><td>40.0c</td></tr>
+<tr><td>G4 赢家</td><td>51.5c</td><td>48.5c</td></tr>
+<tr><td>总局数 Over 3.5</td><td>71.5c</td><td>28.5c（Under）</td></tr>
+<tr><td>让分 -1.5（DNS.C）</td><td>54.5c</td><td>45.5c</td></tr>
+<tr><td>让分 -2.5（DNS.C）</td><td>52.5c</td><td>47.5c</td></tr>
+</table>
+<p>解读：盘口与弹幕共识同向（DNS.C 系列明显占优），但 <b>G4 接近五五开</b> 说明市场对"横扫"仍有保留；若 G1 KRX.C 下路如弹幕预期被击穿，系列赔率大概率进一步向 DNS.C 收敛。弹幕未出现具体盘口数字讨论（0 条），以 Polymarket 快照为准。</p>
+</div><div class="card"><h2>九、情报含义与后续观察点（LONG/SHORT）</h2>
+<h3>LONG（支持 DNS.C 方向）</h3>
+<ul>
+<li>KRX.C 残阵（Rich/LazyFeel 缺席）是<u>硬伤</u>，且本系列唯一正锚点在 ADC 位置缺失；</li>
+<li>Vincenzo×Jhin 排位 7 连败负锚点 + 对线 Kalista/Renata → 下路被压制概率高；</li>
+<li>弹幕共识（3-0）与 Polymarket（64.5c/-1.5 54.5c）共振。</li>
+</ul>
+<h3>SHORT（看空 DNS.C 方向 / 风险）</h3>
+<ul>
+<li>DNS.C 上单 Lancer 被高频吐槽，Frog 对位优势是唯一反向变量；</li>
+<li>KRX.C 常规赛 90% 胜率底子 + Frog"比 Rich 合适"论 → 若上中野滚雪球，G1 存在翻车可能；</li>
+<li>BO5 长局下，DNS.C 若依赖"冲阵快攻"，中期失误会被放大。</li>
+</ul>
+<h3>后续观察点（本场可跨场沉淀）</h3>
+<ul>
+<li>G1 结束后验证：<b>Jhin 负锚点是否应验</b>（Vincenzo 烬线上是否被打穿）→ 入库 bp_signals；</li>
+<li>CL 季后赛资格规则效应：后续 LCK CL 季后赛强队残阵情况可作规律沉淀；</li>
+<li>Vincenzo 转 ADC 事件若成为系列转折，将升级为 KRX.C 队伍画像长期条目。</li>
+</ul>
+</div><div class="card"><h2>十、数据与溯源</h2>
+<ul>
+<li>弹幕原始数据：<code>docs/data/danmu/soop/2026-08-24_soop_afchall.jsonl</code>（495 条，窗口 13:03-13:15，100 用户）</li>
+<li>实时监控页：<a href="intel_danmu_live_lckcl_soop_2026-08-24.html">intel_danmu_live_lckcl_soop_2026-08-24.html</a>（60s 刷新）</li>
+<li>采集会话：<code>runtime/danmu_sessions/lckcl_soop_2026-08-24/</code>（断线自动重连 2 次）</li>
+<li>工具：tools/fetch_soop_danmu.py + tools/run_danmu_session.py + tools/danmu_intel.py（韩文人工中文化聚合）</li>
+<li>外部交叉：SOOP 页面标题（DNS vs KRX Round 4）· Escorenews/Ensigame 赛程（LCK CL 2026 Play-In Upper R1 BO5）· Polymarket gamma API（价格快照）</li>
+<li>待确认：官方选人/比分/系列结果；Rich/LazyFeel 禁赛规则细节；Vincenzo CL MVP 头衔（弹幕口径）。</li>
+</ul>
+<div class="note">弹幕为低可信度信号需聚合；灰信号（假赛/剧本类）只作风险标注非证据；比赛结果待官方确认。<br>
+本页为 B 型局中情报，比赛结束后将自动升级为 A 型整场复盘并回填验证。</div>
+</div>
+</div></body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>交易者深拆：djdjdjekekek —— 钱从哪来、怎么赚的、能不能复制</title>
+<style>
+  :root { --accent:#1652f0; --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --line:#e8e8ed; --pos:#0a8f4e; --neg:#c0392b; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif; line-height:1.55; }
+  .wrap { max-width:880px; margin:0 auto; padding:28px 16px 56px; }
+  h1 { font-size:26px; letter-spacing:-0.02em; line-height:1.25; }
+  h2 { font-size:18px; margin:0 0 12px; }
+  .sub { color:var(--sub); font-size:14px; margin-top:8px; }
+  .hero { background:linear-gradient(135deg,#0b2f8f,#1652f0 60%,#3f74ff); color:#fff; border-radius:22px; padding:26px 24px; margin:18px 0 20px; }
+  .hero .k { font-size:13px; opacity:.82; }
+  .hero .v { font-size:30px; font-weight:700; letter-spacing:-0.02em; margin:2px 0 4px; }
+  .hero .row { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+  .hero .cell { background:rgba(255,255,255,.14); border-radius:14px; padding:10px 14px; min-width:150px; }
+  .hero .cell .k { font-size:11px; }
+  .hero .cell .v { font-size:17px; margin:0; }
+  .card { background:var(--card); border-radius:18px; padding:20px 18px; margin:16px 0; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (max-width:640px) { .grid { grid-template-columns:1fr; } }
+  .stat { background:var(--card); border-radius:16px; padding:14px; }
+  .stat .k { color:var(--sub); font-size:12px; }
+  .stat .v { font-size:20px; font-weight:650; margin-top:2px; }
+  .stat .s { color:var(--sub); font-size:11px; margin-top:2px; }
+  .tbl { overflow-x:auto; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; }
+  th { text-align:left; color:var(--sub); font-weight:500; padding:8px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  td { padding:8px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  td:first-child { white-space:normal; }
+  td.pos { color:var(--pos); } td.neg { color:var(--neg); }
+  .tag { display:inline-block; background:#eef2ff; color:var(--accent); border-radius:999px; padding:3px 10px; font-size:11.5px; margin:2px 4px 2px 0; }
+  .note { color:var(--sub); font-size:12px; margin-top:10px; }
+  .concl { background:#f4f8ff; border-left:3px solid var(--accent); border-radius:0 12px 12px 0; padding:14px 16px; margin-top:8px; }
+  .warn { background:#fdf3f3; border-left:3px solid var(--neg); border-radius:0 12px 12px 0; padding:14px 16px; margin-top:8px; }
+  .foot { color:var(--sub); font-size:11.5px; margin-top:26px; text-align:center; }
+  .q { display:inline-block; background:#eef2ff; color:var(--accent); font-size:11px; font-weight:600; border-radius:8px; padding:3px 10px; margin-right:8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>交易者深拆：djdjdjekekek</h1>
+  <p class="sub">钱从哪来 · 怎么赚的 · 能不能复制 —— 一个 58 天走完 +$236 万 → -$72 万完整生命周期的账户</p>
+
+  <div class="hero">
+    <div class="k">账号</div>
+    <div class="v">djdjdjekekek <span style="font-size:14px;font-weight:400;opacity:.85">（Webbed-Myth）</span></div>
+    <div class="k" style="margin-top:8px">0x6d20c35f65d9899b6d6b74f8466e824580f9a165 · 2026-06-19 ~ 08-15</div>
+    <div class="row">
+      <div class="cell"><div class="k">峰值累计盈利</div><div class="v">+$2,365,161</div></div>
+      <div class="cell"><div class="k">峰值时点</div><div class="v" style="font-size:14px">2026-08-12 05:18 UTC</div></div>
+      <div class="cell"><div class="k">期末（8/20 快照）</div><div class="v">$-724,630</div></div>
+      <div class="cell"><div class="k">峰值后回撤</div><div class="v">-$3,358,728</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>累计盈亏曲线（含费口径）</h2>
+    <svg viewBox="0 0 720 260" role="img" aria-label="累计盈亏曲线" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1652f0" stop-opacity="0.16"/><stop offset="1" stop-color="#1652f0" stop-opacity="0.02"/>
+  </linearGradient></defs>
+  <rect x="648.8571428571428" y="14" width="53.142857142857224" height="222" rx="8" fill="#fdecec"/>
+  <text x="662.8571428571428" y="28" font-size="11" fill="#c0392b">崩盘窗口 8/12-8/15</text>
+  <line x1="18" y1="163.4736842105263" x2="702" y2="163.4736842105263" stroke="#c9cdd4" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="706" y="167.4736842105263" font-size="10" fill="#9aa0a6">$0</text>
+  <polygon points="24.0,170.4 37.7,145.2 51.4,141.1 65.1,140.7 78.9,139.8 92.6,139.6 106.3,135.1 120.0,167.6 133.7,169.4 147.4,169.1 161.1,158.8 174.9,157.6 188.6,153.9 202.3,155.4 216.0,153.7 229.7,155.4 243.4,180.4 257.1,225.3 270.9,161.5 284.6,151.9 298.3,168.3 312.0,150.8 325.7,168.8 339.4,189.5 353.1,141.3 366.9,146.5 380.6,136.8 394.3,135.3 408.0,133.8 421.7,132.6 435.4,132.0 449.1,132.7 462.9,136.9 476.6,125.1 490.3,115.4 504.0,133.3 517.7,129.3 531.4,90.7 545.1,79.5 558.9,70.4 572.6,95.6 586.3,69.4 600.0,65.0 613.7,64.3 627.4,59.2 641.1,58.0 654.9,138.3 668.6,209.6 682.3,210.4 696.0,203.9 702,236 24,236" fill="url(#area)"/>
+  <polyline points="24.0,170.4 37.7,145.2 51.4,141.1 65.1,140.7 78.9,139.8 92.6,139.6 106.3,135.1 120.0,167.6 133.7,169.4 147.4,169.1 161.1,158.8 174.9,157.6 188.6,153.9 202.3,155.4 216.0,153.7 229.7,155.4 243.4,180.4 257.1,225.3 270.9,161.5 284.6,151.9 298.3,168.3 312.0,150.8 325.7,168.8 339.4,189.5 353.1,141.3 366.9,146.5 380.6,136.8 394.3,135.3 408.0,133.8 421.7,132.6 435.4,132.0 449.1,132.7 462.9,136.9 476.6,125.1 490.3,115.4 504.0,133.3 517.7,129.3 531.4,90.7 545.1,79.5 558.9,70.4 572.6,95.6 586.3,69.4 600.0,65.0 613.7,64.3 627.4,59.2 641.1,58.0 654.9,138.3 668.6,209.6 682.3,210.4 696.0,203.9" fill="none" stroke="#1652f0" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="641.1428571428571" cy="57.98471578947368" r="4" fill="#1652f0"/>
+  <text x="633.1428571428571" y="48.98471578947368" font-size="11" fill="#1652f0" text-anchor="end">峰值 +$2.37M</text>
+  <text x="633.1428571428571" y="60.98471578947368" font-size="10" fill="#9aa0a6" text-anchor="end">8/12</text>
+  <circle cx="257.1428571428571" cy="225.30554842105263" r="4" fill="#c0392b"/>
+  <text x="265.1428571428571" y="229.30554842105263" font-size="11" fill="#c0392b">谷底 -$1.12M</text>
+  <text x="265.1428571428571" y="242.30554842105263" font-size="10" fill="#9aa0a6">7/14</text>
+  <circle cx="696.0" cy="203.9004105263158" r="4" fill="#c0392b"/>
+  <text x="688.0" y="194.9004105263158" font-size="11" fill="#c0392b" text-anchor="end">期末 -$0.72M</text>
+  <text x="688.0" y="206.9004105263158" font-size="10" fill="#9aa0a6" text-anchor="end">8/15</text>
+  <text x="24" y="252" font-size="10" fill="#9aa0a6">6/19</text>
+  <text x="672" y="252" font-size="10" fill="#9aa0a6" text-anchor="end">8/15（50 个交易日 · 含费口径）</text>
+</svg>
+    <p class="note">口径：买入按 usdcSize（含费）、卖出按 usdcSize、赢家赎回按份额 × $1。红色区域为 8/12-8/15 崩盘窗口。50 个交易日中 40 天累计为正（80%），最长连续为正 23 天 —— "长期盈利"成立，但全程高波动。</p>
+  </div>
+
+  <div class="grid">
+    <div class="stat"><div class="k">总成交</div><div class="v">23,118 笔</div><div class="s">买入 22,518 / 卖出 600（2.6%）</div></div>
+    <div class="stat"><div class="k">累计买入（含费）</div><div class="v">$29,434,503</div><div class="s">卖出 $11,604,915 · 赎回 $17,104,812</div></div>
+    <div class="stat"><div class="k">事件级胜率</div><div class="v">138 / 294 胜</div><div class="s">46.9% · 亏损事件 156</div></div>
+    <div class="stat"><div class="k">崩盘 4 天（8/12-8/15）</div><div class="v">$-2,615,469</div><div class="s">买入 $4,967,620 · 归零仓位 $3,518,862</div></div>
+    <div class="stat"><div class="k">单日最差（8/12）</div><div class="v">-$1,439,016</div><div class="s">8/13 再亏 $1.28M，仍买入 $1.44M（追损）</div></div>
+    <div class="stat"><div class="k">退出行为</div><div class="v">中位 1.3 小时</div><div class="s">赢家当天离场；227 个仓位持有到归零、从不主动止损</div></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="q">Q1</span>钱从哪些市场来：按买入价带拆解</h2>
+    <div class="tbl"><table><thead><tr><th>价带</th><th>事件</th><th>盈利事件</th><th>累计买入</th><th>净盈亏</th><th>ROI</th><th>判定</th></tr></thead><tbody><tr><td><0.2 深水</td><td>9</td><td>1</td><td>$248,731</td><td>$-207,868</td><td>-83.6%</td><td>失败模式</td></tr><tr><td>0.2-0.4</td><td>85</td><td>27</td><td>$7,518,661</td><td>$967,899</td><td>12.9%</td><td>盈利引擎</td></tr><tr><td>0.4-0.6</td><td>99</td><td>41</td><td>$8,864,313</td><td>$220,676</td><td>2.5%</td><td>中性</td></tr><tr><td>0.6-0.8</td><td>73</td><td>44</td><td>$10,062,517</td><td>$-1,130,575</td><td>-11.2%</td><td>主要失血带</td></tr><tr><td>≥0.8 高共识</td><td>28</td><td>25</td><td>$2,393,004</td><td>$-189,652</td><td>-7.9%</td><td>假确定性</td></tr></tbody></table></div>
+    <p class="note">关键反直觉：<b>盈利引擎是 0.2-0.4 的"强队价值买入"（ROI +12.9%）</b>，而不是高价格共识盘；0.6-0.8 的"类热门"反而是最大失血带（ROI -11.2%）；≥0.8 高共识胜率 89% 却几乎不赚钱（单场赔率太差，一个 White Sox 翻车 -$414K 就抹平）。</p>
+  </div>
+
+  <div class="card">
+    <h2>Q1（续）赛项 × 价带：同一策略在不同赛项结果相反</h2>
+    <div class="tbl"><table><thead><tr><th>赛项</th><th><0.2 深水</th><th>0.2-0.4</th><th>0.4-0.6</th><th>0.6-0.8</th><th>≥0.8 高共识</th></tr></thead><tbody><tr><td>LoL</td><td>$0</td><td>$-62,985</td><td>$-70,140</td><td>$335,352</td><td>$79,169</td></tr><tr><td>Dota2</td><td>$-21,075</td><td>$-287,181</td><td>$14,394</td><td>$-132,280</td><td>$0</td></tr><tr><td>CS2</td><td>$-177,926</td><td>$-1,042,004</td><td>$-25,125</td><td>$-593,524</td><td>$-26,616</td></tr><tr><td>MLB</td><td>$-624</td><td>$975,663</td><td>$-601,043</td><td>$451,129</td><td>$-321,938</td></tr><tr><td>网球</td><td>$-9,428</td><td>$531,124</td><td>$268,486</td><td>$-621,031</td><td>$41,043</td></tr><tr><td>其他</td><td>$1,185</td><td>$853,282</td><td>$634,106</td><td>$-570,221</td><td>$38,690</td></tr></tbody></table></div>
+    <p class="note">同一价带（0.2-0.4）在 MLB +$976K、其他 +$853K、网球 +$531K 为正，在 CS2 -$1.04M、Dota2 -$287K 为负 —— <b>模式相同、赛项不同、结果相反</b>：他的判断力是赛项特异的。</p>
+  </div>
+
+  <div class="card">
+    <h2>Q1（续）市场类型：BO1 单场是失血重灾区</h2>
+    <div class="tbl"><table><thead><tr><th>市场类型</th><th>事件</th><th>盈利事件</th><th>累计买入</th><th>净盈亏</th></tr></thead><tbody><tr><td>BO1 单场</td><td>9</td><td>2</td><td>$2,552,824</td><td>$-1,708,143</td></tr><tr><td>让分</td><td>4</td><td>1</td><td>$213,601</td><td>$89,733</td></tr><tr><td>BO3/BO5 系列</td><td>80</td><td>35</td><td>$6,698,051</td><td>$181,554</td></tr><tr><td>晋级/资格</td><td>12</td><td>5</td><td>$1,324,536</td><td>$220,777</td></tr><tr><td>冠军盘</td><td>1</td><td>1</td><td>$765,342</td><td>$394,295</td></tr><tr><td>单场胜负</td><td>188</td><td>94</td><td>$17,532,871</td><td>$482,264</td></tr></tbody></table></div>
+    <p class="note">CS2 EWC 的 BO1 单场 9 个事件、买入 $2.55M，净亏 -$1.71M（ROI -67%），是崩盘窗口的主力失血形态；单场胜负、系列赛、晋级盘、冠军盘均为正。</p>
+  </div>
+
+  <div class="card">
+    <h2>盈利集中度：钱集中在少数重仓场次</h2>
+    <p style="font-size:13px">盈利事件合计 +$12.0M：TOP10 占 <b>43.8%</b>，TOP20 占 66.2%，TOP30 占 78.1% —— 这是"少数重仓场次驱动"的账户，不是稳定复利。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="q">Q2</span>他用的策略：五个模式的量化画像</h2>
+    <div class="tbl"><table><thead><tr><th>模式</th><th>定义</th><th>事件/胜</th><th>买入</th><th>净盈亏</th><th>ROI</th><th>代表案例</th><th>判定</th></tr></thead><tbody><tr><td>B 强队价值买入</td><td>买盘口低估的强队（20-40¢），赢后按 ~$1 赎回/0.999 卖出</td><td>85 / 27 胜</td><td>$7,521,861</td><td class="pos">+$967,899</td><td>+12.9%</td><td>红袜 +$1.06M、Liquid +$1.03M、世界杯 +$426K</td><td>盈利引擎（有赛项边界）</td></tr><tr><td>C 中赔试盘</td><td>40-60¢ 的胜负盘</td><td>99 / 41 胜</td><td>$8,864,313</td><td class="pos">+$220,676</td><td>+2.5%</td><td>分散</td><td>弱正，不稳定</td></tr><tr><td>D 类热门</td><td>买 60-80¢ 的'安全票'</td><td>73 / 44 胜</td><td>$10,062,517</td><td class="neg">-$1,130,575</td><td>-11.2%</td><td>Vacherot -$694K、PARIVISION -$479K</td><td>主要失血带</td></tr><tr><td>E 高共识</td><td>买 ≥80¢ 的确定性</td><td>28 / 25 胜</td><td>$2,393,004</td><td class="neg">-$189,652</td><td>-7.9%</td><td>White Sox -$414K 翻车</td><td>假确定性，胜率高但赔率差</td></tr><tr><td>A 深水试错</td><td>买 <20¢ 博冷</td><td>9 / 1 胜</td><td>$248,731</td><td class="neg">-$207,868</td><td>-83.6%</td><td>几乎全输</td><td>失败模式</td></tr></tbody></table></div>
+    <p class="note">核心策略 = <b>强队价值买入</b>：买盘口只给 20-40¢、但判断会赢的强队，赢后按 ~$1 赎回或 0.999 卖出；单场 2.5-4 倍赔付，31.8% 的命中率即可正期望。退出纪律只有一条：<b>赢定后离场</b>（88% 的卖出金额在 ≥0.8 价带），亏损仓位从不止损。</p>
+  </div>
+
+  <div class="card">
+    <h2>最大盈利事件 TOP 12</h2>
+    <div class="tbl"><table><thead><tr><th>赛项</th><th>事件</th><th>类型</th><th>均价</th><th>买入</th><th>净盈亏</th></tr></thead><tbody><tr><td>Dota2</td><td>dota2-flc-liquid-2026-08-05</td><td>BO3/BO5 系列</td><td>@0.38</td><td>$636,132</td><td>$1,029,030</td></tr><tr><td>网球</td><td>atp-molcan-fokina-2026-07-16</td><td>单场胜负</td><td>@0.35</td><td>$348,843</td><td>$654,942</td></tr><tr><td>MLB</td><td>mlb-bos-lad-2026-08-01</td><td>单场胜负</td><td>@0.24</td><td>$188,697</td><td>$581,066</td></tr><tr><td>MLB</td><td>mlb-bos-lad-2026-08-02</td><td>单场胜负</td><td>@0.39</td><td>$304,590</td><td>$482,462</td></tr><tr><td>Dota2</td><td>dota2-1win-bb4-2026-08-05</td><td>BO3/BO5 系列</td><td>@0.50</td><td>$472,498</td><td>$477,159</td></tr><tr><td>其他</td><td>wnba-ind-las-2026-07-12</td><td>单场胜负</td><td>@0.41</td><td>$321,661</td><td>$461,382</td></tr><tr><td>其他</td><td>fifwc-fra-esp-2026-07-14</td><td>单场胜负</td><td>@0.29</td><td>$413,839</td><td>$425,983</td></tr><tr><td>其他</td><td>fifwc-fra-esp-2026-07-14-more-markets</td><td>晋级/资格</td><td>@0.41</td><td>$284,196</td><td>$415,804</td></tr><tr><td>其他</td><td>world-cup-winner</td><td>冠军盘</td><td>@0.59</td><td>$765,342</td><td>$394,295</td></tr><tr><td>CS2</td><td>cs2-mibr-ast10-2026-08-12</td><td>BO1 单场</td><td>@0.56</td><td>$424,168</td><td>$334,868</td></tr><tr><td>网球</td><td>atp-dimitro-fery-2026-07-06</td><td>单场胜负</td><td>@0.31</td><td>$149,079</td><td>$332,431</td></tr><tr><td>LoL</td><td>lol-blg-tes-2026-08-07</td><td>单场胜负</td><td>@0.62</td><td>$541,956</td><td>$323,830</td></tr></tbody></table></div>
+  </div>
+
+  <div class="card">
+    <h2>最大亏损事件 TOP 12</h2>
+    <div class="tbl"><table><thead><tr><th>赛项</th><th>事件</th><th>类型</th><th>均价</th><th>买入</th><th>净盈亏</th></tr></thead><tbody><tr><td>CS2</td><td>cs2-vit-100t-2026-08-12</td><td>BO1 单场</td><td>@0.28</td><td>$743,480</td><td>$-743,480</td></tr><tr><td>网球</td><td>atp-vachero-navone-2026-08-06</td><td>单场胜负</td><td>@0.61</td><td>$693,696</td><td>$-693,696</td></tr><tr><td>其他</td><td>nbasl-uta-lac-2026-07-12</td><td>单场胜负</td><td>@0.69</td><td>$479,977</td><td>$-479,946</td></tr><tr><td>CS2</td><td>cs2-prv-b8-2026-08-12</td><td>BO1 单场</td><td>@0.60</td><td>$478,906</td><td>$-478,906</td></tr><tr><td>MLB</td><td>mlb-cws-bos-2026-08-06</td><td>单场胜负</td><td>@0.82</td><td>$413,833</td><td>$-413,833</td></tr><tr><td>MLB</td><td>mlb-bos-tor-2026-08-12</td><td>单场胜负</td><td>@0.57</td><td>$344,166</td><td>$-344,166</td></tr><tr><td>Dota2</td><td>dota2-liquid-vg-2026-08-13</td><td>单场胜负</td><td>@0.38</td><td>$343,448</td><td>$-343,448</td></tr><tr><td>LoL</td><td>lol-hle1-gen-2026-08-10</td><td>BO3/BO5 系列</td><td>@0.60</td><td>$294,726</td><td>$-294,726</td></tr><tr><td>其他</td><td>wnba-tor-gsv-2026-08-04</td><td>单场胜负</td><td>@0.49</td><td>$250,069</td><td>$-250,069</td></tr><tr><td>MLB</td><td>mlb-nyy-chc-2026-08-02</td><td>单场胜负</td><td>@0.51</td><td>$248,341</td><td>$-248,341</td></tr><tr><td>网球</td><td>atp-dzumhur-arnaldi-2026-07-16</td><td>单场胜负</td><td>@0.64</td><td>$242,881</td><td>$-242,881</td></tr><tr><td>MLB</td><td>mlb-nyy-chc-2026-08-01</td><td>单场胜负</td><td>@0.50</td><td>$232,297</td><td>$-232,297</td></tr></tbody></table></div>
+  </div>
+
+  <div class="card">
+    <h2>新闻 × 数据交叉验证</h2>
+    <div class="tbl"><table><thead><tr><th>事件</th><th>买入</th><th>净盈亏</th><th>社区报道对照</th></tr></thead><tbody><tr><td>8/7 JDG 胜 EDG（LPL）</td><td>$437,635</td><td>$79,169</td><td>新闻：$44 万 @84.7¢，赢后赎回 $51.7 万 ✓</td></tr><tr><td>8/10 KeSPA GENG 胜 HLE</td><td>$294,726</td><td>$-294,726</td><td>新闻：$30 万 @60.4¢，归零</td></tr><tr><td>8/13 Dota2 TI Liquid vs VG</td><td>$343,448</td><td>$-343,448</td><td>新闻：TI 小组赛 all-in $34.3 万，归零</td></tr></tbody></table></div>
+  </div>
+
+  <div class="card">
+    <h2>崩盘解剖：8/12-8/15 归零仓位 TOP 10</h2>
+    <div class="tbl"><table><thead><tr><th>事件</th><th>方向</th><th>均价</th><th>初始投入</th><th>最终</th></tr></thead><tbody><tr><td>cs2-vit-100t-2026-08-12</td><td>100 Thieves</td><td>@0.28</td><td>$743,451</td><td>$-743,451</td></tr><tr><td>cs2-prv-b8-2026-08-12</td><td>PARIVISION</td><td>@0.60</td><td>$478,898</td><td>$-478,898</td></tr><tr><td>mlb-bos-tor-2026-08-12</td><td>Boston Red Sox</td><td>@0.57</td><td>$344,163</td><td>$-344,163</td></tr><tr><td>dota2-liquid-vg-2026-08-13-game1</td><td>Vici Gaming</td><td>@0.38</td><td>$343,367</td><td>$-343,367</td></tr><tr><td>cs2-fal2-k271-2026-08-12</td><td>K27</td><td>@0.26</td><td>$225,108</td><td>$-225,108</td></tr><tr><td>cs2-bb3-faze-2026-08-12</td><td>BetBoom Team</td><td>@0.49</td><td>$195,322</td><td>$-195,322</td></tr><tr><td>dota2-boombo-og-2026-08-12</td><td>OG</td><td>@0.30</td><td>$183,500</td><td>$-183,500</td></tr><tr><td>cs2-navi-3dmax-2026-08-12</td><td>3DMAX</td><td>@0.19</td><td>$177,848</td><td>$-177,848</td></tr><tr><td>cs2-mgc-mglz-2026-08-12</td><td>magic</td><td>@0.63</td><td>$153,237</td><td>$-153,237</td></tr><tr><td>dota2-flc-lgd-2026-08-12</td><td>LGD Gaming</td><td>@0.25</td><td>$127,186</td><td>$-127,186</td></tr></tbody></table></div>
+    <p class="note">24 个仓位初始合计 $3,518,862 全部归零。8/12-13 两天买入 $4.55M —— 相当于此前单日峰值买入（$2.43M）的近 2 倍，且集中于他从未证明过判断力的 CS2 EWC BO1 与 Dota2 TI 小组赛。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="q">Q3</span>可复制性评估（对项目）</h2>
+    <div class="concl">
+      <p><b>可复制（有条件）</b>：0.2-0.4 强队价值买入，样本 85 事件 ROI +12.9%。但前提是<b>具备该赛项的判断力</b>——他的正收益全部来自 MLB/世界杯/网球/Dota2 季后赛等他熟悉的赛项，同一模式在 CS2/Dota2 小组赛是负的。映射项目 S1 低价反转 / S2 热门回撤 / 情报库信号，建议按 L0 观察 → L2 回测推进。</p>
+      <p style="margin-top:8px"><b>不可复制</b>：≥0.8 高共识（假确定性）、0.6-0.8 类热门（赔率差）、<0.2 深水重仓（单场博冷 ROI -83.6%，与 S1 深水机器的"高频微利"完全不同）。</p>
+      <p style="margin-top:8px"><b>必须避开的反面纪律</b>：无止损（227 个仓位归零）、赛项漂移（跨赛项不重新验证 edge）、追损（-1.44M 后仍加仓 1.44M）、无仓位上限（两天 $4.5M+）。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>结论：能力是真的，风控从来不存在</h2>
+    <div class="warn">
+      <p>数据支持的精确结论：<b>他的盈利来自"判断力 × 价值买入"——在熟悉的赛项里买盘口低估的强队，赢后兑现；崩盘来自把同一策略复制到没有判断力的赛项（CS2 EWC BO1、Dota2 TI 小组赛），并叠加 10-20 倍仓位与追损，全程无止损。</b></p>
+      <p style="margin-top:8px">"前期稳定盈利"在数据上成立：50 个交易日 40 天累计为正、最长连续为正 23 天；但"后期未严格执行策略"的表述不准确——他的策略和行为模式全程一致，崩盘是"策略跨赛项失效 + 风控缺失"的必然结果，而不是执行失误。$2.37M 峰值利润与本金一起被打穿，最终净亏 $724,630。</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>复盘方法论（本项目标准流程）</h2>
+    <p style="font-size:13px">本案例是 <b>账户级复盘方法论</b>（docs/forensics/ACCOUNT_REVIEW_METHODOLOGY.md）的首个执行案例：取数校验 → 盈亏曲线与阶段划分 → 市场结构拆解（赛项×价带×市场类型×退出）→ 策略模式量化 → 可复制性评估。每个账户复盘必须回答：钱从哪些市场来 / 用了什么策略 / 能不能复制。</p>
+  </div>
+
+  <p class="foot">数据源：Polymarket Data API（trades / activity / positions）· 快照 2026-08-20 · 含费口径 · 原始数据 docs/forensics/data/djdjdjekekek/ · 拆解卡 docs/forensics/cases/2026-08-20_djdjdjekekek/README.md</p>
+</div>
+</body>
+</html>

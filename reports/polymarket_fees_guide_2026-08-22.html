@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polymarket 手续费全解析 · 2026-08</title>
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --card:#ffffff;
+    --ink:#1d1d1f;
+    --muted:#6e6e73;
+    --line:#e8e8ed;
+    --accent:#0a6ed1;
+    --accent-soft:#eaf3fc;
+    --green:#0a7d33;
+    --green-soft:#e9f7ee;
+    --amber:#b25000;
+    --amber-soft:#fff4e8;
+    --red:#c62828;
+    --red-soft:#fdeaea;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Helvetica Neue","Microsoft YaHei",sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:1120px;margin:0 auto;padding:56px 24px 80px}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#0a2540 0%,#0a6ed1 100%);
+    color:#fff;
+    border-radius:24px;
+    padding:52px 56px 44px;
+    margin-bottom:28px;
+  }
+  .hero .kicker{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:2px;
+    background:rgba(255,255,255,.16);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:999px;
+    padding:5px 14px;
+    margin-bottom:20px;
+  }
+  .hero h1{font-size:40px;font-weight:700;letter-spacing:.5px;line-height:1.25}
+  .hero p.sub{margin-top:14px;font-size:17px;color:rgba(255,255,255,.82);max-width:720px}
+  .hero .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+  .hero .meta span{
+    font-size:13px;
+    background:rgba(255,255,255,.12);
+    border-radius:8px;
+    padding:6px 12px;
+    color:rgba(255,255,255,.92);
+  }
+
+  /* Cards */
+  .card{
+    background:var(--card);
+    border-radius:20px;
+    padding:40px 44px;
+    margin-bottom:28px;
+    box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  }
+  .card-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .block-no{
+    flex:none;
+    width:44px;height:44px;
+    border-radius:12px;
+    background:var(--accent);
+    color:#fff;
+    font-size:17px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card h2{font-size:26px;font-weight:700;letter-spacing:.3px;line-height:1.3;margin-top:2px}
+  .card .tagline{color:var(--muted);font-size:15px;margin-top:4px}
+  .card .lead{font-size:16px;margin-top:18px}
+  .card-foot{
+    margin-top:20px;
+    padding-top:16px;
+    border-top:1px dashed var(--line);
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  /* Overview stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+  .stat{
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:20px 18px;
+    background:#fafafc;
+  }
+  .stat .num{font-size:26px;font-weight:700;color:var(--accent);line-height:1.2}
+  .stat .num.green{color:var(--green)}
+  .stat .lbl{font-size:13px;color:var(--muted);margin-top:6px}
+
+  /* Tables */
+  .tbl-wrap{overflow-x:auto;margin-top:22px}
+  table{width:100%;border-collapse:collapse;font-size:15px;min-width:640px}
+  th{
+    background:#f6f6f8;
+    color:#3a3a3c;
+    text-align:left;
+    font-weight:600;
+    font-size:13px;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  td{padding:13px 14px;border-bottom:1px solid #f1f1f4;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td .en{color:var(--muted);font-size:13px}
+  .tag{
+    display:inline-block;font-size:12px;font-weight:600;
+    border-radius:999px;padding:2px 10px;white-space:nowrap;
+  }
+  .tag.hot{background:var(--red-soft);color:var(--red)}
+  .tag.up{background:var(--amber-soft);color:var(--amber)}
+  .tag.free{background:var(--green-soft);color:var(--green)}
+  .tag.soft{background:var(--accent-soft);color:var(--accent)}
+
+  /* Formula */
+  .formula{
+    background:#f6f9fd;
+    border:1px solid #d8e8f7;
+    border-radius:14px;
+    padding:18px 22px;
+    margin-top:22px;
+    font-size:19px;
+    font-weight:600;
+    text-align:center;
+    letter-spacing:.3px;
+  }
+  .formula em{font-style:normal;color:var(--accent)}
+
+  /* Scenario cards */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  .scen{
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:22px 24px;
+    background:#fafafc;
+  }
+  .scen h3{font-size:16px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .scen h3 .ico{font-size:18px}
+  .scen p{font-size:14px;color:#3d3d40}
+  .scen .mini{margin-top:10px;font-size:13px;color:var(--muted);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:10px 12px}
+
+  /* Tiers */
+  .tier-note{margin-top:16px;font-size:14px;color:#3d3d40;background:var(--accent-soft);border-radius:12px;padding:14px 18px}
+
+  /* Alert / tips */
+  .alert{
+    border-radius:14px;
+    padding:18px 22px;
+    margin-top:22px;
+    font-size:15px;
+  }
+  .alert.amber{background:var(--amber-soft);color:#7a3a00}
+  .alert.green{background:var(--green-soft);color:#075d26}
+  .alert.red{background:var(--red-soft);color:#8f1d1d}
+  .alert b{display:block;font-size:14px;margin-bottom:4px;letter-spacing:.3px}
+
+  ul.clean{list-style:none;margin-top:18px}
+  ul.clean li{position:relative;padding:8px 0 8px 26px;font-size:15px;border-bottom:1px dashed #f1f1f4}
+  ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{
+    content:"";
+    position:absolute;left:6px;top:16px;
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);
+  }
+  ul.clean li.green::before{background:var(--green)}
+  ul.clean li.amber::before{background:var(--amber)}
+
+  .src{
+    margin-top:18px;
+    display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .src a{
+    font-size:13px;
+    color:var(--accent);
+    text-decoration:none;
+    border:1px solid #cfe1f5;
+    background:var(--accent-soft);
+    border-radius:999px;
+    padding:7px 14px;
+  }
+  .src a:hover{background:#dcebfa}
+
+  /* Charts */
+  .charts{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
+  .chart-card{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px;
+    background:#fafafc;
+  }
+  .chart-card h4{font-size:15px;font-weight:700;margin-bottom:4px}
+  .chart-card .cap{font-size:12px;color:var(--muted);margin-bottom:12px}
+  .chart-card svg{width:100%;height:auto;display:block}
+  .legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:12px;color:#3d3d40}
+  .legend i{display:inline-block;width:16px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+
+  .bars-title{font-size:13px;font-weight:700;color:#3a3a3c;margin-bottom:12px}
+  .bars{display:flex;flex-direction:column;gap:9px;margin-top:22px}
+  .bar-row{display:grid;grid-template-columns:175px 1fr auto;align-items:center;gap:12px;font-size:13px}
+  .bar-track{background:#f1f1f4;border-radius:8px;height:18px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:8px;background:var(--accent)}
+  .bar-fill.red{background:var(--red)}
+  .bar-fill.green{background:var(--green)}
+  .bar-val{font-variant-numeric:tabular-nums;text-align:right;color:#3d3d40;font-weight:600;white-space:nowrap}
+
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:12px;
+    margin-top:36px;
+  }
+
+  @media (max-width:760px){
+    .page{padding:24px 14px 48px}
+    .hero{padding:36px 26px;border-radius:18px}
+    .hero h1{font-size:28px}
+    .card{padding:28px 22px;border-radius:16px}
+    .card h2{font-size:21px}
+    .stats{grid-template-columns:1fr 1fr}
+    .grid2{grid-template-columns:1fr}
+    .charts{grid-template-columns:1fr}
+    .bar-row{grid-template-columns:120px 1fr auto}
+    .block-no{width:38px;height:38px;font-size:15px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ 0. HERO ============ -->
+  <div class="hero">
+    <span class="kicker">PREDICTION MARKET · FEE GUIDE</span>
+    <h1>Polymarket 手续费全解析</h1>
+    <p class="sub">2026 年 8 月官方口径：不同板块费率不同，吃单与挂单费用不同，价格位置、订单大小、入金方式也各有讲究。一页看清全部费用。</p>
+    <div class="meta">
+      <span>口径：国际站 polymarket.com 官方文档</span>
+      <span>核验日期：2026-08-22</span>
+      <span>适用：Crypto / Sports / Politics / Finance 等全部板块</span>
+    </div>
+  </div>
+
+  <!-- ============ OVERVIEW ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">概</div>
+      <div>
+        <h2>一分钟总览</h2>
+        <p class="tagline">四个数字记住 Polymarket 的费用结构</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="num">$1.75</div>
+        <div class="lbl">Crypto 每 100 股、50¢ 价吃单的最高费用（占投入 3.5%）</div>
+      </div>
+      <div class="stat">
+        <div class="num green">0 费 + 返佣</div>
+        <div class="lbl">挂单（Maker）不收手续费，还按 15%–25% 分享吃单费池</div>
+      </div>
+      <div class="stat">
+        <div class="num green">0 费</div>
+        <div class="lbl">地缘政治 / 世界事件板块，买卖双方都免费</div>
+      </div>
+      <div class="stat">
+        <div class="num">0 平台费</div>
+        <div class="lbl">入金 / 出金平台不收费；信用卡入金约 2.9%+$0.30（第三方）</div>
+      </div>
+    </div>
+    <div class="alert red">
+      <b>先记住一件事</b>
+      真正吃掉利润的往往不是手续费，而是买卖价差（spread）。看费用之前，先看盘口深度。
+    </div>
+  </div>
+
+  <!-- ============ 1. CATEGORY FEES ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">01</div>
+      <div>
+        <h2>不同板块：吃单费率表</h2>
+        <p class="tagline">只有吃单（Taker）付费；费率按市场类别区分，具体以每个市场交易页显示为准</p>
+      </div>
+    </div>
+    <p class="lead">下表为官方文档现行费率系数（2026-08-22 核验）。"50¢ 每 100 股"是美元费用的最高点，因为公式里的 p×(1−p) 在 50¢ 处最大。</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>板块 Category</th>
+            <th>吃单费率系数<br><span class="en">Taker Fee Rate</span></th>
+            <th>50¢ 处每 100 股费用<br><span class="en">Max Fee / 100 shares</span></th>
+            <th>挂单返佣比例<br><span class="en">Maker Rebate</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Crypto 加密货币 <span class="tag hot">最贵</span></td>
+            <td>0.07</td>
+            <td>$1.75</td>
+            <td>20%</td>
+          </tr>
+          <tr>
+            <td>Sports 体育 <span class="tag up">2026/7 上调</span></td>
+            <td>0.05</td>
+            <td>$1.25</td>
+            <td>15%</td>
+          </tr>
+          <tr>
+            <td>Economics 经济</td>
+            <td>0.05</td>
+            <td>$1.25</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Culture 文化</td>
+            <td>0.05</td>
+            <td>$1.25</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Weather 天气</td>
+            <td>0.05</td>
+            <td>$1.25</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Other / General 其他</td>
+            <td>0.05</td>
+            <td>$1.25</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Finance 金融</td>
+            <td>0.04</td>
+            <td>$1.00</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Politics 政治</td>
+            <td>0.04</td>
+            <td>$1.00</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Mentions 提及类</td>
+            <td>0.04</td>
+            <td>$1.00</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Tech 科技</td>
+            <td>0.04</td>
+            <td>$1.00</td>
+            <td>25%</td>
+          </tr>
+          <tr>
+            <td>Geopolitics 地缘政治 <span class="tag free">免费</span></td>
+            <td>0</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bars">
+      <div class="bars-title">50¢ 处每 100 股吃单费用对比（美元）</div>
+      <div class="bar-row"><span>Crypto 加密货币</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">$1.75</span></div>
+      <div class="bar-row"><span>体育 Sports</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">$1.25</span></div>
+      <div class="bar-row"><span>经济 Economics</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">$1.25</span></div>
+      <div class="bar-row"><span>文化 Culture</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">$1.25</span></div>
+      <div class="bar-row"><span>天气 Weather</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">$1.25</span></div>
+      <div class="bar-row"><span>其他 Other / General</span><div class="bar-track"><div class="bar-fill" style="width:72%"></div></div><span class="bar-val">$1.25</span></div>
+      <div class="bar-row"><span>金融 Finance</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span class="bar-val">$1.00</span></div>
+      <div class="bar-row"><span>政治 Politics</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span class="bar-val">$1.00</span></div>
+      <div class="bar-row"><span>提及 Mentions</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span class="bar-val">$1.00</span></div>
+      <div class="bar-row"><span>科技 Tech</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span class="bar-val">$1.00</span></div>
+      <div class="bar-row"><span>地缘政治 Geopolitics</span><div class="bar-track"><div class="bar-fill green" style="width:0%"></div></div><span class="bar-val">免费</span></div>
+    </div>
+    <div class="card-foot">
+      条形长度为 50¢ 成交价、每 100 股的实际美元费用；挂单（Maker）费率始终为 0，另有 15%–25% 返佣，不在此图内。<br>
+      注：① 体育板块费率系数已于 2026 年 7 月从 0.03（0.75%）上调至 0.05（1.25%），网上大量旧资料仍写 0.75%，请勿沿用；
+      ② 上表为官方分类标准，具体市场可能使用不同参数（如部分体育赛事仍为 0.03 / 返佣 25%），下单前以该市场交易页显示的费率为准。
+    </div>
+  </div>
+
+  <!-- ============ 2. FORMULA & PRICE ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">02</div>
+      <div>
+        <h2>价格位置：同一板块，价格不同费用不同</h2>
+        <p class="tagline">官方公式 + 每 100 股的真实费用示例</p>
+      </div>
+    </div>
+    <div class="formula">
+      手续费 = 股数 C × 费率系数 feeRate × 价格 p × (1 − p)
+    </div>
+    <div class="charts">
+      <div class="chart-card">
+        <h4>美元手续费曲线（每 100 股）</h4>
+        <p class="cap">费 = C × feeRate × p × (1−p)，50¢ 处最高，向两端对称递减</p>
+        <div id="fee-chart"></div>
+        <div class="legend">
+          <span><i style="background:#0a6ed1"></i>Crypto（0.07）</span>
+          <span><i style="background:#e8862a"></i>体育 / 经济 / 文化 / 天气（0.05）</span>
+          <span><i style="background:#0a7d33"></i>政治 / 金融 / 科技（0.04）</span>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h4>占投入比例曲线</h4>
+        <p class="cap">低价端占比反而更高：Crypto 10¢ 买费 6.3%，50¢ 3.5%，90¢ 0.7%</p>
+        <div id="pct-chart"></div>
+        <div class="legend">
+          <span><i style="background:#0a6ed1"></i>Crypto（0.07）</span>
+          <span><i style="background:#e8862a"></i>体育 / 经济 / 文化 / 天气（0.05）</span>
+          <span><i style="background:#0a7d33"></i>政治 / 金融 / 科技（0.04）</span>
+        </div>
+      </div>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>成交价格</th>
+            <th>投入（100 股）</th>
+            <th>Crypto（0.07）</th>
+            <th>体育 / 经济 / 文化 / 天气（0.05）</th>
+            <th>政治 / 金融 / 科技（0.04）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>10¢</td><td>$10</td><td>$0.63</td><td>$0.45</td><td>$0.36</td></tr>
+          <tr><td>30¢</td><td>$30</td><td>$1.47</td><td>$1.05</td><td>$0.84</td></tr>
+          <tr><td>50¢ <span class="tag soft">峰值</span></td><td>$50</td><td>$1.75</td><td>$1.25</td><td>$1.00</td></tr>
+          <tr><td>70¢</td><td>$70</td><td>$1.47</td><td>$1.05</td><td>$0.84</td></tr>
+          <tr><td>90¢</td><td>$90</td><td>$0.63</td><td>$0.45</td><td>$0.36</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert amber">
+      <b>两个关键规律</b>
+      ① 美元手续费以 50¢ 为对称轴：30¢ 与 70¢ 收一样的钱，10¢ 与 90¢ 也一样。<br>
+      ② 但占投入的比例在低价端更高：Crypto 10¢ 买入花 $10、费 $0.63（占 6.3%）；50¢ 买入花 $50、费 $1.75（占 3.5%）；90¢ 买入花 $90、费 $0.63（占 0.7%）。
+    </div>
+    <div class="card-foot">
+      费用四舍五入到小数点后 5 位，最低收取 0.00001 USDC；极小单或极端价格可能显示 0 费。
+    </div>
+  </div>
+
+  <!-- ============ 3. PURCHASE SCENARIOS ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">03</div>
+      <div>
+        <h2>不同购买情况：谁付费、付多少</h2>
+        <p class="tagline">同一笔买入，挂单和吃单的费用完全不同</p>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="bars-title">同一笔单：吃单 vs 挂单（Crypto · 100 股 · 50¢ 成交）</div>
+      <div class="bar-row"><span>吃单（市价 / 立即成交）</span><div class="bar-track"><div class="bar-fill red" style="width:100%"></div></div><span class="bar-val">−$1.75 手续费</span></div>
+      <div class="bar-row"><span>挂单（限价等成交）</span><div class="bar-track"><div class="bar-fill green" style="width:0%"></div></div><span class="bar-val">$0 手续费 + 返佣 15–25%</span></div>
+    </div>
+    <div class="grid2">
+      <div class="scen">
+        <h3><span class="ico">⚡</span> 吃单 Taker（市价 / 立即成交）</h3>
+        <p>订单一进场就吃掉盘口流动性 → 按第 01、02 块公式付费。买入与卖出、买 YES 与买 NO 同一套算法，主动成交的一方付。</p>
+        <div class="mini">例：Crypto 100 股、50¢ 市价买入 → 付 $1.75</div>
+      </div>
+      <div class="scen">
+        <h3><span class="ico">🛡</span> 挂单 Maker（限价挂单等成交）</h3>
+        <p>订单先挂在盘口上，由别人来成交 → 平台 0 收费，还按比例分享吃单费池返佣：Crypto 20%、体育 15%、其余 25%，每日按"费曲线加权"结算。</p>
+        <div class="mini">返佣只给主动提供流动性的挂单；成交那一刻才判定 Maker / Taker</div>
+      </div>
+      <div class="scen">
+        <h3><span class="ico">📐</span> 大单 vs 小单</h3>
+        <p>手续费随股数线性放大（C × feeRate × p × (1−p)），没有固定起步费；极小单四舍五入后可能为 0。大额吃单另有返佣阶梯，见下。</p>
+        <div class="mini">例：Crypto 50¢ 吃单，100 股 $1.75 → 1,000 股 $17.50</div>
+      </div>
+      <div class="scen">
+        <h3><span class="ico">🏁</span> 结算与持有</h3>
+        <p>赢面 1:1 兑付 $1/股，平台不抽成、不抽盈利；持仓期间也无费用。地缘政治板块免费交易，同时也不产生返佣与加权量。</p>
+        <div class="mini">费用以 USDC 计，交易页在下单前会显示本次预估费用</div>
+      </div>
+    </div>
+    <div class="tier-note">
+      <b>Taker 返佣阶梯（2026-05-28 上线）：</b>按 30 日"加权量 wV"定级，wV = 投入 × (1−成交价) × 板块权重（Crypto 2.3 / 经济文化天气 1.7 / 政治金融科技 1.3 / 体育 1.0）。青铜 $2k→返 3%、白银 $20k→8%、黄金 $200k→18%、铂金 $1M→32%、钻石 $4M→44%、黑曜石 $10M→50%；每日 UTC 0 点以 pUSD 结算，达级后当日生效。
+    </div>
+  </div>
+
+  <!-- ============ 4. DEPOSIT / WITHDRAW ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">04</div>
+      <div>
+        <h2>入金 / 出金：平台不收费，但中间商要收</h2>
+        <p class="tagline">Polymarket 官方明确：入金出金 USDC 无平台费用</p>
+      </div>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>操作</th>
+            <th>费用</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>USDC 钱包转入（Polygon 链）</td>
+            <td><span class="tag free">0 平台费</span></td>
+            <td>最快、最省的方式；只需要 Polygon 网络 gas（通常不到 1 美分）</td>
+          </tr>
+          <tr>
+            <td>交易所转 USDC（如 Coinbase）</td>
+            <td>看交易所</td>
+            <td>交易所提币费与网络费由交易所收取；Coinbase Polygon 提币通常免费</td>
+          </tr>
+          <tr>
+            <td>信用卡 / 借记卡入金（MoonPay）</td>
+            <td>约 2.9% + $0.30</td>
+            <td>第三方支付通道收费，非平台收；小额入金时这笔费占比很高</td>
+          </tr>
+          <tr>
+            <td>出金到钱包（Polygon）</td>
+            <td><span class="tag free">0 平台费</span></td>
+            <td>仅 Polygon gas（正常交易场景通常由平台 / 中继覆盖）</td>
+          </tr>
+          <tr>
+            <td>出金到银行卡</td>
+            <td>看交易所</td>
+            <td>钱包 → 交易所（免费）→ 银行 ACH 免费；电汇才收 $25 左右</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="alert green">
+      <b>省钱路径</b>
+      交易所买 USDC → Polygon 免费提币到 Polymarket → 挂限价单（0 费 + 返佣）→ 结算或出金。全程平台费用 ≈ 0，剩下只有价差。
+    </div>
+  </div>
+
+  <!-- ============ 5. REAL COST ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">05</div>
+      <div>
+        <h2>真正的成本：价差 &amp; 滑点</h2>
+        <p class="tagline">显性手续费很小，隐性成本才决定盈亏</p>
+      </div>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>市场流动性</th>
+            <th>典型价差</th>
+            <th>买入后立刻卖出（来回成本）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>高流动性（日成交 &gt; $1M）</td><td>1–2¢</td><td>约 2%–4%</td></tr>
+          <tr><td>中流动性（$100K–$1M）</td><td>2–5¢</td><td>约 4%–10%</td></tr>
+          <tr><td>低流动性（&lt; $100K）</td><td>5–15¢</td><td>约 10%–30%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="clean">
+      <li>优先做高流动性市场：热门赛事 / 政治 / 大币种，价差 1–2¢</li>
+      <li>能用限价单就别用市价单：自己定价 = 0 费 + 返佣，还能绕过价差</li>
+      <li>大单拆小、分批进场，减少冲击成本；下单前看盘口五档深度</li>
+      <li>每个市场的费率参数可能不同：交易页与市场详情里会显示该市场的 fee 参数</li>
+    </ul>
+    <div class="alert amber">
+      <b>经验参考</b>
+      价差区间为市场通行经验值（约 2%–30% 来回成本），非官方承诺；冷门市场的隐性成本通常远高于手续费本身。
+    </div>
+  </div>
+
+  <!-- ============ 6. SOURCES ============ -->
+  <div class="card">
+    <div class="card-head">
+      <div class="block-no">06</div>
+      <div>
+        <h2>数据口径与来源</h2>
+        <p class="tagline">全部数字均可溯源，核验于 2026-08-22</p>
+      </div>
+    </div>
+    <ul class="clean">
+      <li class="green">费率表与公式：Polymarket 官方文档 Trading Fees（docs.polymarket.com/trading/fees）</li>
+      <li class="green">返佣规则：官方帮助中心 Trading Fees / Maker Rebates Program（2026-07-10 更新）</li>
+      <li class="green">Taker 返佣阶梯：官方文档 Taker Rebate Program（2026-05-28 上线）</li>
+      <li class="green">实时交叉核验：gamma-api 行情接口抽样（BTC / 政治 / 经济 / 体育类市场费率与上表一致）</li>
+      <li class="amber">口径说明：本文按国际站 polymarket.com；美国持牌版（polymarket.us）2026/7/1 起为另一套统一费率表，未包含在本页</li>
+    </ul>
+    <div class="src">
+      <a href="https://docs.polymarket.com/trading/fees" target="_blank" rel="noopener">官方 Trading Fees 文档</a>
+      <a href="https://help.polymarket.com/en/articles/13364478-trading-fees" target="_blank" rel="noopener">帮助中心 · Trading Fees</a>
+      <a href="https://help.polymarket.com/en/articles/13364471-maker-rebates-program" target="_blank" rel="noopener">帮助中心 · Maker Rebates</a>
+      <a href="https://docs.polymarket.com/programs/taker-rebates" target="_blank" rel="noopener">官方 · Taker Rebate Program</a>
+    </div>
+    <div class="alert red">
+      <b>免责</b>
+      费率和返佣规则可能随时调整；交易前以 Polymarket 交易页显示的实时费用为准。本页不构成投资建议。
+    </div>
+  </div>
+
+  <footer>Polymarket 手续费全解析 · 核验日期 2026-08-22 · 数据来源：Polymarket 官方文档 / 帮助中心</footer>
+</div>
+<script>
+(function(){
+  var W=640,H=320,PL=48,PR=14,PT=18,PB=40;
+  var x0=PL,x1=W-PR,y0=PT,y1=H-PB;
+  var SERIES=[
+    {rate:0.07,color:"#0a6ed1",name:"Crypto"},
+    {rate:0.05,color:"#e8862a",name:"Sports/Econ"},
+    {rate:0.04,color:"#0a7d33",name:"Politics/Fin"}
+  ];
+
+  function axis(s){
+    for(var v=0;v<=1.8;v+=0.45){
+      var y=y1-(v/1.8)*(y1-y0);
+      s+='<line x1="'+x0+'" y1="'+y.toFixed(1)+'" x2="'+x1+'" y2="'+y.toFixed(1)+'" stroke="#eef0f3" stroke-width="1"/>';
+      s+='<text x="'+(x0-6)+'" y="'+(y+4).toFixed(1)+'" text-anchor="end" font-size="10" fill="#8a8a8f">$'+v.toFixed(2)+'</text>';
+    }
+    [0.1,0.3,0.5,0.7,0.9].forEach(function(p){
+      var x=x0+p*(x1-x0);
+      s+='<text x="'+x.toFixed(1)+'" y="'+(H-22)+'" text-anchor="middle" font-size="10" fill="#8a8a8f">'+(p*100)+'¢</text>';
+    });
+    s+='<text x="'+x0+'" y="'+(H-8)+'" font-size="10" fill="#8a8a8f">成交价格 →</text>';
+    return s;
+  }
+
+  function feeChart(){
+    var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="美元手续费随成交价格变化曲线">';
+    s=axis(s);
+    var x50=x0+0.5*(x1-x0);
+    s+='<line x1="'+x50+'" y1="'+y0+'" x2="'+x50+'" y2="'+y1+'" stroke="#c9d4e0" stroke-dasharray="4 4"/>';
+    SERIES.forEach(function(sr){
+      var d='';
+      for(var i=0;i<=100;i++){
+        var p=i/100, pv=Math.max(p,0.01);
+        var v=100*sr.rate*pv*(1-pv);
+        var x=x0+p*(x1-x0);
+        var y=y1-(Math.min(v,1.8)/1.8)*(y1-y0);
+        d+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)+' ';
+      }
+      s+='<path d="'+d+'" fill="none" stroke="'+sr.color+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    });
+    var y50=y1-(1.75/1.8)*(y1-y0);
+    s+='<circle cx="'+x50+'" cy="'+y50.toFixed(1)+'" r="4" fill="#0a6ed1"/>';
+    s+='<text x="'+(x50+8)+'" y="'+(y50-8).toFixed(1)+'" font-size="11" font-weight="700" fill="#0a6ed1">峰值 $1.75（Crypto）</text>';
+    s+='</svg>';
+    return s;
+  }
+
+  function pctChart(){
+    var s='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="手续费占投入比例随成交价格变化曲线">';
+    [0,1.75,3.5,5.25,7].forEach(function(v){
+      var y=y1-(v/7)*(y1-y0);
+      s+='<line x1="'+x0+'" y1="'+y.toFixed(1)+'" x2="'+x1+'" y2="'+y.toFixed(1)+'" stroke="#eef0f3" stroke-width="1"/>';
+      s+='<text x="'+(x0-6)+'" y="'+(y+4).toFixed(1)+'" text-anchor="end" font-size="10" fill="#8a8a8f">'+v.toFixed(2)+'%</text>';
+    });
+    [0.1,0.3,0.5,0.7,0.9].forEach(function(p){
+      var x=x0+p*(x1-x0);
+      s+='<text x="'+x.toFixed(1)+'" y="'+(H-22)+'" text-anchor="middle" font-size="10" fill="#8a8a8f">'+(p*100)+'¢</text>';
+    });
+    s+='<text x="'+x0+'" y="'+(H-8)+'" font-size="10" fill="#8a8a8f">成交价格 →</text>';
+    SERIES.forEach(function(sr){
+      var d='';
+      for(var i=0;i<=100;i++){
+        var p=i/100, pv=Math.max(p,0.01);
+        var v=sr.rate*(1-pv)*100;
+        var x=x0+p*(x1-x0);
+        var y=y1-(Math.min(v,7)/7)*(y1-y0);
+        d+=(i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1)+' ';
+      }
+      s+='<path d="'+d+'" fill="none" stroke="'+sr.color+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+    });
+    [[0.1,6.3,"10¢ · 6.3%"],[0.5,3.5,"50¢ · 3.5%"],[0.9,0.7,"90¢ · 0.7%"]].forEach(function(a){
+      var x=x0+a[0]*(x1-x0);
+      var y=y1-(a[1]/7)*(y1-y0);
+      s+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4" fill="#0a6ed1"/>';
+      var tx=x>W/2?x-8:x+8;
+      s+='<text x="'+tx.toFixed(1)+'" y="'+(y-8).toFixed(1)+'" text-anchor="'+(x>W/2?'end':'start')+'" font-size="11" font-weight="700" fill="#0a6ed1">'+a[2]+'</text>';
+    });
+    s+='</svg>';
+    return s;
+  }
+
+  var feeEl=document.getElementById("fee-chart");
+  var pctEl=document.getElementById("pct-chart");
+  if(feeEl){feeEl.innerHTML=feeChart();}
+  if(pctEl){pctEl.innerHTML=pctChart();}
+})();
+</script>
+</body>
+</html>

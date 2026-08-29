@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "blast_official",
+  "url": "https://www.huya.com/blast",
+  "state": "offline_waiting",
+  "started_at": "2026-08-26T19:48:22+00:00",
+  "heartbeat_at": "2026-08-27T00:20:22+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 660729,
+  "channel_id": 1758878234,
+  "nickname": "BLAST赛事主舞台",
+  "introduction": "【预告】17:00直播 BLAST波尔图公开赛",
+  "room_name": "恭喜MOUZ夺得BLAST赏金赛S2冠军！",
+  "page_live": false,
+  "checked_at": "2026-08-26T19:48:23+00:00"
+}

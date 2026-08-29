@@ -1,0 +1,164 @@
+{
+ "captured_at": "20260815T091306Z",
+ "note": "mark-price level-1 coarse scan (funded markets only); suspicious SigmaP artifacts flagged; level-2 order-book ask screening required before any action.",
+ "threshold": 0.05,
+ "direction": "gt",
+ "groups": [
+  {
+   "negRiskMarketID": "0xc555026ae47ac92b2221735344d47eea8feb61d4da8250634f93c03cc023ad00",
+   "sigmaP": 8.4935,
+   "legs": 17,
+   "title": "GA-13 Special Election Winner",
+   "slug": "ga-13-special-election-winner-20260604224652888",
+   "category": "",
+   "endDate": "2026-07-29T03:59:00Z",
+   "suspicious": true,
+   "liquidity": 20573.08
+  },
+  {
+   "negRiskMarketID": "0x701f35114b497214fc18aaff418951c12cddd2f7a7d275bfd5ade0d320e5d000",
+   "sigmaP": 4.4905,
+   "legs": 9,
+   "title": "WA-03 Primary First Place",
+   "slug": "wa-03-primary-first-place-20260706195611094",
+   "category": "",
+   "endDate": "2026-08-04T00:00:00Z",
+   "suspicious": true,
+   "liquidity": 24164.85
+  },
+  {
+   "negRiskMarketID": "0x1ab1df2fd3d2184c7965ec3401e6a8b327097e621a34a6b3483656283fb4be00",
+   "sigmaP": 2.994,
+   "legs": 5,
+   "title": "Michigan Democratic Senate Primary: Oakland County Winner",
+   "slug": "michigan-democratic-senate-primary-oakland-county-winner-20260721153909098",
+   "category": "",
+   "endDate": "2026-08-04T00:00:00Z",
+   "suspicious": true,
+   "liquidity": 8853.42
+  },
+  {
+   "negRiskMarketID": "0x1dc44aceaa871d5664a6834d9843e22970783fe8d0d3fe6ff1695ac90995b600",
+   "sigmaP": 0.192,
+   "legs": 7,
+   "title": "LA-05 Republican Primary Winner",
+   "slug": "la-05-republican-primary-winner",
+   "category": "",
+   "endDate": "2026-05-16T00:00:00Z",
+   "suspicious": true,
+   "liquidity": 60082.46
+  },
+  {
+   "negRiskMarketID": "0xe5e3f764eaa80689d15681ba6076948d0ed9528b94240fb7e4b8d716c0717500",
+   "sigmaP": 1.5655,
+   "legs": 31,
+   "title": "Which coalition will form the next Romanian government?",
+   "slug": "which-coalition-will-form-the-next-romanian-government",
+   "category": "",
+   "endDate": "2026-05-31T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 148693.52
+  },
+  {
+   "negRiskMarketID": "0xff6be1f76a74638f002e7b0ba783a2ef21ba992177971e91f102a6c623999600",
+   "sigmaP": 1.52,
+   "legs": 6,
+   "title": "Kansas Governor Republican Primary Margin of Victory",
+   "slug": "kansas-governor-republican-primary-margin-of-victory-20260728203736924",
+   "category": "",
+   "endDate": "2026-08-04T23:59:00Z",
+   "suspicious": false,
+   "liquidity": 44304.13
+  },
+  {
+   "negRiskMarketID": "0x1eff3f75803201e4dc922debed238f3e7a7636a469ee5cb39a34341a7190e400",
+   "sigmaP": 0.518,
+   "legs": 6,
+   "title": "Guinea-Bissau National People's Assembly Election Winner",
+   "slug": "guinea-bissau-national-peoples-assembly-election-winner",
+   "category": "",
+   "endDate": "2025-11-23T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 32107.96
+  },
+  {
+   "negRiskMarketID": "0x70b42703a6660d6e68ef30c369c50ba4ab906a19685fe9876f9e17b155787f00",
+   "sigmaP": 0.5555,
+   "legs": 12,
+   "title": "Guinea-Bissau Presidential Election",
+   "slug": "guinea-bissau-presidential-election",
+   "category": "",
+   "endDate": "2025-11-23T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 88756.43
+  },
+  {
+   "negRiskMarketID": "0xeea3e973053ca64c6bb2a973bd4dd7211c70c1aab44e88b329d0c99f010a8200",
+   "sigmaP": 1.26,
+   "legs": 12,
+   "title": "Who will be the next Secretary-General of the UN?",
+   "slug": "who-will-be-the-next-secretary-general-of-the-un",
+   "category": "",
+   "endDate": "2026-02-28T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 4368.82
+  },
+  {
+   "negRiskMarketID": "0x55ab76d092f682bf5cbb7e14f13ee12f8410ce7cc1b7906f23b8fb56c11f6500",
+   "sigmaP": 1.009,
+   "legs": 8,
+   "title": "Next Prime Minister of Ethiopia?",
+   "slug": "next-prime-minister-of-ethiopia",
+   "category": "",
+   "endDate": "2026-06-01T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 160221.22
+  },
+  {
+   "negRiskMarketID": "0x8c16c7e09312f321b8de1c5076195b34acdb49fe4354126c69be2788e677bc00",
+   "sigmaP": 1.007,
+   "legs": 5,
+   "title": "China Annual GDP Growth 2026",
+   "slug": "china-annual-gdp-growth-2026",
+   "category": "",
+   "endDate": "2026-01-31T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 75121.94
+  }
+ ],
+ "hits": [
+  {
+   "negRiskMarketID": "0xeea3e973053ca64c6bb2a973bd4dd7211c70c1aab44e88b329d0c99f010a8200",
+   "sigmaP": 1.26,
+   "legs": 12,
+   "title": "Who will be the next Secretary-General of the UN?",
+   "slug": "who-will-be-the-next-secretary-general-of-the-un",
+   "category": "",
+   "endDate": "2026-02-28T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 4368.82
+  },
+  {
+   "negRiskMarketID": "0xe5e3f764eaa80689d15681ba6076948d0ed9528b94240fb7e4b8d716c0717500",
+   "sigmaP": 1.5655,
+   "legs": 31,
+   "title": "Which coalition will form the next Romanian government?",
+   "slug": "which-coalition-will-form-the-next-romanian-government",
+   "category": "",
+   "endDate": "2026-05-31T00:00:00Z",
+   "suspicious": false,
+   "liquidity": 148693.52
+  },
+  {
+   "negRiskMarketID": "0xff6be1f76a74638f002e7b0ba783a2ef21ba992177971e91f102a6c623999600",
+   "sigmaP": 1.52,
+   "legs": 6,
+   "title": "Kansas Governor Republican Primary Margin of Victory",
+   "slug": "kansas-governor-republican-primary-margin-of-victory-20260728203736924",
+   "category": "",
+   "endDate": "2026-08-04T23:59:00Z",
+   "suspicious": false,
+   "liquidity": 44304.13
+  }
+ ]
+}

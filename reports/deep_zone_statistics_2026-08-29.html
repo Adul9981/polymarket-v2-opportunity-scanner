@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>深水区反转统计 · 2026-08-29</title><style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--warn:#a1420c;--warnbg:#fff1e8;--ok:#1a7f37;--okbg:#eaf6ee;--line:#e8e8ed;}
+*{box-sizing:border-box;margin:0;padding:0;}body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;line-height:1.55;padding:28px 16px 60px;}
+.wrap{max-width:920px;margin:0 auto;}h1{font-size:25px;font-weight:700;}.sub{color:var(--sub);font-size:13px;margin-top:6px;}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0;}@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr);}}
+.stat{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05);}.stat b{display:block;font-size:24px;font-weight:700;}.stat span{font-size:12px;color:var(--sub);}
+.card{background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin:14px 0;}
+h2{font-size:16px;margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line);}th{background:#fafafc;color:var(--sub);font-weight:600;font-size:11.5px;}tr:last-child td{border-bottom:none;}
+.warnbox{background:var(--warnbg);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--warn);}
+.okbox{background:var(--okbg);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ok);}
+.foot{margin-top:22px;color:var(--sub);font-size:11.5px;}
+</style></head><body><div class="wrap">
+<h1>深水区反转统计（赔率 ≤30c 后走势）</h1>
+<div class="sub">基于 100 场快照 · 341 个深水案例 · 2026-08-29 · 数据：docs/data/snapshots/*</div>
+<div class="stats">
+<div class="stat"><b>341</b><span>深水案例（≤30c）</span></div>
+<div class="stat"><b>24%</b><span>深水侧最终结算赢</span></div>
+<div class="stat"><b>4-5%</b><span>≤10c 深水反转率</span></div>
+<div class="stat"><b>45%</b><span>20-30c 深水反转率（LoL）</span></div>
+</div>
+<div class="card"><h2>核心结论：深水越深，反转率越低（反直觉）</h2>
+<table>
+<tr><th>深水区间</th><th>案例</th><th>反弹到 ≥60c</th><th>最终结算赢（≥95c）</th></tr>
+<tr><td>≤10c（如 FURIA 7c）</td><td>160</td><td>7%</td><td><b>4-5%</b></td></tr>
+<tr><td>10-20c</td><td>62</td><td>58%</td><td>39%（LoL 47%）</td></tr>
+<tr><td>20-30c</td><td>116</td><td>61%</td><td><b>45%（LoL）/36%（CS2）</b></td></tr>
+</table>
+<div class="warnbox" style="margin-top:10px;"><b>对你"7c 该加仓"的直接回答</b>：≤10c 深水历史反转率仅 4-5%——FURIA 那场 7c 反转是极小概率事件（这次对了，但 95% 的情况下会归零或只小幅回升）。7c 加仓 = 高赔低概率的彩票，不是可重复的策略。</div>
+<div class="okbox" style="margin-top:10px;"><b>真正的策略区间（与"0.2-0.4 买落后强队"呼应）</b>：20-30c 深水反转率 45%（LoL），10-20c 也有 39-47%——20-40c 才是相对靠谱的低吸区间，你之前验证的 Spirit 场 0.42 正好落在这个区间。</div></div>
+<div class="card"><h2>维度细分</h2>
+<table>
+<tr><th>维度</th><th>案例</th><th>到 60c</th><th>结算赢</th></tr>
+<tr><td>局内（gameN）深水</td><td>232</td><td>37%</td><td>29%</td></tr>
+<tr><td>整场（moneyline）深水</td><td>109</td><td>30%</td><td><b>14%</b></td></tr>
+<tr><td>LoL ≤10c</td><td>131</td><td>—</td><td>5%</td></tr>
+<tr><td>LoL 10-20c</td><td>45</td><td>—</td><td>47%</td></tr>
+<tr><td>LoL 20-30c</td><td>89</td><td>—</td><td>47%</td></tr>
+<tr><td>CS2 ≤10c</td><td>27</td><td>—</td><td>4%</td></tr>
+<tr><td>CS2 20-30c</td><td>25</td><td>—</td><td>36%</td></tr>
+</table>
+<p style="font-size:12.5px;color:var(--sub);margin-top:8px;">整场深水反转率（14%）远低于局内（29%）——买整场深水更危险；局内 20-30c 是相对窗口。</p></div>
+<div class="card"><h2>可操作结论</h2>
+<div class="okbox">① 深水低吸区间：局内 20-40c（反转率约 45%），优先 LoL；② ≤10c 深水只按彩票仓（≤15U），不因"7c 便宜"重仓；③ 整场深水（≤30c）回避或严格小仓；④ "深水反转"需启动确认（上穿关键位），未确认不补仓。</div></div>
+<div class="foot">局限：样本来自已关注比赛（强队场次偏多，可能高估反转率）；未区分深水时队伍强弱；"结算赢"按 ≥95c 口径，忽略中间止盈机会。原始案例：/tmp/deep_cases.json</div>
+</div></body></html>

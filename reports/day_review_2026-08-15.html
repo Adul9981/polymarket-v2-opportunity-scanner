@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>昨天，我经历了什么 · 08-14 全天复盘</title>
+<style>
+  :root {
+    --bg: #f5f5f7;
+    --card: #ffffff;
+    --ink: #1d1d1f;
+    --sub: #6e6e73;
+    --line: #e8e8ed;
+    --blue: #0071e3;
+    --blue-soft: #e8f1fd;
+    --green: #1d9e5b;
+    --green-soft: #e7f7ef;
+    --red: #e0342e;
+    --red-soft: #fdecea;
+    --amber: #b45309;
+    --amber-soft: #fdf3e3;
+    --shadow: 0 1px 3px rgba(0,0,0,.05), 0 10px 30px rgba(0,0,0,.06);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC",
+      "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 18px 64px; }
+
+  /* Hero */
+  .hero { text-align: center; padding: 24px 8px 28px; }
+  .hero .kicker {
+    display: inline-block; font-size: 13px; letter-spacing: .08em;
+    color: var(--sub); background: #fff; border: 1px solid var(--line);
+    border-radius: 999px; padding: 4px 14px; margin-bottom: 14px;
+  }
+  .hero h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+  .hero p { color: var(--sub); font-size: 15px; margin-top: 10px; }
+
+  /* Section */
+  .sec { margin-top: 36px; }
+  .sec-title {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 17px; font-weight: 600; margin-bottom: 14px; padding-left: 2px;
+  }
+  .sec-title .dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+  /* Stat cards */
+  .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .stat {
+    background: var(--card); border-radius: 18px; padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .stat .label { font-size: 12px; color: var(--sub); }
+  .stat .value { font-size: 24px; font-weight: 700; margin-top: 4px; letter-spacing: -0.01em; }
+  .stat .note { font-size: 12px; color: var(--sub); margin-top: 2px; }
+  .up { color: var(--green); }
+  .down { color: var(--red); }
+  .neutral { color: var(--ink); }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 26px; }
+  .timeline::before {
+    content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px;
+    width: 2px; background: var(--line);
+  }
+  .event { position: relative; margin-bottom: 14px; }
+  .event::before {
+    content: ""; position: absolute; left: -24px; top: 18px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--blue); border: 2px solid #fff; box-shadow: 0 0 0 2px var(--blue-soft);
+  }
+  .event.good::before { background: var(--green); box-shadow: 0 0 0 2px var(--green-soft); }
+  .event.bad::before { background: var(--red); box-shadow: 0 0 0 2px var(--red-soft); }
+  .event.mid::before { background: var(--amber); box-shadow: 0 0 0 2px var(--amber-soft); }
+  .event.star::before { background: var(--blue); box-shadow: 0 0 0 2px var(--blue-soft); }
+
+  .card {
+    background: var(--card); border-radius: 16px; padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+  .card .head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .card .time { font-size: 12px; color: var(--sub); font-weight: 600; }
+  .card .match { font-size: 14px; font-weight: 600; }
+  .card .pnl { font-size: 14px; font-weight: 700; white-space: nowrap; }
+  .card .desc { font-size: 13.5px; color: var(--sub); margin-top: 6px; }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 600; border-radius: 999px;
+    padding: 2px 9px; margin-right: 6px; margin-top: 8px;
+  }
+  .tag.g { background: var(--green-soft); color: var(--green); }
+  .tag.r { background: var(--red-soft); color: var(--red); }
+  .tag.a { background: var(--amber-soft); color: var(--amber); }
+  .tag.b { background: var(--blue-soft); color: var(--blue); }
+
+  /* Lists */
+  .good-list, .avoid-list { display: flex; flex-direction: column; gap: 10px; }
+  .good-list .card, .avoid-list .card { padding: 14px 16px; }
+  .item-title { font-size: 14.5px; font-weight: 600; }
+  .item-desc { font-size: 13.5px; color: var(--sub); margin-top: 4px; }
+  .good-list .card { border-left: 3px solid var(--green); }
+  .avoid-list .card { border-left: 3px solid var(--red); }
+
+  /* Two columns */
+  .cols { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 620px) { .cols { grid-template-columns: 1fr 1fr; } }
+  .col { background: var(--card); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
+  .col h3 { font-size: 15px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 7px; }
+  .col ul { list-style: none; }
+  .col li {
+    font-size: 13.5px; padding: 7px 0 7px 20px; position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+  .col li:last-child { border-bottom: none; }
+  .col.do li::before { content: "＋"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+  .col.avoid li::before { content: "×"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
+  .col li b { font-weight: 600; }
+
+  /* Summary strip */
+  .quote {
+    background: linear-gradient(135deg, #0071e3, #0a5dc2);
+    color: #fff; border-radius: 20px; padding: 22px 22px 20px; margin-top: 36px;
+    box-shadow: var(--shadow);
+  }
+  .quote .q-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .quote p { font-size: 14px; opacity: .92; }
+  .quote p + p { margin-top: 6px; }
+
+  footer {
+    text-align: center; color: var(--sub); font-size: 12px;
+    margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--line);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="kicker">2026-08-14 · 全天复盘</span>
+    <h1>昨天，我经历了什么</h1>
+    <p>从账户峰值到归零、回血、落袋，再到凌晨的连环操作<br>——一条完整的资金弧线，和它留下的规则。</p>
+  </header>
+
+  <!-- 核心数字 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--blue)"></span>核心数字</div>
+    <div class="stats">
+      <div class="stat"><div class="label">账户峰值（08-13）</div><div class="value neutral">$1,650</div><div class="note">全仓 T1A/DKC 四线，半天归零</div></div>
+      <div class="stat"><div class="label">真正落袋</div><div class="value up">$290</div><div class="note">归零后第一次主动提现 ✅</div></div>
+      <div class="stat"><div class="label">全天全仓次数</div><div class="value down">5 次</div><div class="note">T1A / T1·DK G2 / MOUZ / VIT G2 / VIT G3</div></div>
+      <div class="stat"><div class="label">单笔最大回撤</div><div class="value down">−$1,650</div><div class="note">以及 94c → 0.1c 的 25 分钟崩盘</div></div>
+    </div>
+  </section>
+
+  <!-- 时间线 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--blue)"></span>全天时间线</div>
+    <div class="timeline">
+
+      <div class="event bad">
+        <div class="card">
+          <div class="head"><span class="match">T1A vs DK C · G2（LCK CL）</span><span class="pnl down">−$1,650</span></div>
+          <div class="time">08-14 上午 · 1650 → 0</div>
+          <div class="desc">G2 开局 15 分钟 T1A 胜率冲到 95%，全仓买入四线（T1 整局 / Over 4.0 / Over 2.5 / 比赛赢）。胜率迅速跌到 45% 未反弹，全部归零。<b>从 08-13 峰值 1650 到归零只用了半天，且从未提现。</b></div>
+          <span class="tag r">全仓</span><span class="tag r">95% 高位追满</span><span class="tag a">晒单即高光</span>
+        </div>
+      </div>
+
+      <div class="event mid">
+        <div class="card">
+          <div class="head"><span class="match">T1 vs DK · G1</span><span class="pnl down">−$80</span></div>
+          <div class="time">08-14 下午</div>
+          <div class="desc">买 DK 赢，输掉。原本持有的 DK +1.5 因恐慌割在低位——<b>情绪止损，卖在最差的位置。</b></div>
+          <span class="tag a">恐慌卖</span>
+        </div>
+      </div>
+
+      <div class="event bad">
+        <div class="card">
+          <div class="head"><span class="match">T1 vs DK · G2</span><span class="pnl down">−$220</span></div>
+          <div class="time">08-14 下午</div>
+          <div class="desc">买 T1 后两次全仓 T1，全部亏损。<b>归零的第二天，仍然在全仓。</b></div>
+          <span class="tag r">全仓 ×2</span>
+        </div>
+      </div>
+
+      <div class="event good">
+        <div class="card">
+          <div class="head"><span class="match">T1 vs DK · G3</span><span class="pnl up">+$350</span></div>
+          <div class="time">08-14 下午 · 170 投入</div>
+          <div class="desc">判断让一追二的 DK 有优势，买 DK。40-50 震荡 → 75 卖小部分 → 85-90 → 100。<b>结构判断兑现，但全仓不因结果变成正确方法。</b></div>
+          <span class="tag g">判断对</span><span class="tag r">仍是全仓</span>
+        </div>
+      </div>
+
+      <div class="event good">
+        <div class="card">
+          <div class="head"><span class="match">NS vs BRO（LCK）</span><span class="pnl up">+$200 / G2 净 +$100</span></div>
+          <div class="time">08-14 傍晚</div>
+          <div class="desc">赛前挂单 150+50、70-80c 追 200，回收 440+100。G2 上单连死两次砸到 32c 恐慌卖亏 100，<b>冷静后买回 NS，NS 赢——止损+翻转做对了。</b></div>
+          <span class="tag g">冷静买回</span><span class="tag a">中间恐慌卖 −100</span>
+        </div>
+      </div>
+
+      <div class="event star">
+        <div class="card">
+          <div class="head"><span class="match">主动提现 $290</span><span class="pnl up">落袋 ✅</span></div>
+          <div class="time">08-14 晚上</div>
+          <div class="desc">从 1650 归零回血到约 580 后，<b>主动提现 290 到银行卡——归零后第一次真正把钱从账户里拿出来。</b>这是昨天最重要的一步。</div>
+          <span class="tag b">关键转折</span><span class="tag g">落袋纪律</span>
+        </div>
+      </div>
+
+      <div class="event good">
+        <div class="card">
+          <div class="head"><span class="match">CFO G3（LCP）</span><span class="pnl up">+$176</span></div>
+          <div class="time">08-14 晚上 · 约 290 全仓</div>
+          <div class="desc">60-70c 买入 CFO，赛后 326+140=466。小赚，但仍是全仓动作。</div>
+          <span class="tag g">赢了</span><span class="tag r">全仓</span>
+        </div>
+      </div>
+
+      <div class="event bad">
+        <div class="card">
+          <div class="head"><span class="match">MOUZ Map1（CS2）</span><span class="pnl down">−$350</span></div>
+          <div class="time">08-15 凌晨 · 200+150 全仓</div>
+          <div class="desc">37c 接单未撑住 → 24c → 归零。单图高波动市场，全仓接刀。</div>
+          <span class="tag r">全仓</span><span class="tag a">单图彩票当重仓打</span>
+        </div>
+      </div>
+
+      <div class="event good">
+        <div class="card">
+          <div class="head"><span class="match">SHFT vs SK（LEC）</span><span class="pnl up">+$700</span></div>
+          <div class="time">08-15 凌晨</div>
+          <div class="desc">G1 350 投入 → +200。G2 全仓 550，<b>49-50 先卖 160（颠簸不稳），留仓吃到 100c → +500。</b>分批止盈执行正确；定价失真（强弱差距 vs 五五开）判断到位。</div>
+          <span class="tag g">分批止盈</span><span class="tag g">定价失真</span>
+        </div>
+      </div>
+
+      <div class="event good">
+        <div class="card">
+          <div class="head"><span class="match">GX vs VIT · G1</span><span class="pnl up">+$500</span></div>
+          <div class="time">08-15 凌晨 · 300 投入</div>
+          <div class="desc">判断 VIT 强，VIT 完全碾压 → 100c，翻倍。判断力在线。</div>
+          <span class="tag g">判断对</span>
+        </div>
+      </div>
+
+      <div class="event bad">
+        <div class="card">
+          <div class="head"><span class="match">GX vs VIT · G2</span><span class="pnl down">−$460</span></div>
+          <div class="time">08-15 凌晨 · 700 全仓</div>
+          <div class="desc">VIT 领先 1 万经济，94c 时全仓想赚 900。<b>高位没有锁盈</b>，解说反复提示"假赛"未重视，25 分钟崩到 0.1c，只收回 240。</div>
+          <span class="tag r">高位不锁盈</span><span class="tag r">全仓</span><span class="tag a">疑似假赛未减仓</span>
+        </div>
+      </div>
+
+      <div class="event bad">
+        <div class="card">
+          <div class="head"><span class="match">GX vs VIT · G3</span><span class="pnl down">−$240</span></div>
+          <div class="time">08-15 凌晨 · 240 全仓</div>
+          <div class="desc">赛前 240 全仓买 VIT。3-0 被追到 3-5 时，因"假赛疑心 + 打野布甲靴"反手买 GIANTX。结果 VIT 正常赢下 2:1，反手仓位全部归零。<b>把 G2 的单场观察外推成 G3 的信号，方向最不确定时全仓反手。</b></div>
+          <span class="tag r">情绪反手</span><span class="tag r">全仓</span><span class="tag a">疑似信号外推</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 做对了什么 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--green)"></span>做对了什么</div>
+    <div class="good-list">
+      <div class="card"><div class="item-title">1 · 主动提现 290，第一次真正落袋</div><div class="item-desc">1650 归零后回血到 580，主动提现 290。落袋优先——这是规则，不是运气。</div></div>
+      <div class="card"><div class="item-title">2 · 判断力在</div><div class="item-desc">T1/DK 让一追二（+350）、SHFT/SK 定价失真（+700）、VIT 强度（G1 +500）都判断对了。你能读懂比赛。</div></div>
+      <div class="card"><div class="item-title">3 · 分批止盈执行对</div><div class="item-desc">SHFT/SK G2 在颠簸中 49-50 先卖 160，留仓吃到 100c——这就是"部分锁盈"的正确打开方式。</div></div>
+      <div class="card"><div class="item-title">4 · 恐慌后能冷静买回</div><div class="item-desc">NS/BRO G2 先恐慌卖亏 100，但冷静后买回 NS 赢回。会止损、会翻转，这是稀缺能力。</div></div>
+      <div class="card"><div class="item-title">5 · 主动休息</div><div class="item-desc">归零后没有连夜报复性交易，选择"明天再说"。暂停是保护账户的动作。</div></div>
+      <div class="card"><div class="item-title">6 · 规则意识在</div><div class="item-desc">你提出"不回本心态、小仓慢慢玩"，并把"全仓一票否决"写进了规则。意识已经有了，差在执行。</div></div>
+    </div>
+  </section>
+
+  <!-- 可以避免什么 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--red)"></span>可以避免什么</div>
+    <div class="avoid-list">
+      <div class="card"><div class="item-title">1 · 全仓，昨天 5 次</div><div class="item-desc">T1A 1650、T1/DK G2、MOUZ 350、VIT G2 700、VIT G3 240——全仓是所有大亏的共同分母，不是哪一笔的运气问题。</div></div>
+      <div class="card"><div class="item-title">2 · 95% 高位追满四线</div><div class="item-desc">T1A G2 胜率 95% ≠ 100%。全仓把"几乎不会输"的错觉变成"一次归零"的必然。</div></div>
+      <div class="card"><div class="item-title">3 · 高位不锁盈</div><div class="item-desc">VIT G2 94c 想赚 900，25 分钟崩到 0.1c。94c 时锁一半，结果完全不同；80c+ 先落袋一半是规则，不是选择。</div></div>
+      <div class="card"><div class="item-title">4 · 把"疑似假赛"外推成"下一局一定演"</div><div class="item-desc">G2 怪装备信号出现后 VIT 崩了，G3 同样的信号出现后 VIT 赢了。信号用于减仓/锁盈，绝不用于反手。</div></div>
+      <div class="card"><div class="item-title">5 · 恐慌手动止损</div><div class="item-desc">T1/DK +1.5、NS/BRO G2 32c：情绪止损总是卖在最差的位置。止损只认规则线（成本一半挂单），不靠临场勇气。</div></div>
+      <div class="card"><div class="item-title">6 · 归零次日仍全仓</div><div class="item-desc">1650 归零后，T1/DK G2、G3 仍然全仓。规则写下来了，但还没变成执行。</div></div>
+    </div>
+  </section>
+
+  <!-- 今天怎么做 -->
+  <section class="sec">
+    <div class="sec-title"><span class="dot" style="background:var(--blue)"></span>今天怎么做</div>
+    <div class="cols">
+      <div class="col do">
+        <h3>✅ 做</h3>
+        <ul>
+          <li><b>单笔 ≤30% 硬顶</b>，全仓一票否决，任何理由不例外</li>
+          <li><b>盈利新高先提现</b>——提现是规则，不是可选项</li>
+          <li><b>高位 80c+ 先锁盈</b>（D2 分批止盈），不赌翻倍</li>
+          <li><b>试仓 → 验证 → 滚仓</b>：先小仓确认信号，再上量</li>
+          <li><b>连亏 2 笔强制降档</b>，情绪激动后 30 分钟不开新仓</li>
+          <li>用<b>状态情报</b>做方向（队伍状态 / 让一追二结构 / 定价失真）</li>
+        </ul>
+      </div>
+      <div class="col avoid">
+        <h3>❌ 避免</h3>
+        <ul>
+          <li><b>全仓/重仓</b>，包括"95% 胜率"和"觉得稳"</li>
+          <li><b>高位追入</b>（&gt;80c 一律需人工确认）</li>
+          <li><b>疑似假赛信号出现时反手</b>——只减仓/锁盈</li>
+          <li><b>恐慌手动止损</b>，只认规则止损单</li>
+          <li><b>归零后未复盘就开新仓</b>，休息 ≥1 天</li>
+          <li>把<b>单场结果</b>当策略评价——只看跨样本期望</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 结论 -->
+  <div class="quote">
+    <div class="q-title">昨天的一句话总结</div>
+    <p>1650 → 0 → 回血 → 提现 290 → 连环操作 → 再次归零。</p>
+    <p>你的判断力一直在——让一追二、定价失真、VIT 强度都看对了；真正吞掉账户的从来不是判断，是那 5 次全仓。</p>
+    <p>唯一安全落袋的是 290。今天的目标不是回本，是连续 N 笔按规则执行。</p>
+  </div>
+
+  <footer>
+    数据来源：knowledge/trades（08-14 / 08-15）· 交易金额含口述估值，以实际成交为准<br>
+    生成时间：2026-08-15 · 复盘页面 v1
+  </footer>
+
+</div>
+</body>
+</html>

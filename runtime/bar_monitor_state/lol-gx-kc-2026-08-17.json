@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "slug": "lol-gx-kc-2026-08-17",
+  "targets": {
+    "lol-gx-kc-2026-08-17-game1|Karmine Corp": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.735,
+      "last_pattern_labels": [
+        "未知"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-gx-kc-2026-08-17-game2|Karmine Corp": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.735,
+      "last_pattern_labels": [
+        "未知"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-gx-kc-2026-08-17|Karmine Corp": {
+      "strategy": "B_FAVORITE_DIP",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.835,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    },
+    "lol-gx-kc-2026-08-17-game1|GIANTX": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.27,
+      "last_pattern_labels": [
+        "未知"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-gx-kc-2026-08-17-game2|GIANTX": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.27,
+      "last_pattern_labels": [
+        "A5_W型双底"
+      ],
+      "last_action_key": "skip_liquidity|buy|"
+    },
+    "lol-gx-kc-2026-08-17|GIANTX": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.165,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    }
+  }
+}

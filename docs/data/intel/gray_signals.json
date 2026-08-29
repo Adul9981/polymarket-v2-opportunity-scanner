@@ -1,0 +1,999 @@
+{
+ "schema_version": "1.0",
+ "updated_at": "2026-08-29T00:59+08:00",
+ "description": "灰信号记录（观众假赛/剧本/卡盘类质疑）。纪律：只作风险标注与盘口对照素材，不作假赛结论。",
+ "records": [
+  {
+   "id": "2026-08-18_kc_gx",
+   "match": "KC vs GX",
+   "league": "LEC",
+   "count": 69,
+   "time_window": "整场",
+   "keywords": [
+    "任务联赛",
+    "演大时间",
+    "四场全卡",
+    "太假了",
+    "卡盘"
+   ],
+   "correlated_markets": [
+    "总时长盘",
+    "总人头盘"
+   ],
+   "notes": "KC 卡时间打法与盘口数字讨论高度重合；观众质疑'一个晚上都在卡'；有反方'买中就是真赛'",
+   "severity": "高",
+   "verification": "pending",
+   "verification_note": "KC 2:0 结果与'卡时间'定性关系待官方/录像核查",
+   "routes": "待核实",
+   "match_id": "2026-08-18_kc_gx"
+  },
+  {
+   "id": "2026-08-18_dns_ns_g1",
+   "match": "DNS vs NS（K杯 G1）",
+   "league": "KeSPA Cup",
+   "count": 18,
+   "time_window": "17:38-17:45（收尾）",
+   "keywords": [
+    "做局",
+    "庄家",
+    "资本",
+    "演员",
+    "明演",
+    "假赛队"
+   ],
+   "correlated_markets": [
+    "总人头大 39.5（全收）"
+   ],
+   "notes": "指向 NS 打野/AD 离谱失误（0-5、整场不交闪）；反方'韩国假赛会坐牢'",
+   "severity": "中",
+   "verification": "partial",
+   "verification_note": "NS 被疑送→NS 输系列（DNS 3:0），方向弱兑现；反方'韩国假赛坐牢'",
+   "routes": [
+    "shuoshuo_323444",
+    "we957_890001"
+   ],
+   "routes_note": "两路共振=升置信；单路有效=低置信",
+   "match_id": "2026-08-18_dns_ns_g1"
+  },
+  {
+   "id": "2026-08-18_dns_ns_g2",
+   "match": "DNS vs NS（K杯 G2）",
+   "league": "KeSPA Cup",
+   "count": 30,
+   "time_window": "18:20 暂停潮",
+   "keywords": [
+    "假赛退钱",
+    "纯假赛",
+    "给场外发信号",
+    "回溯冠军",
+    "打钱"
+   ],
+   "correlated_markets": [
+    "暂停盘（玩梗）"
+   ],
+   "notes": "触发点为 DNS 频繁暂停 + NS 团战离谱失误；'左边暂停完就开始赢'；与 G1 灰信号形成连续两局共振；DNS/NS 暂停潮与 GGA/BRO 瑞兹送局同属 LCK CL 联赛级观察项（案例 4 联动）",
+   "severity": "高",
+   "verification": "partial",
+   "verification_note": "暂停+做局质疑与 DNS 连胜方向一致（弱兑现）；待录像核查",
+   "routes": [
+    "shuoshuo_323444",
+    "we957_890001"
+   ],
+   "routes_note": "两路共振=升置信；单路有效=低置信",
+   "match_id": "2026-08-18_dns_ns_g2"
+  },
+  {
+   "id": "2026-08-18_gga_bro",
+   "match": "GGA vs BRO",
+   "league": "LCK CL",
+   "count": 30,
+   "time_window": "G2 20:33-20:47（崩盘窗口 20:40-20:42）",
+   "keywords": [
+    "明牌演",
+    "严查瑞兹",
+    "演员",
+    "买了",
+    "弱爆是暗号",
+    "纯假赛"
+   ],
+   "correlated_markets": [
+    "G2 BRO1 91c->0.5c（3 分钟崩盘）",
+    "G2 Gen.GA 9c->99.5c"
+   ],
+   "notes": "两路弹幕共识（虎牙 20:40-47 峰值 66->81 条/分、SOOP 韩语 20:40 峰值 82 条/分）直指 BRO1 中单瑞兹（+诺提勒斯）故意送：虎牙\"瑞兹明牌假赛/从头送到尾/只送大的\"，SOOP\"라이즈가 던지구만/고의로 5명 다죽어준 부분\"；用户判断 100% 假赛（案例 4 高度疑似）；与\"LCK CL 少 2:0、第二局给一盘\"联赛规律叙事绑定；反方为 BP 理性归因（女警不速龙等输）；灰信号，待官方/录像核查",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "BRO 瑞兹被指故意送→BRO 输 G2（91c→0.5c 崩盘局）；官方已确认 BRO 2:1（G2 为 BRO 唯一败局）——方向兑现；案例 4 高度疑似，录像核查中",
+   "routes": [
+    "huya",
+    "soop"
+   ],
+   "routes_note": "两路共振=升置信；单路有效=低置信",
+   "match_id": "2026-08-18_gga_bro"
+  },
+  {
+   "id": "2026-08-17_th_navi",
+   "match": "TH vs Navi（LEC）",
+   "league": "LEC",
+   "count": 248,
+   "time_window": "G1/G2 全程（关键词集中 00:10-01:04 北京）",
+   "keywords": [
+    "带任务",
+    "剧本",
+    "故意送",
+    "演",
+    "假赛"
+   ],
+   "correlated_markets": [
+    "G2 NAVI 65.5c->99.95c"
+   ],
+   "notes": "用户口述\"TH 可能带着任务\"（G1 有优势不兑现、G2 开局 0-3 送）；08-17 弹幕 8139 条中假赛关键词命中 248 条（3%，含跨场玩梗需复核）；NAVI 2:0 横扫；案例 3 疑似观察，实力差解释未排除",
+   "severity": "中",
+   "verification": "partial",
+   "verification_note": "TH 被疑带任务→TH 0:2 被横扫（方向一致）；实力差解释未排除",
+   "routes": "待核实",
+   "match_id": "2026-08-17_th_navi"
+  },
+  {
+   "id": "2026-08-19_wbg_lng",
+   "match": "WBG vs LNG",
+   "league": "LPL",
+   "count": 104,
+   "time_window": "15:12-16:40（整场）",
+   "keywords": [
+    "不敢赢",
+    "杀减号",
+    "庄家指令",
+    "任务队",
+    "故意送",
+    "剧本",
+    "吃菜"
+   ],
+   "correlated_markets": [
+    "让分盘（减号）",
+    "小28.5",
+    "小25.5",
+    "+8.5"
+   ],
+   "notes": "主线'WBG 按让分盘节奏打/不敢赢'，15:37-15:55 密集；'庄家下令 31 一到必须结束'；结果 WBG 2:1（官方确认），灰信号'不敢赢'未兑现为翻盘（打满 G3 但 WBG 仍胜）；观众质疑非结论",
+   "severity": "高",
+   "verification": "refuted",
+   "verification_note": "WBG '不敢赢'→WBG 2:1 仍胜（未兑现为翻盘）",
+   "routes": "待核实",
+   "match_id": "2026-08-19_wbg_lng"
+  },
+  {
+   "id": "2026-08-19_tes_al",
+   "match": "TES vs AL",
+   "league": "LPL",
+   "count": 49,
+   "time_window": "决胜局前（约 19:5x-20:00）",
+   "keywords": [
+    "放水",
+    "演",
+    "安排剧本",
+    "拖时间",
+    "必赢"
+   ],
+   "correlated_markets": [
+    "大26.5"
+   ],
+   "notes": "'TES 明显放水，真好好打绝对 2:0，第三把必赢'；局内异常（AL 巨魔不控龙）；结果 TES 2:1（官方确认），灰信号未兑现为翻盘；观众质疑非结论",
+   "severity": "中",
+   "verification": "refuted",
+   "verification_note": "TES '放水'→TES 2:1 胜（未兑现）",
+   "routes": "待核实",
+   "match_id": "2026-08-19_tes_al"
+  },
+  {
+   "id": "2026-08-19_gen_kt",
+   "match": "GEN vs KT",
+   "league": "LCK",
+   "count": 10,
+   "time_window": "16:04-16:16（赛前-局中）",
+   "keywords": [
+    "故意输",
+    "演",
+    "剧本",
+    "挤下去"
+   ],
+   "correlated_markets": [],
+   "notes": "排名博弈猜测：'GEN 演一下输 KT 把 T1 踢到第五'；背景 GEN 赢=晋级+推 T1、KT 输=第五；结果 GEN 2:1（官方确认，让一追二），'演'猜测未兑现；观众质疑非结论",
+   "severity": "中",
+   "verification": "refuted",
+   "verification_note": "GEN '演'排名博弈→GEN 2:1 胜（未兑现）",
+   "routes": "待核实",
+   "match_id": "2026-08-19_gen_kt"
+  },
+  {
+   "id": "2026-08-19_we_edg",
+   "match": "WE vs EDG",
+   "league": "LPL",
+   "count": 554,
+   "time_window": "整场（G1 299 条 3.55% + G2 255 条 2.50%；全场 3.0%）",
+   "keywords": [
+    "打钱",
+    "钱到账",
+    "收米",
+    "明演",
+    "开盘",
+    "吃菠菜",
+    "查赌",
+    "内定",
+    "剧本",
+    "没人查",
+    "下班",
+    "收菜",
+    "演"
+   ],
+   "correlated_markets": [
+    "整场胜负（EDG 2:0）",
+    "2-0 让分叙事"
+   ],
+   "notes": "连续两局质疑同队（WE 打野/野辅），G1 462 条（5.5%）+ G2 354 条（3.5%）；G2 结束时刻 23:01 峰值 67 条/分（'11点够钟下班剧本''没人查的比赛'）；结果 EDG 2:0 横扫，'2-0 内定'派命中；用户 G2 买入 EDG 整场兑现；观众质疑非结论，待官方/录像核查；口径=13 词关键词（2026-08-20 精确复核，全场 554/18630=3.0%）",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "WE '演'→EDG 2:0（被质疑侧输，方向兑现）；用户 G2 买 EDG 兑现",
+   "routes": [
+    "official_660000",
+    "mile_149361",
+    "ji_de_528222"
+   ],
+   "routes_note": "两路共振=升置信；单路有效=低置信",
+   "match_id": "2026-08-19_we_edg"
+  },
+  {
+   "id": "2026-08-20_iron-wing_team-spirit_g1",
+   "match": "Iron Wing vs Team Spirit（TI2026 G1）",
+   "league": "Dota2 · The International 2026",
+   "count": 4,
+   "time_window": "11:53:45-11:54:35（G1 收尾）",
+   "keywords": [
+    "假赛",
+    "严查33",
+    "表演性人格"
+   ],
+   "correlated_markets": [],
+   "notes": "4 条均来自 Maybeee111 单一直播间、4 名用户，指向 33 的买活/大招/守家决策；官方数据记录 33 为 Doom（8/9/15、买活 1 次）。未形成双源共振、无盘口价格对照，预警为低；观众质疑，非结论。",
+   "severity": "低",
+   "verification": "pending",
+   "verification_note": "单源低置信（4 条），无盘口对照；待更多样本",
+   "routes": [
+    "maybeee111"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-20_iron-wing_team-spirit_g1"
+  },
+  {
+   "id": "2026-08-20_bro_krx_g3",
+   "match": "BRO vs KRX（G3）",
+   "league": "LCK CL",
+   "count": 12,
+   "time_window": "15:05-15:39（G3 中后段）",
+   "keywords": [
+    "故意送",
+    "던짐(送)",
+    "일부러 강타 안씀(故意不惩戒)",
+    "3용 일부러 줌(故意让龙)",
+    "져주기(放水)",
+    "프로 맞냐(是不是职业选手)",
+    "무쓸모(没用)"
+   ],
+   "correlated_markets": [],
+   "notes": "用户朋友口述'G3 有人打假赛'；弹幕印证：G3 Naafiri(纳菲丽)打野被集中指控——'故意不惩戒''故意让第三条龙''20+ 分钟不开大（22 分钟才第 1 个大）''22 分钟击杀参与 1''져주기하면 프로 안짤림?'（故意放水职业会被开除吗）；另有'한진 던짐''리치던졌네'（有反方：Rich 最后远古龙超神操作）；队伍/选手归属待官方名单核对；观众质疑，非结论",
+   "severity": "中-高",
+   "verification": "partial",
+   "verification_note": "BRO Naafiri 被指故意送→BRO 输 G3（方向一致）；用户已确认系列 KRX 2:1，官方 VOD 待回补；有反方（Rich 超神）",
+   "routes": "待核实",
+   "match_id": "2026-08-20_bro_krx"
+  },
+  {
+   "id": "2026-08-20_dk_hle",
+   "match": "DK vs HLE",
+   "league": "LCK",
+   "count": 54,
+   "time_window": "G1 16:31-16:44 翻盘段 + G2 17:18-17:48",
+   "keywords": [
+    "假赛",
+    "剧本",
+    "演员",
+    "演",
+    "诱盘",
+    "杀猪",
+    "菠菜",
+    "lck最假赛区"
+   ],
+   "correlated_markets": [
+    "G1 DK 98.5c->0.5c 归零"
+   ],
+   "notes": "四直播间强关键词灰信号 54 条，指向 DK 演/送（\"DK经典第一局优势被翻\"\"dk配合资本演戏/诱盘杀猪\"\"lck最假赛区\"）；G1 翻盘段（16:31-16:44 18 条）与 G2 段（17:18-17:48 23 条）双峰；反方\"韩国假赛坐牢/这么容易翻不是假赛\"；用户 G1 买 DK 100U 归零；灰信号待核查，不作结论；已合并原两条低预警重复记录",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "DK '演/送'→DK 0:2 输（方向兑现）；用户 G1 买 DK 100U 归零反样本",
+   "routes": [
+    "4路（多直播间）"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-20_dk_hle"
+  },
+  {
+   "id": "2026-08-20_tt_jdg_g3",
+   "match": "TT vs JDG G3",
+   "league": "LPL",
+   "count": 5,
+   "time_window": "19:28-19:29（G3 收尾）",
+   "keywords": [
+    "假赛狗",
+    "第三把直接送",
+    "永远直接送"
+   ],
+   "correlated_markets": [],
+   "notes": "'TT 真就是假赛狗，次次第一把赢第二把惜败第三把直接送''TT 第三把永远都是直接送'——观众对 TT 跨场模式的质疑（非单场证据）；JDG 2:1 兑现；观众质疑非结论",
+   "severity": "低-中",
+   "verification": "confirmed",
+   "verification_note": "TT '第三把直接送'→TT 输 G3、JDG 2:1（方向兑现）",
+   "routes": "待核实",
+   "match_id": "2026-08-20_tt_jdg"
+  },
+  {
+   "id": "2026-08-21_bro_bfx_g1",
+   "match": "BRO vs BFX（G1）",
+   "league": "LCK",
+   "count": 47,
+   "time_window": "16:46-16:48（开局 2 分钟）",
+   "keywords": [
+    "假赛",
+    "买了",
+    "收钱",
+    "下重注",
+    "举报",
+    "懦拉夫",
+    "假赛夫",
+    "纯假赛"
+   ],
+   "correlated_markets": [],
+   "notes": "监控以来灰信号密度最高（47/116=41%），全指向 BRO 侧奥拉夫'故意送/不敢赢/保 KDA'；反方'保KDA生存逻辑'；BRO 为留痕对象（8-18 瑞兹/8-20 Naafiri）→ 再犯升级观察；选手 ID 待官方；观众质疑非结论；验证：BRO 输 G1（质疑方向兑现），系列 BFX 2:1；BFX 侧也有双向质疑；奥拉夫选手 ID 待官方",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "BRO 奥拉夫'送'→BRO 输 G1（方向兑现，密度 41% 监控最高）",
+   "routes": "待核实",
+   "match_id": "2026-08-21_bro_bfx"
+  },
+  {
+   "id": "2026-08-21_we_al_g1",
+   "match": "WE vs AL（G1）",
+   "league": "LPL",
+   "count": 45,
+   "time_window": "16:56-17:39（G1）",
+   "keywords": [
+    "超雄开演",
+    "带着送",
+    "龙打一半去送",
+    "WE打野不送",
+    "cube演员",
+    "老假了"
+   ],
+   "correlated_markets": [
+    "AL -1.5（弹幕讨论）"
+   ],
+   "notes": "核心对象 = WE 打野 Monki（超雄）：昨日 WE-EDG 816 条灰信号主角，今日再犯（'超雄开演/今天怎么送'）→ 再犯升级案例；cube 延续昨日质疑；AL 侧也有'老演员'双向质疑；观众质疑非结论",
+   "severity": "中-高",
+   "verification": "refuted",
+   "verification_note": "WE/Monki '送'→WE 2:1 赢系列（未兑现）；再犯升级案例",
+   "routes": "待核实",
+   "match_id": "2026-08-21_we_al"
+  },
+  {
+   "id": "2026-08-21_t1_kt_g2",
+   "match": "T1 vs KT（G2）",
+   "league": "LCK",
+   "count": 40,
+   "time_window": "20:38-20:54（G2 中后段）",
+   "keywords": [
+    "大o演",
+    "大o收钱",
+    "假赛",
+    "明着送",
+    "严查O",
+    "这bdd不严查",
+    "kt明着送",
+    "纯想打满BO3",
+    "诱赌"
+   ],
+   "correlated_markets": [],
+   "notes": "核心对象 = T1 打野 Oner（新留痕）：20:48-20:52 定向爆发（'这大o真的在演/打野买了不少吧演都不演了/严查O/大o绝对收钱了'），另 BDD 1 条、KT 侧'很爱打假赛/明着送'2 条、'纯想打满BO3'剧本 meme 2 条；两路合计约 40 条宽口径（硕硕 28 + 957 12）。验证：G2 结果 T1 胜——'Oner 演'质疑方向未兑现；'KT 明送'弱兑现（KT 输 G2）；预警低-中。观众质疑非结论",
+   "severity": "低-中",
+   "verification": "refuted",
+   "verification_note": "Oner '演'→T1 胜 G2（主质疑未兑现）；'KT 明送'弱兑现",
+   "routes": [
+    "shuoshuo_323444",
+    "we957_890001"
+   ],
+   "routes_note": "两路共振=升置信；单路有效=低置信",
+   "match_id": "2026-08-21_t1_kt"
+  },
+  {
+   "id": "2026-08-21_t1_kt_g3",
+   "match": "T1 vs KT（G3）",
+   "league": "LCK",
+   "count": 41,
+   "time_window": "21:20-21:51（G3 全时段，21:24 峰值 298 条/分）",
+   "keywords": [
+    "鳄鱼收钱",
+    "明着送",
+    "这烬不是买了",
+    "右边中单演",
+    "卡盘",
+    "7.5 8.5",
+    "保枪剧本",
+    "多兰是不是买的输",
+    "兰子会不会在演"
+   ],
+   "correlated_markets": [],
+   "notes": "核心对象 = KT 侧（弱兑现）：Perfect 鳄鱼'收钱了，最强的两波他去送了'（957 21:48）、'这鳄鱼买了多少'、鸡窝烬'自己走进减速被女警白打'、'右边中单演 前期优势不跟队友做事'、'Kt明着送'；多兰侧 3 条玩梗（'兰子会不会在演/多兰是不是买的输，库库送3'，赛后 T1 已赢）；终局'继续卡盘666/7.5 8.5不卡盘终结不了连败'卡盘讨论 2 条。验证：T1 2:1 胜——'KT 送'质疑与 KT 输 G3 方向一致（弱兑现），多兰'买输'未兑现。观众质疑非结论",
+   "severity": "中",
+   "verification": "partial",
+   "verification_note": "KT '明送/鳄鱼收钱'→KT 输 G3（方向弱兑现）；多兰'买输'玩梗未兑现",
+   "routes": [
+    "shuoshuo_323444",
+    "we957_890001"
+   ],
+   "routes_note": "两路共振=升置信；单路有效=低置信",
+   "match_id": "2026-08-21_t1_kt"
+  },
+  {
+   "id": "2026-08-21_sk_th",
+   "match": "SK vs TH（LEC G1）",
+   "league": "LEC",
+   "count": 29,
+   "time_window": "23:21-23:22（发条）/ 23:40-23:45（终局爆发）",
+   "keywords": [
+    "狗熊明演",
+    "左边收钱去了",
+    "到点了就来送",
+    "小时间奇迹收米",
+    "这才是真正的假赛",
+    "大优势sk还是水位不动",
+    "演员发条",
+    "放龙魂",
+    "和今天那个加里奥一样"
+   ],
+   "correlated_markets": [
+    "大优势 SK 水位不动（观众口径）"
+   ],
+   "notes": "灰信号指向 SK（输家/领先被翻方）：'狗熊明演/左边收钱/到点就送/小时间奇迹收米/这才是真正的假赛/大优势sk还是水位不动'——'sk赚了/吃一局'为盘口灰话（做局输球获利），非 SK 胜信号；发条中单两波被疑（归属待确认）。验证：TH 胜 G1（弹幕+用户确认）——被质疑方 SK 输，方向兑现。误判修正：初版曾把灰话当 SK 胜，已修正。观众质疑非结论",
+   "severity": "中-高",
+   "verification": "confirmed",
+   "verification_note": "SK 被疑做局输球→SK 输 G1（方向兑现）；灰话非胜负信号",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-21_sk_th"
+  },
+  {
+   "id": "2026-08-21_sk_th_g2",
+   "match": "SK vs TH（LEC G2）",
+   "league": "LEC",
+   "count": 54,
+   "time_window": "00:09-00:33（G2 全时段，00:25-00:33 密集）",
+   "keywords": [
+    "纯假赛",
+    "欧洲人除了会打假赛",
+    "皇子明着演",
+    "皇子在打假赛",
+    "wunder是演员",
+    "都买了对面赢",
+    "右边都假成啥样了",
+    "演技逆天",
+    "剧本抢远古龙",
+    "真是假的离谱",
+    "开始演了"
+   ],
+   "correlated_markets": [
+    "都买了对面赢（观众口径）"
+   ],
+   "notes": "灰信号转向 SK 侧：皇子（打野）/Wunder（上单）/右边整体被疑'演/假赛/收'；SK 团战阵（永恩皇子兰博霞洛）'小龙团永远不打'放龙，TH 剑魔+蔚+炼金龙魂 23 分钟速通；观众'欧洲人只会打假赛'情绪化升级。验证：TH 胜 G2（弹幕口径）——被质疑方 SK 输球，方向兑现；与 G1（TH 被疑输）两局均指向输家。观众质疑非结论",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "SK 被疑演→SK 输 G2（方向兑现）；Wunder 新增留痕",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-21_sk_th"
+  },
+  {
+   "id": "2026-08-22_we_lgd",
+   "match": "WE vs LGD（LPL，G2/G3）",
+   "league": "LPL",
+   "count": 20,
+   "time_window": "16:05-17:33（G2/G3）",
+   "keywords": [
+    "资本告诉你1:1",
+    "这演技拙劣",
+    "收到指令33分钟之前推完",
+    "we中野直直送",
+    "超雄",
+    "穿盘",
+    "加号",
+    "捡钱",
+    "又假赛了"
+   ],
+   "correlated_markets": [
+    "lgd6倍拿下了（观众口径，兑现）"
+   ],
+   "notes": "Monki（超雄）灰信号三连本场兑现：WE 侧做局质疑 3-5 条 + Monki 连续被疑（极度自负/把把送/世一野反讽），WE 输系列（1:2）——方向弱兑现；大量赌狗对骂（'we又假赛了'↔'赌狗看啥都是假赛'）；盘口'lgd6倍拿下了'兑现。G1 弹幕缺失（采集 16:05 恢复），16:28-16:42 中断 14 分钟。观众质疑非结论",
+   "severity": "中",
+   "verification": "confirmed",
+   "verification_note": "WE 被疑演→WE 输系列（方向弱兑现）；Monki 跨场 2/3 兑现",
+   "routes": "待核实",
+   "match_id": "2026-08-22_we_lgd"
+  },
+  {
+   "id": "2026-08-22_ig_nip",
+   "match": "IG vs NIP（LPL）",
+   "league": "LPL",
+   "count": 15,
+   "time_window": "18:45-19:33（G1 后-G2）",
+   "keywords": [
+    "IG故意控分",
+    "IG在控分",
+    "控分打tt吗",
+    "ig故意防水",
+    "IG教练跟妹扣演得好",
+    "奥斯卡之夜"
+   ],
+   "correlated_markets": [],
+   "notes": "IG 控分/故意输叙事（排名博弈灰信号）：'IG故意控分，拿涅槃第二，骑士之路对手更菜''控分打tt吗那可太好了一轮游吗'；G1 后出现并持续到 G2；无盘口/庄家联动。验证：IG 两局全输（NIP 2:0）——方向与'IG 不认真打'一致但控分 vs 实力待官方。观众质疑非结论",
+   "severity": "低-中",
+   "verification": "partial",
+   "verification_note": "官方确认 NIP 2:0（IG 输，方向一致）；'控分动机' vs 实力待官方定性",
+   "routes": "待核实",
+   "match_id": "2026-08-22_ig_nip"
+  },
+  {
+   "id": "2026-08-22_dns_krx_g1",
+   "match": "DNS vs KRX（LCK G1）",
+   "league": "LCK",
+   "count": 25,
+   "time_window": "19:45-19:57（G1 终局）",
+   "keywords": [
+    "好假的比赛啊",
+    "打假赛没有底线",
+    "假赛之王lck",
+    "能跟菠菜合作已经明牌了",
+    "韩国打假赛犯法",
+    "K杯纯纯剧本",
+    "场场开低水"
+   ],
+   "correlated_markets": [
+    "DNS 场场低水（观众口径）"
+   ],
+   "notes": "DNS K杯冠军（08-18 3:0 NS）后被集中质疑：'那个杯赛纯纯剧本让他赢得，菜是原罪''DNS这几场把这届K杯含金量打低了'；灰信号高浓度（假赛之王lck/菠菜明牌/韩国打假赛犯法）；盘口'场场开低水，场场被虐'；有反方（'这假什么呀后期本来就DNS好打''赌狗把把假的'）。G1 终局 KRX 翻盘方候选，系列结果待确认。观众质疑非结论",
+   "severity": "中-高",
+   "verification": "refuted",
+   "verification_note": "官方确认 DNS 2:0 KRX——被疑做局/低水方 DNS 赢球，质疑方向未兑现",
+   "routes": "待核实",
+   "match_id": "2026-08-22_dns_krx"
+  },
+  {
+   "id": "2026-08-22_sk_mkoi",
+   "match": "SK vs MKOI（LEC）",
+   "league": "LEC",
+   "count": 45,
+   "time_window": "G1 01:38 + G2 02:05-02:21（硕硕 41 条）",
+   "keywords": [
+    "纯假赛",
+    "有任务",
+    "演",
+    "送",
+    "故意不开大",
+    "表演赛",
+    "买了"
+   ],
+   "correlated_markets": [
+    "G2 SK 3.5c->99.5c 翻盘",
+    "整场 SK 2:0"
+   ],
+   "notes": "G1 弹幕\"上把纯演戏/MKOI 有任务\"；G2 MKOI 领先 4 龙后连续送，SK 3.5c 深水->99.5c（02:25 一分钟 +63c）；硕硕直播间 41 条命中；SK 2:0 兑现方向（用户 G1 弹幕情报买 SK 赚 230U 正样本）；用户 G2 追高 60-70c 放弃=正确；观众质疑非结论，待核查",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "SK 2:0（官方确认）；米人队(MKOI)'领先被翻+被疑演'两局兑现（Pattern A 双样本）",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-22_sk_mkoi"
+  },
+  {
+   "id": "2026-08-22_fnc_shft",
+   "match": "FNC vs SHFT（LEC，G1+G2）",
+   "league": "LEC",
+   "count": 30,
+   "time_window": "23:29-00:38（G1+G2）",
+   "keywords": [
+    "做任务",
+    "假赛无疑",
+    "都设计好的",
+    "这个赛区全在打盘口",
+    "卡8.5",
+    "就吃34",
+    "时间一到马上结束",
+    "两把一样的剧本"
+   ],
+   "correlated_markets": [
+    "8.5 让分卡线（G1）",
+    "FNC -7.5（G2 兑现）",
+    "AD 击杀小 8.5（G2 输盘）",
+    "小33/大32 时长总局数"
+   ],
+   "notes": "卡盘/卡时间型灰信号（观众口径）：两局均约 33 分钟准时收、让分 8.5 卡线讨论密集、'做任务/假赛无疑/都设计好的'高浓度；FNC 为受益方（2:0 官方确认）。验证：33 分钟准时收+卡线叙事与盘口兑现一致（卡盘样本，非'被质疑方输球'型）。观众质疑非结论",
+   "severity": "高",
+   "verification": "confirmed",
+   "verification_note": "卡盘叙事与盘口兑现一致（33 分钟准时收/8.5 卡线）；FNC 2:0 官方确认",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-22_fnc_shft"
+  },
+  {
+   "id": "2026-08-23_th_gx",
+   "match": "TH vs GX（LEC，G1+G2）",
+   "league": "LEC",
+   "count": 37,
+   "time_window": "G1 23:40-23:55 + G2 00:43-00:54（硕硕比赛窗 973 条）",
+   "keywords": [
+    "假翻",
+    "太假了",
+    "假赛",
+    "做任务",
+    "演员",
+    "演",
+    "送",
+    "收到信号了",
+    "5人齐心假赛"
+   ],
+   "correlated_markets": [
+    "GX -1.5 让分兑现",
+    "Under 2.5 总局数兑现",
+    "GX 2:0"
+   ],
+   "notes": "G1 集中 TH 领先开送段（'收到信号了 直接开送/女警连续送了三波'）；G2 集中 TH'假翻'表演段（'这把假翻 记住了/翻啦→假翻/翻中翻/5人齐心假赛'——夸张反讽句式）；无实质定向质疑，区别于 SK-TH 两局 83 条指向输家（本场质疑对象为表演方 TH 但赢家 GX 明确）；MKOI 昨日假赛质疑 5 条跨场留痕（连续两日）；观众质疑非结论",
+   "severity": "低",
+   "verification": "pending",
+   "verification_note": "GX 2:0（Polymarket 价格收敛 + 弹幕双 GG）；灰信号无定向，不构成'被质疑方输球'型样本",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-23_th_gx"
+  },
+  {
+   "id": "2026-08-24_kc_shft_g1",
+   "match": "KC vs SHFT（LEC，G1）",
+   "league": "LEC",
+   "count": 100,
+   "time_window": "系列三局（G1 867 + G2 ~1100 + G3 467 条窗内）",
+   "keywords": [
+    "明牌假赛",
+    "蛇女买了",
+    "蛇女收了",
+    "收到信号",
+    "明演",
+    "吃低保",
+    "KOI剧本",
+    "都是剧本",
+    "送一小局",
+    "为什么不吃"
+   ],
+   "correlated_markets": [
+    "人头/让分盘 KC 让 10.5-13.5（01:47 盘口平水翻转）",
+    "观众高赔押 SHFT '1-2梭哈 15倍' G1 命中"
+   ],
+   "notes": "高浓度定向 KC（榜首领先方）：'这个蛇女明牌假赛/蛇女名牌/蛇女买了收了/这个蛇女就跟收到信号一样就在那里等死/队友打大龙他去送/女警不放夹子封路就是明演/KC缺钱？非得吃？/都是第一了打倒数第一为什么不吃/lec也敢吃低保/打假赛罢了送一小局'；与 BP 段'KC老师别打假赛'预警 + 08-18 卡时间灰信号历史（69 条）闭环；G1 SHFT 胜（被质疑方输球）→ 方向兑现，再犯升级；跨场参照 MKOI（'KOI剧本/昨天晚上mkoi比这个变态么'）；观众质疑非结论，官方核查待回填；G2 追加：仍高浓度定向 KC 中单（瑞兹'控盘假赛杀kc/中单不想赢/这个中路得买多少'）但 KC 赢 G2——灰信号方向 G1 兑现/G2 未兑现＝混合样本，G3 决定性；G3 延续（'故意演戏/这尼玛中单买了吧'）；系列最终 KC 2:1（Polymarket 官方 settled）——灰信号方向整体未兑现（G1 兑现/G2+G3 未兑现），'被质疑方必输'不成立（重要反例）",
+   "severity": "高",
+   "verification": "refuted",
+   "verification_note": "官方 Polymarket settled：KC 2:1（G1 SHFT/G2 KC/G3 KC）；高浓度灰信号（~100 条）但方向整体未兑现——灰信号浓度≠结果方向",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "routes_note": "单路有效（另一路无内容不计）",
+   "match_id": "2026-08-24_kc_shft"
+  },
+  {
+   "id": "2026-08-23_shft_kc",
+   "match": "SHFT vs KC（LEC）",
+   "league": "LEC",
+   "count": 15,
+   "time_window": "G1 01:16-01:39 + G2 02:18-02:53（硕硕直播间）",
+   "keywords": [
+    "不想赢",
+    "演",
+    "假赛",
+    "控盘",
+    "送温暖",
+    "中单",
+    "大龙逛街"
+   ],
+   "correlated_markets": [
+    "G1 SHFT 5.5c->100c（兑现）",
+    "G2 SHFT 36.5c->0.5c（未延续）",
+    "整场 KC 2:1"
+   ],
+   "notes": "灰信号指向 KC 中单\"不想赢/演\"（01:16-02:53 15+ 条，含\"KC换中单\"讨论）；G1 兑现（SHFT 赢），G2 未延续（KC 其他队友正常响应，KC 赢 G2/G3 系列 2:1）——个人灰信号与团队结果分离样本；用户 G1 全仓 +260U、G2 全仓 -200+U；灰信号不跨局外推；观众质疑非结论，KC 中单 ID 待核查",
+   "severity": "高",
+   "routes": "待核实",
+   "match_id": "2026-08-23_shft_kc"
+  },
+  {
+   "id": "2026-08-24_dns_krx_g3",
+   "match": "DNS.C vs KRX.C（LCK CL 季后赛 G3）",
+   "league": "LCK CL",
+   "count": 1,
+   "time_window": "15:38（G3 局中）",
+   "keywords": [
+    "수상하다(可疑)"
+   ],
+   "correlated_markets": [
+    "Polymarket G3 KRX.C 99.95c（兑现：KRX.C 胜 G3）"
+   ],
+   "notes": "唯一实质灰信号：15:38 \"수상하다(可疑)\"，KRX.C 领先时发出，未定向、未升级、未构成假赛指控；\"던졌(开送)\"29 条甄别为比赛失误吐槽（Ezreal 白给/茂凯空大/杰斯边带）非灰信号；DNS 系历史灰信号重点标记（30 条），本场无新增同类质疑。观众质疑非结论。",
+   "severity": "低"
+  },
+  {
+   "id": "2026-08-24_lec_fnc_navi_g1",
+   "match": "FNC vs NAVI（LEC 常规赛 G1）",
+   "league": "LEC",
+   "count": 8,
+   "time_window": "23:32-23:34（G1 收官窗口）",
+   "keywords": [
+    "明着假赛",
+    "演戏",
+    "故意放资源",
+    "避战",
+    "菠菜",
+    "装模作样"
+   ],
+   "correlated_markets": [
+    "盘口提及：'小26.5怎么输'（总击杀 under 26.5，终局约 11 杀，兑现方向）"
+   ],
+   "notes": "G1 收官阶段集中质疑：'明着假赛'（小蒋×2/昕）、'演戏还装模作样辛苦了navi'、'LEC只有菠菜的人看'、'故意不团，什么资源都故意放'、'右边避战/都怕死'。指向集中 NAVI 侧（右边）收官摆烂/放资源；单路（硕硕 323444）为主，未见 Twitch 侧假赛共振。观众质疑非结论；若兑现方向成立则指向 NAVI 侧价格失真（反手参考需盘口验证）。",
+   "severity": "中",
+   "entity_links": [
+    "NAVI"
+   ]
+  },
+  {
+   "id": "2026-08-25_lec_fnc_navi_g2",
+   "match": "FNC vs NAVI（LEC 常规赛 G2）",
+   "league": "LEC",
+   "count": 10,
+   "time_window": "00:30-00:47（G2 收官窗口）",
+   "keywords": [
+    "明着吃菠菜",
+    "买了自己输",
+    "演员",
+    "假的",
+    "不想赢",
+    "wintrading",
+    "settled match",
+    "bribed"
+   ],
+   "correlated_markets": [
+    "时长盘 over/under 35 mins 提及；总击杀 24-26=?（G1 小26.5 已兑现）"
+   ],
+   "notes": "G2 收官集中质疑 FNC 侧：'上野应该买了自己输'（Remember）、'一个一个送真的不想赢/假的'（硕硕）、'潘森大龙没了才惩戒猴子是不是演员'（指向 Razork）、'lec都是明着吃菠菜'、'obvious settled match'（LEC 官方流）。两平台共振+时间集中+指向一致（FNC 上野），预警中-高；与 G1 灰信号（8 条）形成系列连续性。观众质疑非结论；若兑现指向 FNC 侧价格失真。",
+   "severity": "中-高",
+   "entity_links": [
+    "FNC",
+    "FNC-Razork",
+    "FNC-Soboro"
+   ]
+  },
+  {
+   "id": "2026-08-25_lec_gx_g2_g2",
+   "match": "GX vs G2（LEC 常规赛 G2）",
+   "league": "LEC",
+   "count": 6,
+   "time_window": "02:38-02:41（G2 收官）",
+   "keywords": [
+    "selling games",
+    "fixers",
+    "tactical throw",
+    "bet GX",
+    "receive money",
+    "sold game"
+   ],
+   "notes": "G2 收官窗口集中质疑指向 G2 侧：'G2 bet GX too much'、'g2 just selling games'、'Let's go g2 fixers'、'How much G2 receive money?'、'did g2 sold game 2 for food'、'G2 TACTICAL THROW'。Caedrel 房为主+时间集中；另有'G2 有意打满三局'叙事。观众质疑非结论；若兑现指向 G2 侧价格失真。",
+   "severity": "中",
+   "entity_links": [
+    "G2"
+   ]
+  },
+  {
+   "id": "2026-08-25_lckcl_krxc_bfxy_g2",
+   "match": "KRX.C vs BFX.Y（LCK CL 入围赛 G2）",
+   "league": "LCK CL",
+   "count": 22,
+   "time_window": "17:38-17:48（G2 窗口）",
+   "keywords": [
+    "假赛",
+    "演戏",
+    "故意送双大",
+    "0909",
+    "CK比LDL更假",
+    "不查就是没有假赛"
+   ],
+   "notes": "G2 窗口三房（硕硕/957/Remember）集中质疑：'大表疯狂演戏'、'故意送双大 假赛'、'0909世界赛假赛第一人'、'这是最纯正的假赛联赛'、'韩国假赛坐牢但从不查'、'CK比LDL更假'。指向对象以'0909'/演戏方为主，具体队伍待复核；G1 也有'上把ez就是打假赛'（957）。观众质疑非结论；预警高，兑现统计后续回填。",
+   "severity": "高",
+   "entity_links": [
+    "KRX.C",
+    "BFX.Y",
+    "0909"
+   ]
+  },
+  {
+   "id": "2026-08-26_lck_kt_bro_g2",
+   "match": "KT vs BRO（LCK 入围赛 G2）",
+   "league": "LCK",
+   "count": 26,
+   "time_window": "17:27-17:42（G2 中段）",
+   "keywords": [
+    "打野菠菜",
+    "打野买了",
+    "故意送",
+    "假赛明牌",
+    "演的",
+    "本赛季最演的队伍"
+   ],
+   "notes": "G2 三房集中质疑指向 KT 打野（Cuzz：G1 梦魇无作为/G2 '玩狗还落后'）：'打野菠菜/打野买了/故意送的/畜牲tk故意送/kt打假赛还有底线吗/假赛明牌打'。KT 输 G2 = 灰信号指向输家侧，与'被质疑方输球'模式一致（SK-TH 同款）。反方声音：'输了就是演你闹麻了'（17:55）。观众质疑非结论；G3 若 KT 打野再现失误+质疑 → gray_entities 升级。",
+   "severity": "中-高",
+   "entity_links": [
+    "KT",
+    "KT-Cuzz"
+   ]
+  },
+  {
+   "id": "2026-08-26_lck_kt_bro_g3",
+   "match": "KT vs BRO（LCK 入围赛 G3）",
+   "league": "LCK",
+   "count": 9,
+   "time_window": "18:25-18:40（G3 中后段）",
+   "keywords": [
+    "假赛",
+    "演戏",
+    "明着演",
+    "资源全放",
+    "一条龙也不拿"
+   ],
+   "notes": "G3 灰信号指向 KT 放资源不打架（输家侧）：'一条龙也不拿就是假赛/不打架不去拿龙明着演/这局纯演戏/资源全放纯演戏'（硕硕 6 + 957 3）。KT 输 G3 → 与 G2（26 条 KT 打野）连续两局'被质疑方输球'模式（SK-TH 同款）。观众质疑非结论；G4 若再现 → gray_entities 升级。",
+   "severity": "中",
+   "entity_links": [
+    "KT"
+   ]
+  },
+  {
+   "id": "2026-08-26_ts7_dendel_g1",
+   "match": "Spirit vs DENDELE CS（G1 遗迹）",
+   "match_id": "cs2-ts7-dendel-2026-08-26",
+   "league": "CS2 BLAST",
+   "count": 10,
+   "time_window": "11:55-12:59 UTC（开局4 + 局中6，跨节点去重）",
+   "keywords": [
+    "吃",
+    "买了",
+    "剧本",
+    "故意输",
+    "送分",
+    "操控",
+    "放分押注大小分"
+   ],
+   "correlated_markets": [
+    "Map1 总回合（13-8=21 回合，Under 21.5 兑现）",
+    "Map1 让分 -3.5（Spirit 过）"
+   ],
+   "notes": "观众质疑集中 Spirit 侧（夺冠后吃/故意输败者组/送分/操控比赛）；G1 Spirit 13-8 拿下，'被质疑方输球'模式未出现；0 实锤",
+   "severity": "中",
+   "verification": "pending",
+   "verification_note": "兑现率统计待回填；盘口即时重合证据无",
+   "routes": [
+    "csboy_official_123321",
+    "csboy_mo_321123"
+   ],
+   "routes_note": "两路共振=升置信；本场两虎牙房共振"
+  },
+  {
+   "id": "2026-08-26_ts7_dendel_g2",
+   "match": "Spirit vs DENDELE CS（G2 叉车）",
+   "match_id": "cs2-ts7-dendel-2026-08-26",
+   "league": "CS2 BLAST",
+   "count": 8,
+   "time_window": "13:00-14:05 UTC（局中6 + 末段2，跨节点去重）",
+   "keywords": [
+    "送分",
+    "故意的",
+    "教练买了",
+    "明着送分"
+   ],
+   "correlated_markets": [
+    "Map2 总回合（19-21 回合）",
+    "系列 Under 2.5（2:0 兑现）"
+   ],
+   "notes": "观众'送分'叙事升级（含'看来教练是买了'直接指控，无实锤）；G2 Spirit 胜，'被质疑方输球'模式未出现；末段情绪转向 GG/翻盘调侃",
+   "severity": "中",
+   "verification": "pending",
+   "verification_note": "兑现率统计待回填；盘口即时重合证据无",
+   "routes": [
+    "csboy_official_123321",
+    "csboy_mo_321123",
+    "blast_660729"
+   ],
+   "routes_note": "两路及以上共振=多源确认（虎牙双房+官方房）"
+  },
+  {
+   "id": "2026-08-28_cs2_spirit_g2",
+   "date": "2026-08-28",
+   "match": "Spirit vs G2（CS2 BLAST 波尔图）",
+   "team": "G2",
+   "count": 1,
+   "status": "低预警·单源",
+   "summary": "1 条候选（esquema de apostar 博彩剧本，21:19，指向输方 G2）；21:04 farsa 群嘲不计灰；其余规则层命中均为推广/玩梗误报。G2 输球，按纪律只作统计不推因果。"
+  },
+  {
+   "id": "2026-08-28_cs2_aurora_dendele",
+   "date": "2026-08-28",
+   "match": "Aurora vs DENDELE（CS2 BLAST 波尔图）",
+   "team": "DENDELE",
+   "count": 5,
+   "status": "中预警·单源",
+   "summary": "G2 18:59-19:03 集中 4 条有效（322 Luquetá/pix/收钱）+ 1 条玩梗；DENDELE 12-8 被翻后触发；指向 DENDELE 送/管理层 Luquetá（待官方核实）。DENDELE 输球，只作风险标注。"
+  },
+  {
+   "id": "2026-08-28_cs2_pain_navi",
+   "date": "2026-08-28",
+   "match": "paiN vs NAVI（CS2 BLAST 波尔图）",
+   "team": "NAVI",
+   "count": 17,
+   "status": "未兑现",
+   "summary": "剧本论 12+ 条 + 吃质疑 4-5 条，指向 NAVI 会演；实际 NAVI 2-0 直落（G2 13:11 险胜），0 兑现——反向修正 NAVI 相关质疑权重。"
+  },
+  {
+   "id": "2026-08-28_lpl_tt_ig",
+   "date": "2026-08-28",
+   "match": "TT vs IG（LPL 骑士之路 BO5）",
+   "team": "TT",
+   "count": 91,
+   "status": "中预警·两源共振",
+   "summary": "G1 ~24 条（让一追三/故意送/不敢赢）+ G2 34 条（直指 TT 中下野与兰博）+ G3 33 条（官方房集中+硕硕 5 条共振，但以实力论为主）。TT 0-3 输球，只作风险标注。"
+  },
+  {
+   "id": "2026-08-28_lpl_edg_nip",
+   "date": "2026-08-28",
+   "match": "EDG vs NIP（LPL 骑士之路 BO5）",
+   "team": "EDG",
+   "count": 8,
+   "status": "中预警·单源",
+   "summary": "G1 Leave EZ 大龙坑送两波故意送质疑 + G2 皇子演员/女警被秒/卡30剧本（29:59 卡小30）+ G3 ZDZ/Leave 明牌送人头/3龙诱盘。EDG 0-3 输球；ZDZ/Leave 进入跨场实体跟踪。"
+  },
+  {
+   "id": "2026-08-28_lck_bro_bfx",
+   "date": "2026-08-28",
+   "match": "BRO vs BFX（LCK 入围赛 BO5）",
+   "team": null,
+   "count": 0,
+   "status": "无实质灰信号",
+   "summary": "G3 右边没想赢（嘲讽语境）+ G5 加里奥吐槽（BP 吐槽）均非灰信号；BRO 两度领先被翻归因实力/BP 波动。"
+  },
+  {
+   "id": "2026-08-28_lec_th_shft",
+   "date": "2026-08-28",
+   "match": "TH vs SHFT（LEC）",
+   "team": null,
+   "count": 0,
+   "status": "无实质灰信号",
+   "summary": "整场无有效灰信号（Remember 单源）。"
+  }
+ ]
+}

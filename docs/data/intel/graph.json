@@ -1,0 +1,3545 @@
+{
+ "schema_version": "1.0",
+ "description": "弹幕情报库关系图谱（自动生成，勿手改）",
+ "updated_at": "2026-08-24T02:59:53Z",
+ "nodes": [
+  {
+   "id": "lck",
+   "type": "league",
+   "label": "LCK",
+   "sub": "低-中"
+  },
+  {
+   "id": "lck_cl",
+   "type": "league",
+   "label": "LCK Challengers League（二线）",
+   "sub": "低-中"
+  },
+  {
+   "id": "lec",
+   "type": "league",
+   "label": "LEC",
+   "sub": "中-高"
+  },
+  {
+   "id": "lpl",
+   "type": "league",
+   "label": "LPL",
+   "sub": "高"
+  },
+  {
+   "id": "kespa_cup",
+   "type": "league",
+   "label": "KeSPA Cup（K 杯）",
+   "sub": "中"
+  },
+  {
+   "id": "ewc_cs2",
+   "type": "league",
+   "label": "EWC CS2（电竞世界杯）",
+   "sub": "低（决赛 0 实质灰信号）"
+  },
+  {
+   "id": "ti2026_dota2",
+   "type": "league",
+   "label": "The International 2026（Dota2）",
+   "sub": "低（首局仅单源 4 条零星质疑）"
+  },
+  {
+   "id": "dns",
+   "type": "team",
+   "label": "DNS",
+   "sub": "负偏质疑（K杯冠军后正赛拉胯）"
+  },
+  {
+   "id": "ns",
+   "type": "team",
+   "label": "NS（Nongshim）",
+   "sub": "中性转正（08-23 2:1 BFX：G1 崩后连扳两局）"
+  },
+  {
+   "id": "gga",
+   "type": "team",
+   "label": "GGA（GEN 学院队）",
+   "sub": "负（2:1 落败，但 G2 展示反扑力）"
+  },
+  {
+   "id": "bro",
+   "type": "team",
+   "label": "BRO（브리온）",
+   "sub": "负（CL 1:2 KRX → LCK 1:2 BFX）"
+  },
+  {
+   "id": "kc",
+   "type": "team",
+   "label": "KC",
+   "sub": "正偏争议（2:1 让一追二赢 SHFT；灰信号方向未兑现）"
+  },
+  {
+   "id": "gx",
+   "type": "team",
+   "label": "GX",
+   "sub": "正（2:0 TH；资源团纪律）"
+  },
+  {
+   "id": "th",
+   "type": "team",
+   "label": "TH（Team Heretics）",
+   "sub": "负（0:2 GX；弱队三负锚集齐）"
+  },
+  {
+   "id": "wbg",
+   "type": "team",
+   "label": "WBG（微博）",
+   "sub": "负（'不敢赢'叙事中心）"
+  },
+  {
+   "id": "lng",
+   "type": "team",
+   "label": "LNG（李宁）",
+   "sub": "负（'任务队'质疑）"
+  },
+  {
+   "id": "tes",
+   "type": "team",
+   "label": "TES（滔搏）",
+   "sub": "正（2:1 胜）"
+  },
+  {
+   "id": "al",
+   "type": "team",
+   "label": "AL",
+   "sub": "负（追二失败 WE）"
+  },
+  {
+   "id": "gen",
+   "type": "team",
+   "label": "GEN（Gen.G）",
+   "sub": "正（状态好，'演'讨论背景）"
+  },
+  {
+   "id": "kt",
+   "type": "team",
+   "label": "KT",
+   "sub": "负（1:2 GEN → 1:2 T1，两连败+掉入围赛线）"
+  },
+  {
+   "id": "we",
+   "type": "team",
+   "label": "WE（西安）",
+   "sub": "负（1:2 LGD，翻盘体质失效）"
+  },
+  {
+   "id": "edg",
+   "type": "team",
+   "label": "EDG",
+   "sub": "中性（08-23 1:2 JDG：扳平后决胜失利）"
+  },
+  {
+   "id": "astralis",
+   "type": "team",
+   "label": "Astralis（A队）",
+   "sub": "负（被 G2 淘汰）"
+  },
+  {
+   "id": "g2",
+   "type": "team",
+   "label": "G2",
+   "sub": "正（胜 A队晋级）"
+  },
+  {
+   "id": "magic",
+   "type": "team",
+   "label": "Magic（魔术）",
+   "sub": "负（被 FUT 淘汰）"
+  },
+  {
+   "id": "fut",
+   "type": "team",
+   "label": "FUT",
+   "sub": "负（决赛亚军；三大软肋实体化）"
+  },
+  {
+   "id": "faze",
+   "type": "team",
+   "label": "FaZe",
+   "sub": "分歧（图池被看好 vs 状态不稳）"
+  },
+  {
+   "id": "vitality",
+   "type": "team",
+   "label": "Vitality（小蜜蜂）",
+   "sub": "负偏质疑（被看衰）"
+  },
+  {
+   "id": "mouz",
+   "type": "team",
+   "label": "MOUZ（老鼠）",
+   "sub": "分歧（晋级但状态差）"
+  },
+  {
+   "id": "gl",
+   "type": "team",
+   "label": "GL（GamerLegion）",
+   "sub": "负（被 MOUZ 淘汰）"
+  },
+  {
+   "id": "aurora",
+   "type": "team",
+   "label": "Aurora（欧若拉）",
+   "sub": "负（R16 1:2 出局，官方确认）"
+  },
+  {
+   "id": "furia",
+   "type": "team",
+   "label": "FURIA（黑豹）",
+   "sub": "正（R16 2:1 胜 Aurora、QF 2:1 胜 G2，官方确认）"
+  },
+  {
+   "id": "team_spirit_dota2",
+   "type": "team",
+   "label": "Team Spirit（Dota2）",
+   "sub": "正偏分歧（G1 收尾样本）"
+  },
+  {
+   "id": "iron_wing",
+   "type": "team",
+   "label": "Iron Wing（Dota2）",
+   "sub": "负（G1 终局执行）"
+  },
+  {
+   "id": "krx",
+   "type": "team",
+   "label": "KRX（키움/Kiwoom）",
+   "sub": "正（2:1 BRO）"
+  },
+  {
+   "id": "hle",
+   "type": "team",
+   "label": "HLE（韩华）",
+   "sub": "正（2:0 DK）"
+  },
+  {
+   "id": "dk",
+   "type": "team",
+   "label": "DK",
+   "sub": "负（0:2）"
+  },
+  {
+   "id": "t1",
+   "type": "team",
+   "label": "T1",
+   "sub": "正（2:1 让一追二，终结三连败）"
+  },
+  {
+   "id": "bfx",
+   "type": "team",
+   "label": "BFX",
+   "sub": "转负（08-23 1:2 NS：领先后被翻）"
+  },
+  {
+   "id": "sk",
+   "type": "team",
+   "label": "SK Gaming（SK）",
+   "sub": "负（0:2 被横扫，两局灰信号中心）"
+  },
+  {
+   "id": "ig",
+   "type": "team",
+   "label": "IG",
+   "sub": "负（0:2 NIP 被横扫）"
+  },
+  {
+   "id": "nip",
+   "type": "team",
+   "label": "NIP（糯米鸡）",
+   "sub": "正（2:0 横扫 IG）"
+  },
+  {
+   "id": "navi",
+   "type": "team",
+   "label": "Natus Vincere（NAVI）",
+   "sub": "负（R16 0:2 出局，官方确认）"
+  },
+  {
+   "id": "legacy",
+   "type": "team",
+   "label": "Legacy（菊花，巴西）",
+   "sub": "正（R16 2:0 横扫 NAVI，官方确认）"
+  },
+  {
+   "id": "team_vision",
+   "type": "team",
+   "label": "Team Vision（PV）",
+   "sub": "正（胜者组 2:1 胜 BoomBoys，官方确认）"
+  },
+  {
+   "id": "boomboys",
+   "type": "team",
+   "label": "BoomBoys（BB）",
+   "sub": "负（胜者组 1:2 负 Team Vision，官方确认）"
+  },
+  {
+   "id": "jdg",
+   "type": "team",
+   "label": "JDG",
+   "sub": "正（08-23 2:1 EDG 打满收官）"
+  },
+  {
+   "id": "spirit",
+   "type": "team",
+   "label": "Spirit（Team Spirit/绿龙/雪碧）",
+   "sub": "正（EWC CS2 夺冠；同日 TI15 双冠）"
+  },
+  {
+   "id": "lgd",
+   "type": "team",
+   "label": "LGD",
+   "sub": "正（2:0 TT 收官；汤圆洛克绝活）"
+  },
+  {
+   "id": "shft",
+   "type": "team",
+   "label": "SHFT（Shifters）",
+   "sub": "负偏争议（G1 爆冷后 1:2 被翻；0-7 首胜未遂）"
+  },
+  {
+   "id": "shavel",
+   "type": "player",
+   "label": "shavel",
+   "sub": "打野 · DNS"
+  },
+  {
+   "id": "enosh",
+   "type": "player",
+   "label": "enosh",
+   "sub": "ADC · DNS"
+  },
+  {
+   "id": "lancer",
+   "type": "player",
+   "label": "lancer",
+   "sub": "上单 · DNS"
+  },
+  {
+   "id": "kingen",
+   "type": "player",
+   "label": "kingen",
+   "sub": "上单 · NS"
+  },
+  {
+   "id": "scout",
+   "type": "player",
+   "label": "scout",
+   "sub": "中单 · NS"
+  },
+  {
+   "id": "lehends",
+   "type": "player",
+   "label": "lehends",
+   "sub": "辅助 · NS"
+  },
+  {
+   "id": "daboluo",
+   "type": "player",
+   "label": "daboluo",
+   "sub": "ADC · NS"
+  },
+  {
+   "id": "longxin",
+   "type": "player",
+   "label": "longxin",
+   "sub": "打野 · NS"
+  },
+  {
+   "id": "mudai",
+   "type": "player",
+   "label": "mudai",
+   "sub": "ADC · GGA"
+  },
+  {
+   "id": "riple",
+   "type": "player",
+   "label": "riple",
+   "sub": "中单 · GGA"
+  },
+  {
+   "id": "kemisi",
+   "type": "player",
+   "label": "kemisi",
+   "sub": "中单(待确认) · BRO"
+  },
+  {
+   "id": "courage",
+   "type": "player",
+   "label": "courage",
+   "sub": "打野(待确认) · BRO"
+  },
+  {
+   "id": "denai",
+   "type": "player",
+   "label": "denai",
+   "sub": "待确认 · BRO"
+  },
+  {
+   "id": "poby",
+   "type": "player",
+   "label": "poby",
+   "sub": "待确认 · DNS(待确认)"
+  },
+  {
+   "id": "bro_ryze_pending",
+   "type": "player",
+   "label": "bro_ryze_pending",
+   "sub": "中单 · BRO"
+  },
+  {
+   "id": "xiaohu",
+   "type": "player",
+   "label": "xiaohu",
+   "sub": "中单 · WBG"
+  },
+  {
+   "id": "xiaotian",
+   "type": "player",
+   "label": "xiaotian",
+   "sub": "打野 · TES"
+  },
+  {
+   "id": "hope",
+   "type": "player",
+   "label": "hope",
+   "sub": "ADC · AL"
+  },
+  {
+   "id": "chovy",
+   "type": "player",
+   "label": "chovy",
+   "sub": "中单 · GEN"
+  },
+  {
+   "id": "kiin",
+   "type": "player",
+   "label": "kiin",
+   "sub": "上单 · GEN"
+  },
+  {
+   "id": "bdd",
+   "type": "player",
+   "label": "bdd",
+   "sub": "中单 · KT"
+  },
+  {
+   "id": "kt_jw",
+   "type": "player",
+   "label": "kt_jw",
+   "sub": "ADC · KT"
+  },
+  {
+   "id": "perfect",
+   "type": "player",
+   "label": "perfect",
+   "sub": "上单 · KT"
+  },
+  {
+   "id": "ruler",
+   "type": "player",
+   "label": "ruler",
+   "sub": "ADC · GEN"
+  },
+  {
+   "id": "breathe",
+   "type": "player",
+   "label": "breathe",
+   "sub": "上单 · AL"
+  },
+  {
+   "id": "zui",
+   "type": "player",
+   "label": "zui",
+   "sub": "上单 · TES"
+  },
+  {
+   "id": "monki",
+   "type": "player",
+   "label": "monki",
+   "sub": "打野 · WE"
+  },
+  {
+   "id": "jiejie",
+   "type": "player",
+   "label": "jiejie",
+   "sub": "打野 · EDG"
+  },
+  {
+   "id": "cube",
+   "type": "player",
+   "label": "cube",
+   "sub": "上单 · WE"
+  },
+  {
+   "id": "leave",
+   "type": "player",
+   "label": "leave",
+   "sub": "ADC · EDG"
+  },
+  {
+   "id": "magic_awei",
+   "type": "player",
+   "label": "magic_awei",
+   "sub": "步枪/核心 · Magic"
+  },
+  {
+   "id": "magic_tenzy",
+   "type": "player",
+   "label": "magic_tenzy",
+   "sub": "核心 · Magic"
+  },
+  {
+   "id": "g2_rinkle",
+   "type": "player",
+   "label": "g2_rinkle",
+   "sub": "狙击手 · G2"
+  },
+  {
+   "id": "g2_sunshine",
+   "type": "player",
+   "label": "g2_sunshine",
+   "sub": "狙击手（已离队） · G2"
+  },
+  {
+   "id": "astralis_phzy",
+   "type": "player",
+   "label": "astralis_phzy",
+   "sub": "狙击手 · Astralis"
+  },
+  {
+   "id": "jimpphat",
+   "type": "player",
+   "label": "jimpphat",
+   "sub": "步枪/明星位 · Aurora"
+  },
+  {
+   "id": "k3",
+   "type": "player",
+   "label": "k3",
+   "sub": "指挥 · GL"
+  },
+  {
+   "id": "hunfei",
+   "type": "player",
+   "label": "hunfei",
+   "sub": "选手 · MOUZ(前)"
+  },
+  {
+   "id": "fallen",
+   "type": "player",
+   "label": "fallen",
+   "sub": "狙击/老将 · FURIA"
+  },
+  {
+   "id": "heishan",
+   "type": "player",
+   "label": "heishan",
+   "sub": "狙击手 · FURIA"
+  },
+  {
+   "id": "yatoro",
+   "type": "player",
+   "label": "yatoro",
+   "sub": "一号位 · Team Spirit"
+  },
+  {
+   "id": "bzm",
+   "type": "player",
+   "label": "bzm",
+   "sub": "二号位 · Iron Wing"
+  },
+  {
+   "id": "dota2_33",
+   "type": "player",
+   "label": "dota2_33",
+   "sub": "三号位 · Iron Wing"
+  },
+  {
+   "id": "pure",
+   "type": "player",
+   "label": "pure",
+   "sub": "一号位 · Iron Wing"
+  },
+  {
+   "id": "delight",
+   "type": "player",
+   "label": "delight",
+   "sub": "辅助 · HLE"
+  },
+  {
+   "id": "rich",
+   "type": "player",
+   "label": "rich",
+   "sub": "上单 · KRX"
+  },
+  {
+   "id": "deny",
+   "type": "player",
+   "label": "deny",
+   "sub": "打野 · BRO"
+  },
+  {
+   "id": "tahyuk",
+   "type": "player",
+   "label": "tahyuk",
+   "sub": "上单/中单(待确认) · BRO"
+  },
+  {
+   "id": "lazyfeel",
+   "type": "player",
+   "label": "lazyfeel",
+   "sub": "选手(待确认) · BRO"
+  },
+  {
+   "id": "krx_naafiri_jg",
+   "type": "player",
+   "label": "krx_naafiri_jg",
+   "sub": "打野 · KRX(待确认)"
+  },
+  {
+   "id": "aiming",
+   "type": "player",
+   "label": "aiming",
+   "sub": "ADC · KRX"
+  },
+  {
+   "id": "krx_ric",
+   "type": "player",
+   "label": "krx_ric",
+   "sub": "上单 · KRX"
+  },
+  {
+   "id": "doran",
+   "type": "player",
+   "label": "doran",
+   "sub": "上单 · T1"
+  },
+  {
+   "id": "faker",
+   "type": "player",
+   "label": "faker",
+   "sub": "中单 · T1"
+  },
+  {
+   "id": "oner",
+   "type": "player",
+   "label": "oner",
+   "sub": "打野 · T1"
+  },
+  {
+   "id": "peyz",
+   "type": "player",
+   "label": "peyz",
+   "sub": "ADC · T1"
+  },
+  {
+   "id": "keria",
+   "type": "player",
+   "label": "keria",
+   "sub": "辅助 · T1"
+  },
+  {
+   "id": "tarzan",
+   "type": "player",
+   "label": "tarzan",
+   "sub": "打野 · AL"
+  },
+  {
+   "id": "wunder",
+   "type": "player",
+   "label": "wunder",
+   "sub": "上单 · SK(待确认)"
+  },
+  {
+   "id": "gideon",
+   "type": "player",
+   "label": "gideon",
+   "sub": "待确认 · TH(待确认)"
+  },
+  {
+   "id": "tangyuan",
+   "type": "player",
+   "label": "tangyuan",
+   "sub": "中单 · LGD"
+  },
+  {
+   "id": "yuanshen",
+   "type": "player",
+   "label": "yuanshen",
+   "sub": "待确认 · LGD(待确认)"
+  },
+  {
+   "id": "jiaqi",
+   "type": "player",
+   "label": "jiaqi",
+   "sub": "ADC · NIP"
+  },
+  {
+   "id": "daglas",
+   "type": "player",
+   "label": "daglas",
+   "sub": "打野 · TH"
+  },
+  {
+   "id": "tracyn",
+   "type": "player",
+   "label": "tracyn",
+   "sub": "上单 · TH"
+  },
+  {
+   "id": "canna",
+   "type": "player",
+   "label": "canna",
+   "sub": "上单 · KC"
+  },
+  {
+   "id": "yike",
+   "type": "player",
+   "label": "yike",
+   "sub": "打野 · KC"
+  },
+  {
+   "id": "sheo",
+   "type": "player",
+   "label": "sheo",
+   "sub": "打野 · SHFT"
+  },
+  {
+   "id": "isma",
+   "type": "player",
+   "label": "isma",
+   "sub": "打野 · GX"
+  },
+  {
+   "id": "jun",
+   "type": "player",
+   "label": "jun",
+   "sub": "辅助 · GX"
+  },
+  {
+   "id": "flakked",
+   "type": "player",
+   "label": "flakked",
+   "sub": "ADC · GX"
+  },
+  {
+   "id": "oscarinin",
+   "type": "player",
+   "label": "oscarinin",
+   "sub": "上单 · GX"
+  },
+  {
+   "id": "zeus",
+   "type": "player",
+   "label": "zeus",
+   "sub": "上单 · HLE"
+  },
+  {
+   "id": "zeka",
+   "type": "player",
+   "label": "zeka",
+   "sub": "中单 · HLE"
+  },
+  {
+   "id": "jayce",
+   "type": "champion",
+   "label": "杰斯",
+   "sub": "上单 / 中单"
+  },
+  {
+   "id": "cassiopeia",
+   "type": "champion",
+   "label": "蛇女",
+   "sub": "中单"
+  },
+  {
+   "id": "anivia",
+   "type": "champion",
+   "label": "冰鸟",
+   "sub": "中单"
+  },
+  {
+   "id": "lucian",
+   "type": "champion",
+   "label": "卢锡安",
+   "sub": "ADC"
+  },
+  {
+   "id": "aatrox",
+   "type": "champion",
+   "label": "剑魔",
+   "sub": "上单 / 打野"
+  },
+  {
+   "id": "yone",
+   "type": "champion",
+   "label": "永恩",
+   "sub": "中单 / 上单"
+  },
+  {
+   "id": "twisted_fate",
+   "type": "champion",
+   "label": "卡牌",
+   "sub": "上单 / 中单"
+  },
+  {
+   "id": "lee_sin",
+   "type": "champion",
+   "label": "盲僧",
+   "sub": "打野"
+  },
+  {
+   "id": "gnar",
+   "type": "champion",
+   "label": "纳尔",
+   "sub": "上单"
+  },
+  {
+   "id": "viktor",
+   "type": "champion",
+   "label": "维克托",
+   "sub": "中单"
+  },
+  {
+   "id": "ryze",
+   "type": "champion",
+   "label": "瑞兹",
+   "sub": "中单"
+  },
+  {
+   "id": "caitlyn",
+   "type": "champion",
+   "label": "女警",
+   "sub": "ADC"
+  },
+  {
+   "id": "xin_zhao",
+   "type": "champion",
+   "label": "赵信",
+   "sub": "打野"
+  },
+  {
+   "id": "lucian_milio_bot",
+   "type": "composition",
+   "label": "卢锡安+米利欧/娜美 下路体系",
+   "sub": "下路强度线"
+  },
+  {
+   "id": "cass_lee_mid_jg",
+   "type": "composition",
+   "label": "蛇女+盲僧 中野体系",
+   "sub": "中野强度 / 版本强组合"
+  },
+  {
+   "id": "xin_orianna_anti_cass",
+   "type": "composition",
+   "label": "赵信+发条 反蛇女失败体系",
+   "sub": "反制失败样本"
+  },
+  {
+   "id": "turtle_time_control",
+   "type": "composition",
+   "label": "乌龟/卡时间体系",
+   "sub": "节奏管理 / 时长盘"
+  },
+  {
+   "id": "lock_heavy",
+   "type": "composition",
+   "label": "锁头体系（多硬控集火核心）",
+   "sub": "团战控制"
+  },
+  {
+   "id": "late_scale_poke",
+   "type": "composition",
+   "label": "后期手长/双锁头 体系",
+   "sub": "后期运营"
+  },
+  {
+   "id": "tf_top_split",
+   "type": "composition",
+   "label": "卡牌上单单带体系",
+   "sub": "单带 / 压制"
+  },
+  {
+   "id": "aatrox_jg",
+   "type": "composition",
+   "label": "剑魔打野（负锚体系）",
+   "sub": "负锚观察池"
+  },
+  {
+   "id": "2026-08-17_th_navi",
+   "type": "match",
+   "label": "2026-08-17_th_navi",
+   "sub": "NAVI 2:0 TH（官方确认）"
+  },
+  {
+   "id": "intel_danmu_full_2026-08-17_323444",
+   "type": "report",
+   "label": "reports/intel_danmu_full_2026-08-17_323444.html",
+   "sub": "2026-08-17_th_navi"
+  },
+  {
+   "id": "2026-08-18_kc_gx",
+   "type": "match",
+   "label": "2026-08-18_kc_gx",
+   "sub": "KC 2:0 GX（官方确认，KC 7-0 不败）"
+  },
+  {
+   "id": "intel_danmu_KC-GX_full_2026-08-18",
+   "type": "report",
+   "label": "reports/intel_danmu_KC-GX_full_2026-08-18.html",
+   "sub": "2026-08-18_kc_gx"
+  },
+  {
+   "id": "2026-08-18_dns_ns_kcup",
+   "type": "match",
+   "label": "2026-08-18_dns_ns_kcup",
+   "sub": "DNS 3:0 NS（官方确认，DNS 夺冠）"
+  },
+  {
+   "id": "intel_danmu_DNS-NS_G1_2026-08-18",
+   "type": "report",
+   "label": "reports/intel_danmu_DNS-NS_G1_2026-08-18.html",
+   "sub": "2026-08-18_dns_ns_kcup"
+  },
+  {
+   "id": "intel_danmu_DNS-NS_G2_2026-08-18",
+   "type": "report",
+   "label": "reports/intel_danmu_DNS-NS_G2_2026-08-18.html",
+   "sub": "2026-08-18_dns_ns_kcup"
+  },
+  {
+   "id": "2026-08-18_gga_bro",
+   "type": "match",
+   "label": "2026-08-18_gga_bro",
+   "sub": "BRO 2:1 GGA（G1/G3 BRO、G2 GGA；官方确认：BSportFan 08-18 GGA 1-2 BR"
+  },
+  {
+   "id": "intel_soop_GGA-BRO_2026-08-18",
+   "type": "report",
+   "label": "reports/intel_soop_GGA-BRO_2026-08-18.html",
+   "sub": "2026-08-18_gga_bro"
+  },
+  {
+   "id": "intel_soop_GGA-BRO_G2_pre_2026-08-18",
+   "type": "report",
+   "label": "reports/intel_soop_GGA-BRO_G2_pre_2026-08-18.html",
+   "sub": "2026-08-18_gga_bro"
+  },
+  {
+   "id": "2026-08-19_wbg_lng",
+   "type": "match",
+   "label": "2026-08-19_wbg_lng",
+   "sub": "WBG 2:1 LNG（官方确认，LNG 六连败收官）——修正：非 2:0"
+  },
+  {
+   "id": "intel_danmu_WBG-LNG_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_WBG-LNG_2026-08-19.html",
+   "sub": "2026-08-19_wbg_lng"
+  },
+  {
+   "id": "2026-08-19_gen_kt",
+   "type": "match",
+   "label": "2026-08-19_gen_kt",
+   "sub": "GEN 2:1 KT（官方确认，让一追二）"
+  },
+  {
+   "id": "intel_danmu_GEN-KT_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_GEN-KT_2026-08-19.html",
+   "sub": "2026-08-19_gen_kt"
+  },
+  {
+   "id": "2026-08-19_tes_al",
+   "type": "match",
+   "label": "2026-08-19_tes_al",
+   "sub": "TES 2:1 AL（官方确认）"
+  },
+  {
+   "id": "intel_danmu_TES-AL_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_TES-AL_2026-08-19.html",
+   "sub": "2026-08-19_tes_al"
+  },
+  {
+   "id": "2026-08-19_dns_bro",
+   "type": "match",
+   "label": "2026-08-19_dns_bro",
+   "sub": "BRO 2:0 DNS（官方确认；LCK Round 3-4 Rise Group，非 CL）"
+  },
+  {
+   "id": "intel_danmu_DNS-BRO_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_DNS-BRO_2026-08-19.html",
+   "sub": "2026-08-19_dns_bro"
+  },
+  {
+   "id": "2026-08-19_we_edg",
+   "type": "match",
+   "label": "2026-08-19_we_edg",
+   "sub": "EDG 2:0 WE（官方确认）"
+  },
+  {
+   "id": "intel_danmu_WE-EDG_full_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_WE-EDG_full_2026-08-19.html",
+   "sub": "2026-08-19_we_edg"
+  },
+  {
+   "id": "intel_danmu_WE-EDG_G1_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_WE-EDG_G1_2026-08-19.html",
+   "sub": "2026-08-19_we_edg"
+  },
+  {
+   "id": "intel_danmu_WE-EDG_G2_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_WE-EDG_G2_2026-08-19.html",
+   "sub": "2026-08-19_we_edg"
+  },
+  {
+   "id": "2026-08-19_ewc_astralis_g2",
+   "type": "match",
+   "label": "2026-08-19_ewc_astralis_g2",
+   "sub": "G2 2:1 Astralis（官方确认；A 队 Ancient 先胜，G2 Dust2/Inferno 连下两图晋级八"
+  },
+  {
+   "id": "intel_danmu_CS-EWC_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_CS-EWC_2026-08-19.html",
+   "sub": "2026-08-19_ewc_astralis_g2"
+  },
+  {
+   "id": "intel_danmu_CS-ASTRALIS-G2_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_CS-ASTRALIS-G2_2026-08-19.html",
+   "sub": "2026-08-19_ewc_astralis_g2"
+  },
+  {
+   "id": "2026-08-19_ewc_magic_fut",
+   "type": "match",
+   "label": "2026-08-19_ewc_magic_fut",
+   "sub": "FUT 2:1 magic（官方确认；magic 图一 Ancient 拿下，FUT 后两图逆转晋级八强）"
+  },
+  {
+   "id": "intel_danmu_CS-MAGIC-FUT_2026-08-19",
+   "type": "report",
+   "label": "reports/intel_danmu_CS-MAGIC-FUT_2026-08-19.html",
+   "sub": "2026-08-19_ewc_magic_fut"
+  },
+  {
+   "id": "2026-08-19_ewc_faze_vitality",
+   "type": "match",
+   "label": "2026-08-19_ewc_faze_vitality",
+   "sub": "Vitality 2:0 FaZe（官方确认；FaZe 淘汰，Vitality 晋级八强）"
+  },
+  {
+   "id": "2026-08-19_ewc_mouz_gl",
+   "type": "match",
+   "label": "2026-08-19_ewc_mouz_gl",
+   "sub": "MOUZ 2:1 GamerLegion（官方确认；GL 淘汰，MOUZ 晋级八强）"
+  },
+  {
+   "id": "intel_danmu_CS-R2_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_CS-R2_2026-08-20.html",
+   "sub": "2026-08-19_ewc_mouz_gl"
+  },
+  {
+   "id": "2026-08-19_ewc_aurora_furia",
+   "type": "match",
+   "label": "2026-08-19_ewc_aurora_furia",
+   "sub": "FURIA 2:1 Aurora（官方确认；此前弹幕口径误记欧若拉胜，已按官方修正——FURIA 晋级八强后 QF 再 "
+  },
+  {
+   "id": "2026-08-20_ironwing_tspirit",
+   "type": "match",
+   "label": "2026-08-20_ironwing_tspirit",
+   "sub": "Team Spirit 2:0 Iron Wing（官方确认；TI2026 胜者组首轮，G1 44 分钟拉锯后横扫，Ya"
+  },
+  {
+   "id": "intel_danmu_DOTA-IW-TS_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_DOTA-IW-TS_2026-08-20.html",
+   "sub": "2026-08-20_ironwing_tspirit"
+  },
+  {
+   "id": "2026-08-20_bro_krx",
+   "type": "match",
+   "label": "2026-08-20_bro_krx",
+   "sub": "KRX 2:1 BRO（G1 KRX、G2 BRO、G3 KRX；用户确认+弹幕多信号共振，官方赛程/VOD 待回补）"
+  },
+  {
+   "id": "intel_danmu_LCKCL_BRO-KRX_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_LCKCL_BRO-KRX_2026-08-20.html",
+   "sub": "2026-08-20_bro_krx"
+  },
+  {
+   "id": "2026-08-20_hle_dk",
+   "type": "match",
+   "label": "2026-08-20_hle_dk",
+   "sub": "HLE 2:0 DK（官方确认；G1/G2 HLE 赢，整场 HLE 99.95c）"
+  },
+  {
+   "id": "intel_danmu_HLE-DK_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_HLE-DK_2026-08-20.html",
+   "sub": "2026-08-20_hle_dk"
+  },
+  {
+   "id": "2026-08-20_ns_krx",
+   "type": "match",
+   "label": "2026-08-20_ns_krx",
+   "sub": "NS 2:0 KRX（官方确认；G1 Scout 瑞兹兜底、G2 Scout 加里奥，Kingen 克烈；KRX 输后无"
+  },
+  {
+   "id": "intel_danmu_NS-KRX_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_NS-KRX_2026-08-20.html",
+   "sub": "2026-08-20_ns_krx"
+  },
+  {
+   "id": "2026-08-20_tt_jdg",
+   "type": "match",
+   "label": "2026-08-20_tt_jdg",
+   "sub": "JDG 2:1 TT（官方确认；G1 TT Junhao 潘森/Feather 钩爆，G2 JDG HongQ 阿卡丽，"
+  },
+  {
+   "id": "intel_danmu_TT-JDG_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_TT-JDG_2026-08-20.html",
+   "sub": "2026-08-20_tt_jdg"
+  },
+  {
+   "id": "2026-08-20_navi_juhua",
+   "type": "match",
+   "label": "2026-08-20_navi_juhua",
+   "sub": "Legacy（菊花）2:0 NAVI（官方确认；图一 Inferno、图二 Ancient 13-2 碾压；NAVI 9"
+  },
+  {
+   "id": "intel_danmu_NAVI-JUHUA_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_NAVI-JUHUA_2026-08-20.html",
+   "sub": "2026-08-20_navi_juhua"
+  },
+  {
+   "id": "2026-08-20_lgd_blg",
+   "type": "match",
+   "label": "2026-08-20_lgd_blg",
+   "sub": "BLG 2:1 LGD（G1 LGD、G2/G3 BLG；整场 BLG 99.95c）"
+  },
+  {
+   "id": "2026-08-20_ns_drx",
+   "type": "match",
+   "label": "2026-08-20_ns_drx",
+   "sub": "NS 2:0 DRX（官方确认；整场 NS 99.95c）"
+  },
+  {
+   "id": "2026-08-20_g2_furia",
+   "type": "match",
+   "label": "2026-08-20_g2_furia",
+   "sub": "FURIA 2:1 G2（官方确认；图一 FURIA、图二 G2、图三 FURIA；Over 2.5 打满结算）"
+  },
+  {
+   "id": "2026-08-21_bro_bfx",
+   "type": "match",
+   "label": "2026-08-21_bro_bfx",
+   "sub": "BFX 2:1 BRO（G1 BFX、G2 BRO、G3 BFX；官方已确认：Polymarket 结算一致）"
+  },
+  {
+   "id": "intel_danmu_BRO-BFX_2026-08-21",
+   "type": "report",
+   "label": "reports/intel_danmu_BRO-BFX_2026-08-21.html",
+   "sub": "2026-08-21_bro_bfx"
+  },
+  {
+   "id": "2026-08-21_we_al",
+   "type": "match",
+   "label": "2026-08-21_we_al",
+   "sub": "WE 2:1 AL（G1 AL、G2 WE、G3 WE 让一追二；官方已确认：Polymarket 结算 + 官方战报一"
+  },
+  {
+   "id": "intel_danmu_WE-AL_2026-08-21",
+   "type": "report",
+   "label": "reports/intel_danmu_WE-AL_2026-08-21.html",
+   "sub": "2026-08-21_we_al"
+  },
+  {
+   "id": "2026-08-21_t1_kt",
+   "type": "match",
+   "label": "2026-08-21_t1_kt",
+   "sub": "T1 2:1 KT（G1 KT、G2/G3 T1；官方已确认：Polymarket 结算 + 直播吧/KMIB 一致）"
+  },
+  {
+   "id": "intel_danmu_T1-KT_2026-08-21",
+   "type": "report",
+   "label": "reports/intel_danmu_T1-KT_2026-08-21.html",
+   "sub": "2026-08-21_t1_kt"
+  },
+  {
+   "id": "2026-08-21_sk_th",
+   "type": "match",
+   "label": "2026-08-21_sk_th",
+   "sub": "TH 2:0 SK（G1/G2 TH 胜；官方已确认：Polymarket 结算 + 官方赛果一致）"
+  },
+  {
+   "id": "intel_danmu_SK-TH_2026-08-21",
+   "type": "report",
+   "label": "reports/intel_danmu_SK-TH_2026-08-21.html",
+   "sub": "2026-08-21_sk_th"
+  },
+  {
+   "id": "2026-08-21_edg_tt",
+   "type": "match",
+   "label": "2026-08-21_edg_tt",
+   "sub": "EDG 2:0 TT（G1/G2 EDG；官方已确认：Polymarket 结算 + 官方战报一致）"
+  },
+  {
+   "id": "2026-08-21_tes_blg",
+   "type": "match",
+   "label": "2026-08-21_tes_blg",
+   "sub": "BLG 2:0 TES（G1/G2 BLG；官方已确认：Polymarket 结算 + 官方战报一致）"
+  },
+  {
+   "id": "2026-08-22_we_lgd",
+   "type": "match",
+   "label": "2026-08-22_we_lgd",
+   "sub": "LGD 2:1 WE（官方确认；让一追二，LGD 晋级季后赛；Tangyuan 中野差距）"
+  },
+  {
+   "id": "intel_danmu_WE-LGD_2026-08-22",
+   "type": "report",
+   "label": "reports/intel_danmu_WE-LGD_2026-08-22.html",
+   "sub": "2026-08-22_we_lgd"
+  },
+  {
+   "id": "2026-08-22_gen_dk",
+   "type": "match",
+   "label": "2026-08-22_gen_dk",
+   "sub": "DK 2:1 GEN（官方确认；许哥狐狸游龙三擒 Chovy）"
+  },
+  {
+   "id": "intel_danmu_GEN-DK_2026-08-22",
+   "type": "report",
+   "label": "reports/intel_danmu_GEN-DK_2026-08-22.html",
+   "sub": "2026-08-22_gen_dk"
+  },
+  {
+   "id": "2026-08-22_ig_nip",
+   "type": "match",
+   "label": "2026-08-22_ig_nip",
+   "sub": "NIP 2:0 IG（官方确认；NIP 6-0 锁定涅槃组第一，全胜进骑士之路）"
+  },
+  {
+   "id": "intel_danmu_IG-NIP_2026-08-22",
+   "type": "report",
+   "label": "reports/intel_danmu_IG-NIP_2026-08-22.html",
+   "sub": "2026-08-22_ig_nip"
+  },
+  {
+   "id": "2026-08-22_dns_krx",
+   "type": "match",
+   "label": "2026-08-22_dns_krx",
+   "sub": "DNS 2:0 KRX（官方确认；DNS 常规赛收官胜）"
+  },
+  {
+   "id": "intel_danmu_DNS-KRX_2026-08-22",
+   "type": "report",
+   "label": "reports/intel_danmu_DNS-KRX_2026-08-22.html",
+   "sub": "2026-08-22_dns_krx"
+  },
+  {
+   "id": "2026-08-22_jdg_tes",
+   "type": "match",
+   "label": "2026-08-22_jdg_tes",
+   "sub": "JDG 2:0 TES（官方确认；GALA 烬 MVP；TES 锁定第三/JDG 进前四）"
+  },
+  {
+   "id": "intel_danmu_JDG-TES_2026-08-22",
+   "type": "report",
+   "label": "reports/intel_danmu_JDG-TES_2026-08-22.html",
+   "sub": "2026-08-22_jdg_tes"
+  },
+  {
+   "id": "2026-08-22_sk_mkoi",
+   "type": "match",
+   "label": "2026-08-22_sk_mkoi",
+   "sub": "SK 2:0 MKOI（官方确认；G1/G2 SK 赢，整场 SK 99.5c，Under 2.5）"
+  },
+  {
+   "id": "2026-08-22_lgc_ts7",
+   "type": "match",
+   "label": "2026-08-22_lgc_ts7",
+   "sub": "Spirit 2:0 Legacy（官方确认；整场 Spirit 100c，Under 2.5）"
+  },
+  {
+   "id": "2026-08-22_fnc_shft",
+   "type": "match",
+   "label": "2026-08-22_fnc_shft",
+   "sub": "FNC 2:0 SHFT（官方确认；SHFT 0-6 出局，FNC 3-3）"
+  },
+  {
+   "id": "intel_danmu_LEC-晚场_2026-08-22",
+   "type": "report",
+   "label": "reports/intel_danmu_LEC-晚场_2026-08-22.html",
+   "sub": "2026-08-22_fnc_shft"
+  },
+  {
+   "id": "2026-08-18_lckcl_dns_ns",
+   "type": "match",
+   "label": "2026-08-18_lckcl_dns_ns",
+   "sub": "DNS 首局胜（弹幕口径）；系列打满 3 局，完整比分待官方 VOD 回补"
+  },
+  {
+   "id": "intel_soop_DNS-NS_G1_2026-08-18",
+   "type": "report",
+   "label": "reports/intel_soop_DNS-NS_G1_2026-08-18.html",
+   "sub": "2026-08-18_lckcl_dns_ns"
+  },
+  {
+   "id": "2026-08-20_bb_pv",
+   "type": "match",
+   "label": "2026-08-20_bb_pv",
+   "sub": "Team Vision 2:1 BoomBoys（官方确认；VISION 晋级胜者组半决赛迎战 Team Spirit，"
+  },
+  {
+   "id": "intel_danmu_DOTA-BB-PV_2026-08-20",
+   "type": "report",
+   "label": "reports/intel_danmu_DOTA-BB-PV_2026-08-20.html",
+   "sub": "2026-08-20_bb_pv"
+  },
+  {
+   "id": "2026-08-23_tt_lgd",
+   "type": "match",
+   "label": "2026-08-23_tt_lgd",
+   "sub": "LGD 2:0 TT（三源确认：Polymarket 结算 LGD 1.0 + 直播吧战报横扫收官 + 弹幕；G1 洛克"
+  },
+  {
+   "id": "intel_danmu_TT-LGD_2026-08-23",
+   "type": "report",
+   "label": "reports/intel_danmu_TT-LGD_2026-08-23.html",
+   "sub": "2026-08-23_tt_lgd"
+  },
+  {
+   "id": "2026-08-23_t1_hle",
+   "type": "match",
+   "label": "2026-08-23_t1_hle",
+   "sub": "HLE 2:0 T1（官方双源：G1 直播吧战报 Zeus 杰斯单杀+Peyz 被针对 0 换 4；G2 直播吧 20:"
+  },
+  {
+   "id": "intel_danmu_T1-HLE_S0_2026-08-23",
+   "type": "report",
+   "label": "reports/intel_danmu_T1-HLE_S0_2026-08-23.html",
+   "sub": "2026-08-23_t1_hle"
+  },
+  {
+   "id": "2026-08-23_edg_jdg",
+   "type": "match",
+   "label": "2026-08-23_edg_jdg",
+   "sub": "JDG 2:1 EDG（官方三源确认：直播吧 19:49 战报 \"JDG2-1EDG\" + EDG 官博赛后战报 \"ED"
+  },
+  {
+   "id": "intel_danmu_EDG-JDG_2026-08-23",
+   "type": "report",
+   "label": "reports/intel_danmu_EDG-JDG_2026-08-23.html",
+   "sub": "2026-08-23_edg_jdg"
+  },
+  {
+   "id": "2026-08-23_bfx_ns",
+   "type": "match",
+   "label": "2026-08-23_bfx_ns",
+   "sub": "NS 2:1 BFX（官方双源确认：直播吧 20:27 \"NS 击败 BFX\" + 虎扑 G2 赛后 \"NS 1-1 B"
+  },
+  {
+   "id": "intel_danmu_BFX-NS_2026-08-23",
+   "type": "report",
+   "label": "reports/intel_danmu_BFX-NS_2026-08-23.html",
+   "sub": "2026-08-23_bfx_ns"
+  },
+  {
+   "id": "2026-08-23_blg_al",
+   "type": "match",
+   "label": "2026-08-23_blg_al",
+   "sub": "BLG 2:1 AL（官方确认；G1 AL、G2/G3 BLG；整场 BLG 100c，Over 2.5）"
+  },
+  {
+   "id": "2026-08-23_th_gx",
+   "type": "match",
+   "label": "2026-08-23_th_gx",
+   "sub": "GX 2:0 TH（官方确认：Polymarket lol-th-gx-2026-08-23 closed 全市场 se"
+  },
+  {
+   "id": "intel_danmu_TH-GX_2026-08-23",
+   "type": "report",
+   "label": "reports/intel_danmu_TH-GX_2026-08-23.html",
+   "sub": "2026-08-23_th_gx"
+  },
+  {
+   "id": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "type": "match",
+   "label": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "sub": "Spirit 3:1 FUT（官方确认：虎扑赛后帖 + 直播吧逐图战报；让一追三夺冠）"
+  },
+  {
+   "id": "intel_danmu_SPIRIT-FUT_2026-08-23",
+   "type": "report",
+   "label": "reports/intel_danmu_SPIRIT-FUT_2026-08-23.html",
+   "sub": "2026-08-23_ewc_cs2_final_spirit_fut"
+  },
+  {
+   "id": "2026-08-23_shft_kc",
+   "type": "match",
+   "label": "2026-08-23_shft_kc",
+   "sub": "KC 2:1 SHFT（官方确认；G1 SHFT、G2/G3 KC；整场 KC 100c，Over 2.5）"
+  },
+  {
+   "id": "2026-08-24_kc_shft",
+   "type": "match",
+   "label": "2026-08-24_kc_shft",
+   "sub": "KC 2:1 SHFT（官方确认：Polymarket lol-shft-kc-2026-08-23 全 settled"
+  },
+  {
+   "id": "intel_danmu_KC-SHFT_BP_2026-08-24",
+   "type": "report",
+   "label": "reports/intel_danmu_KC-SHFT_BP_2026-08-24.html",
+   "sub": "2026-08-24_kc_shft"
+  },
+  {
+   "id": "intel_danmu_KC-SHFT_G1_2026-08-24",
+   "type": "report",
+   "label": "reports/intel_danmu_KC-SHFT_G1_2026-08-24.html",
+   "sub": "2026-08-24_kc_shft"
+  },
+  {
+   "id": "intel_danmu_KC-SHFT_G2_2026-08-24",
+   "type": "report",
+   "label": "reports/intel_danmu_KC-SHFT_G2_2026-08-24.html",
+   "sub": "2026-08-24_kc_shft"
+  },
+  {
+   "id": "intel_danmu_KC-SHFT_full_2026-08-24",
+   "type": "report",
+   "label": "reports/intel_danmu_KC-SHFT_full_2026-08-24.html",
+   "sub": "2026-08-24_kc_shft"
+  },
+  {
+   "id": "2026-08-18_dns_ns_g1",
+   "type": "gray_signal",
+   "label": "DNS vs NS（K杯 G1）",
+   "sub": "中 · 18 条"
+  },
+  {
+   "id": "2026-08-18_dns_ns_g2",
+   "type": "gray_signal",
+   "label": "DNS vs NS（K杯 G2）",
+   "sub": "高 · 30 条"
+  },
+  {
+   "id": "2026-08-20_iron-wing_team-spirit_g1",
+   "type": "gray_signal",
+   "label": "Iron Wing vs Team Spirit（TI2026 G1）",
+   "sub": "低 · 4 条"
+  },
+  {
+   "id": "2026-08-20_bro_krx_g3",
+   "type": "gray_signal",
+   "label": "BRO vs KRX（G3）",
+   "sub": "中-高 · 12 条"
+  },
+  {
+   "id": "2026-08-20_dk_hle",
+   "type": "gray_signal",
+   "label": "DK vs HLE",
+   "sub": "高 · 54 条"
+  },
+  {
+   "id": "2026-08-20_tt_jdg_g3",
+   "type": "gray_signal",
+   "label": "TT vs JDG G3",
+   "sub": "低-中 · 5 条"
+  },
+  {
+   "id": "2026-08-21_bro_bfx_g1",
+   "type": "gray_signal",
+   "label": "BRO vs BFX（G1）",
+   "sub": "高 · 47 条"
+  },
+  {
+   "id": "2026-08-21_we_al_g1",
+   "type": "gray_signal",
+   "label": "WE vs AL（G1）",
+   "sub": "中-高 · 45 条"
+  },
+  {
+   "id": "2026-08-21_t1_kt_g2",
+   "type": "gray_signal",
+   "label": "T1 vs KT（G2）",
+   "sub": "低-中 · 40 条"
+  },
+  {
+   "id": "2026-08-21_t1_kt_g3",
+   "type": "gray_signal",
+   "label": "T1 vs KT（G3）",
+   "sub": "中 · 41 条"
+  },
+  {
+   "id": "2026-08-21_sk_th_g2",
+   "type": "gray_signal",
+   "label": "SK vs TH（LEC G2）",
+   "sub": "高 · 54 条"
+  },
+  {
+   "id": "2026-08-22_dns_krx_g1",
+   "type": "gray_signal",
+   "label": "DNS vs KRX（LCK G1）",
+   "sub": "中-高 · 25 条"
+  },
+  {
+   "id": "2026-08-24_kc_shft_g1",
+   "type": "gray_signal",
+   "label": "KC vs SHFT（LEC，G1）",
+   "sub": "高 · 100 条"
+  },
+  {
+   "id": "we_edg_g1_jayce",
+   "type": "bp_signal",
+   "label": "WE vs EDG G1",
+   "sub": "cube 杰斯 + 蔚"
+  },
+  {
+   "id": "we_edg_g2_trundle",
+   "type": "bp_signal",
+   "label": "WE vs EDG G2",
+   "sub": "Monki 巨魔（对面无前排）+ 女枪/EZ 下路"
+  },
+  {
+   "id": "dns_ns_g3_jayce",
+   "type": "bp_signal",
+   "label": "DNS vs NS K杯 G3",
+   "sub": "Kingen 一抢杰斯"
+  },
+  {
+   "id": "gga_bro_jayce",
+   "type": "bp_signal",
+   "label": "GGA vs BRO",
+   "sub": "二队杰斯"
+  },
+  {
+   "id": "gen_kt_g2_chovy_ice",
+   "type": "bp_signal",
+   "label": "GEN vs KT G2",
+   "sub": "换 Chovy 冰女点控（皇子+冰女+尺子）"
+  },
+  {
+   "id": "cs_mouz_gl_selfpick",
+   "type": "bp_signal",
+   "label": "MOUZ vs GL 图一",
+   "sub": "MOUZ 自选图（遗迹）"
+  },
+  {
+   "id": "cs_aurora_ancient",
+   "type": "bp_signal",
+   "label": "Aurora vs FURIA 图一",
+   "sub": "Aurora 选遗迹，8:4 大优被翻"
+  },
+  {
+   "id": "bro_krx_g2_rumble",
+   "type": "bp_signal",
+   "label": "BRO vs KRX G2",
+   "sub": "BRO 打架阵：Nocturne/Ryze/Kalista-Renata/Rumble"
+  },
+  {
+   "id": "bro_krx_g3_value",
+   "type": "bp_signal",
+   "label": "BRO vs KRX G3",
+   "sub": "BRO 后期价值阵（Viktor 等）"
+  },
+  {
+   "id": "hle_dk_g2_jayce",
+   "type": "bp_signal",
+   "label": "HLE vs DK G2",
+   "sub": "DK 选杰斯"
+  },
+  {
+   "id": "t1_kt_g3_anivia",
+   "type": "bp_signal",
+   "label": "T1 vs KT G3",
+   "sub": "Faker 后手冰鸟（Anivia）"
+  },
+  {
+   "id": "cs_fut_magic_g3_mirage",
+   "type": "bp_signal",
+   "label": "Magic vs FUT 图三（Mirage）",
+   "sub": "图三 Mirage（荒漠迷城/米垃圾）——G2 结束后确认"
+  },
+  {
+   "id": "lec_th_gx_g1_jayce",
+   "type": "bp_signal",
+   "label": "TH vs GX G1",
+   "sub": "弱队杰斯（TH 侧'黑衣人'，G1）"
+  },
+  {
+   "id": "lec_th_gx_g2_lucian",
+   "type": "bp_signal",
+   "label": "TH vs GX G2",
+   "sub": "卢锡安无米利欧（TH 侧'黑衣人'第二把）"
+  },
+  {
+   "id": "cs_ewc_final_spirit_ancient",
+   "type": "bp_signal",
+   "label": "EWC CS2 决赛 图三 Ancient",
+   "sub": "图三 Ancient（遗迹）——图二结束转换窗口确认"
+  },
+  {
+   "id": "cs_ewc_final_fut_nuke",
+   "type": "bp_signal",
+   "label": "EWC CS2 决赛 图四 Nuke",
+   "sub": "图四 Nuke（核子危机）——图三结束转换窗口确认"
+  },
+  {
+   "id": "lec_kc_shft_g1_cass",
+   "type": "bp_signal",
+   "label": "KC vs SHFT G1（BP 锁定）",
+   "sub": "G1 蛇女（Cassiopeia）——BP 锁定窗口正锚"
+  },
+  {
+   "id": "alias_绿龙",
+   "type": "alias",
+   "label": "绿龙",
+   "sub": "→ spirit · 已确认"
+  },
+  {
+   "id": "alias_雪碧",
+   "type": "alias",
+   "label": "雪碧",
+   "sub": "→ spirit · 已确认"
+  },
+  {
+   "id": "alias_菊花",
+   "type": "alias",
+   "label": "菊花",
+   "sub": "→ legacy · 已确认"
+  },
+  {
+   "id": "alias_黑豹",
+   "type": "alias",
+   "label": "黑豹",
+   "sub": "→ furia · 已确认"
+  },
+  {
+   "id": "alias_米人队",
+   "type": "alias",
+   "label": "米人队",
+   "sub": "→ mkoi · 已确认"
+  },
+  {
+   "id": "alias_超雄",
+   "type": "alias",
+   "label": "超雄",
+   "sub": "→ monki · 已确认"
+  },
+  {
+   "id": "alias_大菠萝",
+   "type": "alias",
+   "label": "大菠萝",
+   "sub": "→ diable · 已确认"
+  },
+  {
+   "id": "alias_泰永",
+   "type": "alias",
+   "label": "泰永",
+   "sub": "→ taeyoon · 已确认"
+  },
+  {
+   "id": "alias_杰杰",
+   "type": "alias",
+   "label": "杰杰",
+   "sub": "→ jiejie · 已确认"
+  },
+  {
+   "id": "alias_道格拉斯",
+   "type": "alias",
+   "label": "道格拉斯",
+   "sub": "→ daglas · 已确认"
+  },
+  {
+   "id": "alias_isma",
+   "type": "alias",
+   "label": "isma",
+   "sub": "→ isma · 已确认"
+  },
+  {
+   "id": "alias_奥斯卡",
+   "type": "alias",
+   "label": "奥斯卡",
+   "sub": "→ oscarinin · 已确认"
+  },
+  {
+   "id": "alias_jun",
+   "type": "alias",
+   "label": "jun",
+   "sub": "→ jun · 已确认"
+  },
+  {
+   "id": "alias_G2初代ad",
+   "type": "alias",
+   "label": "G2初代ad",
+   "sub": "→ flakked · 已确认"
+  },
+  {
+   "id": "alias_老李",
+   "type": "alias",
+   "label": "老李",
+   "sub": "→ faker · 已确认"
+  },
+  {
+   "id": "alias_多兰",
+   "type": "alias",
+   "label": "多兰",
+   "sub": "→ doran · 已确认"
+  },
+  {
+   "id": "alias_宙斯",
+   "type": "alias",
+   "label": "宙斯",
+   "sub": "→ zeus · 已确认"
+  },
+  {
+   "id": "alias_王德",
+   "type": "alias",
+   "label": "王德",
+   "sub": "→ wunder · 已确认"
+  },
+  {
+   "id": "alias_汤圆",
+   "type": "alias",
+   "label": "汤圆",
+   "sub": "→ tangyuan · 已确认"
+  },
+  {
+   "id": "alias_大超",
+   "type": "alias",
+   "label": "大超",
+   "sub": "→ chovy · 已确认"
+  },
+  {
+   "id": "alias_塔赞",
+   "type": "alias",
+   "label": "塔赞",
+   "sub": "→ tarzan · 已确认"
+  },
+  {
+   "id": "alias_臭克斯",
+   "type": "alias",
+   "label": "臭克斯",
+   "sub": "→ shanks · 已确认"
+  },
+  {
+   "id": "alias_批枪",
+   "type": "alias",
+   "label": "批枪",
+   "sub": "→ flandre · 已确认"
+  },
+  {
+   "id": "alias_呼吸",
+   "type": "alias",
+   "label": "呼吸",
+   "sub": "→ breathe · 已确认"
+  },
+  {
+   "id": "alias_左手",
+   "type": "alias",
+   "label": "左手",
+   "sub": "→ knight · 已确认"
+  },
+  {
+   "id": "alias_gala",
+   "type": "alias",
+   "label": "gala",
+   "sub": "→ gala · 已确认"
+  },
+  {
+   "id": "alias_jiejie",
+   "type": "alias",
+   "label": "jiejie",
+   "sub": "→ jiejie · 已确认"
+  },
+  {
+   "id": "alias_leave",
+   "type": "alias",
+   "label": "leave",
+   "sub": "→ leave · 已确认"
+  },
+  {
+   "id": "alias_poby",
+   "type": "alias",
+   "label": "poby",
+   "sub": "→ poby · 已确认"
+  },
+  {
+   "id": "alias_shifter",
+   "type": "alias",
+   "label": "shifter",
+   "sub": "→ shft · 已确认"
+  },
+  {
+   "id": "alias_sheo",
+   "type": "alias",
+   "label": "sheo",
+   "sub": "→ sheo · 已确认"
+  },
+  {
+   "id": "alias_canna",
+   "type": "alias",
+   "label": "canna",
+   "sub": "→ canna · 已确认"
+  },
+  {
+   "id": "alias_yike",
+   "type": "alias",
+   "label": "yike",
+   "sub": "→ yike · 已确认"
+  },
+  {
+   "id": "official_2026-08-23_th_gx",
+   "type": "official",
+   "label": "2026-08-23_th_gx",
+   "sub": "GX 2:0 TH"
+  },
+  {
+   "id": "official_2026-08-24_kc_shft",
+   "type": "official",
+   "label": "2026-08-24_kc_shft",
+   "sub": "KC 2:1 SHFT"
+  },
+  {
+   "id": "official_2026-08-23_ewc_cs2_final_spirit_fut",
+   "type": "official",
+   "label": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "sub": "Spirit 3:1 FUT"
+  },
+  {
+   "id": "official_2026-08-23_tt_lgd",
+   "type": "official",
+   "label": "2026-08-23_tt_lgd",
+   "sub": "LGD 2:0 TT"
+  },
+  {
+   "id": "official_2026-08-23_t1_hle",
+   "type": "official",
+   "label": "2026-08-23_t1_hle",
+   "sub": "HLE 2:0 T1"
+  },
+  {
+   "id": "official_2026-08-23_edg_jdg",
+   "type": "official",
+   "label": "2026-08-23_edg_jdg",
+   "sub": "JDG 2:1 EDG"
+  },
+  {
+   "id": "official_2026-08-23_bfx_ns",
+   "type": "official",
+   "label": "2026-08-23_bfx_ns",
+   "sub": "NS 2:1 BFX"
+  },
+  {
+   "id": "official_2026-08-23_blg_al",
+   "type": "official",
+   "label": "2026-08-23_blg_al",
+   "sub": "BLG 2:1 AL"
+  },
+  {
+   "id": "official_2026-08-21_sk_th",
+   "type": "official",
+   "label": "2026-08-21_sk_th",
+   "sub": "TH 2:0 SK"
+  },
+  {
+   "id": "official_2026-08-21_t1_kt",
+   "type": "official",
+   "label": "2026-08-21_t1_kt",
+   "sub": "T1 2:1 KT"
+  }
+ ],
+ "edges": [
+  {
+   "from": "lck_cl",
+   "to": "gga",
+   "type": "contains"
+  },
+  {
+   "from": "lck_cl",
+   "to": "bro",
+   "type": "contains"
+  },
+  {
+   "from": "lec",
+   "to": "kc",
+   "type": "contains"
+  },
+  {
+   "from": "lec",
+   "to": "gx",
+   "type": "contains"
+  },
+  {
+   "from": "lec",
+   "to": "th",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "wbg",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "lng",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "tes",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "al",
+   "type": "contains"
+  },
+  {
+   "from": "lck",
+   "to": "gen",
+   "type": "contains"
+  },
+  {
+   "from": "lck",
+   "to": "kt",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "we",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "edg",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "astralis",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "g2",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "magic",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "fut",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "faze",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "vitality",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "mouz",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "gl",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "aurora",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "furia",
+   "type": "contains"
+  },
+  {
+   "from": "lck_cl",
+   "to": "krx",
+   "type": "contains"
+  },
+  {
+   "from": "lck",
+   "to": "hle",
+   "type": "contains"
+  },
+  {
+   "from": "lck",
+   "to": "dk",
+   "type": "contains"
+  },
+  {
+   "from": "lck",
+   "to": "t1",
+   "type": "contains"
+  },
+  {
+   "from": "lck",
+   "to": "bfx",
+   "type": "contains"
+  },
+  {
+   "from": "lec",
+   "to": "sk",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "ig",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "nip",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "navi",
+   "type": "contains"
+  },
+  {
+   "from": "ewc_cs2",
+   "to": "legacy",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "jdg",
+   "type": "contains"
+  },
+  {
+   "from": "lpl",
+   "to": "lgd",
+   "type": "contains"
+  },
+  {
+   "from": "lec",
+   "to": "shft",
+   "type": "contains"
+  },
+  {
+   "from": "shavel",
+   "to": "dns",
+   "type": "plays_for"
+  },
+  {
+   "from": "enosh",
+   "to": "dns",
+   "type": "plays_for"
+  },
+  {
+   "from": "lancer",
+   "to": "dns",
+   "type": "plays_for"
+  },
+  {
+   "from": "kingen",
+   "to": "ns",
+   "type": "plays_for"
+  },
+  {
+   "from": "scout",
+   "to": "ns",
+   "type": "plays_for"
+  },
+  {
+   "from": "lehends",
+   "to": "ns",
+   "type": "plays_for"
+  },
+  {
+   "from": "daboluo",
+   "to": "ns",
+   "type": "plays_for"
+  },
+  {
+   "from": "longxin",
+   "to": "ns",
+   "type": "plays_for"
+  },
+  {
+   "from": "mudai",
+   "to": "gga",
+   "type": "plays_for"
+  },
+  {
+   "from": "riple",
+   "to": "gga",
+   "type": "plays_for"
+  },
+  {
+   "from": "kemisi",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "courage",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "denai",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "poby",
+   "to": "dns",
+   "type": "plays_for"
+  },
+  {
+   "from": "bro_ryze_pending",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "xiaohu",
+   "to": "wbg",
+   "type": "plays_for"
+  },
+  {
+   "from": "xiaotian",
+   "to": "tes",
+   "type": "plays_for"
+  },
+  {
+   "from": "hope",
+   "to": "al",
+   "type": "plays_for"
+  },
+  {
+   "from": "chovy",
+   "to": "gen",
+   "type": "plays_for"
+  },
+  {
+   "from": "kiin",
+   "to": "gen",
+   "type": "plays_for"
+  },
+  {
+   "from": "bdd",
+   "to": "kt",
+   "type": "plays_for"
+  },
+  {
+   "from": "kt_jw",
+   "to": "kt",
+   "type": "plays_for"
+  },
+  {
+   "from": "perfect",
+   "to": "kt",
+   "type": "plays_for"
+  },
+  {
+   "from": "ruler",
+   "to": "gen",
+   "type": "plays_for"
+  },
+  {
+   "from": "breathe",
+   "to": "al",
+   "type": "plays_for"
+  },
+  {
+   "from": "zui",
+   "to": "tes",
+   "type": "plays_for"
+  },
+  {
+   "from": "monki",
+   "to": "we",
+   "type": "plays_for"
+  },
+  {
+   "from": "jiejie",
+   "to": "edg",
+   "type": "plays_for"
+  },
+  {
+   "from": "cube",
+   "to": "we",
+   "type": "plays_for"
+  },
+  {
+   "from": "leave",
+   "to": "edg",
+   "type": "plays_for"
+  },
+  {
+   "from": "magic_awei",
+   "to": "magic",
+   "type": "plays_for"
+  },
+  {
+   "from": "magic_tenzy",
+   "to": "magic",
+   "type": "plays_for"
+  },
+  {
+   "from": "g2_rinkle",
+   "to": "g2",
+   "type": "plays_for"
+  },
+  {
+   "from": "g2_sunshine",
+   "to": "g2",
+   "type": "plays_for"
+  },
+  {
+   "from": "astralis_phzy",
+   "to": "astralis",
+   "type": "plays_for"
+  },
+  {
+   "from": "jimpphat",
+   "to": "aurora",
+   "type": "plays_for"
+  },
+  {
+   "from": "k3",
+   "to": "gl",
+   "type": "plays_for"
+  },
+  {
+   "from": "hunfei",
+   "to": "mouz",
+   "type": "plays_for"
+  },
+  {
+   "from": "fallen",
+   "to": "furia",
+   "type": "plays_for"
+  },
+  {
+   "from": "heishan",
+   "to": "furia",
+   "type": "plays_for"
+  },
+  {
+   "from": "bzm",
+   "to": "iron_wing",
+   "type": "plays_for"
+  },
+  {
+   "from": "dota2_33",
+   "to": "iron_wing",
+   "type": "plays_for"
+  },
+  {
+   "from": "pure",
+   "to": "iron_wing",
+   "type": "plays_for"
+  },
+  {
+   "from": "delight",
+   "to": "hle",
+   "type": "plays_for"
+  },
+  {
+   "from": "rich",
+   "to": "krx",
+   "type": "plays_for"
+  },
+  {
+   "from": "deny",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "tahyuk",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "lazyfeel",
+   "to": "bro",
+   "type": "plays_for"
+  },
+  {
+   "from": "krx_naafiri_jg",
+   "to": "krx",
+   "type": "plays_for"
+  },
+  {
+   "from": "aiming",
+   "to": "krx",
+   "type": "plays_for"
+  },
+  {
+   "from": "krx_ric",
+   "to": "krx",
+   "type": "plays_for"
+  },
+  {
+   "from": "doran",
+   "to": "t1",
+   "type": "plays_for"
+  },
+  {
+   "from": "faker",
+   "to": "t1",
+   "type": "plays_for"
+  },
+  {
+   "from": "oner",
+   "to": "t1",
+   "type": "plays_for"
+  },
+  {
+   "from": "peyz",
+   "to": "t1",
+   "type": "plays_for"
+  },
+  {
+   "from": "keria",
+   "to": "t1",
+   "type": "plays_for"
+  },
+  {
+   "from": "tarzan",
+   "to": "al",
+   "type": "plays_for"
+  },
+  {
+   "from": "wunder",
+   "to": "sk",
+   "type": "plays_for"
+  },
+  {
+   "from": "gideon",
+   "to": "th",
+   "type": "plays_for"
+  },
+  {
+   "from": "tangyuan",
+   "to": "lgd",
+   "type": "plays_for"
+  },
+  {
+   "from": "yuanshen",
+   "to": "lgd",
+   "type": "plays_for"
+  },
+  {
+   "from": "jiaqi",
+   "to": "nip",
+   "type": "plays_for"
+  },
+  {
+   "from": "daglas",
+   "to": "th",
+   "type": "plays_for"
+  },
+  {
+   "from": "tracyn",
+   "to": "th",
+   "type": "plays_for"
+  },
+  {
+   "from": "canna",
+   "to": "kc",
+   "type": "plays_for"
+  },
+  {
+   "from": "yike",
+   "to": "kc",
+   "type": "plays_for"
+  },
+  {
+   "from": "sheo",
+   "to": "shft",
+   "type": "plays_for"
+  },
+  {
+   "from": "isma",
+   "to": "gx",
+   "type": "plays_for"
+  },
+  {
+   "from": "jun",
+   "to": "gx",
+   "type": "plays_for"
+  },
+  {
+   "from": "flakked",
+   "to": "gx",
+   "type": "plays_for"
+  },
+  {
+   "from": "oscarinin",
+   "to": "gx",
+   "type": "plays_for"
+  },
+  {
+   "from": "zeus",
+   "to": "hle",
+   "type": "plays_for"
+  },
+  {
+   "from": "zeka",
+   "to": "hle",
+   "type": "plays_for"
+  },
+  {
+   "from": "jayce",
+   "to": "th",
+   "type": "anchored_by"
+  },
+  {
+   "from": "jayce",
+   "to": "zeus",
+   "type": "anchored_by"
+  },
+  {
+   "from": "th",
+   "to": "jayce",
+   "type": "uses"
+  },
+  {
+   "from": "hle",
+   "to": "jayce",
+   "type": "uses"
+  },
+  {
+   "from": "cassiopeia",
+   "to": "zeka",
+   "type": "anchored_by"
+  },
+  {
+   "from": "cassiopeia",
+   "to": "kc",
+   "type": "anchored_by"
+  },
+  {
+   "from": "anivia",
+   "to": "faker",
+   "type": "anchored_by"
+  },
+  {
+   "from": "anivia",
+   "to": "cassiopeia",
+   "type": "counters"
+  },
+  {
+   "from": "lucian",
+   "to": "th",
+   "type": "anchored_by"
+  },
+  {
+   "from": "lucian",
+   "to": "ns",
+   "type": "anchored_by"
+  },
+  {
+   "from": "aatrox",
+   "to": "th",
+   "type": "anchored_by"
+  },
+  {
+   "from": "aatrox",
+   "to": "daglas",
+   "type": "anchored_by"
+  },
+  {
+   "from": "yone",
+   "to": "wunder",
+   "type": "anchored_by"
+  },
+  {
+   "from": "twisted_fate",
+   "to": "shft",
+   "type": "anchored_by"
+  },
+  {
+   "from": "lee_sin",
+   "to": "sheo",
+   "type": "anchored_by"
+  },
+  {
+   "from": "gnar",
+   "to": "th",
+   "type": "anchored_by"
+  },
+  {
+   "from": "viktor",
+   "to": "shft",
+   "type": "anchored_by"
+  },
+  {
+   "from": "ryze",
+   "to": "kc",
+   "type": "anchored_by"
+  },
+  {
+   "from": "caitlyn",
+   "to": "kc",
+   "type": "anchored_by"
+  },
+  {
+   "from": "xin_zhao",
+   "to": "yike",
+   "type": "anchored_by"
+  },
+  {
+   "from": "lucian",
+   "to": "lucian_milio_bot",
+   "type": "in_composition"
+  },
+  {
+   "from": "gx",
+   "to": "lucian_milio_bot",
+   "type": "uses"
+  },
+  {
+   "from": "cassiopeia",
+   "to": "cass_lee_mid_jg",
+   "type": "in_composition"
+  },
+  {
+   "from": "lee_sin",
+   "to": "cass_lee_mid_jg",
+   "type": "in_composition"
+  },
+  {
+   "from": "hle",
+   "to": "cass_lee_mid_jg",
+   "type": "uses"
+  },
+  {
+   "from": "kc",
+   "to": "cass_lee_mid_jg",
+   "type": "uses"
+  },
+  {
+   "from": "xin_zhao",
+   "to": "xin_orianna_anti_cass",
+   "type": "in_composition"
+  },
+  {
+   "from": "t1",
+   "to": "xin_orianna_anti_cass",
+   "type": "uses"
+  },
+  {
+   "from": "kc",
+   "to": "turtle_time_control",
+   "type": "uses"
+  },
+  {
+   "from": "shft",
+   "to": "lock_heavy",
+   "type": "uses"
+  },
+  {
+   "from": "viktor",
+   "to": "late_scale_poke",
+   "type": "in_composition"
+  },
+  {
+   "from": "shft",
+   "to": "late_scale_poke",
+   "type": "uses"
+  },
+  {
+   "from": "twisted_fate",
+   "to": "tf_top_split",
+   "type": "in_composition"
+  },
+  {
+   "from": "shft",
+   "to": "tf_top_split",
+   "type": "uses"
+  },
+  {
+   "from": "aatrox",
+   "to": "aatrox_jg",
+   "type": "in_composition"
+  },
+  {
+   "from": "th",
+   "to": "aatrox_jg",
+   "type": "uses"
+  },
+  {
+   "from": "th",
+   "to": "2026-08-17_th_navi",
+   "type": "in_match"
+  },
+  {
+   "from": "navi",
+   "to": "2026-08-17_th_navi",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-17_th_navi",
+   "to": "intel_danmu_full_2026-08-17_323444",
+   "type": "report"
+  },
+  {
+   "from": "kc",
+   "to": "2026-08-18_kc_gx",
+   "type": "in_match"
+  },
+  {
+   "from": "gx",
+   "to": "2026-08-18_kc_gx",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-18_kc_gx",
+   "to": "intel_danmu_KC-GX_full_2026-08-18",
+   "type": "report"
+  },
+  {
+   "from": "dns",
+   "to": "2026-08-18_dns_ns_kcup",
+   "type": "in_match"
+  },
+  {
+   "from": "ns",
+   "to": "2026-08-18_dns_ns_kcup",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-18_dns_ns_kcup",
+   "to": "intel_danmu_DNS-NS_G1_2026-08-18",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-18_dns_ns_kcup",
+   "to": "intel_danmu_DNS-NS_G2_2026-08-18",
+   "type": "report"
+  },
+  {
+   "from": "gga",
+   "to": "2026-08-18_gga_bro",
+   "type": "in_match"
+  },
+  {
+   "from": "bro",
+   "to": "2026-08-18_gga_bro",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-18_gga_bro",
+   "to": "intel_soop_GGA-BRO_2026-08-18",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-18_gga_bro",
+   "to": "intel_soop_GGA-BRO_G2_pre_2026-08-18",
+   "type": "report"
+  },
+  {
+   "from": "wbg",
+   "to": "2026-08-19_wbg_lng",
+   "type": "in_match"
+  },
+  {
+   "from": "lng",
+   "to": "2026-08-19_wbg_lng",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_wbg_lng",
+   "to": "intel_danmu_WBG-LNG_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "gen",
+   "to": "2026-08-19_gen_kt",
+   "type": "in_match"
+  },
+  {
+   "from": "kt",
+   "to": "2026-08-19_gen_kt",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_gen_kt",
+   "to": "intel_danmu_GEN-KT_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "tes",
+   "to": "2026-08-19_tes_al",
+   "type": "in_match"
+  },
+  {
+   "from": "al",
+   "to": "2026-08-19_tes_al",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_tes_al",
+   "to": "intel_danmu_TES-AL_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "dns",
+   "to": "2026-08-19_dns_bro",
+   "type": "in_match"
+  },
+  {
+   "from": "bro",
+   "to": "2026-08-19_dns_bro",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_dns_bro",
+   "to": "intel_danmu_DNS-BRO_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "we",
+   "to": "2026-08-19_we_edg",
+   "type": "in_match"
+  },
+  {
+   "from": "edg",
+   "to": "2026-08-19_we_edg",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_we_edg",
+   "to": "intel_danmu_WE-EDG_full_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-19_we_edg",
+   "to": "intel_danmu_WE-EDG_G1_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-19_we_edg",
+   "to": "intel_danmu_WE-EDG_G2_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "astralis",
+   "to": "2026-08-19_ewc_astralis_g2",
+   "type": "in_match"
+  },
+  {
+   "from": "g2",
+   "to": "2026-08-19_ewc_astralis_g2",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_ewc_astralis_g2",
+   "to": "intel_danmu_CS-EWC_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-19_ewc_astralis_g2",
+   "to": "intel_danmu_CS-ASTRALIS-G2_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "magic",
+   "to": "2026-08-19_ewc_magic_fut",
+   "type": "in_match"
+  },
+  {
+   "from": "fut",
+   "to": "2026-08-19_ewc_magic_fut",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_ewc_magic_fut",
+   "to": "intel_danmu_CS-EWC_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-19_ewc_magic_fut",
+   "to": "intel_danmu_CS-MAGIC-FUT_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "faze",
+   "to": "2026-08-19_ewc_faze_vitality",
+   "type": "in_match"
+  },
+  {
+   "from": "vitality",
+   "to": "2026-08-19_ewc_faze_vitality",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_ewc_faze_vitality",
+   "to": "intel_danmu_CS-EWC_2026-08-19",
+   "type": "report"
+  },
+  {
+   "from": "mouz",
+   "to": "2026-08-19_ewc_mouz_gl",
+   "type": "in_match"
+  },
+  {
+   "from": "gl",
+   "to": "2026-08-19_ewc_mouz_gl",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_ewc_mouz_gl",
+   "to": "intel_danmu_CS-R2_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "aurora",
+   "to": "2026-08-19_ewc_aurora_furia",
+   "type": "in_match"
+  },
+  {
+   "from": "furia",
+   "to": "2026-08-19_ewc_aurora_furia",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-19_ewc_aurora_furia",
+   "to": "intel_danmu_CS-R2_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-20_ironwing_tspirit",
+   "to": "intel_danmu_DOTA-IW-TS_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "bro",
+   "to": "2026-08-20_bro_krx",
+   "type": "in_match"
+  },
+  {
+   "from": "krx",
+   "to": "2026-08-20_bro_krx",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-20_bro_krx",
+   "to": "intel_danmu_LCKCL_BRO-KRX_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "hle",
+   "to": "2026-08-20_hle_dk",
+   "type": "in_match"
+  },
+  {
+   "from": "dk",
+   "to": "2026-08-20_hle_dk",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-20_hle_dk",
+   "to": "intel_danmu_HLE-DK_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "ns",
+   "to": "2026-08-20_ns_krx",
+   "type": "in_match"
+  },
+  {
+   "from": "krx",
+   "to": "2026-08-20_ns_krx",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-20_ns_krx",
+   "to": "intel_danmu_NS-KRX_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "jdg",
+   "to": "2026-08-20_tt_jdg",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-20_tt_jdg",
+   "to": "intel_danmu_TT-JDG_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "navi",
+   "to": "2026-08-20_navi_juhua",
+   "type": "in_match"
+  },
+  {
+   "from": "legacy",
+   "to": "2026-08-20_navi_juhua",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-20_navi_juhua",
+   "to": "intel_danmu_NAVI-JUHUA_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "lgd",
+   "to": "2026-08-20_lgd_blg",
+   "type": "in_match"
+  },
+  {
+   "from": "ns",
+   "to": "2026-08-20_ns_drx",
+   "type": "in_match"
+  },
+  {
+   "from": "g2",
+   "to": "2026-08-20_g2_furia",
+   "type": "in_match"
+  },
+  {
+   "from": "furia",
+   "to": "2026-08-20_g2_furia",
+   "type": "in_match"
+  },
+  {
+   "from": "bro",
+   "to": "2026-08-21_bro_bfx",
+   "type": "in_match"
+  },
+  {
+   "from": "bfx",
+   "to": "2026-08-21_bro_bfx",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-21_bro_bfx",
+   "to": "intel_danmu_BRO-BFX_2026-08-21",
+   "type": "report"
+  },
+  {
+   "from": "we",
+   "to": "2026-08-21_we_al",
+   "type": "in_match"
+  },
+  {
+   "from": "al",
+   "to": "2026-08-21_we_al",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-21_we_al",
+   "to": "intel_danmu_WE-AL_2026-08-21",
+   "type": "report"
+  },
+  {
+   "from": "t1",
+   "to": "2026-08-21_t1_kt",
+   "type": "in_match"
+  },
+  {
+   "from": "kt",
+   "to": "2026-08-21_t1_kt",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-21_t1_kt",
+   "to": "intel_danmu_T1-KT_2026-08-21",
+   "type": "report"
+  },
+  {
+   "from": "sk",
+   "to": "2026-08-21_sk_th",
+   "type": "in_match"
+  },
+  {
+   "from": "th",
+   "to": "2026-08-21_sk_th",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-21_sk_th",
+   "to": "intel_danmu_SK-TH_2026-08-21",
+   "type": "report"
+  },
+  {
+   "from": "edg",
+   "to": "2026-08-21_edg_tt",
+   "type": "in_match"
+  },
+  {
+   "from": "tes",
+   "to": "2026-08-21_tes_blg",
+   "type": "in_match"
+  },
+  {
+   "from": "we",
+   "to": "2026-08-22_we_lgd",
+   "type": "in_match"
+  },
+  {
+   "from": "lgd",
+   "to": "2026-08-22_we_lgd",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-22_we_lgd",
+   "to": "intel_danmu_WE-LGD_2026-08-22",
+   "type": "report"
+  },
+  {
+   "from": "gen",
+   "to": "2026-08-22_gen_dk",
+   "type": "in_match"
+  },
+  {
+   "from": "dk",
+   "to": "2026-08-22_gen_dk",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-22_gen_dk",
+   "to": "intel_danmu_GEN-DK_2026-08-22",
+   "type": "report"
+  },
+  {
+   "from": "ig",
+   "to": "2026-08-22_ig_nip",
+   "type": "in_match"
+  },
+  {
+   "from": "nip",
+   "to": "2026-08-22_ig_nip",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-22_ig_nip",
+   "to": "intel_danmu_IG-NIP_2026-08-22",
+   "type": "report"
+  },
+  {
+   "from": "dns",
+   "to": "2026-08-22_dns_krx",
+   "type": "in_match"
+  },
+  {
+   "from": "krx",
+   "to": "2026-08-22_dns_krx",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-22_dns_krx",
+   "to": "intel_danmu_DNS-KRX_2026-08-22",
+   "type": "report"
+  },
+  {
+   "from": "jdg",
+   "to": "2026-08-22_jdg_tes",
+   "type": "in_match"
+  },
+  {
+   "from": "tes",
+   "to": "2026-08-22_jdg_tes",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-22_jdg_tes",
+   "to": "intel_danmu_JDG-TES_2026-08-22",
+   "type": "report"
+  },
+  {
+   "from": "sk",
+   "to": "2026-08-22_sk_mkoi",
+   "type": "in_match"
+  },
+  {
+   "from": "legacy",
+   "to": "2026-08-22_lgc_ts7",
+   "type": "in_match"
+  },
+  {
+   "from": "spirit",
+   "to": "2026-08-22_lgc_ts7",
+   "type": "in_match"
+  },
+  {
+   "from": "shft",
+   "to": "2026-08-22_fnc_shft",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-22_fnc_shft",
+   "to": "intel_danmu_LEC-晚场_2026-08-22",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-18_lckcl_dns_ns",
+   "to": "intel_soop_DNS-NS_G1_2026-08-18",
+   "type": "report"
+  },
+  {
+   "from": "boomboys",
+   "to": "2026-08-20_bb_pv",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-20_bb_pv",
+   "to": "intel_danmu_DOTA-BB-PV_2026-08-20",
+   "type": "report"
+  },
+  {
+   "from": "lgd",
+   "to": "2026-08-23_tt_lgd",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-23_tt_lgd",
+   "to": "intel_danmu_TT-LGD_2026-08-23",
+   "type": "report"
+  },
+  {
+   "from": "t1",
+   "to": "2026-08-23_t1_hle",
+   "type": "in_match"
+  },
+  {
+   "from": "hle",
+   "to": "2026-08-23_t1_hle",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-23_t1_hle",
+   "to": "intel_danmu_T1-HLE_S0_2026-08-23",
+   "type": "report"
+  },
+  {
+   "from": "edg",
+   "to": "2026-08-23_edg_jdg",
+   "type": "in_match"
+  },
+  {
+   "from": "jdg",
+   "to": "2026-08-23_edg_jdg",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-23_edg_jdg",
+   "to": "intel_danmu_EDG-JDG_2026-08-23",
+   "type": "report"
+  },
+  {
+   "from": "bfx",
+   "to": "2026-08-23_bfx_ns",
+   "type": "in_match"
+  },
+  {
+   "from": "ns",
+   "to": "2026-08-23_bfx_ns",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-23_bfx_ns",
+   "to": "intel_danmu_BFX-NS_2026-08-23",
+   "type": "report"
+  },
+  {
+   "from": "al",
+   "to": "2026-08-23_blg_al",
+   "type": "in_match"
+  },
+  {
+   "from": "th",
+   "to": "2026-08-23_th_gx",
+   "type": "in_match"
+  },
+  {
+   "from": "gx",
+   "to": "2026-08-23_th_gx",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-23_th_gx",
+   "to": "intel_danmu_TH-GX_2026-08-23",
+   "type": "report"
+  },
+  {
+   "from": "spirit",
+   "to": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "type": "in_match"
+  },
+  {
+   "from": "fut",
+   "to": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "to": "intel_danmu_SPIRIT-FUT_2026-08-23",
+   "type": "report"
+  },
+  {
+   "from": "shft",
+   "to": "2026-08-23_shft_kc",
+   "type": "in_match"
+  },
+  {
+   "from": "kc",
+   "to": "2026-08-23_shft_kc",
+   "type": "in_match"
+  },
+  {
+   "from": "kc",
+   "to": "2026-08-24_kc_shft",
+   "type": "in_match"
+  },
+  {
+   "from": "shft",
+   "to": "2026-08-24_kc_shft",
+   "type": "in_match"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "intel_danmu_KC-SHFT_BP_2026-08-24",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "intel_danmu_KC-SHFT_G1_2026-08-24",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "intel_danmu_KC-SHFT_G2_2026-08-24",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "intel_danmu_KC-SHFT_full_2026-08-24",
+   "type": "report"
+  },
+  {
+   "from": "2026-08-20_bro_krx",
+   "to": "2026-08-20_bro_krx_g3",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-20_tt_jdg",
+   "to": "2026-08-20_tt_jdg_g3",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-21_bro_bfx",
+   "to": "2026-08-21_bro_bfx_g1",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-21_we_al",
+   "to": "2026-08-21_we_al_g1",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-21_t1_kt",
+   "to": "2026-08-21_t1_kt_g2",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-21_t1_kt",
+   "to": "2026-08-21_t1_kt_g3",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-21_sk_th",
+   "to": "2026-08-21_sk_th_g2",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-22_dns_krx",
+   "to": "2026-08-22_dns_krx_g1",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "2026-08-24_kc_shft_g1",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-19_we_edg",
+   "to": "we_edg_g2_trundle",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-18_gga_bro",
+   "to": "gga_bro_jayce",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-19_gen_kt",
+   "to": "gen_kt_g2_chovy_ice",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-19_ewc_mouz_gl",
+   "to": "cs_mouz_gl_selfpick",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-19_ewc_aurora_furia",
+   "to": "cs_aurora_ancient",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-20_bro_krx",
+   "to": "bro_krx_g2_rumble",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-20_bro_krx",
+   "to": "bro_krx_g3_value",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-20_hle_dk",
+   "to": "hle_dk_g2_jayce",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-21_t1_kt",
+   "to": "t1_kt_g3_anivia",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-23_th_gx",
+   "to": "lec_th_gx_g1_jayce",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-23_th_gx",
+   "to": "lec_th_gx_g2_lucian",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "to": "cs_ewc_final_spirit_ancient",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "to": "cs_ewc_final_fut_nuke",
+   "type": "at_match"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "lec_kc_shft_g1_cass",
+   "type": "at_match"
+  },
+  {
+   "from": "alias_绿龙",
+   "to": "spirit",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_雪碧",
+   "to": "spirit",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_菊花",
+   "to": "legacy",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_黑豹",
+   "to": "furia",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_超雄",
+   "to": "monki",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_杰杰",
+   "to": "jiejie",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_道格拉斯",
+   "to": "daglas",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_isma",
+   "to": "isma",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_奥斯卡",
+   "to": "oscarinin",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_jun",
+   "to": "jun",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_G2初代ad",
+   "to": "flakked",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_老李",
+   "to": "faker",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_多兰",
+   "to": "doran",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_宙斯",
+   "to": "zeus",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_王德",
+   "to": "wunder",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_汤圆",
+   "to": "tangyuan",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_大超",
+   "to": "chovy",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_塔赞",
+   "to": "tarzan",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_呼吸",
+   "to": "breathe",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_jiejie",
+   "to": "jiejie",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_leave",
+   "to": "leave",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_poby",
+   "to": "poby",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_shifter",
+   "to": "shft",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_sheo",
+   "to": "sheo",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_canna",
+   "to": "canna",
+   "type": "refers_to"
+  },
+  {
+   "from": "alias_yike",
+   "to": "yike",
+   "type": "refers_to"
+  },
+  {
+   "from": "2026-08-23_th_gx",
+   "to": "official_2026-08-23_th_gx",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-24_kc_shft",
+   "to": "official_2026-08-24_kc_shft",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "to": "official_2026-08-23_ewc_cs2_final_spirit_fut",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-23_tt_lgd",
+   "to": "official_2026-08-23_tt_lgd",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-23_t1_hle",
+   "to": "official_2026-08-23_t1_hle",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-23_edg_jdg",
+   "to": "official_2026-08-23_edg_jdg",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-23_bfx_ns",
+   "to": "official_2026-08-23_bfx_ns",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-23_blg_al",
+   "to": "official_2026-08-23_blg_al",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-21_sk_th",
+   "to": "official_2026-08-21_sk_th",
+   "type": "official_result"
+  },
+  {
+   "from": "2026-08-21_t1_kt",
+   "to": "official_2026-08-21_t1_kt",
+   "type": "official_result"
+  }
+ ]
+}

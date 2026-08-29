@@ -1,0 +1,110 @@
+[
+  {
+    "date": "2026-08-06",
+    "event_slug": "lol-we-al-2026-08-06",
+    "market": "game1/game2",
+    "side": "Team WE",
+    "type": "match_read",
+    "source": "用户观看（领先方送人头→假赛感）",
+    "timing": "盘中",
+    "pnl": 600.0,
+    "outcome": "win",
+    "note": "口述估值；G2 仓位 175 偏大"
+  },
+  {
+    "date": "2026-08-06",
+    "event_slug": "lol-t1-dk1-2026-08-06",
+    "market": "game1/game2",
+    "side": "T1",
+    "type": "form_schedule",
+    "source": "用户（状态/连胜判断）",
+    "timing": "赛前",
+    "pnl": 200.0,
+    "outcome": "win",
+    "note": "口述估值；全仓高风险样本"
+  },
+  {
+    "date": "2026-08-07",
+    "event_slug": "lol-we-tt-2026-08-07",
+    "market": "game1",
+    "side": "Team WE",
+    "type": "match_read",
+    "source": "用户（观点 TT 反转，执行却买 WE）",
+    "timing": "盘中",
+    "pnl": -50.0,
+    "outcome": "loss",
+    "note": "观点与方向错位；10-15c 接刀"
+  },
+  {
+    "date": "2026-08-04",
+    "event_slug": "lol-hle-gen-2026-08-04",
+    "market": "moneyline",
+    "side": "HLE",
+    "type": "conviction",
+    "source": "用户（昨日 2:0 近因偏差）",
+    "timing": "赛前",
+    "pnl": -130.0,
+    "outcome": "loss",
+    "note": "口述估值；77c 重仓无保护"
+  },
+  {
+    "date": "2026-08-05",
+    "event_slug": "lol-hle1-gen-2026-08-05",
+    "market": "moneyline",
+    "side": "HLE",
+    "type": "conviction",
+    "source": "系统+用户（止盈梯/止损执行）",
+    "timing": "盘中",
+    "pnl": 34.8,
+    "outcome": "win",
+    "note": "执行纪律正样本"
+  },
+  {
+    "date": "2026-08-04",
+    "event_slug": "lol-bro2-drx-2026-08-04",
+    "market": "moneyline",
+    "side": "BRO",
+    "type": "conviction",
+    "source": "用户（赛前看好）",
+    "timing": "赛前",
+    "pnl": -60.0,
+    "outcome": "loss",
+    "note": "决胜局中位接刀"
+  },
+  {
+    "date": "2026-08-08",
+    "event_slug": "lol-t1-hle1-2026-08-08",
+    "market": "game2",
+    "side": "T1",
+    "type": "conviction",
+    "source": "用户（双方接近买 T1 G2 赢）",
+    "timing": "赛中",
+    "pnl": -80.0,
+    "outcome": "loss",
+    "note": "含反弹仓位共亏约 80；G2 深反失败（16.5->78.5->0.05），反弹确认后未止损"
+  },
+  {
+    "date": "2026-08-08",
+    "event_slug": "lol-t1-hle1-2026-08-08",
+    "market": "moneyline",
+    "side": "T1",
+    "type": "conviction",
+    "source": "用户（赛前买 T1 赢 Moneyline）",
+    "timing": "赛前",
+    "pnl": null,
+    "outcome": "loss",
+    "note": "G3 全程亏损不卖归零（损失厌恶）；金额未记录；本应买整场而非单局（单局 vs 整局结构）"
+  },
+  {
+    "date": "2026-08-09",
+    "event_slug": "lcp-domination-2026-08-09",
+    "market": "match",
+    "side": "大热门",
+    "type": "form_schedule",
+    "source": "用户（赛前判断确定碾压，LCP 两场）",
+    "timing": "赛前",
+    "pnl": null,
+    "outcome": "win",
+    "note": "大热门躺赢候选策略样本：赛前约 80c 买入热门持有到结算，两场 LCP 收益可观（口述，比赛与金额待补）；支撑'大热门躺赢'策略立项"
+  }
+]

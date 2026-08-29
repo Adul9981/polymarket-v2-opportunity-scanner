@@ -1,0 +1,449 @@
+{
+ "schema_version": "1.0",
+ "updated_at": "2026-08-24T16:20:47+00:00",
+ "description": "BP 异常信号留痕：BP 落定后的观众判负/判胜信号 + 结果验证。教练/选手责任分离，只作风险标注与复盘素材，不作假赛结论。",
+ "records": [
+  {
+   "id": "we_edg_g1_jayce",
+   "match": "WE vs EDG G1",
+   "league": "LPL",
+   "team": "WE",
+   "bp_point": "cube 杰斯 + 蔚",
+   "proficiency": "cube 杰斯历史 2 胜（观众口径）",
+   "audience_doubt": "高（'所有人都知道选杰斯必输，教练就是选''从 BP 就在演'）",
+   "coach_signal": "强（观众直指教练强制 BP）",
+   "verdict": "应验（WE 输 G1，EDG 领先一万被翻后 WE 未翻回）",
+   "gray_link": "2026-08-19_we_edg（灰信号 816 条）",
+   "routes": "待核实",
+   "match_id": ""
+  },
+  {
+   "id": "we_edg_g2_trundle",
+   "match": "WE vs EDG G2",
+   "league": "LPL",
+   "team": "WE",
+   "bp_point": "Monki 巨魔（对面无前排）+ 女枪/EZ 下路",
+   "proficiency": "低（'对面没肉选巨魔，明牌票''女枪等于 GG'）",
+   "audience_doubt": "高",
+   "coach_signal": "中-强（'We 这阵容选的就不想赢'）",
+   "verdict": "应验（EDG 2:0，永恩后期成型）",
+   "gray_link": "2026-08-19_we_edg",
+   "routes": "待核实",
+   "match_id": "2026-08-19_we_edg"
+  },
+  {
+   "id": "dns_ns_g3_jayce",
+   "match": "DNS vs NS K杯 G3",
+   "league": "KeSPA Cup",
+   "team": "NS",
+   "bp_point": "Kingen 一抢杰斯",
+   "proficiency": "低（观众提前判死刑）",
+   "audience_doubt": "高",
+   "coach_signal": "中",
+   "verdict": "应验（DNS 3:0 夺冠）",
+   "gray_link": "2026-08-18_dns_ns_g2",
+   "routes": "待核实",
+   "match_id": ""
+  },
+  {
+   "id": "gga_bro_jayce",
+   "match": "GGA vs BRO",
+   "league": "LCK CL",
+   "team": "GGA",
+   "bp_point": "二队杰斯",
+   "proficiency": "低（'二队杰斯=灾难'）",
+   "audience_doubt": "高",
+   "coach_signal": "中",
+   "verdict": "应验（GGA 1:2 负）",
+   "gray_link": "2026-08-18_gga_bro",
+   "routes": "待核实",
+   "match_id": "2026-08-18_gga_bro"
+  },
+  {
+   "id": "gen_kt_g2_chovy_ice",
+   "match": "GEN vs KT G2",
+   "league": "LCK",
+   "team": "GEN",
+   "bp_point": "换 Chovy 冰女点控（皇子+冰女+尺子）",
+   "proficiency": "高（'换冰女了那 gen 赢了'共识）",
+   "audience_doubt": "低（看好）",
+   "coach_signal": "无",
+   "verdict": "部分应验（G2 KT 扳平，G3 GEN 让一追二拿下）",
+   "gray_link": "2026-08-19_gen_kt",
+   "routes": "待核实",
+   "match_id": "2026-08-19_gen_kt"
+  },
+  {
+   "id": "cs_mouz_gl_selfpick",
+   "match": "MOUZ vs GL 图一",
+   "league": "EWC CS2",
+   "team": "MOUZ",
+   "bp_point": "MOUZ 自选图（遗迹）",
+   "proficiency": "低（'这还是老鼠选图，打不过''自选图不会玩'）",
+   "audience_doubt": "高",
+   "coach_signal": "中（图池/战术安排）",
+   "verdict": "部分应验（图一输，系列让一追二险胜）",
+   "gray_link": "2026-08-19_ewc_mouz_gl",
+   "routes": "待核实",
+   "match_id": "2026-08-19_ewc_mouz_gl"
+  },
+  {
+   "id": "cs_aurora_ancient",
+   "match": "Aurora vs FURIA 图一",
+   "league": "EWC CS2",
+   "team": "Aurora",
+   "bp_point": "Aurora 选遗迹，8:4 大优被翻",
+   "proficiency": "中（'欧若拉明显不会 CT'）",
+   "audience_doubt": "中",
+   "coach_signal": "中",
+   "verdict": "部分应验（图一被翻但系列仍胜）",
+   "gray_link": "2026-08-19_ewc_aurora_furia",
+   "routes": "待核实",
+   "match_id": "2026-08-19_ewc_aurora_furia"
+  },
+  {
+   "id": "bro_krx_g2_rumble",
+   "match": "BRO vs KRX G2",
+   "league": "LCK CL",
+   "team": "BRO",
+   "bp_point": "BRO 打架阵：Nocturne/Ryze/Kalista-Renata/Rumble",
+   "proficiency": "Rumble 再选被批（따혁）",
+   "audience_doubt": "高",
+   "coach_signal": "中",
+   "verdict": "打脸（Rumble 开局 carry，BRO 赢 G2）",
+   "gray_link": "2026-08-20_bro_krx",
+   "routes": "待核实",
+   "match_id": "2026-08-20_bro_krx"
+  },
+  {
+   "id": "bro_krx_g3_value",
+   "match": "BRO vs KRX G3",
+   "league": "LCK CL",
+   "team": "BRO",
+   "bp_point": "BRO 后期价值阵（Viktor 等）",
+   "proficiency": "中",
+   "audience_doubt": "中",
+   "coach_signal": "低",
+   "verdict": "部分应验（阵容价值兑现但无法终结，G3 被 KRX 翻）",
+   "gray_link": "2026-08-20_bro_krx_g3",
+   "routes": "待核实",
+   "match_id": "2026-08-20_bro_krx"
+  },
+  {
+   "id": "hle_dk_g2_jayce",
+   "match": "HLE vs DK G2",
+   "league": "LCK",
+   "team": "DK",
+   "bp_point": "DK 选杰斯",
+   "proficiency": "杰斯几天全输（观众口径）",
+   "audience_doubt": "高（'下班杰斯''杰斯一出就输了'）",
+   "coach_signal": "中",
+   "verdict": "应验（DK 输 G2，HLE 2:0）",
+   "gray_link": "2026-08-20_hle_dk",
+   "routes": "待核实",
+   "match_id": "2026-08-20_hle_dk"
+  },
+  {
+   "id": "t1_kt_g3_anivia",
+   "match": "T1 vs KT G3",
+   "league": "LCK",
+   "team": "T1",
+   "bp_point": "Faker 后手冰鸟（Anivia）",
+   "proficiency": "高（观众口径战绩情报：'老李冰鸟7胜0负'21:19:28/'李哥冰鸟7-0没输'/'冰鸟居然没输过'957 同刻 21:19:28——BP 刚结束即出现）",
+   "audience_doubt": "低（战绩正面）；教练'为什么7-0凤凰前面不选'质疑 BP 时机",
+   "coach_signal": "中（'我真觉得t1教练组变态，7-0的凤凰之前不选'21:20-21:22 共 4 条）",
+   "verdict": "应验（冰鸟后期关键/闪现墙操作，T1 赢 G3 2:1）",
+   "gray_link": "2026-08-21_t1_kt_g3",
+   "routes": [
+    "shuoshuo_323444",
+    "we957_890001"
+   ],
+   "match_id": "2026-08-21_t1_kt"
+  },
+  {
+   "id": "cs_fut_magic_g3_mirage",
+   "match": "Magic vs FUT 图三（Mirage）",
+   "league": "EWC CS2",
+   "team": "FUT",
+   "bp_point": "图三 Mirage（荒漠迷城/米垃圾）——G2 结束后确认",
+   "proficiency": "高（图池战绩情报：'图三fut强图啊/输不了'23:39 两路 + 'FUT这个图进攻零封过小蜜蜂'23:58 + '迷城FUT最强图吧'00:09——G2 结束→图三开局窗口多路共振）",
+   "audience_doubt": "低（强图共识）；早期反向信号'Fut不敢选米垃圾就是没自信了'（G1/G2 未选米垃圾，22:49/23:06）",
+   "coach_signal": "低",
+   "verdict": "应验（图三 FUT 拿下，Magic 淘汰）",
+   "gray_link": "",
+   "routes": [
+    "csboy_123321",
+    "captainmo"
+   ],
+   "match_id": ""
+  },
+  {
+   "id": "lec_th_gx_g1_jayce",
+   "match": "TH vs GX G1",
+   "league": "LEC",
+   "team": "TH",
+   "bp_point": "弱队杰斯（TH 侧'黑衣人'，G1）",
+   "proficiency": "低（负锚点战绩情报：'又是杰斯 看好不了一点'23:30:03、'弱队杰斯领先算团队落后'23:43:53、'杰斯最近赢不了 赢了也和杰斯没关系'23:43:48；赛后升级跨场：'杰斯各大赛区都10几连跪了'23:56:07、'这几天杰斯都被翻了'23:57:26；唯一例外'除了咒活(Zeus)'23:44:56）",
+   "audience_doubt": "高（杰斯相关提及 70 条，BP 结束即判负）",
+   "coach_signal": "中（'还在选 选就是送一份'23:53:27——教练 BP 决策质疑）",
+   "verdict": "应验（TH 杰斯局输 G1）",
+   "gray_link": "2026-08-23_th_gx",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "match_id": "2026-08-23_th_gx"
+  },
+  {
+   "id": "lec_th_gx_g2_lucian",
+   "match": "TH vs GX G2",
+   "league": "LEC",
+   "team": "TH",
+   "bp_point": "卢锡安无米利欧（TH 侧'黑衣人'第二把）",
+   "proficiency": "低（负锚点：'没有米利欧的卢锡安，伤害就是一坨屎'00:14:44、'有米都不选'00:15:16、'奥巴马没有顶针 娜美 就是残废英雄'00:46:47、'卢锡安必须配顶针 娜美 才能玩'00:52:04）",
+   "audience_doubt": "高（卢锡安相关提及 22 条多为批评）",
+   "coach_signal": "中（'有米都不选'——体系缺失质疑）",
+   "verdict": "应验（TH 卢锡安局输 G2）",
+   "gray_link": "2026-08-23_th_gx",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "match_id": "2026-08-23_th_gx"
+  },
+  {
+   "id": "cs_ewc_final_spirit_ancient",
+   "match": "EWC CS2 决赛 图三 Ancient",
+   "league": "EWC CS2",
+   "team": "Spirit",
+   "bp_point": "图三 Ancient（遗迹）——图二结束转换窗口确认",
+   "proficiency": "高（图池战绩情报：'绿龙从里约到现在的遗迹没输过'22:38:19、'绿龙遗迹没输过/世界第一遗迹'多路共振——正锚点）",
+   "audience_doubt": "低（强图共识）；图三焦灼期情绪反方（'遗迹绿龙肯定输'22:44:22）",
+   "coach_signal": "低",
+   "verdict": "应验（Spirit 16-14 加时拿下，拿到冠军点）",
+   "gray_link": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "routes": [
+    "csboy_123321",
+    "captainmo"
+   ],
+   "match_id": "2026-08-23_ewc_cs2_final_spirit_fut"
+  },
+  {
+   "id": "cs_ewc_final_fut_nuke",
+   "match": "EWC CS2 决赛 图四 Nuke",
+   "league": "EWC CS2",
+   "team": "FUT",
+   "bp_point": "图四 Nuke（核子危机）——图三结束转换窗口确认",
+   "proficiency": "低（图池战绩情报：'Fut今年这张图胜率是零胜率啊'00:28:57、'昨晚fut玩这图被狂虐且最近这图胜率0'00:14:39、'不搬零胜率的核子搬33胜率的沙二吗'00:28:13——负锚点+BP 决策质疑'为什么不ban nuke'）",
+   "audience_doubt": "高（'nuke不用看了直接颁奖/FUT不会nuke'密集）",
+   "coach_signal": "高（'FUT为什么要ban沙二呢？？？'——图池管理失误拷问）",
+   "verdict": "应验（FUT 在 Nuke 被速通，Spirit 3:1 夺冠）",
+   "gray_link": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "routes": [
+    "csboy_123321",
+    "captainmo"
+   ],
+   "match_id": "2026-08-23_ewc_cs2_final_spirit_fut"
+  },
+  {
+   "id": "lec_kc_shft_g1_cass",
+   "match": "KC vs SHFT G1（BP 锁定）",
+   "league": "LEC",
+   "team": "待核实（蛇女使用者）",
+   "bp_point": "G1 蛇女（Cassiopeia）——BP 锁定窗口正锚",
+   "proficiency": "高（战绩情报：'蛇女一出直接赢'01:15:52、'又开始出蛇女打一切中路了'01:16:30、'T1和GENG放蛇女+盲僧用赵信+发条打都输了'01:16:41——对应当日官方战报 HLE Zeka 蛇女+Kanavi 盲僧团战完美获胜，T1 发条/赵信应对失败；counter 锚'能打蛇女的只有高手冰鸟'01:16:12 呼应老李冰鸟 7-0）",
+   "audience_doubt": "低（正锚共识）；反方预警'不拿发条阿'01:18:26（发条对蛇女负锚）",
+   "coach_signal": "中（BP 决策预警：勿复刻 T1/GENG 失败应对）",
+   "verdict": "最终未应验（单局负锚≠系列）：KC 蛇女输 G1，但 KC 2:1 赢系列（G2/G3 逆转）——版本符号需叠加选手执行；对照 HLE Zeka 蛇女赢，KC 中单执行差",
+   "gray_link": "2026-08-24_kc_shft",
+   "routes": [
+    "shuoshuo_323444"
+   ],
+   "match_id": "2026-08-24_kc_shft"
+  },
+  {
+   "id": "lckcl_dns_krx_g1_vincenzo_jhin",
+   "match": "DNS.C vs KRX.C G1（BP 锁定）",
+   "league": "LCK CL",
+   "team": "KRX.C",
+   "bp_point": "G1 Vincenzo 烬 Jhin——pick 锁定窗口负锚",
+   "proficiency": "低（战绩情报：13:11:43 \"빈센조 솔랭 진 7전전패\"=排位 Jhin 7 连败；对位 Kalista+Renata、敌方卡蜜尔/阿卡丽/嘉文冲阵）",
+   "audience_doubt": "高（\"진은 어케 살아남움???\"体系质疑；\"빈센조 때문에 졌다\"赛后背锅）",
+   "coach_signal": "中（残阵规则下强行让打野顶 ADC，BP/用人决策被批）",
+   "verdict": "应验方向（G1 KRX.C 下路被压制，Vincenzo 首血+背锅）",
+   "gray_link": "2026-08-24_dns_krx_cl",
+   "routes": [
+    "soop_afchall"
+   ],
+   "memory_tier": "LONG（选手×英雄熟练度负锚样例）"
+  },
+  {
+   "id": "lckcl_dns_krx_g2_cl_jayce",
+   "match": "DNS.C vs KRX.C G2（BP 锁定）",
+   "league": "LCK CL",
+   "team": "KRX.C",
+   "bp_point": "G2 Frog 杰斯 Jayce——\"CL 杰斯必败(제필패)\"",
+   "proficiency": "低（弹幕规律：全窗口高频\"챌코 제이스 필패/제필패\"；14:29 \"첼코제이스는 4천골드 앞서도 의미없다\"）",
+   "audience_doubt": "高（\"제이스 탈주엔딩/다 끝나고 오네\"全场嘲讽）",
+   "coach_signal": "中（为何 CL 还选杰斯）",
+   "verdict": "应验（G2 Frog 杰斯后期边带不参团，KRX.C 被翻）",
+   "gray_link": "2026-08-24_dns_krx_cl",
+   "routes": [
+    "soop_afchall"
+   ],
+   "memory_tier": "LONG（联赛级 BP 负锚候选，需多场验证）"
+  },
+  {
+   "id": "lckcl_dns_krx_g2_lancer_ksante",
+   "match": "DNS.C vs KRX.C G2（局中正锚）",
+   "league": "LCK CL",
+   "team": "DNS.C",
+   "bp_point": "Lancer K'Sante 卡山特",
+   "proficiency": "高（弹幕\"랜서 크산테는 잘해용/거의 기인급/MVP 랜서\"；14:51 峰值）",
+   "audience_doubt": "低（正锚共识）",
+   "coach_signal": "无",
+   "verdict": "应验（G2 翻盘核心；系列结论\"没有 Lancer G1/G2 就输了\"）",
+   "gray_link": "2026-08-24_dns_krx_cl",
+   "routes": [
+    "soop_afchall"
+   ],
+   "memory_tier": "LONG（选手正锚）"
+  },
+  {
+   "id": "lckcl_bfxy_hlec_g1_panther_olaf",
+   "match": "BFX.Y vs HLE.C G1（BP 锁定）",
+   "league": "LCK CL",
+   "team": "HLE.C",
+   "bp_point": "G1 panther 奥拉夫——\"CL 奥拉夫必败（2군 올라프 필패）\"",
+   "proficiency": "低（17:27:11 \"2군 올라프는 필패인거 모르는 새기도 있냐?\"；与第一场 CL 杰斯必败同构）",
+   "audience_doubt": "高（\"올라프 데스 지분율 75%\"\"후반 올라프 구리다\"）",
+   "coach_signal": "中（CL 连选奥拉夫被质疑）",
+   "verdict": "应验（G1 HLE.C 输，奥拉夫后期无力）",
+   "gray_link": "2026-08-24_bfxy_hlec",
+   "routes": [
+    "soop_afchall",
+    "huya_shuoshuo"
+   ],
+   "memory_tier": "LONG（联赛级负锚候选）"
+  },
+  {
+   "id": "lckcl_bfxy_hlec_g2_diable_jhin",
+   "match": "BFX.Y vs HLE.C G2（BP 锁定）",
+   "league": "LCK CL",
+   "team": "BFX.Y",
+   "bp_point": "G2 Diable 烬 Jhin——\"진필패（烬必败）\"",
+   "proficiency": "低（18:29:32 \"진필패 vs 바필패\"）",
+   "audience_doubt": "中（\"이게 뮤슨 진필패\"争议）",
+   "coach_signal": "低",
+   "verdict": "未应验（BFX.Y 赢 G2；负锚非铁律反例）",
+   "gray_link": "2026-08-24_bfxy_hlec",
+   "routes": [
+    "soop_afchall",
+    "huya_shuoshuo"
+   ],
+   "memory_tier": "SHORT（反例样本）"
+  },
+  {
+   "id": "lckcl_bfxy_hlec_g2_bluffing_bard",
+   "match": "BFX.Y vs HLE.C G2（BP 锁定）",
+   "league": "LCK CL",
+   "team": "HLE.C",
+   "bp_point": "G2 Bluffing 巴德——\"바필패（巴德必败）\"",
+   "proficiency": "低（18:29:32 \"진필패 vs 바필패\"；\"바드 재앙/케바는 에바\"）",
+   "audience_doubt": "高（\"巴德内鬼/严查巴德\"灰信号簇）",
+   "coach_signal": "中（为何连选巴德）",
+   "verdict": "部分应验方向（G2 HLE.C 输，巴德操作被批；灰信号指向兑现方向）",
+   "gray_link": "2026-08-24_bfxy_hlec",
+   "routes": [
+    "soop_afchall",
+    "huya_shuoshuo"
+   ],
+   "memory_tier": "SHORT→LONG（灰信号+负锚联动样本）"
+  },
+  {
+   "id": "lec_fnc_navi_g1_rhilech_aatrox",
+   "match": "FNC vs NAVI G1（BP 锁定）",
+   "league": "LEC",
+   "team": "NAVI",
+   "bp_point": "G1 NAVI·打野 Rhilech 锁 Aatrox（三绝之一：Aatrox/Zaahen/Qiyana=15-3）",
+   "proficiency": "高（三绝英雄池 15-3；其他 21-33）",
+   "audience_doubt": "无（正锚：观众共识看好 NAVI 上路）",
+   "coach_signal": "无",
+   "verdict": "应验（NAVI 胜 G1；Rhilech 三绝之一在阵，团队获胜——虽 23:14 int 仍赢）",
+   "anchor_type": "positive",
+   "direction": {
+    "object": "NAVI·Rhilech·Aatrox",
+    "side": "favor"
+   },
+   "consensus": {
+    "count": 2,
+    "multi_stream": false,
+    "note": "仅 LEC 官方流出现；Caedrel 侧无同向引用"
+   },
+   "routes": [
+    "twitch_lec",
+    "twitch_caedrel"
+   ],
+   "memory_tier": "SHORT（局内锚点，赛后回填验证）",
+   "created_at": "2026-08-24T15:07:33+00:00",
+   "note": "修正 2026-08-25：Rhilech=NAVI 打野（非上单）；Zaahen=英雄名（非选手）；Vladi=FNC 中单；Poby=NAVI 中单（官方 rosters）",
+   "result": "NAVI 1-0（官方口径）",
+   "correction": "2026-08-25 修正：先前误判 NAVI 输 G1，实为 NAVI 胜"
+  },
+  {
+   "id": "lec_fnc_navi_g1_locke_pick",
+   "match": "FNC vs NAVI G1（BP 锁定）",
+   "league": "LEC",
+   "team": "FNC",
+   "bp_point": "G1/G2 FNC 中单（Vladi/Poby 对应位）锁英雄 Locke——观众负面评价（'bait pick'）",
+   "proficiency": "波动（23:06 LEC 官方流：'this locke pick is either what wins this game or completely loses it for Fnatic'；23:23 翻转：'I was wrong. Locke is winning'）",
+   "audience_doubt": "低-中（Caedrel 侧反复刷 LOCKE / 'LOCKE BUG TOO'；'Bard big against locke'）",
+   "coach_signal": "无",
+   "verdict": "应验（FNC 输 G1；Locke 选角负面方向兑现）",
+   "anchor_type": "negative",
+   "direction": {
+    "object": "FNC·英雄 Locke 选角",
+    "side": "against"
+   },
+   "consensus": {
+    "count": 3,
+    "multi_stream": true,
+    "note": "LEC 官方流 1 条定性 + Caedrel 侧多条质疑/玩梗"
+   },
+   "routes": [
+    "twitch_lec",
+    "twitch_caedrel"
+   ],
+   "memory_tier": "SHORT（局内锚点，赛后回填验证）",
+   "created_at": "2026-08-24T15:07:33+00:00",
+   "note": "Locke=英雄名（非选手）；G2 5/0 Locke 隐形（'locke was so fed and did nothing'）",
+   "result": "NAVI 1-0（官方口径）",
+   "correction": "2026-08-25 修正：先前误判 FNC 赢 G1"
+  },
+  {
+   "id": "lec_fnc_navi_g2_rhilech_pool",
+   "match": "FNC vs NAVI G2（BP 建议）",
+   "league": "LEC",
+   "team": "NAVI",
+   "bp_point": "G2/G3 ban 位建议：Rhilech 三绝（Aatrox/Zaahen/Qiyana）15-3 vs 其他 21-33",
+   "proficiency": "强（00:08 LEC 官方流明确 15-3 vs 21-33 战绩锚点）",
+   "audience_doubt": "无（正锚；观众共识 FNC 必须 ban）",
+   "coach_signal": "中（'if fnatic ban aatrox and qiyana they win this series in 50 mins'）",
+   "verdict": "待回填（G2 进行中）",
+   "anchor_type": "positive",
+   "direction": {
+    "object": "NAVI·Rhilech 三绝",
+    "side": "favor"
+   },
+   "consensus": {
+    "count": 4,
+    "multi_stream": false,
+    "note": "LEC 官方流为主；Caedrel 侧同向"
+   },
+   "routes": [
+    "twitch_lec",
+    "twitch_caedrel"
+   ],
+   "memory_tier": "SHORT（G3 局内锚点，赛后回填）",
+   "created_at": "2026-08-24T16:18:29+00:00"
+  }
+ ]
+}

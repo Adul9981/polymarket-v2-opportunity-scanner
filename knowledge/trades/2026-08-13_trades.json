@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-08-13",
+    "event_slug": "dota2-vsn2-flc-2026-08-13",
+    "market_type": "match",
+    "side": "TEAM VISION",
+    "strategy": "swing",
+    "template": "none",
+    "total_invested_usd": 200,
+    "realized_pnl_usd": -20,
+    "final_pnl_usd": null,
+    "outcome": "pending",
+    "exit_executed": true,
+    "lesson_tags": ["chased_high"],
+    "notes": "TI 小组赛：83c 追高买 TEAM VISION 整场（58->84 拉升顶部）；回踩 65-67 分批卖出大部分（69/79、66/79），留 30 小玩；利润回吐；G3 进行中（76.5c）待终局；赚钱后放松警惕+追高（口述估值）。"
+  },
+  {
+    "date": "2026-08-13",
+    "event_slug": "lol-tes-lgd-2026-08-13",
+    "market_type": "match",
+    "side": "LGD Gaming",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 300,
+    "realized_pnl_usd": 450,
+    "final_pnl_usd": 450,
+    "outcome": "win",
+    "exit_executed": true,
+    "lesson_tags": ["conviction_ok", "pre_position_ok"],
+    "notes": "赛前买 LGD 赢 G1/G2/整场 + LGD +1.5，四线全中（LGD 2:0 横扫 TES）；赛前情报：辅助位补强、抓机会能力强、与 TES 差距不大（市场仍定价 TES 大热门，LGD 整场 16.5c 低估）；金额口述估值。"
+  },
+  {
+    "date": "2026-08-13",
+    "event_slug": "lol-tt-blg-2026-08-13",
+    "market_type": "match",
+    "side": "ThunderTalk Gaming",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 150,
+    "realized_pnl_usd": -150,
+    "final_pnl_usd": -150,
+    "outcome": "loss",
+    "exit_executed": true,
+    "lesson_tags": ["direction_miss"],
+    "notes": "赛前买 TT 赢 G1/G2/整场 + 让分（+E），BLG 2:0 完全碾压全部未兑现；TT 整场 19c->0 全程 B4 阴跌（无启动确认）；用 LGD 盈利小部分试错，影响可控；教训：下狗反转需要理由（情报/启动确认），无理由=买彩票。"
+  },
+  {
+    "date": "2026-08-13",
+    "event_slug": "dota2-ts8-aur1-2026-08-13",
+    "market_type": "match",
+    "side": "Aurora",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 100,
+    "realized_pnl_usd": -100,
+    "final_pnl_usd": -100,
+    "outcome": "loss",
+    "exit_executed": true,
+    "lesson_tags": ["direction_miss"],
+    "notes": "TI TS 2:0 横扫 Aurora：G1 买 Aurora 亏 50 + Over 2.5（Under 结算）+ Aurora 赢一局全部亏损；人马/阵容克制两局无解（G1 82c->0、G2 62.5c->0）；金额口述估值。"
+  }
+]

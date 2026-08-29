@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEC · VIT vs FNC · G1 复盘（官方 FNC 1-0）· 2026-08-29</title>
+<style>
+  :root { --bg:#f5f5f7; --card:#fff; --ink:#1d1d1f; --sub:#6e6e73; --accent:#0b6bcb; --line:#e3e3e8; --good:#1a7f37; --bad:#c0392b; --warn:#b45309; --purple:#6d4fc4; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Microsoft YaHei",sans-serif; line-height:1.62; padding:22px 12px 56px; }
+  .wrap { max-width:940px; margin:0 auto; }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin:14px 0; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  h1 { font-size:22px; font-weight:700; }
+  h2 { font-size:16px; font-weight:650; margin:10px 0 8px; display:flex; align-items:center; gap:7px; }
+  h2 .no { flex:0 0 24px; height:24px; background:var(--accent); color:#fff; border-radius:7px; font-size:12px; display:inline-flex; align-items:center; justify-content:center; }
+  .meta { color:var(--sub); font-size:12px; margin-top:6px; }
+  .badge { display:inline-block; border-radius:999px; padding:2px 9px; font-size:11px; margin:2px 4px 2px 0; }
+  .b-pend { background:#fdf0e6; color:var(--warn); }
+  .b-ok { background:#e8f6ec; color:var(--good); }
+  .b-risk { background:#fdeaea; color:var(--bad); }
+  .b-anchor { background:#eaf2fb; color:var(--accent); }
+  .b-con { background:#f3f0fa; color:var(--purple); }
+  .speed { background:linear-gradient(180deg,#fbfcff,#f4f7fd); border:1px solid #dbe5f5; }
+  .speed .top { display:flex; flex-wrap:wrap; gap:8px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:10px; }
+  .score-big { font-size:20px; font-weight:750; color:var(--accent); }
+  .sig { display:flex; gap:10px; padding:9px 0; border-bottom:1px dashed var(--line); font-size:13px; }
+  .sig:last-child { border-bottom:none; }
+  .sig .tag { flex:0 0 58px; font-size:11px; font-weight:650; padding-top:2px; }
+  table { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:6px; }
+  th { text-align:left; color:var(--sub); font-weight:600; font-size:11px; padding:6px 7px; border-bottom:1px solid var(--line); }
+  td { padding:6px 7px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  ul { padding-left:20px; margin:6px 0; } li { margin:4px 0; font-size:13.5px; }
+  .warnbox { background:#fdf6ec; border-left:3px solid var(--warn); padding:8px 12px; border-radius:0 8px 8px 0; margin:8px 0; font-size:13px; }
+  .footer { color:var(--sub); font-size:11.5px; text-align:center; margin-top:18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- 0 核心情报速览 -->
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="top">
+    <span class="score-big">VIT 0-1 FNC · G1 结束（官方 gameWins）</span>
+    <span class="badge b-ok">官方阵容已确认</span>
+    <span class="badge b-anchor">G2 官方阵容已锁定</span>
+    <span class="badge b-con">Remember 单源 · 待多路验证</span>
+  </div>
+  <div style="margin-top:8px">
+    <div class="sig"><span class="tag" style="color:var(--good)">结果</span><span><b>FNC 1-0（官方 Riot API gameWins 确认）</b>：弹幕"一波了""暴打小蜜蜂"共振；G1 末段 VIT 女警反向 E 送终结（"女警直接送了"）<span class="meta">→ 详 §1/§8</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--accent)">锚点</span><span><b>芸阿娜版本信号验证中</b>：Upset 拿芸阿娜（同日 LCK Taeyoon 五杀英雄）——跨赛区正锚候选，G1 胜局佐证 <span class="meta">→ 详 §3/§4</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--bad)">风险</span><span><b>VIT 下路/中单执行崩</b>："女警反向e""交完闪现送""fiesta除了刺客都是一坨"——Carzzy/FIESTA 被集中批 <span class="meta">→ 详 §3</span></span></div>
+    <div class="sig"><span class="tag" style="color:var(--purple)">预测</span><span><b>G1 登记 5 条预测</b>：VIT 负锚 / FNC 翻盘预期 / Upset 芸阿娜正锚 / FIESTA 负锚 / Vladi 正锚——G1 结算后回填 <span class="meta">→ 详 §9</span></span></div>
+  </div>
+</div>
+
+<!-- 1 比赛信息 -->
+<div class="card">
+  <h2><span class="no">1</span>比赛信息与结果总览 / 状态核验</h2>
+  <table>
+    <tr><td>对阵</td><td>VIT（小蜜蜂）vs FNC · LEC 2026 常规赛（涉及排名/晋级）· BO3 · matchId 115548681803406195</td></tr>
+    <tr><td>G1 结果</td><td><b>FNC 胜</b>（官方 Riot API gameWins 1-0，01:29 弹幕"一波了"共振；详细 KDA 待回填）</td></tr>
+    <tr><td>系列状态</td><td>FNC 1-0 VIT · G2 进行中（官方阵容已锁定）</td></tr>
+    <tr><td>完整性</td><td><span class="badge b-pend">单源待验证</span>硕硕/毛毛未开播，Remember 单源 + 官方 window；G1 弹幕偏薄（141 条/30 分钟）</td></tr>
+  </table>
+</div>
+
+<!-- 2 弹幕数据 -->
+<div class="card">
+  <h2><span class="no">2</span>弹幕数据概览（00:30-01:30 CST）</h2>
+  <table>
+    <tr><th>指标</th><th>数值</th></tr>
+    <tr><td>弹幕</td><td>约 200+ 条（Remember 单路低流量）</td></tr>
+    <tr><td>关键词</td><td>女警 6+（反向e/送）· 杰斯 4 · 一波了 2 · 暴打小蜜蜂 2 · 假赛 1（情绪语）· 芸阿娜 1</td></tr>
+    <tr><td>情绪</td><td>FNC 占优（"暴打小蜜蜂""FNC 打像巅峰 G2"）；VIT 执行被批</td></tr>
+  </table>
+</div>
+
+<!-- 3 人员情报 -->
+<div class="card">
+  <h2><span class="no">3</span>人员情报板（官方阵容 + 弹幕口径）</h2>
+  <table>
+    <tr><th>对象</th><th>英雄</th><th>情绪</th><th>样本</th></tr>
+    <tr><td>Upset（FNC ADC）</td><td>G1 芸阿娜</td><td>正锚</td><td>芸阿娜版本正锚候选（同日 LCK 五杀）；G1 胜局佐证</td></tr>
+    <tr><td>Carzzy（VIT ADC）</td><td>G1 女警</td><td>负</td><td>"女警反向e""这女警真的有点过分了""女警直接送了"——G1 终结伏笔</td></tr>
+    <tr><td>FIESTA（VIT 中单）</td><td>G1 辛德拉</td><td>负</td><td>"交完闪现送""fiesta除了刺客都是一坨"——执行被批</td></tr>
+    <tr><td>Vladi（FNC 中单）</td><td>G1 瑞兹</td><td>正</td><td>"这个瓦拉迪最近有点猛啊"——状态正锚</td></tr>
+    <tr><td>Naak Nako（VIT 上单）</td><td>G1 杰斯</td><td>负</td><td>"让你小子选杰斯""杰斯失忆了"——G1 上单无压制</td></tr>
+  </table>
+</div>
+
+<!-- 4 版本信号 -->
+<div class="card">
+  <h2><span class="no">4</span>版本信号（跨场验证）</h2>
+  <ul>
+    <li><b>芸阿娜（Yunara）ADC</b>：FNC Upset 选用并拿下 G1；同日 LCK Taeyoon 用其 G4 五杀——跨赛区版本正锚候选，G1 初步应验。</li>
+    <li><b>女警 vs 芸阿娜</b> 下路对位：本场 VIT 女警反向 E 成为 G1 关键失误——操作层面，非英雄平衡结论。</li>
+    <li>兰博（Soboro G1）vs 杰斯（Naak Nako）上路对位：杰斯被批"没见到赢过"——版本弱侧观察。</li>
+  </ul>
+</div>
+
+<!-- 5 灰信号 -->
+<div class="card">
+  <h2><span class="no">5</span>灰信号汇总（观众质疑 · 非结论）</h2>
+  <p><b>0 条实质灰信号。</b>"假赛""送的有点明显"为情绪语/操作批评（女警反向 E 有视频证据为失误而非剧本）；无指向性指控，不升格。</p>
+</div>
+
+<!-- 6 方向板 -->
+<div class="card">
+  <h2><span class="no">6</span>方向性情报板</h2>
+  <table>
+    <tr><th>维度</th><th>FNC</th><th>VIT</th></tr>
+    <tr><td>G1 信号</td><td>中单/下路正锚（Vladi 瑞兹、Upset 芸阿娜）；"FNC 打像巅峰 G2"</td><td>中下执行崩（FIESTA 辛德拉、Carzzy 女警反向 E）；"小蜜蜂拉完了"</td></tr>
+    <tr><td>风险</td><td>G1 弹幕薄、单源待验证</td><td>0-1 落后心态；上单/中单英雄池质疑</td></tr>
+    <tr><td>G2 预期</td><td>延续则 2-0 概率上升</td><td>G2 官方阵容已换（安蓓萨/斯卡纳/维克托/艾希/萨勒芬妮）——调整信号</td></tr>
+  </table>
+</div>
+
+<!-- 7 决策落点 -->
+<div class="card">
+  <h2><span class="no">7</span>情报含义与决策落点</h2>
+  <ul>
+    <li><b>G1 结论：</b>FNC 1-0，官方确认；弹幕与官方一致（无分歧）。</li>
+    <li><b>G2 观察：</b>VIT 换阵（上单安蓓萨/中单维克托/下路艾希+萨勒芬妮）为调整信号；FNC 延续雷克顿/潘森/岩雀/卢锡安/米利欧。</li>
+    <li><b>动作：</b>G2 局中抓"阵容强度/换人效果"弹幕；芸阿娜跨场样本累计；官方 KDA 回填后更新选手画像。</li>
+  </ul>
+</div>
+
+<!-- 8 时间线 -->
+<div class="card">
+  <h2><span class="no">8</span>关键节点时间线</h2>
+  <table>
+    <tr><th>时间</th><th>事件</th></tr>
+    <tr><td>00:57-01:00</td><td>"小蜜蜂拉完了"（VIT 负锚）；技术暂停段弹幕中断</td></tr>
+    <tr><td>01:08-01:09</td><td>FIESTA 辛德拉"空地交闪→送"被集中批；Vladi 瑞兹被赞</td></tr>
+    <tr><td>01:29-01:30</td><td>"一波了""女警反向e直接送""暴打小蜜蜂"——G1 终结共振</td></tr>
+    <tr><td>01:31+</td><td>局间："杰斯没见到赢过"（G1 复盘）；G2 BP/换阵讨论</td></tr>
+  </table>
+</div>
+
+<!-- 9 预测登记 -->
+<div class="card">
+  <h2><span class="no">9</span>预测登记（已入 predictions.json · G1 结算回填）</h2>
+  <table>
+    <tr><th>预测</th><th>方向</th><th>类型</th><th>状态</th></tr>
+    <tr><td>"小蜜蜂拉完了"（00:57）</td><td>VIT 负锚</td><td>team_anchor</td><td>G1 应验（VIT 0-1）</td></tr>
+    <tr><td>"要翻了"（00:58）</td><td>FNC 翻盘预期</td><td>result_pred</td><td>G1 应验（FNC 胜）</td></tr>
+    <tr><td>Upset 芸阿娜（官方 window）</td><td>FNC 下路正锚</td><td>player_anchor</td><td>G1 胜局佐证 · 待跨场累计</td></tr>
+    <tr><td>FIESTA 辛德拉负锚（01:08）</td><td>VIT 中单执行差</td><td>player_anchor</td><td>G1 应验（交闪送/落败）</td></tr>
+    <tr><td>Vladi 瑞兹正锚（01:09）</td><td>FNC 中单状态好</td><td>player_anchor</td><td>G1 应验（胜局）</td></tr>
+  </table>
+</div>
+
+<!-- 10 规律 -->
+<div class="card">
+  <h2><span class="no">10</span>联赛规律与版本（沉淀层）</h2>
+  <ul>
+    <li>芸阿娜跨赛区热度（LCK 五杀 → LEC 选用并胜）——新英雄版本信号正锚候选累计第 2 样本。</li>
+    <li>VIT 输局模式：中下双核执行崩 + 关键失误（反向 E）——"操作失误型输局"画像。</li>
+    <li>LEC 低弹幕流量：Remember 单源仅 141 条/30 分钟——低流量场次需官方源为主、弹幕为辅。</li>
+  </ul>
+</div>
+
+<!-- 11 溯源 -->
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <table>
+    <tr><td>官方源</td><td>Riot API（01:52 抓取）：match inProgress、G1 completed（FNC gameWins 1-0）；G1/G2 阵容=官方 window</td></tr>
+    <tr><td>弹幕源</td><td>虎牙 Remember 528222（LEC 会话单源）；00:30-01:30</td></tr>
+    <tr><td>缺口</td><td>硕硕/毛毛未开播（缺口显式标注）；G1 终局 KDA/时长待官方回填；盘口数字未捕获</td></tr>
+  </table>
+  <p class="meta">生成时间：2026-08-29 01:59 CST · 情报原则：事实层=官方 window，弹幕=单源待验证，灰信号不升格。</p>
+</div>
+
+<p class="footer">弹幕情报 · 观众质疑非结论 · 比分以官方源为准 · Polymarket 电竞情报项目</p>
+</div>
+</body>
+</html>

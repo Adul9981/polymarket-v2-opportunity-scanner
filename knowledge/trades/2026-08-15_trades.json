@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-08-15",
+    "event_slug": "lol-shft-sk-2026-08-14",
+    "market_type": "game1",
+    "side": "SK Gaming",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 350,
+    "realized_pnl_usd": 200,
+    "final_pnl_usd": 200,
+    "outcome": "win",
+    "exit_executed": true,
+    "lesson_tags": ["conviction_ok", "pre_position_ok"],
+    "notes": "G1 SK：赛前买 150、赛中加 200（350 投入），SK 赢 G1 后仓位涨到 550（口述估值）。"
+  },
+  {
+    "date": "2026-08-15",
+    "event_slug": "lol-shft-sk-2026-08-14",
+    "market_type": "game2",
+    "side": "SK Gaming",
+    "strategy": "swing",
+    "template": "none",
+    "total_invested_usd": 550,
+    "realized_pnl_usd": 500,
+    "final_pnl_usd": 500,
+    "outcome": "win",
+    "exit_executed": true,
+    "lesson_tags": ["tp_ladder_ok"],
+    "notes": "G2 SK：全仓 550，49-50 卖出 160（G2 颠簸 39.5-85.5-42.5-99.5 验证不稳），留仓吃到 100c；最终 500+ 收益（口述）；全仓属重仓但部分锁盈执行正确；定价失真（强弱差距 vs 五五开）强侧价值样本。"
+  },
+  {
+    "date": "2026-08-15",
+    "event_slug": "lol-gx-vit-2026-08-14",
+    "market_type": "game1",
+    "side": "Team Vitality",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 300,
+    "realized_pnl_usd": 500,
+    "final_pnl_usd": 500,
+    "outcome": "win",
+    "exit_executed": true,
+    "lesson_tags": ["conviction_ok"],
+    "notes": "G1 VIT 完全碾压：赛前买 ~300，赚 ~500（口述）；VIT G1 100c。"
+  },
+  {
+    "date": "2026-08-15",
+    "event_slug": "lol-gx-vit-2026-08-14",
+    "market_type": "game2",
+    "side": "Team Vitality",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": 700,
+    "realized_pnl_usd": -460,
+    "final_pnl_usd": -460,
+    "outcome": "loss",
+    "exit_executed": true,
+    "lesson_tags": ["partial_tp_then_zero", "chased_high"],
+    "notes": "G2 VIT 94c 全仓想赚 900（假赛疑似：领先 1 万经济不打团/上单带线/射手肉装/解说提示未重视）；80c 高位未锁盈，崩盘 0.1c 只收回 240，亏 ~460；假赛疑似警示样本。"
+  }
+]

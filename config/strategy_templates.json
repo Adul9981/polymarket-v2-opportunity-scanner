@@ -1,0 +1,118 @@
+{
+  "version": "mvp-0.2",
+  "amount_mode": "fixed_usd",
+  "strategies": {
+    "A_DEEP_REVERSAL": {
+      "name": "A型 S1-深反：深度反转 / 彩票类",
+      "market_scope": ["game_winner", "match_winner"],
+      "use_case": "盘中/局内跌到 <10-15c（含 5c 以下极值）；归零预算内可接受。买入阶梯均衡权重 1/√价格、越低越多（15/12 档决定回本，4/2 档决定倍数）；止盈按档位归属（卖高留低），lot-based selling 需工具升级后精确执行。",
+      "default_match_budget_usd": 100,
+      "default_cycle_budget_usd": 60,
+      "max_cycles": 1,
+      "standard_buy_ladders": [
+        { "price": 0.15, "amount_usd": 5.5 },
+        { "price": 0.12, "amount_usd": 6.0 },
+        { "price": 0.10, "amount_usd": 7.0 },
+        { "price": 0.08, "amount_usd": 7.5 },
+        { "price": 0.06, "amount_usd": 8.5 },
+        { "price": 0.04, "amount_usd": 10.5 },
+        { "price": 0.02, "amount_usd": 15.0 }
+      ],
+      "standard_sell_plan": [
+        { "price": 0.50, "sell_cost_basis_usd": 11.5 },
+        { "price": 0.70, "sell_cost_basis_usd": 14.5 },
+        { "price": 0.85, "sell_cost_basis_usd": 8.5 }
+      ],
+      "lottery_cost_basis_usd": 25.5,
+      "execution_protection": "D2_PROFIT_LOCK",
+      "stop_new_entry_below": 0.01,
+      "stop_new_entry_above": 0.92
+    },
+    "A_STANDARD_MID_REVERSAL": {
+      "name": "中位80-S1：S1-标准中位反转（保守版）",
+      "market_scope": ["game_winner", "match_winner"],
+      "use_case": "中位80 家族（Mid80）：20-50c 中位深跌，未到极端彩票区；快速回本 + 锁利优先，彩票仓 15%。",
+      "default_match_budget_usd": 100,
+      "default_cycle_budget_usd": 80,
+      "max_cycles": 1,
+      "standard_buy_ladders": [
+        { "price": 0.40, "amount_usd": 24 },
+        { "price": 0.32, "amount_usd": 24 },
+        { "price": 0.25, "amount_usd": 16 },
+        { "price": 0.20, "amount_usd": 16 }
+      ],
+      "standard_sell_plan": [
+        { "price": 0.55, "sell_cost_basis_usd": 28 },
+        { "price": 0.70, "sell_cost_basis_usd": 28 },
+        { "price": 0.82, "sell_cost_basis_usd": 12 }
+      ],
+      "lottery_cost_basis_usd": 12,
+      "execution_protection": "D2_PROFIT_LOCK",
+      "stop_new_entry_below": 0.18,
+      "stop_new_entry_above": 0.92
+    },
+    "B_FAVORITE_DIP": {
+      "name": "中位80-S2：热门深回撤（主攻）",
+      "market_scope": ["game_winner", "match_winner"],
+      "use_case": "中位80 家族（Mid80）主攻：赛前热门 >=65%（最好 >=75%）；赛中回撤到 45c 档买入（触发率最高），止盈 62/75/88 + 10% 彩票。",
+      "entry_requires_direction_evidence": true,
+      "direction_evidence_options": [
+        "赛前热门 >=65%（最好 >=75%）",
+        "P5 上下文：首局失利 / 前半段落后导致的折价",
+        "主观看好（仅小仓，按信心模板降档）"
+      ],
+      "no_direction_evidence_action": "只建议/观察，不自动生成计划（2026-08-09 定：方向过滤为强制入场条件）",
+      "default_match_budget_usd": 100,
+      "default_cycle_budget_usd": 80,
+      "max_cycles": 1,
+      "standard_buy_ladders": [
+        { "price": 0.48, "amount_usd": 24 },
+        { "price": 0.45, "amount_usd": 32 },
+        { "price": 0.42, "amount_usd": 24 }
+      ],
+      "standard_sell_plan": [
+        { "price": 0.62, "sell_cost_basis_usd": 36 },
+        { "price": 0.75, "sell_cost_basis_usd": 28 },
+        { "price": 0.88, "sell_cost_basis_usd": 8 }
+      ],
+      "lottery_cost_basis_usd": 8,
+      "execution_protection": "D2_PROFIT_LOCK",
+      "stop_new_entry_below": 0.35,
+      "stop_new_entry_above": 0.95
+    }
+  },
+  "execution_protection": {
+    "D2_PROFIT_LOCK": {
+      "name": "D2：浮盈保护 / 自动锁盈",
+      "type": "execution_protection",
+      "applies_to": ["A_DEEP_REVERSAL", "A2_MID_SERIES_REVERSAL", "B_FAVORITE_DIP", "C_DOMINANT_COMPOUNDER", "P_PRE_POSITION"],
+      "trigger_min_profit_price": 0.60,
+      "major_lock_price": 0.75,
+      "final_trim_price": 0.80,
+      "max_lottery_cost_basis_usd": 10,
+      "max_lottery_cost_ratio": 0.2,
+      "trailing_protection": [
+        { "after_touch": 0.75, "stop_price": 0.68 },
+        { "after_touch": 0.80, "stop_price": 0.72 }
+      ],
+      "deep_entry_variant": {
+        "label": "S1-深反版 D2（均价 <=15c）",
+        "action_points": [0.70, 0.85],
+        "trailing_protection": [
+          { "after_touch": 0.70, "stop_price": 0.58 },
+          { "after_touch": 0.85, "stop_price": 0.75 }
+        ],
+        "lottery_cap_ratio": 0.2
+      },
+      "principle": "系统不是为了让我赚到最后一分钱，而是为了防止我把已经赚到的钱还回去。"
+    }
+  },
+  "execution_contract": {
+    "buy_ladders.amount_usd": "每档买入的固定美元金额。",
+    "sell_plan.sell_cost_basis_usd": "从已成交买入批次中，按该成本金额对应的 shares 计算卖出数量。",
+    "lottery_cost_basis_usd": "不主动挂普通止盈单、保留到高价或结算的彩票仓成本金额。",
+    "profit_lock_plan": "D2自动锁盈纪律：当浮盈扩大后，剩余仓不能超过彩票仓上限。",
+    "A_STANDARD_MID_REVERSAL": "S1-标准（中位反转）新增策略 key；工具接入前先用 A_DEEP_REVERSAL 流程手动指定档位，dry-run 验证后再启用。",
+    "market_scope": "模板适用的市场类型：game_winner=小局（Game/Map Winner）、match_winner=整场（Match/Series Winner·Moneyline）。生成计划前必须确认挂单市场类型；小局仓与整场仓不混用、不互相继承仓位（第三局起只有 Moneyline，无独立小市场）。"
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.ad.danmu-bro-bfx-shuoshuo</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/ad/.hermes/hermes-agent/venv/bin/python3</string>
+		<string>/Users/ad/Documents/polymarket/tools/run_danmu_session.py</string>
+		<string>--session</string>
+		<string>lck_bro_bfx_2026-08-28</string>
+		<string>--title</string>
+		<string>LCK 入围赛 BRO vs BFX 08-28（硕硕单路）</string>
+		<string>--room</string>
+		<string>huya_shuoshuo=https://www.huya.com/323444</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/ad/Documents/polymarket</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>StandardOutPath</key>
+	<string>/Users/ad/Documents/polymarket/runtime/danmu_sessions/lck_bro_bfx_2026-08-28/launchd.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/ad/Documents/polymarket/runtime/danmu_sessions/lck_bro_bfx_2026-08-28/launchd.err</string>
+</dict>
+</plist>

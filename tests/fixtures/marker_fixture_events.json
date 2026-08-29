@@ -1,0 +1,118 @@
+{
+  "snapshots": [
+    {
+      "simulated_now": "2026-08-07T09:30:00+00:00",
+      "events": [
+        {
+          "slug": "lol-test-a-vs-b-2026-08-07",
+          "title": "LoL: Team A vs Team B - LCK",
+          "startDate": "2026-08-07T09:00:00+00:00",
+          "closed": false,
+          "active": true,
+          "markets": [
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07-game-1-winner",
+              "groupItemTitle": "Game 1 Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["t1a", "t1b"],
+              "closed": false,
+              "active": true
+            },
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07-game-2-winner",
+              "groupItemTitle": "Game 2 Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["t2a", "t2b"],
+              "closed": false,
+              "active": true
+            },
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07",
+              "groupItemTitle": "Match Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["ma", "mb"],
+              "closed": false,
+              "active": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "simulated_now": "2026-08-07T10:00:00+00:00",
+      "events": [
+        {
+          "slug": "lol-test-a-vs-b-2026-08-07",
+          "title": "LoL: Team A vs Team B - LCK",
+          "startDate": "2026-08-07T09:00:00+00:00",
+          "closed": false,
+          "active": true,
+          "markets": [
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07-game-1-winner",
+              "groupItemTitle": "Game 1 Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["t1a", "t1b"],
+              "closed": true,
+              "active": false
+            },
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07-game-2-winner",
+              "groupItemTitle": "Game 2 Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["t2a", "t2b"],
+              "closed": false,
+              "active": true
+            },
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07",
+              "groupItemTitle": "Match Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["ma", "mb"],
+              "closed": false,
+              "active": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "simulated_now": "2026-08-07T10:45:00+00:00",
+      "events": [
+        {
+          "slug": "lol-test-a-vs-b-2026-08-07",
+          "title": "LoL: Team A vs Team B - LCK",
+          "startDate": "2026-08-07T09:00:00+00:00",
+          "closed": true,
+          "active": false,
+          "markets": [
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07-game-1-winner",
+              "groupItemTitle": "Game 1 Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["t1a", "t1b"],
+              "closed": true,
+              "active": false
+            },
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07-game-2-winner",
+              "groupItemTitle": "Game 2 Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["t2a", "t2b"],
+              "closed": true,
+              "active": false
+            },
+            {
+              "slug": "lol-test-a-vs-b-2026-08-07",
+              "groupItemTitle": "Match Winner",
+              "outcomes": ["Team A", "Team B"],
+              "clobTokenIds": ["ma", "mb"],
+              "closed": true,
+              "active": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

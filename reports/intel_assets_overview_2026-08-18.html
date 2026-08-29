@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>情报库数据资产总览 · 2026-08-18</title>
+<style>
+  :root{--bg:#f5f5f7;--card:#ffffff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","SF Pro Text","Helvetica Neue",Arial,sans-serif;line-height:1.55;padding:28px 16px 60px;}
+  .wrap{max-width:960px;margin:0 auto;}
+  header{padding:12px 0 20px;}
+  h1{font-size:26px;font-weight:700;letter-spacing:-0.2px;}
+  .sub{color:var(--sub);font-size:14px;margin-top:6px;}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:18px 0 26px;}
+  @media(min-width:640px){.stats{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .stat b{display:block;font-size:24px;font-weight:700;}
+  .stat span{font-size:12px;color:var(--sub);}
+  h2{font-size:18px;margin:26px 0 12px;font-weight:700;}
+  .cards{display:grid;grid-template-columns:1fr;gap:12px;}
+  @media(min-width:700px){.cards{grid-template-columns:1fr 1fr;}}
+  .card{background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.05);}
+  .card h3{font-size:15px;margin-bottom:6px;}
+  .card p{font-size:13px;color:var(--sub);}
+  .card code{font-size:11px;color:var(--accent);word-break:break-all;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05);font-size:13px;}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{background:#fafafc;font-size:12px;color:var(--sub);font-weight:600;}
+  tr:last-child td{border-bottom:none;}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:#eaf3ff;color:#0056a3;margin:2px 2px 0 0;}
+  .tag.warn{background:#fff1e8;color:#a1420c;}
+  .foot{margin-top:28px;color:var(--sub);font-size:12px;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>情报库数据资产总览</h1>
+    <div class="sub">情报库平台（任务 6）· 数据底座 · 更新于 2026-08-18 · 弹幕/评论均为主观数据，对外只展示聚合结论与统计</div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>46</b><span>结构化情报条目（6 类数据文件）</span></div>
+    <div class="stat"><b>~1.8万</b><span>弹幕样本（虎牙 + SOOP，近两日）</span></div>
+    <div class="stat"><b>175+</b><span>评论者画像（EurekaWTI 全量）</span></div>
+    <div class="stat"><b>4</b><span>假赛疑似案例（1 高度疑似×2 / 疑似×2）</span></div>
+  </div>
+
+  <h2>结构化数据层（docs/data/intel/）</h2>
+  <div class="cards">
+    <div class="card"><h3>matches.json · 4 场</h3><p>比赛情报：弹幕推断结果、关键信号、数据文件、报告与复盘链接（每场分析后更新）。</p><code>docs/data/intel/matches.json</code></div>
+    <div class="card"><h3>gray_signals.json · 5 条</h3><p>灰信号：假赛/剧本/卡盘质疑，含时段、关键词、关联盘口、严重度；只作风险标注。</p><code>docs/data/intel/gray_signals.json</code></div>
+    <div class="card"><h3>leagues.json · 5 个</h3><p>联赛档案：灰信号风险、覆盖平台/直播间、规律观察（LCK CL 风险已上调至低-中）。</p><code>docs/data/intel/leagues.json</code></div>
+    <div class="card"><h3>teams.json · 7 队</h3><p>队伍画像：弹幕提及、情绪、标签、盘面倾向、信任等级（BRO 新增瑞兹送局标签）。</p><code>docs/data/intel/teams.json</code></div>
+    <div class="card"><h3>players.json · 15 人</h3><p>选手画像：讨论焦点、褒贬、特征英雄、待确认项（新增 BRO 中单瑞兹待确认）。</p><code>docs/data/intel/players.json</code></div>
+    <div class="card"><h3>users.json · 10 人</h3><p>高价值弹幕用户：虎牙/SOOP 跨平台聚合，按专业特征分型，跨场累计可信度。</p><code>docs/data/intel/users.json</code></div>
+    <div class="card"><h3>评论情报</h3><p>Polymarket 评论区：规则库、series 层快照、comment_intel 已接入扫描流水线；EurekaWTI 单日 5/5 命中。</p><code>knowledge/COMMENT_ANALYSIS_RULES.md · COMMENTERS.md</code></div>
+    <div class="card"><h3>弹幕情报</h3><p>虎牙 + SOOP 全链路（抓取→监控→分析→复盘）；密度峰值=价格异动窗口已多次应验。</p><code>knowledge/DANMU_README.md · DANMU_INTEL.md</code></div>
+  </div>
+
+  <h2>近期比赛 × 情报关联</h2>
+  <table>
+    <tr><th>比赛</th><th>结果</th><th>复盘</th><th>弹幕/评论</th><th>灰信号 / 案例</th></tr>
+    <tr>
+      <td>T1 vs DNS<br><span style="color:var(--sub)">08-17 · BO5</span></td>
+      <td>DNS 3:1</td>
+      <td><a href="../knowledge/reviews/2026-08-17_lol-t1-dnf-2026-08-17_g1g2.md">复盘</a></td>
+      <td>评论区暂停舆情（match fixing / chronobreak）</td>
+      <td><span class="tag warn">案例 2 疑似</span><span class="tag">IS-001 confirmed</span></td>
+    </tr>
+    <tr>
+      <td>NAVI vs TH<br><span style="color:var(--sub)">08-17 · LEC</span></td>
+      <td>NAVI 2:0</td>
+      <td><a href="../knowledge/reviews/2026-08-17_lol-navi-th-2026-08-17_navi.md">复盘</a></td>
+      <td>弹幕任务论 248 条关键词命中</td>
+      <td><span class="tag warn">案例 3 疑似观察</span><span class="tag">用户 65c 正样本</span></td>
+    </tr>
+    <tr>
+      <td>GGA vs BRO<br><span style="color:var(--sub)">08-18 · LCK CL</span></td>
+      <td>1:1 待终局</td>
+      <td><a href="../knowledge/reviews/2026-08-18_lol-genga-bro1-2026-08-18_genga.md">复盘</a></td>
+      <td>两路弹幕（虎牙+SOOP）指瑞兹故意送</td>
+      <td><span class="tag warn">案例 4 高度疑似</span><span class="tag">LCK CL 观察升级</span></td>
+    </tr>
+    <tr>
+      <td>DNS vs NS（K杯决赛）<br><span style="color:var(--sub)">08-18</span></td>
+      <td>DNS 3:0</td>
+      <td>DANMU_INTEL</td>
+      <td>暂停潮灰信号（做局/回溯冠军）</td>
+      <td><span class="tag warn">灰信号 40+ 条</span></td>
+    </tr>
+  </table>
+
+  <h2>关键结论</h2>
+  <div class="cards">
+    <div class="card"><h3>① 弹幕密度峰值 = 价格异动窗口</h3><p>GGA/BRO（20:40 峰值 82 条/分 vs BRO 91c→0.5c）、DNS/NS 多次应验；可作实时事件告警。</p></div>
+    <div class="card"><h3>② 评论区 lead-lag 可检验</h3><p>方向性发言与后续价格可对照（EurekaWTI 08-17 单日 5/5 + DNS 3:1 系列赛验证）。</p></div>
+    <div class="card"><h3>③ 两路独立弹幕共识 = 强灰信号</h3><p>虎牙中文 + SOOP 韩语指向同一选手（瑞兹）= 高价值印证，但仍是"观众质疑，非结论"。</p></div>
+    <div class="card"><h3>④ LCK CL 联赛级观察升级</h3><p>"高位崩盘 + 送局论"从个例（DNS/NS 暂停潮）升级为联赛规律观察项，待统计验证。</p></div>
+  </div>
+
+  <div class="foot">
+    溯源：数据文件见 docs/data/danmu/、docs/data/snapshots/*/comments/、docs/data/intel/；
+    规则见 knowledge/DANMU_CAPTURE_RULES.md、COMMENT_ANALYSIS_RULES.md；
+    灰信号纪律：只作风险标注与盘口对照素材，不作为假赛证据；对外呈现写明"观众质疑，非结论"。
+  </div>
+</div>
+</body>
+</html>

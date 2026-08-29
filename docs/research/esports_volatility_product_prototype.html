@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>预测市场网格交易工具原型</title>
+  <style>
+    :root {
+      --bg: #f6f7f8;
+      --panel: #ffffff;
+      --text: #17191c;
+      --muted: #68707d;
+      --line: #dfe3e8;
+      --soft: #eef1f4;
+      --primary: #0f62fe;
+      --primary-soft: #e8f1ff;
+      --green: #0a7f4f;
+      --green-soft: #e7f6ef;
+      --red: #c81e3a;
+      --red-soft: #fdecef;
+      --amber: #a66100;
+      --amber-soft: #fff4df;
+      --ink: #222831;
+      --shadow: 0 10px 30px rgba(20, 28, 38, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .app {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .subtle {
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    select,
+    input {
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 10px;
+      background: var(--panel);
+      color: var(--text);
+      font: inherit;
+    }
+
+    input {
+      width: 96px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+
+    .path {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .path-step {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 10px;
+      min-height: 78px;
+    }
+
+    .path-step strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .path-step.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: var(--panel);
+      min-height: 72px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .metric strong {
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 700;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge.ready {
+      background: var(--amber-soft);
+      color: var(--amber);
+      border-color: #e7c37e;
+    }
+
+    .badge.trade {
+      background: var(--green-soft);
+      color: var(--green);
+      border-color: #9ed7bd;
+    }
+
+    .badge.stop {
+      background: var(--red-soft);
+      color: var(--red);
+      border-color: #eaa4b1;
+    }
+
+    .two-layer {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .layer-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--panel);
+    }
+
+    .layer-box ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .pattern-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .pattern-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: var(--panel);
+      min-height: 112px;
+    }
+
+    .pattern-card.active {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .pattern-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .pattern-card span {
+      display: block;
+      color: var(--muted);
+    }
+
+    .chart-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fbfcfd;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .score-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 12px;
+      margin-top: 12px;
+    }
+
+    .score {
+      display: grid;
+      grid-template-columns: 92px 1fr 40px;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .bar div {
+      height: 100%;
+      width: var(--w);
+      background: var(--primary);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .flow-step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px;
+      background: var(--panel);
+      min-height: 92px;
+    }
+
+    .flow-step strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 7px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 700;
+      background: #fafbfc;
+    }
+
+    .demo-note {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .note {
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .note.good {
+      background: var(--green-soft);
+      border-color: #9ed7bd;
+    }
+
+    .note.warn {
+      background: var(--amber-soft);
+      border-color: #e7c37e;
+    }
+
+    .note.stop {
+      background: var(--red-soft);
+      border-color: #eaa4b1;
+    }
+
+    .json-block {
+      margin: 10px 0 0;
+      padding: 12px;
+      background: #111827;
+      color: #e5e7eb;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 980px) {
+      .grid,
+      .two-layer,
+      .pattern-grid,
+      .score-list,
+      .flow,
+      .demo-note {
+        grid-template-columns: 1fr;
+      }
+
+      .path,
+      .status-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      header {
+        flex-direction: column;
+      }
+
+      .toolbar {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .app {
+        padding: 12px;
+      }
+
+      .path,
+      .status-row {
+        grid-template-columns: 1fr;
+      }
+
+      .score {
+        grid-template-columns: 80px 1fr 34px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>预测市场网格交易工具原型</h1>
+        <div class="subtle">从 0-1 有界价格出发：机会发现层识别可网格市场，执行管理层负责固定预算、多轮挂单、分批回收和彩票仓。</div>
+      </div>
+      <div class="toolbar" aria-label="演示控制">
+        <label>
+          示例
+          <select id="scenario">
+            <option value="mouz">3DMAX-MOUZ：反复穿越</option>
+            <option value="nip">NIP-WB：彩票仓命中</option>
+            <option value="bestia">BESTIA-Galorys：中位震荡后突破</option>
+            <option value="wnba">WNBA：第四节终局跳变</option>
+          </select>
+        </label>
+        <label>
+          单场预算
+          <input id="budget" type="number" min="20" step="10" value="100">
+        </label>
+        <label>
+          彩票仓金额
+          <input id="lottery" type="number" min="0" max="50" step="1" value="3.75">
+        </label>
+      </div>
+    </header>
+
+    <section class="path" aria-label="产品路径">
+      <div class="path-step active"><strong>1 市场扫描</strong><span class="subtle">找高波动预测市场</span></div>
+      <div class="path-step active"><strong>2 候选池</strong><span class="subtle">价格 >= 25c、成交量高、spread 可接受</span></div>
+      <div class="path-step active"><strong>3 早期预警</strong><span class="subtle">缩距或第一次穿越 50%</span></div>
+      <div class="path-step active"><strong>4 交易配置</strong><span class="subtle">生成买入阶梯和卖出计划</span></div>
+      <div class="path-step"><strong>5 执行脚本</strong><span class="subtle">成交后立即挂卖单</span></div>
+      <div class="path-step"><strong>6 复盘</strong><span class="subtle">记录每轮信号和盈亏</span></div>
+    </section>
+
+    <section class="two-layer" aria-label="两层产品结构">
+      <div class="layer-box">
+        <h2>第一层：机会发现层</h2>
+        <div class="subtle">核心是判断这个市场是否适合开网格。</div>
+        <ul>
+          <li>赛前粗筛候选池</li>
+          <li>用赔率、盘口、成交数据识别 READY / TRADE</li>
+          <li>先判形态，再算纠缠指数</li>
+        </ul>
+      </div>
+      <div class="layer-box">
+        <h2>第二层：执行管理层</h2>
+        <div class="subtle">核心是成交后立刻挂卖，降低滞后。</div>
+        <ul>
+          <li>固定单场预算</li>
+          <li>每场最多 2 轮，先简单验证</li>
+          <li>分批卖出并保留彩票仓</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="pattern-grid" aria-label="赔率形态库">
+      <div class="pattern-card" data-pattern="early">
+        <strong>早期缩距</strong>
+        <span>25c-35c 快速拉到 40c-55c，先进入 READY。</span>
+      </div>
+      <div class="pattern-card" data-pattern="cross">
+        <strong>50% 反复穿越</strong>
+        <span>多次互换优势，适合启动 1-2 轮波动交易。</span>
+      </div>
+      <div class="pattern-card" data-pattern="breakout">
+        <strong>中位震荡后突破</strong>
+        <span>前段可交易，突破 80c 后减少新开。</span>
+      </div>
+      <div class="pattern-card" data-pattern="terminal">
+        <strong>终局封顶/归零</strong>
+        <span>95c/5c 以后不新开，只管理已有仓位。</span>
+      </div>
+      <div class="pattern-card" data-pattern="fake">
+        <strong>低流动性假波动</strong>
+        <span>图好看但盘口薄，直接 SKIP。</span>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="panel" aria-label="机会发现演示">
+        <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px;flex-wrap:wrap">
+          <div>
+            <h2 id="case-title">3DMAX-MOUZ Map 2</h2>
+            <div id="case-sub" class="subtle">从 25c 快速拉近，第一次穿越后进入 READY，多次穿越后 TRADE。</div>
+          </div>
+          <span id="signal-badge" class="badge trade">TRADE</span>
+        </div>
+
+        <div class="status-row">
+          <div class="metric"><span>早期预警分</span><strong id="early-score">86</strong></div>
+          <div class="metric"><span>纠缠指数</span><strong id="chop-score">88</strong></div>
+          <div class="metric"><span>穿越 50%</span><strong id="cross-count">4 次</strong></div>
+          <div class="metric"><span>建议动作</span><strong id="action-text">启动配置</strong></div>
+        </div>
+
+        <div class="chart-box">
+          <svg viewBox="0 0 860 360" role="img" aria-label="价格走势和交易点">
+            <g id="gridlines"></g>
+            <path id="price-main" fill="none" stroke="#0f62fe" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path id="price-other" fill="none" stroke="#c81e3a" stroke-width="3" stroke-dasharray="7 8" stroke-linecap="round" stroke-linejoin="round" opacity="0.72"></path>
+            <g id="markers"></g>
+            <text x="26" y="34" fill="#17191c" font-weight="700" id="chart-label">目标方价格路径</text>
+            <text x="26" y="58" fill="#68707d" id="chart-note">READY 不等长时间纠缠；TRADE 由穿越与流动性确认。</text>
+            <text x="790" y="62" fill="#68707d">100%</text>
+            <text x="794" y="188" fill="#68707d">50%</text>
+            <text x="806" y="318" fill="#68707d">0%</text>
+          </svg>
+        </div>
+
+        <div class="score-list">
+          <div class="score"><span>快速缩距</span><div class="bar"><div id="bar-gap" style="--w:84%"></div></div><strong id="gap-score">84</strong></div>
+          <div class="score"><span>穿越 50%</span><div class="bar"><div id="bar-cross" style="--w:88%"></div></div><strong id="cross-score">88</strong></div>
+          <div class="score"><span>累计波动</span><div class="bar"><div id="bar-vol" style="--w:80%"></div></div><strong id="vol-score">80</strong></div>
+          <div class="score"><span>流动性</span><div class="bar"><div id="bar-liq" style="--w:92%"></div></div><strong id="liq-score">92</strong></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="执行管理演示">
+        <h2>执行管理演示</h2>
+        <div class="subtle">每次买单成交后，执行脚本立即挂卖单；系统不等待人工追价。</div>
+
+        <div class="flow" aria-label="执行路径">
+          <div class="flow-step"><strong>1 买入阶梯</strong><span id="flow-buy">30c / 25c / 20c</span></div>
+          <div class="flow-step"><strong>2 成交后挂卖</strong><span id="flow-sell">+8c / +15c / +25c</span></div>
+          <div class="flow-step"><strong>3 回收</strong><span id="flow-recover">卖出固定成本份额</span></div>
+          <div class="flow-step"><strong>4 彩票仓</strong><span id="flow-lottery">保留 $3.75</span></div>
+          <div class="flow-step"><strong>5 下一轮</strong><span id="flow-cycle">最多 2 轮</span></div>
+        </div>
+
+        <h3 style="margin-top:14px">交易计划</h3>
+        <table aria-label="交易计划表">
+          <thead>
+            <tr>
+              <th>动作</th>
+              <th>价格</th>
+              <th>固定金额</th>
+              <th>目的</th>
+            </tr>
+          </thead>
+          <tbody id="plan-body"></tbody>
+        </table>
+
+        <h3 style="margin-top:14px">演示盈亏</h3>
+        <div class="demo-note">
+          <div class="note good"><strong id="shares-text">100 shares</strong><div class="subtle">本轮买入份额</div></div>
+          <div class="note warn"><strong id="realized-text">+$10.90</strong><div class="subtle">分批卖出后锁定</div></div>
+          <div class="note stop"><strong id="lottery-text">+$10.00</strong><div class="subtle">彩票仓命中 100c 的额外收益</div></div>
+        </div>
+
+        <h3 style="margin-top:14px">生成给执行脚本的配置</h3>
+        <pre class="json-block" id="config-json"></pre>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const scenarios = {
+      mouz: {
+        title: "3DMAX-MOUZ Map 2",
+        sub: "从 25c 快速拉近，第一次穿越后进入 READY，多次穿越后 TRADE。",
+        pattern: "cross",
+        signal: "TRADE",
+        badgeClass: "trade",
+        early: 86,
+        chop: 88,
+        crosses: 4,
+        action: "启动配置",
+        scores: { gap: 84, cross: 88, vol: 80, liq: 92 },
+        main: [25, 27, 33, 41, 49, 54, 47, 58, 43, 52, 39, 56, 48, 61, 42, 53, 38, 54],
+        other: [75, 73, 67, 59, 51, 46, 53, 42, 57, 48, 61, 44, 52, 39, 58, 47, 62, 46],
+        markers: [
+          { index: 4, label: "READY", type: "ready" },
+          { index: 6, label: "买 28c", type: "buy" },
+          { index: 9, label: "卖 36c", type: "sell" },
+          { index: 11, label: "卖 43c", type: "sell" },
+          { index: 15, label: "彩票仓", type: "lottery" }
+        ],
+        plan: [
+          ["买入", "30c / 25c / 20c", "$10 / $10 / $5", "只接低成本回落"],
+          ["卖出 1", "40c", "$7.50 成本份额", "先回收风险"],
+          ["卖出 2", "50c", "$7.50 成本份额", "锁定主要利润"],
+          ["卖出 3", "60c", "$6.25 成本份额", "释放大部分仓位"],
+          ["彩票仓", "保留", "$3.75 成本份额", "捕捉尾部收益"]
+        ],
+        averageEntry: 0.25,
+        cycleBudgetRate: 0.25
+      },
+      nip: {
+        title: "NIP-WB Game 1",
+        sub: "前段低价买入、反弹回收；到 99.9% 后停止新开，只管理彩票仓。",
+        pattern: "terminal",
+        signal: "STOP_NEW",
+        badgeClass: "stop",
+        early: 72,
+        chop: 64,
+        crosses: 1,
+        action: "停新开",
+        scores: { gap: 70, cross: 45, vol: 74, liq: 68 },
+        main: [38, 38, 39, 36, 34, 31, 18, 9, 8, 21, 38, 52, 93, 96, 95, 99, 99.9],
+        other: [62, 62, 61, 64, 66, 69, 82, 91, 92, 79, 62, 48, 7, 4, 5, 1, 0.1],
+        markers: [
+          { index: 6, label: "买 18c", type: "buy" },
+          { index: 10, label: "卖 33c", type: "sell" },
+          { index: 11, label: "卖 43c", type: "sell" },
+          { index: 12, label: "彩票命中", type: "lottery" },
+          { index: 15, label: "停新开", type: "stop" }
+        ],
+        plan: [
+          ["买入", "20c / 18c", "$15 / $10", "只在深回撤时参与"],
+          ["卖出 1", "均价 +10c", "$10 成本份额", "快速回收本金"],
+          ["卖出 2", "均价 +22c", "$10 成本份额", "锁定利润"],
+          ["彩票仓", "保留", "$5 成本份额", "等待极端反转"],
+          ["停新开", ">92c", "全部停止", "避免终局追价"]
+        ],
+        averageEntry: 0.20,
+        cycleBudgetRate: 0.25
+      },
+      bestia: {
+        title: "BESTIA-Galorys Map 3",
+        sub: "长时间围绕 50% 中位震荡，后段向 75/25 突破；前段适合交易，突破后停止新开。",
+        pattern: "breakout",
+        signal: "READY",
+        badgeClass: "ready",
+        early: 78,
+        chop: 82,
+        crosses: 5,
+        action: "准备交易",
+        scores: { gap: 76, cross: 86, vol: 88, liq: 78 },
+        main: [61, 55, 47, 58, 44, 67, 47, 46, 52, 38, 35, 51, 41, 49, 33, 57, 44, 62, 29, 48, 42, 66, 63, 71, 84, 75],
+        other: [39, 45, 53, 42, 56, 33, 53, 54, 48, 62, 65, 49, 59, 51, 67, 43, 56, 38, 71, 52, 58, 34, 37, 29, 16, 27],
+        markers: [
+          { index: 2, label: "第一次穿越", type: "ready" },
+          { index: 4, label: "买 44c", type: "buy" },
+          { index: 5, label: "卖 52c", type: "sell" },
+          { index: 14, label: "买 33c", type: "buy" },
+          { index: 21, label: "卖 48c", type: "sell" },
+          { index: 24, label: "停新开", type: "stop" }
+        ],
+        plan: [
+          ["准备", "首次穿越 50%", "READY", "生成配置但不追高"],
+          ["买入", "45c / 35c / 30c", "$8 / $10 / $7", "接中位回落"],
+          ["卖出 1", "均价 +8c", "$7.50 成本份额", "快速回收"],
+          ["卖出 2", "均价 +15c", "$10 成本份额", "锁定利润"],
+          ["突破后", ">80c", "停止新开", "只管理已有仓位"]
+        ],
+        averageEntry: 0.35,
+        cycleBudgetRate: 0.25
+      },
+      wnba: {
+        title: "Connecticut Sun-Chicago Sky",
+        sub: "第四节 3 分钟内从中位拉扯快速进入 98/3，典型终局跳变；早段可网格，末段停止新开。",
+        pattern: "terminal",
+        signal: "STOP_NEW",
+        badgeClass: "stop",
+        early: 68,
+        chop: 76,
+        crosses: 3,
+        action: "只管理仓位",
+        scores: { gap: 72, cross: 76, vol: 84, liq: 80 },
+        main: [66, 64, 58, 60, 52, 47, 41, 39, 31, 28, 43, 52, 33, 25, 38, 35, 49, 55, 63, 58, 68, 66, 76, 77, 98],
+        other: [34, 36, 42, 40, 48, 53, 59, 61, 69, 72, 57, 48, 67, 75, 62, 65, 51, 45, 37, 42, 32, 34, 24, 23, 3],
+        markers: [
+          { index: 5, label: "第一次穿越", type: "ready" },
+          { index: 9, label: "买 28c", type: "buy" },
+          { index: 11, label: "卖 41c", type: "sell" },
+          { index: 13, label: "买 25c", type: "buy" },
+          { index: 18, label: "卖 40c", type: "sell" },
+          { index: 24, label: "停新开", type: "stop" }
+        ],
+        plan: [
+          ["准备", "首次穿越 50%", "READY", "进入网格准备"],
+          ["买入", "30c / 25c", "$15 / $10", "接第四节回落"],
+          ["卖出 1", "均价 +8c", "$10 成本份额", "先回收本金"],
+          ["卖出 2", "均价 +15c", "$10 成本份额", "锁定利润"],
+          ["终局", ">92c", "停止新开", "只管理已有彩票仓"]
+        ],
+        averageEntry: 0.25,
+        cycleBudgetRate: 0.25
+      }
+    };
+
+    const els = {
+      scenario: document.getElementById("scenario"),
+      budget: document.getElementById("budget"),
+      lottery: document.getElementById("lottery"),
+      title: document.getElementById("case-title"),
+      sub: document.getElementById("case-sub"),
+      badge: document.getElementById("signal-badge"),
+      early: document.getElementById("early-score"),
+      chop: document.getElementById("chop-score"),
+      crosses: document.getElementById("cross-count"),
+      action: document.getElementById("action-text"),
+      gridlines: document.getElementById("gridlines"),
+      main: document.getElementById("price-main"),
+      other: document.getElementById("price-other"),
+      markers: document.getElementById("markers"),
+      plan: document.getElementById("plan-body"),
+      shares: document.getElementById("shares-text"),
+      realized: document.getElementById("realized-text"),
+      lotteryText: document.getElementById("lottery-text"),
+      config: document.getElementById("config-json")
+    };
+
+    function x(index, length) {
+      return 46 + (index / (length - 1)) * 700;
+    }
+
+    function y(value) {
+      return 318 - (value / 100) * 256;
+    }
+
+    function path(values) {
+      return values.map((value, index) => {
+        const prefix = index === 0 ? "M" : "L";
+        return `${prefix}${x(index, values.length).toFixed(1)} ${y(value).toFixed(1)}`;
+      }).join(" ");
+    }
+
+    function renderGrid() {
+      const lines = [0, 25, 50, 75, 100].map(value => {
+        const yy = y(value).toFixed(1);
+        return `<line x1="46" x2="746" y1="${yy}" y2="${yy}" stroke="#c8ced6" stroke-dasharray="2 8"></line>`;
+      }).join("");
+      els.gridlines.innerHTML = lines;
+    }
+
+    function markerColor(type) {
+      if (type === "buy") return "#0a7f4f";
+      if (type === "sell") return "#a66100";
+      if (type === "stop") return "#c81e3a";
+      if (type === "lottery") return "#7c3aed";
+      return "#0f62fe";
+    }
+
+    function renderMarkers(data) {
+      els.markers.innerHTML = data.markers.map(marker => {
+        const px = x(marker.index, data.main.length);
+        const py = y(data.main[marker.index]);
+        const tx = Math.min(px + 10, 700);
+        return `
+          <g>
+            <circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="7" fill="${markerColor(marker.type)}"></circle>
+            <text x="${tx.toFixed(1)}" y="${(py - 10).toFixed(1)}" fill="#17191c" font-size="13" font-weight="700">${marker.label}</text>
+          </g>
+        `;
+      }).join("");
+    }
+
+    function setScore(name, value) {
+      document.getElementById(`${name}-score`).textContent = value;
+      document.getElementById(`bar-${name}`).style.setProperty("--w", `${value}%`);
+    }
+
+    function currency(value) {
+      return `$${value.toFixed(2)}`;
+    }
+
+    function renderPlan(data) {
+      els.plan.innerHTML = data.plan.map(row => `
+        <tr>
+          <td>${row[0]}</td>
+          <td>${row[1]}</td>
+          <td>${row[2]}</td>
+          <td>${row[3]}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderNumbers(data) {
+      const budget = Number(els.budget.value || 100);
+      const cycleBudget = budget * data.cycleBudgetRate;
+      const lotteryAmount = Math.min(Number(els.lottery.value || 0), cycleBudget);
+      const shares = cycleBudget / data.averageEntry;
+      const soldCostBasis = Math.max(0, cycleBudget - lotteryAmount);
+      const soldShares = soldCostBasis / data.averageEntry;
+      const lotteryShares = lotteryAmount / data.averageEntry;
+      const realizedPrice = data.averageEntry + 0.13;
+      const realizedValue = soldShares * realizedPrice;
+      const cost = cycleBudget;
+      const lockedProfit = realizedValue - cost;
+      const lotteryHit = lotteryShares * 1;
+
+      els.shares.textContent = `${shares.toFixed(0)} shares`;
+      els.realized.textContent = `${lockedProfit >= 0 ? "+" : ""}${currency(lockedProfit)}`;
+      els.lotteryText.textContent = `+${currency(lotteryHit)}`;
+
+      document.getElementById("flow-lottery").textContent = `保留 ${currency(lotteryAmount)} 成本`;
+
+      const sellCostA = moneyOrZero(cycleBudget * 0.30);
+      const sellCostB = moneyOrZero(cycleBudget * 0.30);
+      const sellCostC = moneyOrZero(Math.max(0, cycleBudget - lotteryAmount - sellCostA - sellCostB));
+
+      const config = {
+        market_slug: data.title.toLowerCase().replaceAll(" ", "-"),
+        signal: data.signal,
+        amount_mode: "fixed_usd",
+        match_budget: budget,
+        cycle_budget: Number(cycleBudget.toFixed(2)),
+        max_cycles: 2,
+        buy_ladders: data.plan[0][1],
+        sell_plan: [
+          { price: 0.40, sell_cost_basis_usd: sellCostA },
+          { price: 0.50, sell_cost_basis_usd: sellCostB },
+          { price: 0.60, sell_cost_basis_usd: sellCostC }
+        ],
+        lottery_cost_basis_usd: Number(lotteryAmount.toFixed(2)),
+        stop_new_entry_below: 0.08,
+        stop_new_entry_above: 0.92
+      };
+      els.config.textContent = JSON.stringify(config, null, 2);
+    }
+
+    function moneyOrZero(value) {
+      return Number(Math.max(0, value).toFixed(2));
+    }
+
+    function renderPattern(data) {
+      document.querySelectorAll(".pattern-card").forEach(card => {
+        card.classList.toggle("active", card.dataset.pattern === data.pattern);
+      });
+    }
+
+    function render() {
+      const data = scenarios[els.scenario.value];
+
+      els.title.textContent = data.title;
+      els.sub.textContent = data.sub;
+      els.badge.textContent = data.signal;
+      els.badge.className = `badge ${data.badgeClass}`;
+      els.early.textContent = data.early;
+      els.chop.textContent = data.chop;
+      els.crosses.textContent = `${data.crosses} 次`;
+      els.action.textContent = data.action;
+
+      els.main.setAttribute("d", path(data.main));
+      els.other.setAttribute("d", path(data.other));
+      renderMarkers(data);
+      renderPlan(data);
+      renderNumbers(data);
+      renderPattern(data);
+
+      setScore("gap", data.scores.gap);
+      setScore("cross", data.scores.cross);
+      setScore("vol", data.scores.vol);
+      setScore("liq", data.scores.liq);
+    }
+
+    renderGrid();
+    render();
+    els.scenario.addEventListener("change", render);
+    els.budget.addEventListener("input", render);
+    els.lottery.addEventListener("input", render);
+  </script>
+</body>
+</html>

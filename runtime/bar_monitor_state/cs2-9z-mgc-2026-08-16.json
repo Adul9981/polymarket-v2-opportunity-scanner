@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "slug": "cs2-9z-mgc-2026-08-16",
+  "targets": {
+    "cs2-9z-mgc-2026-08-16-game1|magic": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.455,
+      "last_pattern_labels": [
+        "A7_强强对话错杀"
+      ]
+    },
+    "cs2-9z-mgc-2026-08-16-game2|magic": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.38,
+      "last_pattern_labels": [
+        "C1_中位震荡"
+      ]
+    },
+    "cs2-9z-mgc-2026-08-16|magic": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "above_entry",
+      "high_water": 0.365,
+      "last_pattern_labels": [
+        "未知"
+      ]
+    }
+  }
+}

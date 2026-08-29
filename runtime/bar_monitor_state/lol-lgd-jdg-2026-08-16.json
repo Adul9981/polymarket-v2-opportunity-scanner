@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "slug": "lol-lgd-jdg-2026-08-16",
+  "targets": {
+    "lol-lgd-jdg-2026-08-16-game1|LGD Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "below_stop",
+      "last_action_key": "stop_new_entry|buy|",
+      "last_pattern_labels": [
+        "B4_直线阴跌",
+        "B4_低开阴跌"
+      ]
+    },
+    "lol-lgd-jdg-2026-08-16-game2|LGD Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "last_action_key": "no_entry_high|buy|",
+      "last_pattern_labels": [
+        "A2_中位U型反转",
+        "A5_W型双底"
+      ]
+    },
+    "lol-lgd-jdg-2026-08-16|LGD Gaming": {
+      "strategy": "A_DEEP_REVERSAL",
+      "spent_usd": 0.0,
+      "active_buy_levels": [],
+      "filled_levels": [],
+      "last_zone": "terminal_high",
+      "last_action_key": "no_entry_high|buy|",
+      "high_water": 0.365,
+      "last_pattern_labels": [
+        "A1_V型极值反转",
+        "A5_W型双底"
+      ]
+    }
+  }
+}

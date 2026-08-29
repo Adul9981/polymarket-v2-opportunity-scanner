@@ -1,0 +1,30 @@
+{
+  "slug": "lol-ig1-lng-2026-08-09",
+  "title": "Invictus Gaming vs LNG Esports (BO3) - LPL Group Nirvana",
+  "league": "LPL",
+  "bo": 3,
+  "date": "2026-08-09",
+  "series": {
+    "games_played": 2,
+    "series_score": "IG 2-0 LNG",
+    "series_finished": true,
+    "note": "系列赛结束，IG 横扫"
+  },
+  "games": [
+    {
+      "game": 1,
+      "game_status": "finished",
+      "winner": "IG",
+      "order_status": "no_opportunity",
+      "note": "IG 66-96c 一路走高，未进 S2 回撤区(42-48c)，无信号未挂单"
+    },
+    {
+      "game": 2,
+      "game_status": "finished",
+      "winner": "IG",
+      "order_status": "no_opportunity",
+      "note": "G2 70.5-95.5c，terminal_high 收场，无信号"
+    }
+  ],
+  "last_updated": "2026-08-09T09:09:45+00:00"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "session": "cs_ewc_2026-08-23_eve",
+  "title": "CS2 EWC 晚场 · 弹幕实时情报",
+  "state": "running",
+  "updated_at": "2026-08-24T07:39:10+00:00",
+  "report": "reports/intel_danmu_live_cs_ewc_2026-08-23_eve.html",
+  "intel_json": "runtime/danmu_sessions/cs_ewc_2026-08-23_eve/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "csboy_123321",
+      "url": "https://www.huya.com/123321",
+      "state": "offline_waiting",
+      "started_at": "2026-08-23T22:00:16+00:00",
+      "heartbeat_at": "2026-08-24T07:39:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】EWC闭幕式",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-23T22:00:20+00:00",
+      "restart_count": 2
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "captainmo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "offline_waiting",
+      "started_at": "2026-08-23T21:43:36+00:00",
+      "heartbeat_at": "2026-08-24T07:39:04+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】1绿龙-FUT 决赛BO5",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-23T21:43:36+00:00",
+      "restart_count": 1
+    }
+  ]
+}

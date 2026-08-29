@@ -1,0 +1,523 @@
+{
+  "meta": {
+    "total": 67022,
+    "active_users": 15951,
+    "window_utc": [
+      "2026-08-21 08:56",
+      "2026-08-22 02:47"
+    ],
+    "density_per_min": 62.6,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "tanavi",
+        "感觉我和Navi不在了"
+      ]
+    },
+    "T1": {
+      "mentions": 292,
+      "pos": 13,
+      "neg": 19,
+      "samples": [
+        "teddy在t1的时候拿过s赛冠军吗",
+        "这场不能2比0啊 不然T1就跟WE那场重合了",
+        "那T1要和blg冲突了",
+        "T1还没开啊",
+        "我是穿越者，今年bin哥1V5，乱杀T1夺冠。"
+      ]
+    },
+    "DNS": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "最可惜还是DNS 打野换迟了",
+        "p小将还有冠军呢，dns把他踢了直接起飞了",
+        "p小将还有冠军呢，dns把他踢了直接起飞了"
+      ]
+    },
+    "KT": {
+      "mentions": 134,
+      "pos": 6,
+      "neg": 27,
+      "samples": [
+        "kt太菜了，有什么好看",
+        "看完啊，kt有什么好看",
+        "隔壁 KT VS T1",
+        "kt太他妈菜了",
+        "kt太菜了，有什么好看"
+      ]
+    },
+    "HLE": {
+      "mentions": 9,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "HLE夺冠就是lol历史上最强大的冠军",
+        "AL这辅助去HLE，hle就无敌了",
+        "天天吹al野辅去hle组成银河战舰的，不知道在吹什么",
+        "我说实话塔赞不菜但是粉丝太魔怔了，还让他们去hle的都来了",
+        "hle只要输t1就是宙斯打不过多兰，t1输死中单都是不粘锅"
+      ]
+    },
+    "GEN": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "可惜你不是gen",
+        "跟GENG那把一模一样小龙四人发病",
+        "胚子的卢把把被ban GenG貌似都ban卢",
+        "这不是GEN前几天的阵容吗",
+        "打倒geng"
+      ]
+    },
+    "WBG": {
+      "mentions": 36,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "国王的粉丝要哭了，我们WBG又是首位淘汰制",
+        "老干爹超了，微博可能进冒泡赛",
+        "相克打完又要微博嘲讽老黑了",
+        "AL的下限是爱笑，不发微博就有",
+        "爱笑微博再发点什么呀 期待着"
+      ]
+    },
+    "LNG": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "之前泰山在李宁的时候很喜欢先控龙 来AL不控龙了",
+        "这俩队能打赢lng吗",
+        "米勒解说啥东西呢，刚刚还是李宁？",
+        "LNG出最多的队服挨最毒的打",
+        "穿李宁，喝战马"
+      ]
+    },
+    "WE": {
+      "mentions": 1196,
+      "pos": 83,
+      "neg": 88,
+      "samples": [
+        "不会是下一个we把，觉醒了",
+        "这要感谢WE啊",
+        "点啊，我要看WE和AL",
+        "下一把 又是 we内战",
+        "看we"
+      ]
+    },
+    "EDG": {
+      "mentions": 92,
+      "pos": 5,
+      "neg": 4,
+      "samples": [
+        "EDG前面垫了11把就是为了后面连胜进世界赛",
+        "EDG雄起来了啊",
+        "edg搞啥呢",
+        "EDG状态回来了，NIP要遭~",
+        "EDG早干嘛去了"
+      ]
+    },
+    "BLG": {
+      "mentions": 825,
+      "pos": 90,
+      "neg": 49,
+      "samples": [
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "a和BLG换一下ad绝对夺冠实力",
+        "下一场BLG上单谁首发",
+        "菜鸡互啄让blg炸一下就老实了",
+        "我陀螺要终结blg听到了吧"
+      ]
+    },
+    "TES": {
+      "mentions": 567,
+      "pos": 40,
+      "neg": 54,
+      "samples": [
+        "在赛事模拟中被TES夺得头筹，下局等你来逆袭！",
+        "tes能不能提出LPL啊",
+        "TES:绝望➕窒息哈哈哈哈哈哈",
+        "TES:绝望➕窒息，欧耶",
+        "AL野辅去tes王朝了  有没有懂得？"
+      ]
+    },
+    "IG": {
+      "mentions": 120,
+      "pos": 11,
+      "neg": 7,
+      "samples": [
+        "ig总是放在周天 流量最大化",
+        "Ig 完蛋了  打TT 怎么赢",
+        "Ig 骑士之路完蛋了  打这两没胜算",
+        "EDG都能虐的TT ,IG输一局都不算赢",
+        "tt也就虐虐ig了"
+      ]
+    },
+    "G2": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "恭喜G2?",
+        "恭喜G2?",
+        "恭喜g2",
+        "打不了g2还打不过你blg了？"
+      ]
+    },
+    "NAVI": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "tanavi",
+        "感觉我和Navi不在了"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 77,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "下水道的老鼠，打激素的侏儒",
+        "下水道的老鼠，打激素的侏儒",
+        "下水道的老鼠，打激素的侏儒",
+        "下水道的老鼠，打激素的侏儒",
+        "下水道的老鼠，打激素的侏儒"
+      ]
+    },
+    "AG": {
+      "mentions": 6,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "AG加油",
+        "AG加油",
+        "AG加油",
+        "AG加油",
+        "上路呼吸一来AL攻击力感觉直线下降，再加上下路ag。无敌了"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "奥恩打装备3，AL岂不是落后1W？",
+        "23分钟1W",
+        "这阵容看上去起码落后1W",
+        "落后1W 头一个龙有用？",
+        "破了2路 领先1W 偷个龙有什么用"
+      ]
+    }
+  },
+  "players": {
+    "Oscar": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "本来就是奥斯卡局",
+        "奥斯卡赛区",
+        "奥斯卡局",
+        "奥斯卡赛区"
+      ]
+    },
+    "Guma": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "msi决赛为啥打不过guma",
+        "msi决赛为啥打不过guma",
+        "msi决赛为啥打不过guma",
+        "msi决赛为啥打不过guma"
+      ]
+    },
+    "Faker": {
+      "mentions": 187,
+      "pos": 12,
+      "neg": 10,
+      "samples": [
+        "faker：为什么队长变成hope了",
+        "老李要来了",
+        "Faker7还是Zeus3？",
+        "Faker7还是Zeus3？",
+        "听说飞科接班人回归了[问][问]"
+      ]
+    },
+    "Chovy": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我超威，怎么又拿这种高手阵容",
+        "打起来啊 我超威",
+        "我一进来就看到超威在打来福",
+        "我超威",
+        "我一进来就看到超威在打来福"
+      ]
+    },
+    "Zeus": {
+      "mentions": 128,
+      "pos": 21,
+      "neg": 8,
+      "samples": [
+        "宙斯就敢拿青钢影",
+        "粗鄙人称小宙斯",
+        "cube 只输 Zeus",
+        "你让他打zeus  他敢选qgy",
+        "粗鄙只输宙斯？那lpl宙斯也太多了"
+      ]
+    },
+    "m0NESY": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "小孩哥"
+      ]
+    },
+    "33": {
+      "mentions": 37,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "33的倍这么高",
+        "33的倍率这么高？",
+        "33的倍率这么高",
+        "33的倍率这么高吗",
+        "33的倍率这么高吗"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 2189,
+    "samples": [
+      "发条故意送人头",
+      "48粉脸都不要了哈哈",
+      "48天下第一！",
+      "看赔率就知道结果了",
+      "看赔率就知道al没了",
+      "看赔率就知道al没了",
+      "在哪里看赔率？",
+      "48粉比48还48"
+    ]
+  },
+  "situation": {
+    "count": 1676,
+    "samples": [
+      "团战都没人管这个中单，这回放亮点都是队友，中单纯混",
+      "2-0带走",
+      "1-11又赢了",
+      "今天是二处，下三路和17双雄三组吗",
+      "上次翻盘了两把。",
+      "吃经济，团战一坨",
+      "主场优势",
+      "主场优势"
+    ]
+  },
+  "gray_signals": {
+    "count": 199,
+    "samples": [
+      "发条故意送人头",
+      "WE经典LGD剧本，劫富济贫[滑稽]",
+      "WE经典LGD剧本，劫富济贫[滑稽]",
+      "WE经典LGD剧本，劫富济贫[滑稽]",
+      "AL都没有，跟TT的剧本一样",
+      "就是故意不杀",
+      "这个WE打野怎么不演了",
+      "二哈是不是收钱了，皇子EQ交了你闪现E谁跟"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "13:01",
+      "count": 1560,
+      "samples": [
+        "挂档了",
+        "伟大",
+        "人就很丑，加上八字发型无敌了",
+        "斌妹笑了"
+      ]
+    },
+    {
+      "minute_utc": "14:02",
+      "count": 1404,
+      "samples": [
+        "4",
+        "第二把左手太猛了",
+        "3",
+        "1A"
+      ]
+    },
+    {
+      "minute_utc": "13:56",
+      "count": 1155,
+      "samples": [
+        "腿脚不好 瘸子  舍不得走两步  进草  哈哈哈",
+        "说演的，不演能赢似的",
+        "？？？",
+        "卧槽bin"
+      ]
+    },
+    {
+      "minute_utc": "13:52",
+      "count": 1125,
+      "samples": [
+        "不等小龙，去人家野区干什么吗",
+        "超大下距！🐦鬼继续嘴硬",
+        "奥斯卡局",
+        "圣杯看完这场 应该背书包回家了 这可是tes"
+      ]
+    },
+    {
+      "minute_utc": "11:09",
+      "count": 1089,
+      "samples": [
+        "塔赞打晕了，还以为上路是圣枪哥，帮了有回报的。结果呢啥也没有",
+        "窒息还是要玩肉",
+        "呼吸磨合时间不长打成这样未来可期",
+        "AL就是加强版WE 赢不赢全看打野"
+      ]
+    },
+    {
+      "minute_utc": "12:46",
+      "count": 1009,
+      "samples": [
+        "🐀🐀🐀🐀🐀🐀🐀",
+        "？？？",
+        "？？？？？？？？？？？？",
+        "？？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "13:55",
+      "count": 965,
+      "samples": [
+        "还能掏一波",
+        "龙魂那还真可以",
+        "伏笔了啊",
+        "这波还真没问题"
+      ]
+    },
+    {
+      "minute_utc": "13:00",
+      "count": 931,
+      "samples": [
+        "百分之十二点五参团率隐身了",
+        "BIN哥让VP很舒服",
+        "水鬼差一个超鬼",
+        "你们鸽鸽要超鬼了，你们鸽鸽要超鬼了"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      3084
+    ],
+    [
+      "HY87",
+      338
+    ],
+    [
+      "最爱看三桂",
+      298
+    ],
+    [
+      "美猴王23",
+      197
+    ],
+    [
+      "阿雷奇诺丶",
+      182
+    ],
+    [
+      "天策天良",
+      182
+    ],
+    [
+      "qzuser",
+      155
+    ],
+    [
+      "小米粥5",
+      141
+    ]
+  ],
+  "sources": {
+    "we957_890001": 11132,
+    "mile_149361": 0,
+    "official_660000": 55890
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "we957_890001",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-08-21T17:32:38+00:00",
+      "heartbeat_at": "2026-08-22T02:47:17+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "KT vs T1！老李大战BDD！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-21T17:32:38+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "mile_149361",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-08-21T10:19:17+00:00",
+      "heartbeat_at": "2026-08-22T02:47:21+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "Bin回归 BLG vs LGD~!",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-08-21T10:19:17+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "source": "official_660000",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-08-21T21:02:02+00:00",
+      "heartbeat_at": "2026-08-22T02:47:27+00:00",
+      "last_message_at": "2026-08-22T02:47:12+00:00",
+      "message_count": 35,
+      "warning": null,
+      "error": null,
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】15点WE vs LGD 第三赛段组内赛",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-08-21T21:02:03+00:00"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "主播行为画像（切赛识别/源加权，2026-08-26 建立，随每场结算回填）",
+  "profiles": [
+    {
+      "streamer": "硕硕",
+      "platform": "huya",
+      "room_id": "323444",
+      "league_focus": ["LCK", "LCK CL", "LPL", "LEC"],
+      "follow_rate": null,
+      "switch_count": 0,
+      "switch_history": [],
+      "confidence": "低（样本积累中）",
+      "note": "LCK/LCK CL 通常有转播（2026-08-26 用户确认）；LPL/LEC 也常播",
+      "updated": "2026-08-26"
+    },
+    {
+      "streamer": "957",
+      "platform": "huya",
+      "room_id": "890001",
+      "league_focus": ["LPL", "LCK"],
+      "follow_rate": null,
+      "switch_count": 0,
+      "switch_history": [],
+      "confidence": "低（样本积累中）",
+      "note": "前 WE 上单二路解说；LPL/LCK 正赛切换风险高，需内容校验",
+      "updated": "2026-08-26"
+    },
+    {
+      "streamer": "米勒",
+      "platform": "huya",
+      "room_id": "149361",
+      "league_focus": ["LPL", "LCK"],
+      "follow_rate": null,
+      "switch_count": 0,
+      "switch_history": [],
+      "confidence": "低（样本积累中）",
+      "note": "LPL 王牌解说；LCK 正赛时有；切换风险高，需内容校验",
+      "updated": "2026-08-26"
+    },
+    {
+      "streamer": "毛毛",
+      "platform": "huya",
+      "room_id": "149346",
+      "league_focus": ["LPL", "LCK"],
+      "follow_rate": null,
+      "switch_count": 0,
+      "switch_history": [],
+      "confidence": "低（样本积累中）",
+      "updated": "2026-08-26"
+    },
+    {
+      "streamer": "Remember",
+      "platform": "huya",
+      "room_id": "528222",
+      "league_focus": ["LPL", "LCK", "LEC"],
+      "follow_rate": null,
+      "switch_count": 0,
+      "switch_history": [],
+      "confidence": "低（样本积累中）",
+      "updated": "2026-08-26"
+    },
+    {
+      "streamer": "LCK_CL",
+      "platform": "soop",
+      "room_id": "afchall",
+      "league_focus": ["LCK CL"],
+      "follow_rate": 1.0,
+      "switch_count": 0,
+      "switch_history": [],
+      "confidence": "高（官方频道，固定内容）",
+      "updated": "2026-08-26"
+    }
+  ]
+}

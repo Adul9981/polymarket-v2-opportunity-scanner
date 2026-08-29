@@ -1,0 +1,503 @@
+{
+ "standard": "队伍全称/缩写统一清单（2026-08-26 定稿）",
+ "rule": "所有页面、统计、筛选、文件名统一用 abbr 展示；full 用于详情/页面标题；aliases 用于归一化匹配（含平台 slug、用户口语）。新增队伍必须先登记本表，禁止裸用新写法。",
+ "teams": [
+  {
+   "id": "dns",
+   "abbr": "DNS",
+   "full": "DN SOOPers",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "dn",
+    "dnsoopers",
+    "dn soopers",
+    "디앤",
+    "디엔"
+   ]
+  },
+  {
+   "id": "dns.c",
+   "abbr": "DNS.C",
+   "full": "DN SOOPers Challengers",
+   "league": "LCK CL",
+   "aliases": [
+    "dnsc",
+    "dns.c",
+    "dn soopers challengers",
+    "dnsoopers challengers",
+    "디앤",
+    "디엔"
+   ]
+  },
+  {
+   "id": "krx",
+   "abbr": "KRX",
+   "full": "Kiwoom DRX",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "kiwoom drx",
+    "키움",
+    "디알엑스"
+   ]
+  },
+  {
+   "id": "krx.c",
+   "abbr": "KRX.C",
+   "full": "Kiwoom DRX Challengers",
+   "league": "LCK CL",
+   "aliases": [
+    "krxc",
+    "drxc",
+    "drx.c",
+    "drx challengers",
+    "kiwoom drx challengers",
+    "키움",
+    "디알엑스",
+    "키움디알",
+    "키움디알엑스"
+   ]
+  },
+  {
+   "id": "bfx",
+   "abbr": "BFX",
+   "full": "BNK FearX",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "fearx",
+    "bnk fearx",
+    "피어엑스",
+    "피어"
+   ]
+  },
+  {
+   "id": "bfx.y",
+   "abbr": "BFX.Y",
+   "full": "BNK FearX Youth",
+   "league": "LCK CL",
+   "aliases": [
+    "bfxy",
+    "bfx.y",
+    "foxy",
+    "fox",
+    "fearx youth",
+    "bnk fearx youth",
+    "피어엑스",
+    "피어"
+   ]
+  },
+  {
+   "id": "hle",
+   "abbr": "HLE",
+   "full": "Hanwha Life Esports",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "hanwha life esports",
+    "한화"
+   ]
+  },
+  {
+   "id": "hle.c",
+   "abbr": "HLE.C",
+   "full": "Hanwha Life Esports Challengers",
+   "league": "LCK CL",
+   "aliases": [
+    "hlec",
+    "hle.c",
+    "hanwha life esports challengers",
+    "한화"
+   ]
+  },
+  {
+   "id": "bro",
+   "abbr": "BRO",
+   "full": "BRO",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "bro2",
+    "brion",
+    "브리온",
+    "hanjin brion",
+    "hanjin brion (bro)"
+   ]
+  },
+  {
+   "id": "ns",
+   "abbr": "NS",
+   "full": "Nongshim RedForce",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "nsea",
+    "ns.ea",
+    "nongshim",
+    "nongshim redforce",
+    "농심"
+   ]
+  },
+  {
+   "id": "t1",
+   "abbr": "T1",
+   "full": "T1",
+   "league": "LCK",
+   "aliases": [
+    "t1a",
+    "티원"
+   ]
+  },
+  {
+   "id": "kt",
+   "abbr": "KT",
+   "full": "KT Rolster",
+   "league": "LCK",
+   "aliases": [
+    "ktc",
+    "kt rolster",
+    "케이티"
+   ]
+  },
+  {
+   "id": "dk",
+   "abbr": "DK",
+   "full": "Dplus KIA",
+   "league": "LCK",
+   "aliases": [
+    "dkc",
+    "dplus kia",
+    "디플러스",
+    "담원"
+   ]
+  },
+  {
+   "id": "gen",
+   "abbr": "GEN",
+   "full": "Gen.G",
+   "league": "LCK / LCK CL",
+   "aliases": [
+    "genga",
+    "gen.g",
+    "gen g",
+    "젠지"
+   ]
+  },
+  {
+   "id": "drx",
+   "abbr": "DRX",
+   "full": "DRX",
+   "league": "LCK",
+   "aliases": [
+    "drx"
+   ]
+  },
+  {
+   "id": "gga",
+   "abbr": "GGA",
+   "full": "GGA（GEN 学院队）",
+   "league": "LCK CL",
+   "aliases": [
+    "gen.c",
+    "gen academy"
+   ]
+  },
+  {
+   "id": "g2",
+   "abbr": "G2",
+   "full": "G2 Esports",
+   "league": "LEC / CS2",
+   "aliases": [
+    "g2 esports"
+   ]
+  },
+  {
+   "id": "gx",
+   "abbr": "GX",
+   "full": "GIANTX",
+   "league": "LEC",
+   "aliases": [
+    "giantx"
+   ]
+  },
+  {
+   "id": "kc",
+   "abbr": "KC",
+   "full": "Karmine Corp",
+   "league": "LEC",
+   "aliases": [
+    "karmine corp"
+   ]
+  },
+  {
+   "id": "shft",
+   "abbr": "SHFT",
+   "full": "Shifters",
+   "league": "LEC",
+   "aliases": [
+    "shifters"
+   ]
+  },
+  {
+   "id": "sk",
+   "abbr": "SK",
+   "full": "SK Gaming",
+   "league": "LEC",
+   "aliases": [
+    "sk gaming"
+   ]
+  },
+  {
+   "id": "th",
+   "abbr": "TH",
+   "full": "Team Heretics",
+   "league": "LEC",
+   "aliases": [
+    "team herethics",
+    "team heretic"
+   ]
+  },
+  {
+   "id": "mkoi",
+   "abbr": "MKOI",
+   "full": "Movistar KOI",
+   "league": "LEC",
+   "aliases": [
+    "koi",
+    "movistar koi"
+   ]
+  },
+  {
+   "id": "fnc",
+   "abbr": "FNC",
+   "full": "Fnatic",
+   "league": "LEC",
+   "aliases": [
+    "fnatic"
+   ]
+  },
+  {
+   "id": "navi",
+   "abbr": "NAVI",
+   "full": "Natus Vincere",
+   "league": "LEC / CS2",
+   "aliases": [
+    "natus vincere"
+   ]
+  },
+  {
+   "id": "blg",
+   "abbr": "BLG",
+   "full": "Bilibili Gaming",
+   "league": "LPL",
+   "aliases": [
+    "bilibili gaming"
+   ]
+  },
+  {
+   "id": "al",
+   "abbr": "AL",
+   "full": "Anyone's Legend",
+   "league": "LPL",
+   "aliases": [
+    "anyone's legend",
+    "anyones legend"
+   ]
+  },
+  {
+   "id": "jdg",
+   "abbr": "JDG",
+   "full": "JD Gaming",
+   "league": "LPL",
+   "aliases": [
+    "jd gaming"
+   ]
+  },
+  {
+   "id": "edg",
+   "abbr": "EDG",
+   "full": "EDward Gaming",
+   "league": "LPL",
+   "aliases": [
+    "edward gaming"
+   ]
+  },
+  {
+   "id": "ig",
+   "abbr": "IG",
+   "full": "Invictus Gaming",
+   "league": "LPL",
+   "aliases": [
+    "invictus gaming"
+   ]
+  },
+  {
+   "id": "nip",
+   "abbr": "NIP",
+   "full": "Ninjas in Pyjamas",
+   "league": "LPL",
+   "aliases": [
+    "ninjas in pyjamas"
+   ]
+  },
+  {
+   "id": "tes",
+   "abbr": "TES",
+   "full": "Top Esports",
+   "league": "LPL",
+   "aliases": [
+    "top esports"
+   ]
+  },
+  {
+   "id": "tt",
+   "abbr": "TT",
+   "full": "ThunderTalk Gaming",
+   "league": "LPL",
+   "aliases": [
+    "thundertalk gaming"
+   ]
+  },
+  {
+   "id": "we",
+   "abbr": "WE",
+   "full": "Team WE",
+   "league": "LPL",
+   "aliases": [
+    "team we"
+   ]
+  },
+  {
+   "id": "lgd",
+   "abbr": "LGD",
+   "full": "LGD Gaming",
+   "league": "LPL",
+   "aliases": [
+    "lgd gaming"
+   ]
+  },
+  {
+   "id": "lng",
+   "abbr": "LNG",
+   "full": "LNG Esports",
+   "league": "LPL",
+   "aliases": [
+    "lng esports"
+   ]
+  },
+  {
+   "id": "wbg",
+   "abbr": "WBG",
+   "full": "Weibo Gaming",
+   "league": "LPL",
+   "aliases": [
+    "weibo gaming"
+   ]
+  },
+  {
+   "id": "spirit",
+   "abbr": "Spirit",
+   "full": "Team Spirit",
+   "league": "CS2 / Dota2",
+   "aliases": [
+    "team spirit",
+    "绿龙"
+   ]
+  },
+  {
+   "id": "nemiga",
+   "abbr": "Nemiga",
+   "full": "Nemiga",
+   "league": "CS2 / Dota2",
+   "aliases": [
+    "nemiga gaming"
+   ]
+  },
+  {
+   "id": "legacy",
+   "abbr": "Legacy",
+   "full": "Legacy",
+   "league": "CS2 / Dota2",
+   "aliases": [
+    "juhua",
+    "菊花"
+   ]
+  },
+  {
+   "id": "ironwing",
+   "abbr": "Iron Wing",
+   "full": "Iron Wing",
+   "league": "Dota2",
+   "aliases": [
+    "iw",
+    "iron wing"
+   ]
+  },
+  {
+   "id": "teamvision",
+   "abbr": "Team Vision",
+   "full": "Team Vision",
+   "league": "Dota2",
+   "aliases": [
+    "vision",
+    "pv"
+   ]
+  },
+  {
+   "id": "boomboys",
+   "abbr": "BoomBoys",
+   "full": "BoomBoys",
+   "league": "Dota2",
+   "aliases": [
+    "bb",
+    "boombos"
+   ]
+  },
+  {
+   "id": "nigma",
+   "abbr": "Nigma Galaxy",
+   "full": "Nigma Galaxy",
+   "league": "Dota2",
+   "aliases": [
+    "nigma galaxy"
+   ]
+  },
+  {
+   "id": "aurora",
+   "abbr": "AUR",
+   "full": "Aurora Gaming",
+   "league": "CS2",
+   "aliases": [
+    "aurora gaming",
+    "欧若拉"
+   ]
+  },
+  {
+   "id": "dendelecs",
+   "abbr": "DENDELE",
+   "full": "DENDELE CS",
+   "league": "CS2",
+   "aliases": [
+    "dendele",
+    "dendele cs",
+    "丹德勒"
+   ]
+  },
+  {
+   "id": "m80",
+   "abbr": "M80",
+   "full": "M80",
+   "league": "CS2",
+   "aliases": [
+    "m80",
+    "m 80"
+   ]
+  },
+  {
+   "id": "dendele",
+   "abbr": "DENDELE",
+   "full": "DENDELE",
+   "league": "CS2",
+   "aliases": [
+    "dendele",
+    "denendele"
+   ]
+  }
+ ],
+ "updated_at": "2026-08-26T14:28:26+00:00"
+}

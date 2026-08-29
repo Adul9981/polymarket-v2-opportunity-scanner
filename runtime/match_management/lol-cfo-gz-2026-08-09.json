@@ -1,0 +1,23 @@
+{
+  "slug": "lol-cfo-gz-2026-08-09",
+  "title": "LoL: CTBC Flying Oyster vs Ground Zero Gaming (BO5) - LCP Group Stage",
+  "league": "LCP",
+  "bo": 5,
+  "date": "2026-08-09",
+  "series": {
+    "games_played": 2,
+    "series_score": "",
+    "series_finished": false,
+    "note": "G3 进行中（BO5）；双边 S2 盯盘，GZ 侧已出计划待确认"
+  },
+  "games": [
+    {
+      "game": 3,
+      "game_status": "finished",
+      "order_status": "closed",
+      "note": "GZ 侧已成交(35.71@0.42)后 GZ 输 G3，亏 ；CFO 侧未成交",
+      "winner": "CTBC Flying Oyster"
+    }
+  ],
+  "last_updated": "2026-08-10T05:35:36+00:00"
+}

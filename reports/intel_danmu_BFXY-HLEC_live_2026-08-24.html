@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LCK CL 局中弹幕情报 · HLE.C vs BFX.Y（二队） · 2026-08-24</title>
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --card:#ffffff;
+    --ink:#1d1d1f;
+    --ink-2:#6e6e73;
+    --ink-3:#86868b;
+    --line:#e8e8ed;
+    --accent:#0a66c2;
+    --accent-soft:#e7f1fb;
+    --warn:#b45309;
+    --warn-soft:#fef3e2;
+    --danger:#c2410c;
+    --danger-soft:#fdeee3;
+    --ok:#1a7f37;
+    --ok-soft:#e6f4ea;
+    --radius:16px;
+    --shadow:0 1px 3px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.65;
+    padding:20px 16px 56px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto}
+  .card{
+    background:var(--card);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px 20px;
+    margin-bottom:16px;
+  }
+  h1{font-size:22px;font-weight:700;letter-spacing:-.01em}
+  h2{font-size:17px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  h2 .no{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-width:24px;height:24px;padding:0 6px;border-radius:8px;
+    background:var(--accent-soft);color:var(--accent);
+    font-size:13px;font-weight:700;
+  }
+  p{font-size:14px;color:var(--ink)}
+  .muted{color:var(--ink-2);font-size:13px}
+  .tiny{color:var(--ink-3);font-size:12px}
+  .badge{
+    display:inline-block;padding:3px 10px;border-radius:999px;
+    font-size:12px;font-weight:600;white-space:nowrap;
+  }
+  .b-live{background:var(--ok-soft);color:var(--ok)}
+  .b-pend{background:var(--warn-soft);color:var(--warn)}
+  .b-gray{background:var(--danger-soft);color:var(--danger)}
+  .b-meta{background:var(--accent-soft);color:var(--accent)}
+  .b-plain{background:#f0f0f2;color:var(--ink-2)}
+  .head-meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+  .sub{color:var(--ink-2);font-size:14px;margin-top:6px}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--ink-2);font-weight:600;white-space:nowrap;font-size:12px}
+  tr:last-child td{border-bottom:none}
+  .num{font-variant-numeric:tabular-nums;font-weight:700}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px}
+  .stat{background:#fafafc;border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+  .stat .v{font-size:18px;font-weight:700}
+  .stat .k{font-size:12px;color:var(--ink-2);margin-top:2px}
+  .peaks{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .peak{background:var(--accent-soft);color:var(--accent);border-radius:10px;padding:5px 10px;font-size:12px;font-weight:600}
+  .gray-box{
+    background:var(--danger-soft);border:1px solid #f3cdb5;border-radius:12px;
+    padding:14px 14px 10px;margin-top:10px;
+  }
+  .gray-box .t{color:var(--danger);font-weight:700;font-size:14px;margin-bottom:6px}
+  .tag{font-size:12px;color:var(--ink-2);background:#f0f0f2;border-radius:6px;padding:2px 7px;display:inline-block;margin:2px 4px 2px 0}
+  .quote{
+    background:#fafafc;border-left:3px solid var(--accent);border-radius:8px;
+    padding:8px 12px;margin:8px 0;font-size:13px;color:var(--ink);
+  }
+  .quote .src{display:block;color:var(--ink-3);font-size:12px;margin-top:4px}
+  .divider{height:1px;background:var(--line);margin:16px 0}
+  .note{font-size:13px;color:var(--ink-2);background:#fafafc;border-radius:10px;padding:10px 12px;margin-top:10px}
+  .long{
+    background:var(--ok-soft);border:1px solid #bfe3c8;border-radius:12px;
+    padding:12px 14px;margin-top:10px;font-size:13px;
+  }
+  .long .t{color:var(--ok);font-weight:700}
+  .pill-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .pill{font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px}
+  .pill.long{background:var(--ok-soft);color:var(--ok)}
+  .pill.short{background:var(--danger-soft);color:var(--danger)}
+  footer{color:var(--ink-3);font-size:12px;text-align:center;margin-top:20px}
+  @media (max-width:560px){
+    h1{font-size:19px}
+    .card{padding:18px 15px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 0 头部 -->
+  <div class="card">
+    <h1>LCK CL 局中弹幕情报 · HLE.C（韩华二队） vs BFX.Y（BNK FearX 二队）</h1>
+    <div class="head-meta">
+      <span class="badge b-live">局中 · 非终局，结果待定</span>
+      <span class="badge b-pend">弹幕口径 · 官方待回填</span>
+      <span class="badge b-meta">B 型局中页</span>
+    </div>
+    <p class="sub">弹幕实锤对阵为「한화(韩华) vs 피어엑스(BNK FearX)」= LCK CL（二队联赛）HLE.C vs BFX.Y；
+    本页由 VPS 管线生成，原文件名 DNS-KRX 有误，已更名为 BFXY-HLEC_live；
+    一队（LCK）为 Hanwha Life Esports / BNK FearX，二队（LCK CL）为 HLE.C / BFX.Y，勿混。</p>
+    <div class="divider"></div>
+    <table>
+      <tr><th>对阵</th><td><b>韩华 HLE（LCK CL）</b> vs <b>BNK FearX（LCK CL）</b><span class="tiny">（弹幕口径；DNS-KRX 标签待确认）</span></td></tr>
+      <tr><th>联赛</th><td>LCK CL（韩国次级联赛 / 二队联赛）<span class="tiny">· 疑似季后赛 BO5（弹幕出现「3:0」口径，赛制待确认）</span></td></tr>
+      <tr><th>数据源</th><td>SOOP afchall 直播间（LCK CL 官方流），韩文弹幕；解析层 runtime/vps_intel/lckcl_dns_krx_intel.json</td></tr>
+      <tr><th>时间窗口</th><td>2026-08-24 09:45:54 – 11:50:36 UTC（≈125 分钟，抓取进行中）<span class="tiny">= 17:45 – 19:50 北京时间 / 18:45 – 20:50 韩国时间</span></td></tr>
+      <tr><th>当前阶段</th><td><b>第 3 局进行中</b>；系列比分（弹幕口径）FearX 2:0 领先，官方未确认</td></tr>
+    </table>
+  </div>
+
+  <!-- 0b 弹幕规模与密度 -->
+  <div class="card">
+    <h2><span class="no">0</span>弹幕规模与密度</h2>
+    <div class="grid">
+      <div class="stat"><div class="v num">6,477</div><div class="k">弹幕总条数（截至 11:50:36 UTC，持续增长）</div></div>
+      <div class="stat"><div class="v num">486</div><div class="k">活跃用户数</div></div>
+      <div class="stat"><div class="v num">≈52</div><div class="k">平均条/分</div></div>
+      <div class="stat"><div class="v num">206</div><div class="k">密度峰值（条/分）</div></div>
+    </div>
+    <div class="peaks">
+      <span class="peak">10:02 UTC · 206</span>
+      <span class="peak">09:50 UTC · 196</span>
+      <span class="peak">10:51 UTC · 152</span>
+      <span class="peak">10:01 UTC · 151</span>
+      <span class="peak">10:05 UTC · 150</span>
+      <span class="peak">10:43 UTC · 136</span>
+      <span class="peak">09:58 UTC · 126</span>
+      <span class="peak">11:02 UTC · 105</span>
+    </div>
+    <p class="muted" style="margin-top:10px">峰值对应：09:50 第 1 局关键团战、10:02–10:05 第 1 局终局与 Ezreal 失误刷屏、10:51 第 2 局「Jarvan 故意送」质疑簇、11:02–11:03 第 2 局终局团战。</p>
+    <div class="note">规则层情报 JSON（运行窗口 09:45–11:26）报告 5,354 条 / 415 活跃用户 / 密度 53.5 条/分；原始 JSONL 已含更新增量（至 11:50:36），本页数字以原始文件实时口径为准。</div>
+  </div>
+
+  <!-- 1 当前进度 -->
+  <div class="card">
+    <h2><span class="no">1</span>当前进度（弹幕口径）</h2>
+    <table>
+      <tr><th>系列比分</th><td><b>FearX 2 : 0 HLE</b><span class="tiny">（弹幕口径：第 1 局 FearX 翻盘胜、第 2 局 FearX 再胜；官方待回填）</span></td></tr>
+      <tr><th>赛制</th><td>弹幕多次出现「3:0」「3ㄷ0」口径 → 推断为 BO5 淘汰赛；<span class="tiny">待官方确认</span></td></tr>
+      <tr><th>当前局</th><td>第 3 局进行中（11:14 起 BP → 11:25 开局质疑 → 11:33 阵容讨论 → 11:44 龙魂阶段 → 11:50 仍在进行）</td></tr>
+      <tr><th>结果</th><td><b>局中 · 非终局，结果待定</b>；本页所有比分/胜负均为「弹幕口径 · 官方未确认」</td></tr>
+    </table>
+    <div class="divider"></div>
+    <h2 style="font-size:15px">BP 后战绩情报（必抓项）</h2>
+    <p>第 3 局 BP 锁定窗口（11:20–11:21）出现两条「选手 × 英雄」历史战绩提及：</p>
+    <div class="quote">「바이 승률백퍼임」<span class="src">11:20 UTC · 观众劝 HLE 打野 자칼 锁 Vi，称胜率 100%（正锚点，待回填）</span></div>
+    <div class="quote">「그리즐리 마오 승률 높긴한데」「그리 마오카이 1황이다」<span class="src">11:21 UTC · FearX 打野 Grizzly × 茂凯 高胜率（正锚点，待回填）</span></div>
+    <p class="muted">另：10:50–10:58 反复出现版本口径「크샨테(奎桑提)가 필승픽」（据弹幕为解说 한자 说法）；其余局次无选手×英雄战绩提及。</p>
+  </div>
+
+  <!-- 2 逐局复盘 -->
+  <div class="card">
+    <h2><span class="no">2</span>逐局复盘（已发生片段 + 当前局进行中）</h2>
+    <h2 style="font-size:15px">第 1 局 · FearX 胜（弹幕口径）</h2>
+    <ul style="margin:8px 0 0 18px;font-size:14px">
+      <li>HLE 前期领先：09:50 关键团战获胜（弹幕「한화 대승」「이러면 한화대박」，密度 196/分），并控下资源；解说/主播한자赛前称 FearX 会赢，弹幕当时玩梗「피어가 이긴다했제」。</li>
+      <li>FearX 后期翻盘：Sivir 大核成型（「시비르 존야까지 올렸음」「시비르는 점멸있음」），HLE 的 Ezreal 连续空 Q 被刷屏调侃（10:01–10:05，密度 150–206/分）。</li>
+      <li>弹幕评价：FearX 靠 Grizzly 独 C（「역시 그리즐리 원맨팀이구나」）；HLE 辅助 Bluffing 的 Rakan 获好评（「블러핑 라칸 ㅈㄴ잘하네」）。</li>
+    </ul>
+    <div class="divider"></div>
+    <h2 style="font-size:15px">第 2 局 · FearX 胜（弹幕口径）</h2>
+    <ul style="margin:8px 0 0 18px;font-size:14px">
+      <li>HLE 阵容获评更优：Jarvan + Caitlyn + Bard（「자르반에 케틀바드면 벤픽은 한화가 훨씬 좋아보이는데」），另有 Rumble/Galio/Annie/Kiana 联动讨论（10:55 弹幕描述 HLE 的 wombo combo 赢团剧本）。</li>
+      <li>执行崩盘：打野 자칼（Jarvan）与辅助 Bluffing（Bard）被集中批评（「자르반 뭐하냐」「케틀 안지키고」「바드가 진짜 패작수준이었음」），并触发「故意送」灰信号簇（见第 5 节）。</li>
+      <li>终局 11:02–11:06：「역전이래」「퍼펙트승」，FearX 再胜；弹幕出现「걍 3:0 끝이야」（推断 BO5）。</li>
+    </ul>
+    <div class="divider"></div>
+    <h2 style="font-size:15px">第 3 局 · 进行中（11:14 至今）</h2>
+    <table>
+      <tr><th>时间 (UTC)</th><th>线索</th></tr>
+      <tr><td class="num">11:14–11:20</td><td>BP 阶段：弹幕要求 HLE/자칼 锁 Vi（「바이 승률백퍼」）；「밴픽 안던지면」。</td></tr>
+      <tr><td class="num">11:21</td><td>FearX 亮出 Grizzly 茂凯 + 卡蜜尔（「카밀마오카이 ㅈㅈ염」）；弹幕指出「요즘 마오카이 나오는 경기들 다 초반에 엄청 밀려」（版本规律）。</td></tr>
+      <tr><td class="num">11:25</td><td>BP 灰信号：「플인에서 벤픽꼬러지봐 일부러 대주려고 이렇게함??」（观众质疑，非结论）。</td></tr>
+      <tr><td class="num">11:33</td><td>阵容价值判断：HLE 米利欧后期强（「후반가면 밀리오사기 때매 무조건 한화승」）vs FearX 茂凯+卡蜜尔（「더사기다」）；「자칼 얘 의심되는데 이번판도 똑같네 전판마냥」（再犯型质疑）。</td></tr>
+      <tr><td class="num">11:41–11:50</td><td>中后期：龙魂/大龙阶段（「4용줘 넥서스줘」「마오궁깔고한타하면끝남」）；HLE 的 Vi-로크-韦鲁斯 连招多次脱节被批（「바로크 연계를 한번도 안하고」）；弹幕评「정글 체급이 피어엑스 승이네」。<span class="tiny">截至 11:50:36 仍在进行</span></td></tr>
+    </table>
+    <p class="muted" style="margin-top:8px">未发生段（如第 4/5 局、决胜局）→ 待观察。</p>
+  </div>
+
+  <!-- 3 队伍画像 -->
+  <div class="card">
+    <h2><span class="no">3</span>队伍画像（当场弹幕口径）</h2>
+    <table>
+      <tr><th style="width:110px">队伍</th><th>弹幕口径画像</th></tr>
+      <tr>
+        <td><b>HLE 韩华</b><br><span class="tiny">直称 416 次</span></td>
+        <td>BP 常被评优（1、2 局皆称「벤픽 한화승」）但执行掉点；打野/辅助为批评焦点（Jarvan/Bard）；下路被称「한화는 원딜이 잘함」；粉丝情绪高（主播李若天即 HLE 倾向，弹幕玩梗）。</td>
+      </tr>
+      <tr>
+        <td><b>BNK FearX</b><br><span class="tiny">直称 94 次 +「피어」缩写 180+</span></td>
+        <td>被弹幕评为「체급차(级别差)」一方；Grizzly 为核心（前 HLE 一队打野）；翻盘能力强（1、2 局均逆风翻盘）；「수준차이 걍 피어가 좀 더 잘함」。</td>
+      </tr>
+    </table>
+    <div class="note">按用户指示本次未读取 teams/players 等历史库文件；以上仅为当场弹幕口径，长期画像留待赛后 intel-library-sync 回填。长期战绩/风格维度 → 样本不足。</div>
+  </div>
+
+  <!-- 4 人员画像 -->
+  <div class="card">
+    <h2><span class="no">4</span>人员画像（带提及量）</h2>
+    <table>
+      <tr><th>选手</th><th>提及量</th><th>弹幕评价摘要</th></tr>
+      <tr><td><b>Grizzly</b>（그리즐리）<span class="tiny">· FearX 打野（弹幕口径）</span></td><td class="num">183</td><td>「원맨팀(一人队)」「1.5군」「1군에선 못해도 2군은 왕」；1 局独 C，2 局末「너무 잘행」，3 局茂凯胜率被引用为正锚点。</td></tr>
+      <tr><td><b>자칼</b>（Jackal）<span class="tiny">· HLE 打野（弹幕口径，Jarvan/Vi）</span></td><td class="num">38</td><td>「자르반은 참잘해」但本场被批「자르반 뭐하냐」「프로 맞음?」；2、3 局连续被质疑异常操作（灰信号主体，见第 5 节）。</td></tr>
+      <tr><td><b>Bluffing</b>（블러핑）<span class="tiny">· HLE 辅助（Rakan/Bard/米利欧，弹幕口径）</span></td><td class="num">58</td><td>「1군 경험치」；1 局 Rakan 好评（「라칸 ㅈㄴ잘하네」「담시즌 1군예약」），2 局 Bard 末段被批（「패작수준」「바드는 진짜 아나다」）。</td></tr>
+      <tr><td><b>강인</b>（Kangin）<span class="tiny">· 上单；所属队伍弹幕未明示</span></td><td class="num">58（含 대강인/이강인/갓강인 变体）</td><td>「2군 제우스」「1군에서 콜 많이 오겠다」「어케막냐」「한타하면 3인분」；1–2 局大量好评，队伍归属待确认。</td></tr>
+      <tr><td><b>로크</b>（Roc）<span class="tiny">· 第 3 局 HLE 侧英雄/选手（正式译名待确认）</span></td><td class="num">92</td><td>「쵸비 빼고 하지마라」「요새 관짝가서 아무도안해」；本局 4 杀但大招多次脱节（「바이궁에 로크궁 꽃으면 한타질수가없는데 자꾸 따로」）。</td></tr>
+      <tr><td><b>해태</b>（Haetae）<span class="tiny">· CL 上单排名讨论对象；是否本场出战待确认</span></td><td class="num">15</td><td>「탑 2군 1등」「무력이 도란보다 높음」（有争议：「헛소리」「세로 해태 재혁 순」）。</td></tr>
+      <tr><td>재혁 / 시우 / 평식 / 블러핑外其他</td><td class="num">≤2 次</td><td>样本不足，不硬造。</td></tr>
+    </table>
+  </div>
+
+  <!-- 5 灰信号 -->
+  <div class="card">
+    <h2><span class="no">5</span>灰信号汇总</h2>
+    <p>弹幕词级命中 35 次（일부러 10 / 던지 10 / 패작 6 / 의심 5 / 수상 3 / 몸던지기 1），按簇归并为 4 组 + 1 单点：</p>
+    <div class="gray-box">
+      <div class="t">⚠ 簇 1：HLE 打野 자칼（Jarvan）「故意送」质疑 —— 本场最强灰信号</div>
+      <p style="font-size:13px">10:51–10:56 UTC 集中爆发（含 10:51 密度峰值 152/分）：</p>
+      <div class="quote" style="margin-top:6px">「쟤는 진짜 수상하다」「자르반 일부러 질려고그러는거같은데」「자르반 일부러 저러는거지」「자르반 패작임」<span class="src">10:51:01 / 10:53:15 / 10:54:17 / 10:56 · 多名用户，指向 HLE 打野（Jarvan 使用者 자칼）</span></div>
+      <p style="font-size:13px"><b>再犯升级（11:33）</b>：「자칼 얘 의심되는데 이번판도 똑같네 전판마냥」——第 3 局弹幕主动关联上一局相同表现，符合「再犯」跟踪口径。</p>
+    </div>
+    <div class="gray-box" style="background:#fef6ee;border-color:#f2d9b8">
+      <div class="t" style="color:var(--warn)">簇 2：Ezreal「故意空技能」质疑（10:02–10:05，约 10 条）</div>
+      <p style="font-size:13px">「이즈 일부러 스킬 안맞추노 ㅋㅋㅋㅋ」「이즈 스킬을 일부러 빗맞추는건가 ㅋㅋ」「이즈일부러」——连续空 Q 触发，语气为玩梗/嘲讽（多次 ㅋㅋ），强度低。</p>
+    </div>
+    <div class="gray-box" style="background:#fef6ee;border-color:#f2d9b8">
+      <div class="t" style="color:var(--warn)">簇 3：BP「故意送」质疑（11:25，1 条）+ 教练可疑（11:05，1 条）</div>
+      <p style="font-size:13px">「플인에서 벤픽꼬러지봐 일부러 대주려고 이렇게함??」（第 3 局 BP）；「감코 수상해」（教练可疑）——单点、无展开，强度低。</p>
+    </div>
+    <div class="gray-box" style="background:#fef6ee;border-color:#f2d9b8">
+      <div class="t" style="color:var(--warn)">簇 4：第 3 局 HLE 侧 로크/配合批评（11:43–11:50）</div>
+      <p style="font-size:13px">「로크가 너무던지는데」「로크 자꾸 머해」「바로크 연계를 한번도 안하고 자꾸 따로노니까」——多为操作/联动批评，未明确指控假赛，强度低。</p>
+    </div>
+    <div class="note" style="margin-top:12px">
+      <b>灰信号纪律声明：</b>以上全部为<b>观众质疑，非结论</b>；仅作聚合风险标注与盘口对照素材，不作为假赛证据。弹幕内部亦有反驳（11:33「의심은 님이 의심됩니다」）。赛后按多信号校验流程回填兑现率，并同步 gray_signals 统计页。
+    </div>
+  </div>
+
+  <!-- 6 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">6</span>联赛规律与版本口径</h2>
+    <table>
+      <tr><th>条目</th><th>弹幕口径</th><th>可统计性</th></tr>
+      <tr><td>Fearless 规则</td><td>「피어리스룰에 시비르로 피어가 1승했으면」——Fearless 下 Sivir 大核取得 1 胜</td><td>样本 1，待积累</td></tr>
+      <tr><td>奎桑提版本口径</td><td>「요즘 크샨테가 필승 픽임」（解说 한자 口径，弹幕多次转述）</td><td>本场是否应验待回填</td></tr>
+      <tr><td>茂凯前期规律</td><td>「요즘 마오카이 나오는 경기들 다 초반에 엄청 밀려」（前期必劣）</td><td>样本 ≥1，可跨场跟踪</td></tr>
+      <tr><td>HLE 近期战绩（外部口径）</td><td>「한화가 잘한적이 있나?? 젠지한테도 졌는데」「젠지2군이 한화 대떡했다」</td><td>非本场，须官方/历史库校验后引用</td></tr>
+      <tr><td>弹幕密度基准</td><td>关键团战分钟 ≥150 条/分（09:50/10:02/10:51/11:02）</td><td>可作 LCK CL 观赛热度量化基准</td></tr>
+    </table>
+  </div>
+
+  <!-- 7 预测验证 -->
+  <div class="card">
+    <h2><span class="no">7</span>预测验证框架（弹幕口径）</h2>
+    <table>
+      <tr><th>预测</th><th>提出方</th><th>状态</th></tr>
+      <tr><td>「피어가 이긴다」FearX 会赢（1 局赛前/局中）</td><td>解说/主播 한자（李若天），弹幕高频玩梗「피어가 이긴다했제」</td><td><span class="badge b-live">目前已命中（FearX 2:0 领先）</span></td></tr>
+      <tr><td>「이래도 피어엑스가 이길듯」（1 局逆风中反复）</td><td>用户 [S.Curry]</td><td><span class="badge b-live">已命中（1 局翻盘）</span></td></tr>
+      <tr><td>「크샨테 필승픽」奎桑提必选/必胜</td><td>解说口径（[S.Curry] 转述）</td><td><span class="badge b-pend">待回填（出场局表现）</span></td></tr>
+      <tr><td>「후반가면 밀리오사기 → 무조건 한화승」（3 局）</td><td>用户 제네시스$</td><td><span class="badge b-pend">待回填（3 局结果）</span></td></tr>
+      <tr><td>「바이 승률백퍼」자칼×Vi / 「그리즐리 마오 승률 높다」</td><td>弹幕共识</td><td><span class="badge b-pend">待回填（BP 后战绩验证）</span></td></tr>
+    </table>
+    <p class="muted" style="margin-top:8px">观众预测一律不作结果，赛后以官方比分回填（DANMU_INTEL 命中率统计）。</p>
+  </div>
+
+  <!-- 8 盘口讨论 -->
+  <div class="card">
+    <h2><span class="no">8</span>盘口讨论（弹幕提及，非交易建议）</h2>
+    <table>
+      <tr><th>时间 (UTC)</th><th>内容</th></tr>
+      <tr><td class="num">09:52</td><td>「한화승 500장 냠냠」「한화승 860장 가보자」(10:29，第 2 局 HLE 胜盘)</td></tr>
+      <tr><td class="num">10:05</td><td>「오버 ㅅㅅㅅ」（Over 命中，玩法未明）</td></tr>
+      <tr><td class="num">10:56</td><td>「7.5마핸 슛」——7.5 让分盘口提及（方向未明）</td></tr>
+      <tr><td class="num">11:36</td><td>「폭스 3ㄷ0승은 너무고배당이라안주네」——FOX 3:0 高赔不供（非本场，疑为后续场次，待确认）</td></tr>
+      <tr><td class="num">11:46</td><td>「실시간 bfx 1.5 까지 떨어짐」「1.5는 무슨 1.2임」——FearX 独赢实时赔率降至 1.2–1.5（弹幕口径，与本场 FearX 领先一致）</td></tr>
+    </table>
+    <div class="note">弹幕提及「롤도 배팅이 있노? 심지어 2군인데?」——观众对次级联赛存在盘口表示意外；本页仅记录讨论，不构成任何交易/投注依据。</div>
+  </div>
+
+  <!-- 9 情报含义与后续 -->
+  <div class="card">
+    <h2><span class="no">9</span>情报含义与后续观察点</h2>
+    <p style="margin-bottom:6px">第 3 局信息对本系列的意义：HLE 处于 0:2 悬崖，若第 3 局再败即被横扫；弹幕关注 HLE 的 Vi-로크-韦鲁斯 连招能否兑现（11:44 起多次脱节），以及 FearX 茂凯龙魂节奏。</p>
+    <div class="pill-row">
+      <span class="pill long">LONG 观察：FearX 若 3:0/3:1 结束，验证「체급차」+ 翻盘能力画像；Grizzly×茂凯 正锚点应验可进选手画像库。</span>
+      <span class="pill short">SHORT 观察：HLE 若再败，打野/辅助连续两局异常操作质疑需回填验证；자칼 灰信号实体留痕（再犯升级）。</span>
+    </div>
+    <div class="long">
+      <div class="t">长期沉淀（本页至少 1 条，已沉淀 3 条）</div>
+      <div>1. <b>자칼（HLE CL 打野）</b>连续两局被质疑故意送 → gray_entities 跟踪候选（再犯升级机制）。</div>
+      <div>2. <b>Grizzly × 茂凯高胜率</b> + 前 HLE 一队打野背景 → 选手画像素材（正锚点待验证）。</div>
+      <div>3. <b>LCK CL 弹幕密度基准</b>：关键团战分钟 150–206 条/分，可作热度/关注度量化指标。</div>
+    </div>
+  </div>
+
+  <!-- 10 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">10</span>数据与溯源</h2>
+    <table>
+      <tr><th>原始弹幕</th><td>docs/data/danmu/soop/2026-08-24_soop_lck_cl.jsonl（6,477 条有效记录，截至 2026-08-24 11:50:36 UTC，抓取进行中）</td></tr>
+      <tr><th>规则层情报</th><td>runtime/vps_intel/lckcl_dns_krx_intel.json（运行窗口 09:45–11:26，5,354 条 / 415 用户 / 53.5 条/分）</td></tr>
+      <tr><th>直播间</th><td>SOOP afchall（broad_no 296450537），韩文弹幕</td></tr>
+      <tr><th>待确认项</th><td>① 对阵标签 DNS-KRX（文件名）与弹幕口径 HLE vs BFX 不一致；② 赛制 BO5（弹幕「3:0」口径）；③ 系列比分 FearX 2:0；④ 로크 正式译名与归属；⑤ 강인/해태 队伍归属；⑥ FOX 3:0 盘口所指场次；⑦ 一切结果以官方为准</td></tr>
+      <tr><th>防错声明</th><td>空结果自检通过（本次数据非空）；灰信号仅作风险标注，非结论；观众预测/玩梗不作结果；本页为 B 型局中快照，赛后自动升级为 A 型整场复盘并同步结构化库。</td></tr>
+    </table>
+  </div>
+
+  <footer>弹幕情报 · SAP/Apple 风格 · 生成时间 2026-08-24（UTC）· 数据持续更新中</footer>
+</div>
+</body>
+</html>

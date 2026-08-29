@@ -1,0 +1,54 @@
+{
+  "version": "risk-limits-0.1",
+  "mode": "assisted_execution",
+  "description": "Local risk limits for prediction-market grid trading. Private keys stay in the existing local bot project. 2026-08-04 user confirmed: single trade can tolerate 50-70 USDC; single-market cap raised to 70, daily cap to 200. 2026-08-07 user confirmed: single-market cap raised to 80（推荐档，验证后可升 100；全仓仍需显式确认）.",
+  "global": {
+    "max_daily_budget_usd": 200,
+    "max_concurrent_markets": 3,
+    "max_single_market_budget_usd": 80,
+    "require_state_file_before_monitor": true,
+    "never_repeat_buy_if_state_exists": true,
+    "close_orders_does_not_sell_positions": true
+  },
+  "strategy_budgets": {
+    "A_DEEP_REVERSAL": {
+      "default_cycle_budget_usd": 50,
+      "max_cycle_budget_usd": 80,
+      "automation_level": "assisted_live"
+    },
+    "B_FAVORITE_DIP": {
+      "default_cycle_budget_usd": 50,
+      "max_cycle_budget_usd": 80,
+      "automation_level": "assisted_live"
+    },
+    "C_DOMINANT_COMPOUNDER": {
+      "default_cycle_budget_usd": 15,
+      "min_practical_cycle_budget_usd": 15,
+      "max_cycle_budget_usd": 20,
+      "automation_level": "experimental_live_with_confirmation"
+    },
+    "D_POSITION_RESCUE": {
+      "default_cycle_budget_usd": 0,
+      "max_cycle_budget_usd": 0,
+      "automation_level": "advisory_only"
+    }
+  },
+  "market_filters": {
+    "max_entry_price_for_new_c_strategy": 0.9,
+    "min_entry_price_for_c_strategy": 0.68,
+    "max_spread_cents": 6,
+    "min_24h_volume_usd": 50000,
+    "min_book_depth_ratio": 2.0,
+    "max_slippage_cents_entry": 1,
+    "max_slippage_cents_protection": 3,
+    "skip_if_market_closed": true,
+    "skip_if_price_stale": true
+  },
+  "autopilot": {
+    "enabled": true,
+    "requires_user_enabled_session": true,
+    "allowed_strategies": ["A_DEEP_REVERSAL", "B_FAVORITE_DIP"],
+    "experimental_strategies_require_confirmation": ["C_DOMINANT_COMPOUNDER"],
+    "position_rescue_requires_confirmation": true
+  }
+}

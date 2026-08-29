@@ -1,0 +1,30 @@
+{
+  "slug": "lol-dk-kt-2026-08-09",
+  "title": "Dplus KIA vs KT Rolster (BO3) - LCK Round 3-4 Legend Group",
+  "league": "LCK",
+  "bo": 3,
+  "date": "2026-08-09",
+  "series": {
+    "games_played": 2,
+    "series_score": "KT 1-1 DK",
+    "series_finished": false,
+    "note": "G3 结果待确认；钱包 KT 整场仓位已平仓 @0.59"
+  },
+  "games": [
+    {
+      "game": 1,
+      "game_status": "finished",
+      "winner": "KT",
+      "order_status": "cancelled",
+      "note": "S2 DK 侧计划已取消(用户决策)；钱包侧 KT G1 买卖已平仓获利"
+    },
+    {
+      "game": 2,
+      "game_status": "finished",
+      "winner": "DK",
+      "order_status": "cancelled",
+      "note": "KT G2 43.5c 崩至 33c 被 DK 拿下；G2 KT 计划保持取消"
+    }
+  ],
+  "last_updated": "2026-08-09T09:09:45+00:00"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-08-07",
+    "event_slug": "lol-we-tt-2026-08-07",
+    "market_type": "game1",
+    "side": "Team WE",
+    "strategy": "S1/A",
+    "template": "none",
+    "total_invested_usd": 70.0,
+    "realized_pnl_usd": -50.0,
+    "final_pnl_usd": -50.0,
+    "outcome": "loss",
+    "exit_executed": true,
+    "lesson_tags": ["direction_miss", "caught_falling_knife", "cut_loss_executed"],
+    "notes": "手动交易（口述估值）。用户观点其实是 TT 下狗反转（TT Moneyline 29.5c -> 99.95c，2:1 赢系列赛），但买的是 WE：G1 WE 67.5c -> 0.05c，10-15c 买入约 70，抢救卖出约 20，亏约 50；观点对但方向与执行错位，TT 35-45c 是下狗确认反转早买区。1 分钟快照 docs/data/snapshots/2026-08-07_lol-we-tt/。"
+  },
+  {
+    "date": "2026-08-07",
+    "event_slug": "lol-fox1-bro2-2026-08-07",
+    "market_type": "game1",
+    "side": "BNK FEARX",
+    "strategy": "conviction",
+    "template": "none",
+    "total_invested_usd": null,
+    "realized_pnl_usd": null,
+    "final_pnl_usd": null,
+    "outcome": "loss",
+    "exit_executed": false,
+    "lesson_tags": ["partial_tp_then_zero", "legacy_unprotected"],
+    "notes": "手动交易（口述，金额未记录）。赛前 50-65c 基本 All in 买 BFX；40c 卖部分、65c 买回；G1 涨到 98.5c 未止盈，一波团战 1 分钟内崩到 0.05c 归零（BRO 1.5c -> 99.95c）；Moneyline BFX 75.5c -> 0.05c 死亡螺旋，BRO 2:0。98.5c 未锁盈 = 裸奔，D2 反面最极端样本。1 分钟快照 docs/data/snapshots/2026-08-07_lol-fox1-bro2/。"
+  }
+]

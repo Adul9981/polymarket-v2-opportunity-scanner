@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>策略总清单 · Polymarket 电竞</title>
+<style>
+  :root{
+    --bg:#f5f6f8; --card:#ffffff; --text:#1d1d1f; --text2:#6e6e73;
+    --line:#e8e9ec; --blue:#0070f2; --green:#1a7f37; --red:#d13438;
+    --amber:#b26a00; --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:48px 28px 80px}
+  .hero{padding:8px 0 26px}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:var(--blue);text-transform:uppercase}
+  h1{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:8px 0 10px}
+  .sub{color:var(--text2);font-size:16px;max-width:780px}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+  .lg{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1px solid var(--line);
+      border-radius:14px;padding:12px 16px;max-width:330px;box-shadow:var(--shadow)}
+  .lg .dot{width:14px;height:14px;border-radius:50%;margin-top:4px;flex:none}
+  .lg b{font-size:14px;display:block}
+  .lg span{font-size:12.5px;color:var(--text2);display:block;margin-top:2px}
+  nav{position:sticky;top:0;background:rgba(245,246,248,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);z-index:10;padding:12px 0}
+  nav .wrap{padding:0 28px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .chip{font-size:13px;font-weight:600;color:var(--text2);background:var(--card);border:1px solid var(--line);
+        padding:7px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+  .chip:hover{color:var(--blue);border-color:var(--blue)}
+  .chip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px}
+  section{padding-top:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+  .sec-head h2{font-size:24px;font-weight:700;letter-spacing:-.01em}
+  .sec-head .count{font-size:13px;color:var(--text2);font-weight:600}
+  .note{font-size:13px;color:var(--text2);background:var(--card);border:1px solid var(--line);
+        border-radius:12px;padding:10px 16px;margin-bottom:16px;box-shadow:var(--shadow)}
+  .feature{background:linear-gradient(135deg,#0b3d91 0%,#0070f2 100%);color:#fff;border-radius:var(--radius);
+           padding:26px 30px;margin-bottom:8px;box-shadow:var(--shadow);display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+  .feature .txt{flex:1;min-width:280px}
+  .feature h3{font-size:21px;font-weight:700;margin-bottom:8px}
+  .feature p{font-size:14px;opacity:.92}
+  .feature .steps{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;font-weight:600}
+  .feature .s{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:10px;padding:8px 13px}
+  .feature .ar{opacity:.8}
+  .new{display:inline-block;background:#ffd60a;color:#1d1d1f;font-size:11px;font-weight:800;letter-spacing:.06em;
+       padding:3px 9px;border-radius:999px;vertical-align:3px;margin-left:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;border:1px solid var(--line);
+        transition:transform .18s ease,box-shadow .18s ease;display:flex;flex-direction:column;gap:9px}
+  .card:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(0,0,0,.05),0 16px 36px rgba(0,0,0,.10)}
+  .card-top{display:flex;justify-content:space-between;align-items:center}
+  .tier{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;padding:4px 11px;border-radius:999px}
+  .tier.g{background:#e8f5ec;color:var(--green)} .tier.y{background:#fff4e0;color:var(--amber)} .tier.r{background:#fdecec;color:var(--red)}
+  .tier .dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+  h3{font-size:18px;font-weight:700;letter-spacing:-.01em}
+  .timing{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.04em}
+  .rule{font-size:13.5px;color:var(--text)}
+  .ev{font-size:12.5px;color:var(--text2);background:#f7f8fa;border-radius:10px;padding:8px 12px}
+  .ev b{font-weight:700;color:var(--text)}
+  .ev .both{color:var(--blue);font-weight:700}
+  .strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+  .mod{background:var(--card);border:1px dashed #c9ccd2;border-radius:12px;padding:10px 14px;font-size:13px;color:var(--text2)}
+  .mod b{color:var(--text)}
+  .foot{margin-top:60px;border-top:1px solid var(--line);padding-top:24px;font-size:13px;color:var(--text2)}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  @media (max-width:720px){h1{font-size:30px}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="chip" href="#sec-game"><span class="dot" style="background:var(--green)"></span>小局策略</a>
+  <a class="chip" href="#sec-match">整局策略</a>
+  <a class="chip" href="#sec-common">通用策略</a>
+  <a class="chip" href="#sec-special">特殊策略</a>
+  <a class="chip" href="#sec-mod">执行模块</a>
+  <a class="chip" href="../runbook/TRADING_PLAYBOOK.md">⚡ 今日作战速查</a>
+  <a class="chip" href="matchup_forecast.html">⚔️ 对战形态预判</a>
+  <a class="chip" href="reversal_patterns.html">→ 反转形态库</a>
+</div></nav>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Strategy Library · 策略层</div>
+    <h1>策略总清单</h1>
+    <p class="sub">分类按"实证来源 + 交易主战场"：<b>小局第一、整局第二、通用/特殊收尾</b>——
+    你的大部分真实交易与复盘来自小局，所以小局策略排在最前。每项带三档颜色定位（操作姿态，不是判断对错）。</p>
+    <div class="legend">
+      <div class="lg"><span class="dot" style="background:var(--green)"></span><div><b>🟢 常规做</b><span>正期望 + 已实盘多次验证 + 可半自动（主攻）</span></div></div>
+      <div class="lg"><span class="dot" style="background:var(--amber)"></span><div><b>🟡 谨慎做</b><span>逻辑/回测成立，实盘样本不足或需严格纪律（小仓验证）</span></div></div>
+      <div class="lg"><span class="dot" style="background:var(--red)"></span><div><b>🔴 不做或先验证</b><span>负期望（规则性不做）或完全未验证/暂缓</span></div></div>
+    </div>
+  </header>
+
+  <div class="feature">
+    <div class="txt">
+      <h3>彩票机器 <span class="new">NEW</span></h3>
+      <p>从"深跌反转"现象提炼出的完整入场策略：第一层极低价挂单自动覆盖，第二层反弹确认加仓不接刀。
+      2026-08-08 回测完成——层 1 反转场次平均 8.3x，层 2 主触发 ROI +91%。</p>
+    </div>
+    <div class="steps">
+      <span class="s">现象<small style="display:block;font-weight:400;opacity:.85">A1 V 型极值反转</small></span><span class="ar">→</span>
+      <span class="s">策略<small style="display:block;font-weight:400;opacity:.85">两层触发 + 止盈止损</small></span><span class="ar">→</span>
+      <span class="s">验证<small style="display:block;font-weight:400;opacity:.85">1 分钟回测</small></span><span class="ar">→</span>
+      <span class="s">下一步<small style="display:block;font-weight:400;opacity:.85">小额实测 20-30 触发</small></span>
+    </div>
+  </div>
+
+  <section id="sec-game">
+    <div class="sec-head"><h2>小局策略</h2><span class="count">Game / Map Winner · 你的主战场</span></div>
+    <div class="note">大部分真实交易、复盘与回测来自小局；整场 Moneyline 的适用性在卡片内标注。</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top"><span class="tier g"><span class="dot" style="background:var(--green)"></span>🟢 常规做</span><span class="timing">赛中</span></div>
+        <h3>热门回撤接（S2）</h3>
+        <div class="rule">热门 ≥65%，70-80c 浅回撤最优、60-70c 次优、40-50c 主攻；<b>跌破 40c 失效转 S1</b>（原 S3 已并入）。</div>
+        <div class="ev"><b>证据</b>：130 场统计（70-80% 胜率 96.7%）；BESTIA · NRG +25.4 · LNG/IG +37 · T1A<br><span class="both">整场同样实证：</span>NAVI +33.5% · HLE 整场 +34.8 · BetBoom +28<br><span class="both">注意：</span>热门无回撤场次（KT/GEN、JDG/EDG 最低 62-82c）= 低交易价值，45c 挂单不触发属正常</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier g"><span class="dot" style="background:var(--green)"></span>🟢 常规做</span><span class="timing">赛中</span></div>
+        <h3>中位反转-标准（S1-标准）</h3>
+        <div class="rule">20-50c 深跌分档接，买80回收（60-70c 卖 80% 成本 + 20% 彩票）。</div>
+        <div class="ev"><b>证据</b>：BO3 首局落后样本（G1）；08-05 接刀反面（无方向过滤不可做）<br><span class="both">整场版：</span>P5 E-A2（SPARTA 33.5c）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">赛前/开局</span></div>
+        <h3>五五开局早买</h3>
+        <div class="rule">50-60c 小仓压一方拿资格，&gt;60c 不追；全仓版本 = 高风险样本，不进系统。</div>
+        <div class="ev"><b>证据</b>：T1/DK +200（全仓，反面纪律）· T1a 赛前 63c +5.4 · BFX 赛前 All in（反面）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier r"><span class="dot" style="background:var(--red)"></span>🔴 暂缓</span><span class="timing">赛中</span></div>
+        <h3>中位反转-深反（S1-深反）</h3>
+        <div class="rule">&lt;15c 彩票仓，金额随价格下降递增，吃倍数。暂缓（设计/模板/回测保留）。</div>
+        <div class="ev"><b>证据</b>：WE G1 6.5c · WE G2 0.65c · IG/NIP &lt;5c · BRO G1 1.5c→99.95c · <b>K27 整场 6c→100（CS2，08-09）· GEN/DNS 整场 5.5c→92.5（08-10）</b><br><span class="both">整场同样出现：</span>VG/YB 7c · WE/AL Moneyline · HLE Challengers Moneyline 5.5c</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">赛中</span></div>
+        <h3>反弹确认加仓</h3>
+        <div class="rule">&lt;10c 低点单根拉升 ≥10c 后追确认仓，不接刀（彩票机器第二层，回测完成，待小额实测）。</div>
+        <div class="ev"><b>证据</b>：回测 4 触发平均 +13.7/笔（ROI +91%）· WE G2 13c 上车 +425% · FOKUS G1 9c→99.95（CS2 首证）<br><span class="both">回测以 小局 为主</span>（WE/BRO/TES/FOKUS G1）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">赛中</span></div>
+        <h3>中位震荡多轮网格</h3>
+        <div class="rule">25-75c 反复穿越 50%，多轮低买高卖（未实盘，先模拟验证）。</div>
+        <div class="ev"><b>证据</b>：GLYPH G2（10 次穿越）+112.6%<br><span class="both">整场也出现：</span>SPARTA / VG/YB / WE-TT Moneyline（5-7 次）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">赛中</span></div>
+        <h3>CS 局内落后侧</h3>
+        <div class="rule">CS 回合/半场暂时落后 ≠ 输，买落后那一侧（CS 回合制专属）。</div>
+        <div class="ev"><b>证据</b>：Liquid G1（60/55/50c 低吸后 Map 翻盘）· 9INE 为反面</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-match">
+    <div class="sec-head"><h2>整局策略</h2><span class="count">Match / Series Winner · Moneyline 专属</span></div>
+    <div class="note">只在 BO3/BO5 整场市场成立；你目前对这些主要是分析/回测，实盘样本少于小局。</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">首局/前半段落后</span></div>
+        <h3>系列赛翻盘（P5）</h3>
+        <div class="rule">Moneyline 折价：&lt;30c 走深反 · 30-45c 走中位 · 55-70c 走热门回撤。</div>
+        <div class="ev"><b>证据</b>：VG/YB +196% · SPARTA +34.7% · NAVI +33.5% · WE/AL · HLE Challengers · <b>K27 整场 6→100（CS2 让一追二）· DNS 整场 11.5→100 · HLE 整场 11.5→100（08-10）</b> · <b>RE 整场 17.5c 深水区（Dota2，08-11）· LevelUP 整场 9.5→100（Dota2，08-11）· DK 整场 1.5→100（NSEA/DKC，LCK CL，08-11 让一追二）</b></div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">Moneyline 低开</span></div>
+        <h3>下狗整场反转早买</h3>
+        <div class="rule">Moneyline 低开（20-35c 甚至 &lt;10c）→ 下狗确认反转早买区 <b>35-45c</b>；G1/G2 逐局抬升。</div>
+        <div class="ev"><b>证据</b>：TT 27.5→99.95 · TES 14.5→100 · WE/AL Moneyline 13.5→100 · BRO Moneyline 21.5→100 · <b>DNS 11.5→100（DNF 让一追二）· DNS 5.5→92.5（GEN 弱克强，08-10）· DK 1.5→100（NSEA/DKC，08-11 让一追二，样本组最深）</b></div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">BO3 1:1 / BO5 2:2 后</span></div>
+        <h3>决胜局结构</h3>
+        <div class="rule">只允许赛前底仓 + 20-30c 小彩票；40-50c 破位禁止加仓；大优时 60c+ 必须预设止盈。</div>
+        <div class="ev"><b>证据</b>：BRO vs DRX G3（五错 -60）· WE vs TT G3（WE 11.5c→0.05c）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">BO3 首图落后</span></div>
+        <h3>CS 首图落后整场翻盘</h3>
+        <div class="rule">买暂时落后侧（整场版，P5 的 CS 形态）。</div>
+        <div class="ev"><b>证据</b>：SPARTA 首图落后 → 整场赢</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier r"><span class="dot" style="background:var(--red)"></span>🔴 纪律</span><span class="timing">整场持有</span></div>
+        <h3>死亡螺旋纪律</h3>
+        <div class="rule">热门近胜被翻后 Moneyline 一路归零（BFX 75.5→0.05 · BLG 85.5→0.05 · NS/T1 79.5→0.5）。G1 被翻后整场仓应减仓/止损（D3），不留着赌 G2。</div>
+        <div class="ev"><b>非入场策略</b>：D3 止损的应用场景；第三局起只有 Moneyline，无独立小市场</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-common">
+    <div class="sec-head"><h2>通用策略</h2><span class="count">小局 + 整场都适用 / 实证</span></div>
+    <div class="note">赔率结构类策略：小局开盘和整场开盘都能用，两边都有样本。</div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">赛前</span></div>
+        <h3>三七开买 3（冷门底仓）</h3>
+        <div class="rule">30-40c 小底仓，赛中跌深再接力 S1。</div>
+        <div class="ev"><b>证据</b>：NS G1 35-40c（小局）· BRO 决胜局 Moneyline 赛前 40c（整场）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier r"><span class="dot" style="background:var(--red)"></span>🔴 不做或先验证</span><span class="timing">赛前</span></div>
+        <h3>三七开买 7（热门侧）</h3>
+        <div class="rule">负期望规则：65-80c 直接买不成立，只能等赛中回撤。胜率不低但价格已透支。</div>
+        <div class="ev"><b>证据</b>：HLE 77c 归零（整场，期望 -11.7）· YB1 78.2c 全仓侥幸（小局）</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">赛中（一方被错杀）</span></div>
+        <h3>强强对话价值买入（A7）</h3>
+        <div class="rule">双方实力接近（赛前 45-55 分）+ 一方被砸到 &lt;30c → 反转买入（S1-标准 / 彩票仓）；<b>联赛信誉过滤</b>：LCK/CS2 适用，LPL 降级。</div>
+        <div class="ev"><b>证据</b>：PHA 13.5c（CS2 EYE/PHA）· HLE G2 22-25c（08-08 翻盘赢系列赛）· TT 27.5c · TES G1 4.5c · BRO G1 1.5c · <b>K27 Map2 11c（CS2）· HLE1 Moneyline 11.5c（LCK 让一追二，08-10）</b>；反例 BLG/TES（LPL）</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-special">
+    <div class="sec-head"><h2>特殊策略</h2><span class="count">结构特殊 / 持仓管理</span></div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">彩票池</span></div>
+        <h3>彩票机器</h3>
+        <div class="rule">两层触发（极低价挂单 + 反弹确认），现象→策略→回测完成，待小额实测。见顶部高亮卡。</div>
+        <div class="ev"><b>证据</b>：层 1 反转平均 8.3x · 层 2 主触发 ROI +91%</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier y"><span class="dot" style="background:var(--amber)"></span>🟡 谨慎做</span><span class="timing">持仓</span></div>
+        <h3>对冲保护</h3>
+        <div class="rule">小额买另一侧做保险，单笔 ≤ 预算 10-20%，可归零。</div>
+        <div class="ev"><b>证据</b>：HLE G2 8c 买 5 美金保险</div>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="tier r"><span class="dot" style="background:var(--red)"></span>🔴 先验证</span><span class="timing">持仓</span></div>
+        <h3>持仓救援（S4）</h3>
+        <div class="rule">已有亏损仓：先降险、不默认补仓；形态符合 S1/S2 才小额补仓。</div>
+        <div class="ev"><b>证据</b>：08-05 部分止盈后归零</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-mod">
+    <div class="sec-head"><h2>执行模块</h2><span class="count">不算策略，但必须遵守</span></div>
+    <div class="strip">
+      <div class="mod"><b>D2 锁盈</b>：尾盘崩塌/尾盘极限反转保护（60 回收 / 75 锁利 / 80 彩票）</div>
+      <div class="mod"><b>D3 止损</b>：跌破成本一半离场；死亡螺旋后整场不留赌 G2</div>
+      <div class="mod"><b>D4 进场三件套</b>：先挂止盈/止损/彩票上限再买入</div>
+      <div class="mod"><b>D5 信心溢价</b>：纯主观单按彩票仓定规模（≤10-20%）</div>
+      <div class="mod"><b>D6 每日回吐</b>：到线停止新开仓</div>
+      <div class="mod"><b>滚动降成本</b>：高位卖、低位接（动作，不是策略）</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <b>分层关系</b>：现象层（REVERSAL_PATTERN_LIBRARY.md / reversal_patterns.html）→ 策略层（本页，小局 → 整局 → 通用/特殊）。
+    完整细节见 <a href="STRATEGY_MASTER_LIST.md">STRATEGY_MASTER_LIST.md</a> 与 <a href="STRATEGY_PATTERN_LIBRARY.md">STRATEGY_PATTERN_LIBRARY.md</a>；
+    彩票机器见 <a href="LOTTERY_MACHINE.md">LOTTERY_MACHINE.md</a>；今日实操看
+    <a href="../runbook/TRADING_PLAYBOOK.md">⚡ 今日作战速查</a>。
+  </footer>
+</div>
+</body>
+</html>
