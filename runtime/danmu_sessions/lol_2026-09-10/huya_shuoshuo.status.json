@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_shuoshuo",
+  "url": "https://www.huya.com/323444",
+  "state": "offline_waiting",
+  "started_at": "2026-09-09T16:53:55+00:00",
+  "heartbeat_at": "2026-09-10T15:59:55+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 323444,
+  "channel_id": 35184381630871,
+  "nickname": "解说硕硕",
+  "introduction": "LCK CL！NS DNS！",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-09-09T16:53:56+00:00"
+}

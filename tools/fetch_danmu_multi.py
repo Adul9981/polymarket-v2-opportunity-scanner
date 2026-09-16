@@ -16,6 +16,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import signal
 import subprocess
@@ -24,8 +25,10 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+from streamer_game import game_of_url
+
 ROOT = Path(__file__).resolve().parent.parent
-PY = "/tmp/intel-whisper-venv/bin/python"
+PY = os.environ.get("INTEL_PY") or "/tmp/intel-whisper-venv/bin/python"
 
 
 def platform_of(url: str) -> str:
@@ -36,30 +39,41 @@ def platform_of(url: str) -> str:
     raise ValueError(f"unsupported platform: {url}")
 
 
-def output_path(url: str) -> Path:
+def output_path(url: str, game: str = "lol") -> Path:
     date = datetime.now().strftime("%Y-%m-%d")
     plat = platform_of(url)
     tag = url.rstrip("/").split("/")[-1]
-    return ROOT / "docs" / "data" / "danmu" / plat / f"{date}_{tag}.jsonl"
+    return ROOT / "docs" / "data" / "danmu" / game / plat / f"{date}_{tag}.jsonl"
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="multi-room live danmaku capture")
     ap.add_argument("--rooms", required=True, help="comma-separated live page URLs")
     ap.add_argument("--seconds", type=int, default=0, help="0 = until Ctrl-C")
+    ap.add_argument("--game", default="", help="game tag lol/cs2/dota2（默认按 URL 自动推断）")
+    ap.add_argument("--registry", default=str(ROOT / "knowledge" / "streamer_registry.json"))
     args = ap.parse_args()
+
+    registry = None
+    if args.registry:
+        try:
+            registry = json.loads(Path(args.registry).read_text(encoding="utf-8"))
+        except (FileNotFoundError, json.JSONDecodeError):
+            registry = None
+    forced_game = (args.game or "").strip().lower()
 
     urls = [u.strip() for u in args.rooms.split(",") if u.strip()]
     procs: list[tuple[subprocess.Popen, str, Path]] = []
     for url in urls:
         plat = platform_of(url)
+        game = forced_game or game_of_url(url, registry)
         script = ROOT / "tools" / ("fetch_huya_danmu.py" if plat == "huya" else "fetch_soop_danmu.py")
-        out = output_path(url)
+        out = output_path(url, game)
         out.parent.mkdir(parents=True, exist_ok=True)
         cmd = [PY, str(script), "--url", url]
         if args.seconds:
             cmd += ["--seconds", str(args.seconds)]
-        cmd += ["--out", str(out)]
+        cmd += ["--out", str(out), "--game", game]
         env = dict(os.environ)
         env.setdefault("PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION", "python")
         p = subprocess.Popen(cmd, env=env)

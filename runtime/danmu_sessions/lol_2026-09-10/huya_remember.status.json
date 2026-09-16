@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_remember",
+  "url": "https://www.huya.com/rememberlol",
+  "state": "offline_waiting",
+  "started_at": "2026-09-09T16:53:55+00:00",
+  "heartbeat_at": "2026-09-10T15:59:54+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 528222,
+  "channel_id": 1950358554,
+  "nickname": "Remember",
+  "introduction": "[CL] 季后赛 NSvsDNS",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-09-09T16:53:55+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "dota2",
+  "source": "huya_ti2026_stage1",
+  "url": "https://www.huya.com/660118",
+  "state": "preflight",
+  "started_at": "2026-09-11T16:00:17+00:00",
+  "heartbeat_at": "2026-09-11T16:00:17+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": null,
+  "error": null,
+  "recent_msgs": []
+}

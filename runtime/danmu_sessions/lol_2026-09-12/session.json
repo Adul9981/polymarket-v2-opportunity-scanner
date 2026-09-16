@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "session": "lol_2026-09-12",
+  "title": "VPS 7x24 弹幕采集 · 英雄联盟（lol）",
+  "game": "lol",
+  "state": "stopped",
+  "updated_at": "2026-09-12T16:00:05+00:00",
+  "report": "reports/intel_danmu_live_lol_2026-09-12.html",
+  "intel_json": "runtime/danmu_sessions/lol_2026-09-12/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T16:00:03+00:00",
+      "last_message_at": "2026-09-12T15:59:36+00:00",
+      "message_count": 116704,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "ig回家了呗[偷笑]",
+          "ts": 1789228595.01
+        },
+        {
+          "t": "不敢放",
+          "ts": 1789228604.33
+        },
+        {
+          "t": "拿ES就输",
+          "ts": 1789228659.4
+        },
+        {
+          "t": "lol要凉打成这样还想打世界赛",
+          "ts": 1789228671.59
+        },
+        {
+          "t": "？？？怎么还在打",
+          "ts": 1789228673.82
+        },
+        {
+          "t": "?????还在打?",
+          "ts": 1789228687.82
+        },
+        {
+          "t": "重播",
+          "ts": 1789228690.45
+        },
+        {
+          "t": "还在打",
+          "ts": 1789228701.84
+        },
+        {
+          "t": "谁赢了啊",
+          "ts": 1789228705.5
+        },
+        {
+          "t": "拿EZ就输",
+          "ts": 1789228710.96
+        },
+        {
+          "t": "AL",
+          "ts": 1789228715.04
+        },
+        {
+          "t": "哦哦，谢谢回复，恭喜al",
+          "ts": 1789228733.34
+        },
+        {
+          "t": "1",
+          "ts": 1789228754.46
+        },
+        {
+          "t": "今天ad是怎么回事",
+          "ts": 1789228773.16
+        },
+        {
+          "t": "0",
+          "ts": 1789228776.61
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【交锋正此时】AL 1:1 iG 2026LPL败决",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-09-12T10:56:21+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T14:24:36+00:00",
+      "heartbeat_at": "2026-09-12T16:00:01+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "IG大战AL ！！胜者进决赛！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T14:24:38+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T16:00:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "LEC季后赛 GX VS NAVI",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T10:56:21+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T15:20:34+00:00",
+      "heartbeat_at": "2026-09-12T15:59:55+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "LPL败者组决赛 iG vs AL",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T15:20:34+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T16:00:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[LCK] 败决 HLEvsT1 ",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T10:56:21+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "capturing",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T16:00:03+00:00",
+      "last_message_at": "2026-09-12T15:59:58+00:00",
+      "message_count": 5093,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "暴击书比死舞都肉，你会玩吗",
+          "ts": 1789228623.69
+        },
+        {
+          "t": "这大什么啊",
+          "ts": 1789228630.23
+        },
+        {
+          "t": "死舞不如法爆书",
+          "ts": 1789228711.91
+        },
+        {
+          "t": "bp了",
+          "ts": 1789228721.04
+        },
+        {
+          "t": "开了",
+          "ts": 1789228726.13
+        },
+        {
+          "t": "开了",
+          "ts": 1789228729.57
+        },
+        {
+          "t": "开了",
+          "ts": 1789228732.02
+        },
+        {
+          "t": "bp了",
+          "ts": 1789228733.44
+        },
+        {
+          "t": "感情深一口闷",
+          "ts": 1789228761.25
+        },
+        {
+          "t": "?",
+          "ts": 1789228761.9
+        },
+        {
+          "t": "主播高兴的合不拢嘴",
+          "ts": 1789228775.65
+        },
+        {
+          "t": "pezy的卢锡安都赢不了",
+          "ts": 1789228786.47
+        },
+        {
+          "t": "不能算啊，得看倒数第二位",
+          "ts": 1789228790.33
+        },
+        {
+          "t": "云露优势啊",
+          "ts": 1789228796.66
+        },
+        {
+          "t": "怎么今天就你一个",
+          "ts": 1789228798.88
+        }
+      ],
+      "room_id": 323444,
+      "channel_id": 1279512307519,
+      "nickname": "解说硕硕",
+      "introduction": "LPL败决！IG AL！",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-12T10:56:21+00:00",
+      "restart_count": 0
+    },
+    {
+      "source": "soop_lck_cl",
+      "game": "lol",
+      "restart_count": 1209
+    }
+  ]
+}

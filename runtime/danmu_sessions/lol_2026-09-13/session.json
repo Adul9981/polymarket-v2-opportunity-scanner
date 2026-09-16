@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "session": "lol_2026-09-13",
+  "title": "VPS 7x24 弹幕采集 · 英雄联盟（lol）",
+  "game": "lol",
+  "state": "stopped",
+  "updated_at": "2026-09-13T01:07:07+00:00",
+  "report": "reports/intel_danmu_live_lol_2026-09-13.html",
+  "intel_json": "runtime/danmu_sessions/lol_2026-09-13/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-09-12T16:00:43+00:00",
+      "heartbeat_at": "2026-09-13T01:07:03+00:00",
+      "last_message_at": "2026-09-13T01:06:03+00:00",
+      "message_count": 1161,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "1",
+          "ts": 1789261147.94
+        },
+        {
+          "t": "放假啊",
+          "ts": 1789261151.8
+        },
+        {
+          "t": "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+          "ts": 1789261177.47
+        },
+        {
+          "t": "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+          "ts": 1789261186.52
+        },
+        {
+          "t": "。",
+          "ts": 1789261209.18
+        },
+        {
+          "t": ".",
+          "ts": 1789261251.31
+        },
+        {
+          "t": "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+          "ts": 1789261293.29
+        },
+        {
+          "t": "d",
+          "ts": 1789261377.4
+        },
+        {
+          "t": "6666",
+          "ts": 1789261388.11
+        },
+        {
+          "t": "这个阵容太夸张了，一顿脆皮",
+          "ts": 1789261390.84
+        },
+        {
+          "t": "1",
+          "ts": 1789261405.41
+        },
+        {
+          "t": ".",
+          "ts": 1789261446.36
+        },
+        {
+          "t": "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+          "ts": 1789261453.72
+        },
+        {
+          "t": "换碟",
+          "ts": 1789261562.36
+        },
+        {
+          "t": "。",
+          "ts": 1789261563.36
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】17点AL vs BLG 2026LPL赛季决赛",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-09-12T16:00:43+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T16:00:43+00:00",
+      "heartbeat_at": "2026-09-13T01:07:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "IG大战AL ！！胜者进决赛！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T16:00:43+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T16:00:43+00:00",
+      "heartbeat_at": "2026-09-13T01:07:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "LEC季后赛 GX VS NAVI",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T16:00:43+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T16:00:43+00:00",
+      "heartbeat_at": "2026-09-13T01:07:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "LPL败者组决赛 iG vs AL",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T16:00:43+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T16:00:43+00:00",
+      "heartbeat_at": "2026-09-13T01:07:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[LCK] 败决 HLEvsT1 ",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T16:00:43+00:00",
+      "restart_count": 0
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T19:51:08+00:00",
+      "heartbeat_at": "2026-09-13T01:06:59+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "11点LEC季后赛！VIT MKOI！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T19:51:09+00:00",
+      "restart_count": 1
+    },
+    {
+      "source": "soop_lck_cl",
+      "game": "lol",
+      "restart_count": 2182
+    }
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "meta": {
+    "total": 2015,
+    "active_users": 645,
+    "window_utc": [
+      "2026-09-10 16:00",
+      "2026-09-11 07:42"
+    ],
+    "density_per_min": 2.1,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "BLG": {
+      "mentions": 51,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    "IG": {
+      "mentions": 293,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Faker那个挺好看的"
+      ]
+    },
+    "Niko": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "大niko宝宝学院？",
+        "这个niko很贵"
+      ]
+    },
+    "Apex": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "apex说联动团灭也有特效",
+        "不如Apex"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 0,
+    "samples": []
+  },
+  "situation": {
+    "count": 3,
+    "samples": [
+      "下三路之神哈哈哈",
+      "经济和血蹦了",
+      "1拿了，经济"
+    ]
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "16:03",
+      "count": 24,
+      "samples": [
+        "。",
+        "1",
+        "d法杖就行 上八提升不大",
+        "一"
+      ]
+    },
+    {
+      "minute_utc": "16:12",
+      "count": 24,
+      "samples": [
+        "在赛事模拟中指挥AL战队大获全胜，快来一起挑战吧",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "minute_utc": "16:14",
+      "count": 20,
+      "samples": [
+        "已经拿到版号",
+        "[666][666][666]",
+        ".",
+        "."
+      ]
+    },
+    {
+      "minute_utc": "16:10",
+      "count": 18,
+      "samples": [
+        "[大哥]",
+        "。",
+        "。",
+        "你有王者的心！"
+      ]
+    },
+    {
+      "minute_utc": "16:11",
+      "count": 17,
+      "samples": [
+        "简单又无脑",
+        "这期神了",
+        "有人在重复看呢！",
+        "。"
+      ]
+    },
+    {
+      "minute_utc": "16:04",
+      "count": 15,
+      "samples": [
+        "。",
+        "。",
+        "q",
+        "q"
+      ]
+    },
+    {
+      "minute_utc": "16:05",
+      "count": 14,
+      "samples": [
+        "！",
+        "1",
+        "2",
+        "哈哈哈哈"
+      ]
+    },
+    {
+      "minute_utc": "16:09",
+      "count": 14,
+      "samples": [
+        "2",
+        "3",
+        "a",
+        "4"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "秋天的小黄人",
+      224
+    ],
+    [
+      "古--月木--兆",
+      48
+    ],
+    [
+      "我爱虎牙我能中奖",
+      38
+    ],
+    [
+      "我是一颗小虎牙",
+      28
+    ],
+    [
+      "沐清欢潦",
+      25
+    ],
+    [
+      "SKT T1老实人皮卡丘",
+      22
+    ],
+    [
+      "Giantpa",
+      16
+    ],
+    [
+      "淰至清则",
+      15
+    ]
+  ],
+  "sources": {
+    "huya_lol_official": 1388,
+    "huya_we957": 0,
+    "huya_maomao": 0,
+    "huya_mile": 0,
+    "huya_remember": 627,
+    "huya_shuoshuo": 0
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "preflight",
+      "started_at": "2026-09-11T15:59:06+00:00",
+      "heartbeat_at": "2026-09-11T15:59:06+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null,
+      "recent_msgs": []
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T15:59:11+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "4点小CK胜决 DK.C vs T1.A",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:40+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T15:59:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "无畏契约顶级天才",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:39+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T15:59:13+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "钻2沉淀",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:41+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T20:46:02+00:00",
+      "heartbeat_at": "2026-09-11T15:59:13+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[CL] 季后赛胜决 T1vsDK",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T20:46:02+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T15:59:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "LCK CL大战！T1 DK！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:39+00:00"
+    }
+  ]
+}

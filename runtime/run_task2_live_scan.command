@@ -1,7 +1,7 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 set -euo pipefail
 
-cd /Users/ad/Documents/polymarket
+cd /home/liucong/polymarket-v2-opportunity-scanner
 
 echo "Running Task 2 live scan..."
 python3 tools/market_scanner.py \
@@ -19,6 +19,6 @@ python3 tools/summarize_scan_diagnostics.py \
   --events runtime/watchlist_events_live_task2.json
 
 echo ""
-echo "Report: /Users/ad/Documents/polymarket/reports/opportunity_scan_live_task2_2026-08-04.md"
-echo "Candidates: /Users/ad/Documents/polymarket/runtime/opportunity_candidates_live_task2.json"
-echo "Events: /Users/ad/Documents/polymarket/runtime/watchlist_events_live_task2.json"
+echo "Report: /home/liucong/polymarket-v2-opportunity-scanner/reports/opportunity_scan_live_task2_2026-08-04.md"
+echo "Candidates: /home/liucong/polymarket-v2-opportunity-scanner/runtime/opportunity_candidates_live_task2.json"
+echo "Events: /home/liucong/polymarket-v2-opportunity-scanner/runtime/watchlist_events_live_task2.json"

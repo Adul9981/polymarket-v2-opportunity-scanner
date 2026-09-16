@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_maomao",
+  "url": "https://www.huya.com/149346",
+  "state": "offline_waiting",
+  "started_at": "2026-09-10T16:00:39+00:00",
+  "heartbeat_at": "2026-09-11T16:00:00+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 149346,
+  "channel_id": 1267235383,
+  "nickname": "解说毛毛",
+  "introduction": "无畏契约顶级天才",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-09-10T16:00:39+00:00"
+}

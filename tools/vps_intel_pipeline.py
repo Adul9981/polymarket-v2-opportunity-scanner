@@ -538,27 +538,51 @@ def deepseek_key() -> str:
     return ""
 
 
+GAME_SLUGS = ("lol", "cs2", "dota2")
+
+
+def _match_game(m: dict) -> str | None:
+    """从比赛 id 首段推断游戏类型（lol/cs2/dota2）；无法判断返回 None。"""
+    slug = str(m.get("id") or "").strip().lower()
+    first = slug.split("-")[0]
+    if first.startswith("cs"):
+        return "cs2"
+    if first.startswith("dota") or first.startswith("ti"):
+        return "dota2"
+    if first.startswith("lol"):
+        return "lol"
+    return None
+
+
+def _game_of_file(p: Path) -> str | None:
+    """新目录 danmu/<game>/<platform>/<file> 下的文件返回其 game，否则 None。"""
+    g = p.parent.parent.name
+    return g if g in GAME_SLUGS else None
+
+
 def league_files(m: dict, files: list[Path]) -> list[Path]:
-    """按比赛联赛过滤直播间文件（2026-08-26 用户定稿：国外源已停用，虎牙优先）。
-    - LoL：只用虎牙 + SOOP；
-    - CS2：只用虎牙 CSBOY 系（csboy_official=马西西 123321 / csboy_mo=321123 / blast；
-      maxixi 已删除——与 csboy_official 123321 同一直播间，2026-08-27 彻底移除）
-      + KICK（eslcs/gaules/esportsworldcup/cs2_maincast）；
-    - 其他：全量。
-    教训：CS2 切片曾混入虎牙 LoL 直播间导致 CS2 页出现 KT/BRO；LoL 页曾混入
-    Twitch co-stream 的跨场噪音（T1/WE 等）。
+    """按比赛游戏过滤直播间文件（2026-09-10 改为按 danmu/<game>/ 目录分）。
+
+    旧实现（2026-08-26）靠文件名关键词猜游戏（csboy/blast/huya/kick），
+    采集层新增 game 维度后，这里改为直接按目录取文件，不再猜词：
+      cs2 比赛 -> 只取 danmu/cs2/ 下文件；lol -> danmu/lol/；dota2 -> danmu/dota2/。
+    若对应 game 目录下没有文件（数据仍在旧目录 danmu/<platform>/），退回原
+    文件名关键词逻辑兜底，避免历史数据漏抓。
     """
-    slug = str(m.get("id") or "")
-    if slug.startswith("cs2"):
+    game = _match_game(m)
+    if game is None:
+        return files  # 未知联赛：全量（保持旧行为）
+    scoped = [p for p in files if _game_of_file(p) == game]
+    if scoped:
+        return scoped
+    # 兜底：数据仍在旧目录（无 game 层），退回文件名关键词
+    if game == "cs2":
         return [
             p for p in files
-            if (
-                ("huya" in p.name and any(k in p.name for k in ("csboy", "blast")))
-                or "kick" in p.name
-            )
+            if ("huya" in p.name and any(k in p.name for k in ("csboy", "blast")))
+            or "kick" in p.name
         ]
-    if slug.startswith("lol"):
-        # LoL 排除 CSBOY（CS2 虎牙房，2026-08-26 教训：曾混入 LoL 切片）
+    if game == "lol":
         return [p for p in files if ("huya" in p.name or "soop" in p.name) and "csboy" not in p.name]
     return files
 
@@ -1041,7 +1065,13 @@ def main() -> None:
         print("[pipeline] no matches for today")
         return
 
-    all_files = sorted(DANMU.glob("*/*.jsonl"))
+    # 只扫三个游戏的目录（danmu/<game>/<platform>/<file>），避免误把 danmu/slices/ 等
+    # 派生目录的切片文件当成原始弹幕源（2026-09-10 目录结构加 game 层后）。
+    all_files = sorted(
+        p
+        for game in GAME_SLUGS
+        for p in (DANMU / game).glob("*/*.jsonl")
+    )
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     # 及时性（2026-08-26）：定时器改 1 分钟后必须加锁，防止多实例重叠
     # 争抢 AI 额度导致每个节点更慢；已有实例运行时本轮直接跳过。

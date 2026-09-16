@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_maomao",
+  "url": "https://www.huya.com/149346",
+  "state": "offline_waiting",
+  "started_at": "2026-09-09T16:53:55+00:00",
+  "heartbeat_at": "2026-09-10T15:59:53+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 149346,
+  "channel_id": 1267235383,
+  "nickname": "解说毛毛",
+  "introduction": "小CK NS VS DNS",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-09-09T16:53:55+00:00"
+}

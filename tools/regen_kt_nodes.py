@@ -22,7 +22,7 @@ from vps_intel_pipeline import (  # noqa: E402
 SLUG = "lol-kt-bro2-2026-08-26"
 TEAMS = ["KT Rolster", "HANJIN BRION"]
 DATE = "2026-08-26"
-FILES = sorted(Path("/opt/danmu-intel/docs/data/danmu").glob("*/*.jsonl"))
+FILES = sorted(Path("/opt/danmu-intel/docs/data/danmu").glob("*/*/*.jsonl"))
 
 
 def main() -> int:

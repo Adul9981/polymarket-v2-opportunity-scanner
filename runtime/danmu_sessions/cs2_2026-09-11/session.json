@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "session": "cs2_2026-09-11",
+  "title": "VPS 7x24 弹幕采集 · CS2（cs2）",
+  "game": "cs2",
+  "state": "stopped",
+  "updated_at": "2026-09-11T16:00:25+00:00",
+  "report": "reports/intel_danmu_live_cs2_2026-09-11.html",
+  "intel_json": "runtime/danmu_sessions/cs2_2026-09-11/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "preflight",
+      "started_at": "2026-09-11T16:00:16+00:00",
+      "heartbeat_at": "2026-09-11T16:00:16+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [],
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T16:00:01+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】Alliance-magic",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:40+00:00",
+      "restart_count": 1
+    }
+  ]
+}

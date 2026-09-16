@@ -112,6 +112,7 @@ async def collect(
     status_path: Path | None = None,
     source: str = "",
     first_message_timeout: int = 120,
+    game: str = "",
 ) -> int:
     sys.path.insert(0, str(DANMU_LIB))
     from danmaku import DanmakuClient  # local import: external lib
@@ -120,6 +121,7 @@ async def collect(
     status = {
         "schema_version": 1,
         "platform": "huya",
+        "game": game,
         "source": source or url.rstrip("/").split("/")[-1],
         "url": url,
         "state": "preflight",
@@ -175,6 +177,7 @@ async def collect(
                         "uid": m.get("uid", 0),
                         "text": m["content"],
                         "source": status["source"],
+                        "game": game,
                         "room_id": room_info["room_id"],
                     }
                     print(f"[{count}] {m['name']}: {m['content']}", flush=True)
@@ -246,6 +249,7 @@ def main() -> int:
     parser.add_argument("--out", default=None, help="JSONL 输出路径（可选，边抓边写）")
     parser.add_argument("--status", default=None, help="健康状态 JSON（原子更新）")
     parser.add_argument("--source", default="", help="稳定来源标识，写入每条弹幕")
+    parser.add_argument("--game", default="", help="游戏标签 lol/cs2/dota2，写入每条记录")
     parser.add_argument(
         "--first-message-timeout",
         type=int,
@@ -263,6 +267,7 @@ def main() -> int:
                 Path(args.status) if args.status else None,
                 args.source,
                 args.first_message_timeout,
+                args.game,
             )
         )
     except Exception as exc:
