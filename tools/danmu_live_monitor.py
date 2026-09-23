@@ -116,7 +116,7 @@ def render_page(
     if teams:
         rows_html = ""
         for n, d in teams:
-            tone = "分歧" if d["pos"] and d["neg"] else ("正面" if d["pos"] > d["neg"] else "负面")
+            tone = danmu_intel.tone_label(d["pos"], d["neg"], d["mentions"])
             sample = "".join(f'<li>{esc(s)}</li>' for s in d["samples"][:3])
             rows_html += (
                 f'<div class="row"><b>{esc(n)}</b> 提及 {d["mentions"]} · 情绪：{tone}'
@@ -136,10 +136,34 @@ def render_page(
     if players:
         rows_html = ""
         for n, d in players:
-            tone = "正面" if d["pos"] > d["neg"] else ("负面" if d["neg"] > d["pos"] else "分歧")
+            tone = danmu_intel.tone_label(d["pos"], d["neg"], d["mentions"])
             sample = "".join(f'<li>{esc(s)}</li>' for s in d["samples"][:2])
             rows_html += f'<div class="row"><b>{esc(n)}</b> {tone}（正 {d["pos"]} / 负 {d["neg"]}）<ul>{sample}</ul></div>'
         blocks += f'<section class="card"><h2>选手状态</h2>{rows_html}</section>'
+
+    # 3.5) 比赛叙事（阶段2：观众共识 / 情绪时间轴 / 关键转折点）
+    narr = intel.get("narrative") or {}
+    if narr.get("timeline") or narr.get("turning_points"):
+        narr_rows = ""
+        cons = narr.get("consensus") or {}
+        if cons.get("pos") or cons.get("neg"):
+            narr_rows += (
+                f'<div class="row"><b>观众共识</b>：{esc(cons.get("tone", "中性"))}'
+                f'（正 {cons.get("pos", 0)} / 负 {cons.get("neg", 0)}，净 {cons.get("net", 0):+d}）</div>'
+            )
+        tl = narr.get("timeline") or []
+        if len(tl) >= 2:
+            arc = " → ".join(f'{esc(b["tone"])}({b["net"]:+d})' for b in tl)
+            narr_rows += f'<div class="row"><b>情绪走势</b>：{arc}</div>'
+        tp = narr.get("turning_points") or []
+        if tp:
+            tp_items = "".join(
+                f'<li>{esc(t["minute_utc"])} {esc(t["tone"])}（{t["count"]} 条）{esc(t["sample"][:40])}</li>'
+                for t in tp[:4]
+            )
+            narr_rows += f'<div class="row"><b>关键转折点</b><ul>{tp_items}</ul></div>'
+        if narr_rows:
+            blocks += f'<section class="card"><h2>比赛叙事</h2>{narr_rows}</section>'
 
     # 4) 盘口讨论
     odds = intel["odds_discussion"]

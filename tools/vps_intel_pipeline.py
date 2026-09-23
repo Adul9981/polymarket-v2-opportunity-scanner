@@ -27,6 +27,8 @@ import time
 import urllib.request
 from pathlib import Path
 
+import danmu_intel
+
 ROOT = Path("/opt/danmu-intel")
 MATCHES = ROOT / "data" / "matches_today.json"
 STATE_DIR = ROOT / "runtime" / "vps_intel"
@@ -469,7 +471,9 @@ def run_codex_report(
         f"请按以下流程生成情报页：\n"
         f"1) 先完整阅读技能文件 /root/.codex/skills/intel-report/SKILL.md 与模板 "
         f"knowledge/INTEL_HTML_TEMPLATE.md、knowledge/LIVE_INTEL_SCHEMA.md；\n"
-        f"2) 读取规则层情报 JSON {intel_json} 与弹幕切片 {slice_file}；\n"
+        f"2) 读取规则层情报 JSON {intel_json}（其中 narrative 字段含观众共识/情绪走势/转折点，"
+        f"作为第 5 段群体共识与第 7 段逐局复盘时间线的叙事主线；neutral_salvage 字段为规则层判中性、"
+        f"待二次判定情绪的弹幕候选）与弹幕切片 {slice_file}；\n"
         f"3) 页面结构必须严格按 12 段决策导向模板（INTEL_HTML_TEMPLATE 二.10，缺一不可），"
         f"每段用 <h2><span class=\"no\">N</span>标题</h2> 编号："
         f"0 核心情报速览 → 1 比赛信息与结果总览/状态核验 → 2 灰信号汇总（风险·观众质疑非结论）→ "
@@ -498,6 +502,9 @@ def run_codex_report(
         f"核心情报必须来自本场弹幕，严禁无中生有；仅简单推断、无数据支撑的不写；"
         f"推测必须显式标注「推测·待验证」并与事实分离呈现；历史画像引用须带时间；"
         f"缺源（如 SOOP 离线）显式标注为缺口，禁止用历史画像冒充本场数据。\n"
+        f"【中性弹幕二次判定·阶段4】对 neutral_salvage 候选（规则层判中性）逐条判定："
+        f"发现真实情绪（如 666=夸赞、'这把拉了'=失误）纳入方向板/复盘并标注「模型二次判定」，"
+        f"纯聊天/表情/无情绪的不写，禁止硬套情绪。\n"
         f"11) 生成 SAP/Apple 风格（浅底 #f5f5f7、白卡片、单一强调色、系统字体栈）紧凑清爽完整 HTML "
         f"写入 {report}（含 </body></html>）。"
     )
@@ -656,8 +663,9 @@ def fast_intel_node(
 
     teams_txt = ""
     for t, v in (stats.get("teams") or {}).items():
+        tone = danmu_intel.tone_label(v.get("pos", 0), v.get("neg", 0), v.get("mentions", 0))
         teams_txt += (
-            f"\n- {t}: 提及{v.get('mentions', 0)} 正向{v.get('pos', 0)}/负向{v.get('neg', 0)}"
+            f"\n- {t}: 情绪{tone} 提及{v.get('mentions', 0)} 正向{v.get('pos', 0)}/负向{v.get('neg', 0)}"
             f" 例:{brief(v.get('samples'))}"
         )
     gray = stats.get("gray_signals") or {}
@@ -676,6 +684,33 @@ def fast_intel_node(
             dens_txt += f"\n- {d.get('minute_utc','')} {d.get('count',0)}条 {str((d.get('samples') or [''])[0])[:40]}"
     if not dens_txt:
         dens_txt = "无"
+    # 阶段3：把阶段2产出的比赛叙事（共识/情绪时间轴/转折点）喂给 AI，
+    # 让 AI 用自然语言复述比赛情绪走向，而不是只搬规则层计数。
+    narr = stats.get("narrative") or {}
+    narr_txt = ""
+    cons = narr.get("consensus") or {}
+    if cons.get("pos") or cons.get("neg"):
+        narr_txt += (
+            f"观众共识：{cons.get('tone', '中性')}"
+            f"（正 {cons.get('pos', 0)}/负 {cons.get('neg', 0)}，净 {cons.get('net', 0):+d}）"
+        )
+    tl = narr.get("timeline") or []
+    if len(tl) >= 2:
+        narr_txt += "；情绪走势：" + " → ".join(f"{b['tone']}({b['net']:+d})" for b in tl)
+    for t in (narr.get("turning_points") or [])[:4]:
+        narr_txt += (
+            f"；转折 {t.get('minute_utc', '')} {t.get('tone', '')}"
+            f"（{t.get('count', 0)}条）{str(t.get('sample', ''))[:40]}"
+        )
+    if not narr_txt:
+        narr_txt = "无（样本不足，勿编造）"
+    # 阶段4：中性弹幕抢救候选（规则层判中性·待 LLM 二次判定情绪）
+    salvage_txt = ""
+    for s in (stats.get("neutral_salvage") or [])[:30]:
+        tag = "·提及实体" if s.get("entity") else ""
+        salvage_txt += f"\n- ×{s.get('count', 1)} {str(s.get('text', ''))[:50]}{tag}"
+    if not salvage_txt:
+        salvage_txt = "无"
 
     glabel = {
         "bp": "BP 后/开局（S0 · EARLY-GAME）",
@@ -696,6 +731,8 @@ def fast_intel_node(
         f"队伍提及：{teams_txt or '无'}\n"
         f"灰信号（观众质疑，非结论）：{gray_txt}\n"
         f"弹幕密度峰值：{dens_txt}\n"
+        f"比赛叙事（观众共识/情绪时间轴/关键转折点）：{narr_txt}\n"
+        f"中性弹幕抢救候选（规则层判中性·待二次判定情绪，×N=出现次数）：{salvage_txt}\n"
         f"规则层情报文件：{intel_json}\n"
         f"要求（决策导向，2026-08-26 定稿）：\n"
         f"1) 第一屏必须是「核心情报速览」，且用标准容器："
@@ -732,7 +769,14 @@ def fast_intel_node(
         f"选手×英雄胜率/战绩提及，无则写「无战绩情报提及」）、弹幕密度峰值时间线（分钟+条数+样本）、"
         f"跨源一致性提示（本场实际数据源与缺口）、比赛元数据（全称/league id/Polymarket slug/赛制 BO{max_games}）；"
         f"禁止为版面清爽删掉以上硬信息。\n"
-        f"9) 直接输出 HTML（不要 markdown 代码块包裹），完整写完 </body></html>。\n"
+        f"9) 比赛叙事（阶段2）：以「观众共识 / 情绪走势 / 关键转折点」为叙事主线，"
+        f"用自然语言复述比赛情绪走向（哪段看涨/看跌/翻转，转折点观众解读：正面=高光/翻盘、负面=失误/送），"
+        f"写入第 5 段「方向性情报板」的群体共识与第 7 段「本局复盘」的时间线；"
+        f"共识净值为 0 或样本不足时写「共识不足」，禁止编造比分与结果。\n"
+        f"10) 中性弹幕二次判定（阶段4）：对「中性弹幕抢救候选」逐条判定情绪，"
+        f"发现真实正面/负面（如「666」=夸赞、「这把拉了」=失误）时纳入第 5 段方向板与第 7 段复盘，"
+        f"标注「模型二次判定」；纯聊天/表情/无情绪的丢弃不写；禁止把无情绪内容硬套情绪。\n"
+        f"11) 直接输出 HTML（不要 markdown 代码块包裹），完整写完 </body></html>。\n"
         f""
     )
     body = json.dumps(
