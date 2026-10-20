@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-19",
+  "matches": [
+    {
+      "id": "lol-hupu-1683760381001728",
+      "slug": "lol-hupu-1683760381001728",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "KC",
+        "MVK"
+      ],
+      "start_time": "2026-10-18T18:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛入围赛",
+      "hupu_score_out_biz_no": "4502",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "KC",
+          "member_id": "853996080463872"
+        },
+        {
+          "name": "MVK",
+          "member_id": "1683524426301440"
+        }
+      ]
+    }
+  ]
+}

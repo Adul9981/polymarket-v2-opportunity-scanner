@@ -1,0 +1,11 @@
+{
+  "match": "lol-dk-dns",
+  "game": 2,
+  "phase": "mid",
+  "slice_rows": 505,
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_DK-DNS_2026-09-27_g2_mid.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-09-27T09:34:03+00:00"
+}

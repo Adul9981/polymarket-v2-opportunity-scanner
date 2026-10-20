@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FURIA vs Aurora · G1 局中情报 · BO5</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 20px rgba(0,0,0,0.035);
+  }
+  .card.speed {
+    background: #ffffff;
+    border: 1px solid rgba(0,113,227,0.18);
+    box-shadow: 0 2px 6px rgba(0,113,227,0.08), 0 10px 28px rgba(0,113,227,0.06);
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    color: #1d1d1f;
+  }
+  h2 .no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 7px;
+    background: #0071e3;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0;
+    transform: translateY(-1px);
+  }
+  .card.speed h2 .no { background: #0071e3; }
+  .meta-line {
+    font-size: 13px;
+    color: #6e6e73;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  .meta-line b { color: #1d1d1f; font-weight: 600; }
+  .badge {
+    display: inline-block;
+    background: rgba(0,113,227,0.08);
+    color: #0071e3;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 20px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .badge.warn { background: rgba(255,149,0,0.12); color: #c26a00; }
+  .badge.gray { background: rgba(120,120,128,0.12); color: #6e6e73; }
+  ul { list-style: none; }
+  ul li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 11px;
+    font-size: 14.5px;
+    color: #1d1d1f;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #0071e3;
+  }
+  ul li .val { color: #0071e3; font-weight: 600; }
+  ul li .src { color: #86868b; font-size: 12.5px; font-weight: 400; }
+  .decision {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: #f5f5f7;
+    border-radius: 12px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #1d1d1f;
+    border-left: 3px solid #0071e3;
+  }
+  .decision span { color: #0071e3; }
+  .kv {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 8px 14px;
+    font-size: 14px;
+  }
+  .kv .k { color: #6e6e73; }
+  .kv .v { color: #1d1d1f; font-weight: 500; }
+  .empty {
+    font-size: 14px;
+    color: #86868b;
+    background: #f5f5f7;
+    border-radius: 10px;
+    padding: 12px 14px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  th {
+    color: #6e6e73;
+    font-weight: 600;
+    font-size: 12.5px;
+    background: #fafafc;
+  }
+  td { color: #1d1d1f; }
+  tr:last-child td { border-bottom: none; }
+  .pos { color: #0071e3; font-weight: 600; }
+  .neg { color: #d70015; font-weight: 600; }
+  .neu { color: #86868b; }
+  details {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #6e6e73;
+  }
+  details summary {
+    cursor: pointer;
+    color: #0071e3;
+    font-weight: 500;
+    font-size: 13px;
+    outline: none;
+  }
+  details p {
+    margin-top: 6px;
+    padding: 8px 10px;
+    background: #f5f5f7;
+    border-radius: 8px;
+    color: #6e6e73;
+  }
+  .three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .three-col .col {
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 14px 15px;
+  }
+  .three-col .col h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+  }
+  .three-col .col p {
+    font-size: 13px;
+    color: #6e6e73;
+    line-height: 1.55;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 1px 8px;
+    border-radius: 20px;
+    margin-left: 6px;
+  }
+  .tag.multi { background: rgba(0,113,227,0.1); color: #0071e3; }
+  .tag.single { background: rgba(255,149,0,0.12); color: #c26a00; }
+  .tag.danmu { background: rgba(120,120,128,0.12); color: #6e6e73; }
+  .footnote {
+    font-size: 12px;
+    color: #86868b;
+    text-align: center;
+    margin-top: 26px;
+    line-height: 1.7;
+  }
+  .divider { height: 1px; background: #f0f0f2; margin: 14px 0; }
+  @media (max-width: 640px) {
+    .three-col { grid-template-columns: 1fr; }
+    .kv { grid-template-columns: 110px 1fr; }
+    .card { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 0 核心情报速览 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="meta-line">
+      FURIA vs Aurora · 第 1 小局（G1）· <b>BO5</b> · 2026-10-17 · 局中·非终局，结果待定
+      <span class="badge warn">弹幕口径·官方待回填</span>
+    </div>
+    <ul>
+      <li>弹幕窗口 <b>['等待首条弹幕','等待首条弹幕']</b>，累计 <b>0 条 / 0 人 / 0.0 条/分</b>，样本状态 <b>insufficient</b> → 当前无任何观众信号可作方向依据，任何方向判断均无置信支撑 <span class="src">（→ 详 §1、§11）</span></li>
+      <li>队伍提及：<b>无</b>；灰信号（观众质疑）：<b>无</b>；弹幕密度峰值：<b>无</b> → 情报面处于空白期，需等待首条弹幕破窗后再建锚 <span class="src">（→ 详 §2、§8）</span></li>
+      <li>BP 锚点与选人情报：<b>样本不足</b>，无英雄/选手映射与选人窗口战绩提及 → 无法建立 BP 侧正负锚，阵容解读暂缺 <span class="src">（→ 详 §3）</span></li>
+      <li>盘口与市场讨论：<b>样本不足</b>，无赔率/让分/大小分相关弹幕 → 市场共识未形成，不构成 LONG/SHORT 触发条件 <span class="src">（→ 详 §4、§6）</span></li>
+      <li>比赛叙事（共识/情绪走势/转折点）：<b>样本不足</b>，禁止编造比分与结果 → 复盘时间线为空，需等弹幕量起量后回填 <span class="src">（→ 详 §5、§7）</span></li>
+    </ul>
+    <div class="decision">
+      决策落点：<span>情报真空 · 维持观望（NO-TRADE）</span>——在首条弹幕出现并形成 ≥2 个可验证锚点前，不建立方向性仓位；下一步动作 = 监控弹幕破窗与密度拐点。
+    </div>
+  </div>
+
+  <!-- 1 结果总览/状态核验 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <div class="kv">
+      <div class="k">比赛全称</div><div class="v">FURIA vs Aurora（CS2）</div>
+      <div class="k">比赛日期</div><div class="v">2026-10-17</div>
+      <div class="k">赛制</div><div class="v">BO5（本场共 5 局）</div>
+      <div class="k">当前节点</div><div class="v">G1 · 局中（S1–S3 快照 · MID-GAME）</div>
+      <div class="k">结果状态</div><div class="v">局中·非终局，结果待定</div>
+      <div class="k">Polymarket slug</div><div class="v">cs2-hupu-1441778164564991750</div>
+      <div class="k">弹幕样本</div><div class="v">0 条 / 0 人 / 0.0 条/分 · insufficient</div>
+      <div class="k">比分</div><div class="v">弹幕口径·官方待回填（当前无数据）</div>
+    </div>
+    <div class="divider"></div>
+    <p style="font-size:13.5px;color:#6e6e73;">状态核验结论：规则层情报文件已加载，但弹幕窗口为空，所有依赖观众信号的判断均标记为 insufficient，不做推断性补全。</p>
+  </div>
+
+  <!-- 2 灰信号汇总 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑·非结论）</h2>
+    <div class="empty">样本不足：窗口内 0 条弹幕，未捕获任何观众质疑类灰信号（如假赛质疑、判罚争议、选手状态质疑）。灰信号留痕为空，不构成负面锚。</div>
+  </div>
+
+  <!-- 3 BP 锚点与选人情报 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <div class="empty">样本不足：无 BP 相关弹幕，无法建立选人窗口锚点。</div>
+    <div class="divider"></div>
+    <table>
+      <thead>
+        <tr><th>项目</th><th>情报状态</th><th>说明</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>本局阵容（英雄+选手映射）</td><td class="neu">无数据</td><td>弹幕未提及，官方数据待回填</td></tr>
+        <tr><td>BP 后战绩情报（选手×英雄胜率）</td><td class="neu">无战绩情报提及</td><td>选人窗口无相关讨论</td></tr>
+        <tr><td>禁用/选取争议</td><td class="neu">无数据</td><td>无观众质疑或讨论</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 4 盘口与市场讨论 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <div class="empty">样本不足：窗口内无赔率、让分、大小分或 Polymarket 价格相关弹幕，市场共识未形成。不构成任何 LONG/SHORT 触发条件。</div>
+  </div>
+
+  <!-- 5 方向性情报板 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板（正锚 × 负锚 × 共识 × 灰信号条件预测）</h2>
+    <table>
+      <thead>
+        <tr><th>维度</th><th>当前状态</th><th>置信标签</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>正锚（看涨信号）</td><td class="neu">无</td><td><span class="tag danmu">弹幕口径·待官方</span></td></tr>
+        <tr><td>负锚（看跌信号）</td><td class="neu">无</td><td><span class="tag danmu">弹幕口径·待官方</span></td></tr>
+        <tr><td>群体共识</td><td class="neu">共识不足（样本 0 条）</td><td><span class="tag danmu">弹幕口径·待官方</span></td></tr>
+        <tr><td>灰信号条件预测</td><td class="neu">无灰信号，无条件预测</td><td><span class="tag danmu">弹幕口径·待官方</span></td></tr>
+        <tr><td>中性弹幕二次判定</td><td class="neu">无候选（0 条）</td><td>—</td></tr>
+      </tbody>
+    </table>
+    <div class="divider"></div>
+    <p style="font-size:13.5px;color:#6e6e73;">
+      <b>比赛叙事（阶段2）：</b>样本不足，无法复述情绪走势。当前无「看涨/看跌/翻转」段落，无关键转折点可解读（正面=高光/翻盘、负面=失误/送均无样本）。共识净值 = 0，按规则写「共识不足」，不编造比分与结果。
+    </p>
+  </div>
+
+  <!-- 6 情报含义与决策落点 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点（LONG / SHORT）</h2>
+    <ul>
+      <li><b>LONG 条件未满足：</b>无正锚、无看涨共识、无盘口支撑 → 不触发做多。</li>
+      <li><b>SHORT 条件未满足：</b>无负锚、无灰信号、无看跌共识 → 不触发做空。</li>
+      <li><b>当前落点：</b><span class="val">NO-TRADE / 观望</span>，等待弹幕破窗后重建锚点。</li>
+      <li><b>触发条件：</b>首条弹幕出现 + 形成 ≥2 个可验证方向锚（正或负）+ 密度拐点确认，方可重新评估方向。</li>
+    </ul>
+  </div>
+
+  <!-- 7 本局复盘（证据层） -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <div class="empty">样本不足：无弹幕时间线可复盘。情绪走势、关键转折点、观众解读均无数据支撑，按规则不编造。</div>
+    <div class="divider"></div>
+    <p style="font-size:13.5px;color:#6e6e73;">证据层状态：0 条弹幕 → 0 个可引用证据点 → 复盘结论为空。</p>
+  </div>
+
+  <!-- 8 队伍/人员画像 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <thead>
+        <tr><th>对象</th><th>提及量</th><th>正/负向</th><th>备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>FURIA（队伍）</td><td class="neu">0</td><td class="neu">—</td><td>无弹幕提及</td></tr>
+        <tr><td>Aurora（队伍）</td><td class="neu">0</td><td class="neu">—</td><td>无弹幕提及</td></tr>
+        <tr><td>选手个体</td><td class="neu">0</td><td class="neu">—</td><td>无人员提及，画像无法建立</td></tr>
+      </tbody>
+    </table>
+    <div class="divider"></div>
+    <p style="font-size:13.5px;color:#6e6e73;">画像结论：样本不足，无法形成任何队伍/人员正负向标签。</p>
+  </div>
+
+  <!-- 9 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <div class="empty">样本不足：无弹幕讨论联赛规律、版本强势英雄或地图池倾向，暂不输出规律性判断。</div>
+  </div>
+
+  <!-- 10 预测验证回填 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <table>
+      <thead>
+        <tr><th>预测项</th><th>状态</th><th>回填结果</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>方向性预测（LONG/SHORT）</td><td class="neu">未建立</td><td class="neu">无预测可验证</td></tr>
+        <tr><td>灰信号条件预测</td><td class="neu">未建立</td><td class="neu">无预测可验证</td></tr>
+        <tr><td>共识净值</td><td class="neu">0 / 共识不足</td><td class="neu">待样本回填</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 11 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源（实际数据源 / 预期 / 缺口）</h2>
+    <div class="three-col">
+      <div class="col">
+        <h3>实际数据源</h3>
+        <p>规则层情报文件：<br>cs2-hupu-1441778164564991750_g1_mid_intel.json<br>弹幕窗口：['等待首条弹幕','等待首条弹幕']<br>样本：0 条 / 0 人 / 0.0 条/分</p>
+      </div>
+      <div class="col">
+        <h3>预期数据源</h3>
+        <p>虎扑弹幕流（实时）<br>官方比分/阵容回填<br>Polymarket 盘口价格<br>选手×英雄战绩库</p>
+      </div>
+      <div class="col">
+        <h3>缺口</h3>
+        <p>弹幕样本 = 0（insufficient）<br>比分未回填<br>阵容/BP 未回填<br>盘口讨论缺失<br>队伍/人员提及缺失</p>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <p style="font-size:13px;color:#6e6e73;">
+      <b>跨源一致性提示：</b>本场实际数据源仅规则层情报文件，其余预期源均未产出；缺口集中在弹幕样本与官方回填，当前不存在跨源冲突，仅存在数据真空。
+    </p>
+    <details>
+      <summary>韩/英弹幕信号层（中文意译 · 原文折叠）</summary>
+      <p>样本不足：窗口内 0 条韩/英弹幕，无可意译样本。黑话词条（如 야필패=亚索必败）本场无出现记录。</p>
+    </details>
+  </div>
+
+  <div class="footnote">
+    局中·非终局，结果待定 · BO5 · 2026-10-17<br>
+    数据口径：弹幕规则层 · 样本 insufficient · 官方数据待回填<br>
+    slug: cs2-hupu-1441778164564991750
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,582 @@
+{
+ "meta": {
+  "total": 13570,
+  "active_users": 4361,
+  "window_utc": [
+   "2026-10-13 13:35",
+   "2026-10-13 14:16"
+  ],
+  "density_per_min": 335.2,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "T1": {
+   "mentions": 25,
+   "pos": 6,
+   "neg": 0,
+   "samples": [
+    "已经可以看到BLG打T1也是这个样子",
+    "蚕蛹那把打t1那么顺的杰斯都赢不了",
+    "杰斯只有T1两个上单能赢",
+    "都是T1玩具",
+    "BFX可是和T1打满5局，可不菜"
+   ]
+  },
+  "DK": {
+   "mentions": 10,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "已经结束咧！！/{dk/{dk/{dk",
+    "还说这些干嘛！已经结束咧！！/{dk/{dk/{dk",
+    "还说这些干嘛！已经结束咧！！/{dk/{dk/{dk",
+    "还说这些干嘛！已经结束咧！！/{dk/{dk/{dk",
+    "还说这些干嘛！已经结束咧！！/{dk/{dk/{dk"
+   ]
+  },
+  "DNS": {
+   "mentions": 9,
+   "pos": 2,
+   "neg": 2,
+   "samples": [
+    "lck倒数第一dns换了打野也强得离谱",
+    "dns来虐个捞批捞 不是简简单单 闹麻了",
+    "dns来都能虐lgd",
+    "dns来，估计也进4强吧",
+    "倒数第一dns换了打野也是厉害，lpl全是菜"
+   ]
+  },
+  "KT": {
+   "mentions": 27,
+   "pos": 2,
+   "neg": 0,
+   "samples": [
+    "kt绝对是区杯冠军",
+    "昨天打kt也是领先，教练介入了，然后溃败",
+    "别看了 决赛Kt打We",
+    "真以为欧美很弱吗？kt不也是先输两场小蜜蜂的",
+    "照你这么说打欧美就是臭，那kt也臭，被0-2开"
+   ]
+  },
+  "WBG": {
+   "mentions": 5,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "带下节奏 这把教练再介入后崩了，大家去lgd微博喷",
+    "带下节奏 这把教练再介入后崩了，大家去lgd微博喷",
+    "带下节奏 这把教练再介入后崩了，大家去lgd微博喷",
+    "我要去微博喷了",
+    "微博来能打到第五局吗"
+   ]
+  },
+  "WE": {
+   "mentions": 609,
+   "pos": 38,
+   "neg": 17,
+   "samples": [
+    "we已经赢了",
+    "什么乱七八糟的，WE已经进四强了啊",
+    "让我们为we加油",
+    "说WE打不过LGD的，LGD先过BRO再说",
+    "WE扭进了四强等着被虐"
+   ]
+  },
+  "EDG": {
+   "mentions": 6,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "WE竟然能有21年EDG的待遇，三个韩国队打一个LPL",
+    "复刻edg差不多",
+    "那we只能复刻EDG的s11了。",
+    "现在知道EDG的含金量了吧",
+    "现在知道EDG的含金量了吧"
+   ]
+  },
+  "BLG": {
+   "mentions": 158,
+   "pos": 1,
+   "neg": 0,
+   "samples": [
+    "都是blg的玩具罢了",
+    "都是blg的玩具罢了",
+    "都是blg的玩具罢了",
+    "都是blg的玩具罢了",
+    "都是blg的玩具罢了"
+   ]
+  },
+  "TES": {
+   "mentions": 5,
+   "pos": 1,
+   "neg": 0,
+   "samples": [
+    "TES附体",
+    "跟tes学的",
+    "TES介入了",
+    "lqs继承了tes的传统",
+    "去年tes也是打北美进的四强吧"
+   ]
+  },
+  "IG": {
+   "mentions": 48,
+   "pos": 2,
+   "neg": 1,
+   "samples": [
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "把ig打爆了",
+    "弹幕别尬黑lpl，lpl赛区只有ig一个队伍，真的小黑子",
+    "弹幕别尬黑lpl，lpl赛区只有ig一个队伍，真的小黑子"
+   ]
+  }
+ },
+ "players": {
+  "Faker": {
+   "mentions": 50,
+   "pos": 1,
+   "neg": 0,
+   "samples": [
+    "正好10点看老李",
+    "老张待会还看老李吗",
+    "老李直播啦 马上",
+    "老李开播了",
+    "老李开播了"
+   ]
+  },
+  "Chovy": {
+   "mentions": 10,
+   "pos": 0,
+   "neg": 1,
+   "samples": [
+    "打起来啊 我超威",
+    "汤圆小超威，一到世界赛就拉胯",
+    "小超威打这么多年练几个英雄这么难吗",
+    "我一进来就看到超威在打来福",
+    "人家天天和faker chovy bdd zeka打"
+   ]
+  },
+  "Zeus": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "杰斯只有宙斯和其他",
+    "喜欢选杰斯，哪以为你是宙斯呀"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 54,
+  "samples": [
+   "介入教练报告一下赔率",
+   "48",
+   "48",
+   "48",
+   "48",
+   "48？？？",
+   "48",
+   "48？"
+  ]
+ },
+ "situation": {
+  "count": 454,
+  "samples": [
+   "搞杰斯一波直接下课",
+   "搞杰斯一波直接下课",
+   "除非前期压制，打出很大优势，不然纯玩完",
+   "搞杰斯一波直接下课",
+   "搞杰斯一波直接下课",
+   "gg",
+   "搞杰斯一波直接下课",
+   "搞杰斯一波直接下课"
+  ]
+ },
+ "gray_signals": {
+  "count": 99,
+  "samples": [
+   "教练收钱了吧",
+   "LGD这个教练指定买了",
+   "有木有we一穿三夺冠的剧本",
+   "经典打满5把的剧本[大哥]",
+   "经典打满5把的剧本[大哥]",
+   "经典打满5把的剧本[大哥]",
+   "经典打满5把的剧本[大哥]",
+   "经典打满5把的剧本[大哥]"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "14:04",
+   "minute": 29865004,
+   "count": 1737,
+   "pos": 24,
+   "neg": 174,
+   "tone": "负面",
+   "samples": [
+    "GGG",
+    "666666666",
+    "哎呦 炸了呀",
+    "我以前不相信杰补，到现在发现我错了，我大错特错了"
+   ]
+  },
+  {
+   "minute_utc": "14:08",
+   "minute": 29865008,
+   "count": 1099,
+   "pos": 49,
+   "neg": 180,
+   "tone": "负面",
+   "samples": [
+    "蛆蛆蛆蛆蛆蛆蛆蛆蛆蛆",
+    "666666666",
+    "还不如我们去打",
+    "教练笑嘻了"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 568,
+   "neg": 976,
+   "net": -408,
+   "tone": "负面"
+  },
+  "timeline": [
+   {
+    "start_utc": "13:35",
+    "count": 1558,
+    "pos": 93,
+    "neg": 41,
+    "net": 52,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "13:44",
+    "count": 1831,
+    "pos": 56,
+    "neg": 102,
+    "net": -46,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "13:52",
+    "count": 1935,
+    "pos": 77,
+    "neg": 109,
+    "net": -32,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "14:00",
+    "count": 5308,
+    "pos": 135,
+    "neg": 467,
+    "net": -332,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "14:08",
+    "count": 2938,
+    "pos": 207,
+    "neg": 257,
+    "net": -50,
+    "tone": "负面"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "14:04",
+    "count": 1737,
+    "tone": "负面",
+    "pos": 24,
+    "neg": 174,
+    "sample": "GGG"
+   },
+   {
+    "minute_utc": "14:08",
+    "count": 1099,
+    "tone": "负面",
+    "pos": 49,
+    "neg": 180,
+    "sample": "蛆蛆蛆蛆蛆蛆蛆蛆蛆蛆"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "we一穿三夺冠",
+   "count": 63,
+   "entity": true,
+   "minute_utc": "14:06"
+  },
+  {
+   "text": "都是blg的玩具罢了",
+   "count": 53,
+   "entity": true,
+   "minute_utc": "13:36"
+  },
+  {
+   "text": "给我blg道歉给我blg道歉",
+   "count": 36,
+   "entity": true,
+   "minute_utc": "14:01"
+  },
+  {
+   "text": "We一穿三夺冠",
+   "count": 32,
+   "entity": true,
+   "minute_utc": "13:53"
+  },
+  {
+   "text": "LPL还有BLG！最后的希望！",
+   "count": 22,
+   "entity": true,
+   "minute_utc": "14:05"
+  },
+  {
+   "text": "LPL还有BLG啊！最后的希望",
+   "count": 21,
+   "entity": true,
+   "minute_utc": "14:05"
+  },
+  {
+   "text": "感谢WE没有被全送回家[害羞]",
+   "count": 18,
+   "entity": true,
+   "minute_utc": "13:52"
+  },
+  {
+   "text": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+   "count": 14,
+   "entity": true,
+   "minute_utc": "13:38"
+  },
+  {
+   "text": "飞科开播了，大家快去看",
+   "count": 14,
+   "entity": true,
+   "minute_utc": "14:05"
+  },
+  {
+   "text": "笑死了，原来没了飞科，LPL也是赢不了LCK一点！哈哈哈",
+   "count": 10,
+   "entity": true,
+   "minute_utc": "14:09"
+  },
+  {
+   "text": "WE运气好啊 没遇到LCK",
+   "count": 10,
+   "entity": true,
+   "minute_utc": "13:53"
+  },
+  {
+   "text": "弹幕别尬黑lpl，lpl赛区只有ig一个队伍，真的小黑子",
+   "count": 9,
+   "entity": true,
+   "minute_utc": "13:43"
+  },
+  {
+   "text": "WE，LPL最后的希望！一穿3LCK夺冠吧！",
+   "count": 9,
+   "entity": true,
+   "minute_utc": "14:09"
+  },
+  {
+   "text": "又在WE夺冠了，闹麻了，WE打满算赢好吗，跟JDG一样",
+   "count": 8,
+   "entity": true,
+   "minute_utc": "14:11"
+  },
+  {
+   "text": "WE来全杀了",
+   "count": 7,
+   "entity": true,
+   "minute_utc": "14:06"
+  },
+  {
+   "text": "IG玩具选拔赛",
+   "count": 6,
+   "entity": true,
+   "minute_utc": "13:50"
+  },
+  {
+   "text": "we",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "14:04"
+  },
+  {
+   "text": "也就得亏WE签运好没碰LCK",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "笑死，WE赢了BRO一个BO3闹麻了，一打BO5WE必输",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "13:55"
+  },
+  {
+   "text": "还说这些干嘛！已经结束咧！！/{dk/{dk/{dk",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "13:51"
+  },
+  {
+   "text": "WE",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:05"
+  },
+  {
+   "text": "we一穿三",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:06"
+  },
+  {
+   "text": "对面辅助为什么亮we",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:06"
+  },
+  {
+   "text": "we还是韩援",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "WE的阿卡丽虽然送，但起码有作用能限制对面C，原➗是没点作用",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "kt肯定是冠军。",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:12"
+  },
+  {
+   "text": "WE打个北美捞比满头大汗，怎么打LCK",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:12"
+  },
+  {
+   "text": "带下节奏 这把教练再介入后崩了，大家去lgd微博喷",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "13:38"
+  },
+  {
+   "text": "原➗又在看戏了，四局都在混，WE的阿卡丽起码是真能限制对面C",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:05"
+  },
+  {
+   "text": "还在四把，不怕被ig举报吗",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "13:46"
+  },
+  {
+   "text": "老李开播了",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:02"
+  },
+  {
+   "text": "还是靠we吧",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:04"
+  },
+  {
+   "text": "解散！解散！解散！！！/{dk/{dk/{dk",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:05"
+  },
+  {
+   "text": "WE BO3赢过BRO 还没抽到LCK 你瞎子吗",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "we运气真好",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "说WE打不过LGD的，LGD先过BRO再说",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "13:38"
+  },
+  {
+   "text": "就看we了",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "13:52"
+  },
+  {
+   "text": "We一穿3夺冠",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "13:52"
+  },
+  {
+   "text": "we打赢了bro",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "13:54"
+  },
+  {
+   "text": "WE BO3赢得BRO 说打不过LCK 搞笑",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "13:55"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   786
+  ],
+  [
+   "黑闇騎士",
+   207
+  ],
+  [
+   "黑皇",
+   98
+  ],
+  [
+   "你说什么？七夕搞事情！",
+   75
+  ],
+  [
+   "我是一只小虎牙121",
+   74
+  ],
+  [
+   "岁月流年",
+   65
+  ],
+  [
+   "AAAAA",
+   51
+  ],
+  [
+   "我",
+   49
+  ]
+ ]
+}

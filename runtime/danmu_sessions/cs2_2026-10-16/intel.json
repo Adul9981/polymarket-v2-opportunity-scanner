@@ -1,0 +1,855 @@
+{
+  "meta": {
+    "total": 7158,
+    "active_users": 2232,
+    "window_utc": [
+      "2026-10-16 14:12",
+      "2026-10-16 15:59"
+    ],
+    "density_per_min": 66.5,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Vitality": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我想看小蜜蜂比赛",
+        "这个图小蜜蜂",
+        "小蜜蜂加油！"
+      ]
+    },
+    "Spirit": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "有绿龙吗？",
+        "真有时间 聊聊咱们伟大的绿龙呗",
+        "绿龙td 聊聊来",
+        "绿龙td 聊聊来",
+        "绿龙有比赛马西西病马上好"
+      ]
+    },
+    "G2": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我说fut大于G2有没有懂的",
+        "呼吸去G2了",
+        "主播看好呼吸加盟后的G2的"
+      ]
+    },
+    "NAVI": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "NaVi进不去major了9z都不可能不进major",
+        "fut还好 navi是真消失了",
+        "Navi都报了小比赛了",
+        "Mo队，lvg和Navi的小赛事到时候播嘛",
+        "Mo队，lvg和Navi的小赛事到时候播嘛"
+      ]
+    },
+    "FaZe": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "faze up",
+        "faze夺冠那个比赛就是决赛BO3"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 5,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "决赛老鼠打蜜蜂了",
+        "决赛老鼠打蜜蜂了",
+        "老鼠出来的小吉米这图肯定厉害啊",
+        "小鸡米活该被老鼠踢",
+        "哈基米是被老鼠踢掉的"
+      ]
+    },
+    "Liquid": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "液体play，拿完赛点不拿分了"
+      ]
+    },
+    "FURIA": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "谁赢谁打黑豹"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "蒙古老九",
+        "蒙古什么时候开",
+        "蒙古会不会越打越往后",
+        "蒙古威",
+        "蒙古现在就一个二线队伍"
+      ]
+    },
+    "Astra": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Astralis这钢枪指挥去猎鹰那不直接王朝了?"
+      ]
+    }
+  },
+  "players": {
+    "Niko": {
+      "mentions": 87,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "niko指挥的",
+        "donk是海参niko严父懂吗",
+        "niko指挥的",
+        "雨姐被Niko夺舍了",
+        "niko智慧的"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 11,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "载物玩耍",
+        "载物烤猪位",
+        "载物巡飞弹位",
+        "载物可以",
+        "载物play"
+      ]
+    },
+    "donk": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "donkct会守哪",
+        "donk是海参niko严父懂吗",
+        "K3脑子肯定有问题，把一个30岁的老头当donk用",
+        "30岁老年版donk",
+        "阿若拉队里面怎么有个30岁的老年donk"
+      ]
+    },
+    "ropz": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "那ropz呢"
+      ]
+    },
+    "sh1ro": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "sh1ro",
+        "sh1ro",
+        "sh1ro"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 5,
+    "samples": [
+      "唯一一个人头是雷杀的还敢拿AK",
+      "人头马呢",
+      "明显让分",
+      "老子爆头打人头没了",
+      "好他妈的菜啊买了17009z直接捐？？？"
+    ]
+  },
+  "situation": {
+    "count": 64,
+    "samples": [
+      "预测一波，一会k3进攻指挥雨姐肯定叹气",
+      "有经济的 没起。",
+      "经济不好 保是对的",
+      "gg",
+      "这么蠢，一波爆都进去了",
+      "多打少直接一波爆弹都行",
+      "a点一波进去说不定还赢了",
+      "K3指挥 经典有优势晃着晃着就没了"
+    ]
+  },
+  "gray_signals": {
+    "count": 29,
+    "samples": [
+      "马西西故意的，在躲节奏",
+      "马西西故意的，在躲节奏",
+      "故意放分的",
+      "跳下来没反应 买了吧",
+      "这不是故意送啊？？不躲起来 出去送？",
+      "说真的，这九阶好像他妈个个都买了一样，那些操作啊，不是人来的",
+      "九阶的操作啊，我都估计是买了这些操作，傻傻的。",
+      "全是剧本"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "15:13",
+      "minute": 29869393,
+      "count": 331,
+      "pos": 7,
+      "neg": 3,
+      "tone": "正面",
+      "samples": [
+        "怎么一卡一卡的啊",
+        "nuo了 这词不常见",
+        "？",
+        "就打狠人这个瘫子就完了"
+      ]
+    },
+    {
+      "minute_utc": "15:08",
+      "minute": 29869388,
+      "count": 215,
+      "pos": 4,
+      "neg": 1,
+      "tone": "正面",
+      "samples": [
+        "这都不下包",
+        "真的菜保枪队",
+        "突然死亡？亚洲剧情？白看24回合？",
+        "这尼玛敢再明牌一点送？"
+      ]
+    },
+    {
+      "minute_utc": "14:49",
+      "minute": 29869369,
+      "count": 192,
+      "pos": 19,
+      "neg": 6,
+      "tone": "正面",
+      "samples": [
+        "gg fking EZ",
+        "去猎鹰肯定无敌了",
+        "k3把脑子转换成枪法了",
+        "这猎鹰我们指挥要了"
+      ]
+    },
+    {
+      "minute_utc": "15:09",
+      "minute": 29869389,
+      "count": 192,
+      "pos": 6,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "大晚上的导播你这样好吗",
+        "?",
+        "¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿",
+        "？？？？？？？？？？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "15:47",
+      "minute": 29869427,
+      "count": 174,
+      "pos": 18,
+      "neg": 3,
+      "tone": "正面",
+      "samples": [
+        "马西西呢",
+        "刚刚小狠人链接打一个 跑去b挺变态",
+        "？？？？？？？？？？？？？",
+        "？？"
+      ]
+    },
+    {
+      "minute_utc": "14:31",
+      "minute": 29869351,
+      "count": 169,
+      "pos": 8,
+      "neg": 7,
+      "tone": "分歧",
+      "samples": [
+        "5打3变2打3吗",
+        "5打3打成这样",
+        "3打5这样玩是人类嘛？",
+        "给自己盖颗烟来了"
+      ]
+    },
+    {
+      "minute_utc": "15:11",
+      "minute": 29869391,
+      "count": 168,
+      "pos": 5,
+      "neg": 1,
+      "tone": "正面",
+      "samples": [
+        "玛德加个几把",
+        "哈哈哈",
+        "完蛋 加时",
+        "土耳其批人就没想赢"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 328,
+      "neg": 210,
+      "net": 118,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "14:12",
+        "count": 1199,
+        "pos": 52,
+        "neg": 31,
+        "net": 21,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:33",
+        "count": 1703,
+        "pos": 100,
+        "neg": 57,
+        "net": 43,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:55",
+        "count": 2183,
+        "pos": 52,
+        "neg": 34,
+        "net": 18,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "15:16",
+        "count": 608,
+        "pos": 29,
+        "neg": 30,
+        "net": -1,
+        "tone": "分歧"
+      },
+      {
+        "start_utc": "15:38",
+        "count": 1465,
+        "pos": 95,
+        "neg": 58,
+        "net": 37,
+        "tone": "正面"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "15:13",
+        "count": 331,
+        "tone": "正面",
+        "pos": 7,
+        "neg": 3,
+        "sample": "怎么一卡一卡的啊"
+      },
+      {
+        "minute_utc": "15:08",
+        "count": 215,
+        "tone": "正面",
+        "pos": 4,
+        "neg": 1,
+        "sample": "这都不下包"
+      },
+      {
+        "minute_utc": "14:49",
+        "count": 192,
+        "tone": "正面",
+        "pos": 19,
+        "neg": 6,
+        "sample": "gg fking EZ"
+      },
+      {
+        "minute_utc": "15:09",
+        "count": 192,
+        "tone": "正面",
+        "pos": 6,
+        "neg": 0,
+        "sample": "大晚上的导播你这样好吗"
+      },
+      {
+        "minute_utc": "15:47",
+        "count": 174,
+        "tone": "正面",
+        "pos": 18,
+        "neg": 3,
+        "sample": "马西西呢"
+      },
+      {
+        "minute_utc": "15:11",
+        "count": 168,
+        "tone": "正面",
+        "pos": 5,
+        "neg": 1,
+        "sample": "玛德加个几把"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "niko指挥的",
+      "count": 16,
+      "entity": true,
+      "minute_utc": "14:18"
+    },
+    {
+      "text": "niko指挥的ct",
+      "count": 6,
+      "entity": true,
+      "minute_utc": "15:00"
+    },
+    {
+      "text": "这波niko指挥的进攻",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "14:34"
+    },
+    {
+      "text": "刚来，这波是niko指挥的吗？",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "14:36"
+    },
+    {
+      "text": "这分niko指挥的",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "14:41"
+    },
+    {
+      "text": "niko指挥的niko指挥的",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "14:53"
+    },
+    {
+      "text": "这把niko指挥的这把niko指挥的",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "14:34"
+    },
+    {
+      "text": "sh1ro",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "14:47"
+    },
+    {
+      "text": "守不住我靠，肯定是Niko指挥的",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "14:55"
+    },
+    {
+      "text": "这niko也太坏了",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:57"
+    },
+    {
+      "text": "Niko指挥的",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:31"
+    },
+    {
+      "text": "绿龙td 聊聊来",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:37"
+    },
+    {
+      "text": "求求了k3 去猎鹰帮niko拿下拿该死的新加坡major吧",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:45"
+    },
+    {
+      "text": "决赛老鼠打蜜蜂了",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:59"
+    },
+    {
+      "text": "Mo队，lvg和Navi的小赛事到时候播嘛",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "15:29"
+    },
+    {
+      "text": "载物来了",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "15:47"
+    },
+    {
+      "text": "你们必须尊重niko你们必须尊重niko",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "15:53"
+    },
+    {
+      "text": "fut还好 navi是真消失了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "真有时间 聊聊咱们伟大的绿龙呗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:36"
+    },
+    {
+      "text": "谁赢谁打黑豹",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "donkct会守哪",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:20"
+    },
+    {
+      "text": "NaVi进不去major了9z都不可能不进major",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:23"
+    },
+    {
+      "text": "donk是海参niko严父懂吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:24"
+    },
+    {
+      "text": "我想看小蜜蜂比赛",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:26"
+    },
+    {
+      "text": "雨姐被Niko夺舍了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:28"
+    },
+    {
+      "text": "蒙古老九",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "有绿龙吗？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "蒙古什么时候开",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "蒙古会不会越打越往后",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "我说fut大于G2有没有懂的",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "niko智慧的",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:31"
+    },
+    {
+      "text": "NIKO指挥的",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:36"
+    },
+    {
+      "text": "进攻不是niko指挥的",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:39"
+    },
+    {
+      "text": "像niko",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:39"
+    },
+    {
+      "text": "那ropz呢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:39"
+    },
+    {
+      "text": "K3脑子肯定有问题，把一个30岁的老头当donk用",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:40"
+    },
+    {
+      "text": "30岁老年版donk",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:44"
+    },
+    {
+      "text": "阿若拉队里面怎么有个30岁的老年donk",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:44"
+    },
+    {
+      "text": "niko好像也是p2000",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:47"
+    },
+    {
+      "text": "反正现在niko指挥大表哥也就这样了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:49"
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      237
+    ],
+    [
+      "暑雨小鳝",
+      60
+    ],
+    [
+      "塔塔丸",
+      58
+    ],
+    [
+      "Cosmo1314",
+      56
+    ],
+    [
+      "小虎牙-t9z2A6Pk0F",
+      55
+    ],
+    [
+      "月光碎了一地",
+      51
+    ],
+    [
+      "一起犇骉",
+      42
+    ],
+    [
+      "落寞i",
+      34
+    ]
+  ],
+  "sources": {
+    "huya_csboy_official": 4326,
+    "huya_csboy_mo": 2832
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "capturing",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:40+00:00",
+      "last_message_at": "2026-10-16T15:59:34+00:00",
+      "message_count": 4326,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "手枪王",
+          "ts": 1792166343.53
+        },
+        {
+          "t": "翻了",
+          "ts": 1792166345.36
+        },
+        {
+          "t": "放分而已",
+          "ts": 1792166345.62
+        },
+        {
+          "t": "寄波长",
+          "ts": 1792166346.79
+        },
+        {
+          "t": "39 必翻的",
+          "ts": 1792166348.41
+        },
+        {
+          "t": "我们eco了是吧",
+          "ts": 1792166349.03
+        },
+        {
+          "t": "猎鹰什么时候比赛有人知道吗？",
+          "ts": 1792166350.18
+        },
+        {
+          "t": "这不是有病？不会抱团？",
+          "ts": 1792166350.99
+        },
+        {
+          "t": "花哨peek各种peek",
+          "ts": 1792166352.43
+        },
+        {
+          "t": "大狠人一心求死",
+          "ts": 1792166353.21
+        },
+        {
+          "t": "🦅精来袭",
+          "ts": 1792166353.43
+        },
+        {
+          "t": "k3的进攻开始享受了",
+          "ts": 1792166355.43
+        },
+        {
+          "t": "我们eco了是吧",
+          "ts": 1792166355.85
+        },
+        {
+          "t": "1V4了",
+          "ts": 1792166365.41
+        },
+        {
+          "t": "我们eco了是吧",
+          "ts": 1792166374.11
+        }
+      ],
+      "room_id": 123321,
+      "channel_id": 10748220,
+      "nickname": "CSBOY",
+      "introduction": "【直播】Aurora-9Z",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:40+00:00",
+      "last_message_at": "2026-10-16T15:59:40+00:00",
+      "message_count": 2832,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "又放分",
+          "ts": 1792166340.74
+        },
+        {
+          "t": "39必翻",
+          "ts": 1792166342.18
+        },
+        {
+          "t": "翻了",
+          "ts": 1792166342.35
+        },
+        {
+          "t": "哎出生有开始送了",
+          "ts": 1792166343.59
+        },
+        {
+          "t": "快进到K3的进攻",
+          "ts": 1792166347.87
+        },
+        {
+          "t": "K3的进攻你就享受吧",
+          "ts": 1792166348.7
+        },
+        {
+          "t": "北马其顿高手",
+          "ts": 1792166349.08
+        },
+        {
+          "t": "图一谁赢了",
+          "ts": 1792166349.08
+        },
+        {
+          "t": "完了要被翻了",
+          "ts": 1792166353.15
+        },
+        {
+          "t": "只有小众二线比赛才是决赛BO3",
+          "ts": 1792166356.0
+        },
+        {
+          "t": "faze夺冠那个比赛就是决赛BO3",
+          "ts": 1792166363.93
+        },
+        {
+          "t": "K3的进攻你就看吧",
+          "ts": 1792166367.81
+        },
+        {
+          "t": "k3的进攻指挥不见得翻不了",
+          "ts": 1792166368.02
+        },
+        {
+          "t": "去年奥斯汀major决赛还是bo3呢",
+          "ts": 1792166373.92
+        },
+        {
+          "t": "这样，不怎么看小众变态比赛",
+          "ts": 1792166380.84
+        }
+      ],
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】9Z-AURORA",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    }
+  ]
+}

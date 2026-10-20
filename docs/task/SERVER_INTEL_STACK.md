@@ -80,3 +80,22 @@ scp runtime/matches_today.json root@158.247.214.175:/opt/danmu-intel/data/matche
 
 > 待优化：队伍长名归一化（如 "DN SOOPers Challengers" -> DNS），
 > 以及按联赛过滤（默认全量，LoL/CS2/Dota2 均覆盖）。
+
+## 7. 比赛局势实时刷新（按小局：局内实时、局末冻结 + 评分赛后回填）（2026-10-18）
+
+```text
+新增 refresh-situation.timer（每 60s，oneshot）：
+  tools/refresh_situation.py --once —— 对未结算比赛，逐小局刷新节点页【比赛局势】栏：
+    当前小局（进行中）：胜率 = 本小局切片 [本局起点 -> 现在] 重算，近 5 分钟口径
+      （window_seconds=300，样本不足回退整场累积），评分 = fetch_ratings(mid, gi)
+      本小局 strict_game（不串局），作用于 bp/mid 页；
+    已结束小局：胜率严格冻结；评分在 end 生成后 30 分钟内持续回填（虎扑评分赛后
+      陆续上线，评分数一出来就补上），作用于 bp/mid/end 页；超时全冻结。
+  G1 页永远显示 G1 的胜率和评分。只改 reports/ 本地 HTML，发布仍由 vps_publish 负责。
+  单元文件见 deploy/danmu_intel/refresh-situation.{service,timer}。
+  选手→队伍映射（2026-10-19）：胜率把选手表态折算进队伍时，队伍归属来自虎扑每小局
+    首发阵容（vps_intel_pipeline.fetch_lineup / refresh_situation 拉取后注入 win_signal），
+    静态 PLAYER_TEAM 仅作拉取失败/未开赛时的兜底。
+```
+```
+

@@ -88,9 +88,12 @@ def main() -> int:
     ap.add_argument("--session", default=None, help="稳定会话标识")
     ap.add_argument("--title", default="多直播间弹幕实时情报")
     ap.add_argument("--seconds", type=int, default=0, help="0 = 持续到 Ctrl-C")
-    ap.add_argument("--monitor-interval", type=int, default=60)
+    ap.add_argument("--monitor-interval", type=int, default=30)
     ap.add_argument("--first-message-timeout", type=int, default=120)
     ap.add_argument("--restart-delay", type=int, default=10)
+    ap.add_argument("--teams", default="", help="逗号分隔两队（如 KC,MVK）；透传给监控渲染【比赛局势】胜率")
+    ap.add_argument("--hupu-out-biz-no", default="", help="虎扑评分 match key 的 outBizNo（透传给监控拉选手评分）")
+    ap.add_argument("--hupu-out-biz-type", default="lol_match", help="虎扑评分节点类型，默认 lol_match")
     args = ap.parse_args()
 
     rooms = parse_rooms(args.room)
@@ -171,6 +174,13 @@ def main() -> int:
         "--title", args.title,
         "--interval", str(args.monitor_interval),
     ]
+    if args.teams:
+        monitor_cmd += ["--teams", args.teams]
+    if args.hupu_out_biz_no:
+        monitor_cmd += [
+            "--hupu-out-biz-no", args.hupu_out_biz_no,
+            "--hupu-out-biz-type", args.hupu_out_biz_type,
+        ]
     for item in room_defs:
         monitor_cmd += ["--input", str(item["out"])]
         if item["platform"] in ("huya", "twitch", "kick"):

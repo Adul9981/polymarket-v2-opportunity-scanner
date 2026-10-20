@@ -32,6 +32,7 @@ TEAMS = {
     "TH": ["th", "heratics"],
     "Navi": ["navi", "natus"],
     "T1": ["t1"],
+    "DK": ["dk", "dplus", "damwon", "dwg"],
     "DNS": ["dns", "dnsoop"],
     "KT": ["kt"],
     "HLE": ["hle", "hanwha"],
@@ -98,13 +99,30 @@ PLAYERS = {
     "rue": ["rue"],
 }
 
+# ---- 选手 -> 队伍（供"比赛局势"胜率把选手表态折算进队伍）----
+# 2026-10-19 起这只是【静态兜底】：主源是虎扑每小局首发阵容（player_teams 参数，
+# 由 vps_intel_pipeline.fetch_lineup / refresh_situation / danmu_live_monitor 拉取后
+# 注入 win_signal），动态优先覆盖本表；本表在阵容拉取失败/比赛未开时仍保证已知选手
+# 可折算。队名用 TEAMS 规范 key（与 win_signal 的 teams 参数经 _canon_team 归一一致）。
+# 未登记的选手不计入胜率（宁可漏计、不误配——防错 19）；转会/换队时同步更新并补回归。
+PLAYER_TEAM = {
+    # LoL（长期稳定）
+    "Faker": "T1", "Guma": "T1",
+    "Chovy": "GEN",
+    # CS2
+    "Zywoo": "Vitality", "Apex": "Vitality",
+    "donk": "Spirit",
+    # Dota2（Spirit 三核）
+    "Yatoro": "Spirit", "Larl": "Spirit", "Collapse": "Spirit",
+}
+
 # 每个实体所属的游戏（跨游戏共享的实体标多个）。analyze() 按 game 过滤实体词表，
 # 避免 Dota2 选手 "33" 在 LoL 弹幕里误命中 "33分钟"、LoL 的 Faker 漏进 CS2 等跨游戏泄漏。
 GAMES = ("lol", "cs2", "dota2")
 ENTITY_GAMES: dict[str, set[str]] = {
     # LoL 战队
     "KC": {"lol"}, "GX": {"lol"}, "TH": {"lol"}, "Navi": {"lol"}, "T1": {"lol"},
-    "DNS": {"lol"}, "KT": {"lol"}, "HLE": {"lol"}, "GEN": {"lol"}, "WBG": {"lol"},
+    "DK": {"lol"}, "DNS": {"lol"}, "KT": {"lol"}, "HLE": {"lol"}, "GEN": {"lol"}, "WBG": {"lol"},
     "LNG": {"lol"}, "WE": {"lol"}, "EDG": {"lol"}, "BLG": {"lol"}, "TES": {"lol"},
     "IG": {"lol"},
     # CS2 战队
@@ -163,6 +181,17 @@ SITUATION_KW = [
     "肉山", "打盾", "拿盾", "买活", "高地", "守高", "破路", "超级兵", "兵线",
     "塔防", "三路", "bkb", "圣剑",
 ]
+
+# ---- 胜方向词（观众口径·非结论）：用于"比赛局势"两队伍胜率 ----
+# 只统计"队伍名 + 胜方向词"同时出现的弹幕；"gg/ez" 等反讽/玩梗高发词刻意排除，
+# 避免英文 Twitch 反讽与 LoL 赛后礼貌性 GG 污染（防错规则 14/16/17）。
+WIN_KW = [
+    "赢了", "拿下", "必胜", "稳了", "稳赢", "平推", "碾压", "血洗", "零封",
+    "让一追", "让二追", "晋级", "出线", "夺冠", "拿下了", "锁了",
+    "win", "wins", "won", "stomp", "sweep", "free win",
+]
+# 注意："冠军"不用（DK冠军=头衔易误判）；"抬走"是"把X抬走=X输"，归负向。
+WIN_LOSE_KW = ["输了", "寄了", "g了", "被零封", "被碾压", "被血洗", "输了呀", "抬走", "抬走了"]
 
 # ---- 阶段4：中性弹幕抢救（供 LLM 二次判定，回收规则层漏判情绪）----
 SALVAGE_LIMIT = 40  # 抢救候选上限：控制喂给 LLM 的 token 成本
@@ -314,7 +343,194 @@ def _narrative_tone(pos: int, neg: int) -> str:
     return "分歧"
 
 
-def analyze(rows: list[dict], game: str | None = None) -> dict:
+def _clean_sample(text: str) -> str:
+    """样本清洗：去 emote 标记/URL，压缩空白，截断（供胜率样本审计）。"""
+    t = re.sub(r"\[emote:[^\]]*\]", "", text)
+    t = re.sub(r"https?://\S+", "", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t[:120]
+
+
+def _canon_team(name: str) -> str | None:
+    """队伍名 -> TEAMS 规范 key（abbr/全称/别名命中即返回；未登记返回 None）。"""
+    nl = (name or "").strip().lower()
+    if not nl:
+        return None
+    for canon, kws in TEAMS.items():
+        if nl == canon.lower() or nl in [k.lower() for k in kws]:
+            return canon
+    return None
+
+
+def _team_keywords(name: str) -> list[str]:
+    """把一个比赛队伍名（abbr/全称）解析成弹幕匹配关键词。
+
+    优先查 TEAMS 规范词表（对 key 或其任一关键词大小写不敏感命中即用其关键词表）；
+    未登记队伍（如世界赛入围赛新队）回退到名字本身小写，保证仍能匹配。
+    """
+    canon = _canon_team(name)
+    if canon is not None:
+        return TEAMS[canon]
+    nl = (name or "").strip().lower()
+    return [nl] if nl else []
+
+
+def _player_entry(name: str) -> tuple[str | None, list[str]]:
+    """选手名 -> (PLAYERS 规范 key 或 None, 弹幕关键词表)。
+
+    按 PLAYERS 词表反向解析：命中规范 key 或任一别名（大小写不敏感）时返回该词表
+    （含昵称），否则回退到名字本身——保证虎扑首发阵容里的官方名（如 Gumayusi）
+    既能匹配官方名、也能匹配弹幕昵称（姑妈/guma）。
+    """
+    nl = (name or "").strip().lower()
+    if not nl:
+        return None, []
+    for pname, kws in PLAYERS.items():
+        if nl == pname.lower() or nl in [k.lower() for k in kws]:
+            return pname, kws
+    return None, [name.strip()]
+
+
+def _team_player_keywords(team: str, game: str | None, player_teams: dict[str, str]) -> list[str]:
+    """本场队伍 `team` 名下所有选手的弹幕关键词（供胜率折算）。
+
+    player_teams = {选手名: 队伍名}，由静态 PLAYER_TEAM 与虎扑每小局首发阵容动态
+    合并而来（动态优先，转会/换队时覆盖静态）。仅当选手归属队伍归一后 == `team`、
+    且选手属于当前 game 时返回其关键词；未登记/跨游戏的选手不折算
+    （宁可漏计、不误配——防错规则 19 禁跨联赛混源）。
+    """
+    canon = _canon_team(team)
+    if canon is None:
+        return []
+    out: list[str] = []
+    for pname, tname in player_teams.items():
+        if _canon_team(tname) != canon:
+            continue
+        pkey, kws = _player_entry(pname)
+        if not _match_game(pkey if pkey else pname, game):
+            continue
+        out.extend(kws)
+    return out
+
+
+def _count_signal(rows: list[dict], kws: dict[str, list[str]], a: str, b: str) -> tuple[int, int, list[str], list[str]]:
+    """在给定行集合上做胜负方向计数，返回 (count_a, count_b, samples_a, samples_b)。
+
+    同一弹幕同时命中"队伍名 + 胜方向词"才计该队一次；同时提及两队 / 未提任何一队 /
+    无方向词 → 不计；反讽高频词（gg/ez）已排除。某队"输了/寄了/被零封"计给另一队。
+    """
+    count = {a: 0, b: 0}
+    samples: dict[str, list[str]] = {a: [], b: []}
+    for r in rows:
+        text = strip_entity_prefix(r.get("text", r.get("message", "")))
+        if not text:
+            continue
+        t = text.lower()
+        hits_a = any(keyword_hit(t, k) for k in kws[a])
+        hits_b = any(keyword_hit(t, k) for k in kws[b])
+        if hits_a == hits_b:  # 都命中或都未命中 -> 归属歧义，不计
+            continue
+        has_win = any(k in t for k in WIN_KW)
+        has_lose = any(k in t for k in WIN_LOSE_KW)
+        if has_lose and has_win:
+            # "被零封/被碾压/被血洗"含"零封/碾压/血洗"：负向更具体，优先判负
+            has_win = False
+        if has_win == has_lose:  # 都无方向 -> 不计
+            continue
+        side = a if hits_a else b  # 被提及的队伍
+        if has_win:
+            counted = side
+        else:  # 某队"输了/寄了/被零封" -> 记给另一队
+            counted = b if hits_a else a
+        count[counted] += 1
+        if len(samples[counted]) < 8:
+            s = _clean_sample(text)
+            if s:
+                samples[counted].append(s)
+    return count[a], count[b], samples[a], samples[b]
+
+
+def win_signal(
+    rows: list[dict],
+    teams: list[str],
+    threshold: int = 10,
+    game: str | None = None,
+    player_teams: dict[str, str] | None = None,
+    window_seconds: int | None = 300,
+) -> dict | None:
+    """显式胜负弹幕计数 → 两队伍胜率（观众口径·非结论）。
+
+    规则（防错 14/16/17）：同一弹幕同时命中"队伍名 + 胜方向词"才计该队一次；
+    同时提及两队、或未提及任何一队、或无方向词 → 不计；反讽高频词（gg/ez）已排除。
+    选手提名也折算进其所属队伍：player_teams 为静态 PLAYER_TEAM 与虎扑每小局首发
+    阵容的动态合并（动态优先），跨游戏选手（game 过滤）不折算。
+
+    近窗口口径（2026-10-19 定稿，防"前期优势累积盖过末段被翻盘"）：
+    window_seconds>0 时只统计「最新窗口秒内」的胜负弹幕（反转立即反映）；
+    近窗口样本 < threshold 时回退到整段累积；window_seconds<=0/None 或行无时间戳
+    时退化为整段累积（向后兼容）。输出 basis 标记实际口径（recent/cumulative）。
+    总计数 < threshold 时 pct 置 None、sample_status=insufficient，禁止硬算。
+    """
+    if len(teams) != 2:
+        return None
+    a, b = teams
+    eff: dict[str, str] = dict(PLAYER_TEAM)
+    if player_teams:
+        eff.update(player_teams)
+    kws = {
+        a: _team_keywords(a) + _team_player_keywords(a, game, eff),
+        b: _team_keywords(b) + _team_player_keywords(b, game, eff),
+    }
+
+    # 整段累积（回退口径）
+    ca, cb, sa, sb = _count_signal(rows, kws, a, b)
+    basis = "cumulative"
+
+    # 近窗口口径：只保留最新 window_seconds 秒内的行；样本足够则优先
+    if window_seconds and window_seconds > 0:
+        ts_vals = [_ts_value(r) for r in rows]
+        if any(v > 0 for v in ts_vals):
+            max_ts = max(ts_vals)
+            recent = [r for r, tv in zip(rows, ts_vals) if tv >= max_ts - window_seconds]
+            ra, rb, rsa, rsb = _count_signal(recent, kws, a, b)
+            if ra + rb >= threshold:
+                ca, cb, sa, sb = ra, rb, rsa, rsb
+                basis = "recent"
+
+    total = ca + cb
+    if total == 0 or total < threshold:
+        return {
+            "team_a": a, "team_b": b,
+            "count_a": ca, "count_b": cb,
+            "total": total,
+            "pct_a": None, "pct_b": None,
+            "sample_status": "insufficient",
+            "samples_a": sa, "samples_b": sb,
+            "threshold": threshold,
+            "basis": basis,
+            "window_seconds": window_seconds,
+        }
+    pa = round(ca / total * 100)
+    return {
+        "team_a": a, "team_b": b,
+        "count_a": ca, "count_b": cb,
+        "total": total,
+        "pct_a": pa, "pct_b": 100 - pa,
+        "sample_status": "ready",
+        "samples_a": sa, "samples_b": sb,
+        "threshold": threshold,
+        "basis": basis,
+        "window_seconds": window_seconds,
+    }
+
+
+def analyze(
+    rows: list[dict],
+    game: str | None = None,
+    teams: list[str] | None = None,
+    player_teams: dict[str, str] | None = None,
+    window_seconds: int | None = 300,
+) -> dict:
     # normalize platform fields: SOOP uses "message", huya uses "text"
     rows = [dict(r, text=r.get("text", r.get("message", ""))) for r in rows]
     # stripped = 去掉虎牙"Faker："挂件前缀后的正文；实体匹配与情绪都用它
@@ -355,6 +571,7 @@ def analyze(rows: list[dict], game: str | None = None) -> dict:
             "narrative": {"consensus": {}, "timeline": [], "turning_points": []},
             "neutral_salvage": [],
             "top_users": [],
+            "win_signal": win_signal([], teams or [], player_teams=player_teams, window_seconds=window_seconds) if teams else None,
         }
     ts = [r["ts_val"] for r in rows]
     t0, t1 = min(ts), max(ts)
@@ -539,6 +756,7 @@ def analyze(rows: list[dict], game: str | None = None) -> dict:
         "narrative": narrative,
         "neutral_salvage": neutral_salvage,
         "top_users": users.most_common(8),
+        "win_signal": win_signal(rows, teams, game=game, player_teams=player_teams, window_seconds=window_seconds) if teams else None,
     }
 
 
@@ -580,6 +798,15 @@ def print_summary(intel: dict) -> None:
         print(f"\n== 中性弹幕抢救候选（{len(ns)} 条，供 AI 二次判定）==")
         for s in ns[:5]:
             print(f"  ×{s.get('count', 1)} {s.get('text', '')[:40]}")
+
+
+def _print_win_signal(ws: dict) -> None:
+    """打印两队伍胜率信号（观众口径·非结论）。"""
+    a, b = ws["team_a"], ws["team_b"]
+    if ws.get("sample_status") == "insufficient":
+        print(f"\n== 比赛局势·胜率 == 样本不足（{ws['total']} 条 < 阈值 {ws['threshold']}，不硬算）")
+        return
+    print(f"\n== 比赛局势·胜率（观众口径·非结论）== {a} {ws['pct_a']}% : {ws['pct_b']}% {b}（共 {ws['total']} 条）")
 
 
 def analyze_deep(rows: list[dict]) -> dict:
@@ -663,14 +890,25 @@ def main() -> int:
     parser.add_argument("--input", required=True, help="JSONL 弹幕文件")
     parser.add_argument("--out", default=None, help="情报 JSON 输出路径（可选）")
     parser.add_argument("--game", default="", help="游戏标签 lol/cs2/dota2（可选；未给则按记录 game 字段自动推断）")
+    parser.add_argument("--teams", default="", help="两个比赛队伍（逗号分隔，如 KC,MVK），用于计算胜率")
+    parser.add_argument("--players", default="", help="首发阵容 JSON 文件路径（{选手名: 队伍名}，虎扑每小局阵容）")
     args = parser.parse_args()
     rows = [
         json.loads(line)
         for line in Path(args.input).read_text(encoding="utf-8").splitlines()
         if line.strip()
     ]
-    intel = analyze(rows, game=args.game or None)
+    teams = [t.strip() for t in args.teams.split(",") if t.strip()] if args.teams else None
+    player_teams: dict[str, str] | None = None
+    if args.players:
+        try:
+            player_teams = json.loads(Path(args.players).read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            player_teams = None
+    intel = analyze(rows, game=args.game or None, teams=teams, player_teams=player_teams)
     print_summary(intel)
+    if intel.get("win_signal"):
+        _print_win_signal(intel["win_signal"])
     if args.out:
         Path(args.out).write_text(json.dumps(intel, ensure_ascii=False, indent=1), encoding="utf-8")
         print(f"\n已保存：{args.out}")

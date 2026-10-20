@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DK vs DNS · G3 局中弹幕情报（S0 EARLY-GAME）</title>
+<style>
+  :root{
+    --bg:#f5f5f7; --card:#ffffff; --ink:#1d1d1f; --sub:#6e6e73;
+    --line:#e8e8ed; --accent:#0071e3; --pos:#1a8a4a; --neg:#c9372c; --warn:#8a6d00;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:32px 18px 64px; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.62; font-size:15px;
+  }
+  .wrap{max-width:920px;margin:0 auto;}
+  header.page{margin:0 0 22px;padding:0 4px;}
+  header.page h1{font-size:26px;line-height:1.3;margin:0 0 8px;letter-spacing:-.02em;}
+  header.page .meta{color:var(--sub);font-size:13px;}
+  header.page .flag{
+    display:inline-block;margin-top:10px;padding:4px 12px;border-radius:999px;
+    background:#fff3d6;color:#8a6d00;font-size:12.5px;font-weight:600;border:1px solid #f0e0b0;
+  }
+  .card{
+    background:var(--card); border-radius:18px; padding:22px 24px; margin:0 0 18px;
+    box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.045);
+  }
+  .card h2{
+    font-size:19px; margin:0 0 14px; letter-spacing:-.01em; display:flex; align-items:center; gap:10px;
+  }
+  .card h2 .no{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:26px;height:26px;border-radius:8px;background:var(--accent);color:#fff;
+    font-size:14px;font-weight:700;flex:0 0 auto;
+  }
+  .card.speed{border:1px solid #d6e6fb;background:linear-gradient(180deg,#f7fbff 0%,#ffffff 62%);}
+  .card.speed h2 .no{background:var(--accent);}
+  .scoreline{
+    display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;
+    padding:12px 14px;border-radius:12px;background:#eef5fe;border:1px solid #d6e6fb;margin:0 0 14px;
+  }
+  .scoreline b{font-size:17px;}
+  .scoreline .tag{font-size:12px;color:var(--sub);}
+  ul{margin:0;padding-left:20px;}
+  li{margin:0 0 9px;}
+  li:last-child{margin-bottom:0;}
+  .so{color:var(--accent);font-weight:600;}
+  .src{color:var(--sub);font-size:12.5px;}
+  .decision{
+    margin-top:14px;padding:12px 14px;border-left:3px solid var(--accent);
+    background:#f2f8ff;border-radius:0 10px 10px 0;font-weight:600;
+  }
+  .kv{display:grid;grid-template-columns:150px 1fr;gap:8px 14px;font-size:14px;}
+  .kv dt{color:var(--sub);}
+  .kv dd{margin:0;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{color:var(--sub);font-weight:600;background:#fafafc;}
+  tr:last-child td{border-bottom:none;}
+  .pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;font-weight:600;}
+  .pill.pos{background:#e6f6ec;color:var(--pos);}
+  .pill.neg{background:#fdecea;color:var(--neg);}
+  .pill.neu{background:#eef0f3;color:var(--sub);}
+  .pill.warn{background:#fff3d6;color:var(--warn);}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .grid3 .box{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fcfcfd;}
+  .grid3 .box h4{margin:0 0 8px;font-size:13.5px;color:var(--accent);}
+  .grid3 .box ul{padding-left:18px;font-size:13px;}
+  details{margin:6px 0 0;font-size:13px;color:var(--sub);}
+  details summary{cursor:pointer;color:var(--accent);}
+  .note{font-size:12.5px;color:var(--sub);margin-top:10px;}
+  .timeline{font-size:13.5px;}
+  .timeline li{margin-bottom:7px;}
+  .b{font-weight:600;}
+  @media (max-width:640px){
+    .kv{grid-template-columns:1fr;}
+    .grid3{grid-template-columns:1fr;}
+    body{padding:20px 12px 48px;}
+    .card{padding:18px 16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>DK vs DNS · 第 3 小局 局中弹幕情报</h1>
+  <div class="meta">
+    英雄联盟 · 2026-09-27 · 赛制 <b>BO3</b>（本场共 3 局，当前第 3 局）· 节点 G3｜BP 后 / 开局（S0 · EARLY-GAME）<br>
+    league id: lol-dk-dns · Polymarket slug: <code>lol-dk-dns</code> · 弹幕窗口 09:09–09:34（631 条 / 256 人 / 25.2 条·分⁻¹）
+  </div>
+  <div class="flag">局中 · 非终局，结果待定</div>
+</header>
+
+<!-- 0 -->
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="scoreline">
+    <b>DK vs DNS · G3 进行中</b>
+    <span class="tag">弹幕口径 · 官方待回填（比分/经济/时长均无官方数据）</span>
+  </div>
+  <ul>
+    <li><b>DK 情绪负面</b>：提及 39 条、负向 6 / 正向 3，样本含「dk小组赛最后一天菜的不行」「DK换了打野差了一个档次」<span class="so">→ 观众把矛头指向打野位，短期看空 DK 的节奏能力（弹幕口径·待官方）</span> <span class="src">→ 详 §5、§8</span></li>
+    <li><b>打野位是唯一被反复点名的位置</b>：二次判定后「DK的打野完全没节奏的」「dk这赵信给张硕玩还有点机会」等 4+ 条指向同一位置<span class="so">→ 若 DK 前期丢第一组资源，负面会二次放大（单源待验证）</span> <span class="src">→ 详 §3、§7</span></li>
+    <li><b>09:33 出现 60 条密度峰值</b>，样本「基尼今天凌晨刚走」，为全场最高情绪点<span class="so">→ 峰值落在负面段，说明当前是情绪宣泄窗口而非翻盘预期（弹幕口径·待官方）</span> <span class="src">→ 详 §7</span></li>
+    <li><b>灰信号 2 条</b>：「毛出在演恶霸」「赵信买了」<span class="so">→ 属观众质疑、非结论，但方向与打野负面一致，需与操作失误区分（单源待验证）</span> <span class="src">→ 详 §2</span></li>
+    <li><b>DNS 侧仅 5 条提及、情绪观望偏正</b>：「dns拿下」「DNS中野挺尽力的」<span class="so">→ 观众未给 DNS 压力，冷门方向缺乏弹幕支撑（弹幕口径·待官方）</span> <span class="src">→ 详 §5、§8</span></li>
+  </ul>
+  <div class="decision">决策落点：本局弹幕方向为「看空 DK 前期节奏」，但样本集中在打野单点、且 09:33 后情绪已宣泄，<b>不构成可下单的方向性结论</b>，建议仅作为 DK 首资源/首杀的观察项。</div>
+</div>
+
+<!-- 1 -->
+<div class="card">
+  <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+  <dl class="kv">
+    <dt>比赛状态</dt><dd>G3 进行中（BP 后 / 开局 S0），<b>非终局，结果待定</b></dd>
+    <dt>赛制</dt><dd>BO3，本场共 3 局，当前为决胜局</dd>
+    <dt>样本状态</dt><dd>ready（窗口 09:09–09:34，631 条 / 256 人 / 25.2 条·分⁻¹）</dd>
+    <dt>比分 / 经济</dt><dd>无官方数据回填，弹幕未形成可信比分口径</dd>
+    <dt>叙事共识</dt><dd>负面：正 23 / 负 39，净 <b>-16</b></dd>
+  </dl>
+  <div class="note">核验结论：数据层可用（样本 ready），但结论层不可用（无官方比分、无经济、无 BP 官方确认），本页所有方向性表述均为弹幕口径。</div>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（观众质疑 · 非结论）</h2>
+  <ul>
+    <li><span class="pill warn">灰信号</span> 「毛出在演恶霸」——指向选手表现异常，<b>无证据、非结论</b>，仅作情绪留痕。</li>
+    <li><span class="pill warn">灰信号</span> 「赵信买了」——指向打野英雄赵信的操作质疑，与 §3 打野负面同向，<b>单源待验证</b>。</li>
+  </ul>
+  <div class="note">两条灰信号均无重复出现、无第二信源交叉，按规则不计入方向板权重，仅在与打野负面叠加时作为情绪放大器提示。</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  <ul>
+    <li><b>本局阵容（英雄 + 选手映射）</b>：官方 BP 未回填，弹幕仅可确认 <b>DK 方选出赵信</b>（打野位），其余位置与 DNS 阵容无可靠提及 → 阵容表待官方回填。</li>
+    <li><b>BP 后战绩情报</b>：无战绩情报提及（无选手×英雄胜率、无历史对位数据出现在弹幕中）。</li>
+    <li><b>选人争议锚点</b>：二次判定后「dk这赵信给张硕玩还有点机会」（×2）为唯一具名选手关联，指向 DK 打野位人选争议。</li>
+  </ul>
+  <details>
+    <summary>韩/英弹幕信号（中文意译 · 原文折叠）</summary>
+    <p>本窗口内未捕获可用的韩文/英文弹幕样本，黑话层仅中文弹幕可用（如「拉坨大的」＝关键局崩盘）。样本不足，不做双语展开。</p>
+  </details>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <ul>
+    <li>本窗口内<b>无盘口、赔率、让分或 Polymarket 价格讨论</b>被捕获，观众讨论全部集中在选手表现与队伍状态。</li>
+    <li>与资金相关的唯一表述为「DK送钱，跟上了吗」（×1），属情绪化调侃，<b>不构成盘口情报</b>。</li>
+  </ul>
+  <div class="note">样本不足：无市场层数据，本段不输出任何价格或方向判断。</div>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板</h2>
+  <table>
+    <tr><th>维度</th><th>内容</th><th>强度 / 置信</th></tr>
+    <tr><td>正锚</td><td>DNS 中野被评价「挺尽力」；「dns拿下」×1（模型二次判定：弱正向）</td><td><span class="pill pos">弱</span> 单源待验证</td></tr>
+    <tr><td>负锚</td><td>DK 打野位无节奏（「DK的打野完全没节奏的」「DK这打野」「DK换了打野差了一个档次」）；「dk没了」「点了点了，dk，连点三把放假了」</td><td><span class="pill neg">强</span> 多源确认（弹幕口径）</td></tr>
+    <tr><td>群体共识</td><td>负面，净 -16（正 23 / 负 39）；情绪走势：负面(-8) → 负面(-11) → 正面(+5) → 分歧(-1) → 分歧(-1)</td><td><span class="pill neg">负面</span> 弹幕口径·待官方</td></tr>
+    <tr><td>灰信号条件预测</td><td>若 DK 前期丢首资源/首杀 → 打野负面与「赵信买了」灰信号叠加，负面情绪二次放大；若 DK 拿下首资源 → 09:23「米神 有一颗想c的心」类正面样本可能回升</td><td><span class="pill warn">条件式</span> 单源待验证</td></tr>
+  </table>
+  <div class="note">叙事复述：开局段观众即给出负面定调（-8 → -11），中段出现一次正面翻转（+5，对应 09:23 峰值「米神 有一颗想c的心」），随后回落为分歧（-1 → -1），09:33 负面峰值 60 条完成情绪宣泄。整体为「看跌 → 短暂看涨 → 翻转失败 → 分歧收尾」。</div>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点</h2>
+  <ul>
+    <li><b>SHORT 侧（DK 前期节奏）</b>：打野位负面为多源确认，是当前唯一有密度的方向；但仅覆盖「节奏/资源」维度，<b>不可外推为胜负结论</b>。</li>
+    <li><b>LONG 侧（DNS）</b>：仅 5 条提及、情绪观望，缺乏支撑，<b>不建议据此做多</b>。</li>
+    <li><b>可执行观察项</b>：① DK 首组资源（小龙/先锋）归属；② DK 打野首次有效 gank 时间；③ 09:33 峰值后情绪是否延续负面。</li>
+    <li><b>风险提示</b>：本局为 BO3 决胜局，弹幕样本集中于单点位置，且含 2 条未验证灰信号，任何方向性操作均需等待官方数据回填。</li>
+  </ul>
+  <div class="decision">落点：观察为主，不建仓。方向偏空 DK 前期节奏，置信度低（弹幕口径 · 单点集中）。</div>
+</div>
+
+<!-- 7 -->
+<div class="card">
+  <h2><span class="no">7</span>本局复盘（证据层）</h2>
+  <ul class="timeline">
+    <li><span class="b">09:09–09:20 负面(-8 → -11)</span>：开局定调负面，样本「dk小组赛最后一天菜的不行，还信dk？」「dk是不是不是亚洲之星的那个阵容了」——观众解读为阵容/状态失误，非高光。</li>
+    <li><span class="b">09:23 峰值 52 条 · 正面(+5)</span>：样本「米神 有一颗想c的心」——本窗口唯一正面翻转点，观众解读为个人高光预期。</li>
+    <li><span class="b">09:24–09:32 分歧(-1 → -1)</span>：翻转未延续，正负样本互相抵消，观众解读为局势不明。</li>
+    <li><span class="b">09:33 峰值 60 条 · 负面</span>：样本「基尼今天凌晨刚走」——全场最高密度落在负面段，观众解读为情绪宣泄/失误归因。</li>
+    <li><span class="b">模型二次判定纳入项</span>：「dk没了」「这就是dk」「说了dk拉坨大的没人信」「还在幻想翻，说了dk拉坨大的还是不信」判定为负面（失误/崩盘预期）；「dns拿下」「DNS中野挺尽力的」判定为弱正向。纯聊天/表情类（如 IG 模拟器刷屏 ×11）丢弃不计。</li>
+  </ul>
+</div>
+
+<!-- 8 -->
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+  <table>
+    <tr><th>对象</th><th>提及</th><th>正向 / 负向</th><th>情绪</th><th>代表样本</th></tr>
+    <tr><td>DK</td><td>39</td><td>3 / 6</td><td><span class="pill neg">负面</span></td><td>dk小组赛最后一天菜的不行，还信dk？</td></tr>
+    <tr><td>IG</td><td>12</td><td>0 / 0</td><td><span class="pill neu">观望</span></td><td>在赛事模拟中指挥IG战队大获全胜（刷屏，无情绪）</td></tr>
+    <tr><td>T1</td><td>9</td><td>0 / 0</td><td><span class="pill neu">观望</span></td><td>有sharvel能跟t1碰一碰，这人直接被虐</td></tr>
+    <tr><td>DNS</td><td>5</td><td>1 / 0</td><td><span class="pill neu">观望</span></td><td>DNS中野挺尽力的</td></tr>
+  </table>
+  <div class="note">人员层：DK 打野位为唯一被具名/具位反复点名的对象（「DK这打野」「DK的打野完全没节奏的」「dk这赵信给张硕玩还有点机会」×2）；「二哥/王老二」相关 3 条为解说人设调侃（「王老二立自己DK孝子的人设」「二哥狂热 dk 粉，加许秀毒唯」），不计入队伍情绪。</div>
+</div>
+
+<!-- 9 -->
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本</h2>
+  <ul>
+    <li>本窗口<b>无版本、英雄优先级、赛程规律类讨论</b>，观众注意力集中在单场选手表现。</li>
+    <li>可提取的唯一规律性表述为「dk小组赛最后一天菜的不行」——指向 DK 在长赛程末段状态下滑的历史印象，属观众记忆型归因，<b>非版本结论</b>。</li>
+    <li>样本不足：不做版本层推断。</li>
+  </ul>
+</div>
+
+<!-- 10 -->
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填</h2>
+  <ul>
+    <li>本节点为 G3 开局（S0），<b>尚无前序预测可回填</b>，亦无终局结果可验证。</li>
+    <li>待回填项：① DK 首资源归属；② DK 打野首次有效 gank；③ 09:33 负面峰值后情绪是否延续；④ 官方比分与 BP 确认。</li>
+    <li>回填状态：<span class="pill neu">待官方</span> 全部未验证。</li>
+  </ul>
+</div>
+
+<!-- 11 -->
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <div class="grid3">
+    <div class="box">
+      <h4>实际数据源</h4>
+      <ul>
+        <li>弹幕窗口 09:09–09:34，631 条 / 256 人</li>
+        <li>规则层情报文件：<code>lol-dk-dns_g3_bp_intel.json</code></li>
+        <li>队伍提及统计（DK 39 / IG 12 / T1 9 / DNS 5）</li>
+        <li>密度峰值：09:33（60 条）、09:23（52 条）</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>预期数据源</h4>
+      <ul>
+        <li>官方 BP 与阵容（选手×英雄）</li>
+        <li>官方比分、经济、时长、资源归属</li>
+        <li>选手×英雄胜率与历史对位</li>
+        <li>盘口 / Polymarket 价格序列</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>缺口</h4>
+      <ul>
+        <li>无官方比分与经济（结果待定）</li>
+        <li>无 BP 官方确认，仅弹幕可确认 DK 赵信</li>
+        <li>无战绩情报提及</li>
+        <li>无盘口/市场讨论</li>
+        <li>无韩/英弹幕可用样本</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note">跨源一致性提示：本页全部结论仅来自单一弹幕源，无第二信源交叉；灰信号 2 条未验证；样本状态 ready 但结论层置信度低。</div>
+</div>
+
+</div>
+</body>
+</html>

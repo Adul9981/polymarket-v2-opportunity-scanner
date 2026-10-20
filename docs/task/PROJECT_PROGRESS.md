@@ -1975,6 +1975,16 @@ Bo5 典型赔率趋势样本）。
      （精简 prompt/限制篇幅）；
   d. 增量更新：局中节点基于上一节点统计增量，避免全量重算。
 
+  进度（2026-10-18）：已推进"触发/刷新及时性"部分（④ 把等待压短）——
+  规则层实时页刷新 5 分钟 -> 30 秒、本地流水线触发 60 秒 -> 10 秒；
+  又推进"AI 生成耗时"部分（① 模板化生成·治本）——AI 只填 JSON 字段、
+  本地模板渲染 HTML，砍掉排版 token（max_tokens 8000->4000），对应方向 a
+  的"摘要版必须结构清晰"落为本地模板保结构（非混乱快照）；
+  再推进方向 c"并行强化"的跨场部分（③）——多场比赛并行生成互不排队
+  （ThreadPoolExecutor，MAX_MATCH_WORKERS=3）。同场跨节点并行
+  （G1 复盘 + G2 BP 同时）因 G2 BP 切片窗口锚定 G1 结束时间（数据依赖），
+  用户已定"先不做"，单列为待办。详见文末三个 2026-10-18 归档段。
+
 优化点 2：对阵容选择的判断不够准确——会把 BP 阶段弹幕讨论当实际选人结果。
   现状：BP 窗口弹幕（"选狐狸/ban X/狗头选就输"）可能被当作实际阵容认定。
   实发教训（2026-08-27 NS-BFX G2）：把弹幕"提及/讨论"硬做成选手×英雄配对
@@ -2040,4 +2050,271 @@ Bo5 典型赔率趋势样本）。
 报告：reports/deep_zone_statistics_2026-08-29.html
 数据：/tmp/deep_cases.json（341 例，可复用做回测）。
 下一步：把近期待交易录入 knowledge/trades/ 结构化数据集，接深水区回测。
+```
+
+
+## 2026-10-18 情报库实时性优化（④ 把等待压短）
+
+```text
+背景：用户提"先做第四点"（便宜、零 AI 成本的即时优化，把等待压短），
+对应"待办：情报库优化"优化点 1 的触发/刷新及时性部分（非 Codex 生成耗时）。
+
+完成（本地 run_local_intel.sh 一键流 + 规则层实时页）：
+1. 规则层实时页刷新 5 分钟 -> 60 秒（tools/danmu_live_monitor.py）：
+   监控本每 60 秒重写页面，但 HTML 里 meta refresh 写死 300 秒，浏览器 5 分钟才重载。
+   改为 meta refresh 与监控间隔一致（--interval 默认 300->60，动态渲染 content 与
+   "每 N 秒自动刷新"标签）。效果：浏览器每 60 秒自动重载，无 AI 成本。
+2. 流水线触发频率 60 秒 -> 20 秒（run_local_intel.sh INTERVAL 默认值）：
+   vps_intel_pipeline --once 循环从 60s 改 20s（有 pipeline.lock，重叠自动跳过，安全），
+   节点到期检测更及时。服务器 systemd 1 分钟轮询不变。
+3. 小局结束检测加价格信号：核对后确认已实现（vps_intel_pipeline 的
+   ended = closed or winner 已置位 or 任一 outcomePrice >= 0.99，防错规则第 20 条），
+   未新增改动；兜底"保守时间窗"（CS2 55 分钟）为 10-16 加时 / Aurora-9z 误判教训
+   专门调保守，不放松。
+
+验证：两个文件过语法检查（ast.parse + bash -n），关键行逐条确认落地。
+文件：tools/danmu_live_monitor.py、run_local_intel.sh。
+```
+
+
+## 2026-10-18 情报节点模板化生成（① 治本提速）
+
+```text
+背景：用户提"做优化点 1 最大杠杆：模板化生成，AI 只填字段、不写整页 HTML（治本）"。
+单节点 8-9 分钟的最大来源是 AI 整页写 HTML+CSS；而规则层 danmu_intel.analyze
+其实已产出结构化数据（teams/players/gray_signals/density_bursts/narrative），
+只是又被压成散文再让 AI 重新排版。目标：AI 只输出结构化 JSON，本地模板渲染。
+
+完成（本地 DANMU_INTEL_AI=deepseek 快节点路径）：
+1. 新建 tools/intel_html.py：共享 SAP/Apple 渲染助手（CSS 站点壳同族 --accent:#0071e3
+   + esc/card/sig/src_box/speed_block/page）。
+2. 新建 tools/render_node_page.py：模板渲染器，输入 AI JSON 字段 + 规则层 stats，
+   本地拼 12 段（0 速览卡 / 0.5 关键变量卡+阵容裁决卡 / 1-11）。速览卡由渲染器按
+   "信号 → 价值（置信） → 详 §N"固定格式拼装，生成即满足 speedcard_consistency 门禁
+   （从"事后 --fix"变成"生成即合规"）。
+3. 改 tools/vps_intel_pipeline.py 的 fast_intel_node 走 JSON 优先 + HTML 兜底：
+   - 新增 NODE_JSON_SCHEMA（内联进 prompt）、_strip_json / _deepseek_call /
+     _finalize_html 助手；新 json_prompt 令模型只输出一个 JSON 对象，max_tokens
+     8000 -> 4000；
+   - 解析成功 -> render_node_page.render() 本地渲染；解析/渲染失败 -> 回退旧 HTML
+     prompt 重试一次（不产生空窗）；Codex 路径完全不动（独立兜底）。
+4. 修一个生成 bug：速览卡 value 置信重复（schema 让 AI 把置信写进 value，渲染器又拼一次，
+   显示"（单源待验证）（单源待验证）"）——渲染器剥掉 value 尾部置信词再统一由 confidence
+   字段补，schema/prompt 同步写明"置信别写进 value"。
+
+验证（全绿）：
+- py_compile 三个文件通过；
+- 回归测试 13/13（speedcard_consistency + match_state_guard，最小 runner 直跑 test_*）；
+- 离线 dry-run（模拟 AI JSON）12 段齐全、速览卡 signal→value（置信）→详 §N、空态合规；
+- speedcard_consistency --check 问题页 0；vps_intel_pipeline 运行时 import 正常。
+
+未做（留待真实比赛）：计划第 5 步"真实切片 + 真 AI JSON 对比"需进行中比赛 + DeepSeek key，
+下次跑 ./run_local_intel.sh（DANMU_INTEL_AI=deepseek 已指向新路径）自然验证。
+
+回退：Codex 路径与 HTML 兜底都在；临时恢复只需把 DANMU_INTEL_AI 路径切回 HTML 版或依赖兜底。
+文件：tools/intel_html.py（新建）、tools/render_node_page.py（新建）、
+      tools/vps_intel_pipeline.py（改 fast_intel_node）。
+```
+
+
+## 2026-10-18 情报库并行度再升（③ 跨场并行）+ 等待再压短（④ 二轮）
+
+```text
+背景：用户提"③ 并行度再加（当前只做到同局 BP/局中并行）④ 便宜的即时优化：
+把等待压短"，在 ①④ 首轮基础上继续优化（对应"待办：情报库优化"优化点 1
+方向 c 跨场部分 + 触发/刷新及时性二轮）。
+
+完成（本地 DANMU_INTEL_AI=deepseek 快节点路径 + 规则层实时页）：
+1. ③ 跨场并行：tools/vps_intel_pipeline.py 把串行 for m in matches 循环抽成
+   process_match(m, all_files)，主循环改 ThreadPoolExecutor 并发跑多场比赛，
+   MAX_MATCH_WORKERS 默认 3（可经 INTEL_MAX_MATCH_WORKERS 覆盖）。多场比赛
+   生成互不排队；已核对无共享文件写竞争（fetch_game_markets / read_game_status
+   只读，build_timeline_shell 只写本场文件）。
+2. ④ 等待再压短（二轮）：
+   - 规则层实时页刷新 60 秒 -> 30 秒（tools/danmu_live_monitor.py --interval
+     默认 300->60->30，render_page 动态写 meta refresh 与"每 N 秒"标签；
+     tools/run_danmu_session.py --monitor-interval 默认同步 30）；
+   - 本地流水线触发 20 秒 -> 10 秒（run_local_intel.sh INTERVAL 默认，
+     有 pipeline.lock 重叠自动跳过，安全）。
+   小局结束检测已含 Polymarket 结算价信号（outcomePrice >= 0.99，防错规则
+   第 20 条），本轮无改动。
+
+验证（全绿）：
+- py_compile（vps_intel_pipeline / danmu_live_monitor / run_danmu_session）+
+  bash -n run_local_intel.sh 通过；运行时 import 正常；
+- 回归测试 13/13（speedcard_consistency + match_state_guard）。
+
+未做（用户明确"先不做"）：同场跨节点并行（G1 复盘 + G2 BP 同时出）。原因：
+G2 BP 切片窗口锚定 G1 结束时间（g_start = game_t + 8min，game_t 来自 G1 end
+状态文件 generated_at，需等 G1 复盘生成完才写），是数据依赖而非单纯并发；
+若提前用 now_utc 切窗口会回到 2026-08-25 滑动锚点教训（G2+ 节点窗口追不上、
+全部缺失）。要做需先解耦"G1 结束锚点"（改用 Polymarket 结算信号时刻/检测时刻
+作固定锚点并持久化）+ 补回归，单列为下一项独立设计。
+
+文件：tools/vps_intel_pipeline.py（跨场并行）、tools/danmu_live_monitor.py、
+      tools/run_danmu_session.py、run_local_intel.sh（④ 二轮）。
+```
+
+## 2026-10-18 情报页新增【比赛局势】栏（两队胜率 + 虎扑队员评分）
+
+```text
+需求：在情报页 0–12 栏基础上加一栏【比赛局势】——① 按观众弹幕实时总结两队
+胜率、相加=100%、队1 蓝 / 队2 红；② 每队队员评分用虎扑数据、实时变动。
+用户确认：节点页 + 实时监控页两处都加；胜率算法 = 显式胜负弹幕计数。
+
+实现（纯规则层，AI 不产胜率/评分，杜绝幻觉）：
+1. 胜率信号 tools/danmu_intel.py 新增 win_signal(rows, teams, threshold=10)：
+   同弹幕"队伍名 + 胜/负方向词"才计一次；负向词（输了/寄了/被零封/抬走）记给
+   另一队；总样本 <10 或 =0 时 pct=None + sample_status=insufficient，不硬算。
+   方向词表修正（防错）：去掉"冠军"（DK冠军=头衔易误判，换"夺冠"）；
+   "抬走"从正向移负向（把X抬走=X输）；"被零封/被碾压/被血洗"含正向子串，负向优先判负。
+   analyze() 加 teams 参数与 win_signal 字段；CLI 加 --teams。
+2. 虎扑评分链路：fetch_hupu_esports.py + export_today_matches.py 保留
+   scoreItemKey(outBizNo/outBizType) 与两队 memberId -> matches_today.json 的
+   hupu_score_out_biz_no/type；新建 tools/fetch_hupu_player_ratings.py 三级下钻
+   （lol_match -> lol_bo 各小局 -> lol_item 选手），strict_game=True 时该局评分
+   未生成则返回空、不回退上一局（禁止串局）。
+3. 节点页 tools/render_node_page.py 加 _situation() 栏（编号 1.5，蓝=队1/红=队2
+   胜率双条 + 两列选手评分），render() 加 ratings 参数；vps_intel_pipeline 的
+   danmu_intel 调用加 --teams、generate_game_node 拉评分传入 render（deepseek 路径）
+   / 后置注入 situation_card（codex 路径）。
+4. 实时监控页 tools/danmu_live_monitor.py 加 --teams/--hupu-out-biz-no，
+   analyze 传 teams、评分 60s 节流拉取，render_page 加【比赛局势】块；
+   tools/run_danmu_session.py 透传 --teams/--hupu-out-biz-no。
+
+验证（全绿）：
+- py_compile 8 文件通过；新增 tests/test_win_signal.py 12/12（相加=100、样本不足
+  阈值、负向记对方、冠军头衔/抬走方向、双队同现/俚语不计、蓝红对齐）；
+  既有 speedcard_consistency 5/5 + match_state_guard 8/8 直跑全绿；
+- 离线 dry-run：真实切片 lol-dk-dns_g1_bp（win_signal 样本不足 2 条 <10 正确）+ 
+  真实评分 JSON 渲染节点页，14 卡齐全、1.5 栏蓝红对齐正确。
+
+文件：tools/danmu_intel.py、render_node_page.py、vps_intel_pipeline.py、
+      danmu_live_monitor.py、run_danmu_session.py、fetch_hupu_esports.py、
+      export_today_matches.py、fetch_hupu_player_ratings.py（新建）、
+      tests/test_win_signal.py（新建）。
+```
+
+## 2026-10-19 【比赛局势】栏改按小局：局内实时、局末冻结 + 评分赛后回填
+
+```text
+需求（用户逐条确认）：① 每小局节点页显示"本小局"胜率 + "本小局"评分（不累积、不串局）；
+② 局内实时更新、局结束后冻结；③ 局结束后评分仍需回填（虎扑评分赛后才陆续上线）。
+
+关键发现（数据源事实）：虎扑"选手小局评分"是赛后投票制、非局内实时——接口返回的
+scoreAvg + scorePersonCount 是观众打分计数，局内 players 基本为空；评分赛后 5-30 分钟
+才爬升、数小时仍缓慢累积。故"局内刷新评分"基本拉不到数据，真正入口是赛后回填；
+回填窗口抓的是主力投票潮，非最终定格值。
+
+实现：
+1. tools/render_node_page.py 胜率/评分两块各包 BEGIN/END 注释标记
+   (_WIN_BEGIN/_WIN_END/_RAT_BEGIN/_RAT_END)，供刷新器就地替换、不重跑 AI 文本；
+   标记是 render_node_page 与 refresh_situation 之间的契约，改块结构须同步。
+2. vps_intel_pipeline.generate_game_node 状态写 slice_from（mid 节点=本局 g_start，
+   作为本局切片起点）；fetch_ratings 保持本小局 strict_game 防串局。
+3. 新建 tools/refresh_situation.py（--once / --interval）：逐小局处理——
+   进行中局（end 未生成）胜率+评分实时刷 bp/mid 页；
+   已结束局胜率严格冻结，评分在 end 生成后 30 分钟内回填 bp/mid/end 页
+   （RATINGS_BACKFILL_MIN=30），超时全冻结；空评分返回 None 不回写（避免用空覆盖已有评分）；
+   只改 reports/ 本地 HTML、不 git，发布仍由 vps_publish 负责。
+4. 部署 deploy/danmu_intel/refresh-situation.{service,timer}：每 60s oneshot；
+   docs/task/SERVER_INTEL_STACK.md 第 7 节同步为"局内实时、局末冻结 + 评分赛后回填"。
+
+验证（全绿）：py_compile 5 文件通过；新增 tests/test_situation_refresh.py 11/11
+（标记替换幂等、无标记返回 None 不误写旧页、fetch_ratings 本小局 strict、回填窗口
+30min、空评分不回写、mid 节点优先定本局起点）；test_win_signal 12/12 无回归；
+离线 dry-run 回填：bp/mid/end 页评分补上、胜率块保持冻结不被动。
+
+文件：tools/render_node_page.py、vps_intel_pipeline.py、refresh_situation.py（新建）、
+      deploy/danmu_intel/refresh-situation.{service,timer}（新建）、
+      tests/test_situation_refresh.py（新建）、docs/task/SERVER_INTEL_STACK.md。
+```
+
+## 2026-10-19 【比赛局势】胜率把选手表态折算进队伍（选手名 → 队伍映射）
+
+```text
+背景：win_signal 只认"队名 + 胜负方向词"，观众大量用选手名表态（"Faker要赢了"）不进胜率，
+导致队名口径样本偏少、常"样本不足"。用户要求加选手→队伍折算。
+
+实现：
+1. tools/danmu_intel.py 新增 PLAYER_TEAM（选手 → TEAMS 规范 key）——只登记阵容稳定、
+   无歧义的归属；新增 _canon_team（队名归一，处理 "Spirit" vs "Team Spirit" 别名）、
+   _team_player_keywords（把某队名下选手关键词并入该队匹配词表，按 game 过滤防跨联赛）。
+2. win_signal 加 game 参数（默认 None 向后兼容）；analyze() 传 game（未显式给则从弹幕
+   game 字段自动推断）；refresh_situation.py 传 vp._match_game(m)。
+3. 跨游戏防串：donk（CS2 Spirit）在 Dota2 场不得折算进 Spirit；Yatoro（Dota2 Spirit）才折算。
+
+已登记映射（9 人，阵容稳定）：Faker/Guma→T1、Chovy→GEN、Zywoo/Apex→Vitality、
+donk→Spirit、Yatoro/Larl/Collapse→Spirit。
+未登记（18 人，阵容/转会不确定，宁可漏计不误配）：Canna/Oscar/Poby/Hype/Mithy/Zeus、
+Niko/m0NESY/Twistzz/ropz/sh1ro、Pure/bzm/33/Ari/Whitemon/not me/rue——待用户确认当前
+阵容后补 PLAYER_TEAM 并回归。
+
+验证（全绿）：py_compile 通过；test_win_signal 12→18（新增选手折算 6 条：选手胜/负、
+跨游戏不折算、双队选手歧义、无关队伍选手不计、队名+选手不重复计）；
+test_situation_refresh 11/11、test_speedcard_consistency 5/5 无回归；
+端到端 analyze() 自动推断 game 后 "Faker赢了×3+Chovy寄了" → T1 count=4 正确。
+
+文件：tools/danmu_intel.py、refresh_situation.py、tests/test_win_signal.py。
+```
+
+## 2026-10-19 【比赛局势】选手→队伍映射改动态（虎扑每小局首发阵容，替代静态硬编码）
+
+```text
+背景：上一版 PLAYER_TEAM 是静态硬编码 9 人，18 名选手因"转会/阵容不确定"漏计。
+用户定稿：选手名应按"虎扑推送的比赛 + 每小局首发阵容"动态填充，不再手工登记。
+
+实现（主源动态、静态兜底）：
+1. tools/fetch_hupu_player_ratings.py 新增 fetch_lineup(obn, obt)：复用评分树三级下钻，
+   返回 {选手名: 队伍名}（只保留有归属的选手；教练/替补/多英雄已由评分接口过滤）。
+2. tools/danmu_intel.py：
+   - win_signal 新增 player_teams 参数（动态阵容），内部 eff = 静态 PLAYER_TEAM + 动态
+     （动态优先，转会/换队覆盖静态）；
+   - 新增 _player_entry（选手名 -> PLAYERS 反向解析）：虎扑官方名 Gumayusi 命中
+     PLAYERS["Guma"] 别名后，昵称弹幕"姑妈"也能折算进 T1；PLAYERS 未登记的选手用官方名
+     本身作关键词；
+   - _team_player_keywords 改接 player_teams（静态+动态合并），game 过滤保留；
+   - analyze 加 player_teams 参数；CLI 加 --players <json>。
+3. tools/vps_intel_pipeline.py 新增 fetch_lineup(mid)（不 strict_game，取最新一局 roster），
+   generate_game_node 在 danmu_intel 子进程前拉阵容、写 lineup.json、追加 --players 参数。
+4. tools/refresh_situation.py _win_block、tools/danmu_live_monitor.py analyze 均注入动态阵容
+   （监控页直接复用已拉的评分 players[name/team]，不额外请求）。
+
+语义：阵容同系列固定，取最新一局即可；比赛未开/拉取失败时 player_teams 为空，
+自动降级静态 PLAYER_TEAM（Faker/Guma→T1 等 9 人仍可折算），不因动态化而回归。
+
+验证（全绿）：py_compile 通过；test_win_signal 18→24（新增动态阵容 6 条：新选手折算、
+官方名反查别名、动态覆盖静态、空阵容回退静态、未登记官方名、全称队名归一）；
+端到端 CLI --players（Burdol->HLE 12 条全计 HLE）；fetch_lineup 抽取逻辑单测通过。
+
+文件：tools/fetch_hupu_player_ratings.py、danmu_intel.py、vps_intel_pipeline.py、
+refresh_situation.py、danmu_live_monitor.py、tests/test_win_signal.py。
+```
+
+## 2026-10-19 【比赛局势】胜率改近窗口口径（防"前期优势累积盖过末段被翻盘"）
+
+```text
+背景（用户发现的口径缺陷）：胜率原来对整个时间窗做纯计数、无时间概念，前 8 分钟
+优势方攒下的"稳了/拿下/必胜"永不过期，末段被翻盘时"寄了/输了"只能加到对手头上、
+无法抵消输家前期正向分——实测模拟：前 8 分钟 Alpha 优势 + 最后 2 分钟被翻盘，
+累积口径仍显示 Alpha 62% / Beta 38%（实际 Alpha 输了），失真。
+
+实现（近窗口，默认 5 分钟）：
+1. tools/danmu_intel.py win_signal 新增 window_seconds=300 参数 + 抽出 _count_signal
+   （计数逻辑复用）：window_seconds>0 时只统计「最新窗口秒内」的胜负弹幕，反转立即反映；
+   近窗口样本 < threshold 时回退整段累积；window_seconds<=0/None 或行无时间戳时退化
+   为整段累积（向后兼容）。输出加 basis（recent/cumulative）标记实际口径供审计/渲染。
+2. analyze 透传 window_seconds（默认 300，调用方无需改动）。
+3. tools/render_node_page.py situation_win_block 按 basis 标注口径：recent 显示
+   "近 N 分钟胜负弹幕"，cumulative 显示"整场胜负弹幕（近 N 分钟样本不足回退累积）"。
+
+语义变化：胜率从"整场累积观众表态"变为"当前局势/近期动能"，更贴合"比赛局势"栏；
+局末冻结值 = 终局前 5 分钟口径，末段被翻盘的一方会正确显示为落后。
+
+验证（全绿）：py_compile 通过；test_win_signal 24→28（新增近窗口 4 条：反转反映、
+样本不足回退累积、显式关闭窗口、无时间戳退化累积）；test_situation_refresh 11/11、
+test_speedcard_consistency 5/5、test_match_state_guard 8/8 无回归；反转场景实测
+近窗口 Beta 100% / Alpha 0%（正确）、累积口径 Alpha 62%（原缺陷对照）。
+
+文件：tools/danmu_intel.py、render_node_page.py、tests/test_win_signal.py。
 ```

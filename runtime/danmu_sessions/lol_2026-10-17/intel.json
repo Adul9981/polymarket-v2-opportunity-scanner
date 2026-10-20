@@ -1,0 +1,886 @@
+{
+  "meta": {
+    "total": 4146,
+    "active_users": 1622,
+    "window_utc": [
+      "2026-10-16 16:01",
+      "2026-10-16 19:05"
+    ],
+    "density_per_min": 22.5,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 108,
+      "pos": 10,
+      "neg": 6,
+      "samples": [
+        "KC好人",
+        "越南随便打kc吧",
+        "kc加油",
+        "这KC的中单怎么这么像bin？？？？",
+        "kc加油"
+      ]
+    },
+    "T1": {
+      "mentions": 14,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "感觉第一轮抽签是 T1 打 TES",
+        "也有可能是t1打blg",
+        "kc就打t1来劲",
+        "KCmsi被T1虐个3:0，来京在哪？",
+        "加油T1"
+      ]
+    },
+    "DK": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这杰斯不是T1的叛徒拿了投名状进的DK"
+      ]
+    },
+    "HLE": {
+      "mentions": 1,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "hle,gen这俩队实力太强了"
+      ]
+    },
+    "GEN": {
+      "mentions": 2,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "hle,gen这俩队实力太强了",
+        "GEN这么拉了嘛"
+      ]
+    },
+    "WE": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "再菜也比we强",
+        "we来杀完了",
+        "说句LPL不爱听的，KC都能30WE，吹WE闹麻了",
+        "WE夺冠了吗",
+        "WE能打"
+      ]
+    },
+    "EDG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "见过最高热度八九千万 EDG夺冠那年"
+      ]
+    },
+    "BLG": {
+      "mentions": 22,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "我是2036穿越回来的，今年夺冠的是BLG",
+        "也有可能是t1打blg",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    "TES": {
+      "mentions": 28,
+      "pos": 0,
+      "neg": 2,
+      "samples": [
+        "tes菜的令人发指，今年外战一场没赢",
+        "这四个队伍貌似都能赢TES",
+        "这四个队伍貌似都能赢TES",
+        "这四个队伍貌似都能赢TES",
+        "tes外战今年一场没赢"
+      ]
+    },
+    "IG": {
+      "mentions": 75,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "ig加油",
+        "ig加油",
+        "ig加油",
+        "ig加油",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  },
+  "players": {
+    "Canna": {
+      "mentions": 4,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "CANNA居然去lec了",
+        "canna是第一杰斯吧",
+        "canna",
+        "canna这么强吗"
+      ]
+    },
+    "Faker": {
+      "mentions": 7,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "faker 有希望夺第 7 冠？",
+        "兄弟们，我刚来faker是不是已经出了？",
+        "飞科都七冠了",
+        "老黑中单飞科选过，效果还很好",
+        "faker拿冠军没有"
+      ]
+    },
+    "Chovy": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "今年全是凌晨 chovy",
+        "超威去K C了？",
+        "超威去K C打上单了？",
+        "超威去K C打上单了？",
+        "超威去K C打上单了？"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 35,
+    "samples": [
+      "人头数大起来",
+      "人头数大起来",
+      "人头数大起来",
+      "人头数大起来",
+      "给德莱文拿人头还打个屁",
+      "7万个人有700发弹幕就不错了",
+      "+7.5也想写书",
+      "减7.5表示没压力"
+    ]
+  },
+  "situation": {
+    "count": 88,
+    "samples": [
+      "2-0",
+      "这德莱文优势没了",
+      "优势没了啊",
+      "翻盘局 后期德莱文砍不动",
+      "这kc下路有优势打野不会来怪不得",
+      "重炮手经济和德莱文一样啊",
+      "重炮手经济反超了啊",
+      "是下路送了一波。要不然右边优势"
+    ]
+  },
+  "gray_signals": {
+    "count": 6,
+    "samples": [
+      "小炮不演了",
+      "这个ad感觉收钱了",
+      "这不是故意的吗",
+      "故意的",
+      "故意不打架",
+      "故意杀老子小31"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "18:42",
+      "minute": 29869602,
+      "count": 175,
+      "pos": 3,
+      "neg": 8,
+      "tone": "负面",
+      "samples": [
+        "右边怎么不还手",
+        "5打4还不一波？",
+        "有大龙buff的时候不一波，现在没大龙buff了，又要一波了",
+        "卖竹鼠了，三元一只，十元三只！"
+      ]
+    },
+    {
+      "minute_utc": "18:43",
+      "minute": 29869603,
+      "count": 135,
+      "pos": 3,
+      "neg": 4,
+      "tone": "分歧",
+      "samples": [
+        "让让让，家都让了",
+        "越南保枪战术",
+        "都2026年还在研发",
+        "收"
+      ]
+    },
+    {
+      "minute_utc": "18:32",
+      "minute": 29869592,
+      "count": 124,
+      "pos": 0,
+      "neg": 5,
+      "tone": "负面",
+      "samples": [
+        "收集者？",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    {
+      "minute_utc": "18:30",
+      "minute": 29869590,
+      "count": 111,
+      "pos": 1,
+      "neg": 4,
+      "tone": "负面",
+      "samples": [
+        "Faker:狂妄德莱文有什么用？",
+        "这个奎桑提出的啥啊",
+        "赵一梦别看了，睡觉了",
+        "傅锦梁，明天还要上班，快睡觉"
+      ]
+    },
+    {
+      "minute_utc": "18:33",
+      "minute": 29869593,
+      "count": 110,
+      "pos": 2,
+      "neg": 7,
+      "tone": "负面",
+      "samples": [
+        "人才6",
+        "真的太菜了",
+        "越南啊太逆天了",
+        "相互喂饭"
+      ]
+    },
+    {
+      "minute_utc": "18:11",
+      "minute": 29869571,
+      "count": 94,
+      "pos": 2,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "杰补",
+        "好几年没上过号，世界赛一局没落下[赞][赞]",
+        "杰补！！",
+        "剪刀妹不好吗"
+      ]
+    },
+    {
+      "minute_utc": "18:36",
+      "minute": 29869596,
+      "count": 94,
+      "pos": 2,
+      "neg": 10,
+      "tone": "负面",
+      "samples": [
+        "这些人为什么能打比赛啊？",
+        "单机杰斯",
+        "德莱文起飞了 三四百层提现了",
+        "？"
+      ]
+    },
+    {
+      "minute_utc": "18:39",
+      "minute": 29869599,
+      "count": 85,
+      "pos": 2,
+      "neg": 1,
+      "tone": "分歧",
+      "samples": [
+        "KC杀减号确实有一套，令人作呕",
+        "一波",
+        "kkkkkkkkkkkk",
+        "杀减7.5"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 103,
+      "neg": 121,
+      "net": -18,
+      "tone": "负面"
+    },
+    "timeline": [
+      {
+        "start_utc": "16:01",
+        "count": 247,
+        "pos": 3,
+        "neg": 0,
+        "net": 3,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "16:37",
+        "count": 154,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "17:14",
+        "count": 208,
+        "pos": 3,
+        "neg": 1,
+        "net": 2,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "17:51",
+        "count": 1583,
+        "pos": 40,
+        "neg": 36,
+        "net": 4,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "18:28",
+        "count": 1954,
+        "pos": 57,
+        "neg": 84,
+        "net": -27,
+        "tone": "负面"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "18:42",
+        "count": 175,
+        "tone": "负面",
+        "pos": 3,
+        "neg": 8,
+        "sample": "右边怎么不还手"
+      },
+      {
+        "minute_utc": "18:32",
+        "count": 124,
+        "tone": "负面",
+        "pos": 0,
+        "neg": 5,
+        "sample": "收集者？"
+      },
+      {
+        "minute_utc": "18:30",
+        "count": 111,
+        "tone": "负面",
+        "pos": 1,
+        "neg": 4,
+        "sample": "Faker:狂妄德莱文有什么用？"
+      },
+      {
+        "minute_utc": "18:33",
+        "count": 110,
+        "tone": "负面",
+        "pos": 2,
+        "neg": 7,
+        "sample": "人才6"
+      },
+      {
+        "minute_utc": "18:11",
+        "count": 94,
+        "tone": "正面",
+        "pos": 2,
+        "neg": 0,
+        "sample": "杰补"
+      },
+      {
+        "minute_utc": "18:36",
+        "count": 94,
+        "tone": "负面",
+        "pos": 2,
+        "neg": 10,
+        "sample": "这些人为什么能打比赛啊？"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+      "count": 62,
+      "entity": true,
+      "minute_utc": "16:07"
+    },
+    {
+      "text": "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+      "count": 10,
+      "entity": true,
+      "minute_utc": "18:13"
+    },
+    {
+      "text": "这四个队伍貌似都能赢TES",
+      "count": 6,
+      "entity": true,
+      "minute_utc": "17:49"
+    },
+    {
+      "text": "ig加油",
+      "count": 4,
+      "entity": true,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "超威去K C打上单了？",
+      "count": 4,
+      "entity": true,
+      "minute_utc": "18:17"
+    },
+    {
+      "text": "blg的玩具罢了",
+      "count": 4,
+      "entity": true,
+      "minute_utc": "18:18"
+    },
+    {
+      "text": "只要谁拿德莱文都能百分百赢TES一局",
+      "count": 4,
+      "entity": true,
+      "minute_utc": "18:50"
+    },
+    {
+      "text": "kc加油",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "17:54"
+    },
+    {
+      "text": "TES之前被MVK抽了陀螺",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "18:48"
+    },
+    {
+      "text": "IG加油",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "18:12"
+    },
+    {
+      "text": "都是BLG的玩具罢了！",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "18:28"
+    },
+    {
+      "text": "CANNA居然去lec了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:17"
+    },
+    {
+      "text": "这KC的中单怎么这么像bin？？？？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:54"
+    },
+    {
+      "text": "kc没了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:11"
+    },
+    {
+      "text": "这kc也抽象",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:20"
+    },
+    {
+      "text": "kc咋把本地人换了这么多",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:21"
+    },
+    {
+      "text": "kc辅助太搞笑了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:21"
+    },
+    {
+      "text": "外卡谁看啊，又不是我tes哥打外卡那么有期待",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:23"
+    },
+    {
+      "text": "mvk选这阵容太不把kc当人了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:28"
+    },
+    {
+      "text": "GEN这么拉了嘛",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:33"
+    },
+    {
+      "text": "we来杀完了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:34"
+    },
+    {
+      "text": "说句LPL不爱听的，KC都能30WE，吹WE闹麻了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:37"
+    },
+    {
+      "text": "kc让他一个中路都打得这么艰难",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:51"
+    },
+    {
+      "text": "ig什么有时候有比赛",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:47"
+    },
+    {
+      "text": "KC好人",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:43"
+    },
+    {
+      "text": "越南随便打kc吧",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:45"
+    },
+    {
+      "text": "兄弟们，我刚来faker是不是已经出了？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:53"
+    },
+    {
+      "text": "飞科都七冠了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:54"
+    },
+    {
+      "text": "tes外战今年一场没赢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:56"
+    },
+    {
+      "text": "TES冠军问题不大",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:56"
+    },
+    {
+      "text": "谁能赢我TES",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "17:57"
+    },
+    {
+      "text": "kc咋输",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:00"
+    },
+    {
+      "text": "打赢tes就不是弱队了？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:03"
+    },
+    {
+      "text": "KC难！",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:03"
+    },
+    {
+      "text": "我是2036穿越回来的，今年夺冠的是BLG",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:03"
+    },
+    {
+      "text": "感觉第一轮抽签是 T1 打 TES",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:04"
+    },
+    {
+      "text": "也有可能是t1打blg",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:04"
+    },
+    {
+      "text": "KC今天应该没有一点压力把",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:05"
+    },
+    {
+      "text": "打一把KC虐一把",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:05"
+    },
+    {
+      "text": "昨晚被kc演惨了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "18:06"
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      201
+    ],
+    [
+      "为君耽绝句",
+      52
+    ],
+    [
+      "MrRookie",
+      48
+    ],
+    [
+      "卍张喜龙卍",
+      40
+    ],
+    [
+      "村里的小蘑菇",
+      36
+    ],
+    [
+      "西方失败",
+      32
+    ],
+    [
+      "明月阶前落",
+      27
+    ],
+    [
+      "流星雨又来临",
+      26
+    ]
+  ],
+  "sources": {
+    "huya_lol_official": 4146,
+    "huya_we957": 0,
+    "huya_maomao": 0,
+    "huya_mile": 0,
+    "huya_remember": 0,
+    "huya_shuoshuo": 0
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-10-16T16:25:51+00:00",
+      "heartbeat_at": "2026-10-16T19:05:17+00:00",
+      "last_message_at": "2026-10-16T19:05:17+00:00",
+      "message_count": 3924,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "哈哈",
+          "ts": 1792177498.52
+        },
+        {
+          "t": "喜欢装杯",
+          "ts": 1792177499.33
+        },
+        {
+          "t": "666666666",
+          "ts": 1792177499.81
+        },
+        {
+          "t": "瞎搞",
+          "ts": 1792177500.13
+        },
+        {
+          "t": "uzi来打直接五杀",
+          "ts": 1792177501.93
+        },
+        {
+          "t": "这真的赚吗？",
+          "ts": 1792177503.17
+        },
+        {
+          "t": "这干嘛哦。。",
+          "ts": 1792177503.66
+        },
+        {
+          "t": "嗨了送！我爱你！",
+          "ts": 1792177503.66
+        },
+        {
+          "t": "单杀",
+          "ts": 1792177504.62
+        },
+        {
+          "t": "下路这两个多少是有点离谱的",
+          "ts": 1792177505.09
+        },
+        {
+          "t": "k了送附体",
+          "ts": 1792177506.85
+        },
+        {
+          "t": "mvk这打法很独特 不拘一格",
+          "ts": 1792177509.7
+        },
+        {
+          "t": "哈哈没救了",
+          "ts": 1792177512.14
+        },
+        {
+          "t": "3-0",
+          "ts": 1792177512.57
+        },
+        {
+          "t": "辅助打对面两个闪",
+          "ts": 1792177517.09
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【凌晨见】2点 KC vs MVK S16入围赛",
+      "room_name": "【预告】17点  德玛西亚杯小组赛第四轮",
+      "page_live": true,
+      "checked_at": "2026-10-16T16:25:51+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T16:25:51+00:00",
+      "heartbeat_at": "2026-10-16T19:05:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "德杯小世界赛4进2 WE大战BRO！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T16:25:52+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T16:25:51+00:00",
+      "heartbeat_at": "2026-10-16T19:05:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "要如何才能抢到时间",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T16:25:52+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T16:25:51+00:00",
+      "heartbeat_at": "2026-10-16T19:05:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "德杯四强战！WE vs BRO ~!",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T16:25:52+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T16:25:51+00:00",
+      "heartbeat_at": "2026-10-16T19:05:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[德杯国际赛]四强 WEvsBRO",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T16:25:52+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T16:25:51+00:00",
+      "heartbeat_at": "2026-10-16T19:05:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "德杯半决赛！WE BRO！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T16:25:52+00:00"
+    }
+  ]
+}

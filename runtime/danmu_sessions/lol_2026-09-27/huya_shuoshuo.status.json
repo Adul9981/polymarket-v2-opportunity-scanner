@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_shuoshuo",
+  "url": "https://www.huya.com/323444",
+  "state": "capturing",
+  "started_at": "2026-09-27T13:05:12+00:00",
+  "heartbeat_at": "2026-09-27T13:05:22+00:00",
+  "last_message_at": "2026-09-27T13:05:22+00:00",
+  "message_count": 3,
+  "warning": null,
+  "error": null,
+  "recent_msgs": [
+    {
+      "t": "右边3个ap出全护甲",
+      "ts": 1790514314.29
+    },
+    {
+      "t": "奶油异父异母的棒子兄弟",
+      "ts": 1790514317.31
+    },
+    {
+      "t": "奥拉夫真实伤害 双 AP 做一堆护甲这不明着来吗",
+      "ts": 1790514322.59
+    }
+  ],
+  "room_id": 323444,
+  "channel_id": 1279512307519,
+  "nickname": "解说硕硕",
+  "introduction": "次级世界赛！DK DNS！",
+  "room_name": "",
+  "page_live": true,
+  "checked_at": "2026-09-27T13:05:13+00:00"
+}

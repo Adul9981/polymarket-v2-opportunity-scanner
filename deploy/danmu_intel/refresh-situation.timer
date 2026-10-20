@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh 比赛局势 on live intel node pages every 60s (per-game)
+
+[Timer]
+OnBootSec=60
+OnUnitActiveSec=60
+Unit=refresh-situation.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,405 @@
+{
+ "meta": {
+  "total": 738,
+  "active_users": 394,
+  "window_utc": [
+   "2026-10-16 14:12",
+   "2026-10-16 14:27"
+  ],
+  "density_per_min": 46.5,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "Vitality": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "我想看小蜜蜂比赛"
+   ]
+  },
+  "NAVI": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "NaVi进不去major了9z都不可能不进major"
+   ]
+  },
+  "FURIA": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "谁赢谁打黑豹"
+   ]
+  }
+ },
+ "players": {
+  "Niko": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "niko指挥的",
+    "donk是海参niko严父懂吗",
+    "niko指挥的"
+   ]
+  },
+  "donk": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "donkct会守哪",
+    "donk是海参niko严父懂吗"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 0,
+  "samples": []
+ },
+ "situation": {
+  "count": 3,
+  "samples": [
+   "预测一波，一会k3进攻指挥雨姐肯定叹气",
+   "有经济的 没起。",
+   "经济不好 保是对的"
+  ]
+ },
+ "gray_signals": {
+  "count": 2,
+  "samples": [
+   "马西西故意的，在躲节奏",
+   "马西西故意的，在躲节奏"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "14:18",
+   "minute": 29869338,
+   "count": 145,
+   "pos": 8,
+   "neg": 8,
+   "tone": "分歧",
+   "samples": [
+    "？？？？？",
+    "赛马",
+    "？？？？？？？？",
+    "？？？？？？？"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 36,
+   "neg": 20,
+   "net": 16,
+   "tone": "正面"
+  },
+  "timeline": [
+   {
+    "start_utc": "14:12",
+    "count": 199,
+    "pos": 3,
+    "neg": 2,
+    "net": 1,
+    "tone": "分歧"
+   },
+   {
+    "start_utc": "14:17",
+    "count": 288,
+    "pos": 13,
+    "neg": 10,
+    "net": 3,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:22",
+    "count": 251,
+    "pos": 20,
+    "neg": 8,
+    "net": 12,
+    "tone": "正面"
+   }
+  ],
+  "turning_points": []
+ },
+ "neutral_salvage": [
+  {
+   "text": "niko指挥的",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "谁赢谁打黑豹",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "donkct会守哪",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:20"
+  },
+  {
+   "text": "NaVi进不去major了9z都不可能不进major",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:23"
+  },
+  {
+   "text": "donk是海参niko严父懂吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:24"
+  },
+  {
+   "text": "我想看小蜜蜂比赛",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:26"
+  },
+  {
+   "text": "明日晴 你的每一根脚趾都是我的阿尔卑斯棒棒糖🍭🍭🍭",
+   "count": 26,
+   "entity": false,
+   "minute_utc": "14:24"
+  },
+  {
+   "text": "？？？？？",
+   "count": 13,
+   "entity": false,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "大家好，我是明，我的女朋友是晴",
+   "count": 11,
+   "entity": false,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "？",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "？？？？？？？？",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "？？？",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "钢枪指挥",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "mo 你的每一根脚趾都是我的阿尔卑斯棒棒糖",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "14:26"
+  },
+  {
+   "text": "666",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "弹幕 是真没人类了",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:25"
+  },
+  {
+   "text": "明日晴出来主持大局",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "马西西",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "马西西呢",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "马西西拘留15天",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "我是马西西",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "？？？？？？？？？？？",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "牛",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "哈哈哈哈哈",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "k3是人类吗",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "找人帮忙上完美A400",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:23"
+  },
+  {
+   "text": "她拉的又黑又粗的才是我的阿尔卑斯棒棒糖",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:25"
+  },
+  {
+   "text": "这什么腊鸡战术",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:27"
+  },
+  {
+   "text": "查一下明日晴学历",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "14:27"
+  },
+  {
+   "text": "6666",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "对面谁啊 那么马",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "阿努比斯要也是防守图，那还有进攻图码，真的逗比呢你",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:25"
+  },
+  {
+   "text": "阿尔卑斯没那么好吃",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:27"
+  },
+  {
+   "text": "还不开",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:12"
+  },
+  {
+   "text": "妈妈呀",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "纯净流",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "马黛玉病还没好啊",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "我是明日晴",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "赛马",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "？？？？？？？",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:18"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   33
+  ],
+  [
+   "来虎牙看sdn",
+   16
+  ],
+  [
+   "神秘猫雪雪",
+   12
+  ],
+  [
+   "Perfected",
+   12
+  ],
+  [
+   "花末君",
+   10
+  ],
+  [
+   "Cosmo1314",
+   10
+  ],
+  [
+   "小虎牙-mhOdN8d6oC",
+   9
+  ],
+  [
+   "小虎牙",
+   8
+  ]
+ ]
+}

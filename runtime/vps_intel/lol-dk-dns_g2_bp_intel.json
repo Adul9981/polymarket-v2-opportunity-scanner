@@ -1,0 +1,470 @@
+{
+ "meta": {
+  "total": 642,
+  "active_users": 265,
+  "window_utc": [
+   "2026-09-27 09:01",
+   "2026-09-27 09:33"
+  ],
+  "density_per_min": 20.0,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "T1": {
+   "mentions": 9,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "打弱的他喜欢装B，遇到T1屁都不敢放",
+    "有sharvel能跟t1碰一碰，这人直接被虐",
+    "不看t1？？？",
+    "T1瓦这个队水平怎么样",
+    "100T把T1虐了"
+   ]
+  },
+  "DK": {
+   "mentions": 44,
+   "pos": 3,
+   "neg": 7,
+   "samples": [
+    "今天dk拉坨大的，你就看吧",
+    "dk最后一天小组赛就有颓势，今天就爆了",
+    "DK第三名，DN第四名！！！半斤八两！！！！！！",
+    "dk打野菜，右边下路菜",
+    "DK二队最恶心的队伍 必输"
+   ]
+  },
+  "DNS": {
+   "mentions": 6,
+   "pos": 1,
+   "neg": 0,
+   "samples": [
+    "DNS是哪边的队",
+    "dns拿下",
+    "DNS中野挺尽力的",
+    "dns会送的",
+    "DNS前面在韩国暴打过所有强队[不看]"
+   ]
+  },
+  "KT": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "他们都打KT，结果一个2:3，一个1:3！！！！！！！！"
+   ]
+  },
+  "EDG": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "你笑兰瑟人家打EDG都是虐"
+   ]
+  },
+  "IG": {
+   "mentions": 18,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+   ]
+  }
+ },
+ "players": {
+  "Faker": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 1,
+   "samples": [
+    "飞科菜是事实",
+    "飞科还需要第七冠来证明自己哈哈哈哈哈"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 1,
+  "samples": [
+   "48上单"
+  ]
+ },
+ "situation": {
+  "count": 5,
+  "samples": [
+   "抓个兰博，直接上高地了",
+   "都打到高地了",
+   "我感觉DNS会送一波大的",
+   "大龙没了",
+   "这不一波？"
+  ]
+ },
+ "gray_signals": {
+  "count": 3,
+  "samples": [
+   "故意安排 各赛区内战吗",
+   "毛出在演恶霸",
+   "赵信买了"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "09:23",
+   "minute": 29841683,
+   "count": 52,
+   "pos": 1,
+   "neg": 0,
+   "tone": "中性",
+   "samples": [
+    "米神 有一颗想c的心",
+    "这两主播喜欢在背后骂人",
+    "说了不用你还转",
+    "好在哪 随便封人"
+   ]
+  },
+  {
+   "minute_utc": "09:24",
+   "minute": 29841684,
+   "count": 44,
+   "pos": 0,
+   "neg": 1,
+   "tone": "中性",
+   "samples": [
+    "解说比赛就解说比赛 背后说人什么意思",
+    "二哥不也是老前辈吗你们也没少串",
+    "聊聊比赛",
+    "二哥：点我呢？"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 26,
+   "neg": 41,
+   "net": -15,
+   "tone": "负面"
+  },
+  "timeline": [
+   {
+    "start_utc": "09:01",
+    "count": 36,
+    "pos": 3,
+    "neg": 2,
+    "net": 1,
+    "tone": "分歧"
+   },
+   {
+    "start_utc": "09:07",
+    "count": 74,
+    "pos": 3,
+    "neg": 11,
+    "net": -8,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "09:14",
+    "count": 174,
+    "pos": 4,
+    "neg": 16,
+    "net": -12,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "09:20",
+    "count": 184,
+    "pos": 9,
+    "neg": 3,
+    "net": 6,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "09:26",
+    "count": 174,
+    "pos": 7,
+    "neg": 9,
+    "net": -2,
+    "tone": "负面"
+   }
+  ],
+  "turning_points": []
+ },
+ "neutral_salvage": [
+  {
+   "text": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+   "count": 17,
+   "entity": true,
+   "minute_utc": "09:01"
+  },
+  {
+   "text": "dk这赵信给张硕玩还有点机会",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "09:25"
+  },
+  {
+   "text": "DK冠军换个打野直接没了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:13"
+  },
+  {
+   "text": "dk没了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:15"
+  },
+  {
+   "text": "DNS是哪边的队",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:02"
+  },
+  {
+   "text": "今天dk拉坨大的，你就看吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:03"
+  },
+  {
+   "text": "他们都打KT，结果一个2:3，一个1:3！！！！！！！！",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:03"
+  },
+  {
+   "text": "你笑兰瑟人家打EDG都是虐",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:04"
+  },
+  {
+   "text": "dk最后一天小组赛就有颓势，今天就爆了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:04"
+  },
+  {
+   "text": "DK第三名，DN第四名！！！半斤八两！！！！！！",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:04"
+  },
+  {
+   "text": "DK二队最恶心的队伍 必输",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:07"
+  },
+  {
+   "text": "dk是不是不是亚洲之星的那个阵容了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:09"
+  },
+  {
+   "text": "dk换了个三队打野，弱了很多",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:10"
+  },
+  {
+   "text": "dk有彩笔吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:10"
+  },
+  {
+   "text": "dns拿下",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:12"
+  },
+  {
+   "text": "这就是dk",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:12"
+  },
+  {
+   "text": "说了dk拉坨大的没人信",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:12"
+  },
+  {
+   "text": "DNS中野挺尽力的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:13"
+  },
+  {
+   "text": "DK换了打野差了一个档次",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:13"
+  },
+  {
+   "text": "打弱的他喜欢装B，遇到T1屁都不敢放",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:13"
+  },
+  {
+   "text": "王老二立自己DK孝子的人设",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:14"
+  },
+  {
+   "text": "二哥狂热 dk",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:14"
+  },
+  {
+   "text": "二哥狂热 dk 粉，加许秀毒唯",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:15"
+  },
+  {
+   "text": "有sharvel能跟t1碰一碰，这人直接被虐",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:15"
+  },
+  {
+   "text": "DK送钱，跟上了吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:16"
+  },
+  {
+   "text": "点了点了，dk，连点三把放假了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:16"
+  },
+  {
+   "text": "飞科还需要第七冠来证明自己哈哈哈哈哈",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:16"
+  },
+  {
+   "text": "dk是不是换了好多人了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:16"
+  },
+  {
+   "text": "这DK怎么这个时候打架啊",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:17"
+  },
+  {
+   "text": "DK的打野完全没节奏的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:17"
+  },
+  {
+   "text": "DK这打野",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:18"
+  },
+  {
+   "text": "不看t1？？？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:19"
+  },
+  {
+   "text": "dns会送的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:19"
+  },
+  {
+   "text": "还在幻想翻，说了dk拉坨大的还是不信",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:19"
+  },
+  {
+   "text": "T1瓦这个队水平怎么样",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:20"
+  },
+  {
+   "text": "dk没进世界赛吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:22"
+  },
+  {
+   "text": "Dk二队",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:22"
+  },
+  {
+   "text": "律不是一个DK",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:22"
+  },
+  {
+   "text": "100T把T1虐了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:23"
+  },
+  {
+   "text": "dk打野和ddv农药把脑子喝坏了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:24"
+  }
+ ],
+ "top_users": [
+  [
+   "煜",
+   19
+  ],
+  [
+   "我是一颗小虎牙",
+   15
+  ],
+  [
+   "春熙路上林心如",
+   13
+  ],
+  [
+   "丁真pure",
+   12
+  ],
+  [
+   "RngXiaoHu",
+   12
+  ],
+  [
+   "weini彪哥",
+   11
+  ],
+  [
+   "Lulu淕",
+   11
+  ],
+  [
+   "寒风夏梦",
+   11
+  ]
+ ]
+}

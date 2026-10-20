@@ -1,0 +1,13 @@
+[Unit]
+Description=Refresh 比赛局势 (win rate + ratings) on live intel node pages (per-game)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/danmu-intel
+Environment=DANMU_INTEL_ROOT=/opt/danmu-intel
+ExecStart=/opt/danmu-intel/.venv/bin/python /opt/danmu-intel/tools/refresh_situation.py --once
+
+[Install]
+WantedBy=multi-user.target

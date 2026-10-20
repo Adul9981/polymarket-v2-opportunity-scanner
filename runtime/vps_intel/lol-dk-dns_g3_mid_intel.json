@@ -1,0 +1,429 @@
+{
+ "meta": {
+  "total": 438,
+  "active_users": 224,
+  "window_utc": [
+   "2026-09-27 09:24",
+   "2026-09-27 09:40"
+  ],
+  "density_per_min": 26.7,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "T1": {
+   "mentions": 9,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "为什么不看t1",
+    "T1打不过100T",
+    "我去T1打回来了",
+    "T1有个叫污渍的",
+    "今天有没有t1"
+   ]
+  },
+  "DK": {
+   "mentions": 18,
+   "pos": 0,
+   "neg": 1,
+   "samples": [
+    "dk打野和ddv农药把脑子喝坏了",
+    "DK日常爆第一把",
+    "dk这赵信给张硕玩还有点机会",
+    "dk这赵信给张硕玩还有点机会",
+    "Dk这个队不干净的"
+   ]
+  },
+  "DNS": {
+   "mentions": 5,
+   "pos": 1,
+   "neg": 1,
+   "samples": [
+    "DNS前面在韩国暴打过所有强队[不看]",
+    "我感觉DNS会送一波大的",
+    "赵信拿人头对dns来说是好事，毕竟拿完值钱了",
+    "领先一万能憋这么久 dns也是菜",
+    "dns就在那拖时间"
+   ]
+  },
+  "IG": {
+   "mentions": 5,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "右边男神不送，能打过ig吗？",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+    "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+   ]
+  }
+ },
+ "players": {},
+ "odds_discussion": {
+  "count": 6,
+  "samples": [
+   "赵信大人头，跟辅助有区别？",
+   "这种菜鸡抢人头",
+   "开大抢人头，畜生赵信",
+   "赵信大抢人头了，这波没大又被秒了",
+   "赵信拿人头对dns来说是好事，毕竟拿完值钱了",
+   "这把能有34人头吗"
+  ]
+ },
+ "situation": {
+  "count": 13,
+  "samples": [
+   "抓个兰博，直接上高地了",
+   "都打到高地了",
+   "我感觉DNS会送一波大的",
+   "大龙没了",
+   "这不一波？",
+   "这翻盘翻不了吧",
+   "赶紧一波结束呗",
+   "没有一波死的有价值 真的狗操"
+  ]
+ },
+ "gray_signals": {
+  "count": 1,
+  "samples": [
+   "赵信买了"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "09:33",
+   "minute": 29841693,
+   "count": 60,
+   "pos": 0,
+   "neg": 3,
+   "tone": "负面",
+   "samples": [
+    "基尼今天凌晨刚走",
+    "基尼昨晚滚了",
+    "今早淘汰了",
+    "鸡泥来打德杯了"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 15,
+   "neg": 18,
+   "net": -3,
+   "tone": "负面"
+  },
+  "timeline": [
+   {
+    "start_utc": "09:24",
+    "count": 136,
+    "pos": 7,
+    "neg": 7,
+    "net": 0,
+    "tone": "分歧"
+   },
+   {
+    "start_utc": "09:29",
+    "count": 172,
+    "pos": 4,
+    "neg": 6,
+    "net": -2,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "09:34",
+    "count": 130,
+    "pos": 4,
+    "neg": 5,
+    "net": -1,
+    "tone": "分歧"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "09:33",
+    "count": 60,
+    "tone": "负面",
+    "pos": 0,
+    "neg": 3,
+    "sample": "基尼今天凌晨刚走"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "这DK真的恶心，不管一队二队，都不是人。",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "09:38"
+  },
+  {
+   "text": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "09:32"
+  },
+  {
+   "text": "dk这赵信给张硕玩还有点机会",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "09:25"
+  },
+  {
+   "text": "拿T1来翻？？？",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "09:35"
+  },
+  {
+   "text": "dk打野和ddv农药把脑子喝坏了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:24"
+  },
+  {
+   "text": "DK日常爆第一把",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:24"
+  },
+  {
+   "text": "Dk这个队不干净的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:25"
+  },
+  {
+   "text": "dk送了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:26"
+  },
+  {
+   "text": "我感觉DNS会送一波大的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:27"
+  },
+  {
+   "text": "DK教练没有十年脑溢血，bp做不了这样",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:28"
+  },
+  {
+   "text": "为什么不看t1",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:28"
+  },
+  {
+   "text": "T1打不过100T",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:29"
+  },
+  {
+   "text": "右边男神不送，能打过ig吗？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:29"
+  },
+  {
+   "text": "我去T1打回来了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:32"
+  },
+  {
+   "text": "不愧是DK",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:32"
+  },
+  {
+   "text": "T1有个叫污渍的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:32"
+  },
+  {
+   "text": "DK这状态 基本3-0了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:32"
+  },
+  {
+   "text": "今天有没有t1",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:34"
+  },
+  {
+   "text": "dk第一把就吃",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:34"
+  },
+  {
+   "text": "啥时候有t1的比赛",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:35"
+  },
+  {
+   "text": "赵信拿人头对dns来说是好事，毕竟拿完值钱了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:36"
+  },
+  {
+   "text": "dns就在那拖时间",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:37"
+  },
+  {
+   "text": "DK 小组赛 就不正常 输了很正常",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:38"
+  },
+  {
+   "text": "T1从1-5打到7-5了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:39"
+  },
+  {
+   "text": "DK二队两个月没发工资了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "09:40"
+  },
+  {
+   "text": "，",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "09:30"
+  },
+  {
+   "text": "翻了",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "09:33"
+  },
+  {
+   "text": "？",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:24"
+  },
+  {
+   "text": "solid本质老张啊",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:24"
+  },
+  {
+   "text": "老谢露出小谢了吗？",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:30"
+  },
+  {
+   "text": "老张我没钱加油了，能不能给我一头羊我卖了加油？",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:31"
+  },
+  {
+   "text": "哈哈哈",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:31"
+  },
+  {
+   "text": "翻了哥怎么说",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:33"
+  },
+  {
+   "text": "回家耕田吧",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:33"
+  },
+  {
+   "text": "老张今年也才40多吧",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:37"
+  },
+  {
+   "text": "好送",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:38"
+  },
+  {
+   "text": "34",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "09:38"
+  },
+  {
+   "text": "真赛",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "09:24"
+  },
+  {
+   "text": "这个造型真的有问题啊，他一个人去捅三个",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "09:24"
+  },
+  {
+   "text": "真没看懂",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "09:24"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   16
+  ],
+  [
+   "低调但实力",
+   13
+  ],
+  [
+   "灰伯爵",
+   9
+  ],
+  [
+   "请腿哥房管解一哈禁言",
+   8
+  ],
+  [
+   "明天",
+   8
+  ],
+  [
+   "煜",
+   7
+  ],
+  [
+   "寒风夏梦",
+   7
+  ],
+  [
+   "丁真pure",
+   7
+  ]
+ ]
+}

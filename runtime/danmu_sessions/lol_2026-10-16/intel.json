@@ -1,0 +1,666 @@
+{
+  "meta": {
+    "total": 230,
+    "active_users": 137,
+    "window_utc": [
+      "2026-10-16 14:12",
+      "2026-10-16 15:59"
+    ],
+    "density_per_min": 2.2,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "显示的不是kc打mvk嘛",
+        "这把给kc赢了，翻了"
+      ]
+    },
+    "T1": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "得看T1能不能进决赛",
+        "希望5号种子淘汰T1[偷笑][偷笑]"
+      ]
+    },
+    "WE": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "We决赛在哪看"
+      ]
+    },
+    "IG": {
+      "mentions": 27,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  },
+  "players": {},
+  "odds_discussion": {
+    "count": 0,
+    "samples": []
+  },
+  "situation": {
+    "count": 3,
+    "samples": [
+      "gg",
+      "这把领先八千被翻盘了",
+      "是的，这一波开始"
+    ]
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "14:15",
+      "minute": 29869335,
+      "count": 9,
+      "pos": 0,
+      "neg": 0,
+      "tone": "中性",
+      "samples": [
+        "sofm普通话这么溜？sofm普通话这么溜？",
+        "赛程",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "minute_utc": "14:41",
+      "minute": 29869361,
+      "count": 9,
+      "pos": 0,
+      "neg": 0,
+      "tone": "中性",
+      "samples": [
+        "好久没玩了，不会了",
+        "真的",
+        "也就看看回放了",
+        "谁特么凌晨两点看比赛"
+      ]
+    },
+    {
+      "minute_utc": "14:43",
+      "minute": 29869363,
+      "count": 9,
+      "pos": 2,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "今年最没希望的一年",
+        "问 就是每次都是最有希望的一年",
+        "今年有theshy，你慌什么",
+        "得看T1能不能进决赛"
+      ]
+    },
+    {
+      "minute_utc": "14:54",
+      "minute": 29869374,
+      "count": 7,
+      "pos": 0,
+      "neg": 0,
+      "tone": "中性",
+      "samples": [
+        "封面怎么是g2",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "干嘛呢",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 6,
+      "neg": 2,
+      "net": 4,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "14:12",
+        "count": 37,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "14:33",
+        "count": 78,
+        "pos": 6,
+        "neg": 2,
+        "net": 4,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:54",
+        "count": 45,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "15:16",
+        "count": 24,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "15:37",
+        "count": 46,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "14:43",
+        "count": 9,
+        "tone": "正面",
+        "pos": 2,
+        "neg": 0,
+        "sample": "今年最没希望的一年"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+      "count": 26,
+      "entity": true,
+      "minute_utc": "14:54"
+    },
+    {
+      "text": "显示的不是kc打mvk嘛",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:32"
+    },
+    {
+      "text": "得看T1能不能进决赛",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:43"
+    },
+    {
+      "text": "希望5号种子淘汰T1[偷笑][偷笑]",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:43"
+    },
+    {
+      "text": "ig什么时候开打",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "15:03"
+    },
+    {
+      "text": "We决赛在哪看",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "15:24"
+    },
+    {
+      "text": "这把给kc赢了，翻了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "15:39"
+    },
+    {
+      "text": "1",
+      "count": 12,
+      "entity": false,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "。",
+      "count": 9,
+      "entity": false,
+      "minute_utc": "14:23"
+    },
+    {
+      "text": ".",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:36"
+    },
+    {
+      "text": "，",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "赛程",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:15"
+    },
+    {
+      "text": "6666",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:24"
+    },
+    {
+      "text": "2",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "4",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "sofm普通话这么溜？",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "666",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:47"
+    },
+    {
+      "text": "3",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "5",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "…",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:16"
+    },
+    {
+      "text": "？？？？",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "。。。。",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:36"
+    },
+    {
+      "text": "6",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:44"
+    },
+    {
+      "text": "玩转世界赛",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "15:06"
+    },
+    {
+      "text": "玩转世界赛！",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "15:06"
+    },
+    {
+      "text": "干",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "15:14"
+    },
+    {
+      "text": "杀杀杀",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "15:27"
+    },
+    {
+      "text": "8888",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "15:36"
+    },
+    {
+      "text": "sofm普通话这么溜？sofm普通话这么溜？",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:15"
+    },
+    {
+      "text": "谁熬夜看完了比赛",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:18"
+    },
+    {
+      "text": "重播这么多人",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:37"
+    },
+    {
+      "text": "2万人是真的还是假的",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:40"
+    },
+    {
+      "text": "真的",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:41"
+    },
+    {
+      "text": "人真多",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:49"
+    },
+    {
+      "text": "真是快乐打瓦吗[嘴馋]",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:50"
+    },
+    {
+      "text": "[666][666][666]",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:51"
+    },
+    {
+      "text": "让2追3？太丢人了",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "15:39"
+    },
+    {
+      "text": "左边也太夸张了吧",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "15:49"
+    },
+    {
+      "text": "这是sofm？",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:13"
+    },
+    {
+      "text": "ＳＯＦＭ中文水平高于很多国内的选手",
+      "count": 1,
+      "entity": false,
+      "minute_utc": "14:14"
+    }
+  ],
+  "top_users": [
+    [
+      "虎牙丶老爆",
+      14
+    ],
+    [
+      "顺风苹果PG",
+      11
+    ],
+    [
+      "春屿z",
+      8
+    ],
+    [
+      "水冷砂轮",
+      8
+    ],
+    [
+      "我是一颗小虎牙",
+      6
+    ],
+    [
+      "看我眼色行事行吧",
+      5
+    ],
+    [
+      "虎牙窿",
+      5
+    ],
+    [
+      "Holojojo",
+      5
+    ]
+  ],
+  "sources": {
+    "huya_lol_official": 230,
+    "huya_we957": 0,
+    "huya_maomao": 0,
+    "huya_mile": 0,
+    "huya_remember": 0,
+    "huya_shuoshuo": 0
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:10+00:00",
+      "last_message_at": "2026-10-16T15:59:04+00:00",
+      "message_count": 230,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "成语接龙 霸王别鸡",
+          "ts": 1792165996.79
+        },
+        {
+          "t": ".",
+          "ts": 1792166024.85
+        },
+        {
+          "t": "[心动][心动]",
+          "ts": 1792166073.04
+        },
+        {
+          "t": "1",
+          "ts": 1792166098.82
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1792166104.3
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1792166106.95
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1792166128.58
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1792166131.61
+        },
+        {
+          "t": "。",
+          "ts": 1792166178.63
+        },
+        {
+          "t": "一",
+          "ts": 1792166179.44
+        },
+        {
+          "t": "。",
+          "ts": 1792166245.39
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1792166255.53
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1792166263.23
+        },
+        {
+          "t": "，",
+          "ts": 1792166288.94
+        },
+        {
+          "t": "1",
+          "ts": 1792166344.2
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【凌晨见】2点 KC vs MVK S16入围赛",
+      "room_name": "【预告】17点  德玛西亚杯小组赛第四轮",
+      "page_live": true,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "德杯小世界赛4进2 WE大战BRO！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "要如何才能抢到时间",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "德杯四强战！WE vs BRO ~!",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[德杯国际赛]四强 WEvsBRO",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:09+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "德杯半决赛！WE BRO！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    }
+  ]
+}

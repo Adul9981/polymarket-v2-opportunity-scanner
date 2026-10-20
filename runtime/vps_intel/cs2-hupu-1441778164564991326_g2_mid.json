@@ -1,0 +1,11 @@
+{
+  "match": "cs2-hupu-1441778164564991326",
+  "game": 2,
+  "phase": "mid",
+  "slice_rows": 1076,
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_Aurora-9z_2026-10-16_g2_mid.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-10-16T15:52:18+00:00"
+}

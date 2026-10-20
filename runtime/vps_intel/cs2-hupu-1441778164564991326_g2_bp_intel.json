@@ -1,0 +1,451 @@
+{
+ "meta": {
+  "total": 741,
+  "active_users": 368,
+  "window_utc": [
+   "2026-10-16 15:19",
+   "2026-10-16 15:42"
+  ],
+  "density_per_min": 32.5,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "G2": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "呼吸去G2了",
+    "主播看好呼吸加盟后的G2的"
+   ]
+  },
+  "NAVI": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "Navi都报了小比赛了",
+    "Mo队，lvg和Navi的小赛事到时候播嘛",
+    "Mo队，lvg和Navi的小赛事到时候播嘛"
+   ]
+  },
+  "FaZe": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "faze up"
+   ]
+  },
+  "MOUZ": {
+   "mentions": 1,
+   "pos": 1,
+   "neg": 0,
+   "samples": [
+    "老鼠出来的小吉米这图肯定厉害啊"
+   ]
+  },
+  "MongolZ": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "蒙古现在就一个二线队伍",
+    "4k是蒙古核心吗"
+   ]
+  },
+  "Astra": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "Astralis这钢枪指挥去猎鹰那不直接王朝了?"
+   ]
+  }
+ },
+ "players": {
+  "Niko": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "这分Niko指挥的",
+    "这分Niko指挥的吧"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 0,
+  "samples": []
+ },
+ "situation": {
+  "count": 6,
+  "samples": [
+   "直接一波带走了",
+   "9儿子人数优势不会玩了尴住了",
+   "全是墨迹死，就不能打一波",
+   "连败经济有了",
+   "人数优势不会玩",
+   "欧罗拉连输2把就没经济"
+  ]
+ },
+ "gray_signals": {
+  "count": 4,
+  "samples": [
+   "天禄小比赛不会送分吧",
+   "是现在红星太菜了吗，灭霸咋输给bc的，买了吗",
+   "又刚？送分",
+   "这能不看的？ 妈的 9z买了吧"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "15:35",
+   "minute": 29869415,
+   "count": 88,
+   "pos": 3,
+   "neg": 4,
+   "tone": "分歧",
+   "samples": [
+    "还要K3杀多少？",
+    "漂漂漂漂漂漂漂漂漂漂漂漂漂漂漂",
+    "k3",
+    "好摸"
+   ]
+  },
+  {
+   "minute_utc": "15:37",
+   "minute": 29869417,
+   "count": 78,
+   "pos": 4,
+   "neg": 6,
+   "tone": "负面",
+   "samples": [
+    "拿个手枪局就算赢",
+    "mxx怎么又不在？",
+    "我摸摸摸",
+    "6666666666666"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 46,
+   "neg": 40,
+   "net": 6,
+   "tone": "正面"
+  },
+  "timeline": [
+   {
+    "start_utc": "15:19",
+    "count": 163,
+    "pos": 13,
+    "neg": 2,
+    "net": 11,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "15:26",
+    "count": 204,
+    "pos": 7,
+    "neg": 15,
+    "net": -8,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "15:34",
+    "count": 374,
+    "pos": 26,
+    "neg": 23,
+    "net": 3,
+    "tone": "正面"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "15:37",
+    "count": 78,
+    "tone": "负面",
+    "pos": 4,
+    "neg": 6,
+    "sample": "拿个手枪局就算赢"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "Mo队，lvg和Navi的小赛事到时候播嘛",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "15:29"
+  },
+  {
+   "text": "faze up",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:24"
+  },
+  {
+   "text": "蒙古现在就一个二线队伍",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:27"
+  },
+  {
+   "text": "4k是蒙古核心吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:27"
+  },
+  {
+   "text": "Navi都报了小比赛了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:28"
+  },
+  {
+   "text": "呼吸去G2了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:28"
+  },
+  {
+   "text": "主播看好呼吸加盟后的G2的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:30"
+  },
+  {
+   "text": "这分Niko指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "Astralis这钢枪指挥去猎鹰那不直接王朝了?",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:38"
+  },
+  {
+   "text": "这分Niko指挥的吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:40"
+  },
+  {
+   "text": "K3 你个乐子",
+   "count": 8,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "？",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "15:22"
+  },
+  {
+   "text": "漂漂漂漂漂漂漂漂漂漂漂漂漂漂漂",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "？？？？？？？",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:22"
+  },
+  {
+   "text": "这指挥我们猎鹰要了",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "看欧若拉去了 mo宝 坐位置了",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:27"
+  },
+  {
+   "text": "？？？？？",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:32"
+  },
+  {
+   "text": "？？？",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:32"
+  },
+  {
+   "text": "钢枪指挥",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "这钢枪指挥我们猎鹰要了",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "k3去猎鹰王朝了",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:38"
+  },
+  {
+   "text": "666",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "6",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:24"
+  },
+  {
+   "text": "Stake赞助2个不同比赛所以看着多。Stake赞助2个不同",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:25"
+  },
+  {
+   "text": "漂！漂！漂！漂！漂！",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:34"
+  },
+  {
+   "text": "还要K3杀多少？",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "k3",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "这k3去猎鹰不是完美补齐火力啊？",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:38"
+  },
+  {
+   "text": "马西西在我院的不孕不育报告已经出了，替我转告他领取。",
+   "count": 3,
+   "entity": false,
+   "minute_utc": "15:40"
+  },
+  {
+   "text": "太阳神",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:21"
+  },
+  {
+   "text": "666666",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:39"
+  },
+  {
+   "text": "有谁知道马西西去哪了",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:19"
+  },
+  {
+   "text": "德古拉杯播吗",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:21"
+  },
+  {
+   "text": "猎鹰比赛几点开",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:21"
+  },
+  {
+   "text": "呼吸和鼠去哪里了",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:21"
+  },
+  {
+   "text": "亚比去哪了",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:23"
+  },
+  {
+   "text": "呼吸和亚比都下来了",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:23"
+  },
+  {
+   "text": "猎鹰还需要这个积分吗？",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:24"
+  },
+  {
+   "text": "天禄说是补报葡萄牙那个比赛了",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:24"
+  },
+  {
+   "text": "葡萄牙那个",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "15:25"
+  }
+ ],
+ "top_users": [
+  [
+   "一起犇骉",
+   25
+  ],
+  [
+   "志玲不可以",
+   15
+  ],
+  [
+   "我是一颗小虎牙",
+   15
+  ],
+  [
+   "月光碎了一地",
+   14
+  ],
+  [
+   "小虎牙-t9z2A6Pk0F",
+   14
+  ],
+  [
+   "凯伦罗伯逊",
+   13
+  ],
+  [
+   "三德子弹",
+   9
+  ],
+  [
+   "厚言振W蒋",
+   8
+  ]
+ ]
+}

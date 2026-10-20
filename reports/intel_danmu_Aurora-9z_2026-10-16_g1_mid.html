@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>局中情报 · Aurora vs 9z · G1 MID-GAME</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#f5f5f7;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
+    color:#1d1d1f;
+    line-height:1.55;
+    padding:24px 16px 64px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:860px; margin:0 auto; }
+  .card {
+    background:#fff;
+    border-radius:18px;
+    padding:22px 24px;
+    margin-bottom:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.04);
+  }
+  h2 {
+    font-size:19px;
+    font-weight:600;
+    letter-spacing:-.2px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  h2 .no {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:26px;
+    height:26px;
+    padding:0 7px;
+    background:#0071e3;
+    color:#fff;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+  }
+  .card.speed {
+    background:linear-gradient(180deg,#ffffff 0%,#f7faff 100%);
+    border:1px solid #dbe9fb;
+  }
+  .scoreline {
+    font-size:15px;
+    font-weight:600;
+    color:#0071e3;
+    background:#eef5fe;
+    border-radius:10px;
+    padding:9px 14px;
+    margin-bottom:14px;
+  }
+  .scoreline span.tag {
+    font-size:11px;
+    font-weight:500;
+    color:#6e6e73;
+    background:#fff;
+    border:1px solid #e3e3e6;
+    border-radius:6px;
+    padding:1px 7px;
+    margin-left:8px;
+    vertical-align:1px;
+  }
+  ul { list-style:none; }
+  li {
+    position:relative;
+    padding-left:16px;
+    margin-bottom:9px;
+    font-size:14px;
+  }
+  li::before {
+    content:"";
+    position:absolute;
+    left:0; top:9px;
+    width:6px; height:6px;
+    border-radius:50%;
+    background:#0071e3;
+  }
+  .val { color:#0071e3; font-weight:600; }
+  .src { color:#86868b; font-size:12.5px; }
+  .decision {
+    margin-top:14px;
+    padding:12px 14px;
+    background:#1d1d1f;
+    color:#fff;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:500;
+  }
+  .decision b { color:#6fb4ff; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:640px){ .grid2{grid-template-columns:1fr;} }
+  .mini {
+    background:#fafafc;
+    border:1px solid #ececf0;
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:13.5px;
+  }
+  .mini h4 { font-size:13px; font-weight:600; margin-bottom:6px; color:#1d1d1f; }
+  .mini p { color:#424245; }
+  .pos { color:#0a8f4d; font-weight:600; }
+  .neg { color:#d70015; font-weight:600; }
+  .neu { color:#86868b; font-weight:600; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid #f0f0f2; }
+  th { color:#6e6e73; font-weight:500; font-size:12.5px; background:#fafafc; }
+  td b { font-weight:600; }
+  details {
+    margin-top:8px;
+    font-size:13px;
+    color:#424245;
+  }
+  details summary {
+    cursor:pointer;
+    color:#0071e3;
+    font-size:12.5px;
+    outline:none;
+  }
+  details p { margin-top:6px; padding-left:10px; border-left:2px solid #e3e3e6; color:#6e6e73; }
+  .gray {
+    background:#fff8f0;
+    border:1px solid #ffe4c4;
+    border-radius:12px;
+    padding:12px 14px;
+    font-size:13.5px;
+    margin-bottom:10px;
+  }
+  .gray b { color:#b25000; }
+  .pill {
+    display:inline-block;
+    font-size:11.5px;
+    padding:2px 9px;
+    border-radius:20px;
+    background:#eef5fe;
+    color:#0071e3;
+    font-weight:600;
+    margin-right:6px;
+  }
+  .pill.grayp { background:#fff1e0; color:#b25000; }
+  .pill.neup { background:#f0f0f2; color:#6e6e73; }
+  .timeline { font-size:13.5px; }
+  .timeline div { padding:7px 0; border-bottom:1px dashed #ececf0; }
+  .timeline div:last-child { border-bottom:none; }
+  .timeline b { color:#0071e3; }
+  .note { font-size:12.5px; color:#86868b; margin-top:10px; }
+  .threecol { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+  @media(max-width:640px){ .threecol{grid-template-columns:1fr;} }
+  .threecol .mini h4 { color:#0071e3; }
+  .empty { color:#86868b; font-size:13.5px; font-style:normal; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 0 核心情报速览 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="scoreline">Aurora vs 9z · 第 1 小局进行中 · BO3<span class="tag">弹幕口径·官方待回填</span></div>
+    <ul>
+      <li>弹幕情绪全程看涨：正面(+2)→(+13)→(+7)→(+15)→(+28)，共识净 +65（正142/负77）<span class="val">→ 观众对当前局面偏乐观，情绪未反转，置信：多源确认</span> <span class="src">→ 详 §5</span></li>
+      <li>14:49 密度峰值 192 条「gg fking EZ」，为全场最强正面转折点<span class="val">→ 高光/翻盘解读，情绪冲顶，置信：弹幕口径·待官方</span> <span class="src">→ 详 §7</span></li>
+      <li>14:31 峰值 169 条「5打3变2打3吗」，指向人数优势被抹平的争议回合<span class="val">→ 局面波动点，观众对处理存疑，置信：单源待验证</span> <span class="src">→ 详 §7</span></li>
+      <li>灰信号集中指向「故意放分/买了」类质疑，共 6 条留痕，涉及 9z 方操作<span class="val">→ 观众质疑非结论，需官方视角回填，置信：单源待验证</span> <span class="src">→ 详 §2</span></li>
+      <li>中性候选二次判定后，niko 指挥类 ×24 条为纯讨论，无情绪增量<span class="val">→ 不纳入方向板，避免噪声污染，置信：多源确认</span> <span class="src">→ 详 §10</span></li>
+    </ul>
+    <div class="decision">决策落点：<b>情绪面 LONG（偏正面）</b>，但灰信号与人数争议回合未澄清，仓位宜轻、以官方回填为触发。</div>
+  </div>
+
+  <!-- 1 结果总览/状态核验 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <div class="grid2">
+      <div class="mini">
+        <h4>比赛元数据</h4>
+        <p>Aurora vs 9z｜2026-10-16｜赛制 <b>BO3</b>（本场共 3 局）<br>
+        slug：cs2-hupu-1441778164564991326<br>
+        节点：G1｜局中（S1–S3 快照 · MID-GAME）</p>
+      </div>
+      <div class="mini">
+        <h4>样本状态</h4>
+        <p>窗口 14:12–14:50｜2645 条｜1007 人｜68.4 条/分｜样本状态 <b>ready</b><br>
+        <span class="neu">局中·非终局，结果待定</span></p>
+      </div>
+    </div>
+    <p class="note">比分与局内经济为官方口径，弹幕层未提供可核验数值，故不填列，避免编造。</p>
+  </div>
+
+  <!-- 2 灰信号汇总 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑 · 非结论）</h2>
+    <div class="gray"><b>「马西西故意的，在躲节奏」</b> ×2 —— 指向选手行为动机质疑，非事实认定。</div>
+    <div class="gray"><b>「故意放分的」</b> —— 对回合投入度的怀疑，样本单条。</div>
+    <div class="gray"><b>「跳下来没反应 买了吧」</b> —— 操作失位被解读为异常，属情绪化推断。</div>
+    <div class="gray"><b>「这不是故意送啊？？不躲起来 出去送？」</b> —— 站位选择引发负面解读。</div>
+    <div class="gray"><b>「说真的，这九阶好像他妈个个都买了一样，那些操作啊，不是人来的」</b> —— 对 9z 整体操作的集中质疑，情绪强度最高。</div>
+    <p class="note">以上均为观众质疑，<b>非结论</b>；与 §5 正面共识并存，说明情绪面存在分歧，需官方视角回填。</p>
+  </div>
+
+  <!-- 3 BP 锚点与选人情报 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <p class="empty">本局阵容（英雄 + 选手映射）：样本不足，弹幕层未提供可核验的选人列表。</p>
+    <p class="empty" style="margin-top:8px;">BP 后战绩情报（选人窗口选手×英雄胜率/战绩提及）：无战绩情报提及。</p>
+    <p class="note">中性候选中的 sh1ro、donk、ropz、niko 等实体提及，均为跨队讨论，未绑定本局选人，故不列为 BP 锚点。</p>
+  </div>
+
+  <!-- 4 盘口与市场讨论 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <p class="empty">样本不足：弹幕窗口内无盘口、赔率、让分或市场资金相关讨论。</p>
+    <p class="note">灰信号中的「买了吧」「个个都买了」为对选手操作的质疑用语，<b>不构成盘口讨论</b>，已归入 §2。</p>
+  </div>
+
+  <!-- 5 方向性情报板 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板</h2>
+    <div class="grid2">
+      <div class="mini">
+        <h4>正锚</h4>
+        <p><span class="pos">+</span> 情绪五段全正，末段 +28 为峰值段<br>
+        <span class="pos">+</span> 14:49 「gg fking EZ」192 条，正面冲顶<br>
+        <span class="pos">+</span> 共识净 +65（正142/负77）</p>
+      </div>
+      <div class="mini">
+        <h4>负锚</h4>
+        <p><span class="neg">−</span> 14:31 「5打3变2打3吗」169 条，人数优势争议<br>
+        <span class="neg">−</span> 灰信号 6 条指向放分/异常操作<br>
+        <span class="neg">−</span> 负向样本 77 条，未形成反转</p>
+      </div>
+    </div>
+    <div class="mini" style="margin-top:12px;">
+      <h4>群体共识（观众叙事）</h4>
+      <p>情绪走势：正面(+2) → 正面(+13) → 正面(+7) → 正面(+15) → 正面(+28)。全程看涨，无翻跌段；14:31 出现一次人数争议小回撤，14:49 由高光回合重新拉满。观众解读：正面=高光/翻盘，负面=失误/送。</p>
+    </div>
+    <div class="mini" style="margin-top:12px;">
+      <h4>灰信号条件预测</h4>
+      <p>若官方回填确认 14:31 回合为正常失误，则灰信号降级、正面共识强化；若确认异常操作，则情绪面存在快速反转风险。当前<b>条件未触发</b>。</p>
+    </div>
+  </div>
+
+  <!-- 6 情报含义与决策落点 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点</h2>
+    <ul>
+      <li><b>LONG 依据：</b>情绪五段递增 + 峰值正面冲顶，共识净 +65，短线情绪面偏多。</li>
+      <li><b>SHORT 风险：</b>灰信号 6 条 + 人数争议回合未澄清，存在情绪反转尾部风险。</li>
+      <li><b>落点：</b>轻仓偏多，以官方回填 14:31 / 14:49 两处为加减仓触发；不因单一峰值追高。</li>
+    </ul>
+  </div>
+
+  <!-- 7 本局复盘 -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <div class="timeline">
+      <div><b>14:12–14:20</b> 情绪起步 正面(+2)，观众观望为主。</div>
+      <div><b>14:20–14:31</b> 正面(+13) → 14:31 峰值 169 条「5打3变2打3吗」，人数优势被抹平引发争议，情绪小幅回撤至(+7)。</div>
+      <div><b>14:31–14:45</b> 正面(+15)，局面重新被看好。</div>
+      <div><b>14:49</b> 峰值 192 条「gg fking EZ」，全场最强正面转折点，观众解读为高光/翻盘，情绪冲顶(+28)。</div>
+    </div>
+    <p class="note">模型二次判定：中性候选中的 niko 指挥类（×24）为纯讨论，无情绪；sh1ro、donk、ropz、K3、绿龙、蒙古、黑豹等提及均为跨队闲聊，<b>不纳入</b>本局情绪。</p>
+  </div>
+
+  <!-- 8 队伍/人员画像 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <tr><th>对象</th><th>提及</th><th>正向</th><th>负向</th><th>情绪标签</th></tr>
+      <tr><td><b>Vitality</b>（小蜜蜂）</td><td>1</td><td>0</td><td>0</td><td class="neu">样本不足</td></tr>
+      <tr><td><b>Spirit</b>（绿龙）</td><td>4</td><td>0</td><td>0</td><td class="neu">观望</td></tr>
+      <tr><td><b>G2</b></td><td>1</td><td>0</td><td>0</td><td class="neu">样本不足</td></tr>
+      <tr><td><b>NAVI</b></td><td>2</td><td>0</td><td>0</td><td class="neu">样本不足</td></tr>
+      <tr><td><b>FURIA</b>（黑豹）</td><td>1</td><td>0</td><td>0</td><td class="neu">样本不足</td></tr>
+      <tr><td><b>MongolZ</b>（蒙古）</td><td>3</td><td>0</td><td>0</td><td class="neu">观望</td></tr>
+    </table>
+    <p class="note">本场对阵 Aurora / 9z 的直接情绪样本未在规则层单列，情绪判定依据整体共识与灰信号。</p>
+  </div>
+
+  <!-- 9 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <p class="empty">样本不足：弹幕窗口内无版本、地图池或联赛赛程规律相关讨论。</p>
+    <p class="note">跨队提及（NAVI 进 major、蒙古开赛时间、fut 与 G2 对比）属赛程闲聊，不构成版本情报。</p>
+  </div>
+
+  <!-- 10 预测验证回填 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <ul>
+      <li>情绪面 LONG 预测：<b>待验证</b>，需官方回填 14:49 后局面走向。</li>
+      <li>灰信号风险预测：<b>待验证</b>，需官方视角确认 9z 相关回合操作。</li>
+      <li>14:31 人数争议回合：<b>待验证</b>，弹幕口径无法定论。</li>
+    </ul>
+    <p class="note">局中·非终局，结果待定；本页不作终局结论。</p>
+  </div>
+
+  <!-- 11 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="threecol">
+      <div class="mini">
+        <h4>实际数据源</h4>
+        <p>弹幕窗口 14:12–14:50，2645 条 / 1007 人 / 68.4 条/分，样本 ready；规则层情报文件 g1_mid_intel.json。</p>
+      </div>
+      <div class="mini">
+        <h4>预期数据源</h4>
+        <p>官方比分与经济面板、BP 选人列表、选手×英雄战绩、盘口赔率数据。</p>
+      </div>
+      <div class="mini">
+        <h4>缺口</h4>
+        <p>比分/经济未回填；BP 与选人缺失；盘口无讨论；灰信号无官方核验；Aurora/9z 直接情绪样本未单列。</p>
+      </div>
+    </div>
+    <p class="note">跨源一致性提示：弹幕情绪面（正面）与灰信号（质疑）存在分歧，属正常观众分层，非数据冲突。</p>
+  </div>
+
+</div>
+</body>
+</html>

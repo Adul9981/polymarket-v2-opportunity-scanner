@@ -1,0 +1,643 @@
+{
+  "meta": {
+    "total": 3847,
+    "active_users": 506,
+    "window_utc": [
+      "2026-10-16 14:12",
+      "2026-10-16 15:59"
+    ],
+    "density_per_min": 35.8,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Iron Wing": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "加1W"
+      ]
+    }
+  },
+  "players": {},
+  "odds_discussion": {
+    "count": 23,
+    "samples": [
+      "太贵了1700",
+      "1700可以 精准",
+      "1700森哥血赚",
+      "1700？？？疯了",
+      "森哥1700废地换三连啊 他血赚",
+      "1700森哥血赚的他随便起飞",
+      "真的1700可以",
+      "1700绝对是可以的 森哥不亏"
+    ]
+  },
+  "situation": {
+    "count": 7,
+    "samples": [
+      "gg",
+      "森哥四车站翻盘了",
+      "谁也不卖，优势巨大",
+      "谁也不卖，优势巨大",
+      "你在落后你发现了吗",
+      "开加价卡看自己经济啊，800也敢开吗",
+      "第一个拿三连的优势 玩到第6 纯纯的智力低下"
+    ]
+  },
+  "gray_signals": {
+    "count": 12,
+    "samples": [
+      "故意搞节目效果的，弹幕别喷了",
+      "谢斌都乌俄波 能收钱",
+      "玩这种菠菜游戏还要带脸的",
+      "你玩这个游戏真跟个笑话一样 给别人做节目 给别人送分",
+      "你玩这个游戏真跟个笑话一样 给别人做节目 给别人送分",
+      "买了，加价",
+      "拉什么啊 后面有地不买了？",
+      "你收一会还能把苏丹买了"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "15:51",
+      "minute": 29869431,
+      "count": 155,
+      "pos": 2,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "弹幕把把都是第一的局势 闹麻了",
+        "天天运气差",
+        "弹幕把把都是第一的局势 闹麻了",
+        "说第一的局势就是纯纯不会玩"
+      ]
+    },
+    {
+      "minute_utc": "15:06",
+      "minute": 29869386,
+      "count": 94,
+      "pos": 4,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "1000起步 他没收入",
+        "你现在不着急的啊",
+        "至少1200",
+        "起码1k"
+      ]
+    },
+    {
+      "minute_utc": "15:05",
+      "minute": 29869385,
+      "count": 88,
+      "pos": 2,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "让他报价",
+        "+800",
+        "不卖锕",
+        "1000"
+      ]
+    },
+    {
+      "minute_utc": "15:12",
+      "minute": 29869392,
+      "count": 83,
+      "pos": 11,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "换啊",
+        "换了加价了",
+        "你不想要第一就算了",
+        "拿不到第一 但是你肯定第6"
+      ]
+    },
+    {
+      "minute_utc": "15:56",
+      "minute": 29869436,
+      "count": 80,
+      "pos": 3,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "你俩一起肥不比你俩一起穷好吗",
+        "你提前跟森哥交易，然后用卡不踩不就行了",
+        "保稀土 400确实过了，",
+        "俩人的生意，就不要听别人说话，怎么交易都是双赢……！！！"
+      ]
+    },
+    {
+      "minute_utc": "15:11",
+      "minute": 29869391,
+      "count": 79,
+      "pos": 1,
+      "neg": 0,
+      "tone": "中性",
+      "samples": [
+        "外面有加价卡外面有加价卡外面有加价卡外面有加价卡外面有加价卡",
+        "别人有加价卡 你这地是建好的",
+        "但是你1不了",
+        "外面有加价卡外面有加价卡外面有加价卡外面有加价卡外面有加价卡"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 220,
+      "neg": 55,
+      "net": 165,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "14:12",
+        "count": 863,
+        "pos": 41,
+        "neg": 5,
+        "net": 36,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:33",
+        "count": 578,
+        "pos": 52,
+        "neg": 18,
+        "net": 34,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:55",
+        "count": 1076,
+        "pos": 79,
+        "neg": 12,
+        "net": 67,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "15:16",
+        "count": 552,
+        "pos": 22,
+        "neg": 8,
+        "net": 14,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "15:37",
+        "count": 778,
+        "pos": 26,
+        "neg": 12,
+        "net": 14,
+        "tone": "正面"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "15:51",
+        "count": 155,
+        "tone": "正面",
+        "pos": 2,
+        "neg": 0,
+        "sample": "弹幕把把都是第一的局势 闹麻了"
+      },
+      {
+        "minute_utc": "15:06",
+        "count": 94,
+        "tone": "正面",
+        "pos": 4,
+        "neg": 0,
+        "sample": "1000起步 他没收入"
+      },
+      {
+        "minute_utc": "15:05",
+        "count": 88,
+        "tone": "正面",
+        "pos": 2,
+        "neg": 0,
+        "sample": "让他报价"
+      },
+      {
+        "minute_utc": "15:12",
+        "count": 83,
+        "tone": "正面",
+        "pos": 11,
+        "neg": 0,
+        "sample": "换啊"
+      },
+      {
+        "minute_utc": "15:56",
+        "count": 80,
+        "tone": "正面",
+        "pos": 3,
+        "neg": 0,
+        "sample": "你俩一起肥不比你俩一起穷好吗"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "加1W",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "15:08"
+    },
+    {
+      "text": "哈哈哈",
+      "count": 27,
+      "entity": false,
+      "minute_utc": "15:01"
+    },
+    {
+      "text": "那你别给呗，看你能不能第一就完事了",
+      "count": 27,
+      "entity": false,
+      "minute_utc": "15:11"
+    },
+    {
+      "text": "别",
+      "count": 19,
+      "entity": false,
+      "minute_utc": "15:06"
+    },
+    {
+      "text": "你一直嘴硬森哥不交易玩不了，想把森哥当猪宰，现在呢？？？",
+      "count": 18,
+      "entity": false,
+      "minute_utc": "15:55"
+    },
+    {
+      "text": "哈哈哈哈",
+      "count": 14,
+      "entity": false,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "1000",
+      "count": 14,
+      "entity": false,
+      "minute_utc": "14:46"
+    },
+    {
+      "text": "别开",
+      "count": 14,
+      "entity": false,
+      "minute_utc": "15:06"
+    },
+    {
+      "text": "你交易完了 他提条件 为啥同意？ 都是交易前聊好的",
+      "count": 13,
+      "entity": false,
+      "minute_utc": "14:28"
+    },
+    {
+      "text": "哈哈哈哈哈哈",
+      "count": 13,
+      "entity": false,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "体面",
+      "count": 13,
+      "entity": false,
+      "minute_utc": "15:51"
+    },
+    {
+      "text": "前进三没拿芬兰伏笔，智力低下暴露减价卡",
+      "count": 12,
+      "entity": false,
+      "minute_utc": "14:20"
+    },
+    {
+      "text": "800",
+      "count": 12,
+      "entity": false,
+      "minute_utc": "14:58"
+    },
+    {
+      "text": "不换",
+      "count": 12,
+      "entity": false,
+      "minute_utc": "15:08"
+    },
+    {
+      "text": "徐杰自踩比意之前秃子就能完成交易建房加价了，狗叫什么",
+      "count": 10,
+      "entity": false,
+      "minute_utc": "15:29"
+    },
+    {
+      "text": "哈哈哈哈哈",
+      "count": 8,
+      "entity": false,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "谢彬踏马的先加附加条款恶心人，白嫖减价卡，然后自己说的德法英",
+      "count": 8,
+      "entity": false,
+      "minute_utc": "14:15"
+    },
+    {
+      "text": "？",
+      "count": 8,
+      "entity": false,
+      "minute_utc": "14:25"
+    },
+    {
+      "text": "外面有加价卡外面有加价卡外面有加价卡外面有加价卡外面有加价卡",
+      "count": 8,
+      "entity": false,
+      "minute_utc": "15:06"
+    },
+    {
+      "text": "你要是没脑子，你就去买点猪脑子吃",
+      "count": 8,
+      "entity": false,
+      "minute_utc": "15:15"
+    },
+    {
+      "text": "不卖",
+      "count": 7,
+      "entity": false,
+      "minute_utc": "14:53"
+    },
+    {
+      "text": "这就是你抬第一的人",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "谢彬自己说的英国给你，去看回放",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:18"
+    },
+    {
+      "text": "秃子 同意换回来 是智商低了 交易完 加条件 没这规矩",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:20"
+    },
+    {
+      "text": "谢彬就是搞小动作暗示别人加价，他好换回来",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:23"
+    },
+    {
+      "text": "哈哈",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "对啊",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "你会了",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:33"
+    },
+    {
+      "text": "秃子 原来不看重直播人气 现在被吸干了 别人态度变没变？",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:43"
+    },
+    {
+      "text": "卡住",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:57"
+    },
+    {
+      "text": "结仇了",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "15:16"
+    },
+    {
+      "text": "洗地的说一下，这开局完成第六没问题吗？",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "15:32"
+    },
+    {
+      "text": "你盯着森哥不交易玩不了，那其他人呢，要学会提升自己懂吗",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "15:53"
+    },
+    {
+      "text": "算了秃子都这么智力低下了，当老赖就当了吧",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:28"
+    },
+    {
+      "text": "完了",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "15:06"
+    },
+    {
+      "text": "太蠢了",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "15:13"
+    },
+    {
+      "text": "谢彬一直说附加条件就是暗示别人 放加价没听出来吗",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:22"
+    },
+    {
+      "text": "是啊",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "是的",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "你应该说 有人开加价了 英国给我",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:29"
+    }
+  ],
+  "top_users": [
+    [
+      "何小布丶Taurus",
+      134
+    ],
+    [
+      "lll",
+      117
+    ],
+    [
+      "活着a1ive",
+      109
+    ],
+    [
+      "我是一颗小虎牙",
+      101
+    ],
+    [
+      "高昌玛尔扎哈",
+      92
+    ],
+    [
+      "小虎牙-danSczatvg",
+      74
+    ],
+    [
+      "火箭设计师",
+      70
+    ],
+    [
+      "池塘鲤鱼跃",
+      67
+    ]
+  ],
+  "sources": {
+    "huya_ti2026_stage1": 4,
+    "huya_maybeee111": 3843
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "dota2",
+      "source": "huya_ti2026_stage1",
+      "url": "https://www.huya.com/660118",
+      "state": "capturing",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:26+00:00",
+      "last_message_at": "2026-10-16T15:28:04+00:00",
+      "message_count": 4,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "6",
+          "ts": 1792161962.83
+        },
+        {
+          "t": "6",
+          "ts": 1792162157.3
+        },
+        {
+          "t": "J",
+          "ts": 1792164145.44
+        },
+        {
+          "t": "[666][震惊][感动][疑问][大笑][打呼][滑稽][送花]",
+          "ts": 1792164484.78
+        }
+      ],
+      "room_id": 660118,
+      "channel_id": 1541541294,
+      "nickname": "TI2026舞台一",
+      "introduction": "【重播】三冠加冕！恭喜Spirit获得TI2026 总冠军！",
+      "room_name": "【重播】三冠加冕！恭喜Spirit获得TI2026 总冠军！",
+      "page_live": true,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "dota2",
+      "source": "huya_maybeee111",
+      "url": "https://www.huya.com/211888",
+      "state": "capturing",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T15:59:26+00:00",
+      "last_message_at": "2026-10-16T15:59:25+00:00",
+      "message_count": 3843,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "秃子真是一点理解没有，这游戏只要交易有提升就能谈",
+          "ts": 1792166320.19
+        },
+        {
+          "t": "刚刚看了回放，秃子在踩比意前就拒绝了森哥的1400！",
+          "ts": 1792166321.0
+        },
+        {
+          "t": "不考虑节目效果的话，几百块根本没有用，懂？",
+          "ts": 1792166324.89
+        },
+        {
+          "t": "活该",
+          "ts": 1792166326.11
+        },
+        {
+          "t": "还在不亏，自己2400买的3连升的房子",
+          "ts": 1792166326.11
+        },
+        {
+          "t": "活该被枪毙",
+          "ts": 1792166328.16
+        },
+        {
+          "t": "森哥 哈哈",
+          "ts": 1792166331.24
+        },
+        {
+          "t": "你是非要自己赚的比别人多",
+          "ts": 1792166335.31
+        },
+        {
+          "t": "肯定要走完再看接不接受交易啊",
+          "ts": 1792166340.41
+        },
+        {
+          "t": "别人谈价很多时候是节目效果，懂？",
+          "ts": 1792166346.78
+        },
+        {
+          "t": "你们要求一个小学毕业的人会做生意，目光短浅懂吗",
+          "ts": 1792166353.85
+        },
+        {
+          "t": "1400的时候 秃子有2000多也不交易",
+          "ts": 1792166355.54
+        },
+        {
+          "t": "明明你就是在踩之前就已经不要森哥的1400了，嘴硬",
+          "ts": 1792166360.41
+        },
+        {
+          "t": "你老是想贪第一，你能不能先想想别第六啊秃子，做生意慢慢来服了",
+          "ts": 1792166363.32
+        },
+        {
+          "t": "好地",
+          "ts": 1792166365.11
+        }
+      ],
+      "room_id": 211888,
+      "channel_id": 2381472418,
+      "nickname": "Maybeee111",
+      "introduction": "Blast中国区预选",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T14:12:03+00:00"
+    }
+  ]
+}

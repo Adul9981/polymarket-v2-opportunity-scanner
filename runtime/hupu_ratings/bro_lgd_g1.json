@@ -1,0 +1,92 @@
+{
+  "source": "hupu",
+  "out_biz_no": "4129",
+  "out_biz_type": "lol_match",
+  "match_name": "BRO 3-1 LGD",
+  "home": {
+    "name": "BRO",
+    "team_id": "263528637906944"
+  },
+  "away": {
+    "name": "LGD",
+    "team_id": "4"
+  },
+  "game": {
+    "num": 1,
+    "name": "第1局",
+    "biz_id": "7352"
+  },
+  "players": [
+    {
+      "name": "Burdol",
+      "score": 9.9,
+      "count": 2437,
+      "team_id": "4",
+      "team": "LGD"
+    },
+    {
+      "name": "Heng",
+      "score": 9.9,
+      "count": 1637,
+      "team_id": "4",
+      "team": "LGD"
+    },
+    {
+      "name": "Tangyuan",
+      "score": 9.8,
+      "count": 1577,
+      "team_id": "4",
+      "team": "LGD"
+    },
+    {
+      "name": "Crisp",
+      "score": 9.7,
+      "count": 1285,
+      "team_id": "4",
+      "team": "LGD"
+    },
+    {
+      "name": "Shaoye",
+      "score": 8.6,
+      "count": 1163,
+      "team_id": "4",
+      "team": "LGD"
+    },
+    {
+      "name": "GIDEON",
+      "score": 2.4,
+      "count": 499,
+      "team_id": "263528637906944",
+      "team": "BRO"
+    },
+    {
+      "name": "Teddy",
+      "score": 2.3,
+      "count": 434,
+      "team_id": "263528637906944",
+      "team": "BRO"
+    },
+    {
+      "name": "Roamer",
+      "score": 2.5,
+      "count": 377,
+      "team_id": "263528637906944",
+      "team": "BRO"
+    },
+    {
+      "name": "Casting",
+      "score": 2.2,
+      "count": 326,
+      "team_id": "263528637906944",
+      "team": "BRO"
+    },
+    {
+      "name": "Namgung",
+      "score": 2.4,
+      "count": 281,
+      "team_id": "263528637906944",
+      "team": "BRO"
+    }
+  ],
+  "fetched_at_utc": "2026-10-18T12:55:39Z"
+}

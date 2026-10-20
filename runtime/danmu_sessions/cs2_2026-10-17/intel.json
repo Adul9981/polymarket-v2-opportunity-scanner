@@ -1,0 +1,535 @@
+{
+  "meta": {
+    "total": 1133,
+    "active_users": 564,
+    "window_utc": [
+      "2026-10-16 16:00",
+      "2026-10-16 16:22"
+    ],
+    "density_per_min": 52.5,
+    "sample_status": "ready"
+  },
+  "teams": {},
+  "players": {
+    "Niko": {
+      "mentions": 18,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "niko指挥的",
+        "这分niko指挥的",
+        "niko来了",
+        "nikoniko i",
+        "donk是海参niko严父懂吗"
+      ]
+    },
+    "donk": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "donk是海参niko严父懂吗",
+        "donk是海参niko严父懂吗"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 0,
+    "samples": []
+  },
+  "situation": {
+    "count": 15,
+    "samples": [
+      "gg",
+      "枪有优势香蕉道也不抢，赶紧输吧",
+      "9Z这队看不到什么希望，各种优势局送。",
+      "扛不住 gg",
+      "gg",
+      "gg了",
+      "ggggg",
+      "gg"
+    ]
+  },
+  "gray_signals": {
+    "count": 5,
+    "samples": [
+      "强起等于送分",
+      "弹窗操控比赛",
+      "买了吗",
+      "特么的他这是买了多少",
+      "买了肯定"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "16:04",
+      "minute": 29869444,
+      "count": 205,
+      "pos": 5,
+      "neg": 8,
+      "tone": "负面",
+      "samples": [
+        "？",
+        "？？？？",
+        "？？？？？？",
+        "没反应？"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 24,
+      "neg": 27,
+      "net": -3,
+      "tone": "负面"
+    },
+    "timeline": [
+      {
+        "start_utc": "16:00",
+        "count": 744,
+        "pos": 18,
+        "neg": 25,
+        "net": -7,
+        "tone": "负面"
+      },
+      {
+        "start_utc": "16:07",
+        "count": 294,
+        "pos": 6,
+        "neg": 1,
+        "net": 5,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "16:15",
+        "count": 95,
+        "pos": 0,
+        "neg": 1,
+        "net": -1,
+        "tone": "中性"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "16:04",
+        "count": 205,
+        "tone": "负面",
+        "pos": 5,
+        "neg": 8,
+        "sample": "？"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "niko指挥的",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "这分niko指挥的",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "niko来了",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "donk是海参niko严父懂吗",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "nikoniko i",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "致敬Niko",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "Niko来了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "niko在打比赛吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "niko",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "致敬niko",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "这波致敬niko",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "Niko在家失去3秒意识",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "你们必须尊重niko，这就是不尊重niko的下场",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "打死就赢了，致敬niko",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "火博士进入直播间",
+      "count": 13,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "？",
+      "count": 9,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "隔壁insani杀疯了MO队",
+      "count": 9,
+      "entity": false,
+      "minute_utc": "16:10"
+    },
+    {
+      "text": "1",
+      "count": 7,
+      "entity": false,
+      "minute_utc": "16:00"
+    },
+    {
+      "text": ".",
+      "count": 7,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "。",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "16:00"
+    },
+    {
+      "text": "gg",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "i14",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "16:07"
+    },
+    {
+      "text": "保了",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "16:07"
+    },
+    {
+      "text": "666",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "i11",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "？？？",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "哈哈哈哈哈",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "这他吗是在打比赛？这他吗是在打比赛？这他吗是在打比赛？",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "nuke",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "跳伞",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "16:11"
+    },
+    {
+      "text": "太变态了",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "哈哈哈哈哈哈哈哈",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "？？？？？？？？？",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "哈哈哈哈",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:01"
+    },
+    {
+      "text": "火仔进入直播间",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:02"
+    },
+    {
+      "text": "7",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:02"
+    },
+    {
+      "text": "哈基米难被路躲",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:04"
+    },
+    {
+      "text": "i14了",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:07"
+    },
+    {
+      "text": "bb跟菊花提前开吗",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:07"
+    },
+    {
+      "text": "跳两把伞",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "16:11"
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      35
+    ],
+    [
+      "CN、哇哇哇",
+      17
+    ],
+    [
+      "和仲阳",
+      14
+    ],
+    [
+      "心鑫辛芯新",
+      12
+    ],
+    [
+      "月光碎了一地",
+      12
+    ],
+    [
+      "谷雨时尚雨华",
+      10
+    ],
+    [
+      "今天也吃饱了吧",
+      10
+    ],
+    [
+      "冬怕冷夏怕热",
+      10
+    ]
+  ],
+  "sources": {
+    "huya_csboy_official": 643,
+    "huya_csboy_mo": 490
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "capturing",
+      "started_at": "2026-10-16T16:19:30+00:00",
+      "heartbeat_at": "2026-10-16T16:22:30+00:00",
+      "last_message_at": "2026-10-16T16:22:03+00:00",
+      "message_count": 10,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "为啥不去训练场",
+          "ts": 1792167571.89
+        },
+        {
+          "t": "[拥抱]",
+          "ts": 1792167573.89
+        },
+        {
+          "t": "^^",
+          "ts": 1792167579.61
+        },
+        {
+          "t": "马西西财富自由了，不差这几个歪瓜裂枣",
+          "ts": 1792167596.44
+        },
+        {
+          "t": "跑车随机刷",
+          "ts": 1792167600.27
+        },
+        {
+          "t": "[滑稽]",
+          "ts": 1792167616.72
+        },
+        {
+          "t": "Mo？",
+          "ts": 1792167637.0
+        },
+        {
+          "t": "，",
+          "ts": 1792167638.08
+        },
+        {
+          "t": "怎么在看这个，我的小视频呢",
+          "ts": 1792167706.43
+        },
+        {
+          "t": "有没有去狙击MO的？",
+          "ts": 1792167723.73
+        }
+      ],
+      "room_id": 123321,
+      "channel_id": 10748220,
+      "nickname": "CSBOY",
+      "introduction": "【直播】1点BB-Legacy",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T16:19:30+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-10-16T16:19:30+00:00",
+      "heartbeat_at": "2026-10-16T16:22:29+00:00",
+      "last_message_at": "2026-10-16T16:22:18+00:00",
+      "message_count": 11,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "比",
+          "ts": 1792167572.05
+        },
+        {
+          "t": "好吧~谢谢",
+          "ts": 1792167574.89
+        },
+        {
+          "t": "改剪头发了",
+          "ts": 1792167591.47
+        },
+        {
+          "t": "什么b发型",
+          "ts": 1792167594.96
+        },
+        {
+          "t": "像个慈祥老奶",
+          "ts": 1792167602.35
+        },
+        {
+          "t": "像个慈祥老奶",
+          "ts": 1792167610.84
+        },
+        {
+          "t": "还以为降落伞是肯德基",
+          "ts": 1792167621.0
+        },
+        {
+          "t": "哈哈哈",
+          "ts": 1792167621.42
+        },
+        {
+          "t": "MO头是不是像梁志超奶奶[笑哭]",
+          "ts": 1792167649.38
+        },
+        {
+          "t": "好像有新车皮，宾利？",
+          "ts": 1792167662.37
+        },
+        {
+          "t": "快递员mo已就位",
+          "ts": 1792167738.19
+        }
+      ],
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】9Z-AURORA",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T16:19:30+00:00"
+    }
+  ]
+}
