@@ -1,0 +1,12 @@
+{
+  "match": "cs2-hupu-1441778164564994027",
+  "game": 1,
+  "phase": "bp",
+  "slice_rows": 0,
+  "slice_from": "2026-10-22T13:00:00+00:00",
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_FaZe-BC.Game_2026-10-22_g1_bp.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-10-22T13:42:12+00:00"
+}

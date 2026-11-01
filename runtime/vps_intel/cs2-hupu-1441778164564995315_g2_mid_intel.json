@@ -1,0 +1,472 @@
+{
+ "meta": {
+  "total": 1197,
+  "active_users": 586,
+  "window_utc": [
+   "2026-10-25 14:15",
+   "2026-10-25 14:32"
+  ],
+  "density_per_min": 73.7,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "Vitality": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "9z昨天和小蜜蜂打的有来有回的，天路用头打",
+    "这个图小蜜蜂不一定能赢",
+    "小蜜蜂什么时候打？"
+   ]
+  },
+  "G2": {
+   "mentions": 36,
+   "pos": 0,
+   "neg": 6,
+   "samples": [
+    "g2还要多久",
+    "g2那边怎么样了",
+    "g2 图二是什么",
+    "看g2",
+    "g2几点开始"
+   ]
+  },
+  "NAVI": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "navi那个流",
+    "navi接哪场"
+   ]
+  },
+  "MOUZ": {
+   "mentions": 16,
+   "pos": 1,
+   "neg": 1,
+   "samples": [
+    "这老鼠到底怎么输的液体？",
+    "今天老鼠开窍了",
+    "老鼠杀几个队员吧",
+    "究竟是老鼠太强还是9z太菜",
+    "老鼠昨天怎么输给液体的"
+   ]
+  },
+  "Liquid": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "这老鼠到底怎么输的液体？",
+    "昨天被液体打开窍了",
+    "老鼠昨天怎么输给液体的"
+   ]
+  },
+  "EF": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "右边永恒之火"
+   ]
+  }
+ },
+ "players": {
+  "Niko": {
+   "mentions": 19,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "我擦niko年轻版",
+    "niko指挥的",
+    "niko指挥的",
+    "这分niko指挥的",
+    "niko教的"
+   ]
+  },
+  "Zywoo": {
+   "mentions": 5,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "载物开挂",
+    "载物开挂",
+    "载物开挂",
+    "载物开挂",
+    "载物开挂"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 0,
+  "samples": []
+ },
+ "situation": {
+  "count": 3,
+  "samples": [
+   "经济炸了 有钱有ak",
+   "人数优势磨磨唧唧",
+   "g2要gg啊"
+  ]
+ },
+ "gray_signals": {
+  "count": 1,
+  "samples": [
+   "一直喷的是不是买了很多哈哈哈哈哈气死你"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "14:21",
+   "minute": 29882301,
+   "count": 225,
+   "pos": 6,
+   "neg": 1,
+   "tone": "正面",
+   "samples": [
+    "这",
+    "看G2",
+    "狠狠地虐",
+    "老鼠这图好强啊"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 29,
+   "neg": 34,
+   "net": -5,
+   "tone": "负面"
+  },
+  "timeline": [
+   {
+    "start_utc": "14:15",
+    "count": 515,
+    "pos": 15,
+    "neg": 20,
+    "net": -5,
+    "tone": "负面"
+   },
+   {
+    "start_utc": "14:21",
+    "count": 404,
+    "pos": 9,
+    "neg": 6,
+    "net": 3,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:26",
+    "count": 278,
+    "pos": 5,
+    "neg": 8,
+    "net": -3,
+    "tone": "负面"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "14:21",
+    "count": 225,
+    "tone": "正面",
+    "pos": 6,
+    "neg": 1,
+    "sample": "这"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "载物开挂",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "NiKo教NiKo教NiKo教NiKo教NiKo教NiKo教",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "14:30"
+  },
+  {
+   "text": "niko指挥的",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:23"
+  },
+  {
+   "text": "这分niko指挥的",
+   "count": 4,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "G2真玩不过欧若拉。。。",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:26"
+  },
+  {
+   "text": "g2拉了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:23"
+  },
+  {
+   "text": "G2是不是要没了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:26"
+  },
+  {
+   "text": "g2指挥太蠢了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:30"
+  },
+  {
+   "text": "g2还要多久",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "这老鼠到底怎么输的液体？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "今天老鼠开窍了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "昨天被液体打开窍了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "老鼠杀几个队员吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "老鼠昨天怎么输给液体的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "基本碰不到天禄了，欧若拉 菊花 老鼠赢基本碰不到",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "老鼠是这张图的绝活。",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "g2那边怎么样了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "g2 图二是什么",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "navi那个流",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "9z昨天和小蜜蜂打的有来有回的，天路用头打",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "9Z打天禄就跟老鼠打他们一样",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "9z打蜜蜂和老鼠那是没办法，打天禄随便赢吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "天禄分分钟灭了老鼠，9Z",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "看g2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "老鼠锁住了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:19"
+  },
+  {
+   "text": "刚来mouz提a了吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:19"
+  },
+  {
+   "text": "g2几点开始",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:20"
+  },
+  {
+   "text": "唐教练一轻松写意老鼠就要完蛋",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:20"
+  },
+  {
+   "text": "看G2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "g2开了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "这个图小蜜蜂不一定能赢",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "navi接哪场",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "？G2不看了？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:21"
+  },
+  {
+   "text": "我擦niko年轻版",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:22"
+  },
+  {
+   "text": "g2应该会被一脚踢死吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:22"
+  },
+  {
+   "text": "天禄打g2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:22"
+  },
+  {
+   "text": "g2现在就是个野鸡",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:23"
+  },
+  {
+   "text": "怎么不看老鼠",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:25"
+  },
+  {
+   "text": "G2是人类",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:26"
+  },
+  {
+   "text": "G2又要准备换人了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:26"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   58
+  ],
+  [
+   "滴滴答答的芸酥饼",
+   22
+  ],
+  [
+   "副歌之木舟",
+   21
+  ],
+  [
+   "慕北之辰",
+   19
+  ],
+  [
+   "喜欢黑丝呢",
+   12
+  ],
+  [
+   "暑热难阻绿",
+   12
+  ],
+  [
+   "Sylow",
+   11
+  ],
+  [
+   "琴绝虾仁",
+   11
+  ]
+ ],
+ "win_signal": {
+  "team_a": "G2",
+  "team_b": "Aurora",
+  "count_a": 1,
+  "count_b": 0,
+  "total": 1,
+  "pct_a": null,
+  "pct_b": null,
+  "sample_status": "insufficient",
+  "samples_a": [
+   "啊，我还以为g2赢了"
+  ],
+  "samples_b": [],
+  "threshold": 10,
+  "basis": "cumulative",
+  "window_seconds": 300
+ }
+}

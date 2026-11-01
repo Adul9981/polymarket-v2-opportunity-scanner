@@ -53,9 +53,13 @@ def esc(s) -> str:
     return html.escape(str(s), quote=True)
 
 
-def card(no: str, title: str, body: str) -> str:
-    """一张编号卡片。no=编号，title=段标题，body=已拼好的 HTML 内容。"""
-    return f'<div class="card"><h2><span class="no">{esc(no)}</span>{esc(title)}</h2>{body}</div>'
+def card(no: str, title: str, body: str, dom_id: str = "") -> str:
+    """一张编号卡片。no=编号，title=段标题，body=已拼好的 HTML 内容。
+
+    dom_id：可选 DOM id（如比赛局势卡 #situation-card），供前端实时轮询就地替换定位。
+    """
+    id_attr = f' id="{esc(dom_id)}"' if dom_id else ""
+    return f'<div class="card"{id_attr}><h2><span class="no">{esc(no)}</span>{esc(title)}</h2>{body}</div>'
 
 
 def sig(tag: str, color: str, text: str) -> str:
@@ -84,9 +88,16 @@ def speed_block(score: str, badges: list[tuple[str, str]], sigs_html: str, act: 
     )
 
 
-def page(title: str, sub: str, speed_html: str, sections: list[tuple[str, str, str]], footer: str) -> str:
-    """整页骨架：速览卡 + 编号卡片列表 + 页脚。"""
-    cards = "".join(card(no, h2, body) for no, h2, body in sections)
+def page(title: str, sub: str, sections: list[tuple[str, str, str]], footer: str, extra_html: str = "") -> str:
+    """整页骨架：编号卡片列表 + 页脚（2026-10-24 起不再渲染速览卡，页面只保留选定栏）。
+
+    sections 每项为 (编号, 标题, 正文)，可追加第 4 元素 dom_id（给该卡加 id）。
+    extra_html：可选，注入 </body> 前的额外片段（如实时轮询 <script>）。
+    """
+    cards = "".join(
+        card(it[0], it[1], it[2], dom_id=it[3] if len(it) > 3 else "")
+        for it in sections
+    )
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -98,14 +109,10 @@ def page(title: str, sub: str, speed_html: str, sections: list[tuple[str, str, s
 <body>
 <div class="wrap">
 
-<div class="card speed">
-  <h2><span class="no">0</span>核心情报速览</h2>
-  {speed_html}
-</div>
-
 {cards}
 
 <div class="footer">{footer}</div>
 </div>
+{extra_html}
 </body>
 </html>"""

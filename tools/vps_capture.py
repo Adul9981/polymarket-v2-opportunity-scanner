@@ -20,6 +20,7 @@ import argparse
 import datetime
 import json
 import os
+import signal
 import subprocess
 import sys
 import time
@@ -75,7 +76,38 @@ def start_session(rooms: list[dict], session: str, game: str) -> subprocess.Pope
         f"（{label(game)}，{len(rooms)} 个直播间）",
         flush=True,
     )
-    return subprocess.Popen(cmd, env=os.environ.copy())
+    # start_new_session=True 使每组成为独立进程组（pgid == p.pid），跨天滚动/崩溃
+    # 重启时才能连同 run_danmu_session 派生的采集/监控孙进程一起回收，避免孤儿化。
+    return subprocess.Popen(cmd, env=os.environ.copy(), start_new_session=True)
+
+
+def stop_session(p: subprocess.Popen, timeout: int = 15) -> None:
+    """终止整个会话进程组（组长 run_danmu_session + 派生的采集/监控孙进程）。
+
+    若只 terminate 组长，派生的 fetch_huya_danmu 孙进程会孤儿化，继续占用直播间并
+    写旧日期文件（2026-10-30 教训：csboy 房间 123321 被 10-27/28/29 三批僵尸同时占用）。
+    组长可能已退出（崩溃重启场景），此时孙进程仍在同组，直接用 p.pid 作 pgid 发信号。
+    """
+    try:
+        os.killpg(p.pid, signal.SIGTERM)
+    except ProcessLookupError:
+        pass  # 组已不存在（组长与孙进程均已退出）
+    except PermissionError:
+        try:
+            p.terminate()
+        except Exception:  # noqa: BLE001
+            pass
+    try:
+        p.wait(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(p.pid, signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            try:
+                p.kill()
+            except Exception:  # noqa: BLE001
+                pass
+        p.wait(timeout=timeout)
 
 
 def main() -> int:
@@ -128,12 +160,7 @@ def main() -> int:
             if datetime.date.today().isoformat() != today:
                 print("[vps_capture] 日期变化，滚动到新一天文件", flush=True)
                 for p in procs.values():
-                    p.terminate()
-                for p in procs.values():
-                    try:
-                        p.wait(timeout=15)
-                    except subprocess.TimeoutExpired:
-                        p.kill()
+                    stop_session(p)
                 consecutive_crashes = 0
                 break
             for game, p in list(procs.items()):
@@ -147,6 +174,7 @@ def main() -> int:
                     f"{delay}s 后重启（连续 {consecutive_crashes} 次）",
                     flush=True,
                 )
+                stop_session(p)  # 组长已退出，清理同组残余孙进程再重启
                 time.sleep(delay)
                 procs[game] = start_session(groups[game], f"{game}_{today}", game)
         time.sleep(args.restart_delay)

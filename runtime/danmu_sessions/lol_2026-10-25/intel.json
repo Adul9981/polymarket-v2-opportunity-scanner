@@ -1,0 +1,592 @@
+{
+  "meta": {
+    "total": 498,
+    "active_users": 227,
+    "window_utc": [
+      "2026-10-25 14:07",
+      "2026-10-25 14:59"
+    ],
+    "density_per_min": 9.5,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "T1": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "t1是不是想在1-1的比赛中乱杀"
+      ]
+    },
+    "IG": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "ig加油",
+        "ig牛比",
+        "ig牛比",
+        "IG加油"
+      ]
+    }
+  },
+  "players": {},
+  "odds_discussion": {
+    "count": 1,
+    "samples": [
+      "4700 人 你跑了"
+    ]
+  },
+  "situation": {
+    "count": 1,
+    "samples": [
+      "t1是不是想在1-1的比赛中乱杀"
+    ]
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "14:08",
+      "minute": 29882288,
+      "count": 178,
+      "pos": 6,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "这跟给余华看letme自传有什么区别",
+        "这跟给余华看letme自传有什么区别",
+        "你徒弟",
+        "这跟给余华看letme自传有什么区别"
+      ]
+    },
+    {
+      "minute_utc": "14:09",
+      "minute": 29882289,
+      "count": 162,
+      "pos": 1,
+      "neg": 0,
+      "tone": "中性",
+      "samples": [
+        "抽了吧 绝版了",
+        "我要去上厕所了",
+        "我去孤品",
+        "有专业制作人点评把把C的视频"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 8,
+      "neg": 0,
+      "net": 8,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "14:07",
+        "count": 449,
+        "pos": 7,
+        "neg": 0,
+        "net": 7,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:18",
+        "count": 9,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "14:28",
+        "count": 17,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "14:38",
+        "count": 15,
+        "pos": 1,
+        "neg": 0,
+        "net": 1,
+        "tone": "中性"
+      },
+      {
+        "start_utc": "14:49",
+        "count": 8,
+        "pos": 0,
+        "neg": 0,
+        "net": 0,
+        "tone": "中性"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "14:08",
+        "count": 178,
+        "tone": "正面",
+        "pos": 6,
+        "neg": 0,
+        "sample": "这跟给余华看letme自传有什么区别"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "ig牛比",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:40"
+    },
+    {
+      "text": "ig加油",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:18"
+    },
+    {
+      "text": "IG加油",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:42"
+    },
+    {
+      "text": "t1是不是想在1-1的比赛中乱杀",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:59"
+    },
+    {
+      "text": "？",
+      "count": 43,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "这跟给余华看letme自传有什么区别",
+      "count": 40,
+      "entity": false,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "抽了",
+      "count": 13,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "886",
+      "count": 13,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "8666",
+      "count": 12,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "哈哈哈哈哈哈",
+      "count": 10,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "？？？？",
+      "count": 10,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "？？？",
+      "count": 8,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "哈哈哈哈",
+      "count": 7,
+      "entity": false,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "哈哈哈哈哈哈哈哈",
+      "count": 7,
+      "entity": false,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "哈哈哈哈哈",
+      "count": 6,
+      "entity": false,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "哈哈哈",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "？？？？？？",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "我缺",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "1",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "fk",
+      "count": 5,
+      "entity": false,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "厕纸",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "我要",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "毛神，我在厕所，借几张",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "不准",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "羊快",
+      "count": 4,
+      "entity": false,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "？？？？？？？？",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "哈哈哈哈哈哈哈哈哈哈哈哈",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "哈哈哈哈哈哈哈",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "懂你意思",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "绝版了",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "抽了吧",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "岁月屎书",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "看喝醉那天",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "上虎牙看S16精彩不停！",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "上虎牙看S16领表情头像！",
+      "count": 3,
+      "entity": false,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "866666",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "这么快",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "你徒弟",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "能抽了么",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "爆了",
+      "count": 2,
+      "entity": false,
+      "minute_utc": "14:08"
+    }
+  ],
+  "top_users": [
+    [
+      "井柏然本人",
+      15
+    ],
+    [
+      "半芍奶酪",
+      13
+    ],
+    [
+      "我是一颗小虎牙",
+      13
+    ],
+    [
+      "来吧，唉",
+      8
+    ],
+    [
+      "虎痴",
+      8
+    ],
+    [
+      "秋野小熊",
+      8
+    ],
+    [
+      "我爱瑞瑞秋",
+      7
+    ],
+    [
+      "baibai-hh",
+      6
+    ]
+  ],
+  "win_signal": null,
+  "sources": {
+    "huya_lol_official": 57,
+    "huya_we957": 0,
+    "huya_maomao": 441,
+    "huya_mile": 0,
+    "huya_remember": 0,
+    "huya_shuoshuo": 0
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:02+00:00",
+      "last_message_at": "2026-10-25T14:59:53+00:00",
+      "message_count": 8,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "好",
+          "ts": 1792940063.3
+        },
+        {
+          "t": "。",
+          "ts": 1792940113.89
+        },
+        {
+          "t": "这是直播吗？还是回放",
+          "ts": 1792940114.1
+        },
+        {
+          "t": "上虎牙看S16领表情头像！",
+          "ts": 1792940155.11
+        },
+        {
+          "t": "这是直播还是",
+          "ts": 1792940304.92
+        },
+        {
+          "t": "你",
+          "ts": 1792940326.1
+        },
+        {
+          "t": ".",
+          "ts": 1792940357.55
+        },
+        {
+          "t": "t1是不是想在1-1的比赛中乱杀",
+          "ts": 1792940393.69
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】26日1点 iG vs HLE S16瑞士轮第三日",
+      "room_name": "【预告】17点  德玛西亚杯小组赛第四轮",
+      "page_live": true,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "回看复盘下比赛 1点抽1W大米！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "我已经进化掉了睡眠",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "和泽元二路 瑞士轮第二日~！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[世界赛] BLGvsTL 后面看抽签",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "严肃复盘T1！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    }
+  ]
+}

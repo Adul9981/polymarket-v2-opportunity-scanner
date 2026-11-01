@@ -153,6 +153,65 @@ def test_embed_script_at_most_once() -> None:
     assert not bad, bad[:10]
 
 
+def test_shell_nav_highlight_follows_date() -> None:
+    """比赛时间轴壳的导航高亮必须跟日期走：今天的壳高亮「今日情报」，
+    历史壳（含无日期后缀）高亮「历史情报库」，不得一律高亮今日。
+    （教训 2026-10-24：历史情报库点进比赛壳，导航误高亮「今日情报」。）"""
+    import datetime
+
+    from add_site_nav import active_of, kind_of
+
+    today = datetime.datetime.now(
+        datetime.timezone(datetime.timedelta(hours=8))
+    ).date().isoformat()
+    cases = {
+        "match_2026-08-23_bfx_ns.html": "history",           # 历史（日期在开头）
+        "match_cs2-furia-pain-2026-08-26.html": "history",   # 历史（日期在末尾）
+        "match_cs2-hupu-1441778164564990880.html": "history",  # 无日期 -> 历史
+        "match_lol-dk-dns.html": "history",                  # 无日期 -> 历史
+        f"match_{today}_a_b.html": "today",                  # 今天
+        f"match_x-y-{today}.html": "today",                  # 今天
+        "intel_danmu_BRO-LGD_2026-10-13_g1_end.html": "history",  # 节点页不受影响
+    }
+    for name, want in cases.items():
+        assert active_of(kind_of(name), name) == want, f"{name}: active={active_of(kind_of(name), name)} != {want}"
+
+
+def test_hupu_shell_uses_content_date_and_h1() -> None:
+    """无日期后缀的 hupu 壳（match_cs2-hupu-<id>.html）必须用页面内容里的日期
+    与 <h1> 对阵判定今天/历史与面包屑标题，不再误归「历史情报库」/「hupu vs <id>」。
+    （教训 2026-10-25：Spirit-TYLOO 直播中从今日情报页点进去，导航却高亮「历史情报库」、
+    面包屑显示「hupu vs 1441778164564995311」。）"""
+    import datetime
+
+    from add_site_nav import _shell_title, active_of, kind_of, title_of
+
+    today = datetime.datetime.now(
+        datetime.timezone(datetime.timedelta(hours=8))
+    ).date().isoformat()
+    name = "match_cs2-hupu-1441778164564995311.html"
+    content = (
+        f'<div class="sub">CS2 · {today} · 按时间点切换查看</div>'
+        "<h1>Spirit vs TYLOO</h1>"
+    )
+    # 内容是今天的日期 -> 高亮「今日情报」
+    assert active_of(kind_of(name), name, content) == "today"
+    # 文件名/内容都无日期 -> 仍归历史（旧口径，不误报今日）
+    assert active_of(kind_of(name), name) == "history"
+    # 历史日期 -> 历史
+    assert (
+        active_of(kind_of(name), name, '<div class="sub">CS2 · 2026-10-24 · x</div>')
+        == "history"
+    )
+    # 面包屑标题从页面 <h1> 取，不再出现 "hupu vs <id>"
+    assert _shell_title(name, content) == "Spirit vs TYLOO"
+    # 无 <h1> 时回退文件名解析（老式带日期壳仍走 title_of）
+    assert (
+        _shell_title("match_cs2-furia-pain-2026-08-26.html")
+        == title_of("match_cs2-furia-pain-2026-08-26.html")
+    )
+
+
 def test_case_page_follows_standard() -> None:
     """案例公告页必须符合 CASE_STANDARD.md 五段结构（2026-08-25 固化）。"""
     p = SITE / "intel" / "case_gx_g2_2026-08-24.html"

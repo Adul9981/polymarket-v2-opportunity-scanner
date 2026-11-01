@@ -431,6 +431,47 @@ Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交
        （教训：KT-BRO G5 20:38 弹幕"一波了/恭喜bro"提前判 BRO 3-2，
        实际 20:45 KT 鳄鱼偷家翻盘 KT 3-2——Polymarket lol-kt-bro2
        结算 KT 99.95c 为最终仲裁，线上对话判定正确、本端判反。）
+25. 时间基准统一（2026-10-31 固化，最高优先级）：
+    多源「今日场次 / 时间窗口」判定必须统一时间基准，跨午夜场次禁止两头漏。
+    a. 各源日期字段时区事实（全项目唯一口径）：
+       Polymarket slug 日期（meta.date）= UTC；market 层 gameStartTime = UTC；
+       虎扑 start_iso = UTC；**虎扑 date 字段 = 北京时间**（唯一例外）。
+       两者是虎扑同一时间戳 matchStartTimeStamp 的两个时区表示
+       （tools/fetch_hupu_esports.py 的 _iso_of_ms 出 UTC、_bj_parts 出北京），
+       跨午夜场次 UTC 日期比北京日期早一天——判定窗口时字段与窗口必须配对
+       （UTC 字段配 UTC 窗口 / 北京字段配北京窗口），禁止交叉混用；
+       事件层 startDate 是挂牌时间，非开赛时间（见规则 2）。
+    b. 同一脚本内多源窗口必须同一基准，或分源各自换算，禁止混用：
+       本地 tools/export_today_matches.py 分源自洽——official/--input 用
+       UTC start_time 前缀（--input 另以 active_pending 覆盖跨日进行中场次）、
+       虎扑用北京 date + hupu_date_window()（{北京昨天, 北京今天}）；
+       site 仓库 .github/scripts/game_status_fetch.py（云扫）统一 UTC——
+       PM 用 meta.date、虎扑用 start_iso 的 UTC 日期，窗口都取 {昨天, 今天, 明天}。
+    c. 跨午夜场次窗口必须覆盖「昨天」：UTC 深夜开赛（北京次日凌晨）的场次，
+       slug date 落在昨天，若窗口只含 {今天, 明天} 会整场漏掉。
+    d. 去重不得用「未纳入的候选集」堵死补漏：同队场次去重只能对「已纳入
+       today_matches 的条目」做，禁止把近 3 天候选集也并入 known 集合，
+       否则会把「已存在同队 PM slug」的场次从虎扑补漏中误删。
+    e. 回归测试：tests/test_export_today_matches.py（虎扑北京换算 + 跨午夜纳入）。
+       （教训：G2 vs HLE 2026-10-30 23:00 UTC 开赛，PM slug lol-hle1-g2-2026-10-30
+       落 10-30，被旧 PM 窗口 [today, tomorrow] 判「昨天」不纳入；虎扑补漏又被
+       candidates 去重误堵 → 整场消失，情报页无此场。）
+26. hupu 场次小局状态走官方比分（2026-10-31 固化，最高优先级）：
+    进行中的 hupu 场次无 Polymarket 小局市场，小局数 / 小局结束 / 系列结束的
+    唯一权威 = 虎扑官方比分（scores 增量 + status / winner_member_id），
+    禁止用弹幕 GG 关键词判系列结束。
+    a. detect_match_end_gg 的"夺冠/晋级/出局"是赛事级闲谈，会在 G2 就被误判
+       "系列已结束"截断后续节点（教训：Vitality vs MOUZ 09:07-09:16 连续误报，
+       G2 节点被卡约 13 分钟）；
+    b. 比分可读时，小局结束仅以「gi <= 已结束局数（sum(scores)）」判定，
+       禁止叠加时间窗/弹幕兜底（时间窗锚点跨局后 g_start 已过去，会把未结束的
+       当前局误判为结束）；
+    c. 系列结束 = status 变 completed / winner_member_id 非空；进行中 = 已结束局数 +1
+       为当前局，系列结束后不再补不存在的局（last_gi = played + (0 if completed else 1)）；
+    d. 比分读不到（字段缺失 / "-" 占位 / 找不到场次）才回退弹幕 GG + 时间窗兜底；
+    e. 实现：tools/vps_intel_pipeline.py 的 _hupu_score_state + 兜底循环
+       （end_basis="hupu" 区分官方比分确认）；回归 tests/test_hupu_score_game_state.py
+       （比分驱动 / 弹幕假阳性不生效 / 系列结束不补局 / 时间窗不抢跑）。
 
 ## 数据同步约定（2026-08-18 起，全项目通用）
 

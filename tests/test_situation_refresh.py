@@ -142,6 +142,38 @@ def test_rat_block_nonempty_returns_block():
     assert render_node_page._RAT_BEGIN in block and render_node_page._RAT_END in block
 
 
+# --------------------------------------------------------------------------- _win_block 三档
+
+def test_win_block_tiered_uses_ratings_when_no_danmu(tmp_path, monkeypatch):
+    """节点页胜率三档：无弹幕但有本小局评分 -> 70/30（不再是 50/50）。"""
+    monkeypatch.setattr(refresh_situation, "game_start_iso", lambda mid, gi: "2026-10-18T07:00:00+00:00")
+    monkeypatch.setattr(vp, "SLICE_DIR", tmp_path)
+
+    def fake_slice(start, files, out, end):
+        out.write_text("", encoding="utf-8")
+        return 0
+
+    monkeypatch.setattr(vp, "slice_rows", fake_slice)
+    monkeypatch.setattr(vp, "fetch_lineup", lambda mid: None)
+    monkeypatch.setattr(
+        danmu_intel,
+        "win_signal",
+        lambda rows, teams, game=None, player_teams=None: {"total": 0, "pct_a": 50, "pct_b": 50},
+    )
+    ratings = {
+        "home": {"name": "LNG", "team_id": "9"},
+        "away": {"name": "WBG", "team_id": "11"},
+        "players": [
+            {"name": "Elk", "score": 9.0, "team_id": "11"},
+            {"name": "Nia", "score": 3.0, "team_id": "9"},
+        ],
+    }
+    block = refresh_situation._win_block("m1", 3, ["WBG", "LNG"], [], "lol", ratings)
+    assert block is not None
+    assert "70" in block and "30" in block
+    assert render_node_page._WIN_BEGIN in block and render_node_page._WIN_END in block
+
+
 # --------------------------------------------------------------------------- game_start
 
 def test_game_start_prefers_mid_slice_from():

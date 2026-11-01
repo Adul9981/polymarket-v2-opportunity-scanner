@@ -2,7 +2,7 @@
 
 锁定：
   1. 显式胜负弹幕计数归一化后两队相加恒为 100%；
-  2. 样本不足（< 阈值）不硬算，pct=None + sample_status=insufficient；
+  2. 无样本 → 50:50 占位（不空白）；有样本（含 < 阈值）→ 正常算比例（2026-10-29）；
   3. "某队输了/寄了"计给另一队（反向归属）；
   4. 俚语/玩梗（ok bro / gg）与无方向、双队同现的弹幕不计；
   5. 渲染层蓝=队1 / 红=队2，评分列按虎扑队名对齐。
@@ -29,12 +29,20 @@ def test_win_signal_sums_to_100():
     assert ws["total"] == 10
 
 
-def test_win_signal_insufficient_threshold():
+def test_win_signal_below_threshold_still_computes():
+    # 2026-10-29 改：有样本（3 条 < 阈值 10）也正常算比例，不再置 None
     rows = _rows(["Alpha赢了", "Beta拿下", "Alpha必胜"])
     ws = danmu_intel.win_signal(rows, ["Alpha", "Beta"])
-    assert ws["sample_status"] == "insufficient"
-    assert ws["pct_a"] is None and ws["pct_b"] is None
+    assert ws["sample_status"] == "ready"
     assert ws["total"] == 3
+    assert ws["pct_a"] == 67 and ws["pct_b"] == 33
+
+
+def test_win_signal_zero_sample_is_50_50():
+    # 2026-10-29 改：无样本 → 50:50 占位（不空白）
+    ws = danmu_intel.win_signal(_rows(["ok bro", "gg", "Alpha来了"]), ["Alpha", "Beta"])
+    assert ws["total"] == 0
+    assert ws["pct_a"] == 50 and ws["pct_b"] == 50
 
 
 def test_lose_counts_opposite_team():
@@ -249,12 +257,23 @@ def test_situation_ready_renders_blue_red():
     assert "两队相加恒为 100%" in html
 
 
-def test_situation_insufficient_shows_note():
-    stats = {"win_signal": {"total": 2, "pct_a": None, "pct_b": None,
+def test_situation_zero_sample_shows_50_50():
+    # 2026-10-29 改：无样本不再空白，渲染 50:50 占位
+    stats = {"win_signal": {"total": 0, "pct_a": 50, "pct_b": 50,
                             "sample_status": "insufficient", "threshold": 10}}
     html = render_node_page._situation(stats, None, ["Alpha", "Beta"])
-    assert "样本不足" in html
-    assert "60%" not in html
+    assert "50%" in html
+    assert "样本不足" not in html
+    assert "暂按 50:50" in html
+
+
+def test_situation_low_sample_renders_bars():
+    # 2026-10-29 改：有样本但 < 阈值也渲染真实比例，不空白
+    stats = {"win_signal": {"total": 3, "pct_a": 67, "pct_b": 33,
+                            "sample_status": "ready", "threshold": 10}}
+    html = render_node_page._situation(stats, None, ["Alpha", "Beta"])
+    assert "67%" in html and "33%" in html
+    assert "样本较少" in html
 
 
 def test_situation_no_ratings_shows_gap():
@@ -267,3 +286,23 @@ def test_rating_cols_align_blue_to_team1():
     # 队1 = WBG（虎扑客队）→ 蓝列在左；队2 = LNG（主队）→ 红列在右
     assert "color:#0071e3\">WBG" in html
     assert "color:#ff3b30\">LNG" in html
+
+
+def test_rating_cols_no_team_falls_back_to_mixed_list():
+    # CS2 通用评分不提供 teamId -> 单列混排（按评分降序），不硬拆两队（2026-11-01 增）
+    ratings = {
+        "home": {"name": "G2", "team_id": "1"},
+        "away": {"name": "NaVi", "team_id": "2"},
+        "game": {"num": 1, "name": "炙热沙城Ⅱ"},
+        "fetched_at_utc": "2026-10-31T12:00:00Z",
+        "players": [
+            {"name": "w0nderful", "score": 9.7, "count": 116, "team_id": "", "team": ""},
+            {"name": "huNter-", "score": 9.0, "count": 100, "team_id": "", "team": ""},
+        ],
+    }
+    html = render_node_page._rating_cols(ratings, ["G2", "NaVi"])
+    assert "按评分混排" in html          # 混排提示
+    assert "w0nderful" in html
+    assert "huNter-" in html
+    assert html.index("w0nderful") < html.index("huNter-")  # 高分在前
+    assert "color:#ff3b30\">NaVi" not in html  # 无红列标题（不拆两队）

@@ -469,7 +469,8 @@ def win_signal(
     window_seconds>0 时只统计「最新窗口秒内」的胜负弹幕（反转立即反映）；
     近窗口样本 < threshold 时回退到整段累积；window_seconds<=0/None 或行无时间戳
     时退化为整段累积（向后兼容）。输出 basis 标记实际口径（recent/cumulative）。
-    总计数 < threshold 时 pct 置 None、sample_status=insufficient，禁止硬算。
+    总计数 == 0 时 pct 置 50/50 占位（不空白）；总计数 > 0 即正常算比例，
+    threshold 不再作门槛（2026-10-29 改）。
     """
     if len(teams) != 2:
         return None
@@ -498,18 +499,20 @@ def win_signal(
                 basis = "recent"
 
     total = ca + cb
-    if total == 0 or total < threshold:
+    if total == 0:
+        # 无显式胜负样本 → 50:50 占位（2026-10-29 改：不空白，先给 50:50 随弹幕更新）
         return {
             "team_a": a, "team_b": b,
-            "count_a": ca, "count_b": cb,
-            "total": total,
-            "pct_a": None, "pct_b": None,
+            "count_a": 0, "count_b": 0,
+            "total": 0,
+            "pct_a": 50, "pct_b": 50,
             "sample_status": "insufficient",
             "samples_a": sa, "samples_b": sb,
             "threshold": threshold,
             "basis": basis,
             "window_seconds": window_seconds,
         }
+    # 有样本即正常算比例（2026-10-29 改：threshold 不再作门槛）
     pa = round(ca / total * 100)
     return {
         "team_a": a, "team_b": b,
@@ -803,8 +806,8 @@ def print_summary(intel: dict) -> None:
 def _print_win_signal(ws: dict) -> None:
     """打印两队伍胜率信号（观众口径·非结论）。"""
     a, b = ws["team_a"], ws["team_b"]
-    if ws.get("sample_status") == "insufficient":
-        print(f"\n== 比赛局势·胜率 == 样本不足（{ws['total']} 条 < 阈值 {ws['threshold']}，不硬算）")
+    if ws.get("total", 0) == 0:
+        print(f"\n== 比赛局势·胜率 == 暂无显式胜负弹幕，暂按 50:50 展示（共 0 条）")
         return
     print(f"\n== 比赛局势·胜率（观众口径·非结论）== {a} {ws['pct_a']}% : {ws['pct_b']}% {b}（共 {ws['total']} 条）")
 

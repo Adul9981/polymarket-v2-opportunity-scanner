@@ -1,0 +1,421 @@
+{
+ "meta": {
+  "total": 1079,
+  "active_users": 520,
+  "window_utc": [
+   "2026-10-25 14:07",
+   "2026-10-25 14:20"
+  ],
+  "density_per_min": 86.3,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "Vitality": {
+   "mentions": 4,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "9Z也是惨啊先打小蜜蜂再打老鼠",
+    "这和昨天打小蜜蜂是一个队伍吗",
+    "9z打完小蜜蜂打老鼠",
+    "9z昨天和小蜜蜂打的有来有回的，天路用头打"
+   ]
+  },
+  "Spirit": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "不会把老鼠送去打绿龙吧"
+   ]
+  },
+  "G2": {
+   "mentions": 16,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "G2",
+    "g2剧情？",
+    "不是g2吗",
+    "G2呢",
+    "不是g2吗"
+   ]
+  },
+  "NAVI": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "navi那个流",
+    "navi那个流"
+   ]
+  },
+  "MOUZ": {
+   "mentions": 33,
+   "pos": 3,
+   "neg": 2,
+   "samples": [
+    "马总为啥显示老鼠菊花都打9z",
+    "老鼠换队服了吗，之前是红色的吧",
+    "老鼠 欧若拉 菊花赢，基本上就鲨鱼",
+    "老鼠 欧若拉 菊花赢，基本上就鲨鱼",
+    "9Z也是惨啊先打小蜜蜂再打老鼠"
+   ]
+  },
+  "Liquid": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "这老鼠到底怎么输的液体？",
+    "昨天被液体打开窍了",
+    "老鼠昨天怎么输给液体的"
+   ]
+  }
+ },
+ "players": {},
+ "odds_discussion": {
+  "count": 0,
+  "samples": []
+ },
+ "situation": {
+  "count": 0,
+  "samples": []
+ },
+ "gray_signals": {
+  "count": 4,
+  "samples": [
+   "赶着到处送分",
+   "千里送分 辛苦了",
+   "送分童子",
+   "赶着到处送分"
+  ]
+ },
+ "density_bursts": [],
+ "narrative": {
+  "consensus": {
+   "pos": 59,
+   "neg": 42,
+   "net": 17,
+   "tone": "正面"
+  },
+  "timeline": [
+   {
+    "start_utc": "14:07",
+    "count": 447,
+    "pos": 28,
+    "neg": 10,
+    "net": 18,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:11",
+    "count": 227,
+    "pos": 18,
+    "neg": 11,
+    "net": 7,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:15",
+    "count": 405,
+    "pos": 13,
+    "neg": 21,
+    "net": -8,
+    "tone": "负面"
+   }
+  ],
+  "turning_points": []
+ },
+ "neutral_salvage": [
+  {
+   "text": "9Z昨天打蜜蜂，今天打老鼠？？？",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "老鼠 欧若拉 菊花赢，基本上就鲨鱼",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "不是g2吗",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "老鼠有个乌鲁鲁怎么打",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "navi那个流",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:10"
+  },
+  {
+   "text": "这g2真废啊",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:09"
+  },
+  {
+   "text": "马总为啥显示老鼠菊花都打9z",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "老鼠换队服了吗，之前是红色的吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "G2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "g2剧情？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "G2呢",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "9Z也是惨啊先打小蜜蜂再打老鼠",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:08"
+  },
+  {
+   "text": "g2和欧若拉哪去了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:09"
+  },
+  {
+   "text": "老鼠吃一把怎么了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:09"
+  },
+  {
+   "text": "天禄打G2两图能拿十分吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:10"
+  },
+  {
+   "text": "直播间写着g2欧若拉比赛呢",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:10"
+  },
+  {
+   "text": "开始了这老鼠",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:10"
+  },
+  {
+   "text": "老鼠这两小伙托子爽透",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:12"
+  },
+  {
+   "text": "不会把老鼠送去打绿龙吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:12"
+  },
+  {
+   "text": "决赛前的老鼠[调皮]",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:12"
+  },
+  {
+   "text": "不看g2嘛",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "被蜜蜂虐完北老鼠虐",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "这和昨天打小蜜蜂是一个队伍吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:13"
+  },
+  {
+   "text": "看G2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "9z打完小蜜蜂打老鼠",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "图二是什么 g2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "g2还要多久",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "这老鼠到底怎么输的液体？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "今天老鼠开窍了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:15"
+  },
+  {
+   "text": "昨天被液体打开窍了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "老鼠杀几个队员吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "老鼠昨天怎么输给液体的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "基本碰不到天禄了，欧若拉 菊花 老鼠赢基本碰不到",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "老鼠是这张图的绝活。",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "g2那边怎么样了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "g2 图二是什么",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "9z昨天和小蜜蜂打的有来有回的，天路用头打",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "9Z打天禄就跟老鼠打他们一样",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "9z打蜜蜂和老鼠那是没办法，打天禄随便赢吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "天禄分分钟灭了老鼠，9Z",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:18"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   44
+  ],
+  [
+   "滴滴答答的芸酥饼",
+   20
+  ],
+  [
+   "副歌之木舟",
+   17
+  ],
+  [
+   "取个昵称真的难啊",
+   14
+  ],
+  [
+   "别忘月光",
+   11
+  ],
+  [
+   "嘿哈god",
+   11
+  ],
+  [
+   "乱斗团",
+   10
+  ],
+  [
+   "琴绝虾仁",
+   10
+  ]
+ ],
+ "win_signal": {
+  "team_a": "MOUZ",
+  "team_b": "9z",
+  "count_a": 0,
+  "count_b": 0,
+  "total": 0,
+  "pct_a": null,
+  "pct_b": null,
+  "sample_status": "insufficient",
+  "samples_a": [],
+  "samples_b": [],
+  "threshold": 10,
+  "basis": "cumulative",
+  "window_seconds": 300
+ }
+}

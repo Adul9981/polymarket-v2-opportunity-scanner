@@ -4,360 +4,9 @@
     "lol",
     "cs2"
   ],
-  "fetched_at_utc": "2026-10-19T13:31:27Z",
-  "fetched_at_cst": "2026-10-19 21:31:27",
+  "fetched_at_utc": "2026-10-25T14:54:01Z",
+  "fetched_at_cst": "2026-10-25 22:54:01",
   "matches": [
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1554942800592896",
-      "match_id": "hupu-lol-1554942800592896",
-      "match_name": "电竞第三赛段组内赛",
-      "tournament": "LPL第三赛段组内赛",
-      "teams": [
-        "LNG",
-        "WBG"
-      ],
-      "scores": [
-        "1",
-        "2"
-      ],
-      "winner_member_id": "41",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-19T07:00:00Z",
-      "start_time_cst": "2026-08-19 15:00:00",
-      "date": "2026-08-19",
-      "live_room_link": "huputiyu://lol/lol/1554942800592896",
-      "score_count_text": "1.6万人评分",
-      "score_item_key": {
-        "out_biz_no": "3817",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "LNG",
-          "member_id": "9"
-        },
-        {
-          "name": "WBG",
-          "member_id": "41"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1538250834886656",
-      "match_id": "hupu-lol-1538250834886656",
-      "match_name": "电竞第三轮-第五轮",
-      "tournament": "LCK联赛第三轮-第五轮",
-      "teams": [
-        "GEN",
-        "KT"
-      ],
-      "scores": [
-        "2",
-        "1"
-      ],
-      "winner_member_id": "137",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-19T08:00:00Z",
-      "start_time_cst": "2026-08-19 16:00:00",
-      "date": "2026-08-19",
-      "live_room_link": "huputiyu://lol/lol/1538250834886656",
-      "score_count_text": "1.4万人评分",
-      "score_item_key": {
-        "out_biz_no": "3818",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "GEN",
-          "member_id": "137"
-        },
-        {
-          "name": "KT",
-          "member_id": "129094430851072"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1554942800265216",
-      "match_id": "hupu-lol-1554942800265216",
-      "match_name": "电竞第三赛段组内赛",
-      "tournament": "LPL第三赛段组内赛",
-      "teams": [
-        "AL",
-        "TES"
-      ],
-      "scores": [
-        "1",
-        "2"
-      ],
-      "winner_member_id": "42",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-19T09:00:00Z",
-      "start_time_cst": "2026-08-19 17:00:00",
-      "date": "2026-08-19",
-      "live_room_link": "huputiyu://lol/lol/1554942800265216",
-      "score_count_text": "8.2万人评分",
-      "score_item_key": {
-        "out_biz_no": "3737",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "AL",
-          "member_id": "422"
-        },
-        {
-          "name": "TES",
-          "member_id": "42"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1554942800429056",
-      "match_id": "hupu-lol-1554942800429056",
-      "match_name": "电竞第三赛段组内赛",
-      "tournament": "LPL第三赛段组内赛",
-      "teams": [
-        "WE",
-        "EDG"
-      ],
-      "scores": [
-        "0",
-        "2"
-      ],
-      "winner_member_id": "1",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-19T11:00:00Z",
-      "start_time_cst": "2026-08-19 19:00:00",
-      "date": "2026-08-19",
-      "live_room_link": "huputiyu://lol/lol/1554942800429056",
-      "score_count_text": "1.7万人评分",
-      "score_item_key": {
-        "out_biz_no": "3738",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "WE",
-          "member_id": "12"
-        },
-        {
-          "name": "EDG",
-          "member_id": "1"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1538250835001344",
-      "match_id": "hupu-lol-1538250835001344",
-      "match_name": "电竞第三轮-第五轮",
-      "tournament": "LCK联赛第三轮-第五轮",
-      "teams": [
-        "BRO",
-        "DNS"
-      ],
-      "scores": [
-        "2",
-        "0"
-      ],
-      "winner_member_id": "263528637906944",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-19T11:15:00Z",
-      "start_time_cst": "2026-08-19 19:15:00",
-      "date": "2026-08-19",
-      "live_room_link": "huputiyu://lol/lol/1538250835001344",
-      "score_count_text": "909人评分",
-      "score_item_key": {
-        "out_biz_no": "3819",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "BRO",
-          "member_id": "263528637906944"
-        },
-        {
-          "name": "DNS",
-          "member_id": "263532974505984"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1538250835116032",
-      "match_id": "hupu-lol-1538250835116032",
-      "match_name": "电竞第三轮-第五轮",
-      "tournament": "LCK联赛第三轮-第五轮",
-      "teams": [
-        "DK",
-        "HLE"
-      ],
-      "scores": [
-        "0",
-        "2"
-      ],
-      "winner_member_id": "100193",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-20T08:00:00Z",
-      "start_time_cst": "2026-08-20 16:00:00",
-      "date": "2026-08-20",
-      "live_room_link": "huputiyu://lol/lol/1538250835116032",
-      "score_count_text": "1.7万人评分",
-      "score_item_key": {
-        "out_biz_no": "3739",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "DK",
-          "member_id": "10112"
-        },
-        {
-          "name": "HLE",
-          "member_id": "100193"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1554942800674816",
-      "match_id": "hupu-lol-1554942800674816",
-      "match_name": "电竞第三赛段组内赛",
-      "tournament": "LPL第三赛段组内赛",
-      "teams": [
-        "TT",
-        "JDG"
-      ],
-      "scores": [
-        "1",
-        "2"
-      ],
-      "winner_member_id": "29",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-20T09:00:00Z",
-      "start_time_cst": "2026-08-20 17:00:00",
-      "date": "2026-08-20",
-      "live_room_link": "huputiyu://lol/lol/1554942800674816",
-      "score_count_text": "1.2万人评分",
-      "score_item_key": {
-        "out_biz_no": "3740",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "TT",
-          "member_id": "438"
-        },
-        {
-          "name": "JDG",
-          "member_id": "29"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1538250835214336",
-      "match_id": "hupu-lol-1538250835214336",
-      "match_name": "电竞第三轮-第五轮",
-      "tournament": "LCK联赛第三轮-第五轮",
-      "teams": [
-        "NS",
-        "KRX"
-      ],
-      "scores": [
-        "2",
-        "0"
-      ],
-      "winner_member_id": "263526303547392",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-20T10:30:00Z",
-      "start_time_cst": "2026-08-20 18:30:00",
-      "date": "2026-08-20",
-      "live_room_link": "huputiyu://lol/lol/1538250835214336",
-      "score_count_text": "1711人评分",
-      "score_item_key": {
-        "out_biz_no": "3741",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "NS",
-          "member_id": "263526303547392"
-        },
-        {
-          "name": "KRX",
-          "member_id": "10119"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "lol",
-      "league": "LoL",
-      "hupu_match_id": "1554942800855040",
-      "match_id": "hupu-lol-1554942800855040",
-      "match_name": "电竞第三赛段组内赛",
-      "tournament": "LPL第三赛段组内赛",
-      "teams": [
-        "LGD",
-        "BLG"
-      ],
-      "scores": [
-        "1",
-        "2"
-      ],
-      "winner_member_id": "57",
-      "status": "completed",
-      "status_label": "已结束",
-      "start_iso": "2026-08-20T11:00:00Z",
-      "start_time_cst": "2026-08-20 19:00:00",
-      "date": "2026-08-20",
-      "live_room_link": "huputiyu://lol/lol/1554942800855040",
-      "score_count_text": "14.8万人评分",
-      "score_item_key": {
-        "out_biz_no": "3820",
-        "out_biz_type": "lol_match"
-      },
-      "member_ids": [
-        {
-          "name": "LGD",
-          "member_id": "4"
-        },
-        {
-          "name": "BLG",
-          "member_id": "57"
-        }
-      ]
-    },
     {
       "source": "hupu",
       "business_id": "lol",
@@ -732,7 +381,7 @@
       "start_time_cst": "2026-08-22 19:20:00",
       "date": "2026-08-22",
       "live_room_link": "huputiyu://lol/lol/1538250835738624",
-      "score_count_text": "1010人评分",
+      "score_count_text": "1011人评分",
       "score_item_key": {
         "out_biz_no": "3827",
         "out_biz_type": "lol_match"
@@ -1083,7 +732,7 @@
       "start_time_cst": "2026-08-28 16:00:00",
       "date": "2026-08-28",
       "live_room_link": "huputiyu://lol/lol/1593163411390464",
-      "score_count_text": "7853人评分",
+      "score_count_text": "7852人评分",
       "score_item_key": {
         "out_biz_no": "3833",
         "out_biz_type": "lol_match"
@@ -1980,7 +1629,7 @@
       "start_time_cst": "2026-09-13 13:30:00",
       "date": "2026-09-13",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564982241",
-      "score_count_text": "1827人评分",
+      "score_count_text": "1829人评分",
       "score_item_key": {
         "out_biz_no": "32421",
         "out_biz_type": "common_sports_first"
@@ -2214,7 +1863,7 @@
       "start_time_cst": "2026-09-29 08:50:00",
       "date": "2026-09-29",
       "live_room_link": "huputiyu://lol/lol/1653724885303296",
-      "score_count_text": "182人评分",
+      "score_count_text": "183人评分",
       "score_item_key": {
         "out_biz_no": "4108",
         "out_biz_type": "lol_match"
@@ -2253,7 +1902,7 @@
       "start_time_cst": "2026-09-29 08:50:00",
       "date": "2026-09-29",
       "live_room_link": "huputiyu://lol/lol/1653724885532672",
-      "score_count_text": "146人评分",
+      "score_count_text": "147人评分",
       "score_item_key": {
         "out_biz_no": "4204",
         "out_biz_type": "lol_match"
@@ -2448,7 +2097,7 @@
       "start_time_cst": "2026-09-30 08:00:00",
       "date": "2026-09-30",
       "live_room_link": "huputiyu://lol/lol/1653724886532096",
-      "score_count_text": "4894人评分",
+      "score_count_text": "4892人评分",
       "score_item_key": {
         "out_biz_no": "4205",
         "out_biz_type": "lol_match"
@@ -2487,7 +2136,7 @@
       "start_time_cst": "2026-09-30 08:00:00",
       "date": "2026-09-30",
       "live_room_link": "huputiyu://lol/lol/1653724886777856",
-      "score_count_text": "171人评分",
+      "score_count_text": "172人评分",
       "score_item_key": {
         "out_biz_no": "4111",
         "out_biz_type": "lol_match"
@@ -2526,7 +2175,7 @@
       "start_time_cst": "2026-09-30 10:30:00",
       "date": "2026-09-30",
       "live_room_link": "huputiyu://lol/lol/1653724886958080",
-      "score_count_text": "343人评分",
+      "score_count_text": "342人评分",
       "score_item_key": {
         "out_biz_no": "4110",
         "out_biz_type": "lol_match"
@@ -2565,7 +2214,7 @@
       "start_time_cst": "2026-09-30 10:30:00",
       "date": "2026-09-30",
       "live_room_link": "huputiyu://lol/lol/1653724887121920",
-      "score_count_text": "2138人评分",
+      "score_count_text": "2140人评分",
       "score_item_key": {
         "out_biz_no": "4206",
         "out_biz_type": "lol_match"
@@ -2643,7 +2292,7 @@
       "start_time_cst": "2026-09-30 13:00:00",
       "date": "2026-09-30",
       "live_room_link": "huputiyu://lol/lol/1653724887482368",
-      "score_count_text": "2695人评分",
+      "score_count_text": "2699人评分",
       "score_item_key": {
         "out_biz_no": "4207",
         "out_biz_type": "lol_match"
@@ -2682,7 +2331,7 @@
       "start_time_cst": "2026-10-01 08:00:00",
       "date": "2026-10-01",
       "live_room_link": "huputiyu://lol/lol/1653724078178304",
-      "score_count_text": "3010人评分",
+      "score_count_text": "3006人评分",
       "score_item_key": {
         "out_biz_no": "4208",
         "out_biz_type": "lol_match"
@@ -2721,7 +2370,7 @@
       "start_time_cst": "2026-10-01 12:30:00",
       "date": "2026-10-01",
       "live_room_link": "huputiyu://lol/lol/1653724078309376",
-      "score_count_text": "3201人评分",
+      "score_count_text": "3202人评分",
       "score_item_key": {
         "out_biz_no": "4209",
         "out_biz_type": "lol_match"
@@ -2799,7 +2448,7 @@
       "start_time_cst": "2026-10-03 16:00:00",
       "date": "2026-10-03",
       "live_room_link": "huputiyu://lol/lol/1664971971297280",
-      "score_count_text": "1832人评分",
+      "score_count_text": "1831人评分",
       "score_item_key": {
         "out_biz_no": "4113",
         "out_biz_type": "lol_match"
@@ -3150,7 +2799,7 @@
       "start_time_cst": "2026-10-05 15:00:00",
       "date": "2026-10-05",
       "live_room_link": "huputiyu://lol/lol/1664971973050368",
-      "score_count_text": "2056人评分",
+      "score_count_text": "2057人评分",
       "score_item_key": {
         "out_biz_no": "4118",
         "out_biz_type": "lol_match"
@@ -3228,7 +2877,7 @@
       "start_time_cst": "2026-10-05 19:00:00",
       "date": "2026-10-05",
       "live_room_link": "huputiyu://lol/lol/1664971973476352",
-      "score_count_text": "7301人评分",
+      "score_count_text": "7300人评分",
       "score_item_key": {
         "out_biz_no": "4120",
         "out_biz_type": "lol_match"
@@ -3423,7 +3072,7 @@
       "start_time_cst": "2026-10-07 17:00:00",
       "date": "2026-10-07",
       "live_room_link": "huputiyu://lol/lol/1664971974459392",
-      "score_count_text": "1050人评分",
+      "score_count_text": "1051人评分",
       "score_item_key": {
         "out_biz_no": "4124",
         "out_biz_type": "lol_match"
@@ -3774,7 +3423,7 @@
       "start_time_cst": "2026-10-15 17:00:00",
       "date": "2026-10-15",
       "live_room_link": "huputiyu://lol/lol/1677567214223360",
-      "score_count_text": "8.8万人评分",
+      "score_count_text": "9.0万人评分",
       "score_item_key": {
         "out_biz_no": "4130",
         "out_biz_type": "lol_match"
@@ -3813,7 +3462,7 @@
       "start_time_cst": "2026-10-16 02:00:00",
       "date": "2026-10-16",
       "live_room_link": "huputiyu://lol/lol/1683760378707968",
-      "score_count_text": "9483人评分",
+      "score_count_text": "9509人评分",
       "score_item_key": {
         "out_biz_no": "4219",
         "out_biz_type": "lol_match"
@@ -3852,7 +3501,7 @@
       "start_time_cst": "2026-10-16 07:00:00",
       "date": "2026-10-16",
       "live_room_link": "huputiyu://lol/lol/1683760379346944",
-      "score_count_text": "5206人评分",
+      "score_count_text": "5230人评分",
       "score_item_key": {
         "out_biz_no": "4131",
         "out_biz_type": "lol_match"
@@ -3891,7 +3540,7 @@
       "start_time_cst": "2026-10-17 02:00:00",
       "date": "2026-10-17",
       "live_room_link": "huputiyu://lol/lol/1683760379789312",
-      "score_count_text": "3856人评分",
+      "score_count_text": "3863人评分",
       "score_item_key": {
         "out_biz_no": "4220",
         "out_biz_type": "lol_match"
@@ -3930,7 +3579,7 @@
       "start_time_cst": "2026-10-17 07:00:00",
       "date": "2026-10-17",
       "live_room_link": "huputiyu://lol/lol/1683760380166144",
-      "score_count_text": "3658人评分",
+      "score_count_text": "3664人评分",
       "score_item_key": {
         "out_biz_no": "4221",
         "out_biz_type": "lol_match"
@@ -4008,7 +3657,7 @@
       "start_time_cst": "2026-10-18 02:00:00",
       "date": "2026-10-18",
       "live_room_link": "huputiyu://lol/lol/1683760380575744",
-      "score_count_text": "3181人评分",
+      "score_count_text": "3264人评分",
       "score_item_key": {
         "out_biz_no": "4501",
         "out_biz_type": "lol_match"
@@ -4047,7 +3696,7 @@
       "start_time_cst": "2026-10-19 02:00:00",
       "date": "2026-10-19",
       "live_room_link": "huputiyu://lol/lol/1683760381001728",
-      "score_count_text": "3575人评分",
+      "score_count_text": "3869人评分",
       "score_item_key": {
         "out_biz_no": "4502",
         "out_biz_type": "lol_match"
@@ -4065,79 +3714,1561 @@
     },
     {
       "source": "hupu",
-      "business_id": "cs2",
-      "league": "CS2",
-      "hupu_match_id": "1441778164564978036",
-      "match_id": "hupu-cs2-1441778164564978036",
-      "match_name": "单淘汰赛",
-      "tournament": "BLAST公开赛单淘汰赛",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138566397952",
+      "match_id": "hupu-lol-1693138566397952",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
       "teams": [
-        "MOUZ",
-        "Vitality"
+        "GEN",
+        "IG"
       ],
       "scores": [
-        "2",
+        "1",
         "0"
       ],
-      "winner_member_id": "1184525984716554240",
+      "winner_member_id": "137",
       "status": "completed",
       "status_label": "已结束",
-      "start_iso": "2026-09-05T16:45:00Z",
-      "start_time_cst": "2026-09-06 00:45:00",
-      "date": "2026-09-06",
-      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564978036",
-      "score_count_text": "6190人评分",
+      "start_iso": "2026-10-23T17:00:00Z",
+      "start_time_cst": "2026-10-24 01:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138566397952",
+      "score_count_text": "15.3万人评分",
       "score_item_key": {
-        "out_biz_no": "31796",
-        "out_biz_type": "common_sports_first"
+        "out_biz_no": "4601",
+        "out_biz_type": "lol_match"
       },
       "member_ids": [
         {
-          "name": "MOUZ",
-          "member_id": "1184525984716554240"
+          "name": "GEN",
+          "member_id": "137"
         },
         {
-          "name": "Vitality",
-          "member_id": "1176666425880739840"
+          "name": "IG",
+          "member_id": "2"
         }
       ]
     },
     {
       "source": "hupu",
-      "business_id": "cs2",
-      "league": "CS2",
-      "hupu_match_id": "1441778164564976597",
-      "match_id": "hupu-cs2-1441778164564976597",
-      "match_name": "单淘汰赛",
-      "tournament": "BLAST公开赛单淘汰赛",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138566610944",
+      "match_id": "hupu-lol-1693138566610944",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
       "teams": [
-        "Spirit",
-        "MOUZ"
+        "HLE",
+        "TES"
       ],
       "scores": [
-        "3",
-        "1"
+        "1",
+        "0"
       ],
-      "winner_member_id": "1203334120843771904",
+      "winner_member_id": "100193",
       "status": "completed",
       "status_label": "已结束",
-      "start_iso": "2026-09-06T14:00:00Z",
-      "start_time_cst": "2026-09-06 22:00:00",
-      "date": "2026-09-06",
-      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564976597",
-      "score_count_text": "5.7万人评分",
+      "start_iso": "2026-10-23T18:00:00Z",
+      "start_time_cst": "2026-10-24 02:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138566610944",
+      "score_count_text": "9.7万人评分",
       "score_item_key": {
-        "out_biz_no": "31822",
-        "out_biz_type": "common_sports_first"
+        "out_biz_no": "4602",
+        "out_biz_type": "lol_match"
       },
       "member_ids": [
         {
-          "name": "Spirit",
-          "member_id": "1203334120843771904"
+          "name": "HLE",
+          "member_id": "100193"
         },
         {
-          "name": "MOUZ",
-          "member_id": "1184525984716554240"
+          "name": "TES",
+          "member_id": "42"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138566807552",
+      "match_id": "hupu-lol-1693138566807552",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "BLG",
+        "KOI"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "1017990330368000",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-23T19:00:00Z",
+      "start_time_cst": "2026-10-24 03:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138566807552",
+      "score_count_text": "12.0万人评分",
+      "score_item_key": {
+        "out_biz_no": "4503",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "BLG",
+          "member_id": "57"
+        },
+        {
+          "name": "KOI",
+          "member_id": "1017990330368000"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138566987776",
+      "match_id": "hupu-lol-1693138566987776",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "AL",
+        "KC"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "853996080463872",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-23T20:00:00Z",
+      "start_time_cst": "2026-10-24 04:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138566987776",
+      "score_count_text": "4.3万人评分",
+      "score_item_key": {
+        "out_biz_no": "4603",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "AL",
+          "member_id": "422"
+        },
+        {
+          "name": "KC",
+          "member_id": "853996080463872"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138567184384",
+      "match_id": "hupu-lol-1693138567184384",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "G2",
+        "DK"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "10112",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-23T21:00:00Z",
+      "start_time_cst": "2026-10-24 05:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138567184384",
+      "score_count_text": "1.1万人评分",
+      "score_item_key": {
+        "out_biz_no": "4504",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "G2",
+          "member_id": "16300"
+        },
+        {
+          "name": "DK",
+          "member_id": "10112"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138567397376",
+      "match_id": "hupu-lol-1693138567397376",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "TL",
+        "CFO"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "194097831",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-23T22:00:00Z",
+      "start_time_cst": "2026-10-24 06:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138567397376",
+      "score_count_text": "4430人评分",
+      "score_item_key": {
+        "out_biz_no": "4505",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "TL",
+          "member_id": "5300"
+        },
+        {
+          "name": "CFO",
+          "member_id": "194097831"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138567593984",
+      "match_id": "hupu-lol-1693138567593984",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "LOS",
+        "T1"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "10064",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-23T23:00:00Z",
+      "start_time_cst": "2026-10-24 07:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138567593984",
+      "score_count_text": "1.9万人评分",
+      "score_item_key": {
+        "out_biz_no": "4506",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "LOS",
+          "member_id": "1693079574265856"
+        },
+        {
+          "name": "T1",
+          "member_id": "10064"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138567790592",
+      "match_id": "hupu-lol-1693138567790592",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "TSW",
+        "LYON"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "1693079573970944",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T00:00:00Z",
+      "start_time_cst": "2026-10-24 08:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://lol/lol/1693138567790592",
+      "score_count_text": "2814人评分",
+      "score_item_key": {
+        "out_biz_no": "4507",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "TSW",
+          "member_id": "1693079574134784"
+        },
+        {
+          "name": "LYON",
+          "member_id": "1693079573970944"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138568019968",
+      "match_id": "hupu-lol-1693138568019968",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "TES",
+        "AL"
+      ],
+      "scores": [
+        "1",
+        "0"
+      ],
+      "winner_member_id": "42",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T17:00:00Z",
+      "start_time_cst": "2026-10-25 01:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138568019968",
+      "score_count_text": "13.4万人评分",
+      "score_item_key": {
+        "out_biz_no": "4604",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "TES",
+          "member_id": "42"
+        },
+        {
+          "name": "AL",
+          "member_id": "422"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138568183808",
+      "match_id": "hupu-lol-1693138568183808",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "KOI",
+        "CFO"
+      ],
+      "scores": [
+        "1",
+        "0"
+      ],
+      "winner_member_id": "1017990330368000",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T18:00:00Z",
+      "start_time_cst": "2026-10-25 02:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138568183808",
+      "score_count_text": "5941人评分",
+      "score_item_key": {
+        "out_biz_no": "4508",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "KOI",
+          "member_id": "1017990330368000"
+        },
+        {
+          "name": "CFO",
+          "member_id": "194097831"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138568364032",
+      "match_id": "hupu-lol-1693138568364032",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "LOS",
+        "G2"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "16300",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T19:00:00Z",
+      "start_time_cst": "2026-10-25 03:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138568364032",
+      "score_count_text": "5556人评分",
+      "score_item_key": {
+        "out_biz_no": "4605",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "LOS",
+          "member_id": "1693079574265856"
+        },
+        {
+          "name": "G2",
+          "member_id": "16300"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138568577024",
+      "match_id": "hupu-lol-1693138568577024",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "KC",
+        "LYON"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "1693079573970944",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T20:00:00Z",
+      "start_time_cst": "2026-10-25 04:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138568577024",
+      "score_count_text": "5828人评分",
+      "score_item_key": {
+        "out_biz_no": "4509",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "KC",
+          "member_id": "853996080463872"
+        },
+        {
+          "name": "LYON",
+          "member_id": "1693079573970944"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138568790016",
+      "match_id": "hupu-lol-1693138568790016",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "TSW",
+        "IG"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "2",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T21:00:00Z",
+      "start_time_cst": "2026-10-25 05:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138568790016",
+      "score_count_text": "6.6万人评分",
+      "score_item_key": {
+        "out_biz_no": "4606",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "TSW",
+          "member_id": "1693079574134784"
+        },
+        {
+          "name": "IG",
+          "member_id": "2"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138569019392",
+      "match_id": "hupu-lol-1693138569019392",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "HLE",
+        "GEN"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "137",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T22:00:00Z",
+      "start_time_cst": "2026-10-25 06:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138569019392",
+      "score_count_text": "2.9万人评分",
+      "score_item_key": {
+        "out_biz_no": "4510",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "HLE",
+          "member_id": "100193"
+        },
+        {
+          "name": "GEN",
+          "member_id": "137"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138569248768",
+      "match_id": "hupu-lol-1693138569248768",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "DK",
+        "T1"
+      ],
+      "scores": [
+        "1",
+        "0"
+      ],
+      "winner_member_id": "10112",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T23:00:00Z",
+      "start_time_cst": "2026-10-25 07:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138569248768",
+      "score_count_text": "4.3万人评分",
+      "score_item_key": {
+        "out_biz_no": "4511",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "DK",
+          "member_id": "10112"
+        },
+        {
+          "name": "T1",
+          "member_id": "10064"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138569461760",
+      "match_id": "hupu-lol-1693138569461760",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "TL",
+        "BLG"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "57",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-25T00:00:00Z",
+      "start_time_cst": "2026-10-25 08:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://lol/lol/1693138569461760",
+      "score_count_text": "6.3万人评分",
+      "score_item_key": {
+        "out_biz_no": "4512",
+        "out_biz_type": "lol_match"
+      },
+      "member_ids": [
+        {
+          "name": "TL",
+          "member_id": "5300"
+        },
+        {
+          "name": "BLG",
+          "member_id": "57"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138569641984",
+      "match_id": "hupu-lol-1693138569641984",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "HLE",
+        "IG"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-25T17:00:00Z",
+      "start_time_cst": "2026-10-26 01:00:00",
+      "date": "2026-10-26",
+      "live_room_link": "huputiyu://lol/lol/1693138569641984",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "HLE",
+          "member_id": "100193"
+        },
+        {
+          "name": "IG",
+          "member_id": "2"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138569887744",
+      "match_id": "hupu-lol-1693138569887744",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "G2",
+        "TES"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-25T18:00:00Z",
+      "start_time_cst": "2026-10-26 02:00:00",
+      "date": "2026-10-26",
+      "live_room_link": "huputiyu://lol/lol/1693138569887744",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "G2",
+          "member_id": "16300"
+        },
+        {
+          "name": "TES",
+          "member_id": "42"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138570117120",
+      "match_id": "hupu-lol-1693138570117120",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "KOI",
+        "DK"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-25T19:00:00Z",
+      "start_time_cst": "2026-10-26 03:00:00",
+      "date": "2026-10-26",
+      "live_room_link": "huputiyu://lol/lol/1693138570117120",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "KOI",
+          "member_id": "1017990330368000"
+        },
+        {
+          "name": "DK",
+          "member_id": "10112"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138570330112",
+      "match_id": "hupu-lol-1693138570330112",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "GEN",
+        "LYON"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-25T22:00:00Z",
+      "start_time_cst": "2026-10-26 06:00:00",
+      "date": "2026-10-26",
+      "live_room_link": "huputiyu://lol/lol/1693138570330112",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "GEN",
+          "member_id": "137"
+        },
+        {
+          "name": "LYON",
+          "member_id": "1693079573970944"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138570510336",
+      "match_id": "hupu-lol-1693138570510336",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "CFO",
+        "T1"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-26T17:00:00Z",
+      "start_time_cst": "2026-10-27 01:00:00",
+      "date": "2026-10-27",
+      "live_room_link": "huputiyu://lol/lol/1693138570510336",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "CFO",
+          "member_id": "194097831"
+        },
+        {
+          "name": "T1",
+          "member_id": "10064"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138570756096",
+      "match_id": "hupu-lol-1693138570756096",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "BLG",
+        "KC"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-26T18:00:00Z",
+      "start_time_cst": "2026-10-27 02:00:00",
+      "date": "2026-10-27",
+      "live_room_link": "huputiyu://lol/lol/1693138570756096",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "BLG",
+          "member_id": "57"
+        },
+        {
+          "name": "KC",
+          "member_id": "853996080463872"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138570919936",
+      "match_id": "hupu-lol-1693138570919936",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "LOS",
+        "TSW"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-26T19:00:00Z",
+      "start_time_cst": "2026-10-27 03:00:00",
+      "date": "2026-10-27",
+      "live_room_link": "huputiyu://lol/lol/1693138570919936",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "LOS",
+          "member_id": "1693079574265856"
+        },
+        {
+          "name": "TSW",
+          "member_id": "1693079574134784"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138571083776",
+      "match_id": "hupu-lol-1693138571083776",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "TL",
+        "AL"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-26T22:00:00Z",
+      "start_time_cst": "2026-10-27 06:00:00",
+      "date": "2026-10-27",
+      "live_room_link": "huputiyu://lol/lol/1693138571083776",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "TL",
+          "member_id": "5300"
+        },
+        {
+          "name": "AL",
+          "member_id": "422"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138571264000",
+      "match_id": "hupu-lol-1693138571264000",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-28T20:00:00Z",
+      "start_time_cst": "2026-10-29 04:00:00",
+      "date": "2026-10-29",
+      "live_room_link": "huputiyu://lol/lol/1693138571264000",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138571427840",
+      "match_id": "hupu-lol-1693138571427840",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-28T23:00:00Z",
+      "start_time_cst": "2026-10-29 07:00:00",
+      "date": "2026-10-29",
+      "live_room_link": "huputiyu://lol/lol/1693138571427840",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138571575296",
+      "match_id": "hupu-lol-1693138571575296",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-29T20:00:00Z",
+      "start_time_cst": "2026-10-30 04:00:00",
+      "date": "2026-10-30",
+      "live_room_link": "huputiyu://lol/lol/1693138571575296",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138571755520",
+      "match_id": "hupu-lol-1693138571755520",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-29T23:00:00Z",
+      "start_time_cst": "2026-10-30 07:00:00",
+      "date": "2026-10-30",
+      "live_room_link": "huputiyu://lol/lol/1693138571755520",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138571919360",
+      "match_id": "hupu-lol-1693138571919360",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-30T20:00:00Z",
+      "start_time_cst": "2026-10-31 04:00:00",
+      "date": "2026-10-31",
+      "live_room_link": "huputiyu://lol/lol/1693138571919360",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138572066816",
+      "match_id": "hupu-lol-1693138572066816",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-30T23:00:00Z",
+      "start_time_cst": "2026-10-31 07:00:00",
+      "date": "2026-10-31",
+      "live_room_link": "huputiyu://lol/lol/1693138572066816",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138572214272",
+      "match_id": "hupu-lol-1693138572214272",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-31T17:00:00Z",
+      "start_time_cst": "2026-11-01 01:00:00",
+      "date": "2026-11-01",
+      "live_room_link": "huputiyu://lol/lol/1693138572214272",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138572345344",
+      "match_id": "hupu-lol-1693138572345344",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-31T20:00:00Z",
+      "start_time_cst": "2026-11-01 04:00:00",
+      "date": "2026-11-01",
+      "live_room_link": "huputiyu://lol/lol/1693138572345344",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693138572492800",
+      "match_id": "hupu-lol-1693138572492800",
+      "match_name": "电竞瑞士轮",
+      "tournament": "全球总决赛瑞士轮",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-10-31T23:00:00Z",
+      "start_time_cst": "2026-11-01 07:00:00",
+      "date": "2026-11-01",
+      "live_room_link": "huputiyu://lol/lol/1693138572492800",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669411127296",
+      "match_id": "hupu-lol-1693669411127296",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-03T22:00:00Z",
+      "start_time_cst": "2026-11-04 06:00:00",
+      "date": "2026-11-04",
+      "live_room_link": "huputiyu://lol/lol/1693669411127296",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669411307520",
+      "match_id": "hupu-lol-1693669411307520",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-04T22:00:00Z",
+      "start_time_cst": "2026-11-05 06:00:00",
+      "date": "2026-11-05",
+      "live_room_link": "huputiyu://lol/lol/1693669411307520",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669411487744",
+      "match_id": "hupu-lol-1693669411487744",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-05T22:00:00Z",
+      "start_time_cst": "2026-11-06 06:00:00",
+      "date": "2026-11-06",
+      "live_room_link": "huputiyu://lol/lol/1693669411487744",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669411635200",
+      "match_id": "hupu-lol-1693669411635200",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-06T22:00:00Z",
+      "start_time_cst": "2026-11-07 06:00:00",
+      "date": "2026-11-07",
+      "live_room_link": "huputiyu://lol/lol/1693669411635200",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669411815424",
+      "match_id": "hupu-lol-1693669411815424",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-07T22:00:00Z",
+      "start_time_cst": "2026-11-08 06:00:00",
+      "date": "2026-11-08",
+      "live_room_link": "huputiyu://lol/lol/1693669411815424",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669411962880",
+      "match_id": "hupu-lol-1693669411962880",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-08T22:00:00Z",
+      "start_time_cst": "2026-11-09 06:00:00",
+      "date": "2026-11-09",
+      "live_room_link": "huputiyu://lol/lol/1693669411962880",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "lol",
+      "league": "LoL",
+      "hupu_match_id": "1693669412110336",
+      "match_id": "hupu-lol-1693669412110336",
+      "match_name": "电竞淘汰赛",
+      "tournament": "全球总决赛淘汰赛",
+      "teams": [
+        "待定",
+        "待定"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-14T19:00:00Z",
+      "start_time_cst": "2026-11-15 03:00:00",
+      "date": "2026-11-15",
+      "live_room_link": "huputiyu://lol/lol/1693669412110336",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
+        },
+        {
+          "name": "待定",
+          "member_id": "1211960280956928"
         }
       ]
     },
@@ -4359,7 +5490,7 @@
       "start_time_cst": "2026-09-08 18:55:00",
       "date": "2026-09-08",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564978674",
-      "score_count_text": "2779人评分",
+      "score_count_text": "2781人评分",
       "score_item_key": {
         "out_biz_no": "31965",
         "out_biz_type": "common_sports_first"
@@ -4476,7 +5607,7 @@
       "start_time_cst": "2026-09-09 11:00:00",
       "date": "2026-09-09",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564978846",
-      "score_count_text": "1388人评分",
+      "score_count_text": "1393人评分",
       "score_item_key": {
         "out_biz_no": "31979",
         "out_biz_type": "common_sports_first"
@@ -4671,7 +5802,7 @@
       "start_time_cst": "2026-09-09 18:10:00",
       "date": "2026-09-09",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564978868",
-      "score_count_text": "2446人评分",
+      "score_count_text": "2447人评分",
       "score_item_key": {
         "out_biz_no": "31874",
         "out_biz_type": "common_sports_first"
@@ -4788,7 +5919,7 @@
       "start_time_cst": "2026-09-10 11:15:00",
       "date": "2026-09-10",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564981009",
-      "score_count_text": "2785人评分",
+      "score_count_text": "2787人评分",
       "score_item_key": {
         "out_biz_no": "32314",
         "out_biz_type": "common_sports_first"
@@ -5139,7 +6270,7 @@
       "start_time_cst": "2026-09-11 17:15:00",
       "date": "2026-09-11",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564981251",
-      "score_count_text": "2212人评分",
+      "score_count_text": "2214人评分",
       "score_item_key": {
         "out_biz_no": "32251",
         "out_biz_type": "common_sports_first"
@@ -5217,7 +6348,7 @@
       "start_time_cst": "2026-09-12 19:05:00",
       "date": "2026-09-12",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564981549",
-      "score_count_text": "613人评分",
+      "score_count_text": "614人评分",
       "score_item_key": {
         "out_biz_no": "32382",
         "out_biz_type": "common_sports_first"
@@ -5256,7 +6387,7 @@
       "start_time_cst": "2026-09-13 17:10:00",
       "date": "2026-09-13",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564982117",
-      "score_count_text": "1814人评分",
+      "score_count_text": "1815人评分",
       "score_item_key": {
         "out_biz_no": "32513",
         "out_biz_type": "common_sports_first"
@@ -5451,7 +6582,7 @@
       "start_time_cst": "2026-09-18 18:00:00",
       "date": "2026-09-18",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564983877",
-      "score_count_text": "986人评分",
+      "score_count_text": "987人评分",
       "score_item_key": {
         "out_biz_no": "32602",
         "out_biz_type": "common_sports_first"
@@ -5685,7 +6816,7 @@
       "start_time_cst": "2026-09-19 23:25:00",
       "date": "2026-09-19",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564984097",
-      "score_count_text": "2363人评分",
+      "score_count_text": "2364人评分",
       "score_item_key": {
         "out_biz_no": "32594",
         "out_biz_type": "common_sports_first"
@@ -5802,7 +6933,7 @@
       "start_time_cst": "2026-09-20 23:00:00",
       "date": "2026-09-20",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564984800",
-      "score_count_text": "2769人评分",
+      "score_count_text": "2771人评分",
       "score_item_key": {
         "out_biz_no": "32679",
         "out_biz_type": "common_sports_first"
@@ -5919,7 +7050,7 @@
       "start_time_cst": "2026-10-03 19:30:00",
       "date": "2026-10-03",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564986536",
-      "score_count_text": "1596人评分",
+      "score_count_text": "1595人评分",
       "score_item_key": {
         "out_biz_no": "33888",
         "out_biz_type": "common_sports_first"
@@ -5958,7 +7089,7 @@
       "start_time_cst": "2026-10-03 20:05:00",
       "date": "2026-10-03",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564986429",
-      "score_count_text": "9254人评分",
+      "score_count_text": "9253人评分",
       "score_item_key": {
         "out_biz_no": "33892",
         "out_biz_type": "common_sports_first"
@@ -6075,7 +7206,7 @@
       "start_time_cst": "2026-10-04 00:30:00",
       "date": "2026-10-04",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564986540",
-      "score_count_text": "750人评分",
+      "score_count_text": "749人评分",
       "score_item_key": {
         "out_biz_no": "34001",
         "out_biz_type": "common_sports_first"
@@ -6114,7 +7245,7 @@
       "start_time_cst": "2026-10-04 01:25:00",
       "date": "2026-10-04",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564986541",
-      "score_count_text": "399人评分",
+      "score_count_text": "398人评分",
       "score_item_key": {
         "out_biz_no": "33931",
         "out_biz_type": "common_sports_first"
@@ -6270,7 +7401,7 @@
       "start_time_cst": "2026-10-04 20:20:00",
       "date": "2026-10-04",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987070",
-      "score_count_text": "4462人评分",
+      "score_count_text": "4461人评分",
       "score_item_key": {
         "out_biz_no": "34039",
         "out_biz_type": "common_sports_first"
@@ -6309,7 +7440,7 @@
       "start_time_cst": "2026-10-04 22:00:00",
       "date": "2026-10-04",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987072",
-      "score_count_text": "708人评分",
+      "score_count_text": "706人评分",
       "score_item_key": {
         "out_biz_no": "34046",
         "out_biz_type": "common_sports_first"
@@ -6348,7 +7479,7 @@
       "start_time_cst": "2026-10-04 22:25:00",
       "date": "2026-10-04",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987071",
-      "score_count_text": "845人评分",
+      "score_count_text": "844人评分",
       "score_item_key": {
         "out_biz_no": "34048",
         "out_biz_type": "common_sports_first"
@@ -6465,7 +7596,7 @@
       "start_time_cst": "2026-10-05 17:00:00",
       "date": "2026-10-05",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987499",
-      "score_count_text": "565人评分",
+      "score_count_text": "566人评分",
       "score_item_key": {
         "out_biz_no": "34079",
         "out_biz_type": "common_sports_first"
@@ -6621,7 +7752,7 @@
       "start_time_cst": "2026-10-05 22:00:00",
       "date": "2026-10-05",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987604",
-      "score_count_text": "4458人评分",
+      "score_count_text": "4478人评分",
       "score_item_key": {
         "out_biz_no": "34123",
         "out_biz_type": "common_sports_first"
@@ -6699,7 +7830,7 @@
       "start_time_cst": "2026-10-06 00:30:00",
       "date": "2026-10-06",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987605",
-      "score_count_text": "7946人评分",
+      "score_count_text": "7945人评分",
       "score_item_key": {
         "out_biz_no": "34126",
         "out_biz_type": "common_sports_first"
@@ -6816,7 +7947,7 @@
       "start_time_cst": "2026-10-06 20:00:00",
       "date": "2026-10-06",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987923",
-      "score_count_text": "7024人评分",
+      "score_count_text": "7028人评分",
       "score_item_key": {
         "out_biz_no": "34227",
         "out_biz_type": "common_sports_first"
@@ -6972,7 +8103,7 @@
       "start_time_cst": "2026-10-07 03:00:00",
       "date": "2026-10-07",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564987926",
-      "score_count_text": "4520人评分",
+      "score_count_text": "4522人评分",
       "score_item_key": {
         "out_biz_no": "34159",
         "out_biz_type": "common_sports_first"
@@ -7050,7 +8181,7 @@
       "start_time_cst": "2026-10-07 22:30:00",
       "date": "2026-10-07",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564988365",
-      "score_count_text": "1418人评分",
+      "score_count_text": "1419人评分",
       "score_item_key": {
         "out_biz_no": "34194",
         "out_biz_type": "common_sports_first"
@@ -7089,7 +8220,7 @@
       "start_time_cst": "2026-10-08 02:05:00",
       "date": "2026-10-08",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564988366",
-      "score_count_text": "3930人评分",
+      "score_count_text": "3928人评分",
       "score_item_key": {
         "out_biz_no": "34197",
         "out_biz_type": "common_sports_first"
@@ -7128,7 +8259,7 @@
       "start_time_cst": "2026-10-09 16:30:00",
       "date": "2026-10-09",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564988856",
-      "score_count_text": "591人评分",
+      "score_count_text": "590人评分",
       "score_item_key": {
         "out_biz_no": "34341",
         "out_biz_type": "common_sports_first"
@@ -7167,7 +8298,7 @@
       "start_time_cst": "2026-10-09 19:25:00",
       "date": "2026-10-09",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564988857",
-      "score_count_text": "3168人评分",
+      "score_count_text": "3174人评分",
       "score_item_key": {
         "out_biz_no": "34425",
         "out_biz_type": "common_sports_first"
@@ -7362,7 +8493,7 @@
       "start_time_cst": "2026-10-11 19:30:00",
       "date": "2026-10-11",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564989262",
-      "score_count_text": "5371人评分",
+      "score_count_text": "5393人评分",
       "score_item_key": {
         "out_biz_no": "34512",
         "out_biz_type": "common_sports_first"
@@ -7479,7 +8610,7 @@
       "start_time_cst": "2026-10-14 20:20:00",
       "date": "2026-10-14",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564989199",
-      "score_count_text": "3931人评分",
+      "score_count_text": "3945人评分",
       "score_item_key": {
         "out_biz_no": "34643",
         "out_biz_type": "common_sports_first"
@@ -7635,7 +8766,7 @@
       "start_time_cst": "2026-10-15 19:30:00",
       "date": "2026-10-15",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564990989",
-      "score_count_text": "3180人评分",
+      "score_count_text": "3188人评分",
       "score_item_key": {
         "out_biz_no": "34563",
         "out_biz_type": "common_sports_first"
@@ -7674,7 +8805,7 @@
       "start_time_cst": "2026-10-15 23:10:00",
       "date": "2026-10-15",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564990879",
-      "score_count_text": "265人评分",
+      "score_count_text": "270人评分",
       "score_item_key": {
         "out_biz_no": "34564",
         "out_biz_type": "common_sports_first"
@@ -7713,7 +8844,7 @@
       "start_time_cst": "2026-10-16 02:50:00",
       "date": "2026-10-16",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564990880",
-      "score_count_text": "199人评分",
+      "score_count_text": "203人评分",
       "score_item_key": {
         "out_biz_no": "34658",
         "out_biz_type": "common_sports_first"
@@ -7752,7 +8883,7 @@
       "start_time_cst": "2026-10-16 22:00:00",
       "date": "2026-10-16",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991326",
-      "score_count_text": "383人评分",
+      "score_count_text": "385人评分",
       "score_item_key": {
         "out_biz_no": "34668",
         "out_biz_type": "common_sports_first"
@@ -7791,7 +8922,7 @@
       "start_time_cst": "2026-10-17 01:00:00",
       "date": "2026-10-17",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991629",
-      "score_count_text": "206人评分",
+      "score_count_text": "217人评分",
       "score_item_key": {
         "out_biz_no": "34579",
         "out_biz_type": "common_sports_first"
@@ -7830,7 +8961,7 @@
       "start_time_cst": "2026-10-17 22:00:00",
       "date": "2026-10-17",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991750",
-      "score_count_text": "547人评分",
+      "score_count_text": "548人评分",
       "score_item_key": {
         "out_biz_no": "34696",
         "out_biz_type": "common_sports_first"
@@ -7869,7 +9000,7 @@
       "start_time_cst": "2026-10-18 01:00:00",
       "date": "2026-10-18",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991886",
-      "score_count_text": "4915人评分",
+      "score_count_text": "4987人评分",
       "score_item_key": {
         "out_biz_no": "35001",
         "out_biz_type": "common_sports_first"
@@ -7908,7 +9039,7 @@
       "start_time_cst": "2026-10-18 19:30:00",
       "date": "2026-10-18",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564992822",
-      "score_count_text": "5858人评分",
+      "score_count_text": "6287人评分",
       "score_item_key": {
         "out_biz_no": "35213",
         "out_biz_type": "common_sports_first"
@@ -7947,7 +9078,7 @@
       "start_time_cst": "2026-10-18 23:55:00",
       "date": "2026-10-18",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564992821",
-      "score_count_text": "1261人评分",
+      "score_count_text": "1425人评分",
       "score_item_key": {
         "out_biz_no": "35118",
         "out_biz_type": "common_sports_first"
@@ -7967,6 +9098,123 @@
       "source": "hupu",
       "business_id": "cs2",
       "league": "CS2",
+      "hupu_match_id": "1441778164564994027",
+      "match_id": "hupu-cs2-1441778164564994027",
+      "match_name": "双淘汰赛",
+      "tournament": "德古拉杯 S7双淘汰赛",
+      "teams": [
+        "FaZe",
+        "BC.Game"
+      ],
+      "scores": [
+        "0",
+        "2"
+      ],
+      "winner_member_id": "1441778164564633588",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-22T13:00:00Z",
+      "start_time_cst": "2026-10-22 21:00:00",
+      "date": "2026-10-22",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994027",
+      "score_count_text": "1038人评分",
+      "score_item_key": {
+        "out_biz_no": "35680",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "FaZe",
+          "member_id": "1176665751243718656"
+        },
+        {
+          "name": "BC.Game",
+          "member_id": "1441778164564633588"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994253",
+      "match_id": "hupu-cs2-1441778164564994253",
+      "match_name": "双淘汰赛",
+      "tournament": "德古拉杯 S7双淘汰赛",
+      "teams": [
+        "BC.Game",
+        "JiJieHao"
+      ],
+      "scores": [
+        "0",
+        "2"
+      ],
+      "winner_member_id": "1262094360992808960",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-22T16:55:00Z",
+      "start_time_cst": "2026-10-23 00:55:00",
+      "date": "2026-10-23",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994253",
+      "score_count_text": "262人评分",
+      "score_item_key": {
+        "out_biz_no": "35683",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "BC.Game",
+          "member_id": "1441778164564633588"
+        },
+        {
+          "name": "JiJieHao",
+          "member_id": "1262094360992808960"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994373",
+      "match_id": "hupu-cs2-1441778164564994373",
+      "match_name": "双淘汰赛",
+      "tournament": "德古拉杯 S7双淘汰赛",
+      "teams": [
+        "SINNERS",
+        "Eternal Fire"
+      ],
+      "scores": [
+        "1",
+        "2"
+      ],
+      "winner_member_id": "1218345476550557696",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-23T18:55:00Z",
+      "start_time_cst": "2026-10-24 02:55:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994373",
+      "score_count_text": "57人评分",
+      "score_item_key": {
+        "out_biz_no": "36132",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "SINNERS",
+          "member_id": "1441778164564632348"
+        },
+        {
+          "name": "Eternal Fire",
+          "member_id": "1218345476550557696"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
       "hupu_match_id": "1441778164564991672",
       "match_id": "hupu-cs2-1441778164564991672",
       "match_name": "小组赛",
@@ -7976,20 +9224,20 @@
         "The MongolZ"
       ],
       "scores": [
-        "-",
-        "-"
+        "1",
+        "2"
       ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
+      "winner_member_id": "1218345618087346176",
+      "status": "completed",
+      "status_label": "已结束",
       "start_iso": "2026-10-24T07:00:00Z",
       "start_time_cst": "2026-10-24 15:00:00",
       "date": "2026-10-24",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991672",
-      "score_count_text": "",
+      "score_count_text": "332人评分",
       "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
+        "out_biz_no": "36077",
+        "out_biz_type": "common_sports_first"
       },
       "member_ids": [
         {
@@ -8015,20 +9263,20 @@
         "TYLOO"
       ],
       "scores": [
-        "-",
-        "-"
+        "2",
+        "0"
       ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
+      "winner_member_id": "1441778164564854072",
+      "status": "completed",
+      "status_label": "已结束",
       "start_iso": "2026-10-24T07:00:00Z",
       "start_time_cst": "2026-10-24 15:00:00",
       "date": "2026-10-24",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991673",
-      "score_count_text": "",
+      "score_count_text": "4804人评分",
       "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
+        "out_biz_no": "36156",
+        "out_biz_type": "common_sports_first"
       },
       "member_ids": [
         {
@@ -8045,45 +9293,6 @@
       "source": "hupu",
       "business_id": "cs2",
       "league": "CS2",
-      "hupu_match_id": "1441778164564991674",
-      "match_id": "hupu-cs2-1441778164564991674",
-      "match_name": "小组赛",
-      "tournament": "PGL大师赛 布加勒斯特",
-      "teams": [
-        "Spirit",
-        "BETBOOM"
-      ],
-      "scores": [
-        "-",
-        "-"
-      ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
-      "start_iso": "2026-10-24T10:00:00Z",
-      "start_time_cst": "2026-10-24 18:00:00",
-      "date": "2026-10-24",
-      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991674",
-      "score_count_text": "",
-      "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
-      },
-      "member_ids": [
-        {
-          "name": "Spirit",
-          "member_id": "1203334120843771904"
-        },
-        {
-          "name": "BETBOOM",
-          "member_id": "1331374056917696512"
-        }
-      ]
-    },
-    {
-      "source": "hupu",
-      "business_id": "cs2",
-      "league": "CS2",
       "hupu_match_id": "1441778164564991675",
       "match_id": "hupu-cs2-1441778164564991675",
       "match_name": "小组赛",
@@ -8093,20 +9302,20 @@
         "Liquid"
       ],
       "scores": [
-        "-",
-        "-"
+        "1",
+        "2"
       ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
-      "start_iso": "2026-10-24T10:00:00Z",
-      "start_time_cst": "2026-10-24 18:00:00",
+      "winner_member_id": "1224410130250989568",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T09:15:00Z",
+      "start_time_cst": "2026-10-24 17:15:00",
       "date": "2026-10-24",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991675",
-      "score_count_text": "",
+      "score_count_text": "574人评分",
       "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
+        "out_biz_no": "36086",
+        "out_biz_type": "common_sports_first"
       },
       "member_ids": [
         {
@@ -8123,38 +9332,38 @@
       "source": "hupu",
       "business_id": "cs2",
       "league": "CS2",
-      "hupu_match_id": "1441778164564991676",
-      "match_id": "hupu-cs2-1441778164564991676",
+      "hupu_match_id": "1441778164564991674",
+      "match_id": "hupu-cs2-1441778164564991674",
       "match_name": "小组赛",
       "tournament": "PGL大师赛 布加勒斯特",
       "teams": [
-        "Vitality",
-        "9z"
+        "Spirit",
+        "BETBOOM"
       ],
       "scores": [
-        "-",
-        "-"
+        "1",
+        "2"
       ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
-      "start_iso": "2026-10-24T13:00:00Z",
-      "start_time_cst": "2026-10-24 21:00:00",
+      "winner_member_id": "1331374056917696512",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T10:35:00Z",
+      "start_time_cst": "2026-10-24 18:35:00",
       "date": "2026-10-24",
-      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991676",
-      "score_count_text": "",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991674",
+      "score_count_text": "7273人评分",
       "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
+        "out_biz_no": "36090",
+        "out_biz_type": "common_sports_first"
       },
       "member_ids": [
         {
-          "name": "Vitality",
-          "member_id": "1176666425880739840"
+          "name": "Spirit",
+          "member_id": "1203334120843771904"
         },
         {
-          "name": "9z",
-          "member_id": "1441778164564921581"
+          "name": "BETBOOM",
+          "member_id": "1331374056917696512"
         }
       ]
     },
@@ -8171,20 +9380,20 @@
         "Nemiga"
       ],
       "scores": [
-        "-",
-        "-"
+        "0",
+        "2"
       ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
-      "start_iso": "2026-10-24T13:00:00Z",
-      "start_time_cst": "2026-10-24 21:00:00",
+      "winner_member_id": "1226973700444651520",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T12:50:00Z",
+      "start_time_cst": "2026-10-24 20:50:00",
       "date": "2026-10-24",
       "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991677",
-      "score_count_text": "",
+      "score_count_text": "180人评分",
       "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
+        "out_biz_no": "36100",
+        "out_biz_type": "common_sports_first"
       },
       "member_ids": [
         {
@@ -8201,38 +9410,38 @@
       "source": "hupu",
       "business_id": "cs2",
       "league": "CS2",
-      "hupu_match_id": "1441778164564991678",
-      "match_id": "hupu-cs2-1441778164564991678",
+      "hupu_match_id": "1441778164564991676",
+      "match_id": "hupu-cs2-1441778164564991676",
       "match_name": "小组赛",
       "tournament": "PGL大师赛 布加勒斯特",
       "teams": [
-        "G2",
-        "NaVi"
+        "Vitality",
+        "9z"
       ],
       "scores": [
-        "-",
-        "-"
+        "2",
+        "0"
       ],
-      "winner_member_id": "",
-      "status": "notStarted",
-      "status_label": "未开始",
-      "start_iso": "2026-10-24T16:00:00Z",
-      "start_time_cst": "2026-10-25 00:00:00",
-      "date": "2026-10-25",
-      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991678",
-      "score_count_text": "",
+      "winner_member_id": "1176666425880739840",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T14:00:00Z",
+      "start_time_cst": "2026-10-24 22:00:00",
+      "date": "2026-10-24",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991676",
+      "score_count_text": "1358人评分",
       "score_item_key": {
-        "out_biz_no": "",
-        "out_biz_type": ""
+        "out_biz_no": "36186",
+        "out_biz_type": "common_sports_first"
       },
       "member_ids": [
         {
-          "name": "G2",
-          "member_id": "1184525783624843264"
+          "name": "Vitality",
+          "member_id": "1176666425880739840"
         },
         {
-          "name": "NaVi",
-          "member_id": "1176666288626335744"
+          "name": "9z",
+          "member_id": "1441778164564921581"
         }
       ]
     },
@@ -8249,16 +9458,367 @@
         "DENDELE"
       ],
       "scores": [
+        "2",
+        "0"
+      ],
+      "winner_member_id": "1219093243631763456",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T16:10:00Z",
+      "start_time_cst": "2026-10-25 00:10:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991679",
+      "score_count_text": "182人评分",
+      "score_item_key": {
+        "out_biz_no": "36210",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "FURIA",
+          "member_id": "1219093243631763456"
+        },
+        {
+          "name": "DENDELE",
+          "member_id": "1441778164564959397"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564991678",
+      "match_id": "hupu-cs2-1441778164564991678",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "G2",
+        "NaVi"
+      ],
+      "scores": [
+        "0",
+        "2"
+      ],
+      "winner_member_id": "1176666288626335744",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-24T16:15:00Z",
+      "start_time_cst": "2026-10-25 00:15:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991678",
+      "score_count_text": "611人评分",
+      "score_item_key": {
+        "out_biz_no": "36211",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "G2",
+          "member_id": "1184525783624843264"
+        },
+        {
+          "name": "NaVi",
+          "member_id": "1176666288626335744"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995311",
+      "match_id": "hupu-cs2-1441778164564995311",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "Spirit",
+        "TYLOO"
+      ],
+      "scores": [
+        "2",
+        "0"
+      ],
+      "winner_member_id": "1203334120843771904",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-25T08:00:00Z",
+      "start_time_cst": "2026-10-25 16:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995311",
+      "score_count_text": "5312人评分",
+      "score_item_key": {
+        "out_biz_no": "36312",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "Spirit",
+          "member_id": "1203334120843771904"
+        },
+        {
+          "name": "TYLOO",
+          "member_id": "1177622591544754176"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995312",
+      "match_id": "hupu-cs2-1441778164564995312",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "FUT",
+        "Liquid"
+      ],
+      "scores": [
+        "2",
+        "0"
+      ],
+      "winner_member_id": "1441778164564854072",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-25T08:00:00Z",
+      "start_time_cst": "2026-10-25 16:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995312",
+      "score_count_text": "138人评分",
+      "score_item_key": {
+        "out_biz_no": "36313",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "FUT",
+          "member_id": "1441778164564854072"
+        },
+        {
+          "name": "Liquid",
+          "member_id": "1224410130250989568"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995313",
+      "match_id": "hupu-cs2-1441778164564995313",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "Vitality",
+        "The MongolZ"
+      ],
+      "scores": [
+        "2",
+        "0"
+      ],
+      "winner_member_id": "1176666425880739840",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-25T09:40:00Z",
+      "start_time_cst": "2026-10-25 17:40:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995313",
+      "score_count_text": "1803人评分",
+      "score_item_key": {
+        "out_biz_no": "36231",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "Vitality",
+          "member_id": "1176666425880739840"
+        },
+        {
+          "name": "The MongolZ",
+          "member_id": "1218345618087346176"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995314",
+      "match_id": "hupu-cs2-1441778164564995314",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "BETBOOM",
+        "Nemiga"
+      ],
+      "scores": [
+        "2",
+        "0"
+      ],
+      "winner_member_id": "1331374056917696512",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-25T10:00:00Z",
+      "start_time_cst": "2026-10-25 18:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995314",
+      "score_count_text": "88人评分",
+      "score_item_key": {
+        "out_biz_no": "36318",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "BETBOOM",
+          "member_id": "1331374056917696512"
+        },
+        {
+          "name": "Nemiga",
+          "member_id": "1226973700444651520"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995315",
+      "match_id": "hupu-cs2-1441778164564995315",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "G2",
+        "Aurora"
+      ],
+      "scores": [
+        "0",
+        "1"
+      ],
+      "winner_member_id": "",
+      "status": "inProgress",
+      "status_label": "进行中",
+      "start_iso": "2026-10-25T13:00:00Z",
+      "start_time_cst": "2026-10-25 21:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995315",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "36329",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "G2",
+          "member_id": "1184525783624843264"
+        },
+        {
+          "name": "Aurora",
+          "member_id": "1441778164564632411"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995316",
+      "match_id": "hupu-cs2-1441778164564995316",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "MOUZ",
+        "9z"
+      ],
+      "scores": [
+        "2",
+        "0"
+      ],
+      "winner_member_id": "1184525984716554240",
+      "status": "completed",
+      "status_label": "已结束",
+      "start_iso": "2026-10-25T13:00:00Z",
+      "start_time_cst": "2026-10-25 21:00:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995316",
+      "score_count_text": "61人评分",
+      "score_item_key": {
+        "out_biz_no": "36328",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "MOUZ",
+          "member_id": "1184525984716554240"
+        },
+        {
+          "name": "9z",
+          "member_id": "1441778164564921581"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995318",
+      "match_id": "hupu-cs2-1441778164564995318",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "Legacy",
+        "DENDELE"
+      ],
+      "scores": [
+        "0",
+        "0"
+      ],
+      "winner_member_id": "",
+      "status": "inProgress",
+      "status_label": "进行中",
+      "start_iso": "2026-10-25T14:50:00Z",
+      "start_time_cst": "2026-10-25 22:50:00",
+      "date": "2026-10-25",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995318",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "36237",
+        "out_biz_type": "common_sports_first"
+      },
+      "member_ids": [
+        {
+          "name": "Legacy",
+          "member_id": "1441778164564631837"
+        },
+        {
+          "name": "DENDELE",
+          "member_id": "1441778164564959397"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564995317",
+      "match_id": "hupu-cs2-1441778164564995317",
+      "match_name": "小组赛",
+      "tournament": "PGL大师赛 布加勒斯特",
+      "teams": [
+        "FURIA",
+        "NaVi"
+      ],
+      "scores": [
         "-",
         "-"
       ],
       "winner_member_id": "",
       "status": "notStarted",
       "status_label": "未开始",
-      "start_iso": "2026-10-24T16:00:00Z",
-      "start_time_cst": "2026-10-25 00:00:00",
-      "date": "2026-10-25",
-      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564991679",
+      "start_iso": "2026-10-25T16:00:00Z",
+      "start_time_cst": "2026-10-26 00:00:00",
+      "date": "2026-10-26",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564995317",
       "score_count_text": "",
       "score_item_key": {
         "out_biz_no": "",
@@ -8270,8 +9830,320 @@
           "member_id": "1219093243631763456"
         },
         {
-          "name": "DENDELE",
-          "member_id": "1441778164564959397"
+          "name": "NaVi",
+          "member_id": "1176666288626335744"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994226",
+      "match_id": "hupu-cs2-1441778164564994226",
+      "match_name": "A组",
+      "tournament": "IEM北京A组",
+      "teams": [
+        "Legacy",
+        "The MongolZ"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994226",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "Legacy",
+          "member_id": "1441778164564631837"
+        },
+        {
+          "name": "The MongolZ",
+          "member_id": "1218345618087346176"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994227",
+      "match_id": "hupu-cs2-1441778164564994227",
+      "match_name": "A组",
+      "tournament": "IEM北京A组",
+      "teams": [
+        "HEROIC",
+        "B8"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994227",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "HEROIC",
+          "member_id": "1176666595922018304"
+        },
+        {
+          "name": "B8",
+          "member_id": "1309587008863076352"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994228",
+      "match_id": "hupu-cs2-1441778164564994228",
+      "match_name": "A组",
+      "tournament": "IEM北京A组",
+      "teams": [
+        "FURIA",
+        "FaZe"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994228",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "FURIA",
+          "member_id": "1219093243631763456"
+        },
+        {
+          "name": "FaZe",
+          "member_id": "1176665751243718656"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994229",
+      "match_id": "hupu-cs2-1441778164564994229",
+      "match_name": "A组",
+      "tournament": "IEM北京A组",
+      "teams": [
+        "NaVi",
+        "Falcons"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994229",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "NaVi",
+          "member_id": "1176666288626335744"
+        },
+        {
+          "name": "Falcons",
+          "member_id": "1335542826254991360"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994231",
+      "match_id": "hupu-cs2-1441778164564994231",
+      "match_name": "B组",
+      "tournament": "IEM北京B组",
+      "teams": [
+        "MOUZ",
+        "TYLOO"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994231",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "MOUZ",
+          "member_id": "1184525984716554240"
+        },
+        {
+          "name": "TYLOO",
+          "member_id": "1177622591544754176"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994232",
+      "match_id": "hupu-cs2-1441778164564994232",
+      "match_name": "B组",
+      "tournament": "IEM北京B组",
+      "teams": [
+        "9z",
+        "BETBOOM"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994232",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "9z",
+          "member_id": "1441778164564921581"
+        },
+        {
+          "name": "BETBOOM",
+          "member_id": "1331374056917696512"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994233",
+      "match_id": "hupu-cs2-1441778164564994233",
+      "match_name": "B组",
+      "tournament": "IEM北京B组",
+      "teams": [
+        "Aurora",
+        "Liquid"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994233",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "Aurora",
+          "member_id": "1441778164564632411"
+        },
+        {
+          "name": "Liquid",
+          "member_id": "1224410130250989568"
+        }
+      ]
+    },
+    {
+      "source": "hupu",
+      "business_id": "cs2",
+      "league": "CS2",
+      "hupu_match_id": "1441778164564994234",
+      "match_id": "hupu-cs2-1441778164564994234",
+      "match_name": "B组",
+      "tournament": "IEM北京B组",
+      "teams": [
+        "PARIVISION",
+        "G2"
+      ],
+      "scores": [
+        "-",
+        "-"
+      ],
+      "winner_member_id": "",
+      "status": "notStarted",
+      "status_label": "未开始",
+      "start_iso": "2026-11-02T07:00:00Z",
+      "start_time_cst": "2026-11-02 15:00:00",
+      "date": "2026-11-02",
+      "live_room_link": "huputiyu://general/live?competitionType=common_match&matchId=1441778164564994234",
+      "score_count_text": "",
+      "score_item_key": {
+        "out_biz_no": "",
+        "out_biz_type": ""
+      },
+      "member_ids": [
+        {
+          "name": "PARIVISION",
+          "member_id": "1441778164564634953"
+        },
+        {
+          "name": "G2",
+          "member_id": "1184525783624843264"
         }
       ]
     }

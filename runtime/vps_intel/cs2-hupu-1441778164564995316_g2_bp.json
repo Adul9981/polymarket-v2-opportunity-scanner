@@ -1,0 +1,12 @@
+{
+  "match": "cs2-hupu-1441778164564995316",
+  "game": 2,
+  "phase": "bp",
+  "slice_rows": 1079,
+  "slice_from": "2026-10-25T14:00:58+00:00",
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_MOUZ-9z_2026-10-25_g2_bp.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-10-25T14:20:08+00:00"
+}

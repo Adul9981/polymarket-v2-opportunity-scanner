@@ -33,6 +33,9 @@ import sys
 import time
 from pathlib import Path
 
+# 北京时间 = 固定 UTC+8（中国无夏令时），与全项目其它工具的 timezone(timedelta(hours=8)) 一致
+_BEIJING = datetime.timezone(datetime.timedelta(hours=8))
+
 
 def _team_key(teams: list[str]) -> tuple[str, ...]:
     """按队伍名归一化去重键（容忍 DK Challengers / Dplus KIA Challengers 等写法）。"""
@@ -105,6 +108,23 @@ def _is_tbd(team: str) -> bool:
     return s == "" or s in _TBD_MARKERS
 
 
+def hupu_date_window(now_utc: datetime.datetime | None = None) -> set[str]:
+    """返回应纳入的虎扑场次北京日期集合 = {北京昨天, 北京今天}。
+
+    虎扑 schedule 的 date 字段是**北京时间**；而 VPS 本地时区是 UTC，
+    datetime.date.today() 拿的是 UTC 日期。跨午夜场次（如 23:00 UTC 开赛 =
+    北京次日 07:00）会让"UTC 今天"与"北京今天"错开一天，若直接用本地日期
+    过滤会漏掉该场次（教训：2026-10-30 BLG vs TES 中国内战无 Polymarket 市场，
+    仅靠虎扑补漏，被 UTC/北京日期错位漏出今日清单）。
+    故按北京时间换算，并额外带"北京昨天"以覆盖北京本地跨午夜仍在进行的场次；
+    已结束场次由 merge_hupu 的 closed 标记剔除，不靠这里过滤。
+    """
+    if now_utc is None:
+        now_utc = datetime.datetime.now(datetime.timezone.utc)
+    bj = now_utc.astimezone(_BEIJING).date()
+    return {bj.isoformat(), (bj - datetime.timedelta(days=1)).isoformat()}
+
+
 def merge_hupu(rows: list[dict], out: list[dict]) -> list[dict]:
     """合并虎扑场次（2026-10-12 用户定稿：CS2 全部 + LoL 官方没覆盖的场次）。
 
@@ -119,13 +139,17 @@ def merge_hupu(rows: list[dict], out: list[dict]) -> list[dict]:
     if not rows:
         return out
     known_teams = {_team_key(m.get("teams") or []) for m in out}
+    # 已有场次按队伍名索引，用于把虎扑评分 key 补挂到官方已覆盖场次（2026-11-01）
+    by_key: dict[tuple[str, ...], dict] = {}
+    for m in out:
+        tk = _team_key(m.get("teams") or [])
+        if tk not in by_key:
+            by_key[tk] = m
     for e in rows:
         league = str(e.get("league") or "").strip().upper()
         if league == "CS2":
             game = "cs2"
         elif league == "LOL":
-            if _hupu_is_official_lol(e.get("tournament") or ""):
-                continue
             game = "lol"
         else:
             continue
@@ -135,6 +159,18 @@ def merge_hupu(rows: list[dict], out: list[dict]) -> list[dict]:
         if any(_is_tbd(t) for t in teams):
             continue
         tkey = _team_key(teams)
+        biz = str((e.get("score_item_key") or {}).get("out_biz_no") or "")
+        # 官方已覆盖 / 已在 out 里的场次：不新增行，只把虎扑评分 key 补挂到已有场次
+        # （按队伍名反查），让官方 LCK/LPL/LEC/LCP 场次也能出选手评分（2026-11-01）。
+        existing = by_key.get(tkey)
+        if existing is not None:
+            if biz and not existing.get("hupu_score_out_biz_no"):
+                existing["hupu_score_out_biz_no"] = biz
+                existing["hupu_score_out_biz_type"] = str((e.get("score_item_key") or {}).get("out_biz_type") or "")
+                existing["hupu_member_ids"] = e.get("member_ids") or []
+            continue
+        if league == "LOL" and _hupu_is_official_lol(e.get("tournament") or ""):
+            continue
         if tkey in known_teams:
             continue
         hid = str(e.get("hupu_match_id") or e.get("match_id") or "").strip()
@@ -160,6 +196,7 @@ def merge_hupu(rows: list[dict], out: list[dict]) -> list[dict]:
             }
         )
         known_teams.add(tkey)
+        by_key[tkey] = out[-1]
     return out
 
 
@@ -277,8 +314,16 @@ def main() -> None:
     if hupu_path.exists():
         hupu = json.loads(hupu_path.read_text(encoding="utf-8"))
         hrows = hupu.get("matches", []) if isinstance(hupu, dict) else []
-        # 只取今天（虎扑 date 字段 = 北京时间，与本地 today 一致）
-        today_hupu = [r for r in hrows if r.get("date") == today]
+        # 虎扑 date 字段 = 北京时间，VPS 本地是 UTC，跨午夜场次会错开一天，
+        # 必须按北京时间换算（不能再拿本地 today 直接比对）——见 hupu_date_window。
+        if args.date:
+            hupu_dates = {
+                args.date,
+                (datetime.date.fromisoformat(args.date) - datetime.timedelta(days=1)).isoformat(),
+            }
+        else:
+            hupu_dates = hupu_date_window()
+        today_hupu = [r for r in hrows if r.get("date") in hupu_dates]
         merge_hupu(today_hupu, out)
 
     payload = {"date": today, "matches": out}

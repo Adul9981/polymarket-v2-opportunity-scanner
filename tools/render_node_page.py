@@ -2,10 +2,11 @@
 """Template-based game-node intel page renderer.
 
 AI fills structured content fields (JSON) only; this module assembles the
-SAP/Apple node page (速览卡 + 编号卡片 0.5/1/1.5/2–11) from those fields +
-rule-layer stats. This is the "治本" latency fix: the LLM no longer writes
-HTML/CSS, so output tokens drop and generation speeds up (2026-10-18).
-【比赛局势】(1.5) 为纯规则层块：胜率来自 stats.win_signal、评分来自虎扑 ratings。
+SAP/Apple node page (编号卡片 1–4) from those fields + rule-layer stats.
+This is the "治本" latency fix: the LLM no longer writes HTML/CSS, so output
+tokens drop and generation speeds up (2026-10-18；2026-10-24 起只保留 4 栏：
+1 BP 锚点 / 2 比赛局势 / 3 方向性情报板 / 4 灰信号汇总，其余栏不生成)。
+【比赛局势】(2) 为纯规则层块：胜率来自 stats.win_signal、评分来自虎扑 ratings。
 
 Usage (dry-run / offline test):
   python3 tools/render_node_page.py \
@@ -17,8 +18,10 @@ Usage (dry-run / offline test):
 from __future__ import annotations
 
 import argparse
+import datetime
 import json
 import re
+import time
 from pathlib import Path
 
 from intel_html import card, esc, page, sig, src_box, speed_block
@@ -182,7 +185,7 @@ def _gray(data: dict) -> str:
 
 
 def _bp(data: dict) -> str:
-    """5 BP 锚点与选人情报（弹幕讨论·非确认）。"""
+    """1 BP 锚点与选人情报（弹幕讨论·非确认）。"""
     anchors = data.get("bp_anchors") or []
     if not anchors:
         return '<p class="note">今日无锚点 / 无战绩情报提及。</p>'
@@ -211,7 +214,7 @@ def _market(data: dict) -> str:
 
 
 def _direction(data: dict) -> str:
-    """7 方向性情报板：正锚 × 负锚 × 群体共识 × 灰信号条件预测。"""
+    """3 方向性情报板：正锚 × 负锚 × 群体共识 × 灰信号条件预测。"""
     d = data.get("direction") or {}
     pos = d.get("positive") or []
     neg = d.get("negative") or []
@@ -371,6 +374,13 @@ def _rating_cols(ratings: dict | None, teams: list[str]) -> str:
     home_name = str(home.get("name") or "").strip()
     away_name = str(away.get("name") or "").strip()
 
+    # 无归属信息（如 CS2 通用评分不提供 teamId）→ 单列混排（按评分降序），不硬拆两队
+    if not any(str(p.get("team_id") or "") for p in players):
+        return (
+            '<div class="note">虎扑通用评分未提供选手归属，按评分混排：</div>'
+            + _player_rows(players, _BLUE)
+        )
+
     home_players, away_players = [], []
     for p in players:
         tid = str(p.get("team_id") or "")
@@ -412,69 +422,187 @@ _RAT_BEGIN = "<!-- SITUATION:RATINGS:BEGIN -->"
 _RAT_END = "<!-- SITUATION:RATINGS:END -->"
 
 
+def _win_bars(t0: str, pa: int, t1: str, pb: int) -> str:
+    """两条胜率条（蓝=队1/红=队2，百分比随 pct），不含 note。"""
+    parts = []
+    for name, pct, color in ((t0, pa, _BLUE), (t1, pb, _RED)):
+        parts.append(
+            '<div style="display:flex;align-items:center;gap:10px;margin:7px 0">'
+            f'<span style="flex:0 0 96px;font-weight:650;color:{color};font-size:13px">{esc(name)}</span>'
+            '<div style="flex:1;background:#eef0f3;border-radius:8px;height:18px;overflow:hidden">'
+            f'<div style="height:100%;width:{pct}%;background:{color};border-radius:8px"></div></div>'
+            f'<span style="flex:0 0 56px;text-align:right;font-weight:750;color:{color};font-size:14px">{pct}%</span>'
+            '</div>'
+        )
+    return "".join(parts)
+
+
+def _bj_now() -> str:
+    """当前北京时间 HH:MM:SS（页面统一按北京时间展示，AGENTS 时间基准）。"""
+    bj = datetime.datetime.now(datetime.timezone.utc).astimezone(
+        datetime.timezone(datetime.timedelta(hours=8))
+    )
+    return bj.strftime("%H:%M:%S")
+
+
 def situation_win_block(ws: dict | None, teams: list[str]) -> str:
-    """比赛局势·胜率子块（本小局弹幕口径，局内实时、局末冻结；含 WIN 标记供就地替换）。"""
+    """比赛局势·胜率子块（本小局弹幕口径，局内实时、局末冻结；含 WIN 标记供就地替换）。
+
+    2026-10-29 改：无样本不再空白，强制 50:50 占位；有样本（含 < 阈值）也正常算比例。
+    2026-10-31 改：块尾追加"胜率更新于 HH:MM:SS（北京时间）"——refresh_situation 每 60s
+    就地替换整块时自动带出新的更新时间；局末冻结后时间戳随之定格。
+    """
     t0 = teams[0] if teams else (ws or {}).get("team_a", "队伍1")
     t1 = teams[1] if len(teams) > 1 else (ws or {}).get("team_b", "队伍2")
-    parts = []
-    if ws and ws.get("sample_status") == "ready":
-        for name, pct, color in ((t0, int(ws.get("pct_a") or 0), _BLUE), (t1, int(ws.get("pct_b") or 0), _RED)):
-            parts.append(
-                '<div style="display:flex;align-items:center;gap:10px;margin:7px 0">'
-                f'<span style="flex:0 0 96px;font-weight:650;color:{color};font-size:13px">{esc(name)}</span>'
-                '<div style="flex:1;background:#eef0f3;border-radius:8px;height:18px;overflow:hidden">'
-                f'<div style="height:100%;width:{pct}%;background:{color};border-radius:8px"></div></div>'
-                f'<span style="flex:0 0 56px;text-align:right;font-weight:750;color:{color};font-size:14px">{pct}%</span>'
-                '</div>'
-            )
+    total = int((ws or {}).get("total") or 0)
+    th = int((ws or {}).get("threshold") or 10)
+    pa = int((ws or {}).get("pct_a")) if (ws and (ws or {}).get("pct_a") is not None) else 50
+    pb = 100 - pa
+    if total == 0:
+        note = "暂无显式胜负弹幕样本，暂按 50:50 展示（观众口径·非结论），随弹幕更新。"
+    elif total < th:
+        note = f"显式胜负弹幕仅 {total} 条（样本较少，< 阈值 {th}），按实际比例展示，随弹幕更新。"
+    else:
         win = max(int((ws.get("window_seconds") or 300) // 60), 1)
         if ws.get("basis") == "recent":
-            basis_note = f"近 {win} 分钟胜负弹幕 {ws.get('total', 0)} 条（阈值 {ws.get('threshold', 10)}），实时随弹幕更新，两队相加恒为 100%。"
+            note = f"近 {win} 分钟胜负弹幕 {total} 条，实时随弹幕更新，两队相加恒为 100%。"
         else:
-            basis_note = f"整场胜负弹幕 {ws.get('total', 0)} 条（阈值 {ws.get('threshold', 10)}；近 {win} 分钟样本不足，回退累积），两队相加恒为 100%。"
-        parts.append(f'<div class="note">{basis_note}</div>')
-    else:
-        total = (ws or {}).get("total", 0)
-        th = (ws or {}).get("threshold", 10)
-        parts.append(
-            '<div class="note">样本不足'
-            f'{"（显式胜负弹幕 " + str(total) + " 条" if total else ""} < 阈值 {th}'
-            '），暂不给出胜率，随弹幕更新。</div>'
-        )
-    return _WIN_BEGIN + "".join(parts) + _WIN_END
+            note = f"整场胜负弹幕 {total} 条（近 {win} 分钟样本不足，回退累积），两队相加恒为 100%。"
+    ts = (
+        f'<div class="note" data-sit-ts="{int(time.time())}" style="color:#8a8f98;font-size:11px;margin-top:2px">'
+        f'胜率更新于 {_bj_now()}（北京时间）</div>'
+    )
+    return _WIN_BEGIN + _win_bars(t0, pa, t1, pb) + f'<div class="note">{note}</div>' + ts + _WIN_END
+
+
+def _team_score_sums(ratings: dict | None, teams: list[str]) -> tuple[float, float] | None:
+    """两队选手评分总和（对齐 teams[0]/teams[1]）；无法按队归属（CS2 无 teamId）返回 None。"""
+    if not ratings or len(teams) != 2:
+        return None
+    players = [p for p in (ratings.get("players") or []) if isinstance(p, dict)]
+    if not players or not any(str(p.get("team_id") or "") for p in players):
+        return None
+    home = ratings.get("home") or {}
+    away = ratings.get("away") or {}
+    away_tid = str(away.get("team_id") or "")
+    home_name = str(home.get("name") or "")
+    away_name = str(away.get("name") or "")
+    home_sum = away_sum = 0.0
+    for p in players:
+        tid = str(p.get("team_id") or "")
+        try:
+            s = float(p.get("score"))
+        except (TypeError, ValueError):
+            s = 0.0
+        if away_tid and tid == away_tid:
+            away_sum += s
+        else:
+            home_sum += s
+    home_idx = _match_index(home_name, teams)
+    away_idx = _match_index(away_name, teams)
+    if home_idx == 1 and away_idx == 0:
+        return away_sum, home_sum
+    return home_sum, away_sum
+
+
+def _rating_win_block(teams: list[str], sum0: float, sum1: float) -> str:
+    """情况二胜率块：无胜负弹幕时按两队选手评分总和对比（大者 70% / 小者 30%）。
+
+    外包 _WIN_BEGIN/_WIN_END 标记，与 situation_win_block 同构，供 refresh_situation
+    就地替换（否则 70/30 块无标记、下一轮替换失败冻结）。
+    """
+    t0, t1 = teams[0], teams[1]
+    pa, pb = (70, 30) if sum0 >= sum1 else (30, 70)
+    note = (
+        '<div class="note">暂无显式胜负弹幕样本，按两队选手评分总和对比'
+        f'（{t0} {sum0:.1f} vs {t1} {sum1:.1f}），暂按 {pa}:{pb} 展示（观众口径·非结论），随评分/弹幕更新。</div>'
+    )
+    ts = (
+        f'<div class="note" data-sit-ts="{int(time.time())}" style="color:#8a8f98;font-size:11px;margin-top:2px">'
+        f'胜率更新于 {_bj_now()}（北京时间）</div>'
+    )
+    return _WIN_BEGIN + _win_bars(t0, pa, t1, pb) + note + ts + _WIN_END
+
+
+def situation_win_block_tiered(ws: dict | None, ratings: dict | None, teams: list[str]) -> str:
+    """三档胜率块（2026-11-01 用户定稿，独立局势页 + 情报节点页共用）：
+    ① 有胜负弹幕 -> situation_win_block（现有规则）；
+    ② 无胜负弹幕但有评分（能按队求和）-> 评分总和对比，大者 70% / 小者 30%；
+    ③ 无胜负弹幕也无评分（CS2 无 team_id / 两和相等）-> 50:50 占位。
+    """
+    if ws is not None and int(ws.get("total") or 0) > 0:
+        return situation_win_block(ws, teams)
+    sums = _team_score_sums(ratings, teams)
+    if sums is not None and sums[0] != sums[1]:
+        return _rating_win_block(teams, sums[0], sums[1])
+    zero = dict(ws) if ws else {}
+    zero.update(total=0, count_a=0, count_b=0, pct_a=50, pct_b=50)
+    zero.pop("basis", None)
+    return situation_win_block(zero, teams)
+
+
+def situation_result_block(winner_side: str, teams: list[str]) -> str:
+    """比赛局势·官方结果块（end 页）：胜方 100%、负方 0%（官方结算·已确认，结果展示）。"""
+    t0 = teams[0] if teams else "队伍1"
+    t1 = teams[1] if len(teams) > 1 else "队伍2"
+    pa = 100 if winner_side == "A" else 0
+    pb = 100 - pa
+    winner_name = t0 if winner_side == "A" else t1
+    note = (
+        f'<div class="note">本局官方结算：<b>{esc(winner_name)} 胜</b>'
+        "（Polymarket Game N Winner 结算确认，结果展示：胜方 100% / 负方 0%）。</div>"
+    )
+    return _WIN_BEGIN + _win_bars(t0, pa, t1, pb) + note + _WIN_END
 
 
 def situation_ratings_block(ratings: dict | None, teams: list[str]) -> str:
-    """比赛局势·评分子块（本小局评分，局内实时、局末冻结；含 RATINGS 标记供就地替换）。"""
+    """比赛局势·评分子块（本小局评分，局内实时、局末冻结；含 RATINGS 标记供就地替换）。
+
+    2026-11-01 改：块尾追加"评分更新于 HH:MM:SS（北京时间）"（与胜率块"胜率更新于"对齐，
+    页面统一北京时间、弃用原 UTC"抓取于"），该行带 data-rat-ts（unix 秒）供轮询脚本单调
+    守卫与胜率块 data-sit-ts 取 max——胜率冻结（弹幕静默）但评分仍更新时，评分时间戳仍
+    推进，卡片照常刷新（此前守卫只看胜率时间戳，评分更新会被误跳过）。
+    """
     cols = _rating_cols(ratings, teams)
     if cols:
         game = (ratings or {}).get("game") or {}
         gname = str(game.get("name") or "") or f"第{game.get('num')}局" if game.get("num") else "本局"
-        fetched = str((ratings or {}).get("fetched_at_utc") or "")
-        body = (
-            cols
-            + '<div class="note">来源：虎扑通用评分（每小局独立）· '
-            + f'{esc(gname)} · 抓取于 {esc(fetched[:19].replace("T", " ") if fetched else "-")}</div>'
+        src = (
+            '<div class="note">来源：虎扑通用评分（每小局独立）· '
+            + f'{esc(gname)}</div>'
         )
+        ts = (
+            f'<div class="note" data-rat-ts="{int(time.time())}" style="color:#8a8f98;font-size:11px;margin-top:2px">'
+            f'评分更新于 {_bj_now()}（北京时间）</div>'
+        )
+        body = cols + src + ts
     else:
         body = '<div class="note">暂未获取到虎扑选手评分（本场/本局评分尚未生成，或数据源缺失）。</div>'
     return _RAT_BEGIN + body + _RAT_END
 
 
 def _situation(stats: dict, ratings: dict | None, teams: list[str]) -> str:
-    """3 比赛局势：两队胜率（观众口径·非结论）+ 虎扑队员评分。
+    """2 比赛局势：两队胜率（观众口径·非结论）+ 虎扑队员评分。
 
     局内实时、局末冻结（2026-10-18 定稿）：胜率 = 本小局弹幕口径（近 5 分钟，2026-10-19
     改）、评分 = 本小局评分，当前小局进行中随弹幕/评分实时刷新，本局结束生成 end 节点后
     冻结，不随后续小局变化；G1 页永远显示 G1 的数据。胜率/评分子块各外包 BEGIN/END 标记，
     供 refresh_situation 就地替换。
     """
-    ws = (stats or {}).get("win_signal")
-    if not isinstance(ws, dict):
-        ws = None
+    official = (stats or {}).get("official_result")
+    if isinstance(official, dict) and official.get("winner_side") in ("A", "B"):
+        # 2026-10-31：end 页官方结果回填——胜率条改为官方结算（胜方 100% / 负方 0%）。
+        win_head = '<h3 style="font-size:14px;margin:2px 0 8px">本局结果（官方结算·已确认）</h3>'
+        win_html = situation_result_block(official["winner_side"], teams)
+    else:
+        win_head = '<h3 style="font-size:14px;margin:2px 0 8px">两队胜率（观众口径·非结论）</h3>'
+        ws = (stats or {}).get("win_signal")
+        if not isinstance(ws, dict):
+            ws = None
+        win_html = situation_win_block_tiered(ws, ratings, teams)
     out = [
-        '<h3 style="font-size:14px;margin:2px 0 8px">两队胜率（观众口径·非结论）</h3>',
-        situation_win_block(ws, teams),
+        win_head,
+        win_html,
         '<h3 style="font-size:14px;margin:14px 0 8px">队员评分（虎扑·实时）</h3>',
         situation_ratings_block(ratings, teams),
     ]
@@ -483,7 +611,51 @@ def _situation(stats: dict, ratings: dict | None, teams: list[str]) -> str:
 
 def situation_card(stats: dict, ratings: dict | None, teams: list[str]) -> str:
     """【比赛局势】完整卡片（含 <div class="card"> 包裹），供后置注入 codex 页使用。"""
-    return card("3", "比赛局势", _situation(stats, ratings, teams))
+    return card("2", "比赛局势", _situation(stats, ratings, teams), dom_id="situation-card")
+
+
+def situation_poll_script() -> str:
+    """进行中节点页的 60s 实时轮询脚本。
+
+    原理：fetch 自身页面（cache:no-store 绕过浏览器缓存），只替换 #situation-card 一小块，
+    不整页重载（避免滚动跳动/闪屏）。单调守卫：卡片新鲜度 = max(胜率块 data-sit-ts,
+    评分块 data-rat-ts) 的 unix 秒——任一子块更新都推进，胜率冻结但评分更新时卡片照常刷新；
+    新卡时间戳 <= 当前则丢弃，防止 GitHub CDN 多 edge 节点清理不同步导致时间戳"回跳"
+    （2026-10-31 弃用 ?sit= 查询参数：GitHub CDN 对查询字符串不区分缓存键，无效）。
+    失败静默降级（保留旧卡）。仅 bp/mid 进行中节点注入；end 冻结。
+    """
+    return """<script>
+(function () {
+  if (window.__sitPoll) return;
+  window.__sitPoll = true;
+  function tsOf(el) {
+    if (!el) return null;
+    var w = el.querySelector("[data-sit-ts]");
+    var r = el.querySelector("[data-rat-ts]");
+    var tw = w ? (+w.getAttribute("data-sit-ts") || 0) : 0;
+    var tr = r ? (+r.getAttribute("data-rat-ts") || 0) : 0;
+    var t = Math.max(tw, tr);
+    return t > 0 ? t : null;
+  }
+  function swap() {
+    fetch(window.location.href.split("#")[0], { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : null; })
+      .then(function (html) {
+        if (!html) return;
+        var doc = new DOMParser().parseFromString(html, "text/html");
+        var fresh = doc.getElementById("situation-card");
+        var cur = document.getElementById("situation-card");
+        if (!fresh || !cur) return;
+        var tNew = tsOf(fresh), tCur = tsOf(cur);
+        // 单调守卫：当前已有时间戳时，新卡缺失或更旧则跳过（防 CDN 多节点回跳）
+        if (tCur != null && (tNew == null || tNew <= tCur)) return;
+        cur.outerHTML = fresh.outerHTML;
+      })
+      .catch(function () {});
+  }
+  setInterval(swap, 60000);
+})();
+</script>"""
 
 
 # --------------------------------------------------------------------------- main
@@ -511,25 +683,18 @@ def render(
         + (" · 补发（窗口后生成）" if late else "")
     )
     sections = [
-        ("1", "关键变量卡 + 阵容裁决卡", _key_vars_and_lineup(data)),
-        ("2", "结果总览 / 状态核验", _status(data, stats, teams, gi, gphase, slug_id, max_games, end_basis)),
-        ("3", "比赛局势", _situation(stats, ratings, teams)),
+        ("1", "BP 锚点与选人情报", _bp(data)),
+        ("2", "比赛局势", _situation(stats, ratings, teams), "situation-card"),
+        ("3", "方向性情报板", _direction(data)),
         ("4", "灰信号汇总", _gray(data)),
-        ("5", "BP 锚点与选人情报", _bp(data)),
-        ("6", "盘口与市场讨论", _market(data)),
-        ("7", "方向性情报板", _direction(data)),
-        ("8", "情报含义与决策落点", _decision(data)),
-        ("9", "本局复盘", _replay(data, stats)),
-        ("10", "队伍 / 人员画像", _profiles(data, stats)),
-        ("11", "联赛规律与版本", _patterns(data)),
-        ("12", "预测验证回填明细", _prediction(data)),
-        ("13", "数据与溯源", _sources(data, stats)),
     ]
     footer = (
         "弹幕为低可信度信号需聚合；灰信号只作风险标注非证据；结果待官方确认。"
         "模板渲染 · tools/render_node_page.py"
     )
-    return page(title, sub, _speed(data), sections, footer)
+    # 进行中的 bp/mid 节点注入 60s 实时轮询（绕过 GitHub Pages 10min 缓存）；end 节点冻结。
+    extra = situation_poll_script() if gphase in ("bp", "mid") else ""
+    return page(title, sub, sections, footer, extra_html=extra)
 
 
 def main() -> int:

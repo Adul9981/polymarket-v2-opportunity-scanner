@@ -4,7 +4,7 @@
  "streamers": [
   {
    "id": "huya_lol_official",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "虎牙英雄联盟赛事",
    "uid": 1346609715,
@@ -24,7 +24,7 @@
   },
   {
    "id": "huya_we957",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "957（WE957）",
    "uid": 1001276654,
@@ -46,7 +46,7 @@
   },
   {
    "id": "huya_maomao",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "解说毛毛",
    "uid": 1173534659,
@@ -67,7 +67,7 @@
   },
   {
    "id": "huya_mile",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "解说米勒",
    "uid": 1690094984,
@@ -88,7 +88,7 @@
   },
   {
    "id": "huya_remember",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "Remember（记得）",
    "uid": 1708907089,
@@ -109,7 +109,7 @@
   },
   {
    "id": "huya_shuoshuo",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "解说硕硕",
    "uid": 1279512307519,
@@ -130,7 +130,7 @@
   },
   {
    "id": "soop_lck_cl",
-   "enabled": false,
+   "enabled": true,
    "platform": "soop",
    "nickname": "LCK_CL",
    "uid": "afchall",
@@ -150,7 +150,7 @@
   },
   {
    "id": "huya_csboy_official",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "CSBOY官方直播间",
    "uid": 10748220,
@@ -173,7 +173,7 @@
   },
   {
    "id": "huya_csboy_mo",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "CSBOY-Mo官方直播间",
    "uid": 1199652774074,
@@ -196,7 +196,7 @@
   },
   {
    "id": "huya_ti2026_stage1",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "TI2026舞台一",
    "uid": 1541541294,
@@ -217,7 +217,7 @@
   },
   {
    "id": "huya_maybeee111",
-   "enabled": false,
+   "enabled": true,
    "platform": "huya",
    "nickname": "Maybeee111",
    "uid": 2381472418,
@@ -237,5 +237,5 @@
    "game": "dota2"
   }
  ],
- "updated_at": "2026-08-20T00:00:00+08:00"
+ "updated_at": "2026-10-25T14:00:00+08:00"
 }

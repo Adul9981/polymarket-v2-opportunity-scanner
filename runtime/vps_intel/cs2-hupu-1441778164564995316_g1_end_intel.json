@@ -1,0 +1,344 @@
+{
+ "meta": {
+  "total": 40,
+  "active_users": 40,
+  "window_utc": [
+   "2026-10-25 14:07",
+   "2026-10-25 14:07"
+  ],
+  "density_per_min": 40.0,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "G2": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "G2",
+    "g2剧情？"
+   ]
+  },
+  "MOUZ": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "马总为啥显示老鼠菊花都打9z",
+    "老鼠换队服了吗，之前是红色的吧"
+   ]
+  }
+ },
+ "players": {},
+ "odds_discussion": {
+  "count": 0,
+  "samples": []
+ },
+ "situation": {
+  "count": 0,
+  "samples": []
+ },
+ "gray_signals": {
+  "count": 0,
+  "samples": []
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "14:07",
+   "minute": 29882287,
+   "count": 40,
+   "pos": 4,
+   "neg": 1,
+   "tone": "正面",
+   "samples": [
+    "马总为啥显示老鼠菊花都打9z",
+    "都能静音换子弹了",
+    "不保AK还去送真的逆天",
+    "为啥不保ak"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 4,
+   "neg": 1,
+   "net": 3,
+   "tone": "正面"
+  },
+  "timeline": [
+   {
+    "start_utc": "14:07",
+    "count": 40,
+    "pos": 4,
+    "neg": 1,
+    "net": 3,
+    "tone": "正面"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "14:07",
+    "count": 40,
+    "tone": "正面",
+    "pos": 4,
+    "neg": 1,
+    "sample": "马总为啥显示老鼠菊花都打9z"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "马总为啥显示老鼠菊花都打9z",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "老鼠换队服了吗，之前是红色的吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "G2",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "g2剧情？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "pr啊啊啊啊啊啊",
+   "count": 2,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "不保AK还去送真的逆天",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "这个视角 太像了",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "都能静音换子弹了",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "为啥不保ak",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "看生存啊",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "啊啊啊啊啊啊啊啊啊啊啊",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "我有不亚于宗主的颜值和不亚于你1.82的身高",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "寄了",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "不把mo拉进来？",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "这不保ak",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "呵呵 谁也打不过",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "pr长得越来越像老汤了",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "又要被泄愤的",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "天禄万一打不过dendele咋办",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "无所谓 谁都打不过",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "什么对手都一样",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "有啥关系呢，是谁都打不过",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "是谁都打不过，无所谓",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "应该是蹬蹬乐",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "充满鲜花的世界到底在哪里？",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "那回家了",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "都一样被虐",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "9z吧，早点回家",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "天禄不打过9z的",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "打谁都一样",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "啊啊啊啊啊啊啊啊啊啊",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "有区别吗",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "打9z还是要被虐",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  },
+  {
+   "text": "0/3回家",
+   "count": 1,
+   "entity": false,
+   "minute_utc": "14:07"
+  }
+ ],
+ "top_users": [
+  [
+   "磨磨又叽叽",
+   1
+  ],
+  [
+   "隔壁王老五不姓王",
+   1
+  ],
+  [
+   "甜盘子圆尾娇鹟",
+   1
+  ],
+  [
+   "懒羊羊",
+   1
+  ],
+  [
+   "隐鯓守候",
+   1
+  ],
+  [
+   "嘘嘘嘘啦啦啦",
+   1
+  ],
+  [
+   "蜜桃你老婆",
+   1
+  ],
+  [
+   "别忘月光",
+   1
+  ]
+ ],
+ "win_signal": {
+  "team_a": "MOUZ",
+  "team_b": "9z",
+  "count_a": 0,
+  "count_b": 0,
+  "total": 0,
+  "pct_a": null,
+  "pct_b": null,
+  "sample_status": "insufficient",
+  "samples_a": [],
+  "samples_b": [],
+  "threshold": 10,
+  "basis": "cumulative",
+  "window_seconds": 300
+ }
+}

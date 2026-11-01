@@ -36,7 +36,13 @@ OLD_TRACK_RE = re.compile(
 def inject_all(site_dir: Path = SITE) -> int:
     changed = 0
     for p in Path(site_dir).rglob("*.html"):
-        text = p.read_text(encoding="utf-8", errors="ignore")
+        if p.name.startswith("._"):
+            continue
+        try:
+            text = p.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            print(f"[add-stats-track] skip non-utf8 file: {p}")
+            continue
         if '"di_v"' in text:
             continue
         text = OLD_TRACK_RE.sub("", text)

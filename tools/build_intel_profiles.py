@@ -28,6 +28,23 @@ def load(name: str) -> dict:
     return json.loads((INTEL / name).read_text(encoding="utf-8"))
 
 
+MAP_CN = {
+    "anubis": "阿努比斯 Anubis",
+    "ancient": "远古遗迹 Ancient",
+    "cache": "死城之谜 Cache",
+    "dust2": "沙二 Dust II",
+    "inferno": "炼狱小镇 Inferno",
+    "mirage": "荒漠迷城 Mirage",
+    "nuke": "核子危机 Nuke",
+    "overpass": "死亡游乐园 Overpass",
+    "train": "列车站台 Train",
+    "vertigo": "殒命大厦 Vertigo",
+    "mills": "米尔斯 Mills",
+    "thera": "席拉 Thera",
+    "basalt": "玄武岩 Basalt",
+}
+
+
 def esc(x) -> str:
     return html.escape(str(x if x is not None else ""))
 
@@ -54,6 +71,7 @@ th{color:var(--sub);font-weight:600}
 .warn{background:#fff7f0;border-left:4px solid #ff9500;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
 .ok{background:#f2f9f2;border-left:4px solid #34c759;padding:12px 14px;border-radius:8px;font-size:14px;margin-bottom:12px}
 .note{color:var(--sub);font-size:12px;margin-top:20px;line-height:1.8}
+.dim{color:var(--sub);font-size:11.5px}
 a.item{display:block;text-decoration:none;color:var(--ink);padding:10px 12px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px}
 a.item:hover{border-color:var(--accent)}
 a.item .t{font-weight:600;color:var(--accent);font-size:14px}
@@ -71,7 +89,7 @@ def page(title: str, sub: str, body: str) -> str:
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
         f"<title>{esc(title)}</title><style>{CSS}</style></head><body><div class=\"wrap\">\n"
         f"<h1>{esc(title)}</h1>\n<p class=\"sub\">{sub}</p>\n{body}\n"
-        '<p class="note">生成：' + datetime.now().strftime("%Y-%m-%d %H:%M") +
+        '<p class="note">生成：' + datetime.now().strftime("%Y-%m-%d") +  # 2026-10-11：只到日，避免每轮重建 159 个页面（每分钟整站 churn）
         " · 情报库自动构建（tools/build_intel_profiles.py）· 数据来源 docs/data/intel/ · "
         "弹幕情报为观众集体智慧，灰信号只作风险标注非结论；官方确认后回填。</p>\n</div></body></html>\n"
     )
@@ -111,8 +129,22 @@ def gray_for(ref_id: str, ref_name: str, entities: list[dict]) -> list[dict]:
     return out
 
 
+def team_map_key(t: dict, map_stats: dict) -> str | None:
+    keys = [t.get("id"), t.get("abbr"), t.get("name"), t.get("full"),
+            *t.get("aliases", [])]
+    for k in keys:
+        if not k:
+            continue
+        low = str(k).strip().lower()
+        for mk in map_stats:
+            if str(mk).strip().lower() == low:
+                return mk
+    return None
+
+
 def build_team(t: dict, matches: list[dict], entities: list[dict], leagues: list[dict],
-               players: list[dict], champions: list[dict], comps: list[dict]) -> str:
+               players: list[dict], champions: list[dict], comps: list[dict],
+               map_stats: dict | None = None) -> str:
     name = t["name"]
     danmu = t.get("danmu", {})
     tags = danmu.get("tags", [])
@@ -147,6 +179,29 @@ def build_team(t: dict, matches: list[dict], entities: list[dict], leagues: list
     else:
         body += '<div class="ok">样本不足：暂无有效弹幕画像，后续比赛自动补充。</div>'
     body += "</div>"
+    # CS2 地图战绩（官方累计；2026-09-08 新增可见出口）
+    is_cs = "CS" in str(t.get("league", "")).upper() or "CS2" in str(t.get("league", "")).upper()
+    mk = team_map_key(t, map_stats or {})
+    if is_cs or mk:
+        body += '<div class="card"><h2>CS2 地图战绩（官方累计）</h2>'
+        if mk and map_stats.get(mk):
+            rows = ["<tr><th>地图</th><th>场次</th><th>胜 / 负</th><th>胜率</th><th>最近</th></tr>"]
+            for mid, st in sorted(map_stats[mk].items(), key=lambda kv: (-kv[1]["played"], kv[0])):
+                rate = f"{round(st['wins'] / st['played'] * 100)}%" if st["played"] else "—"
+                rows.append(
+                    "<tr><td>"
+                    + esc(MAP_CN.get(mid, mid))
+                    + "</td><td>" + str(st["played"])
+                    + "</td><td>" + str(st["wins"]) + " / " + str(st["losses"])
+                    + "</td><td><b>" + esc(rate) + "</b></td><td>"
+                    + esc(st.get("last_date", "")) + "</td></tr>"
+                )
+            body += '<div class="block"><h3>官方战绩（来源：Liquipedia/HLTV/官方台账）</h3>'
+            body += "<table>" + "".join(rows) + "</table>"
+            body += '</div><div class="note">样本随每场官方结算自动累计；弹幕“强图/弱图”口径属主观层，不在上表。</div>'
+        else:
+            body += '<div class="ok">样本不足：暂无官方地图战绩（CS 比赛结算后将自动累计）。</div>'
+        body += "</div>"
     mk = t.get("market", {})
     body += '<div class="card"><h2>三、盘口定位</h2>'
     body += ul([f"{k}：{esc(v)}" for k, v in mk.items()]) if mk else '<div class="ok">样本不足：暂无盘口定位记录。</div>'
@@ -434,8 +489,11 @@ def build_champion_linked(c: dict, comps: list[dict], matches: list[dict], playe
     import re as _re
     mid_map = {}
     for m in matches:
-        mid_map[m["id"]] = m
-        mid_map.setdefault(_re.sub(r"(_g\d+)$", "", m["id"]), m)
+        mid = m.get("id") or m.get("slug") or m.get("event_slug") or ""
+        if not mid:
+            continue
+        mid_map[mid] = m
+        mid_map.setdefault(_re.sub(r"(_g\d+)$", "", mid), m)
     rel_matches = []
     for a in anchors:
         mid = _re.sub(r"(_g\d+)$", "", a.get("match_id", ""))
@@ -559,6 +617,9 @@ def build_hub(teams, players, leagues, records, champions=None, compositions=Non
         gh = t.get("gray_history", {})
         body += f'<a class="item" href="intel_profile_team_{esc(t["id"])}.html"><span class="tag">{esc(t.get("league","?"))}</span><span class="t">{esc(t.get("name"))}</span><div class="d">提及 {esc(t.get("danmu",{}).get("mentions_total","不足"))} · 信任 {esc(t.get("trust","未定"))} · 灰信号 {esc(gh.get("total_signals",0))} · 更新 {esc(t.get("updated","?"))}</div></a>'
     body += "</div>"
+    body += ('<a class="item" href="intel_map_records.html"><span class="tag">CS2</span>'
+             '<span class="t">地图战绩 · 队伍 × 图池官方统计</span>'
+             '<div class="d">每队每图场次 / 胜率 / 最近日期（来源 Liquipedia·HLTV·官方台账，随结算自动累计）</div></a>')
     body += '<div class="card"><h2>选手画像（' + str(len(players)) + "）</h2>"
     for p in sorted(players, key=lambda x: x.get("evidence_ts", ""), reverse=True):
         gh = p.get("gray_history", {})
@@ -581,6 +642,66 @@ def build_hub(teams, players, leagues, records, champions=None, compositions=Non
     return page("弹幕情报 · 画像库总览", "队伍 / 选手 / 联赛 / 英雄 / 体系长期画像 · C 型情报资产 · 每页可跨场复用", body)
 
 
+def build_map_records_page(map_stats: dict, records: list[dict]) -> str:
+    """CS2 队伍×地图官方战绩总览页（2026-09-08 新增用户出口）。"""
+    teams = sorted(map_stats, key=lambda t: -sum(m["played"] for m in map_stats[t].values()))
+    map_ids = [m for m in MAP_CN if any(m in map_stats[t] for t in map_stats)]
+    body = stats([
+        ("逐图记录", len(records)),
+        ("队伍数", len(teams)),
+        ("已覆盖地图", len(map_ids)),
+        ("数据来源", "官方 / Liquipedia / HLTV"),
+    ])
+    # 队伍×地图矩阵
+    if teams:
+        head = "<tr><th>地图</th>" + "".join(
+            f"<th>{esc(t)}</th>" for t in teams
+        ) + "</tr>"
+        rows = [head]
+        for mid in map_ids:
+            cells = ["<tr><td><b>" + esc(MAP_CN.get(mid, mid)) + "</b></td>"]
+            for t in teams:
+                st = map_stats[t].get(mid)
+                if not st:
+                    cells.append("<td class='dim'>—</td>")
+                    continue
+                rate = round(st["wins"] / st["played"] * 100) if st["played"] else 0
+                cells.append(
+                    f"<td><b>{st['wins']}W-{st['losses']}L</b><br>"
+                    f"<span class='dim'>{rate}% · {st.get('last_date','')[:5]}</span></td>"
+                )
+            rows.append("".join(cells) + "</tr>")
+        body += '<div class="card"><h2>一、队伍 × 地图矩阵（官方战绩）</h2><div style="overflow-x:auto"><table>' + "".join(rows) + "</table></div>"
+        body += '<div class="note">数字 = 胜场 W / 负场 L；胜率与最近日期取自官方台账。样本少时慎用，跨队样本量不同不做横向强度断言。</div></div>'
+    else:
+        body += '<div class="card"><h2>一、队伍 × 地图矩阵（官方战绩）</h2><div class="ok">样本不足：暂无官方逐图记录，CS 比赛结算后自动累计。</div></div>'
+    # 逐场明细
+    if records:
+        rows = ["<tr><th>日期</th><th>对阵</th><th>地图</th><th>比分</th><th>胜者</th><th>来源</th></tr>"]
+        for r in sorted(records, key=lambda x: str(x.get("date", "")), reverse=True):
+            sa, sb = r.get("score_a"), r.get("score_b")
+            score = f"{sa}:{sb}" if sa is not None else "—"
+            rows.append(
+                "<tr><td>" + esc(r.get("date", "")) + "</td><td>"
+                + esc(f"{r.get('team_a')} vs {r.get('team_b')}") + "</td><td>"
+                + esc(MAP_CN.get(r.get("map", ""), r.get("map", ""))) + "</td><td>"
+                + esc(score) + "</td><td>" + esc(r.get("winner", "")) + "</td><td>"
+                + esc(r.get("source", "")) + "</td></tr>"
+            )
+        body += '<div class="card"><h2>二、逐场地图记录（官方）</h2><table>' + "".join(rows) + "</table></div>"
+    else:
+        body += '<div class="card"><h2>二、逐场地图记录（官方）</h2><div class="ok">暂无记录。</div></div>'
+    body += (
+        '<div class="card"><h2>三、口径说明</h2>'
+        '<div class="note">· 本页为“事实层”：队伍 × 地图胜负只来自官方/Liquipedia/HLTV/官方标记台账，'
+        '弹幕“强图/弱图”属主观层，记录在 maps.json anchors，不混入本表。<br>'
+        '· 历史回填只收“可确认胜者”的记录（横扫 + 显式胜者），2:1 无显式胜者的分数串待官方逐图源回填，'
+        '因此目前覆盖率小于全部已打场次。<br>'
+        '· 样本量不足时请勿把胜率当强度结论（当日状态 &gt; 历史图池，2026-08-30 教训）。</div></div>'
+    )
+    return page("CS2 地图战绩 · 队伍×图池", "官方逐图记录累计 · 每队每图场次/胜率/最近日期 · 事实层（弹幕锚点在画像库另列）", body)
+
+
 def main() -> None:
     teams = load("teams.json")["teams"]
     players = load("players.json")["players"]
@@ -590,13 +711,27 @@ def main() -> None:
     records = load("gray_signals.json")["records"]
     champions = load("champions.json")["champions"]
     compositions = load("compositions.json")["compositions"]
+    try:
+        map_doc = load("map_records.json")
+        map_stats = map_doc.get("team_map_stats", {})
+        map_records = map_doc.get("records", [])
+    except FileNotFoundError:
+        map_stats = {}
+        map_records = []
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "intel_profiles_index.html").write_text(build_hub(teams, players, leagues, records, champions, compositions), encoding="utf-8")
     (OUT / "intel_gray_verification_stats.html").write_text(build_verification(records), encoding="utf-8")
+    (OUT / "intel_map_records.html").write_text(
+        build_map_records_page(map_stats, map_records), encoding="utf-8"
+    )
     player_ids = {p["id"] for p in players}
     team_ids = {t["id"] for t in teams}
     for t in teams:
-        (OUT / f"intel_profile_team_{t['id']}.html").write_text(build_team(t, matches, entities, leagues, players, champions, compositions), encoding="utf-8")
+        (OUT / f"intel_profile_team_{t['id']}.html").write_text(
+            build_team(t, matches, entities, leagues, players, champions,
+                       compositions, map_stats=map_stats),
+            encoding="utf-8",
+        )
     for p in players:
         (OUT / f"intel_profile_player_{p['id']}.html").write_text(build_player(p, matches, entities, champions, team_ids), encoding="utf-8")
     for l in leagues:

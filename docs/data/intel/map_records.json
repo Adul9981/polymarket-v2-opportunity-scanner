@@ -1,0 +1,403 @@
+{
+ "schema_version": "1.0",
+ "description": "CS2 队伍×地图官方战绩（2026-09-08 建立）：records=逐场逐图胜负（仅官方可确认），team_map_stats=按队伍×地图聚合（场次/胜/负/胜率/最近日期）。事实层只信官方/Liquipedia/HLTV/官方标记台账；弹幕强图口径仍在 maps.json 的 anchors。",
+ "updated_at": "2026-10-24 21:07:57",
+ "records": [
+  {
+   "match_id": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "date": "2026-08-24",
+   "event": "EWC CS2",
+   "map": "ancient",
+   "team_a": "Spirit",
+   "team_b": "FUT",
+   "score_a": 16,
+   "score_b": 14,
+   "winner": "Spirit",
+   "source": "虎扑赛后帖+直播吧逐图战报",
+   "verified": true
+  },
+  {
+   "match_id": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "date": "2026-08-24",
+   "event": "EWC CS2",
+   "map": "anubis",
+   "team_a": "Spirit",
+   "team_b": "FUT",
+   "score_a": 16,
+   "score_b": 13,
+   "winner": "Spirit",
+   "source": "虎扑赛后帖+直播吧逐图战报",
+   "verified": true
+  },
+  {
+   "match_id": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "date": "2026-08-24",
+   "event": "EWC CS2",
+   "map": "cache",
+   "team_a": "Spirit",
+   "team_b": "FUT",
+   "score_a": 10,
+   "score_b": 13,
+   "winner": "FUT",
+   "source": "虎扑赛后帖+直播吧逐图战报",
+   "verified": true
+  },
+  {
+   "match_id": "2026-08-23_ewc_cs2_final_spirit_fut",
+   "date": "2026-08-24",
+   "event": "EWC CS2",
+   "map": "nuke",
+   "team_a": "Spirit",
+   "team_b": "FUT",
+   "score_a": 1,
+   "score_b": 0,
+   "winner": "Spirit",
+   "source": "虎扑赛后帖+直播吧逐图战报",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-lgc-fut-2026-08-27",
+   "date": "2026-08-27",
+   "event": "CS2 · BLAST Open Porto Group B",
+   "map": "ancient",
+   "team_a": "Legacy",
+   "team_b": "FUT",
+   "score_a": 13,
+   "score_b": 10,
+   "winner": "Legacy",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-lgc-fut-2026-08-27",
+   "date": "2026-08-27",
+   "event": "CS2 · BLAST Open Porto Group B",
+   "map": "dust2",
+   "team_a": "Legacy",
+   "team_b": "FUT",
+   "score_a": 13,
+   "score_b": 11,
+   "winner": "Legacy",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-mouz-9z-2026-08-27",
+   "date": "2026-08-27",
+   "event": "CS2 · BLAST Open Porto Group B",
+   "map": "cache",
+   "team_a": "MOUZ",
+   "team_b": "9z",
+   "score_a": 13,
+   "score_b": 4,
+   "winner": "MOUZ",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-mouz-9z-2026-08-27",
+   "date": "2026-08-27",
+   "event": "CS2 · BLAST Open Porto Group B",
+   "map": "nuke",
+   "team_a": "MOUZ",
+   "team_b": "9z",
+   "score_a": 13,
+   "score_b": 7,
+   "winner": "MOUZ",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-pain-navi-2026-08-28",
+   "date": "2026-08-28",
+   "event": "CS2 · BLAST Open Porto Group A",
+   "map": "mirage",
+   "team_a": "paiN",
+   "team_b": "NAVI",
+   "score_a": 11,
+   "score_b": 13,
+   "winner": "NAVI",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-pain-navi-2026-08-28",
+   "date": "2026-08-28",
+   "event": "CS2 · BLAST Open Porto Group A",
+   "map": "nuke",
+   "team_a": "paiN",
+   "team_b": "NAVI",
+   "score_a": 9,
+   "score_b": 13,
+   "winner": "NAVI",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-spirit-g2-2026-08-28",
+   "date": "2026-08-28",
+   "event": "CS2 · BLAST Open Porto Group A（UB 半决赛1）",
+   "map": "cache",
+   "team_a": "Spirit",
+   "team_b": "G2",
+   "score_a": 13,
+   "score_b": 9,
+   "winner": "Spirit",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  },
+  {
+   "match_id": "cs2-spirit-g2-2026-08-28",
+   "date": "2026-08-28",
+   "event": "CS2 · BLAST Open Porto Group A（UB 半决赛1）",
+   "map": "dust2",
+   "team_a": "Spirit",
+   "team_b": "G2",
+   "score_a": 13,
+   "score_b": 6,
+   "winner": "Spirit",
+   "source": "matches.json result_inferred（官方标记）",
+   "verified": true
+  }
+ ],
+ "team_map_stats": {
+  "Spirit": {
+   "ancient": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-24",
+    "recent": [
+     "2026-08-24"
+    ],
+    "winrate": 1.0
+   },
+   "anubis": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-24",
+    "recent": [
+     "2026-08-24"
+    ],
+    "winrate": 1.0
+   },
+   "cache": {
+    "played": 2,
+    "wins": 1,
+    "losses": 1,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28",
+     "2026-08-24"
+    ],
+    "winrate": 0.5
+   },
+   "nuke": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-24",
+    "recent": [
+     "2026-08-24"
+    ],
+    "winrate": 1.0
+   },
+   "dust2": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 1.0
+   }
+  },
+  "FUT": {
+   "ancient": {
+    "played": 2,
+    "wins": 0,
+    "losses": 2,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27",
+     "2026-08-24"
+    ],
+    "winrate": 0.0
+   },
+   "anubis": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-24",
+    "recent": [
+     "2026-08-24"
+    ],
+    "winrate": 0.0
+   },
+   "cache": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-24",
+    "recent": [
+     "2026-08-24"
+    ],
+    "winrate": 1.0
+   },
+   "nuke": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-24",
+    "recent": [
+     "2026-08-24"
+    ],
+    "winrate": 0.0
+   },
+   "dust2": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 0.0
+   }
+  },
+  "Legacy": {
+   "ancient": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 1.0
+   },
+   "dust2": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 1.0
+   }
+  },
+  "MOUZ": {
+   "cache": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 1.0
+   },
+   "nuke": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 1.0
+   }
+  },
+  "9z": {
+   "cache": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 0.0
+   },
+   "nuke": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-27",
+    "recent": [
+     "2026-08-27"
+    ],
+    "winrate": 0.0
+   }
+  },
+  "paiN": {
+   "mirage": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 0.0
+   },
+   "nuke": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 0.0
+   }
+  },
+  "NAVI": {
+   "mirage": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 1.0
+   },
+   "nuke": {
+    "played": 1,
+    "wins": 1,
+    "losses": 0,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 1.0
+   }
+  },
+  "G2": {
+   "cache": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 0.0
+   },
+   "dust2": {
+    "played": 1,
+    "wins": 0,
+    "losses": 1,
+    "last_date": "2026-08-28",
+    "recent": [
+     "2026-08-28"
+    ],
+    "winrate": 0.0
+   }
+  }
+ }
+}

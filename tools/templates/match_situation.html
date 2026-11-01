@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>比赛局势 · 弹幕情报库</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--muted:#6e6e73;--sub:#6e6e73;--line:#e5e5ea;--blue:#0a6ed1;--red:#ff3b30;--green:#34c759;--shadow:0 1px 2px rgba(0,0,0,.04),0 10px 34px rgba(0,0,0,.055)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
+.shell{max-width:1500px;margin:0 auto;padding:18px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:8px 4px 18px}
+.brand{display:flex;align-items:center;gap:11px}
+.brandmark{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:linear-gradient(145deg,#0a6ed1,#6d4aff);color:#fff;font-weight:800;font-size:18px;box-shadow:0 7px 18px rgba(10,110,209,.23)}
+.brand b{font-size:17px;letter-spacing:-.2px}
+.brand span{display:block;color:var(--muted);font-size:12px;margin-top:1px}
+.layout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:18px;align-items:start}
+.sidebar{position:sticky;top:60px;background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:20px;padding:16px;box-shadow:var(--shadow)}
+.sidebar h2{font-size:12px;color:var(--muted);font-weight:650;text-transform:uppercase;letter-spacing:.07em;margin:0 0 10px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px}
+.field select{width:100%;border:1px solid #d8d8de;background:#fafafa;border-radius:11px;padding:10px 11px;color:var(--ink);outline:none;font:inherit}
+select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(10,110,209,.1)}
+.main{min-width:0}
+.panel{background:var(--card);border:1px solid rgba(0,0,0,.06);border-radius:20px;padding:18px;box-shadow:var(--shadow);margin-bottom:14px}
+.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:13px}
+.panel-head h3{font-size:18px;letter-spacing:-.4px;margin:0}
+.panel-head p{color:var(--muted);font-size:12px;margin:2px 0 0}
+.updated{color:var(--muted);font-size:11px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);line-height:1.5;white-space:pre-line}
+.empty{padding:28px 8px;color:var(--muted);font-size:14px;text-align:center}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+.tab{border:1px solid #d8d8de;background:#fafafa;border-radius:11px;padding:8px 13px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;text-align:left;font-family:inherit}
+.tab:hover{color:var(--blue);border-color:var(--blue)}
+.tab[aria-selected="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.tab .map{display:block;font-size:10px;font-weight:400;opacity:.85;margin-top:1px}
+.tab .st{display:inline-block;font-size:9px;font-weight:650;padding:0 5px;border-radius:6px;margin-left:5px;vertical-align:1px}
+.st.live{background:var(--green);color:#fff}
+.st.played{background:#86868b;color:#fff}
+.st.upcoming{background:var(--line);color:var(--muted)}
+.sec-h{font-size:12px;font-weight:700;color:var(--muted);margin:4px 0 8px;letter-spacing:.01em}
+.sec{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.note{color:var(--muted);font-size:12px;margin-top:8px}
+.gamenote{color:var(--muted);font-size:13px;padding:12px 0}
+@media(max-width:1180px){.layout{grid-template-columns:250px minmax(0,1fr)}}
+@media(max-width:780px){.layout{display:block}.sidebar{position:static}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand"><div class="brandmark">势</div><div><b>比赛局势</b><span>实时两队胜率 · 虎扑选手评分 · 每 30 秒自动刷新</span></div></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>选择比赛</h2>
+      <div class="field"><label for="gameSelect">游戏</label><select id="gameSelect">
+        <option value="">全部游戏</option>
+        <option value="lol">英雄联盟</option>
+        <option value="cs2">CS2</option>
+      </select></div>
+      <div class="field"><label for="matchSelect">比赛</label><select id="matchSelect"></select></div>
+      <div class="updated" id="updatedAt">数据加载中…</div>
+    </aside>
+    <main class="main" id="content">
+      <div class="panel"><div class="empty">数据加载中…</div></div>
+    </main>
+  </div>
+</div>
+<script>
+(function () {
+  var DATA_URL = "situation_live.json";
+  var REFRESH_MS = 30000;
+  var gameSelect = document.getElementById("gameSelect");
+  var matchSelect = document.getElementById("matchSelect");
+  var updatedAt = document.getElementById("updatedAt");
+  var content = document.getElementById("content");
+  var data = null;
+  var state = { game: "", matchId: null, gi: 0 };
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function gameLabel(g) {
+    return g === "lol" ? "英雄联盟" : (g === "cs2" ? "CS2" : "-");
+  }
+
+  function bjDate(iso) {
+    var t = Date.parse(iso);
+    if (isNaN(t)) return "";
+    var bj = new Date(t + 8 * 3600 * 1000); // UTC -> 北京（UTC+8），读作 UTC 各段
+    return bj.getUTCFullYear() + "-" + String(bj.getUTCMonth() + 1).padStart(2, "0") +
+      "-" + String(bj.getUTCDate()).padStart(2, "0");
+  }
+
+  function matchesOfGame(game) {
+    var all = (data && data.matches) || [];
+    if (!game) return all; // 全部游戏
+    return all.filter(function (m) { return m.game === game; });
+  }
+
+  function stateLabel(st) {
+    return st === "live" ? "进行中" : (st === "played" ? "已结束" : "待开打");
+  }
+
+  function renderContent() {
+    if (!data) {
+      content.innerHTML = '<div class="panel"><div class="empty">数据加载中…</div></div>';
+      return;
+    }
+    var m = matchesOfGame(state.game).filter(function (x) { return x.id === state.matchId; })[0];
+    if (!m) {
+      content.innerHTML =
+        '<div class="panel"><div class="panel-head"><div><h3>暂无比赛</h3>' +
+        '<p>' + (state.game ? gameLabel(state.game) + " 下暂无进行中的比赛" : "暂无进行中的比赛") + "</p></div></div>" +
+        '<div class="gamenote">换个游戏或稍后刷新。</div></div>';
+      return;
+    }
+    if (!state.gi || !m.games.some(function (g) { return g.gi === state.gi; })) {
+      state.gi = m.live_gi || 1;
+    }
+    var g = m.games.filter(function (x) { return x.gi === state.gi; })[0] || m.games[0];
+
+    var tabsHtml = m.games.map(function (gg) {
+      return '<button type="button" class="tab" data-gi="' + gg.gi + '"' +
+        (gg.gi === state.gi ? ' aria-selected="true"' : "") + '>G' + gg.gi +
+        (gg.map_name ? '<span class="map">' + esc(gg.map_name) + "</span>" : "") +
+        '<span class="st ' + gg.state + '">' + stateLabel(gg.state) + "</span></button>";
+    }).join("");
+
+    var body;
+    if (g && g.ratings_html) {
+      body = '<div class="sec"><div class="sec-h">队员评分（虎扑·实时）· G' + g.gi +
+        (g.map_name ? " " + esc(g.map_name) : "") + "</div>" + g.ratings_html + "</div>";
+    } else {
+      var note = g && g.state === "played"
+        ? "该局已结束，评分待回填"
+        : (g && g.state === "upcoming" ? "待开打，暂无评分" : "暂未获取到本局选手评分");
+      body = '<div class="sec"><div class="gamenote">' + note + "</div></div>";
+    }
+
+    var gl = gameLabel(m.game);
+    var lg = m.league || "";
+    var meta = gl;
+    if (lg && lg.toLowerCase() !== m.game && lg !== gl) meta += " · " + esc(lg);
+    meta += " · " + esc(m.start_bj || "") + "（北京时间）";
+
+    content.innerHTML =
+      '<div class="panel">' +
+        '<div class="panel-head"><div><h3>' + esc(m.teams[0]) + " vs " + esc(m.teams[1]) + "</h3>" +
+        "<p>" + meta + "</p></div></div>" +
+        '<div class="sec-h">比赛小局</div>' +
+        '<div class="tabs">' + tabsHtml + "</div>" +
+        '<div class="sec-h">两队胜率（观众口径·非结论）· G' + g.gi + "</div>" +
+        (g.win_html || '<div class="gamenote">暂无胜率样本</div>') +
+        body +
+      "</div>";
+  }
+
+  function renderMatchSelector() {
+    var list = matchesOfGame(state.game);
+    matchSelect.innerHTML = "";
+    if (!list.length) {
+      var o0 = document.createElement("option");
+      o0.value = "";
+      o0.textContent = "暂无进行中的比赛";
+      matchSelect.appendChild(o0);
+      state.matchId = null;
+      state.gi = 0;
+      renderContent();
+      return;
+    }
+    var sorted = list.slice().sort(function (a, b) {
+      return String(a.start_time || "").localeCompare(String(b.start_time || ""));
+    });
+    var groups = {};
+    sorted.forEach(function (m) {
+      var d = bjDate(m.start_time) || "未定";
+      if (!groups[d]) groups[d] = [];
+      groups[d].push(m);
+    });
+    Object.keys(groups).sort().forEach(function (d) {
+      var og = document.createElement("optgroup");
+      og.label = d;
+      groups[d].forEach(function (m) {
+        var o = document.createElement("option");
+        o.value = m.id;
+        var time = (m.start_bj || "").split(" ")[1] || "";
+        o.textContent = m.teams[0] + " vs " + m.teams[1] + (time ? " · " + time : "");
+        og.appendChild(o);
+      });
+      matchSelect.appendChild(og);
+    });
+    var stillThere = sorted.some(function (m) { return m.id === state.matchId; });
+    if (!stillThere) state.matchId = sorted[0].id;
+    matchSelect.value = state.matchId;
+    renderContent();
+  }
+
+  function renderUpdated() {
+    if (!data) { updatedAt.textContent = "数据加载中…"; return; }
+    updatedAt.textContent = "数据更新于 " + data.updated_at +
+      "\n进行中比赛 " + (data.matches || []).length + " 场";
+  }
+
+  function load() {
+    fetch(DATA_URL + "?_=" + Date.now(), { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (j) { data = j; renderMatchSelector(); renderUpdated(); })
+      .catch(function (e) {
+        if (!data) {
+          content.innerHTML = "<div class='panel'><div class='empty'>数据加载失败，稍后自动重试</div></div>";
+          updatedAt.textContent = "数据加载失败：" + e.message;
+        }
+      });
+  }
+
+  gameSelect.addEventListener("change", function () {
+    state.game = gameSelect.value;
+    state.matchId = null;
+    state.gi = 0;
+    renderMatchSelector();
+  });
+  matchSelect.addEventListener("change", function () {
+    state.matchId = matchSelect.value;
+    state.gi = 0;
+    renderContent();
+  });
+  content.addEventListener("click", function (e) {
+    var b = e.target.closest(".tab");
+    if (!b || !content.contains(b)) return;
+    state.gi = parseInt(b.getAttribute("data-gi"), 10);
+    renderContent();
+  });
+
+  load();
+  setInterval(load, REFRESH_MS);
+})();
+</script>
+</body>
+</html>

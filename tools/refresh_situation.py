@@ -91,28 +91,81 @@ def _replace_block(html: str, begin: str, end: str, new_block: str) -> str | Non
     return pat.sub(lambda _: new_block, html)
 
 
-def _win_block(mid: str, gi: int, teams: list[str], files: list[Path], game: str | None = None) -> str | None:
-    """本小局胜率块（[本局起点 -> 现在] 重算）；切片为 0/失败返回 None（保留旧值）。"""
+_SITUATION_CARD_OPEN = '<div class="card"><h2><span class="no">2</span>比赛局势</h2>'
+_SITPOLL_RE = re.compile(r"<script>.*?__sitPoll.*?</script>", re.DOTALL)
+
+
+def _ensure_poll(html: str) -> tuple[str, bool]:
+    """进行中页回填：给比赛局势卡补 #situation-card id + 注入/升级 60s 轮询脚本（幂等）。
+
+    仅对进行中的 bp/mid 页调用（end 页冻结、不注入）。旧页（改前生成）卡无 id、无脚本，
+    这里补上；新页已含则跳过（防重入守卫 + 幂等判断）。
+    2026-10-31：已含旧版脚本（?sit= 版，无单调守卫）则就地升级为最新脚本。
+    返回 (新 html, 是否改动)。
+    """
+    changed = False
+    # 1) 旧页比赛局势卡无 id -> 补上（锚点由 intel_html.card 确定性产出，安全）
+    if 'id="situation-card"' not in html and _SITUATION_CARD_OPEN in html:
+        html = html.replace(
+            _SITUATION_CARD_OPEN,
+            '<div class="card" id="situation-card"><h2><span class="no">2</span>比赛局势</h2>',
+            1,
+        )
+        changed = True
+    # 2) 注入或升级轮询脚本
+    script = render_node_page.situation_poll_script()
+    if "__sitPoll" not in html:
+        # 无脚本 -> 注入新脚本（须卡已有 id，否则轮询无目标）
+        if 'id="situation-card"' in html:
+            if "</body>" in html:
+                html = html.replace("</body>", script + "</body>", 1)
+            elif "</html>" in html:
+                html = html.replace("</html>", script + "</html>", 1)
+            else:
+                html += script
+            changed = True
+    else:
+        # 已有脚本 -> 若非最新版则就地替换（升级旧 ?sit= 版到单调守卫版）
+        m = _SITPOLL_RE.search(html)
+        if m and m.group(0) != script:
+            html = html.replace(m.group(0), script, 1)
+            changed = True
+    return html, changed
+
+
+def _win_block(
+    mid: str,
+    gi: int,
+    teams: list[str],
+    files: list[Path],
+    game: str | None = None,
+    ratings: dict | None = None,
+) -> str | None:
+    """本小局胜率块（[本局起点 -> 现在] 重算，三档，2026-11-01）；无法确定窗口返回 None（保留旧值）。
+
+    无弹幕切片也照常算（win_signal 空行 -> total=0），让 tiered 回退到评分 70/30 或 50/50。
+    """
     game_start = game_start_iso(mid, gi)
     if not game_start:
         return None
     slug_id = re.sub(r"[^a-zA-Z0-9_-]", "_", mid)
     tmp = vp.SLICE_DIR / f"{slug_id}_g{gi}_situation.jsonl"
-    n = vp.slice_rows(game_start, files, tmp, "")
-    if n <= 0:
-        return None
+    vp.slice_rows(game_start, files, tmp, "")
     try:
         rows = [json.loads(ln) for ln in tmp.read_text(encoding="utf-8").splitlines() if ln.strip()]
         # 虎扑首发阵容动态折算选手表态（拿不到则降级静态 PLAYER_TEAM，danmu_intel 内部兜底）
         ws = danmu_intel.win_signal(rows, teams, game=game, player_teams=vp.fetch_lineup(mid))
     except Exception:  # noqa: BLE001
-        return None
-    return render_node_page.situation_win_block(ws, teams) if ws is not None else None
+        ws = None
+    return render_node_page.situation_win_block_tiered(ws, ratings, teams)
 
 
-def _rat_block(mid: str, gi: int, teams: list[str]) -> str | None:
+def _rat_block(
+    mid: str, gi: int, teams: list[str], ratings: dict | None = None
+) -> str | None:
     """本小局评分块；无评分/拉取失败返回 None（不回写"暂无"，避免用空覆盖已有评分）。"""
-    ratings = vp.fetch_ratings(mid, gi)
+    if ratings is None:
+        ratings = vp.fetch_ratings(mid, gi)
     if not ratings or not (ratings or {}).get("players"):
         return None
     return render_node_page.situation_ratings_block(ratings, teams)
@@ -124,8 +177,13 @@ def _refresh_pages(
     phases: tuple[str, ...],
     new_win: str | None = None,
     new_rat: str | None = None,
+    ensure_poll: bool = False,
 ) -> int:
-    """就地替换若干节点页的胜率/评分子块，返回实际更新的页面数。"""
+    """就地替换若干节点页的胜率/评分子块，返回实际更新的页面数。
+
+    ensure_poll=True 时（仅进行中 bp/mid）额外回填 #situation-card id + 60s 轮询脚本
+    （幂等），让改前生成的旧页也获得实时刷新能力。
+    """
     pages = _node_pages(mid, gi)
     updated = 0
     for phase in phases:
@@ -145,6 +203,8 @@ def _refresh_pages(
             html = _replace_block(
                 html, render_node_page._RAT_BEGIN, render_node_page._RAT_END, new_rat
             ) or html
+        if ensure_poll:
+            html, _ = _ensure_poll(html)
         if html == orig:
             continue
         try:
@@ -175,10 +235,13 @@ def refresh_match(m: dict, all_files: list[Path]) -> int:
                 if new_rat is not None:
                     updated += _refresh_pages(mid, gi, ("bp", "mid", "end"), new_rat=new_rat)
             continue
-        # 进行中：胜率 + 评分都实时刷新（本局结束前）
-        new_win = _win_block(mid, gi, teams, files, game)
-        new_rat = _rat_block(mid, gi, teams)
-        updated += _refresh_pages(mid, gi, ("bp", "mid"), new_win=new_win, new_rat=new_rat)
+        # 进行中：胜率 + 评分都实时刷新（本局结束前）；评分拉一次供胜率三档与评分块共用
+        ratings = vp.fetch_ratings(mid, gi)
+        new_win = _win_block(mid, gi, teams, files, game, ratings)
+        new_rat = _rat_block(mid, gi, teams, ratings)
+        updated += _refresh_pages(
+            mid, gi, ("bp", "mid"), new_win=new_win, new_rat=new_rat, ensure_poll=True
+        )
         break  # 只有一个小局在打，更高局号尚未生成
     return updated
 

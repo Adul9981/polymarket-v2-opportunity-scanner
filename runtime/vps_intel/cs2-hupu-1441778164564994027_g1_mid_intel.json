@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "total": 0,
+    "active_users": 0,
+    "window_utc": [
+      "等待首条弹幕",
+      "等待首条弹幕"
+    ],
+    "density_per_min": 0.0,
+    "sample_status": "insufficient"
+  },
+  "teams": {},
+  "players": {},
+  "odds_discussion": {
+    "count": 0,
+    "samples": []
+  },
+  "situation": {
+    "count": 0,
+    "samples": []
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [],
+  "narrative": {
+    "consensus": {},
+    "timeline": [],
+    "turning_points": []
+  },
+  "neutral_salvage": [],
+  "top_users": [],
+  "win_signal": {
+    "team_a": "FaZe",
+    "team_b": "BC.Game",
+    "count_a": 0,
+    "count_b": 0,
+    "total": 0,
+    "pct_a": null,
+    "pct_b": null,
+    "sample_status": "insufficient",
+    "samples_a": [],
+    "samples_b": [],
+    "threshold": 10,
+    "basis": "cumulative",
+    "window_seconds": 300
+  },
+  "opinion_clusters": {
+    "clusters": [],
+    "conclusion": "样本不足（无有效弹幕）"
+  }
+}

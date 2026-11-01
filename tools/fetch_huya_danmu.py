@@ -146,17 +146,37 @@ async def collect(
     count = 0
     if not room_info["page_live"]:
         # offline room: heartbeat + offline_waiting, do not connect (the lib
-        # crashes with NoneType.group() on offline pages)
+        # crashes with NoneType.group() on offline pages). Re-check live status
+        # every ~60s so a room that goes live mid-session is picked up
+        # (2026-10-30 fix: CSBOY 早上未开播、晚上开播 MOUZ-FURIA，采集器一直傻等).
+        recheck_sec = 60.0
+        last_check = time.time()
         try:
             while not seconds or time.time() - start < seconds:
                 await asyncio.sleep(10)
                 status["heartbeat_at"] = utc_now()
                 status["state"] = "offline_waiting"
                 status["warning"] = "页面显示未开播，继续等待；不得判定为无弹幕"
-                write_status(status_path, status)
+                if time.time() - last_check >= recheck_sec:
+                    last_check = time.time()
+                    try:
+                        fresh = await fetch_room_info(url)
+                    except Exception:
+                        write_status(status_path, status)
+                        continue
+                    room_info = fresh
+                    status.update(room_info)
+                    status["heartbeat_at"] = utc_now()
+                    if room_info["page_live"]:
+                        status["state"] = "live_waiting_danmaku"
+                        status["warning"] = None
+                        write_status(status_path, status)
+                        break
+                    write_status(status_path, status)
         except KeyboardInterrupt:
             pass
-        return 0
+        if not room_info["page_live"]:
+            return 0
 
     q: asyncio.Queue = asyncio.Queue()
     dc = DanmakuClient(url, q)

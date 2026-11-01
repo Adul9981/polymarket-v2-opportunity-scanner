@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import argparse
 import datetime
 import json
 import os
@@ -26,22 +27,86 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from add_favicon import inject_all as favicon_inject  # noqa: E402
 from add_paywall import inject_all as paywall_inject  # noqa: E402
 from add_paywall import page_key as paywall_page_key  # noqa: E402
-from speedcard_consistency import check_page as speedcard_check  # noqa: E402
 from add_site_nav import inject_all as nav_inject  # noqa: E402
 from add_stats_track import inject_all as track_inject  # noqa: E402
 
 ROOT = Path("/opt/danmu-intel")
 REPORTS = ROOT / "reports"
 REPO = ROOT / "site_repo"
+WEBROOT = Path("/var/www/danmu-pulse")
+FREE_MODE_FLAG = ROOT / "runtime" / "free_mode.flag"
 KEY = Path.home() / ".ssh" / "github_deploy"
 GIT_SSH = f"ssh -i {KEY} -o StrictHostKeyChecking=accept-new"
-PATTERNS = ("intel_danmu_*.html", "intel_soop_*.html", "intel_profile_*.html", "intel_gray_*.html", "match_*.html", "case_*.html")
+PATTERNS = ("intel_danmu_*.html", "intel_soop_*.html", "match_*.html", "case_*.html")
 
 
 def git(repo: Path, *args: str) -> subprocess.CompletedProcess:
     env = dict(os.environ)
     env["GIT_SSH_COMMAND"] = GIT_SSH
     return subprocess.run(["git", "-C", str(repo), *args], env=env, capture_output=True, text=True)
+
+
+def free_mode() -> bool:
+    """2026-09-08 全公开模式：runtime/free_mode.flag 存在 = 会员系统关闭、全员公开。
+    删除 flag 即恢复付费墙（free=False 重新注入）。"""
+    try:
+        return FREE_MODE_FLAG.exists()
+    except OSError:
+        return False
+
+
+def serve_webroot(repo: Path, webroot: Path) -> int:
+    """把审计通过后的站点目录同步到 nginx webroot（秒级直出，2026-09-02 M1）。
+
+    同步规则：repo 为源（含注入后的 nav/favicon/打点/付费墙），webroot 为镜像；
+    删除 webroot 中已不存在的旧项（含被清理的 G5 页），保证一致性。
+    """
+    try:
+        if not repo.exists():
+            print(f"[publish] serve_webroot: 源目录不存在 {repo}", flush=True)
+            return 0
+        webroot.mkdir(parents=True, exist_ok=True)
+        # 清理 webroot 中 repo 已删除的旧项
+        for item in webroot.iterdir():
+            if item.name == ".git":
+                continue
+            if not (repo / item.name).exists():
+                if item.is_dir():
+                    shutil.rmtree(item, ignore_errors=True)
+                else:
+                    item.unlink(missing_ok=True)
+        # 同步 repo -> webroot（全量复制，同机本地，5 分钟一次可接受）
+        for item in repo.iterdir():
+            if item.name == ".git":
+                continue
+            dst = webroot / item.name
+            if item.is_dir():
+                if dst.exists():
+                    shutil.rmtree(dst)
+                shutil.copytree(item, dst)
+            else:
+                shutil.copy2(item, dst)
+        # 2026-09-02 M3：为已上线节点的状态文件补 published_at（SLA 四段时间戳）
+        now = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+        for stf in (ROOT / "runtime" / "vps_intel").glob("*_g*.json"):
+            if "_intel" in stf.name or "fail" in stf.name:
+                continue
+            try:
+                d = json.loads(stf.read_text(encoding="utf-8"))
+                rp = d.get("report", "")
+                if rp and Path(rp).exists() and (webroot / "intel" / Path(rp).name).exists():
+                    # 2026-09-02 修复：只补首次发布（published_at=快报上线时刻），
+                    # 禁止每次循环覆盖（历史节点曾被刷成当前时间，失真）
+                    if "published_at" not in d:
+                        d["published_at"] = now
+                    stf.write_text(json.dumps(d, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception:  # noqa: BLE001
+                pass
+        print(f"[publish] served webroot {webroot}", flush=True)
+        return 1
+    except Exception as e:  # noqa: BLE001
+        print(f"[publish] serve_webroot failed: {e}", flush=True)
+        return 0
 
 
 def regen_today_page(repo: Path) -> None:
@@ -103,6 +168,41 @@ def rebuild_match_shells() -> int:
             pass
     print(f"[publish] rebuilt {len(seen)} match shells", flush=True)
     return len(seen)
+
+
+def build_situation_json() -> None:
+    """跑 build_situation_page.py 生成 data/situation_live.json（规则层实时局势）。
+
+    独立「比赛局势」页（match_situation.html）的实时数据源：胜率=累积弹幕口径、
+    评分=虎扑按小局实时。与情报页比赛局势栏（refresh_situation.py 注入节点页）互不干扰。
+    """
+    try:
+        env = dict(os.environ)
+        subprocess.run(
+            [str(ROOT / ".venv" / "bin" / "python"),
+             str(ROOT / "tools" / "build_situation_page.py"), "--once"],
+            cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=120,
+        )
+    except Exception as e:  # noqa: BLE001
+        print(f"[publish] situation json build failed (non-fatal): {e}")
+
+
+def copy_situation_files(repo: Path) -> int:
+    """把比赛局势页 + 数据 JSON 同步进站点仓库（静态页幂等覆盖，JSON 每轮最新）。"""
+    n = 0
+    target = repo / "intel"
+    target.mkdir(parents=True, exist_ok=True)
+    src_page = ROOT / "tools" / "templates" / "match_situation.html"
+    if src_page.exists():
+        shutil.copy2(src_page, target / "match_situation.html")
+        n += 1
+    src_json = ROOT / "data" / "situation_live.json"
+    if src_json.exists():
+        shutil.copy2(src_json, target / "situation_live.json")
+        n += 1
+    if n:
+        print(f"[publish] situation page/json synced ({n} files)", flush=True)
+    return n
 
 
 def sync_game_status(repo: Path) -> None:
@@ -251,6 +351,52 @@ def finished_keys() -> frozenset[str]:
     return frozenset(out)
 
 
+MIRROR_MIN_INTERVAL = 600  # 镜像推送最小间隔（秒，2026-10-11 固化）
+_MIRROR_STATE = ROOT / "runtime" / "vps_mirror_last_push.txt"
+# "每轮必变"的易变文件：实时刷新页的统计计数、空闲心跳。
+# 它们单独变化不构成"站点内容变化"，不值得每次都触发 GitHub Pages 重建。
+_VOLATILE_NAMES = ("intel_danmu_live_vps_",)
+_VOLATILE_EXACT = (".heartbeat", "situation_live.json")
+
+
+def volatile_path(p: str) -> bool:
+    """改动是否属于易变文件（实时页/心跳）。"""
+    name = Path(p).name
+    return name in _VOLATILE_EXACT or any(name.startswith(v) for v in _VOLATILE_NAMES)
+
+
+def _last_mirror_push() -> float:
+    try:
+        return float(_MIRROR_STATE.read_text(encoding="utf-8").strip())
+    except (OSError, ValueError):
+        return 0.0
+
+
+def _mark_mirror_push() -> None:
+    try:
+        _MIRROR_STATE.parent.mkdir(parents=True, exist_ok=True)
+        _MIRROR_STATE.write_text(str(time.time()), encoding="utf-8")
+    except OSError:
+        pass
+
+
+def _clear_stale_index_lock(repo: Path) -> None:
+    """发布前清理陈旧 .git/index.lock。
+
+    教训 2026-10-26：git add/commit 被中断会留下 0 字节 index.lock，之后每次
+    git add 都因锁存在而失败（rc!=0）；脚本又不查 add/commit 返回码，导致每分钟
+    "pushed rc=0" 假成功、线上停更 4+ 小时。site_repo 只被本 oneshot 脚本触碰，
+    发布起点（fetch/rebase 已完成）残留的锁必为陈旧，直接删除兜底。
+    """
+    lock = repo / ".git" / "index.lock"
+    try:
+        if lock.exists():
+            lock.unlink()
+            print("[publish] 清理陈旧 index.lock", flush=True)
+    except OSError as e:  # noqa: BLE001
+        print(f"[publish] WARN: 清理 index.lock 失败 {e}", flush=True)
+
+
 def heartbeat(repo: Path) -> None:
     """空闲心跳：每 6 小时推一次提交，触发云端数据刷新兜底。
 
@@ -279,12 +425,27 @@ def audit_site(repo: Path) -> int:
     嵌入脚本每页 ≤1。任何一项异常即阻止本次发布。
     """
     bad: list[tuple[str, str]] = []
-    pro_re = re.compile(r"intel_danmu_.*_(pre|live|bp|g[1-9])(?:[_.].*)?\.html$", re.I)
+    pro_re = re.compile(
+        r"(?:intel_danmu_.*_(pre|live|bp|g[1-9])(?:[_.].*)?|intel_profile_.*)\.html$",
+        re.I,
+    )
     fslugs = finished_slugs()
     fkeys = finished_keys()
+    # 2026-08-30：测试/隐藏残留文件不参与审计、不随发布上线
+    # （教训：VPS 上 test_nav/权限测试遗留的 test space.html / .wtest_* 等
+    # 文件导致 SITE AUDIT FAIL，发布被卡数小时，今日/历史页全部停更）。
+    test_re = re.compile(r"(^|[\\/])[._]?(test|wtest|zz_site_test|permtest|tmp_test)", re.I)
     for p in repo.rglob("*.html"):
+        if p.name.startswith("._"):
+            continue
         rel = str(p.relative_to(repo))
-        t = p.read_text(encoding="utf-8", errors="ignore")
+        if test_re.search(rel):
+            continue
+        try:
+            t = p.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            print(f"[publish] audit skip non-utf8 file: {rel}", flush=True)
+            continue
         n = len(re.findall(r"<nav[^>]*>", t))
         if n != 1:
             bad.append((rel, f"nav={n}"))
@@ -301,12 +462,16 @@ def audit_site(repo: Path) -> int:
         finished = bool(
             (m and m.group(1).lower() in fslugs) or (pk and pk in fkeys)
         )
-        if pro_re.search(p.name) and not finished and "danmu_member_v1" not in t:
+        if not free_mode() and pro_re.search(p.name) and not finished and "danmu_member_v1" not in t:
             bad.append((rel, "缺付费墙"))
-        if "核心情报速览" in t:
-            bad_cats = speedcard_check(t)
-            if bad_cats:
-                bad.append((rel, f"速览卡与正文不一致:{bad_cats}"))
+    # 2026-09-02 M3：格式门禁（非阻塞）——旧格式/结构异常仅告警，不卡发布
+    fmt_bad = 0
+    for p in (repo / "intel").glob("intel_danmu_*_g*.html"):
+        s = p.read_text(encoding="utf-8", errors="ignore")
+        if "核心情报速览" in s or not re.search(r'class="no">\d+</span>', s):
+            fmt_bad += 1
+    if fmt_bad:
+        print(f"[publish] WARN: {fmt_bad} 页仍为旧格式/结构异常（非阻塞，仅告警）", flush=True)
     if bad:
         print(f"[publish] SITE AUDIT FAIL: {len(bad)} 项异常，阻止本次发布")
         for x in bad[:15]:
@@ -314,7 +479,14 @@ def audit_site(repo: Path) -> int:
     return len(bad)
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="发布弹幕情报到站点（nginx 直出 + GitHub Pages 镜像）")
+    ap.add_argument("--no-mirror", action="store_true",
+                    help="跳过 GitHub Pages 镜像 push（仅同步 nginx webroot）")
+    ap.add_argument("--no-serve", action="store_true",
+                    help="跳过 nginx webroot 同步（仅推 GitHub Pages 镜像）")
+    args = ap.parse_args(argv)
+
     if not KEY.exists():
         print("[publish] no deploy key, skip")
         return 1
@@ -351,17 +523,11 @@ def main() -> int:
         git(REPO, "rebase", "--abort", "-q")
         git(REPO, "reset", "--hard", "origin/main", "-q")
     sync_game_status(REPO)
-    # 速览卡 ↔ 正文一致性：先修源（reports）再复制，保证修复持久化，
-    # 避免"复制未修源 -> 每次发布都重复 LLM 改写"（2026-08-26 固化）。
-    subprocess.run(
-        [str(ROOT / ".venv" / "bin" / "python"),
-         str(ROOT / "tools" / "speedcard_consistency.py"),
-         "--fix", "--dir", str(REPORTS)],
-        cwd=str(ROOT), capture_output=True, text=True, timeout=600,
-    )
     target = REPO / "intel"
     target.mkdir(parents=True, exist_ok=True)
     rebuild_match_shells()  # 2026-08-27：节点生成后壳必须最新（防线上入口缺失）
+    build_situation_json()  # 独立比赛局势页的实时数据（规则层，零 AI）
+    copy_situation_files(REPO)  # 局势页 + situation_live.json 进站点仓库
     copied = 0
     for pattern in PATTERNS:
         for f in REPORTS.glob(pattern):
@@ -371,6 +537,7 @@ def main() -> int:
     # （教训 2026-08-25：注入在前、重建在后会把生成器旧导航重新推上线）
     regen_today_page(REPO)
     merge_settlements()
+    # 2026-10-24 用户定稿：不再生成/发布四维画像库、地图战绩、灰信号·验证闭环三个特征页（省算力）。
     # 队伍情报库自动沉淀（2026-08-26 用户定稿）：每场结算后自动把弹幕统计
     # 合并进 teams.json + TEAM_PROFILES.md（幂等，runtime/accumulated_matches.json 防重复）
     subprocess.run(
@@ -388,26 +555,22 @@ def main() -> int:
         cwd=str(ROOT), capture_output=True, text=True, timeout=120,
     )
     # 清理未进行的 G5 孤儿页（系列 3-1/2-0 结束，G5 从未开打）。
-    # 教训 2026-08-26：KT 3-2 BRO 打到 G5，g5_bp 是真节点，曾被无条件误删——
-    # 现在只清理"结果明确未打到 G5"的比赛页。
-    reached_g5: set[str] = set()
-    try:
-        md = json.loads((ROOT / "docs" / "data" / "intel" / "matches.json").read_text(encoding="utf-8"))
-        for m in md.get("matches", []):
-            r = (m.get("result_inferred") or "").replace(" ", "")
-            if "3:2" in r or "3-2" in r:
-                if m.get("event_slug"):
-                    reached_g5.add(str(m["event_slug"]))
-    except Exception:  # noqa: BLE001
-        pass
+    # 2026-09-02 修复：保留依据 = runtime/vps_intel 的 g5 状态文件（真实 G5 节点），
+    # 不再依赖 matches.json 文字比分（教训：NSEA-DNSC / KT.C-DRX.C / KT-BRO 真 G5
+    # 页面曾因 result_inferred 无 "3:2" 字样被误删）。
+    reached_g5_reports: set[str] = set()
+    for stf in (ROOT / "runtime" / "vps_intel").glob("*_g5_*.json"):
+        if "_intel" in stf.name or "fail" in stf.name:
+            continue
+        try:
+            rp = json.loads(stf.read_text(encoding="utf-8")).get("report", "")
+            if rp:
+                reached_g5_reports.add(Path(rp).name)
+        except Exception:  # noqa: BLE001
+            pass
     for p in (REPO / "intel").glob("intel_danmu_*_g5_*.html"):
-        if reached_g5:
-            try:
-                txt = p.read_text(encoding="utf-8", errors="ignore")
-                if any(s in txt for s in reached_g5):
-                    continue  # 系列打到 G5，保留真节点
-            except OSError:
-                pass
+        if p.name in reached_g5_reports:
+            continue
         try:
             p.unlink()
             print(f"[publish] 清理未进行 G5 页: {p.name}", flush=True)
@@ -417,28 +580,53 @@ def main() -> int:
     favicon_inject(REPO)
     track_inject(REPO)
     # 实时/赛前节点页必须带付费墙（Pro 层），否则实时情报免费可见
-    paywall_inject(REPO / "intel", finished_slugs(), finished_keys())
-    # 速览卡 ↔ 正文一致性：自动修复 + 审计门禁（2026-08-26 最高规则）
-    subprocess.run(
-        [str(ROOT / ".venv" / "bin" / "python"),
-         str(ROOT / "tools" / "speedcard_consistency.py"),
-         "--fix", "--dir", str(REPO / "intel")],
-        cwd=str(ROOT), capture_output=True, text=True, timeout=600,
-    )
+    paywall_inject(REPO / "intel", finished_slugs(), finished_keys(), free=free_mode())
     if audit_site(REPO) > 0:
         return 2
 
-    git(REPO, "add", "-A")
+    # nginx 直出（2026-09-02 M1）：审计通过后同步 webroot，秒级上线
+    if not args.no_serve:
+        serve_webroot(REPO, WEBROOT)
+    if args.no_mirror:
+        print(f"[publish] {datetime.datetime.now():%F %T} mirror skipped (--no-mirror)")
+        return 0
+
+    _clear_stale_index_lock(REPO)
+    r_add = git(REPO, "add", "-A")
+    if r_add.returncode != 0:
+        print(f"[publish] {datetime.datetime.now():%F %T} WARN: git add 失败 rc={r_add.returncode}: {r_add.stderr.strip()[-200:]}")
+        return 3
     status = git(REPO, "status", "--porcelain").stdout.strip()
     if not status:
         heartbeat(REPO)
-        git(REPO, "add", "-A")
+        r_add = git(REPO, "add", "-A")
+        if r_add.returncode != 0:
+            print(f"[publish] {datetime.datetime.now():%F %T} WARN: git add 失败 rc={r_add.returncode}: {r_add.stderr.strip()[-200:]}")
+            return 3
         status = git(REPO, "status", "--porcelain").stdout.strip()
         if not status:
             print(f"[publish] {datetime.datetime.now():%F %T} nothing changed")
             return 0
-    git(REPO, "commit", "-m", f"auto publish intel pages {datetime.date.today()}", "-q")
+    # 镜像推送节流（2026-10-11）：仅"实时页/心跳"这类每轮必变的文件变化时，
+    # 最多每 MIRROR_MIN_INTERVAL 秒推一次。原因：GitHub Pages 每次推送都会重建，
+    # 而 GitHub 侧的 jekyll 容器偶发拉取超时（与我们仓库无关），
+    # 一分钟一推会把偶发失败放大成天天收失败邮件。nginx 直出不受影响（仍每分钟最新）。
+    changed = [ln[3:].strip().strip('"') for ln in status.splitlines()]
+    if changed and all(volatile_path(p) for p in changed):
+        _last = _last_mirror_push()
+        if _last and (time.time() - _last) < MIRROR_MIN_INTERVAL:
+            print(
+                f"[publish] {datetime.datetime.now():%F %T} 镜像推送节流：仅实时页变化，"
+                f"{int(MIRROR_MIN_INTERVAL - (time.time() - _last))}s 后再推"
+            )
+            return 0
+    r_commit = git(REPO, "commit", "-m", f"auto publish intel pages {datetime.date.today()}", "-q")
+    if r_commit.returncode != 0:
+        print(f"[publish] {datetime.datetime.now():%F %T} WARN: git commit 失败 rc={r_commit.returncode}: {r_commit.stderr.strip()[-200:]}")
+        return 3
     r = git(REPO, "push", "-q")
+    if r.returncode == 0:
+        _mark_mirror_push()
     print(f"[publish] {datetime.datetime.now():%F %T} pushed {copied} report files rc={r.returncode}")
     return 0
 

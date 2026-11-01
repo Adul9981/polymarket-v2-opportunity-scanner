@@ -17,7 +17,10 @@ from pathlib import Path
 SITE = Path(".danmu_intel_site") / "intel"
 API = "https://danmu-intel-api.vercel.app"
 
-PRO_RE = re.compile(r"intel_danmu_.*_(pre|live|bp|g[1-9])(?:[_.].*)?\.html$", re.I)
+PRO_RE = re.compile(
+    r"(?:intel_danmu_.*_(pre|live|bp|g[1-9])(?:[_.].*)?|intel_profile_.*)\.html$",
+    re.I,
+)
 SLUG_RE = re.compile(
     r"(?:slug[=：]\s*)?((?:lol|cs2|dota2?)-[a-z0-9][a-z0-9-]*-\d{4}-\d{2}-\d{2})",
     re.I,
@@ -127,26 +130,36 @@ def inject_all(
     site_dir: Path = SITE,
     finished_slugs: frozenset[str] = frozenset(),
     finished_keys: frozenset[str] = frozenset(),
+    free: bool = False,
 ) -> int:
     """注入付费墙（Pro 页 = 实时/赛前节点）。
 
     2026-08-26 产品规则：**已结束比赛的实时情报对免费用户开放**——页面里能提取到
     slug 且 slug 在 finished_slugs 中的节点页不注入付费墙（赛后免费复盘闭环）。
     幂等：先清除旧脚本再按最新规则重注入。
+    2026-09-08 全公开模式（free=True）：只清除所有付费墙脚本，不重注入——
+    会员系统暂时关闭、全员公开；恢复时 free=False 即重新按规则注入。
     """
     changed = 0
     for p in site_dir.glob("*.html"):
-        text = p.read_text(encoding="utf-8")
+        if p.name.startswith("._"):
+            continue
+        try:
+            text = p.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            print(f"[add-paywall] skip non-utf8 file: {p}")
+            continue
         clean = PAYWALL_RE.sub("", text)
         clean = re.sub(r"\n{2,}", "\n", clean)
-        wants = bool(PRO_RE.search(p.name))
-        if wants:
-            m = SLUG_RE.search(clean)
-            pk = page_key(p.name)
-            if (m and m.group(1).lower() in finished_slugs) or (pk and pk in finished_keys):
-                wants = False  # 已结束比赛：全部节点免费
-        if wants and "</body>" in clean:
-            clean = clean.replace("</body>", SCRIPT + "</body>", 1)
+        if not free:
+            wants = bool(PRO_RE.search(p.name))
+            if wants:
+                m = SLUG_RE.search(clean)
+                pk = page_key(p.name)
+                if (m and m.group(1).lower() in finished_slugs) or (pk and pk in finished_keys):
+                    wants = False  # 已结束比赛：全部节点免费
+            if wants and "</body>" in clean:
+                clean = clean.replace("</body>", SCRIPT + "</body>", 1)
         if clean != text:
             p.write_text(clean, encoding="utf-8")
             changed += 1
