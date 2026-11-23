@@ -447,7 +447,7 @@ ASSISTANT_CSS = """#di-assistant-root{position:fixed;inset:auto 0 0 auto;z-index
 """
 
 
-ASSISTANT_JS = """(() => {
+ASSISTANT_JS = r"""(() => {
   if (new URLSearchParams(location.search).get("embed") === "1") return;
   if (document.getElementById("di-assistant-root")) return;
   const FAQS = __FAQ_DATA__;
@@ -483,7 +483,7 @@ ASSISTANT_JS = """(() => {
   const input = form.querySelector("input");
 
   const normal = (value) => String(value || "").normalize("NFKC").toLowerCase()
-    .replace(/[\\s，。？！、,.!?;；:：()（）【】\\[\\]{}“”‘’"'`·\-_/]/g, "");
+    .replace(/[\s，。？！、,.!?;；:：()（）【】\[\]{}“”‘’"'`·\-_\/]/g, "");
   const match = (text) => {
     const q = normal(text);
     let best = null;
@@ -590,7 +590,7 @@ ASSISTANT_JS = """(() => {
     panel.hidden = false;
     launch.setAttribute("aria-expanded", "true");
     if (!messages.children.length) {
-      addText("你好，我是弹幕情报助手。\\n\\n我可以解释比赛数据、状态更新、阵容口径、市场概率与幻觉识别。这里只使用固定知识库回答，不自由编造。", "bot");
+      addText("你好，我是弹幕情报助手。\n\n我可以解释比赛数据、状态更新、阵容口径、市场概率与幻觉识别。这里只使用固定知识库回答，不自由编造。", "bot");
     }
     setTimeout(() => input.focus({ preventScroll: true }), 30);
   };

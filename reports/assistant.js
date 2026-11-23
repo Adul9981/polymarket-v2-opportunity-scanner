@@ -34,7 +34,7 @@
   const input = form.querySelector("input");
 
   const normal = (value) => String(value || "").normalize("NFKC").toLowerCase()
-    .replace(/[\s，。？！、,.!?;；:：()（）【】\[\]{}“”‘’"'`·\-_/]/g, "");
+    .replace(/[\s，。？！、,.!?;；:：()（）【】\[\]{}“”‘’"'`·\-_\/]/g, "");
   const match = (text) => {
     const q = normal(text);
     let best = null;
