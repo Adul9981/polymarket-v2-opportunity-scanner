@@ -223,6 +223,22 @@ def test_no_timestamp_uses_cumulative():
     assert ws["pct_a"] == 60 and ws["pct_b"] == 40
 
 
+def test_recent_window_default_threshold_3_uses_recent():
+    # 默认 threshold=3（2026-11-22 改，原 10）：近 5 分钟 >= 3 条即用近窗口口径
+    rows = _rows_ts([("Alpha赢了", 540)] * 5 + [("Alpha赢了", 60)] * 3)
+    ws = danmu_intel.win_signal(rows, ["Alpha", "Beta"])
+    assert ws["basis"] == "recent"
+    assert ws["count_a"] == 3 and ws["count_b"] == 0  # 只统计近窗口 3 条
+
+
+def test_recent_window_default_threshold_2_falls_back_cumulative():
+    # 近 5 分钟只有 2 条（< 3）→ 回退整段累积
+    rows = _rows_ts([("Alpha赢了", 540)] * 5 + [("Alpha赢了", 60)] * 2)
+    ws = danmu_intel.win_signal(rows, ["Alpha", "Beta"])
+    assert ws["basis"] == "cumulative"
+    assert ws["count_a"] == 7 and ws["count_b"] == 0  # 累积 5+2
+
+
 # --------------------------------------------------------------------------- render
 
 def _stats_ready() -> dict:

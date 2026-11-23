@@ -144,21 +144,13 @@ def test_rat_block_nonempty_returns_block():
 
 # --------------------------------------------------------------------------- _win_block 三档
 
-def test_win_block_tiered_uses_ratings_when_no_danmu(tmp_path, monkeypatch):
+def test_win_block_tiered_uses_ratings_when_no_danmu(monkeypatch):
     """节点页胜率三档：无弹幕但有本小局评分 -> 70/30（不再是 50/50）。"""
-    monkeypatch.setattr(refresh_situation, "game_start_iso", lambda mid, gi: "2026-10-18T07:00:00+00:00")
-    monkeypatch.setattr(vp, "SLICE_DIR", tmp_path)
-
-    def fake_slice(start, files, out, end):
-        out.write_text("", encoding="utf-8")
-        return 0
-
-    monkeypatch.setattr(vp, "slice_rows", fake_slice)
     monkeypatch.setattr(vp, "fetch_lineup", lambda mid: None)
     monkeypatch.setattr(
-        danmu_intel,
-        "win_signal",
-        lambda rows, teams, game=None, player_teams=None: {"total": 0, "pct_a": 50, "pct_b": 50},
+        vp,
+        "game_win_signal",
+        lambda mid, gi, teams, files, game=None, lineup=None: {"total": 0, "pct_a": 50, "pct_b": 50},
     )
     ratings = {
         "home": {"name": "LNG", "team_id": "9"},
@@ -176,15 +168,37 @@ def test_win_block_tiered_uses_ratings_when_no_danmu(tmp_path, monkeypatch):
 
 # --------------------------------------------------------------------------- game_start
 
-def test_game_start_prefers_mid_slice_from():
-    orig = refresh_situation._node_state
+def test_game_start_prefers_mid_slice_from(tmp_path, monkeypatch):
+    # 本局起点优先 mid 节点 slice_from（= 本局 g_start），退回 bp 节点；实现已下沉到
+    # vp.game_start_iso（2026-11-02 统一两页口径），refresh_situation 直接复用。
+    monkeypatch.setattr(vp, "STATE_DIR", tmp_path)
+    (tmp_path / "x_g1_bp.json").write_text('{"slice_from": "2026-10-18T07:00:00+00:00"}', encoding="utf-8")
+    (tmp_path / "x_g1_mid.json").write_text('{"slice_from": "2026-10-18T07:15:00+00:00"}', encoding="utf-8")
+    assert vp.game_start_iso("x", 1) == "2026-10-18T07:15:00+00:00"
 
-    def fake(mid, gi, phase):
-        return {"bp": {"slice_from": "2026-10-18T07:00:00+00:00"},
-                "mid": {"slice_from": "2026-10-18T07:15:00+00:00"}}.get(phase)
 
-    refresh_situation._node_state = fake
-    try:
-        assert refresh_situation.game_start_iso("x", 1) == "2026-10-18T07:15:00+00:00"
-    finally:
-        refresh_situation._node_state = orig
+def test_game_start_missing_state_returns_none(tmp_path, monkeypatch):
+    # 无 mid/bp 状态文件（该局节点未生成）-> None（调用方降级评分/50:50）
+    monkeypatch.setattr(vp, "STATE_DIR", tmp_path)
+    assert vp.game_start_iso("y", 2) is None
+
+
+# --------------------------------------------------------------------------- game_end（已结束局封闭上界）
+
+def test_game_end_iso_prefers_next_game_start(tmp_path, monkeypatch):
+    # 已结束局上界优先用下一局起点（gi+1 的 mid slice_from），封闭切片不混入后续局
+    monkeypatch.setattr(vp, "STATE_DIR", tmp_path)
+    (tmp_path / "x_g2_mid.json").write_text('{"slice_from": "2026-10-18T08:00:00+00:00"}', encoding="utf-8")
+    assert vp.game_end_iso("x", 1) == "2026-10-18T08:00:00+00:00"
+
+
+def test_game_end_iso_falls_back_to_end_generated_at(tmp_path, monkeypatch):
+    # 无下一局节点 -> 退回本局 end 节点 generated_at
+    monkeypatch.setattr(vp, "STATE_DIR", tmp_path)
+    (tmp_path / "x_g1_end.json").write_text('{"generated_at": "2026-10-18T07:45:00+00:00"}', encoding="utf-8")
+    assert vp.game_end_iso("x", 1) == "2026-10-18T07:45:00+00:00"
+
+
+def test_game_end_iso_none_when_no_next_and_no_end(tmp_path, monkeypatch):
+    monkeypatch.setattr(vp, "STATE_DIR", tmp_path)
+    assert vp.game_end_iso("z", 1) is None

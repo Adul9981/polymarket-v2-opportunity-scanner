@@ -41,6 +41,12 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(10,110,209,.1)}
 .sec{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
 .note{color:var(--muted);font-size:12px;margin-top:8px}
 .gamenote{color:var(--muted);font-size:13px;padding:12px 0}
+.scorebar{display:flex;align-items:center;justify-content:center;gap:16px;background:#fafafa;border:1px solid var(--line);border-radius:14px;padding:12px 20px;margin:2px 0 14px}
+.scorebar .t{font-size:15px;font-weight:650;letter-spacing:-.2px;max-width:38%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.scorebar .t:first-child{text-align:right}
+.scorebar .t:last-child{text-align:left}
+.scorebar .n{font-size:18px;font-weight:700;letter-spacing:-.2px;font-variant-numeric:tabular-nums;line-height:1}
+.scorebar .n i{font-style:normal;color:var(--muted);font-weight:400;margin:0 6px;font-size:14px;vertical-align:1px}
 @media(max-width:1180px){.layout{grid-template-columns:250px minmax(0,1fr)}}
 @media(max-width:780px){.layout{display:block}.sidebar{position:static}}
 </style>
@@ -147,10 +153,21 @@ select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(10,110,209,.1)}
     if (lg && lg.toLowerCase() !== m.game && lg !== gl) meta += " · " + esc(lg);
     meta += " · " + esc(m.start_bj || "") + "（北京时间）";
 
+    var scoreHtml = "";
+    if (m.score && (m.score.home !== "" || m.score.away !== "")) {
+      scoreHtml =
+        '<div class="scorebar">' +
+          '<span class="t">' + esc(m.teams[0]) + "</span>" +
+          '<span class="n">' + esc(m.score.home) + "<i>:</i>" + esc(m.score.away) + "</span>" +
+          '<span class="t">' + esc(m.teams[1]) + "</span>" +
+        "</div>";
+    }
+
     content.innerHTML =
       '<div class="panel">' +
         '<div class="panel-head"><div><h3>' + esc(m.teams[0]) + " vs " + esc(m.teams[1]) + "</h3>" +
         "<p>" + meta + "</p></div></div>" +
+        scoreHtml +
         '<div class="sec-h">比赛小局</div>' +
         '<div class="tabs">' + tabsHtml + "</div>" +
         '<div class="sec-h">两队胜率（观众口径·非结论）· G' + g.gi + "</div>" +

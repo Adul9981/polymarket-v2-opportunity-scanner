@@ -30,7 +30,6 @@ import re
 import time
 from pathlib import Path
 
-import danmu_intel
 import render_node_page
 import vps_intel_pipeline as vp
 
@@ -44,15 +43,6 @@ def _node_state(mid: str, gi: int, phase: str) -> dict | None:
         return json.loads(p.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return None
-
-
-def game_start_iso(mid: str, gi: int) -> str | None:
-    """本局起点：优先 mid 节点 slice_from（= 本局 g_start），退回 bp 节点（≈ g_start-15min）。"""
-    for phase in ("mid", "bp"):
-        st = _node_state(mid, gi, phase)
-        if st and st.get("slice_from"):
-            return str(st["slice_from"])
-    return None
 
 
 def _in_backfill(end_state: dict | None) -> bool:
@@ -144,19 +134,11 @@ def _win_block(
     """本小局胜率块（[本局起点 -> 现在] 重算，三档，2026-11-01）；无法确定窗口返回 None（保留旧值）。
 
     无弹幕切片也照常算（win_signal 空行 -> total=0），让 tiered 回退到评分 70/30 或 50/50。
+    与独立局势页共用 vp.game_win_signal（2026-11-02 统一"本小局切片"口径）。
     """
-    game_start = game_start_iso(mid, gi)
-    if not game_start:
+    ws = vp.game_win_signal(mid, gi, teams, files, game, lineup=vp.fetch_lineup(mid))
+    if ws is None:
         return None
-    slug_id = re.sub(r"[^a-zA-Z0-9_-]", "_", mid)
-    tmp = vp.SLICE_DIR / f"{slug_id}_g{gi}_situation.jsonl"
-    vp.slice_rows(game_start, files, tmp, "")
-    try:
-        rows = [json.loads(ln) for ln in tmp.read_text(encoding="utf-8").splitlines() if ln.strip()]
-        # 虎扑首发阵容动态折算选手表态（拿不到则降级静态 PLAYER_TEAM，danmu_intel 内部兜底）
-        ws = danmu_intel.win_signal(rows, teams, game=game, player_teams=vp.fetch_lineup(mid))
-    except Exception:  # noqa: BLE001
-        ws = None
     return render_node_page.situation_win_block_tiered(ws, ratings, teams)
 
 
@@ -215,8 +197,12 @@ def _refresh_pages(
     return updated
 
 
-def refresh_match(m: dict, all_files: list[Path]) -> int:
-    """刷新一场比赛各小局的节点页（当前局实时、已结束局评分回填），返回更新页面数。"""
+def refresh_match(m: dict, all_files: list[Path], force: bool = False) -> int:
+    """刷新一场比赛各小局的节点页（当前局实时、已结束局评分回填），返回更新页面数。
+
+    force=True 时忽略"已结束局评分回填窗口"，对已结束小局也强制重拉评分并重渲染
+    （用于数据源修正后回填旧页，如阵容表补齐导致选手归属变化）。
+    """
     mid = m.get("id") or "-"
     teams = m["teams"]
     files = vp.league_files(m, all_files)
@@ -229,8 +215,8 @@ def refresh_match(m: dict, all_files: list[Path]) -> int:
             continue
         end_state = _node_state(mid, gi, "end")
         if end_state is not None:
-            # 已结束：胜率冻结，评分仅在回填窗口内刷新
-            if _in_backfill(end_state):
+            # 已结束：胜率冻结，评分仅在回填窗口内刷新（force 则评分也强制刷新，胜率仍冻结）
+            if force or _in_backfill(end_state):
                 new_rat = _rat_block(mid, gi, teams)
                 if new_rat is not None:
                     updated += _refresh_pages(mid, gi, ("bp", "mid", "end"), new_rat=new_rat)
@@ -262,7 +248,7 @@ def all_danmu_files() -> list[Path]:
     return sorted(p for game in vp.GAME_SLUGS for p in (vp.DANMU / game).glob("*/*.jsonl"))
 
 
-def _run_once(match_filter: str | None) -> None:
+def _run_once(match_filter: str | None, force: bool = False) -> None:
     matches = live_matches()
     if match_filter:
         matches = [m for m in matches if (m.get("id") or "-") == match_filter]
@@ -272,7 +258,7 @@ def _run_once(match_filter: str | None) -> None:
     total = 0
     for m in matches:
         try:
-            total += refresh_match(m, all_files)
+            total += refresh_match(m, all_files, force=force)
         except Exception as e:  # noqa: BLE001
             print(f"[refresh] {m.get('id')}: skip ({e})", flush=True)
     if total:
@@ -284,14 +270,15 @@ def main() -> None:
     ap.add_argument("--once", action="store_true")
     ap.add_argument("--interval", type=int, default=0, help="循环间隔秒数（本地调试）")
     ap.add_argument("--match", default=None, help="只跑指定比赛 id")
+    ap.add_argument("--force", action="store_true", help="忽略评分回填窗口，强制重拉已结束小局评分")
     args = ap.parse_args()
 
     if args.interval and args.interval > 0:
         while True:
-            _run_once(args.match)
+            _run_once(args.match, force=args.force)
             time.sleep(args.interval)
     else:
-        _run_once(args.match)
+        _run_once(args.match, force=args.force)
 
 
 if __name__ == "__main__":

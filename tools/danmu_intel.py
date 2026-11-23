@@ -453,7 +453,7 @@ def _count_signal(rows: list[dict], kws: dict[str, list[str]], a: str, b: str) -
 def win_signal(
     rows: list[dict],
     teams: list[str],
-    threshold: int = 10,
+    threshold: int = 3,
     game: str | None = None,
     player_teams: dict[str, str] | None = None,
     window_seconds: int | None = 300,
@@ -471,6 +471,8 @@ def win_signal(
     时退化为整段累积（向后兼容）。输出 basis 标记实际口径（recent/cumulative）。
     总计数 == 0 时 pct 置 50/50 占位（不空白）；总计数 > 0 即正常算比例，
     threshold 不再作门槛（2026-10-29 改）。
+    默认 threshold=3（2026-11-22 用户改，原 10）：近 5 分钟胜负弹幕 >= 3 条即用
+    近窗口口径，< 3 条才回退整段累积。
     """
     if len(teams) != 2:
         return None

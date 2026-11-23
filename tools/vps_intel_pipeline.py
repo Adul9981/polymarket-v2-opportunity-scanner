@@ -31,6 +31,7 @@ from pathlib import Path
 import danmu_intel
 import fetch_hupu_player_ratings
 import render_node_page
+import render_pregame
 
 ROOT = Path(os.environ.get("DANMU_INTEL_ROOT", "/opt/danmu-intel"))
 MATCHES = ROOT / "data" / "matches_today.json"
@@ -552,6 +553,72 @@ def fetch_lineup(mid: str) -> dict[str, str] | None:
     return None
 
 
+def game_start_iso(mid: str, gi: int) -> str | None:
+    """本小局起点 ISO：优先 mid 节点 slice_from（= 本局 g_start），退回 bp 节点（≈ g_start-15min）。
+
+    【比赛局势】"本小局切片"口径的唯一锚点（独立局势页 + 情报页比赛局势栏共用，2026-11-02 统一）。
+    无状态文件（该局节点未生成 / 未开打）返回 None，调用方降级评分 70/30 或 50/50。
+    """
+    for phase in ("mid", "bp"):
+        p = STATE_DIR / f"{mid}_g{gi}_{phase}.json"
+        try:
+            st = json.loads(p.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if st.get("slice_from"):
+            return str(st["slice_from"])
+    return None
+
+
+def game_win_signal(
+    mid: str,
+    gi: int,
+    teams: list[str],
+    files: list[Path],
+    game: str | None = None,
+    lineup: dict[str, str] | None = None,
+    end_iso: str = "",
+) -> dict | None:
+    """本小局胜负弹幕信号：切片 [本局起点 -> 结束/现在] 重算 win_signal（近 5 分钟口径，样本不足回退本局累积）。
+
+    独立局势页 + 情报页比赛局势栏统一用此口径（2026-11-02 以情报页"本小局切片"为准，
+    弃用整场全量弹幕）。本局起点取 game_start_iso；无状态文件返回 None（调用方降级）。
+    end_iso 为空 = 切到 now（进行中局）；已结束局传本局结束上界（game_end_iso），封闭切片。
+    lineup 传虎扑首发阵容（可 None，danmu_intel 内部回退静态 PLAYER_TEAM）。
+    """
+    game_start = game_start_iso(mid, gi)
+    if not game_start:
+        return None
+    slug_id = re.sub(r"[^a-zA-Z0-9_-]", "_", mid)
+    tmp = SLICE_DIR / f"{slug_id}_g{gi}_situation.jsonl"
+    try:
+        slice_rows(game_start, files, tmp, end_iso)
+        rows = [json.loads(ln) for ln in tmp.read_text(encoding="utf-8").splitlines() if ln.strip()]
+        return danmu_intel.win_signal(rows, teams, game=game, player_teams=lineup)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def game_end_iso(mid: str, gi: int) -> str | None:
+    """本局结束上界 ISO：下一局起点（gi+1 的 mid/bp slice_from）优先，退回本局 end 节点 generated_at。
+
+    已结束局「本小局切片」的封闭上界（2026-11-02 与情报页冻结口径对齐）：进行中局的切片
+    切到 now，已结束局用此上界封闭，避免把后续局/局间弹幕混进本局胜率。下一局起点是
+    稳定锚点（下一局节点生成后即固定，不随刷新滑动）；取不到返回 None（调用方降级评分/50:50）。
+    """
+    nxt = game_start_iso(mid, gi + 1)
+    if nxt:
+        return nxt
+    p = STATE_DIR / f"{mid}_g{gi}_end.json"
+    try:
+        st = json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    if st.get("generated_at"):
+        return str(st["generated_at"])
+    return None
+
+
 _CANONICAL_HEADER_CSS = (
     "/* canonical-header (pipeline-pinned 2026-11-01): stop per-node Codex CSS drift */"
     "body{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','PingFang SC',"
@@ -682,15 +749,18 @@ def _inject_situation(report: Path, intel_json: Path, ratings: dict | None, team
         print(f"[pipeline] inject situation failed: {e}", flush=True)
 
 
-def _insufficient_node_html(teams: list[str], date: str, gi: int, gphase: str) -> str:
+def _insufficient_node_html(teams: list[str], date: str, gi: int, gphase: str, game: str = "lol") -> str:
     """0 样本节点占位页（无样本不硬撑，跳过 Codex/DeepSeek，避免 report missing 死循环）。
 
     教训 2026-10-26：CS2 弹幕源离线（0 样本）时，Codex 偶发 rc=0 但不落盘，
     导致 generate_game_node 每 5 分钟空转重试（MongolZ-MOUZ g1_bp/g1_end）。
     结构与 Codex 全量页一致：1 BP 锚点 → 2 比赛局势（_inject_situation 注入）→
     3 方向性情报板 → 4 灰信号汇总，各段写「样本不足 / 今日无信号」。
+    BP 栏按 game 分口径（2026-11-21）：cs2=地图禁选，lol/dota2=选人。
     """
     gph = {"bp": "BP 后/开局", "mid": "局中", "end": "局末/局间"}.get(gphase, gphase)
+    bp_title = "BP 锚点与地图禁选情报" if game == "cs2" else "BP 锚点与选人情报"
+    bp_empty = "地图禁选" if game == "cs2" else "BP/阵容"
     return f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -723,8 +793,8 @@ def _insufficient_node_html(teams: list[str], date: str, gi: int, gphase: str) -
     <div class="badges"><span class="badge primary">G{gi} · {gph}</span><span class="badge">样本不足 · 无弹幕数据</span></div>
   </div>
   <div class="card">
-    <h2><span class="no">1</span>BP 锚点与选人情报（弹幕讨论 · 非确认）</h2>
-    <p class="empty">样本不足 — 本节点窗口无弹幕数据，BP/阵容情报无法确认（弹幕口径 · 待官方）。</p>
+    <h2><span class="no">1</span>{bp_title}（弹幕讨论 · 非确认）</h2>
+    <p class="empty">样本不足 — 本节点窗口无弹幕数据，{bp_empty}情报无法确认（弹幕口径 · 待官方）。</p>
   </div>
   <section>
     <h2><span class="no">2</span>比赛局势（系统注入，本段不写）</h2>
@@ -803,7 +873,9 @@ def generate_game_node(
         source = "insufficient"
         rc = 0
         so = se = ""
-        report.write_text(_insufficient_node_html(teams, date, gi, gphase), encoding="utf-8")
+        _gtype = (slug_id or "").split("-")[0].lower()
+        _gtype = "cs2" if _gtype.startswith("cs") else ("dota2" if (_gtype.startswith("dota") or _gtype.startswith("ti")) else "lol")
+        report.write_text(_insufficient_node_html(teams, date, gi, gphase, _gtype), encoding="utf-8")
         print(f"[pipeline] {mid}: G{gi} {gphase} slice 0 rows → 样本不足占位页（跳过 Codex）", flush=True)
     elif AI_BACKEND == "deepseek":
         source = "deepseek"
@@ -960,6 +1032,17 @@ def run_codex_report(
         )
         if result_note:
             phase += f"（本场已确认结果：{result_note}，来源「Polymarket 结算」，供方向板/灰信号校准）"
+    # 2026-11-21：BP 栏按游戏分口径——LoL/Dota2 选人（lineup），CS2 只有选图（maps）。
+    gtype = (slug_id or "").split("-")[0].lower()
+    gtype = "cs2" if gtype.startswith("cs") else ("dota2" if (gtype.startswith("dota") or gtype.startswith("ti")) else "lol")
+    bp_title = "1 BP 锚点与地图禁选情报" if gtype == "cs2" else "1 BP 锚点与选人情报"
+    bp_item6 = (
+        "6) BP 锚点（第 1 段）：地图禁选/队伍×地图为「弹幕口径·待官方」，BP 后战绩情报"
+        "（无则写「无战绩情报提及」），禁止把弹幕讨论当实际选图"
+        if gtype == "cs2" else
+        "6) BP 锚点（第 1 段）：阵容（英雄+选手）为「弹幕口径·待官方」，BP 后战绩情报"
+        "（无则写「无战绩情报提及」），禁止把弹幕讨论当实际选人"
+    )
     prompt = (
         f"{phase}。\n"
         f"【时间显示规范（2026-08-27 用户定稿，最高）】页面所有时间（数据窗口、"
@@ -974,15 +1057,14 @@ def run_codex_report(
         f"待二次判定情绪的弹幕候选）与弹幕切片 {slice_file}；\n"
         f"3) 页面结构只保留 4 段（2026-10-24 用户定稿，其余栏不生成，禁止多写），"
         f"每段用 <h2><span class=\"no\">N</span>标题</h2> 编号，编号连续、禁止合并/省略："
-        f"1 BP 锚点与选人情报（弹幕讨论·非确认）→ 2 比赛局势（系统注入，本段不写）→ "
+        f"{bp_title}（弹幕讨论·非确认）→ 2 比赛局势（系统注入，本段不写）→ "
         f"3 方向性情报板（正锚×负锚×共识×灰信号条件预测）→ 4 灰信号汇总（风险·观众质疑非结论）；\n"
         f"4) 方向板（第 3 段）：正锚点（看好谁赢，含对象/依据/时间/验证）、负锚点（看衰谁输）、"
         f"群体共识（+分歧+样本量，由 narrative 提炼）、灰信号条件预测（若兑现指向哪边）；"
         f"无锚点写「今日无锚点」，无共识写「共识不足」，无灰信号写「今日无灰信号」；\n"
         f"5) 灰信号（第 4 段）：每条写明「观众质疑，非结论」+ 指向对象 + 风险等级，"
         f"只作风险标注与盘口对照，禁止写成实锤；无则写「今日无灰信号」；\n"
-        f"6) BP 锚点（第 1 段）：阵容（英雄+选手）为「弹幕口径·待官方」，BP 后战绩情报"
-        f"（无则写「无战绩情报提及」），禁止把弹幕讨论当实际选人；\n"
+        f"{bp_item6}；\n"
         f"7) 【情报来源分层·最高纪律（2026-08-26 用户定稿）】每条结论必须带证据来源标签"
         f"（本场弹幕 / 前局弹幕 / 历史画像 / 盘口 / 推测·待验证），核心情报必须来自本场弹幕，"
         f"严禁无中生有；仅简单推断、无数据支撑的不写；推测必须显式标注「推测·待验证」并与事实分离；"
@@ -1160,11 +1242,19 @@ def bp_slice_from(g_start, start_dt):
 # 节点页 JSON 字段 schema（2026-10-18 模板化生成；2026-10-24 起只保留 4 栏所需字段）：
 # AI 只填内容字段，不写 HTML。仅 bp_anchors/direction/gray_signals 三组字段进入页面，
 # 比赛局势为规则层注入（stats.win_signal + 虎扑评分），其余栏位不再生成。
-NODE_JSON_SCHEMA = """{
-  "bp_anchors": [{"lineup":"英雄+选手映射（弹幕口径·待官方）","type":"正|负","content":"锚点内容","bp_note":"战绩情报 或 无战绩情报提及"}],
-  "direction": {"positive":["正锚"], "negative":["负锚"], "consensus":"群体共识（含净值/样本）", "gray_conditional":["灰信号条件预测"]},
-  "gray_signals": [{"text":"灰信号内容","target":"指向对象","warning":"低|中|高"}]
-}"""
+# 2026-11-21：BP 栏按游戏分口径——LoL/Dota2 选人（lineup），CS2 只有选图（maps）。
+def _node_json_schema(game: str) -> str:
+    if game == "cs2":
+        bp = '{"maps":"地图禁选/队伍×地图（弹幕口径·待官方）","type":"正|负","content":"锚点内容","bp_note":"战绩情报 或 无战绩情报提及"}'
+    else:
+        bp = '{"lineup":"英雄+选手映射（弹幕口径·待官方）","type":"正|负","content":"锚点内容","bp_note":"战绩情报 或 无战绩情报提及"}'
+    return (
+        "{\n"
+        f'  "bp_anchors": [{bp}],\n'
+        '  "direction": {"positive":["正锚"], "negative":["负锚"], "consensus":"群体共识（含净值/样本）", "gray_conditional":["灰信号条件预测"]},\n'
+        '  "gray_signals": [{"text":"灰信号内容","target":"指向对象","warning":"低|中|高"}]\n'
+        "}"
+    )
 
 
 def _strip_json(text: str) -> str:
@@ -1345,8 +1435,23 @@ def fast_intel_node(
         end_note = f"（结束依据：{end_basis}，结果待官方核对）"
     if late:
         end_note += "（补发节点：流水线延迟，窗口后生成）"
+    game = (slug_id or "").split("-")[0].lower()
+    game = "cs2" if game.startswith("cs") else ("dota2" if (game.startswith("dota") or game.startswith("ti")) else "lol")
+    game_label = {"cs2": "CS2", "dota2": "Dota2", "lol": "LoL"}.get(game, "LoL")
+    if game == "cs2":
+        html_bp_title = "1 BP 锚点与地图禁选情报（弹幕讨论·非确认）"
+        html_bp_item6 = (
+            f"6) BP 锚点（第 1 段）：地图禁选/队伍×地图为「弹幕口径·待官方」，BP 后战绩情报"
+            f"（无则写「无战绩情报提及」），禁止把弹幕讨论当实际选图；\n"
+        )
+    else:
+        html_bp_title = "1 BP 锚点与选人情报（弹幕讨论·非确认）"
+        html_bp_item6 = (
+            f"6) BP 锚点（第 1 段）：阵容（英雄+选手）为「弹幕口径·待官方」，BP 后战绩情报"
+            f"（无则写「无战绩情报提及」），禁止把弹幕讨论当实际选人；\n"
+        )
     html_prompt = (
-        f"你是电竞弹幕情报分析师。生成一场 LoL 比赛的局中弹幕情报 HTML 页（节点=G{gi}｜{glabel}{end_note}）。\n"
+        f"你是电竞弹幕情报分析师。生成一场 {game_label} 比赛的局中弹幕情报 HTML 页（节点=G{gi}｜{glabel}{end_note}）。\n"
         f"比赛：{teams[0]} vs {teams[1]}（{date}，slug={slug_id}）正在进行第 {gi} 小局，赛制 BO{max_games}（本场共 {max_games} 局，页面对阵/赛制处必须写 BO{max_games}，禁止写错）。\n"
         f"页面标注「局中·非终局，结果待定」。\n"
         f"规则层统计（来自弹幕）：窗口 {meta.get('window_utc','')}，共 {meta.get('total',0)} 条，"
@@ -1360,7 +1465,7 @@ def fast_intel_node(
         f"要求（决策导向，2026-10-24 用户定稿：只保留 4 栏）：\n"
         f"1) 页面结构只保留 4 段（其余栏不生成，禁止多写），每段用 "
         f"<h2><span class=\"no\">N</span>标题</h2> 编号，编号连续、禁止合并/省略："
-        f"1 BP 锚点与选人情报（弹幕讨论·非确认）→ 2 比赛局势（系统注入，本段不写）→ "
+        f"{html_bp_title} → 2 比赛局势（系统注入，本段不写）→ "
         f"3 方向性情报板（正锚×负锚×共识×灰信号条件预测）→ 4 灰信号汇总（风险·观众质疑非结论）；\n"
         f"2) 输出 SAP/Apple 风格完整 HTML（内联CSS：浅底#f5f5f7、白圆角卡片、单一强调色#0071e3、"
         f"系统字体栈 -apple-system/PingFang SC、充足留白），内容紧凑、信息密度高，全文约 400-600 字；\n"
@@ -1371,8 +1476,7 @@ def fast_intel_node(
         f"无锚点写「今日无锚点」，无共识写「共识不足」，无灰信号写「今日无灰信号」；\n"
         f"5) 灰信号（第 4 段）：每条写明「观众质疑，非结论」+ 指向对象 + 风险等级，"
         f"只作风险标注与盘口对照，禁止写成实锤；无则写「今日无灰信号」；\n"
-        f"6) BP 锚点（第 1 段）：阵容（英雄+选手）为「弹幕口径·待官方」，BP 后战绩情报"
-        f"（无则写「无战绩情报提及」），禁止把弹幕讨论当实际选人；\n"
+        f"{html_bp_item6}"
         f"7) 【情报来源分层·最高纪律】每条结论必须带证据来源标签（本场弹幕/前局弹幕/历史画像/盘口/"
         f"推测·待验证），核心情报必须来自本场弹幕，严禁无中生有；推测必须显式标注「推测·待验证」；\n"
         f"8) 只依据给定统计与示例样本，禁止编造具体弹幕内容、比分或事实；样本不足的板块写「样本不足」；\n"
@@ -1382,6 +1486,18 @@ def fast_intel_node(
         f""
     )
     # ---- 新路径：JSON 字段化（2026-10-18 模板化生成，治本提速）----
+    if game == "cs2":
+        bp_instr = (
+            f"1) bp_anchors：每个锚点给 maps（地图禁选/队伍×地图强图，标「弹幕口径·待官方」）、type（正/负）、"
+            f"content（锚点内容）、bp_note（战绩情报，无则「无战绩情报提及」）；CS2 无英雄选人，只写地图；无锚点写空数组；\n"
+        )
+        bp_pair_instr = f"9) 地图禁选配对只写「弹幕口径·待官方」，禁止把弹幕讨论当实际选图。\n"
+    else:
+        bp_instr = (
+            f"1) bp_anchors：每个锚点给 lineup（英雄+选手映射，标「弹幕口径·待官方」）、type（正/负）、"
+            f"content（锚点内容）、bp_note（战绩情报，无则「无战绩情报提及」）；无锚点写空数组；\n"
+        )
+        bp_pair_instr = f"9) 阵容配对只写「弹幕口径·待官方」，禁止把弹幕讨论当实际选人。\n"
     json_prompt = (
         f"你是电竞弹幕情报分析师。基于下方规则层统计，提炼一场比赛的局中弹幕情报"
         f"（节点=G{gi}｜{glabel}{end_note}）。\n"
@@ -1398,10 +1514,9 @@ def fast_intel_node(
         f"中性弹幕抢救候选（规则层判中性·待二次判定情绪，×N=出现次数）：{salvage_txt}\n"
         f"\n【只输出一个 JSON 对象，不要输出任何解释、markdown 代码块或 HTML】\n"
         f"JSON 字段如下（三组字段都要给出；没有就写空数组/空字符串或「无/样本不足/待回填」）：\n"
-        f"{NODE_JSON_SCHEMA}\n"
+        f"{_node_json_schema(game)}\n"
         f"\n填写纪律（最高优先级）：\n"
-        f"1) bp_anchors：每个锚点给 lineup（英雄+选手映射，标「弹幕口径·待官方」）、type（正/负）、"
-        f"content（锚点内容）、bp_note（战绩情报，无则「无战绩情报提及」）；无锚点写空数组；\n"
+        f"{bp_instr}"
         f"2) direction：positive/negative 分别列正锚/负锚对象（含对象/依据/时间/验证）；"
         f"consensus 写群体共识（含净值/样本量，不足写「共识不足」）；"
         f"gray_conditional 写灰信号条件预测（若兑现指向哪边）；无则写空数组；\n"
@@ -1412,7 +1527,7 @@ def fast_intel_node(
         f"6) 无样本不硬撑（写「样本不足」）、无信号不硬造（写「今日无信号」）；\n"
         f"7) 只依据给定统计与示例样本，禁止编造具体弹幕内容、比分或事实；\n"
         f"8) 英文俚语不得当战队信号（OKBRO/bro 是玩梗，非 BRO 战队）；韩/英黑话需双语映射；\n"
-        f"9) 阵容配对只写「弹幕口径·待官方」，禁止把弹幕讨论当实际选人。\n"
+        f"{bp_pair_instr}"
     )
 
     # 1) 优先走 JSON 路径：解析成功 -> 本地模板渲染
@@ -1812,24 +1927,42 @@ def process_match(m: dict, all_files: list) -> None:
         and (start_dt - now_utc).total_seconds() <= 3600
     ):
         slug_id = re.sub(r"[^a-zA-Z0-9_-]", "_", mid)
-        pre_slice = SLICE_DIR / f"{slug_id}_pre.jsonl"
-        pre_start = (start_dt - datetime.timedelta(minutes=90)).isoformat()
-        n = slice_rows(pre_start, files, pre_slice)
-        pre_intel = STATE_DIR / f"{slug_id}_pre_intel.json"
-        subprocess.run(
-            [str(PY), str(ROOT / "tools" / "danmu_intel.py"),
-             "--input", str(pre_slice), "--out", str(pre_intel)],
-            timeout=180,
-            check=False,
-        )
-        print(f"[pipeline] {mid}: pre slice {n} rows, generating pre intel...", flush=True)
-        rc, so, se = run_codex_report(slug_id, teams, date, pre_intel, pre_slice, pre=True)
         pre_report = REPORTS / f"intel_danmu_{teams[0]}-{teams[1]}_{date}_pre.html"
+        gtype = (mid or "").split("-")[0].lower()
+        gtype = "cs2" if gtype.startswith("cs") else ("dota2" if (gtype.startswith("dota") or gtype.startswith("ti")) else "lol")
+        rc = 0
+        slice_rows_n = 0
+        pre_mode = "history"
+        if gtype in ("lol", "cs2"):
+            # 规则层渲染赛前历史页（1 队伍交手情况 + 2 队伍比赛近况），不走 Codex/切片
+            # （2026-11-22 用户定稿：赛前页从 4 段改为两栏历史数据，规则层系统注入）。
+            try:
+                render_pregame.build_pregame(gtype, teams, date, m.get("league", "-"), slug_id, pre_report,
+                                             before=(m.get("start_time") or date))
+            except Exception as e:  # noqa: BLE001
+                print(f"[pipeline] {mid}: pre history render failed: {e}", flush=True)
+                rc = 1
+        else:
+            # dota2 无历史数据源，保持旧 Codex 4 段路径
+            pre_mode = "codex"
+            pre_slice = SLICE_DIR / f"{slug_id}_pre.jsonl"
+            pre_start = (start_dt - datetime.timedelta(minutes=90)).isoformat()
+            slice_rows_n = slice_rows(pre_start, files, pre_slice)
+            pre_intel = STATE_DIR / f"{slug_id}_pre_intel.json"
+            subprocess.run(
+                [str(PY), str(ROOT / "tools" / "danmu_intel.py"),
+                 "--input", str(pre_slice), "--out", str(pre_intel)],
+                timeout=180,
+                check=False,
+            )
+            print(f"[pipeline] {mid}: pre slice {slice_rows_n} rows, generating pre intel...", flush=True)
+            rc, so, se = run_codex_report(slug_id, teams, date, pre_intel, pre_slice, pre=True)
         pre_state.write_text(
             json.dumps(
                 {
                     "match": mid,
-                    "slice_rows": n,
+                    "slice_rows": slice_rows_n,
+                    "mode": pre_mode,
                     "report": str(pre_report),
                     "report_exists": pre_report.exists(),
                     "codex_rc": rc,

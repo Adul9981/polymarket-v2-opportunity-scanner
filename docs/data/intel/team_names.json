@@ -480,18 +480,8 @@
       "league": "CS2",
       "aliases": [
         "aurora gaming",
-        "欧若拉"
-      ]
-    },
-    {
-      "id": "dendelecs",
-      "abbr": "DENDELE",
-      "full": "DENDELE CS",
-      "league": "CS2",
-      "aliases": [
-        "dendele",
-        "dendele cs",
-        "丹德勒"
+        "欧若拉",
+        "aurora"
       ]
     },
     {
@@ -507,11 +497,14 @@
     {
       "id": "dendele",
       "abbr": "DENDELE",
-      "full": "DENDELE",
+      "full": "DENDELE CS",
       "league": "CS2",
       "aliases": [
         "dendele",
-        "denendele"
+        "dendele cs",
+        "denendele",
+        "丹德勒",
+        "dendelecs"
       ]
     },
     {
@@ -564,6 +557,7 @@
       "aliases": [
         "mongolz",
         "the mongolz",
+        "themongolz",
         "蒙古"
       ]
     },
@@ -719,7 +713,8 @@
         "tl",
         "team liquid",
         "tlaw",
-        "液体"
+        "液体",
+        "liquid"
       ]
     },
     {
@@ -733,6 +728,67 @@
         "rainbow7",
         "rainbow 7",
         "r7"
+      ]
+    },
+    {
+      "id": "faze",
+      "abbr": "FaZe",
+      "full": "FaZe Clan",
+      "league": "CS2",
+      "aliases": [
+        "faze",
+        "faze clan"
+      ]
+    },
+    {
+      "id": "tyloo",
+      "abbr": "TYLOO",
+      "full": "TYLOO",
+      "league": "CS2",
+      "aliases": [
+        "tyloo",
+        "天禄"
+      ]
+    },
+    {
+      "id": "betboom",
+      "abbr": "BetBoom",
+      "full": "BetBoom Team",
+      "league": "CS2",
+      "aliases": [
+        "betboom",
+        "betboom team"
+      ]
+    },
+    {
+      "id": "prv",
+      "abbr": "PRV",
+      "full": "PARIVISION",
+      "league": "CS2",
+      "aliases": [
+        "parivision",
+        "pari vision",
+        "pari"
+      ]
+    },
+    {
+      "id": "b8",
+      "abbr": "B8",
+      "full": "B8",
+      "league": "CS2",
+      "aliases": [
+        "b8",
+        "b8 esports"
+      ]
+    },
+    {
+      "id": "heroic",
+      "abbr": "HEROIC",
+      "full": "HEROIC",
+      "league": "CS2",
+      "aliases": [
+        "heroic",
+        "hero"
       ]
     }
   ],

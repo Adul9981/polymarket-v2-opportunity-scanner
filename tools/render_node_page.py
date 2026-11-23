@@ -66,13 +66,18 @@ def _details(summary: str, body: str) -> str:
     return f"<details><summary>{esc(summary)}</summary>{body}</details>"
 
 
-def _league_of(slug_id: str) -> str:
+def _game_of(slug_id: str) -> str:
+    """从 slug 首段推断游戏类型（lol/cs2/dota2）；默认 lol。"""
     first = (slug_id or "").split("-")[0].lower()
     if first.startswith("cs"):
-        return "CS2"
+        return "cs2"
     if first.startswith("dota") or first.startswith("ti"):
-        return "Dota2"
-    return "LoL"
+        return "dota2"
+    return "lol"
+
+
+def _league_of(slug_id: str) -> str:
+    return {"cs2": "CS2", "dota2": "Dota2"}.get(_game_of(slug_id), "LoL")
 
 
 # --------------------------------------------------------------------------- sections
@@ -184,21 +189,26 @@ def _gray(data: dict) -> str:
     return "".join(items)
 
 
-def _bp(data: dict) -> str:
-    """1 BP 锚点与选人情报（弹幕讨论·非确认）。"""
+def _bp(data: dict, game: str = "lol") -> str:
+    """1 BP 锚点与选人情报 / 地图禁选情报（弹幕讨论·非确认）。"""
     anchors = data.get("bp_anchors") or []
     if not anchors:
         return '<p class="note">今日无锚点 / 无战绩情报提及。</p>'
+    is_cs2 = (game or "").lower() == "cs2"
     items = []
     for a in anchors:
         if not isinstance(a, dict):
             continue
         typ = str(a.get("type") or "").strip()
         lineup = str(a.get("lineup") or "").strip()
+        maps = str(a.get("maps") or "").strip()
         content = str(a.get("content") or "").strip()
         bp_note = str(a.get("bp_note") or "无战绩情报提及").strip()
         head = f"<b>{'正锚' if typ == '正' else '负锚' if typ == '负' else '锚点'}</b>"
-        if lineup:
+        if is_cs2:
+            if maps:
+                head += f" · 地图禁选（弹幕口径·待官方）：{esc(maps)}"
+        elif lineup:
             head += f" · 阵容（弹幕口径·待官方）：{esc(lineup)}"
         items.append(
             f'<div style="padding:6px 0;border-bottom:1px dashed var(--line)">{head}'
@@ -381,13 +391,15 @@ def _rating_cols(ratings: dict | None, teams: list[str]) -> str:
             + _player_rows(players, _BLUE)
         )
 
-    home_players, away_players = [], []
+    home_players, away_players, unassigned = [], [], []
     for p in players:
         tid = str(p.get("team_id") or "")
         if away_tid and tid == away_tid:
             away_players.append(p)
-        else:
+        elif home_tid and tid == home_tid:
             home_players.append(p)
+        else:
+            unassigned.append(p)
 
     # 蓝列恒 = teams[0]，红列恒 = teams[1]；按虎扑队名对齐到 teams，对齐失败回退主客序
     home_idx = _match_index(home_name, teams)
@@ -408,12 +420,22 @@ def _rating_cols(ratings: dict | None, teams: list[str]) -> str:
         '{rows}'
         '</div>'
     )
-    return (
+    body = (
         '<div style="display:flex;gap:20px;flex-wrap:wrap">{}{}</div>'.format(
             col.format(c=left_color, l=esc(left_label), rows=_player_rows(left, left_color)),
             col.format(c=right_color, l=esc(right_label), rows=_player_rows(right, right_color)),
         )
     )
+    # 未归属（team_id 空/未识别）单独成组，不混入任何一队（宁可漏计不误配）。
+    if unassigned:
+        body += (
+            '<div style="margin-top:10px">'
+            '<div style="font-weight:700;font-size:12px;margin-bottom:4px;color:#8a8f98">'
+            '未归属</div>'
+            + _player_rows(unassigned, "#8a8f98")
+            + "</div>"
+        )
+    return body
 
 
 _WIN_BEGIN = "<!-- SITUATION:WIN:BEGIN -->"
@@ -455,7 +477,7 @@ def situation_win_block(ws: dict | None, teams: list[str]) -> str:
     t0 = teams[0] if teams else (ws or {}).get("team_a", "队伍1")
     t1 = teams[1] if len(teams) > 1 else (ws or {}).get("team_b", "队伍2")
     total = int((ws or {}).get("total") or 0)
-    th = int((ws or {}).get("threshold") or 10)
+    th = int((ws or {}).get("threshold") or 3)
     pa = int((ws or {}).get("pct_a")) if (ws and (ws or {}).get("pct_a") is not None) else 50
     pb = 100 - pa
     if total == 0:
@@ -475,8 +497,13 @@ def situation_win_block(ws: dict | None, teams: list[str]) -> str:
     return _WIN_BEGIN + _win_bars(t0, pa, t1, pb) + f'<div class="note">{note}</div>' + ts + _WIN_END
 
 
-def _team_score_sums(ratings: dict | None, teams: list[str]) -> tuple[float, float] | None:
-    """两队选手评分总和（对齐 teams[0]/teams[1]）；无法按队归属（CS2 无 teamId）返回 None。"""
+def _team_score_avgs(ratings: dict | None, teams: list[str]) -> tuple[float, float] | None:
+    """两队选手评分均分（总和/选手数，对齐 teams[0]/teams[1]）；无法按队归属或某队 0 人返回 None。
+
+    2026-11-22 用户改：由「评分总和」改为「评分均分」——两队被虎扑/阵容表归属的选手数
+    不一致时（CS2 常见，一边 3 人一边 2 人），总和口径会系统性偏袒选手多的一队，
+    均分（总和/人数）才公平。某队 0 名归属选手 -> None（回退 50:50，宁漏不误配）。
+    """
     if not ratings or len(teams) != 2:
         return None
     players = [p for p in (ratings.get("players") or []) if isinstance(p, dict)]
@@ -484,10 +511,12 @@ def _team_score_sums(ratings: dict | None, teams: list[str]) -> tuple[float, flo
         return None
     home = ratings.get("home") or {}
     away = ratings.get("away") or {}
+    home_tid = str(home.get("team_id") or "")
     away_tid = str(away.get("team_id") or "")
     home_name = str(home.get("name") or "")
     away_name = str(away.get("name") or "")
     home_sum = away_sum = 0.0
+    home_n = away_n = 0
     for p in players:
         tid = str(p.get("team_id") or "")
         try:
@@ -496,26 +525,57 @@ def _team_score_sums(ratings: dict | None, teams: list[str]) -> tuple[float, flo
             s = 0.0
         if away_tid and tid == away_tid:
             away_sum += s
-        else:
+            away_n += 1
+        elif home_tid and tid == home_tid:
             home_sum += s
+            home_n += 1
+        # 未归属（team_id 空/未识别）不计入任何一队（宁可漏计不误配）。
+    if home_n == 0 or away_n == 0:
+        return None  # 某队无归属选手，无法比均分 -> 回退 50/50
+    home_avg = home_sum / home_n
+    away_avg = away_sum / away_n
     home_idx = _match_index(home_name, teams)
     away_idx = _match_index(away_name, teams)
     if home_idx == 1 and away_idx == 0:
-        return away_sum, home_sum
-    return home_sum, away_sum
+        return away_avg, home_avg
+    return home_avg, away_avg
 
 
-def _rating_win_block(teams: list[str], sum0: float, sum1: float) -> str:
-    """情况二胜率块：无胜负弹幕时按两队选手评分总和对比（大者 70% / 小者 30%）。
+def _ratings_avg_count(ratings: dict | None) -> float | None:
+    """两队已归属选手的平均评分人数（count = scorePersonCount）；无归属选手返回 None。
 
+    2026-11-22 用户规则：近 5 分钟胜负弹幕不足改走评分均分时，要求「两队伍每个选手的
+    平均评分人数 >= 20 人」才生效——评分人数太少 = 评分不可靠，退回弹幕累积。
+    只统计已归属（team_id 非空）选手；未归属选手的评分人数不参与可靠性判断。
+    """
+    players = [p for p in ((ratings or {}).get("players") or []) if isinstance(p, dict)]
+    counts = []
+    for p in players:
+        if not str(p.get("team_id") or ""):
+            continue
+        try:
+            c = int(p.get("count") or 0)
+        except (TypeError, ValueError):
+            c = 0
+        counts.append(c)
+    if not counts:
+        return None
+    return sum(counts) / len(counts)
+
+
+def _rating_win_block(teams: list[str], avg0: float, avg1: float, reason: str = "暂无显式胜负弹幕样本") -> str:
+    """情况二胜率块：按两队选手评分均分对比（大者 70% / 小者 30%）。
+
+    reason 区分两种触发：① 完全无胜负弹幕（默认）；② 近 5 分钟样本不足改走评分
+    （reason="近 5 分钟胜负弹幕样本不足"，2026-11-22 用户规则）。
     外包 _WIN_BEGIN/_WIN_END 标记，与 situation_win_block 同构，供 refresh_situation
     就地替换（否则 70/30 块无标记、下一轮替换失败冻结）。
     """
     t0, t1 = teams[0], teams[1]
-    pa, pb = (70, 30) if sum0 >= sum1 else (30, 70)
+    pa, pb = (70, 30) if avg0 >= avg1 else (30, 70)
     note = (
-        '<div class="note">暂无显式胜负弹幕样本，按两队选手评分总和对比'
-        f'（{t0} {sum0:.1f} vs {t1} {sum1:.1f}），暂按 {pa}:{pb} 展示（观众口径·非结论），随评分/弹幕更新。</div>'
+        f'<div class="note">{reason}，按两队选手评分均分对比'
+        f'（{t0} {avg0:.1f} vs {t1} {avg1:.1f}），暂按 {pa}:{pb} 展示（观众口径·非结论），随评分/弹幕更新。</div>'
     )
     ts = (
         f'<div class="note" data-sit-ts="{int(time.time())}" style="color:#8a8f98;font-size:11px;margin-top:2px">'
@@ -526,15 +586,23 @@ def _rating_win_block(teams: list[str], sum0: float, sum1: float) -> str:
 
 def situation_win_block_tiered(ws: dict | None, ratings: dict | None, teams: list[str]) -> str:
     """三档胜率块（2026-11-01 用户定稿，独立局势页 + 情报节点页共用）：
-    ① 有胜负弹幕 -> situation_win_block（现有规则）；
-    ② 无胜负弹幕但有评分（能按队求和）-> 评分总和对比，大者 70% / 小者 30%；
-    ③ 无胜负弹幕也无评分（CS2 无 team_id / 两和相等）-> 50:50 占位。
+    ① 有胜负弹幕 -> 近窗口口径优先；近 5 分钟不足（basis=cumulative）时，
+       若两队平均评分人数 >= 20，改走评分均分对比（2026-11-22 用户规则），否则回退累积弹幕；
+    ② 无胜负弹幕但有评分（能按队求均分）-> 评分均分对比，大者 70% / 小者 30%；
+    ③ 无胜负弹幕也无评分（CS2 无 team_id / 两均分相等 / 某队 0 人）-> 50:50 占位。
     """
     if ws is not None and int(ws.get("total") or 0) > 0:
+        if ws.get("basis") == "cumulative":
+            # 近 5 分钟样本不足回退累积 -> 评分可靠（平均评分人数 >= 20）则改用实时评分均分
+            avg_count = _ratings_avg_count(ratings)
+            if avg_count is not None and avg_count >= 20:
+                avgs = _team_score_avgs(ratings, teams)
+                if avgs is not None and avgs[0] != avgs[1]:
+                    return _rating_win_block(teams, avgs[0], avgs[1], reason="近 5 分钟胜负弹幕样本不足")
         return situation_win_block(ws, teams)
-    sums = _team_score_sums(ratings, teams)
-    if sums is not None and sums[0] != sums[1]:
-        return _rating_win_block(teams, sums[0], sums[1])
+    avgs = _team_score_avgs(ratings, teams)
+    if avgs is not None and avgs[0] != avgs[1]:
+        return _rating_win_block(teams, avgs[0], avgs[1])
     zero = dict(ws) if ws else {}
     zero.update(total=0, count_a=0, count_b=0, pct_a=50, pct_b=50)
     zero.pop("basis", None)
@@ -682,8 +750,10 @@ def render(
         f"节点 G{gi} · {phase_label} · BO{max_games} · {esc(slug_id)}"
         + (" · 补发（窗口后生成）" if late else "")
     )
+    game = _game_of(slug_id)
+    bp_title = "BP 锚点与地图禁选情报" if game == "cs2" else "BP 锚点与选人情报"
     sections = [
-        ("1", "BP 锚点与选人情报", _bp(data)),
+        ("1", bp_title, _bp(data, game)),
         ("2", "比赛局势", _situation(stats, ratings, teams), "situation-card"),
         ("3", "方向性情报板", _direction(data)),
         ("4", "灰信号汇总", _gray(data)),

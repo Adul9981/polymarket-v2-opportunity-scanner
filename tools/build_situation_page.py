@@ -20,46 +20,14 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
-import re
 import time
 from pathlib import Path
 
-import danmu_intel
+import fetch_hupu_player_ratings as hupu
 import render_node_page
 import vps_intel_pipeline as vp
 
 OUT = vp.ROOT / "data" / "situation_live.json"
-
-
-def _load_rows(files: list[Path]) -> list[dict]:
-    """读弹幕 JSONL 并归一化（text/message、nick/nickname、ts→epoch），与 danmu_live_monitor 同口径。"""
-    rows: list[dict] = []
-    for inp in files:
-        if not inp.exists():
-            continue
-        source = inp.stem.split("_", 1)[-1]
-        for line in inp.read_text(encoding="utf-8").splitlines():
-            if not line.strip():
-                continue
-            try:
-                row = json.loads(line)
-            except json.JSONDecodeError:
-                continue
-            if "text" not in row and "message" in row:
-                row["text"] = row["message"]
-            if "nick" not in row and "nickname" in row:
-                row["nick"] = row["nickname"]
-            ts = row.get("ts")
-            if isinstance(ts, str):
-                try:
-                    row["ts"] = datetime.datetime.fromisoformat(
-                        ts.replace("+0800", "+08:00")
-                    ).timestamp()
-                except ValueError:
-                    pass
-            row.setdefault("source", source)
-            rows.append(row)
-    return sorted(rows, key=lambda row: str(row.get("ts", 0)))
 
 
 def _strip_markers(html: str) -> str:
@@ -74,28 +42,18 @@ def _strip_markers(html: str) -> str:
     return html
 
 
-def _match_win_signal(m: dict, teams: list[str], files: list[Path], game: str | None) -> dict | None:
-    """整场胜负弹幕信号（近 5 分钟、样本不足回退累积），每场算一次。"""
-    rows = _load_rows(files)
-    try:
-        lineup = vp.fetch_lineup(str(m.get("id") or ""))
-    except Exception:  # noqa: BLE001
-        lineup = None
-    return danmu_intel.win_signal(rows, teams, game=game, player_teams=lineup, window_seconds=300)
+_EMPTY_WS = {"total": 0, "count_a": 0, "count_b": 0, "pct_a": 50, "pct_b": 50}
 
 
-def _win_html(ws: dict | None, ratings: dict | None, teams: list[str], use_danmu: bool) -> str:
+def _win_html(ws: dict | None, ratings: dict | None, teams: list[str]) -> str:
     """某局胜率块（三档，2026-11-01，按小局口径）；委托 render_node_page.situation_win_block_tiered。
 
-    use_danmu 仅当前进行局为 True；非进行局先把弹幕信号清零（只走评分 70/30 或 50/50），
-    避免把整场弹幕带进已结束/未开打的小局。
+    ws 为本小局切片胜负弹幕信号（进行中局切到 now、已结束局封闭切片，均由 vp.game_win_signal
+    算）；待开打局传 None -> 空信号 -> 回退 50/50。与情报页比赛局势栏共用 vp.game_win_signal
+    （2026-11-02 统一"本小局切片"口径，弃用整场全量弹幕）。
     """
     if ws is None:
-        return ""
-    if not use_danmu:
-        ws = dict(ws)
-        ws.update(total=0, count_a=0, count_b=0, pct_a=50, pct_b=50)
-        ws.pop("basis", None)
+        ws = dict(_EMPTY_WS)
     return _strip_markers(render_node_page.situation_win_block_tiered(ws, ratings, teams))
 
 
@@ -104,6 +62,31 @@ def _ratings_html(ratings: dict | None, teams: list[str]) -> str:
     if not ratings or not (ratings or {}).get("players"):
         return ""
     return _strip_markers(render_node_page.situation_ratings_block(ratings, teams))
+
+
+def _match_score(m: dict, teams: list[str]) -> dict | None:
+    """当前系列比分 {home, away}（与 teams[0]:teams[1] 顺序对齐）；拿不到返回 None。
+
+    只读虎扑评分树 match 层 homeTeamScore/awayTeamScore（每小局结束 +1）；
+    若 hupu home/away 与 teams 顺序相反则对调比分，保证前端 teams[0]:teams[1]。
+    """
+    obn = str(m.get("hupu_score_out_biz_no") or "").strip()
+    if not obn:
+        return None
+    obt = str(m.get("hupu_score_out_biz_type") or "").strip() or "lol_match"
+    try:
+        sc = hupu.fetch_match_score(obn, obt)
+    except Exception:  # noqa: BLE001
+        return None
+    if not sc:
+        return None
+    home, away = sc.get("home", ""), sc.get("away", "")
+    if (
+        hupu._canon_team(sc.get("home_name", "")) == hupu._canon_team(teams[1])
+        and hupu._canon_team(sc.get("away_name", "")) == hupu._canon_team(teams[0])
+    ):
+        home, away = away, home
+    return {"home": home, "away": away}
 
 
 def live_matches() -> list[dict]:
@@ -149,7 +132,11 @@ def build() -> dict:
             continue  # 首版只做英雄联盟 + CS2（dota2/valorant 预留）
         teams = m["teams"]
         files = vp.league_files(m, all_files)
-        ws = _match_win_signal(m, teams, files, game)
+        try:
+            lineup = vp.fetch_lineup(mid)
+        except Exception:  # noqa: BLE001
+            lineup = None
+        score = _match_score(m, teams)
         # LoL BO1/3/5 上限 5；CS2 BO1/3 上限 3（用户定稿 2026-11-01）
         max_games = min(vp.format_of(m), 3) if game == "cs2" else vp.format_of(m)
         games: list[dict] = []
@@ -174,8 +161,10 @@ def build() -> dict:
                     "win_html": "",  # 下方统一回填（需先知道当前进行局）
                 }
             )
-        # 状态 + 胜率回填：有评分 = 已开打；最高已开打局 = 进行中（该局可用弹幕信号），
-        # 其余 = 已结束 / 待开打（只用该局评分，无评分则 50:50）。
+        # 状态 + 胜率回填：有评分 = 已开打；最高已开打局 = 进行中（切到 now），
+        # 已结束局 = 封闭切片 [本局起点 -> 结束]，待开打 = 无弹幕（50:50）。
+        # 与情报页比赛局势栏对齐：已结束局不再清弹幕只走评分，而是算本局自己的切片胜率
+        #（2026-11-02 用户定稿，反转 11-01 的"已结束局=评分 70/30"）。
         live_gi = highest_rated if highest_rated > 0 else 0
         for g in games:
             gi = g["gi"]
@@ -185,13 +174,25 @@ def build() -> dict:
                 g["state"] = "played"
             else:
                 g["state"] = "live"
-            g["win_html"] = _win_html(ws, ratings_by_gi.get(gi), teams, use_danmu=(gi == highest_rated))
+            if gi == highest_rated:
+                ws = vp.game_win_signal(mid, gi, teams, files, game, lineup)
+            elif gi < highest_rated:
+                end = vp.game_end_iso(mid, gi)
+                ws = (
+                    vp.game_win_signal(mid, gi, teams, files, game, lineup, end_iso=end)
+                    if end
+                    else None
+                )
+            else:
+                ws = None
+            g["win_html"] = _win_html(ws, ratings_by_gi.get(gi), teams)
         matches_out.append(
             {
                 "id": mid,
                 "game": game,
                 "league": m.get("league") or "-",
                 "teams": teams,
+                "score": score,
                 "start_time": m.get("start_time") or "",
                 "start_bj": _bj_time(m.get("start_time") or ""),
                 "max_games": max_games,

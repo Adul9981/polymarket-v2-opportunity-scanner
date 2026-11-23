@@ -69,7 +69,7 @@ def test_kind_and_active():
 
 
 def test_breadcrumb_situation_no_title():
-    bc = N.breadcrumb_html("../", "situation", "", "match_situation.html", "")
+    bc = N.breadcrumb_html("../", "situation", "", "match_situation.html")
     assert "比赛局势" in bc
     # 面包屑不得带 title 后缀（title_of 会把 match_situation 误解析成 "situation"）
     assert "› <b" not in bc
@@ -126,8 +126,13 @@ def test_build_shape_cs2(monkeypatch):
     monkeypatch.setattr(B.vp, "format_of", lambda m: 3)
     monkeypatch.setattr(B.vp, "league_files", lambda m, files: [])
     monkeypatch.setattr(B.vp, "fetch_ratings", fake_ratings)
-    monkeypatch.setattr(B, "_match_win_signal", lambda m, teams, files, game: None)
-    monkeypatch.setattr(B, "_win_html", lambda ws, ratings, teams, use_danmu: "<win>")
+    monkeypatch.setattr(B.vp, "fetch_lineup", lambda mid: None)
+    monkeypatch.setattr(B.vp, "game_end_iso", lambda mid, gi: "2026-10-25T13:40:00Z")
+    monkeypatch.setattr(
+        B.vp, "game_win_signal",
+        lambda mid, gi, teams, files, game=None, lineup=None, end_iso="": None,
+    )
+    monkeypatch.setattr(B, "_win_html", lambda ws, ratings, teams: "<win>")
     monkeypatch.setattr(
         B, "_ratings_html", lambda r, teams: "R" if (r and r.get("players")) else ""
     )
@@ -169,16 +174,76 @@ def _ratings_home_away():
     }
 
 
-def test_team_score_sums_maps_home_away():
-    sums = B.render_node_page._team_score_sums(_ratings_home_away(), ["G2", "Aurora"])
-    assert sums == (17.0, 7.0)
+def test_team_score_avgs_maps_home_away():
+    # 2026-11-22 改：均分（总和/选手数）——G2 两人 (9.0+8.0)/2=8.5，Aurora 一人 7.0/1=7.0
+    avgs = B.render_node_page._team_score_avgs(_ratings_home_away(), ["G2", "Aurora"])
+    assert avgs == (8.5, 7.0)
 
 
-def test_team_score_sums_no_team_id_returns_none():
+def test_team_score_avgs_no_team_id_returns_none():
     # CS2 无 team_id，无法按队归属 -> None（回退 50:50）
     ratings = {"players": [{"name": "woxic", "score": 9.3}]}
-    assert B.render_node_page._team_score_sums(ratings, ["A", "B"]) is None
-    assert B.render_node_page._team_score_sums(None, ["A", "B"]) is None
+    assert B.render_node_page._team_score_avgs(ratings, ["A", "B"]) is None
+    assert B.render_node_page._team_score_avgs(None, ["A", "B"]) is None
+
+
+def test_team_score_avgs_one_team_empty_returns_none():
+    # 某队 0 名归属选手 -> None（回退 50/50，宁漏不误配）
+    ratings = {
+        "home": {"name": "G2", "team_id": 1},
+        "away": {"name": "Aurora", "team_id": 2},
+        "players": [
+            {"name": "p1", "team_id": 1, "score": 9.0},
+            {"name": "p2", "team_id": 1, "score": 8.0},
+            # Aurora 无归属选手
+        ],
+    }
+    assert B.render_node_page._team_score_avgs(ratings, ["G2", "Aurora"]) is None
+
+
+def test_team_score_avgs_excludes_unassigned():
+    # 空 team_id 的选手不得计入任何一队（宁可漏计不误配；曾把未归属塞进主队列/主队分）
+    ratings = {
+        "home": {"name": "G2", "team_id": 1},
+        "away": {"name": "Aurora", "team_id": 2},
+        "players": [
+            {"name": "p1", "team_id": 1, "score": 9.0},
+            {"name": "p2", "team_id": 2, "score": 7.0},
+            {"name": "pX", "team_id": "", "score": 99.0},  # 未归属，不得计入任何一队
+        ],
+    }
+    avgs = B.render_node_page._team_score_avgs(ratings, ["G2", "Aurora"])
+    assert avgs == (9.0, 7.0)
+
+
+def test_rating_cols_unassigned_goes_to_separate_group():
+    # 部分队识别、部分空 team_id：空 team_id 必须单独标「未归属」，不混入主队列
+    ratings = {
+        "home": {"name": "The MongolZ", "team_id": 1},
+        "away": {"name": "HEROIC", "team_id": 2},
+        "players": [
+            {"name": "bLitz", "team_id": 1, "score": 6.0},
+            {"name": "nilo", "team_id": 2, "score": 10.0},
+            {"name": "MartinezSa", "team_id": "", "score": 10.0},
+        ],
+    }
+    html = B.render_node_page._rating_cols(ratings, ["The MongolZ", "HEROIC"])
+    assert "未归属" in html
+    # 未归属组排在两队列之后，MartinezSa 出现在「未归属」标签之后
+    assert html.index("MartinezSa") > html.index("未归属")
+
+
+def test_rating_cols_no_unassigned_group_when_all_attributed():
+    ratings = {
+        "home": {"name": "G2", "team_id": 1},
+        "away": {"name": "Aurora", "team_id": 2},
+        "players": [
+            {"name": "p1", "team_id": 1, "score": 9.0},
+            {"name": "p2", "team_id": 2, "score": 7.0},
+        ],
+    }
+    html = B.render_node_page._rating_cols(ratings, ["G2", "Aurora"])
+    assert "未归属" not in html
 
 
 def test_rating_win_block_70_30():
@@ -214,15 +279,63 @@ def _ws(total=0, pct_a=50, pct_b=50):
     return {"total": total, "pct_a": pct_a, "pct_b": pct_b, "sample_status": "insufficient"}
 
 
+# ---------- 近 5 分钟不足改走评分均分（2026-11-22 用户规则） ----------
+
+def _ratings_counted(counts: list[int]) -> dict:
+    """G2 两人 8.0 分、Aurora 一人 9.0 分，评分人数可配。"""
+    return {
+        "home": {"name": "G2", "team_id": 1},
+        "away": {"name": "Aurora", "team_id": 2},
+        "players": [
+            {"name": "p1", "team_id": 1, "score": 8.0, "count": counts[0]},
+            {"name": "p2", "team_id": 1, "score": 8.0, "count": counts[1]},
+            {"name": "p3", "team_id": 2, "score": 9.0, "count": counts[2]},
+        ],
+    }
+
+
+def test_ratings_avg_count():
+    assert B.render_node_page._ratings_avg_count(_ratings_counted([30, 30, 40])) == (30 + 30 + 40) / 3
+    assert B.render_node_page._ratings_avg_count(None) is None
+    # 未归属选手的评分人数不参与平均
+    ratings = _ratings_counted([30, 30, 40])
+    ratings["players"].append({"name": "pX", "team_id": "", "score": 9.0, "count": 10000})
+    assert B.render_node_page._ratings_avg_count(ratings) == (30 + 30 + 40) / 3
+
+
+def test_tiered_cumulative_insufficient_uses_rating_when_count_ok():
+    # 近 5 分钟不足（basis=cumulative）+ 平均评分人数 >= 20 -> 改走评分均分 70/30
+    ws = {"total": 8, "pct_a": 50, "pct_b": 50, "basis": "cumulative", "sample_status": "ready"}
+    out = B.render_node_page.situation_win_block_tiered(ws, _ratings_counted([30, 30, 40]), ["G2", "Aurora"])
+    assert "70" in out and "30" in out
+    assert "近 5 分钟胜负弹幕样本不足" in out  # 新 reason，非「暂无显式胜负弹幕样本」
+
+
+def test_tiered_cumulative_falls_back_when_count_low():
+    # 平均评分人数 < 20 -> 评分不可靠，回退累积弹幕比例（不走 70/30）
+    ws = {"total": 8, "pct_a": 60, "pct_b": 40, "basis": "cumulative", "sample_status": "ready"}
+    out = B.render_node_page.situation_win_block_tiered(ws, _ratings_counted([5, 5, 5]), ["G2", "Aurora"])
+    assert "60" in out and "40" in out
+    assert "近 5 分钟胜负弹幕样本不足" not in out
+
+
+def test_tiered_recent_uses_danmaku_not_rating():
+    # basis=recent（近 5 分钟样本充足）-> 仍用弹幕比例，不改成评分（即使评分人数够）
+    ws = {"total": 10, "pct_a": 60, "pct_b": 40, "basis": "recent", "sample_status": "ready"}
+    out = B.render_node_page.situation_win_block_tiered(ws, _ratings_counted([30, 30, 40]), ["G2", "Aurora"])
+    assert "60" in out and "40" in out
+    assert "近 5 分钟胜负弹幕样本不足" not in out
+
+
 def test_win_html_case3_danmu(monkeypatch):
     # 情况三：当前进行局有胜负弹幕 -> 现有规则
     monkeypatch.setattr(B.render_node_page, "situation_win_block", lambda ws, teams: "REALWIN")
-    assert B._win_html(_ws(total=10, pct_a=60, pct_b=40), None, ["A", "B"], True) == "REALWIN"
+    assert B._win_html(_ws(total=10, pct_a=60, pct_b=40), None, ["A", "B"]) == "REALWIN"
 
 
 def test_win_html_case2_ratings():
     # 情况二：无胜负弹幕但有评分 -> 70/30
-    out = B._win_html(_ws(), _ratings_home_away(), ["G2", "Aurora"], False)
+    out = B._win_html(_ws(), _ratings_home_away(), ["G2", "Aurora"])
     assert "70" in out and "30" in out
     assert "暂无显式胜负弹幕样本" in out
 
@@ -230,18 +343,18 @@ def test_win_html_case2_ratings():
 def test_win_html_case1_fifty(monkeypatch):
     # 情况一：无胜负弹幕也无评分 -> 50:50
     monkeypatch.setattr(B.render_node_page, "situation_win_block", lambda ws, teams: "FIFTY")
-    assert B._win_html(_ws(), None, ["A", "B"], False) == "FIFTY"
+    assert B._win_html(_ws(), None, ["A", "B"]) == "FIFTY"
 
 
-def test_win_html_danmu_only_applies_to_live_game():
-    # 非进行局 use_danmu=False：即使 ws.total>0 也不走弹幕（回退评分/50:50）
-    out = B._win_html(_ws(total=10, pct_a=60, pct_b=40), None, ["A", "B"], False)
-    # 无评分 -> 50:50（situation_win_block 输出，含"暂无显式胜负弹幕样本"）
+def test_win_html_none_ws_falls_back_to_fifty():
+    # 非进行局（build 传 ws=None）-> 空信号 -> 回退评分/50:50，绝不走整场弹幕
+    out = B._win_html(None, None, ["A", "B"])
     assert "暂无显式胜负弹幕样本" in out
 
 
-def test_build_win_html_per_game_use_danmu_flag(monkeypatch):
-    # build() 只对最高已开打局传 use_danmu=True，其余局 False
+def test_build_calls_game_win_signal_for_played_and_live(monkeypatch):
+    # build() 对已结束局（封闭切片 end_iso）+ live 局（切到 now）都调 game_win_signal，
+    # 待开打局不碰弹幕（2026-11-02 已结束局对齐情报页冻结口径，不再清弹幕只走评分）
     fake_match = {"id": "lol-hupu-1", "teams": ["G2", "Aurora"], "start_time": "2026-10-25T13:00:00Z"}
     calls = []
 
@@ -254,14 +367,46 @@ def test_build_win_html_per_game_use_danmu_flag(monkeypatch):
     monkeypatch.setattr(B.vp, "format_of", lambda m: 3)
     monkeypatch.setattr(B.vp, "league_files", lambda m, files: [])
     monkeypatch.setattr(B.vp, "fetch_ratings", fake_ratings)
-    monkeypatch.setattr(B, "_match_win_signal", lambda m, teams, files, game: _ws())
+    monkeypatch.setattr(B.vp, "fetch_lineup", lambda mid: None)
+    monkeypatch.setattr(B.vp, "game_end_iso", lambda mid, gi: "2026-10-25T13:40:00Z")
     monkeypatch.setattr(B, "_ratings_html", lambda r, teams: "")
 
-    def fake_win(ws, ratings, teams, use_danmu):
-        calls.append(use_danmu)
-        return "W"
+    def fake_game_win_signal(mid, gi, teams, files, game=None, lineup=None, end_iso=""):
+        calls.append((gi, end_iso))
+        return _ws()
 
-    monkeypatch.setattr(B, "_win_html", fake_win)
+    monkeypatch.setattr(B.vp, "game_win_signal", fake_game_win_signal)
+    monkeypatch.setattr(B, "_win_html", lambda ws, ratings, teams: "W")
     B.build()
-    # G1 played / G2 live / G3 upcoming -> 只有 G2（live）use_danmu=True
-    assert calls == [False, True, False]
+    # G1 played(封闭切片 end_iso 非空) / G2 live(切到 now) / G3 upcoming(不调)
+    assert calls == [(1, "2026-10-25T13:40:00Z"), (2, "")]
+
+
+def test_build_skips_finished_game_when_no_end_bound(monkeypatch):
+    # 已结束局取不到结束上界（game_end_iso=None）时不碰弹幕，回退 ws=None -> 50:50，
+    # 避免 open 切片把后续局弹幕混进来（2026-11-02 防串局）
+    fake_match = {"id": "lol-hupu-1", "teams": ["G2", "Aurora"], "start_time": "2026-10-25T13:00:00Z"}
+    calls = []
+
+    def fake_ratings(mid, gi):
+        return {"players": [{"name": "p", "team_id": 1, "score": 9.0}]} if gi in (1, 2) else None
+
+    monkeypatch.setattr(B, "live_matches", lambda: [fake_match])
+    monkeypatch.setattr(B, "_all_danmu_files", lambda: [])
+    monkeypatch.setattr(B.vp, "_match_game", lambda m: "lol")
+    monkeypatch.setattr(B.vp, "format_of", lambda m: 3)
+    monkeypatch.setattr(B.vp, "league_files", lambda m, files: [])
+    monkeypatch.setattr(B.vp, "fetch_ratings", fake_ratings)
+    monkeypatch.setattr(B.vp, "fetch_lineup", lambda mid: None)
+    monkeypatch.setattr(B.vp, "game_end_iso", lambda mid, gi: None)
+    monkeypatch.setattr(B, "_ratings_html", lambda r, teams: "")
+
+    def fake_game_win_signal(mid, gi, teams, files, game=None, lineup=None, end_iso=""):
+        calls.append(gi)
+        return _ws()
+
+    monkeypatch.setattr(B.vp, "game_win_signal", fake_game_win_signal)
+    monkeypatch.setattr(B, "_win_html", lambda ws, ratings, teams: "W")
+    B.build()
+    # G1 played 但无结束上界 -> 不调 game_win_signal；G2 live -> 调；G3 upcoming -> 不调
+    assert calls == [2]

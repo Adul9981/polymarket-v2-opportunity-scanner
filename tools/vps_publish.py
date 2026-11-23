@@ -29,6 +29,7 @@ from add_paywall import inject_all as paywall_inject  # noqa: E402
 from add_paywall import page_key as paywall_page_key  # noqa: E402
 from add_site_nav import inject_all as nav_inject  # noqa: E402
 from add_stats_track import inject_all as track_inject  # noqa: E402
+import analytics_publish  # noqa: E402
 
 ROOT = Path("/opt/danmu-intel")
 REPORTS = ROOT / "reports"
@@ -38,6 +39,10 @@ FREE_MODE_FLAG = ROOT / "runtime" / "free_mode.flag"
 KEY = Path.home() / ".ssh" / "github_deploy"
 GIT_SSH = f"ssh -i {KEY} -o StrictHostKeyChecking=accept-new"
 PATTERNS = ("intel_danmu_*.html", "intel_soop_*.html", "match_*.html", "case_*.html")
+PATTERN_WORKSPACE = (
+    ROOT / "pattern-decision" / "live" / "reports" / "pattern_decision_workspace.html"
+)
+PATTERN_ATLAS = ROOT / "pattern-decision" / "live" / "reports" / "pattern_atlas.html"
 
 
 def git(repo: Path, *args: str) -> subprocess.CompletedProcess:
@@ -525,6 +530,7 @@ def main(argv: list[str] | None = None) -> int:
     sync_game_status(REPO)
     target = REPO / "intel"
     target.mkdir(parents=True, exist_ok=True)
+    analytics_publish.prepare_release(ROOT, REPORTS, target)
     rebuild_match_shells()  # 2026-08-27：节点生成后壳必须最新（防线上入口缺失）
     build_situation_json()  # 独立比赛局势页的实时数据（规则层，零 AI）
     copy_situation_files(REPO)  # 局势页 + situation_live.json 进站点仓库
@@ -533,6 +539,18 @@ def main(argv: list[str] | None = None) -> int:
         for f in REPORTS.glob(pattern):
             shutil.copy2(f, target / f.name)
             copied += 1
+    # The repository reset above restores the previously published workspace.
+    # Always reinstall the VPS-built page so publishing cannot roll it back.
+    if PATTERN_WORKSPACE.exists():
+        shutil.copy2(PATTERN_WORKSPACE, target / PATTERN_WORKSPACE.name)
+        copied += 1
+    else:
+        print(f"[publish] WARN: pattern workspace missing: {PATTERN_WORKSPACE}", flush=True)
+    if PATTERN_ATLAS.exists():
+        shutil.copy2(PATTERN_ATLAS, target / PATTERN_ATLAS.name)
+        copied += 1
+    else:
+        print(f"[publish] WARN: pattern atlas missing: {PATTERN_ATLAS}", flush=True)
     # 先重建今日页，再统一注入导航/favicon——保证今日页用同一套导航
     # （教训 2026-08-25：注入在前、重建在后会把生成器旧导航重新推上线）
     regen_today_page(REPO)

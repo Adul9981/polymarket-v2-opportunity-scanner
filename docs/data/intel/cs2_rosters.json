@@ -1,0 +1,321 @@
+{
+  "source": "liquipedia_cs",
+  "fetched_at_utc": "2026-11-03T04:39:01Z",
+  "teams": {
+    "furia": {
+      "abbr": "FURIA",
+      "liquipedia_page": "FURIA",
+      "players": [
+        "yuurih",
+        "KSCERATO",
+        "FalleN",
+        "molodoy",
+        "YEKINDAR"
+      ],
+      "ok": true
+    },
+    "g2": {
+      "abbr": "G2",
+      "liquipedia_page": "G2 Esports",
+      "players": [
+        "huNter-",
+        "HeavyGod",
+        "matys",
+        "NertZ",
+        "r1nkle"
+      ],
+      "ok": true
+    },
+    "navi": {
+      "abbr": "NAVI",
+      "liquipedia_page": "Natus Vincere",
+      "players": [
+        "b1t",
+        "Aleksib",
+        "iM",
+        "w0nderful",
+        "makazze"
+      ],
+      "ok": true
+    },
+    "spirit": {
+      "abbr": "Spirit",
+      "liquipedia_page": "Team Spirit",
+      "players": [
+        "magixx",
+        "zont1x",
+        "donk",
+        "sh1ro",
+        "tN1R",
+        "chopper"
+      ],
+      "ok": true
+    },
+    "vit": {
+      "abbr": "VIT",
+      "liquipedia_page": "Team Vitality",
+      "players": [
+        "apEX",
+        "ZywOo",
+        "flameZ",
+        "mezii",
+        "ropz"
+      ],
+      "ok": true
+    },
+    "mouz": {
+      "abbr": "MOUZ",
+      "liquipedia_page": "MOUZ",
+      "players": [
+        "torzsi",
+        "xertioN",
+        "Spinx",
+        "xelex",
+        "PR"
+      ],
+      "ok": true
+    },
+    "mglz": {
+      "abbr": "MGLZ",
+      "liquipedia_page": "The MongolZ",
+      "players": [
+        "bLitz",
+        "Techno4K",
+        "910",
+        "cobrazera",
+        "nin9",
+        "DarkMeister"
+      ],
+      "ok": true
+    },
+    "tl": {
+      "abbr": "TL",
+      "liquipedia_page": "Team Liquid",
+      "players": [
+        "NAF",
+        "EliGE",
+        "malbsMd",
+        "Jorko",
+        "JT"
+      ],
+      "ok": true
+    },
+    "fut": {
+      "abbr": "FUT",
+      "liquipedia_page": "FUT Esports",
+      "players": [
+        "dem0n",
+        "Krabeni",
+        "dziugss",
+        "xfl0ud",
+        "SunPayus",
+        "lauNX"
+      ],
+      "ok": true
+    },
+    "aurora": {
+      "abbr": "AUR",
+      "liquipedia_page": "Aurora Gaming",
+      "players": [
+        "XANTARES",
+        "Wicadia",
+        "woxic",
+        "Jimpphat",
+        "kyxsan",
+        "MAJ3R",
+        "deko"
+      ],
+      "ok": true
+    },
+    "nemiga": {
+      "abbr": "Nemiga",
+      "liquipedia_page": "Nemiga Gaming",
+      "players": [
+        "khaN",
+        "SYPH0",
+        "KaiR0N-",
+        "robo",
+        "Xant3r"
+      ],
+      "ok": true
+    },
+    "9z": {
+      "abbr": "9z",
+      "liquipedia_page": "9z Team",
+      "players": [
+        "max",
+        "HUASOPEEK",
+        "luchov",
+        "meyern",
+        "dgt"
+      ],
+      "ok": true
+    },
+    "legacy": {
+      "abbr": "Legacy",
+      "liquipedia_page": "Legacy",
+      "players": [
+        "latto",
+        "dumau",
+        "arT",
+        "try",
+        "ksloks",
+        "n1ssim"
+      ],
+      "ok": true
+    },
+    "flc": {
+      "abbr": "FLC",
+      "liquipedia_page": "Team Falcons",
+      "players": [
+        "NiKo",
+        "TeSeS",
+        "m0NESY",
+        "kyousuke",
+        "karrigan"
+      ],
+      "ok": true
+    },
+    "ic": {
+      "abbr": "IC",
+      "liquipedia_page": "IC Esports",
+      "players": [
+        "onic",
+        "Dawy",
+        "zeRRoFIX",
+        "cptkurtka023",
+        "headtr1ck",
+        "Flierax",
+        "nifee"
+      ],
+      "ok": true
+    },
+    "lvg": {
+      "abbr": "LVG",
+      "liquipedia_page": "Lynn Vision Gaming",
+      "players": [
+        "westmelon",
+        "z4kr",
+        "EmiliaQAQ",
+        "Starry",
+        "C4LLM3SU3"
+      ],
+      "ok": true
+    },
+    "m80": {
+      "abbr": "M80",
+      "liquipedia_page": "M80",
+      "players": [
+        "Swisher",
+        "slaxz-",
+        "s1n",
+        "Lake",
+        "JBa"
+      ],
+      "ok": true
+    },
+    "pain": {
+      "abbr": "paiN",
+      "liquipedia_page": "PaiN Gaming",
+      "players": [
+        "biguzera",
+        "snow",
+        "saffee",
+        "Rkzinho",
+        "Tatu",
+        "piriajr",
+        "v$m"
+      ],
+      "ok": true
+    },
+    "dendele": {
+      "abbr": "DENDELE",
+      "liquipedia_page": "DENDELE CS",
+      "players": [
+        "gafolo",
+        "rdnzao",
+        "doc",
+        "koala",
+        "maxxkor"
+      ],
+      "ok": true
+    },
+    "faze": {
+      "abbr": "FaZe",
+      "liquipedia_page": "FaZe Clan",
+      "players": [
+        "frozen",
+        "jcobbb",
+        "Twistzz",
+        "JBOEN",
+        "Neityu",
+        "broky"
+      ],
+      "ok": true
+    },
+    "tyloo": {
+      "abbr": "TYLOO",
+      "liquipedia_page": "TYLOO",
+      "players": [
+        "JamYoung",
+        "Moseyuh",
+        "Mercury",
+        "Jee",
+        "Zero",
+        "DANK1NG"
+      ],
+      "ok": true
+    },
+    "betboom": {
+      "abbr": "BetBoom",
+      "liquipedia_page": "BetBoom Team",
+      "players": [
+        "s1ren",
+        "zorte",
+        "Magnojez",
+        "Boombl4",
+        "d1Ledez"
+      ],
+      "ok": true
+    },
+    "prv": {
+      "abbr": "PRV",
+      "liquipedia_page": "PARIVISION",
+      "players": [
+        "Jame",
+        "xiELO",
+        "zweih",
+        "FL1T",
+        "HObbit",
+        "slaxejezzz",
+        "Jerry"
+      ],
+      "ok": true
+    },
+    "b8": {
+      "abbr": "B8",
+      "liquipedia_page": "B8",
+      "players": [
+        "npl",
+        "esenthial",
+        "alex666",
+        "kensizor",
+        "s1zzi"
+      ],
+      "ok": true
+    },
+    "heroic": {
+      "abbr": "HEROIC",
+      "liquipedia_page": "HEROIC",
+      "players": [
+        "nilo",
+        "Chr1zN",
+        "susp",
+        "Martinez",
+        "Brollan",
+        "Alkaren"
+      ],
+      "ok": true
+    }
+  }
+}

@@ -40,10 +40,15 @@ FILES=(
   "tools/vps_intel_pipeline.py"
   "tools/render_node_page.py"
   "tools/refresh_situation.py"
+  "tools/build_situation_page.py"
+  "tools/templates/match_situation.html"
   "tools/fetch_hupu_player_ratings.py"
   "tools/intel_html.py"
   "tools/fetch_official_game_data.py"
   "tools/fetch_official_lol_schedule.py"
+  # 赛前页历史数据（1 队伍交手情况 + 2 队伍比赛近况）：数据拉取 + 规则层渲染，pipeline pre 分支 import
+  "tools/fetch_team_history.py"
+  "tools/render_pregame.py"
   "tools/fetch_hupu_esports.py"
   "tools/export_today_matches.py"
   "tools/vps_publish.py"
@@ -63,6 +68,28 @@ FILES=(
   "tools/vps_backfill_nodes.py"
   # 弹幕目录迁移（旧两级 -> 三级 game/ 层，正式迁移时先停采集再 --apply）
   "tools/migrate_danmu_games.py"
+  # CS2 静态阵容表 + 队伍统一清单（fetch_cs2_rosters 生成阵容表；
+  #   fetch_hupu_player_ratings / build_history_index 读取，必须随代码同步防分叉）
+  "tools/fetch_cs2_rosters.py"
+  "docs/data/intel/team_names.json"
+  "docs/data/intel/cs2_rosters.json"
+  # 站点功能层（原 VPS 独有，2026-11-12 补进清单防分叉）
+  #   访问统计：analytics_service = systemd 服务后端（danmu-analytics/alpha-analytics），
+  #     analytics_publish = vps_publish 的 import 依赖（必须随 vps_publish 同步）
+  "tools/analytics_service.py"
+  "tools/analytics_publish.py"
+  #   地图战绩台账
+  "tools/sync_map_records.py"
+  #   深度情报页三件套（规则直出 + 直连 DeepSeek；key 走 DEEPSEEK_API_KEY/config.toml，无硬编码）
+  "tools/gen_deep_intel.py"
+  "tools/llm_client.py"
+  "tools/render_fast_intel.py"
+  #   形态图谱桥：import build_pattern_decision_site / build_pattern_library，
+  #   二者在 /opt/danmu-intel/pattern-decision/live/tools/（形态决策台，不在本清单）——
+  #   跨套文件，单推不能本地跑通，依赖由形态决策台自管
+  "tools/build_pattern_atlas.py"
+  #   一次性脚本（硬编码 KT-BRO 场次，保留同步防分叉）
+  "tools/regen_kt_all.py"
 )
 
 echo "[sync-rules] 同步 $((${#FILES[@]})) 个标准/工具文件到 $VPS:$REMOTE"
@@ -72,7 +99,7 @@ if [ "${1:-}" != "--dry-run" ]; then
   STAMP=$(date +%Y%m%d_%H%M%S)
   echo "[sync-rules] 同步前快照 -> $REMOTE/.rollback/code_$STAMP.tar.gz"
   ssh "${SSH_OPTS[@]}" "$VPS" \
-    "mkdir -p $REMOTE/.rollback && tar -czf $REMOTE/.rollback/code_$STAMP.tar.gz -C $REMOTE tools knowledge AGENTS.md" \
+    "mkdir -p $REMOTE/.rollback && tar -czf $REMOTE/.rollback/code_$STAMP.tar.gz -C $REMOTE tools knowledge AGENTS.md docs/data/intel" \
     || echo "  !! 快照失败，继续同步（回退将不可用）"
 fi
 
