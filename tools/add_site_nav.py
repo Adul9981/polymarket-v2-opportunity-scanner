@@ -82,6 +82,7 @@ def nav_html(pre: str, active: str = "") -> str:
     pattern_h = "pattern_decision_workspace.html" if in_sub else "intel/pattern_decision_workspace.html"
     atlas_h = "pattern_atlas.html" if in_sub else "intel/pattern_atlas.html"
     prematch_h = "intel_prematch.html" if in_sub else "intel/intel_prematch.html"
+    help_h = "intel_help.html" if in_sub else "intel/intel_help.html"
     analytics_h = "analytics.html" if in_sub else "intel/analytics.html"
     sub_h = pre + "subscribe.html"
     return (
@@ -102,6 +103,7 @@ def nav_html(pre: str, active: str = "") -> str:
         f'{link(hist_h, "历史情报库", "history")}'
         f'{divider()}'
         f'{link(prematch_h, "赛前情报", "prematch")}'
+        f'{link(help_h, "问答 FAQ", "help")}'
         f'{link(pattern_h, "形态决策台", "pattern")}'
         f'{link(atlas_h, "形态图谱", "pattern-atlas")}'
         f'{divider()}'
@@ -159,6 +161,7 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
         "pattern": "形态决策台",
         "pattern-atlas": "形态图谱",
         "prematch": "赛前情报",
+        "help": "问答与使用指南",
         "today": "今日情报",
         "situation": "比赛局势",
         "history": "历史情报库",
@@ -181,6 +184,7 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
         "pattern": None,
         "pattern-atlas": "pattern_decision_workspace.html",
         "prematch": None,
+        "help": None,
         "today": "today.html",
         "situation": "match_situation.html",
         "history": "history.html",
@@ -237,6 +241,7 @@ def kind_of(name: str) -> str:
         "pattern_decision_workspace.html": "pattern",
         "pattern_atlas.html": "pattern-atlas",
         "intel_prematch.html": "prematch",
+        "intel_help.html": "help",
         "analytics.html": "analytics",
     }
     if name in mapping:
@@ -275,6 +280,7 @@ def active_of(kind: str, name: str = "", text: str = "") -> str:
         "pattern": "pattern",
         "pattern-atlas": "pattern-atlas",
         "prematch": "prematch",
+        "help": "help",
         "analytics": "analytics",
     }.get(kind, "")
 

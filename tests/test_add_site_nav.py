@@ -42,9 +42,11 @@ def test_pattern_pages_get_current_page_nav_state():
     assert add_site_nav.kind_of("pattern_decision_workspace.html") == "pattern"
     assert add_site_nav.kind_of("pattern_atlas.html") == "pattern-atlas"
     assert add_site_nav.kind_of("intel_prematch.html") == "prematch"
+    assert add_site_nav.kind_of("intel_help.html") == "help"
     assert add_site_nav.active_of("pattern") == "pattern"
     assert add_site_nav.active_of("pattern-atlas") == "pattern-atlas"
     assert add_site_nav.active_of("prematch") == "prematch"
+    assert add_site_nav.active_of("help") == "help"
 
     pattern = add_site_nav.nav_html("", "pattern")
     atlas = add_site_nav.nav_html("", "pattern-atlas")

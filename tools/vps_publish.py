@@ -25,6 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from add_favicon import inject_all as favicon_inject  # noqa: E402
+from add_assistant import inject_all as assistant_inject  # noqa: E402
 from add_paywall import inject_all as paywall_inject  # noqa: E402
 from add_paywall import page_key as paywall_page_key  # noqa: E402
 from add_site_nav import inject_all as nav_inject  # noqa: E402
@@ -42,6 +43,8 @@ PATTERNS = (
     "intel_danmu_*.html",
     "intel_soop_*.html",
     "intel_prematch*",
+    "intel_help.html",
+    "assistant.*",
     "match_*.html",
     "case_*.html",
 )
@@ -606,6 +609,7 @@ def main(argv: list[str] | None = None) -> int:
     nav_inject(REPO)
     favicon_inject(REPO)
     track_inject(REPO)
+    assistant_inject(REPO)
     # 实时/赛前节点页必须带付费墙（Pro 层），否则实时情报免费可见
     paywall_inject(REPO / "intel", finished_slugs(), finished_keys(), free=free_mode())
     if audit_site(REPO) > 0:

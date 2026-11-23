@@ -4385,3 +4385,30 @@ test_speedcard_consistency 5/5、test_match_state_guard 8/8 无回归；反转�
 
 文件：tools/danmu_intel.py、render_node_page.py、tests/test_win_signal.py。
 ```
+
+## 2026-11-24 网站问答助手与使用指南（任务 6）
+
+```text
+需求：新增问答助手和 FAQ，覆盖比赛基本情况、幻觉核心识别、常见问题、
+个人介绍，以及站内、TG 频道和 TG 个人号导流，并兼容手机与桌面。
+
+实现：
+- 新建 intel_help.html：比赛字段说明、幻觉五问、FAQ、个人介绍和开始使用入口；
+- 全站注入可收起问答助手：固定知识库匹配，不开放自由生成，避免二次幻觉；
+- 覆盖比赛状态、阵容/首发、市场概率、数据缺口、证据分层、风险和联系方式；
+- 桌面右侧悬浮窗，手机底部全宽面板，支持快捷问题、Enter 发送和 Escape 关闭；
+- 主导航新增“问答 FAQ”，发布流程自动复制帮助页与助手资产并注入所有页面。
+
+安全与口径：
+- 公开页不展示底层平台名称，统一使用 AI 综合赛前情报/结构化数据表述；
+- 名单不等于本场官方首发；市场百分比不等于真实胜率；无样本明确标缺口；
+- 助手不保存聊天记录，不承诺盈利，不构成投注建议。
+
+验证：相关测试 83 项通过；JS node --check、Python 编译通过；
+桌面 1280px 与手机 390px 实机截图检查通过。
+
+文件：tools/build_intel_help.py、tools/add_assistant.py、
+tools/add_site_nav.py、tools/vps_publish.py、tools/sync_rules_to_vps.sh、
+reports/intel_help.html、reports/assistant.css、reports/assistant.js、
+tests/test_intel_help.py、tests/test_add_site_nav.py。
+```
