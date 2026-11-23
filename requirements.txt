@@ -1,0 +1,13 @@
+# Polymarket 电竞情报项目 - Python 依赖（2026-08-30 固化，供云部署）
+# 安装：python3 -m pip install -r requirements.txt
+
+# 弹幕采集（WebSocket / HTTP）
+aiohttp>=3.9
+websockets>=12.0
+pycryptodome>=3.20
+requests>=2.31
+
+# 数据/协议
+protobuf>=4.25
+
+# 标准库即可覆盖生成端（urllib + json），无需额外依赖

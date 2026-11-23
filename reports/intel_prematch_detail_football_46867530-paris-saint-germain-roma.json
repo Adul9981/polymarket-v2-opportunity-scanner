@@ -1,0 +1,5332 @@
+{
+  "id": "stake:46867530-paris-saint-germain-roma",
+  "sport": "football",
+  "sport_slug": "soccer",
+  "sport_label": "足球",
+  "sport_short": "足球",
+  "league": "欧冠",
+  "league_source_name": "欧冠",
+  "category": "international-clubs",
+  "tournament": "uefa-champions-league",
+  "teams": [
+    "Paris Saint Germain",
+    "Roma"
+  ],
+  "name": "Paris Saint Germain - Roma",
+  "start_ts": 1795636800,
+  "start_at_utc": "2026-11-25T20:00:00+00:00",
+  "start_at_bj": "11-26 04:00",
+  "date_bj": "2026-11-26",
+  "weekday_bj": "周四",
+  "format": "单场",
+  "status": "待开赛",
+  "status_key": "upcoming",
+  "fixture_status": "active",
+  "market_label": "1X2",
+  "market_state": "available",
+  "market_state_label": "有效报价",
+  "winner_market": {
+    "market_id": "cfc8b95e-ec2d-4bff-a1da-0d76c6fd39b8",
+    "market_name": "1x2",
+    "market_status": "active",
+    "market_type": "three_way",
+    "margin": 0.084124,
+    "payout_rate": 0.922404,
+    "updated_at": "2026-11-23T15:57:26+00:00",
+    "updated_ts": 1795449446.698,
+    "outcomes": [
+      {
+        "name": "Paris Saint Germain",
+        "decimal_odds": 1.33,
+        "raw_implied": 0.75188,
+        "fair_probability": 0.693537
+      },
+      {
+        "name": "Draw",
+        "decimal_odds": 5.4,
+        "raw_implied": 0.185185,
+        "fair_probability": 0.170816
+      },
+      {
+        "name": "Roma",
+        "decimal_odds": 6.8,
+        "raw_implied": 0.147059,
+        "fair_probability": 0.135648
+      }
+    ]
+  },
+  "game_numbers": [],
+  "player_intel": {
+    "status": "not_applicable",
+    "method": "",
+    "team_players": {
+      "Paris Saint Germain": [],
+      "Roma": []
+    },
+    "unassigned": [],
+    "note": "当前板块未把平台球员盘口当作首发阵容。"
+  },
+  "team_market_intel": {},
+  "ai_summary": "排名 巴黎圣日耳曼 1 vs 罗马 20；近5场 W/W/W/W/W vs W/W/L/W/W；伤停 2/4；巴黎圣日耳曼 4-1-2-3 近场首发、罗马 3-4-2-1 近场首发",
+  "market_count": 344,
+  "provider": "betradar",
+  "fixture_slug": "46867530-paris-saint-germain-roma",
+  "ext_id": "sr:match:74166046",
+  "source_url": "https://odds-data.stake.com/fixtures/46867530-paris-saint-germain-roma",
+  "fixture_updated_at": "2026-11-15T20:06:11+00:00",
+  "source_updated_at": "2026-11-23T15:57:26+00:00",
+  "source": "stake_odds_data",
+  "source_tier": "B · 赛前跨市场参考",
+  "fetched_at": "2026-11-23T16:00:55+00:00",
+  "lmt": {
+    "match_id": "74166046",
+    "coverage": {
+      "lineup": 0,
+      "formations": 0,
+      "livetable": 108668,
+      "injuries": 0,
+      "ballspotting": false,
+      "cornersonly": false,
+      "multicast": true,
+      "scoutmatch": 1,
+      "scoutcoveragestatus": 0,
+      "scoutconnected": false,
+      "liveodds": true,
+      "deepercoverage": true,
+      "tacticallineup": true,
+      "basiclineup": true,
+      "hasstats": true,
+      "inlivescore": true,
+      "advantage": null,
+      "tiebreak": null,
+      "paperscorecard": null,
+      "insights": true,
+      "penaltyshootout": 2,
+      "scouttest": false,
+      "lmtsupport": 4,
+      "venue": false,
+      "matchdatacomplete": false,
+      "mediacoverage": false,
+      "substitutions": true,
+      "officialstatsavailable": true,
+      "live": {
+        "id": 843,
+        "level": {
+          "name": "Level 1",
+          "value": 1
+        }
+      },
+      "match_creation": {
+        "id": 841,
+        "level": {
+          "name": "Level 1",
+          "value": 1
+        }
+      },
+      "player_service": {
+        "id": 855,
+        "level": {
+          "name": "Level 1",
+          "value": 1
+        }
+      },
+      "resulting": {
+        "id": 853,
+        "level": {
+          "name": "Level 1",
+          "value": 1
+        }
+      },
+      "stats_creation_cup": {
+        "id": 845,
+        "level": {
+          "name": "Cup 1",
+          "value": 1
+        }
+      },
+      "stats_creation_table": {
+        "id": 847,
+        "level": {
+          "name": "Level 1",
+          "value": 1
+        }
+      }
+    },
+    "season_id": "140786",
+    "round": 5,
+    "round_name": 5,
+    "home": {
+      "id": 6866,
+      "uid": 1644,
+      "name": "巴黎圣日耳曼",
+      "abbr": "巴黎圣日耳曼",
+      "country": "法国",
+      "country_code": "fr",
+      "form": {
+        "form": [
+          "W",
+          "W",
+          "W",
+          "W",
+          "W",
+          "W",
+          "W",
+          "W",
+          "W",
+          "W"
+        ],
+        "streak": {
+          "type": "W",
+          "value": 12
+        }
+      },
+      "last_matches": [
+        {
+          "id": 72036302,
+          "date": {
+            "uts": 1795277700,
+            "utc": "2026-11-21T16:15:00+00:00",
+            "date": "21/11/26",
+            "time": "16:15"
+          },
+          "competition_id": 34,
+          "round": 11,
+          "home_away": "away",
+          "opponent": {
+            "id": 119143,
+            "uid": 1661,
+            "name": "尼斯",
+            "abbr": "尼斯",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 3,
+          "opponent_score": 2,
+          "result": "W",
+          "score": "3:2",
+          "comment": "1:0 (8.) M.Amoura, 1:1 (31.) S.Mayulu (pen), 1:2 (32.) D.Doue, 1:3 (85.) F.Torres, 2:3 (90.) A.Abdi"
+        },
+        {
+          "id": 72036286,
+          "date": {
+            "uts": 1794081900,
+            "utc": "2026-11-07T20:05:00+00:00",
+            "date": "07/11/26",
+            "time": "20:05"
+          },
+          "competition_id": 34,
+          "round": 10,
+          "home_away": "home",
+          "opponent": {
+            "id": 5525,
+            "uid": 1652,
+            "name": "特鲁瓦",
+            "abbr": "特鲁瓦",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 1,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "1:0",
+          "comment": "1:0 (39.) I.Zabarnyi"
+        },
+        {
+          "id": 74165994,
+          "date": {
+            "uts": 1793736000,
+            "utc": "2026-11-03T20:00:00+00:00",
+            "date": "03/11/26",
+            "time": "20:00"
+          },
+          "competition_id": 7,
+          "round": 4,
+          "home_away": "away",
+          "opponent": {
+            "id": 322518,
+            "uid": 2819,
+            "name": "比利亚雷亚尔",
+            "abbr": "比利亚雷亚尔",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 6,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "6:0",
+          "comment": "0:1 (9.) J.Neves, 0:2 (12.) D.Doue, 0:3 (13.) S.Mayulu, 0:4 (17.) F.Ruiz, 0:5 (50.) F.Ruiz, 0:6 (78.) D.Boly"
+        },
+        {
+          "id": 72036256,
+          "date": {
+            "uts": 1793383200,
+            "utc": "2026-10-30T18:00:00+00:00",
+            "date": "30/10/26",
+            "time": "18:00"
+          },
+          "competition_id": 34,
+          "round": 9,
+          "home_away": "away",
+          "opponent": {
+            "id": 119144,
+            "uid": 1662,
+            "name": "勒阿弗尔",
+            "abbr": "勒阿弗尔",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 5,
+          "opponent_score": 1,
+          "result": "W",
+          "score": "5:1",
+          "comment": "1:0 (18.) J.Maja, 1:1 (26.) M.Godts, 1:2 (28.) A.Hakimi, 1:3 (55.) A.Hakimi, 1:4 (62.) S.Mayulu, 1:5 (69.) A.Hakimi"
+        },
+        {
+          "id": 72036250,
+          "date": {
+            "uts": 1793043000,
+            "utc": "2026-10-26T19:30:00+00:00",
+            "date": "26/10/26",
+            "time": "19:30"
+          },
+          "competition_id": 34,
+          "round": 8,
+          "home_away": "home",
+          "opponent": {
+            "id": 5225,
+            "uid": 1649,
+            "name": "里昂",
+            "abbr": "里昂",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 2,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "2:0",
+          "comment": "1:0 (72.) S.Mayulu, 2:0 (84.) M.Godts"
+        },
+        {
+          "id": 74165952,
+          "date": {
+            "uts": 1792522800,
+            "utc": "2026-10-20T19:00:00+00:00",
+            "date": "20/10/26",
+            "time": "19:00"
+          },
+          "competition_id": 7,
+          "round": 3,
+          "home_away": "home",
+          "opponent": {
+            "id": 6497,
+            "uid": 2817,
+            "name": "巴塞罗那",
+            "abbr": "BAR",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 4,
+          "opponent_score": 2,
+          "result": "W",
+          "score": "4:2",
+          "comment": "1:0 (38.) D.Doue, 1:1 (55.) X.Espart Font, 2:1 (72.) L.Hernandez, 2:2 (79.) L.Yamal, 3:2 (81.) Vitinha, 4:2 (86.) F.Ruiz"
+        },
+        {
+          "id": 72036234,
+          "date": {
+            "uts": 1792250100,
+            "utc": "2026-10-17T15:15:00+00:00",
+            "date": "17/10/26",
+            "time": "15:15"
+          },
+          "competition_id": 34,
+          "round": 7,
+          "home_away": "away",
+          "opponent": {
+            "id": 4887,
+            "uid": 1659,
+            "name": "斯特拉斯堡",
+            "abbr": "斯特拉斯堡",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 3,
+          "opponent_score": 1,
+          "result": "W",
+          "score": "3:1",
+          "comment": "1:0 (17.) G.Reyna, 1:1 (77.) I.Zabarnyi, 1:2 (85.) O.Dembele, 1:3 (90.) D.Doue"
+        },
+        {
+          "id": 74165934,
+          "date": {
+            "uts": 1792004400,
+            "utc": "2026-10-14T19:00:00+00:00",
+            "date": "14/10/26",
+            "time": "19:00"
+          },
+          "competition_id": 7,
+          "round": 2,
+          "home_away": "away",
+          "opponent": {
+            "id": 5567723,
+            "uid": 17,
+            "name": "曼城",
+            "abbr": "曼城",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 4,
+          "opponent_score": 2,
+          "result": "W",
+          "score": "4:2",
+          "comment": "0:1 (13.) D.Doue, 0:2 (15.) O.Dembele, 0:3 (32.) Vitinha, 1:3 (53.) E.Haaland, 1:4 (63.) M.Akliouche, 2:4 (75.) E.Haaland"
+        },
+        {
+          "id": 72036214,
+          "date": {
+            "uts": 1791657900,
+            "utc": "2026-10-10T18:45:00+00:00",
+            "date": "10/10/26",
+            "time": "18:45"
+          },
+          "competition_id": 34,
+          "round": 6,
+          "home_away": "home",
+          "opponent": {
+            "id": 167013,
+            "uid": 1672,
+            "name": "勒芒",
+            "abbr": "MAN",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 3,
+          "opponent_score": 1,
+          "result": "W",
+          "score": "3:1",
+          "comment": "1:0 (19.) Beraldo (pen), 1:1 (54.) L.Mafouta, 2:1 (61.) K.Kvaratskhelia, 3:1 (68.) M.Akliouche"
+        },
+        {
+          "id": 72036192,
+          "date": {
+            "uts": 1789929900,
+            "utc": "2026-09-20T18:45:00+00:00",
+            "date": "20/09/26",
+            "time": "18:45"
+          },
+          "competition_id": 34,
+          "round": 5,
+          "home_away": "away",
+          "opponent": {
+            "id": 5380,
+            "uid": 1641,
+            "name": "马赛",
+            "abbr": "OM",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 2,
+          "opponent_score": 1,
+          "result": "W",
+          "score": "2:1",
+          "comment": "0:1 (66.) F.Torres, 1:1 (72.) A.Gomes, 1:2 (74.) Marquinhos"
+        }
+      ],
+      "league_position": {
+        "position": 1,
+        "team": {
+          "id": 6866,
+          "uid": 1644,
+          "name": "巴黎圣日耳曼",
+          "abbr": "巴黎圣日耳曼",
+          "country": "",
+          "country_code": ""
+        },
+        "played": 4,
+        "wins": 4,
+        "draws": 0,
+        "losses": 0,
+        "goals_for": 20,
+        "goals_against": 5,
+        "goal_diff": 15,
+        "points": 12,
+        "win_pct": null,
+        "games_back": null,
+        "streak": null,
+        "last_ten_wins": null,
+        "last_ten_losses": null,
+        "home_wins": 2,
+        "home_losses": 0,
+        "away_wins": 2,
+        "away_losses": 0,
+        "conference_wins": null,
+        "conference_losses": null,
+        "division_wins": null,
+        "division_losses": null,
+        "sort_position": 1,
+        "promotion": "季后赛"
+      },
+      "season_stats": {
+        "matches": {
+          "average": 1,
+          "total": 4,
+          "matches": 4
+        },
+        "shots_on_goal": {
+          "average": 11.75,
+          "total": 47,
+          "matches": 4
+        },
+        "shots_off_goal": {
+          "average": 6.25,
+          "total": 25,
+          "matches": 4
+        },
+        "corner_kicks": {
+          "average": 4.75,
+          "total": 19,
+          "matches": 4
+        },
+        "shots_blocked": {
+          "average": 3.75,
+          "total": 15,
+          "matches": 4
+        },
+        "cards_given": {
+          "average": 0.25,
+          "total": 1,
+          "matches": 4
+        },
+        "freekicks": {
+          "average": 11.25,
+          "total": 45,
+          "matches": 4
+        },
+        "offside": {
+          "average": 1.75,
+          "total": 7,
+          "matches": 4
+        },
+        "shots_hit_woodwork": {
+          "average": 0.75,
+          "total": 3,
+          "matches": 4
+        },
+        "yellow_cards": {
+          "average": 0.25,
+          "total": 1,
+          "matches": 4
+        },
+        "red_cards": {
+          "average": 0,
+          "total": 0,
+          "matches": 4
+        },
+        "goals_scored": {
+          "average": 5,
+          "total": 20,
+          "matches": 4
+        },
+        "goals_conceded": {
+          "average": 1.25,
+          "total": 5,
+          "matches": 4
+        },
+        "yellowred_cards": {
+          "average": 0,
+          "total": 0,
+          "matches": 4
+        },
+        "ball_possession": {
+          "average": 57,
+          "total": 228,
+          "matches": 4
+        },
+        "penalty_success_count": {
+          "total": "0"
+        },
+        "penalty_fail_count": {
+          "total": "1"
+        },
+        "clean_sheet": {
+          "total": "1"
+        }
+      },
+      "squad": [
+        {
+          "id": 96538,
+          "name": "迪涅, 卢卡斯",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "12",
+          "nationality": "法国",
+          "age": 33,
+          "height_cm": 178,
+          "weight_kg": 74,
+          "preferred_foot": "左",
+          "market_value": 15000000,
+          "member_since": "2026-08-09T00:00:00+00:00"
+        },
+        {
+          "id": 903858,
+          "name": "哈基米, 阿克拉夫",
+          "fullname": "Hakimi Mouh, Achraf",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "2",
+          "nationality": "摩洛哥",
+          "age": 28,
+          "height_cm": 180,
+          "weight_kg": 73,
+          "preferred_foot": "右",
+          "market_value": 45000000,
+          "member_since": "2021-07-06T00:00:00+00:00"
+        },
+        {
+          "id": 352370,
+          "name": "埃尔南德斯, 卢卡斯",
+          "fullname": "Hernandez, Lucas Francois Bernard",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "21",
+          "nationality": "法国",
+          "age": 30,
+          "height_cm": 184,
+          "weight_kg": 79,
+          "preferred_foot": "左",
+          "market_value": 70000000,
+          "member_since": "2023-07-09T00:00:00+00:00"
+        },
+        {
+          "id": 1834794,
+          "name": "门德斯, 努诺",
+          "fullname": "Tavares Mendes, Nuno Alexandre",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "25",
+          "nationality": "葡萄牙",
+          "age": 24,
+          "height_cm": 177,
+          "weight_kg": 70,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2022-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2157426,
+          "name": "贝拉尔多",
+          "fullname": "Lopes Beraldo, Lucas",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "4",
+          "nationality": "巴西",
+          "age": 22,
+          "height_cm": 186,
+          "weight_kg": 78,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2024-01-01T00:00:00+00:00"
+        },
+        {
+          "id": 2952665,
+          "name": "博利, 大卫",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "42",
+          "nationality": "法国",
+          "age": 17,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-11-01T00:00:00+00:00"
+        },
+        {
+          "id": 2691336,
+          "name": "纳乌菲尔，埃尔汉纳克",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "45",
+          "nationality": "摩洛哥",
+          "age": 19,
+          "height_cm": 183,
+          "weight_kg": 78,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2024-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 155995,
+          "name": "马基尼奥斯",
+          "fullname": "Aoas Correa, Marcos",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "5",
+          "nationality": "巴西",
+          "age": 32,
+          "height_cm": 183,
+          "weight_kg": 75,
+          "preferred_foot": "右",
+          "market_value": 65000000,
+          "member_since": "2013-07-19T00:00:00+00:00"
+        },
+        {
+          "id": 1414159,
+          "name": "帕乔, 威廉",
+          "fullname": "Pacho Tenorio, Willian Joel",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "51",
+          "nationality": "厄瓜多尔",
+          "age": 25,
+          "height_cm": 188,
+          "weight_kg": 81,
+          "preferred_foot": "左",
+          "market_value": 17000000,
+          "member_since": "2024-08-09T00:00:00+00:00"
+        },
+        {
+          "id": 1631296,
+          "name": "伊莉亚, 扎巴尼",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "6",
+          "nationality": "乌克兰",
+          "age": 24,
+          "height_cm": 189,
+          "weight_kg": 81,
+          "preferred_foot": "右",
+          "market_value": 25000000,
+          "member_since": "2025-08-12T00:00:00+00:00"
+        },
+        {
+          "id": 361350,
+          "name": "登贝莱, 乌斯曼",
+          "fullname": "Dembele, Masour Ousmane",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "10",
+          "nationality": "法国",
+          "age": 29,
+          "height_cm": 179,
+          "weight_kg": 67,
+          "preferred_foot": "两者",
+          "market_value": 100000000,
+          "member_since": "2023-08-12T00:00:00+00:00"
+        },
+        {
+          "id": 2304851,
+          "name": "杜埃, 德西雷",
+          "fullname": "Doue, Desire Nonka-Maho",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "14",
+          "nationality": "法国",
+          "age": 21,
+          "height_cm": 182,
+          "weight_kg": 79,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2024-08-17T00:00:00+00:00"
+        },
+        {
+          "id": 2311483,
+          "name": "米卡",
+          "fullname": "Godts, Mika Marcel",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "22",
+          "nationality": "比利时",
+          "age": 21,
+          "height_cm": 176,
+          "weight_kg": 71,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-08-15T00:00:00+00:00"
+        },
+        {
+          "id": 2805303,
+          "name": "恩贾图·姆比查，昆廷",
+          "fullname": "Ndjantou Mbitcha, Quentin",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "47",
+          "nationality": "法国",
+          "age": 19,
+          "height_cm": 182,
+          "weight_kg": 78,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-01-01T00:00:00+00:00"
+        },
+        {
+          "id": 1061013,
+          "name": "克瓦拉茨克赫利亚, 柯维查",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "7",
+          "nationality": "格鲁吉亚",
+          "age": 25,
+          "height_cm": 183,
+          "weight_kg": 76,
+          "preferred_foot": "两者",
+          "market_value": null,
+          "member_since": "2025-01-17T00:00:00+00:00"
+        },
+        {
+          "id": 936026,
+          "name": "托雷斯, 费兰",
+          "fullname": "Torres Garcia, Ferran",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "9",
+          "nationality": "西班牙",
+          "age": 26,
+          "height_cm": 183,
+          "weight_kg": 77,
+          "preferred_foot": "右",
+          "market_value": 20000000,
+          "member_since": "2026-08-15T00:00:00+00:00"
+        },
+        {
+          "id": 2805211,
+          "name": "隆戈尼，亚历山德罗",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "16",
+          "nationality": "意大利",
+          "age": 18,
+          "height_cm": 192,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 1947744,
+          "name": "卢卡斯, 切瓦利埃",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "30",
+          "nationality": "法国",
+          "age": 25,
+          "height_cm": 189,
+          "weight_kg": 78,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-08-09T00:00:00+00:00"
+        },
+        {
+          "id": 861998,
+          "name": "萨福诺夫, 马特维",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "39",
+          "nationality": "俄罗斯",
+          "age": 27,
+          "height_cm": 192,
+          "weight_kg": 82,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2024-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 3277716,
+          "name": "穆阿克, 亚当",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "80",
+          "nationality": "摩洛哥",
+          "age": 17,
+          "height_cm": 195,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2755341,
+          "name": "马林，雷纳托",
+          "fullname": "Bellucci Marin, Renato",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "89",
+          "nationality": "意大利",
+          "age": 20,
+          "height_cm": 193,
+          "weight_kg": 84,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-07-17T00:00:00+00:00"
+        },
+        {
+          "id": 2238030,
+          "name": "阿克利乌什, 马格内斯",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "11",
+          "nationality": "法国",
+          "age": 24,
+          "height_cm": 183,
+          "weight_kg": 80,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2026-08-07T00:00:00+00:00"
+        },
+        {
+          "id": 1055229,
+          "name": "维蒂尼亚",
+          "fullname": "Machado Ferreira, Vitor",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "17",
+          "nationality": "葡萄牙",
+          "age": 26,
+          "height_cm": 170,
+          "weight_kg": 64,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2022-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2607567,
+          "name": "加布里埃尔，莫斯卡多",
+          "fullname": "Moscardo de Salles, Gabriel Silva",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "20",
+          "nationality": "巴西",
+          "age": 21,
+          "height_cm": 185,
+          "weight_kg": 73,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2024-01-25T00:00:00+00:00"
+        },
+        {
+          "id": 2568589,
+          "name": "马尤鲁，森尼",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "24",
+          "nationality": "法国",
+          "age": 20,
+          "height_cm": 183,
+          "weight_kg": 78,
+          "preferred_foot": "两者",
+          "market_value": null,
+          "member_since": "2023-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2862797,
+          "name": "费尔南德斯",
+          "fullname": "Fernandez Sarmiento, Pedro",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "27",
+          "nationality": "西班牙",
+          "age": 18,
+          "height_cm": 180,
+          "weight_kg": 78,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-01-26T00:00:00+00:00"
+        },
+        {
+          "id": 2256607,
+          "name": "扎伊尔-埃默里, 沃伦",
+          "fullname": "Zaire-Emery, Warren Marie Jean-Pierre",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "33",
+          "nationality": "法国",
+          "age": 20,
+          "height_cm": 176,
+          "weight_kg": 68,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2022-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 3096754,
+          "name": "伊德尔，尤尼斯",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "46",
+          "nationality": "摩洛哥",
+          "age": 18,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 784655,
+          "name": "鲁伊斯, 法比安",
+          "fullname": "Pena, Fabian Ruiz",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "8",
+          "nationality": "西班牙",
+          "age": 30,
+          "height_cm": 188,
+          "weight_kg": 70,
+          "preferred_foot": "左",
+          "market_value": 60000000,
+          "member_since": "2022-08-30T00:00:00+00:00"
+        },
+        {
+          "id": 2240523,
+          "name": "内维斯, 若昂",
+          "fullname": "Goncalves Neves, Joao Pedro",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "87",
+          "nationality": "葡萄牙",
+          "age": 22,
+          "height_cm": 171,
+          "weight_kg": 66,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2024-08-05T00:00:00+00:00"
+        },
+        {
+          "id": 3000281,
+          "name": "阿亚里, 哈利尔",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "",
+          "nationality": "突尼斯",
+          "age": 21,
+          "height_cm": 174,
+          "weight_kg": 70,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 3292542,
+          "name": "巴尔, 阿瑟",
+          "fullname": "",
+          "position": "",
+          "position_abbr": "",
+          "shirt_number": "90",
+          "nationality": "法国",
+          "age": 16,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        }
+      ],
+      "injuries": [
+        {
+          "player_id": 1061013,
+          "player": "克瓦拉茨克赫利亚, 柯维查",
+          "position": "前锋",
+          "status": "受伤",
+          "comment": "",
+          "missing": true,
+          "doubtful": false,
+          "start": {
+            "uts": 1793318400,
+            "utc": "2026-10-30T00:00:00+00:00",
+            "date": "30/10/26",
+            "time": "00:00"
+          },
+          "end": {
+            "uts": 1817078400,
+            "utc": "2027-08-01T00:00:00+00:00",
+            "date": "01/08/27",
+            "time": "00:00"
+          }
+        },
+        {
+          "player_id": 2805211,
+          "player": "隆戈尼，亚历山德罗",
+          "position": "守门员",
+          "status": "受伤",
+          "comment": "",
+          "missing": true,
+          "doubtful": false,
+          "start": {
+            "uts": 1795046400,
+            "utc": "2026-11-19T00:00:00+00:00",
+            "date": "19/11/26",
+            "time": "00:00"
+          },
+          "end": {
+            "uts": 1795824000,
+            "utc": "2026-11-28T00:00:00+00:00",
+            "date": "28/11/26",
+            "time": "00:00"
+          }
+        }
+      ],
+      "top_scorers": [
+        {
+          "player_id": 784655,
+          "name": "鲁伊斯, 法比安",
+          "position": "中场",
+          "goals": 4,
+          "matches": 4,
+          "minutes": 354,
+          "first_goals": null,
+          "last_goals": 2
+        },
+        {
+          "player_id": 936026,
+          "name": "托雷斯, 费兰",
+          "position": "前锋",
+          "goals": 3,
+          "matches": 4,
+          "minutes": 187,
+          "first_goals": null,
+          "last_goals": null
+        },
+        {
+          "player_id": 2304851,
+          "name": "杜埃, 德西雷",
+          "position": "前锋",
+          "goals": 3,
+          "matches": 3,
+          "minutes": 218,
+          "first_goals": 2,
+          "last_goals": null
+        },
+        {
+          "player_id": 361350,
+          "name": "登贝莱, 乌斯曼",
+          "position": "前锋",
+          "goals": 3,
+          "matches": 3,
+          "minutes": 160,
+          "first_goals": 1,
+          "last_goals": null
+        },
+        {
+          "player_id": 1055229,
+          "name": "维蒂尼亚",
+          "position": "中场",
+          "goals": 2,
+          "matches": 4,
+          "minutes": 344,
+          "first_goals": null,
+          "last_goals": null
+        }
+      ],
+      "manager": {
+        "id": 129465,
+        "name": "路易斯, 恩里克",
+        "fullname": "Martinez Garcia, Luis Enrique",
+        "nationality": "西班牙",
+        "birthdate": {
+          "uts": 10972800,
+          "utc": "1970-05-08T00:00:00+00:00",
+          "date": "08/05/70",
+          "time": "00:00"
+        }
+      },
+      "usual_lineup": {
+        "formation": "4-1-2-3",
+        "players": [
+          {
+            "id": 861998,
+            "name": "萨福诺夫, 马特维",
+            "position": "守门员",
+            "position_abbr": "G",
+            "shirt_number": "39"
+          },
+          {
+            "id": 903858,
+            "name": "哈基米, 阿克拉夫",
+            "position": "右后卫",
+            "position_abbr": "D",
+            "shirt_number": "2"
+          },
+          {
+            "id": 1631296,
+            "name": "伊莉亚, 扎巴尼",
+            "position": "中卫",
+            "position_abbr": "D",
+            "shirt_number": "6"
+          },
+          {
+            "id": 352370,
+            "name": "埃尔南德斯, 卢卡斯",
+            "position": "中卫",
+            "position_abbr": "D",
+            "shirt_number": "21"
+          },
+          {
+            "id": 1834794,
+            "name": "门德斯, 努诺",
+            "position": "左后卫",
+            "position_abbr": "D",
+            "shirt_number": "25"
+          },
+          {
+            "id": 2240523,
+            "name": "内维斯, 若昂",
+            "position": "中场",
+            "position_abbr": "M",
+            "shirt_number": "87"
+          },
+          {
+            "id": 2256607,
+            "name": "扎伊尔-埃默里, 沃伦",
+            "position": "中场",
+            "position_abbr": "M",
+            "shirt_number": "33"
+          },
+          {
+            "id": 784655,
+            "name": "鲁伊斯, 法比安",
+            "position": "中场",
+            "position_abbr": "M",
+            "shirt_number": "8"
+          },
+          {
+            "id": 2238030,
+            "name": "阿克利乌什, 马格内斯",
+            "position": "前锋",
+            "position_abbr": "M",
+            "shirt_number": "11"
+          },
+          {
+            "id": 2568589,
+            "name": "马尤鲁，森尼",
+            "position": "前锋",
+            "position_abbr": "M",
+            "shirt_number": "24"
+          },
+          {
+            "id": 2304851,
+            "name": "杜埃, 德西雷",
+            "position": "前锋",
+            "position_abbr": "F",
+            "shirt_number": "14"
+          }
+        ],
+        "source_match_id": 72036302,
+        "source_date": {
+          "uts": 1795277700,
+          "utc": "2026-11-21T16:15:00+00:00",
+          "date": "21/11/26",
+          "time": "16:15"
+        }
+      },
+      "lineup_status": "latest_available"
+    },
+    "away": {
+      "id": 32154,
+      "uid": 2702,
+      "name": "罗马",
+      "abbr": "罗马",
+      "country": "意大利",
+      "country_code": "it",
+      "form": {
+        "form": [
+          "W",
+          "W",
+          "L",
+          "W",
+          "W",
+          "D",
+          "W",
+          "W",
+          "L",
+          "D"
+        ],
+        "streak": {
+          "type": "W",
+          "value": 2
+        }
+      },
+      "last_matches": [
+        {
+          "id": 71945422,
+          "date": {
+            "uts": 1795280400,
+            "utc": "2026-11-21T17:00:00+00:00",
+            "date": "21/11/26",
+            "time": "17:00"
+          },
+          "competition_id": 23,
+          "round": 12,
+          "home_away": "away",
+          "opponent": {
+            "id": 9120,
+            "uid": 2690,
+            "name": "帕尔马",
+            "abbr": "帕尔马",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 5,
+          "opponent_score": 1,
+          "result": "W",
+          "score": "5:1",
+          "comment": "0:1 (39.) D.Malen, 1:1 (54.) N.Elphege, 1:2 (68.) D.Malen, 1:3 (71.) R.Mora, 1:4 (77.) D.Malen, 1:5 (90.) D.Malen"
+        },
+        {
+          "id": 71945400,
+          "date": {
+            "uts": 1794080700,
+            "utc": "2026-11-07T19:45:00+00:00",
+            "date": "07/11/26",
+            "time": "19:45"
+          },
+          "competition_id": 23,
+          "round": 11,
+          "home_away": "home",
+          "opponent": {
+            "id": 6641634,
+            "uid": 2793,
+            "name": "萨索洛",
+            "abbr": "萨索洛",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 3,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "3:0",
+          "comment": "1:0 (27.) M.Hermoso, 2:0 (30.) S.Walukiewicz (og), 3:0 (58.) R.Mora"
+        },
+        {
+          "id": 74165992,
+          "date": {
+            "uts": 1793736000,
+            "utc": "2026-11-03T20:00:00+00:00",
+            "date": "03/11/26",
+            "time": "20:00"
+          },
+          "competition_id": 7,
+          "round": 4,
+          "home_away": "away",
+          "opponent": {
+            "id": 6632,
+            "uid": 35,
+            "name": "曼联",
+            "abbr": "MUN",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 2,
+          "opponent_score": 3,
+          "result": "L",
+          "score": "2:3",
+          "comment": "0:1 (11.) M.Soule, 0:2 (17.) D.Malen (pen), 1:2 (58.) B.Fernandes (pen), 2:2 (83.) M.Cunha, 3:2 (86.) M.Cunha"
+        },
+        {
+          "id": 71945384,
+          "date": {
+            "uts": 1793466000,
+            "utc": "2026-10-31T17:00:00+00:00",
+            "date": "31/10/26",
+            "time": "17:00"
+          },
+          "competition_id": 23,
+          "round": 10,
+          "home_away": "away",
+          "opponent": {
+            "id": 22208,
+            "uid": 2695,
+            "name": "乌迪内斯",
+            "abbr": "乌迪内斯",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 5,
+          "opponent_score": 2,
+          "result": "W",
+          "score": "5:2",
+          "comment": "0:1 (10.) B.Cristante, 0:2 (31.) R.Mora, 0:3 (33.) D.Malen, 0:4 (37.) E.Ndicka, 1:4 (50.) N.Zaniolo, 2:4 (78.) M.Palma, 2:5 (90.) D.Ghilardi"
+        },
+        {
+          "id": 71945358,
+          "date": {
+            "uts": 1793130300,
+            "utc": "2026-10-27T19:45:00+00:00",
+            "date": "27/10/26",
+            "time": "19:45"
+          },
+          "competition_id": 23,
+          "round": 9,
+          "home_away": "home",
+          "opponent": {
+            "id": 367849,
+            "uid": 2719,
+            "name": "卡利亚里",
+            "abbr": "卡利亚里",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 4,
+          "opponent_score": 2,
+          "result": "W",
+          "score": "4:2",
+          "comment": "0:1 (10.) M.Nzola (pen), 1:1 (15.) E.Lulli, 2:1 (21.) N.Pisilli, 2:2 (81.) D.Maldini, 3:2 (85.) R.Mora, 4:2 (87.) D.Malen"
+        },
+        {
+          "id": 74165944,
+          "date": {
+            "uts": 1792522800,
+            "utc": "2026-10-20T19:00:00+00:00",
+            "date": "20/10/26",
+            "time": "19:00"
+          },
+          "competition_id": 7,
+          "round": 3,
+          "home_away": "home",
+          "opponent": {
+            "id": 1664178,
+            "uid": 2404,
+            "name": "布拉迪斯拉发斯拉夫",
+            "abbr": "SLO",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 4,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "4:0",
+          "comment": "1:0 (21.) M.Hermoso, 2:0 (39.) N.Molina, 3:0 (52.) N.Pisilli, 4:0 (58.) D.Malen (pen)"
+        },
+        {
+          "id": 71945320,
+          "date": {
+            "uts": 1792262700,
+            "utc": "2026-10-17T18:45:00+00:00",
+            "date": "17/10/26",
+            "time": "18:45"
+          },
+          "competition_id": 23,
+          "round": 7,
+          "home_away": "home",
+          "opponent": {
+            "id": 565059,
+            "uid": 2713,
+            "name": "热那亚",
+            "abbr": "热那亚",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 2,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "2:0",
+          "comment": "1:0 (50.) S.Castro, 2:0 (68.) E.Lulli"
+        },
+        {
+          "id": 74165926,
+          "date": {
+            "uts": 1792004400,
+            "utc": "2026-10-14T19:00:00+00:00",
+            "date": "14/10/26",
+            "time": "19:00"
+          },
+          "competition_id": 7,
+          "round": 2,
+          "home_away": "home",
+          "opponent": {
+            "id": 6494,
+            "uid": 2829,
+            "name": "皇马",
+            "abbr": "皇家马德里",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 3,
+          "opponent_score": 4,
+          "result": "L",
+          "score": "3:4",
+          "comment": "1:0 (20.) M.de Roon, 1:1 (25.) K.Mbappe, 2:1 (51.) D.Malen, 3:1 (58.) D.Malen, 3:2 (83.) C.Espi, 3:3 (85.) Endrick, 3:4 (90.) A.Rudiger"
+        },
+        {
+          "id": 71945262,
+          "date": {
+            "uts": 1789403400,
+            "utc": "2026-09-14T16:30:00+00:00",
+            "date": "14/09/26",
+            "time": "16:30"
+          },
+          "competition_id": 23,
+          "round": 4,
+          "home_away": "away",
+          "opponent": {
+            "id": 32867,
+            "uid": 2696,
+            "name": "都灵",
+            "abbr": "都灵",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 2,
+          "opponent_score": 0,
+          "result": "W",
+          "score": "2:0",
+          "comment": "0:1 (40.) D.Malen, 0:2 (90.) N.Pisilli"
+        },
+        {
+          "id": 71945242,
+          "date": {
+            "uts": 1788633900,
+            "utc": "2026-09-05T18:45:00+00:00",
+            "date": "05/09/26",
+            "time": "18:45"
+          },
+          "competition_id": 23,
+          "round": 3,
+          "home_away": "home",
+          "opponent": {
+            "id": 9252,
+            "uid": 2686,
+            "name": "亚特兰大",
+            "abbr": "亚特兰大",
+            "country": "",
+            "country_code": ""
+          },
+          "team_score": 2,
+          "opponent_score": 1,
+          "result": "W",
+          "score": "2:1",
+          "comment": "0:1 (47.) E.Silva, 1:1 (89.) M.Hermoso, 2:1 (90.) M.Soule"
+        }
+      ],
+      "league_position": {
+        "position": 20,
+        "team": {
+          "id": 32154,
+          "uid": 2702,
+          "name": "罗马",
+          "abbr": "罗马",
+          "country": "",
+          "country_code": ""
+        },
+        "played": 4,
+        "wins": 1,
+        "draws": 1,
+        "losses": 2,
+        "goals_for": 10,
+        "goals_against": 8,
+        "goal_diff": 2,
+        "points": 4,
+        "win_pct": null,
+        "games_back": null,
+        "streak": null,
+        "last_ten_wins": null,
+        "last_ten_losses": null,
+        "home_wins": 1,
+        "home_losses": 1,
+        "away_wins": 0,
+        "away_losses": 1,
+        "conference_wins": null,
+        "conference_losses": null,
+        "division_wins": null,
+        "division_losses": null,
+        "sort_position": 20,
+        "promotion": "外围赛附加賽"
+      },
+      "season_stats": {
+        "matches": {
+          "average": 1,
+          "total": 4,
+          "matches": 4
+        },
+        "shots_on_goal": {
+          "average": 6,
+          "total": 24,
+          "matches": 4
+        },
+        "shots_off_goal": {
+          "average": 4.25,
+          "total": 17,
+          "matches": 4
+        },
+        "corner_kicks": {
+          "average": 4.25,
+          "total": 17,
+          "matches": 4
+        },
+        "shots_blocked": {
+          "average": 1.75,
+          "total": 7,
+          "matches": 4
+        },
+        "cards_given": {
+          "average": 2,
+          "total": 8,
+          "matches": 4
+        },
+        "freekicks": {
+          "average": 9.25,
+          "total": 37,
+          "matches": 4
+        },
+        "offside": {
+          "average": 1.75,
+          "total": 7,
+          "matches": 4
+        },
+        "shots_hit_woodwork": {
+          "average": 0,
+          "total": 0,
+          "matches": 4
+        },
+        "yellow_cards": {
+          "average": 2,
+          "total": 8,
+          "matches": 4
+        },
+        "red_cards": {
+          "average": 0,
+          "total": 0,
+          "matches": 4
+        },
+        "goals_scored": {
+          "average": 2.5,
+          "total": 10,
+          "matches": 4
+        },
+        "goals_conceded": {
+          "average": 2,
+          "total": 8,
+          "matches": 4
+        },
+        "yellowred_cards": {
+          "average": 0,
+          "total": 0,
+          "matches": 4
+        },
+        "ball_possession": {
+          "average": 55.5,
+          "total": 222,
+          "matches": 4
+        },
+        "penalty_success_count": {
+          "total": "2"
+        },
+        "penalty_fail_count": {
+          "total": "0"
+        },
+        "clean_sheet": {
+          "total": "1"
+        }
+      },
+      "squad": [
+        {
+          "id": 1722058,
+          "name": "伦施, 德恩",
+          "fullname": "Rensch, Devyne Fabian Jairo",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "2",
+          "nationality": "荷兰",
+          "age": 23,
+          "height_cm": 181,
+          "weight_kg": 73,
+          "preferred_foot": "两者",
+          "market_value": null,
+          "member_since": "2025-01-23T00:00:00+00:00"
+        },
+        {
+          "id": 962405,
+          "name": "莫利纳, 纳韦尔",
+          "fullname": "Molina Lucero, Nahuel",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "20",
+          "nationality": "阿根廷",
+          "age": 28,
+          "height_cm": 179,
+          "weight_kg": 69,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-08-12T00:00:00+00:00"
+        },
+        {
+          "id": 353130,
+          "name": "埃尔莫索, 马里奥",
+          "fullname": "Hermoso Canseco, Mario",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "22",
+          "nationality": "西班牙",
+          "age": 31,
+          "height_cm": 184,
+          "weight_kg": 75,
+          "preferred_foot": "左",
+          "market_value": 25000000,
+          "member_since": "2024-09-02T00:00:00+00:00"
+        },
+        {
+          "id": 611210,
+          "name": "曼奇尼, 吉安卢卡",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "23",
+          "nationality": "意大利",
+          "age": 30,
+          "height_cm": 190,
+          "weight_kg": 77,
+          "preferred_foot": "右",
+          "market_value": 28000000,
+          "member_since": "2020-09-01T00:00:00+00:00"
+        },
+        {
+          "id": 934274,
+          "name": "库姆布拉, 马拉歇",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "24",
+          "nationality": "阿尔巴尼亚",
+          "age": 26,
+          "height_cm": 191,
+          "weight_kg": 78,
+          "preferred_foot": "右",
+          "market_value": 9000000,
+          "member_since": "2021-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2430619,
+          "name": "齐奥尔科夫斯基，扬",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "24",
+          "nationality": "波兰",
+          "age": 21,
+          "height_cm": 194,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-08-29T00:00:00+00:00"
+        },
+        {
+          "id": 1419559,
+          "name": "巴莱尔迪, 莱昂纳多",
+          "fullname": "Balerdi Rosa, Leonardo Julian",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "26",
+          "nationality": "阿根廷",
+          "age": 27,
+          "height_cm": 188,
+          "weight_kg": 85,
+          "preferred_foot": "右",
+          "market_value": 10000000,
+          "member_since": "2026-08-30T00:00:00+00:00"
+        },
+        {
+          "id": 352672,
+          "name": "安格利诺",
+          "fullname": "Esmoris Tasende, Jose Angel",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "3",
+          "nationality": "西班牙",
+          "age": 29,
+          "height_cm": 175,
+          "weight_kg": 69,
+          "preferred_foot": "左",
+          "market_value": 16000000,
+          "member_since": "2024-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 1953480,
+          "name": "康斯坦丁诺斯, 库利拉基斯",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "3",
+          "nationality": "希腊",
+          "age": 22,
+          "height_cm": 187,
+          "weight_kg": 80,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2026-08-01T00:00:00+00:00"
+        },
+        {
+          "id": 1629758,
+          "name": "萨拉赫-埃丁, 阿纳斯",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "34",
+          "nationality": "摩洛哥",
+          "age": 24,
+          "height_cm": 181,
+          "weight_kg": 66,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2025-02-03T00:00:00+00:00"
+        },
+        {
+          "id": 2272831,
+          "name": "弗兰卡韦斯利",
+          "fullname": "Vinicius Franca Lima, Wesley",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "43",
+          "nationality": "巴西",
+          "age": 23,
+          "height_cm": 175,
+          "weight_kg": 73,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-07-28T00:00:00+00:00"
+        },
+        {
+          "id": 1027613,
+          "name": "恩迪卡, 埃文",
+          "fullname": "Ndicka, Obite Evan",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "5",
+          "nationality": "象牙海岸",
+          "age": 27,
+          "height_cm": 192,
+          "weight_kg": 82,
+          "preferred_foot": "左",
+          "market_value": 20000000,
+          "member_since": "2023-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2572003,
+          "name": "塞克，穆罕默德",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "74",
+          "nationality": "意大利",
+          "age": 20,
+          "height_cm": 192,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-04-01T00:00:00+00:00"
+        },
+        {
+          "id": 2836759,
+          "name": "雷亚莱, 菲利波",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "75",
+          "nationality": "意大利",
+          "age": 20,
+          "height_cm": 185,
+          "weight_kg": 75,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2026-08-01T00:00:00+00:00"
+        },
+        {
+          "id": 3130644,
+          "name": "埃曼努埃萊·盧利",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "77",
+          "nationality": "意大利",
+          "age": 19,
+          "height_cm": 184,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2374743,
+          "name": "丹尼尔，吉拉尔迪",
+          "fullname": "",
+          "position": "防守",
+          "position_abbr": "D",
+          "shirt_number": "87",
+          "nationality": "意大利",
+          "age": 23,
+          "height_cm": 189,
+          "weight_kg": 77,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 815746,
+          "name": "马伦, 多尼耶尔",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "14",
+          "nationality": "荷兰",
+          "age": 27,
+          "height_cm": 178,
+          "weight_kg": 68,
+          "preferred_foot": "右",
+          "market_value": 35000000,
+          "member_since": "2026-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2211666,
+          "name": "马蒂亚斯，苏莱",
+          "fullname": "Soule Malvano, Matias",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "18",
+          "nationality": "阿根廷",
+          "age": 23,
+          "height_cm": 182,
+          "weight_kg": 77,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2024-07-30T00:00:00+00:00"
+        },
+        {
+          "id": 256219,
+          "name": "保罗，戴巴拉",
+          "fullname": "Dybala, Paulo Bruno Exequiel",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "21",
+          "nationality": "阿根廷",
+          "age": 33,
+          "height_cm": 177,
+          "weight_kg": 75,
+          "preferred_foot": "左",
+          "market_value": 76500000,
+          "member_since": "2022-07-20T00:00:00+00:00"
+        },
+        {
+          "id": 2482687,
+          "name": "路易吉，切鲁比尼",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "67",
+          "nationality": "意大利",
+          "age": 22,
+          "height_cm": 175,
+          "weight_kg": 70,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2023-10-01T00:00:00+00:00"
+        },
+        {
+          "id": 2846531,
+          "name": "阿雷纳，安东尼奥",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "68",
+          "nationality": "意大利",
+          "age": 17,
+          "height_cm": 188,
+          "weight_kg": 0,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2025-07-22T00:00:00+00:00"
+        },
+        {
+          "id": 3242448,
+          "name": "帕拉蒂奇, 洛伦佐",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "72",
+          "nationality": "意大利",
+          "age": 18,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-10-01T00:00:00+00:00"
+        },
+        {
+          "id": 3279240,
+          "name": "卡马拉, 曼吉乌",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "78",
+          "nationality": "几内亚",
+          "age": 17,
+          "height_cm": 183,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-10-01T00:00:00+00:00"
+        },
+        {
+          "id": 2929409,
+          "name": "瓦兹，罗比尼奥",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "78",
+          "nationality": "法国",
+          "age": 19,
+          "height_cm": 185,
+          "weight_kg": 75,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-01-14T00:00:00+00:00"
+        },
+        {
+          "id": 2186240,
+          "name": "卡斯特罗, 圣地亚哥",
+          "fullname": "Castro, Santiago Thomas",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "9",
+          "nationality": "阿根廷",
+          "age": 22,
+          "height_cm": 178,
+          "weight_kg": 76,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-07-30T00:00:00+00:00"
+        },
+        {
+          "id": 780080,
+          "name": "多夫比克，阿特姆",
+          "fullname": "",
+          "position": "前锋",
+          "position_abbr": "F",
+          "shirt_number": "9",
+          "nationality": "乌克兰",
+          "age": 29,
+          "height_cm": 184,
+          "weight_kg": 76,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2024-08-02T00:00:00+00:00"
+        },
+        {
+          "id": 3296114,
+          "name": "基尔温格, 莱文特",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "12",
+          "nationality": "匈牙利",
+          "age": 17,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "id": 1408005,
+          "name": "瓦斯奎兹, 迪维斯",
+          "fullname": "Vasquez Llach, Devis  Stiven",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "32",
+          "nationality": "哥伦比亚",
+          "age": 28,
+          "height_cm": 195,
+          "weight_kg": 93,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-07-29T00:00:00+00:00"
+        },
+        {
+          "id": 2923129,
+          "name": "德马尔齐，乔治",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "70",
+          "nationality": "美国",
+          "age": 19,
+          "height_cm": 188,
+          "weight_kg": 72,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2024-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2745539,
+          "name": "泽列兹尼，拉多斯瓦夫",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "91",
+          "nationality": "波兰",
+          "age": 20,
+          "height_cm": 193,
+          "weight_kg": 0,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2025-07-23T00:00:00+00:00"
+        },
+        {
+          "id": 329175,
+          "name": "戈利尼, 皮尔路易吉",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "95",
+          "nationality": "意大利",
+          "age": 31,
+          "height_cm": 194,
+          "weight_kg": 94,
+          "preferred_foot": "右",
+          "market_value": 12000000,
+          "member_since": "2025-01-24T00:00:00+00:00"
+        },
+        {
+          "id": 605496,
+          "name": "斯维利尔, 迈尔",
+          "fullname": "",
+          "position": "守门员",
+          "position_abbr": "G",
+          "shirt_number": "99",
+          "nationality": "塞尔维亚",
+          "age": 27,
+          "height_cm": 189,
+          "weight_kg": 81,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2022-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 100389,
+          "name": "德容, 马腾",
+          "fullname": "de Roon, Marten Elco",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "15",
+          "nationality": "荷兰",
+          "age": 35,
+          "height_cm": 186,
+          "weight_kg": 76,
+          "preferred_foot": "右",
+          "market_value": 8000000,
+          "member_since": "2026-08-30T00:00:00+00:00"
+        },
+        {
+          "id": 1693879,
+          "name": "科内, 马努",
+          "fullname": "Kone, Kouadio Emmanuel Boris",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "17",
+          "nationality": "法国",
+          "age": 25,
+          "height_cm": 185,
+          "weight_kg": 80,
+          "preferred_foot": "右",
+          "market_value": 35000000,
+          "member_since": "2024-08-30T00:00:00+00:00"
+        },
+        {
+          "id": 1985563,
+          "name": "托马索, 巴尔丹齐",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "35",
+          "nationality": "意大利",
+          "age": 23,
+          "height_cm": 170,
+          "weight_kg": 64,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2024-02-01T00:00:00+00:00"
+        },
+        {
+          "id": 186855,
+          "name": "克里斯坦特, 布莱恩",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "4",
+          "nationality": "意大利",
+          "age": 31,
+          "height_cm": 186,
+          "weight_kg": 82,
+          "preferred_foot": "右",
+          "market_value": 25000000,
+          "member_since": "2019-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2612841,
+          "name": "罗曼诺，亚历山德罗吉安尼",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "60",
+          "nationality": "意大利",
+          "age": 20,
+          "height_cm": 180,
+          "weight_kg": 73,
+          "preferred_foot": "左",
+          "market_value": null,
+          "member_since": "2025-01-01T00:00:00+00:00"
+        },
+        {
+          "id": 2575689,
+          "name": "尼科洛,皮西利",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "61",
+          "nationality": "意大利",
+          "age": 22,
+          "height_cm": 181,
+          "weight_kg": 75,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2023-01-01T00:00:00+00:00"
+        },
+        {
+          "id": 2805221,
+          "name": "迪农齐奥, 亚历山德罗",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "63",
+          "nationality": "意大利",
+          "age": 19,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-10-01T00:00:00+00:00"
+        },
+        {
+          "id": 2993517,
+          "name": "马卡罗尼, 瓦莱里奥",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "64",
+          "nationality": "意大利",
+          "age": 18,
+          "height_cm": 174,
+          "weight_kg": 0,
+          "preferred_foot": "",
+          "market_value": null,
+          "member_since": "2026-11-01T00:00:00+00:00"
+        },
+        {
+          "id": 2611363,
+          "name": "马蒂亚,曼尼尼",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "66",
+          "nationality": "意大利",
+          "age": 20,
+          "height_cm": 173,
+          "weight_kg": 64,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2023-09-01T00:00:00+00:00"
+        },
+        {
+          "id": 3121174,
+          "name": "穆罕默德·巴",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "69",
+          "nationality": "冈比亚",
+          "age": 19,
+          "height_cm": 0,
+          "weight_kg": 0,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-12-01T00:00:00+00:00"
+        },
+        {
+          "id": 555540,
+          "name": "洛伦佐,佩莱格里尼",
+          "fullname": "",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "7",
+          "nationality": "意大利",
+          "age": 30,
+          "height_cm": 186,
+          "weight_kg": 77,
+          "preferred_foot": "右",
+          "market_value": 40000000,
+          "member_since": "2017-07-01T00:00:00+00:00"
+        },
+        {
+          "id": 2190456,
+          "name": "埃尔艾纳乌伊, 尼尔",
+          "fullname": "El Aynaoui, Neil Yoni",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "8",
+          "nationality": "摩洛哥",
+          "age": 25,
+          "height_cm": 185,
+          "weight_kg": 77,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2025-07-20T00:00:00+00:00"
+        },
+        {
+          "id": 2539187,
+          "name": "莫拉，罗德里戈",
+          "fullname": "de Carvalho, Rodrigo Mora",
+          "position": "中场",
+          "position_abbr": "M",
+          "shirt_number": "86",
+          "nationality": "葡萄牙",
+          "age": 19,
+          "height_cm": 168,
+          "weight_kg": 56,
+          "preferred_foot": "右",
+          "market_value": null,
+          "member_since": "2026-08-19T00:00:00+00:00"
+        }
+      ],
+      "injuries": [
+        {
+          "player_id": 555540,
+          "player": "洛伦佐,佩莱格里尼",
+          "position": "中场",
+          "status": "受伤",
+          "comment": "",
+          "missing": true,
+          "doubtful": false,
+          "start": {
+            "uts": 1793059200,
+            "utc": "2026-10-27T00:00:00+00:00",
+            "date": "27/10/26",
+            "time": "00:00"
+          },
+          "end": {
+            "uts": 1801353600,
+            "utc": "2027-01-31T00:00:00+00:00",
+            "date": "31/01/27",
+            "time": "00:00"
+          }
+        },
+        {
+          "player_id": 1722058,
+          "player": "伦施, 德恩",
+          "position": "防守",
+          "status": "受伤",
+          "comment": "",
+          "missing": true,
+          "doubtful": false,
+          "start": {
+            "uts": 1795046400,
+            "utc": "2026-11-19T00:00:00+00:00",
+            "date": "19/11/26",
+            "time": "00:00"
+          },
+          "end": {
+            "uts": 1795564800,
+            "utc": "2026-11-25T00:00:00+00:00",
+            "date": "25/11/26",
+            "time": "00:00"
+          }
+        },
+        {
+          "player_id": 3121174,
+          "player": "穆罕默德·巴",
+          "position": "中场",
+          "status": "受伤",
+          "comment": "",
+          "missing": true,
+          "doubtful": false,
+          "start": {
+            "uts": 1794009600,
+            "utc": "2026-11-07T00:00:00+00:00",
+            "date": "07/11/26",
+            "time": "00:00"
+          },
+          "end": {
+            "uts": 1806796800,
+            "utc": "2027-04-04T00:00:00+00:00",
+            "date": "04/04/27",
+            "time": "00:00"
+          }
+        },
+        {
+          "player_id": 934274,
+          "player": "库姆布拉, 马拉歇",
+          "position": "防守",
+          "status": "受伤",
+          "comment": "",
+          "missing": true,
+          "doubtful": false,
+          "start": {
+            "uts": 1795046400,
+            "utc": "2026-11-19T00:00:00+00:00",
+            "date": "19/11/26",
+            "time": "00:00"
+          },
+          "end": {
+            "uts": 1795824000,
+            "utc": "2026-11-28T00:00:00+00:00",
+            "date": "28/11/26",
+            "time": "00:00"
+          }
+        }
+      ],
+      "top_scorers": [
+        {
+          "player_id": 815746,
+          "name": "马伦, 多尼耶尔",
+          "position": "前锋",
+          "goals": 4,
+          "matches": 4,
+          "minutes": 314,
+          "first_goals": null,
+          "last_goals": 1
+        },
+        {
+          "player_id": 186855,
+          "name": "克里斯坦特, 布莱恩",
+          "position": "中场",
+          "goals": 1,
+          "matches": 2,
+          "minutes": 180,
+          "first_goals": 1,
+          "last_goals": null
+        },
+        {
+          "player_id": 353130,
+          "name": "埃尔莫索, 马里奥",
+          "position": "防守",
+          "goals": 1,
+          "matches": 4,
+          "minutes": 324,
+          "first_goals": 1,
+          "last_goals": null
+        },
+        {
+          "player_id": 2575689,
+          "name": "尼科洛,皮西利",
+          "position": "中场",
+          "goals": 1,
+          "matches": 4,
+          "minutes": 245,
+          "first_goals": null,
+          "last_goals": null
+        },
+        {
+          "player_id": 100389,
+          "name": "德容, 马腾",
+          "position": "中场",
+          "goals": 1,
+          "matches": 4,
+          "minutes": 260,
+          "first_goals": 1,
+          "last_goals": null
+        }
+      ],
+      "manager": {
+        "id": 53191,
+        "name": "加斯佩里尼, 吉安皮耶罗",
+        "fullname": "",
+        "nationality": "意大利",
+        "birthdate": {
+          "uts": -376531200,
+          "utc": "1958-01-26T00:00:00+00:00",
+          "date": "26/01/58",
+          "time": "00:00"
+        }
+      },
+      "usual_lineup": {
+        "formation": "3-4-2-1",
+        "players": [
+          {
+            "id": 605496,
+            "name": "斯维利尔, 迈尔",
+            "position": "守门员",
+            "position_abbr": "G",
+            "shirt_number": "99"
+          },
+          {
+            "id": 611210,
+            "name": "曼奇尼, 吉安卢卡",
+            "position": "中卫",
+            "position_abbr": "D",
+            "shirt_number": "23"
+          },
+          {
+            "id": 1419559,
+            "name": "巴莱尔迪, 莱昂纳多",
+            "position": "中卫",
+            "position_abbr": "D",
+            "shirt_number": "26"
+          },
+          {
+            "id": 353130,
+            "name": "埃尔莫索, 马里奥",
+            "position": "中卫",
+            "position_abbr": "D",
+            "shirt_number": "22"
+          },
+          {
+            "id": 3130644,
+            "name": "埃曼努埃萊·盧利",
+            "position": "右边锋",
+            "position_abbr": "D",
+            "shirt_number": "77"
+          },
+          {
+            "id": 186855,
+            "name": "克里斯坦特, 布莱恩",
+            "position": "中场",
+            "position_abbr": "M",
+            "shirt_number": "4"
+          },
+          {
+            "id": 1693879,
+            "name": "科内, 马努",
+            "position": "中场",
+            "position_abbr": "M",
+            "shirt_number": "17"
+          },
+          {
+            "id": 962405,
+            "name": "莫利纳, 纳韦尔",
+            "position": "左边锋",
+            "position_abbr": "D",
+            "shirt_number": "20"
+          },
+          {
+            "id": 256219,
+            "name": "保罗，戴巴拉",
+            "position": "前锋",
+            "position_abbr": "F",
+            "shirt_number": "21"
+          },
+          {
+            "id": 2539187,
+            "name": "莫拉，罗德里戈",
+            "position": "前锋",
+            "position_abbr": "M",
+            "shirt_number": "86"
+          },
+          {
+            "id": 815746,
+            "name": "马伦, 多尼耶尔",
+            "position": "前锋",
+            "position_abbr": "F",
+            "shirt_number": "14"
+          }
+        ],
+        "source_match_id": 71945422,
+        "source_date": {
+          "uts": 1795280400,
+          "utc": "2026-11-21T17:00:00+00:00",
+          "date": "21/11/26",
+          "time": "17:00"
+        }
+      },
+      "lineup_status": "latest_available"
+    },
+    "head_to_head": {
+      "home_wins": 0,
+      "draws": 1,
+      "away_wins": 1,
+      "matches": [
+        {
+          "id": 11760786,
+          "date": {
+            "uts": 1500508800,
+            "utc": "2017-07-20T00:00:00+00:00",
+            "date": "20/07/17",
+            "time": "00:00"
+          },
+          "home": {
+            "id": 44973,
+            "uid": 2702,
+            "name": "罗马",
+            "abbr": "罗马",
+            "country": "",
+            "country_code": ""
+          },
+          "away": {
+            "id": 119926,
+            "uid": 1644,
+            "name": "巴黎圣日耳曼",
+            "abbr": "巴黎圣日耳曼",
+            "country": "",
+            "country_code": ""
+          },
+          "score": {
+            "home": 4,
+            "away": 6,
+            "winner": "away",
+            "period": "ap",
+            "display": "4:6"
+          },
+          "competition_id": 1337
+        },
+        {
+          "id": 1414415,
+          "date": {
+            "uts": 1280682000,
+            "utc": "2010-08-01T17:00:00+00:00",
+            "date": "01/08/10",
+            "time": "17:00"
+          },
+          "home": {
+            "id": 119926,
+            "uid": 1644,
+            "name": "巴黎圣日耳曼",
+            "abbr": "巴黎圣日耳曼",
+            "country": "",
+            "country_code": ""
+          },
+          "away": {
+            "id": 44973,
+            "uid": 2702,
+            "name": "罗马",
+            "abbr": "罗马",
+            "country": "",
+            "country_code": ""
+          },
+          "score": {
+            "home": 1,
+            "away": 1,
+            "winner": null,
+            "period": "nt",
+            "display": "1:1"
+          },
+          "competition_id": 853
+        }
+      ]
+    },
+    "league": {
+      "tables": [
+        {
+          "id": "108668",
+          "name": "UEFA Champions League 26/27",
+          "round": 4,
+          "max_rounds": 8,
+          "rows": [
+            {
+              "position": 1,
+              "team": {
+                "id": 6866,
+                "uid": 1644,
+                "name": "巴黎圣日耳曼",
+                "abbr": "巴黎圣日耳曼",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 4,
+              "draws": 0,
+              "losses": 0,
+              "goals_for": 20,
+              "goals_against": 5,
+              "goal_diff": 15,
+              "points": 12,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 2,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 1,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 2,
+              "team": {
+                "id": 6494,
+                "uid": 2829,
+                "name": "皇马",
+                "abbr": "皇家马德里",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 4,
+              "draws": 0,
+              "losses": 0,
+              "goals_for": 13,
+              "goals_against": 7,
+              "goal_diff": 6,
+              "points": 12,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 2,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 2,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 3,
+              "team": {
+                "id": 6482,
+                "uid": 42,
+                "name": "阿森纳",
+                "abbr": "ARS",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 1,
+              "losses": 0,
+              "goals_for": 8,
+              "goals_against": 3,
+              "goal_diff": 5,
+              "points": 10,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 0,
+              "away_wins": 2,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 3,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 4,
+              "team": {
+                "id": 30754277,
+                "uid": 2704,
+                "name": "科莫1907",
+                "abbr": "科莫1907",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 19,
+              "goals_against": 6,
+              "goal_diff": 13,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 4,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 5,
+              "team": {
+                "id": 6497,
+                "uid": 2817,
+                "name": "巴塞罗那",
+                "abbr": "BAR",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 14,
+              "goals_against": 6,
+              "goal_diff": 8,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 5,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 6,
+              "team": {
+                "id": 13440953,
+                "uid": 40,
+                "name": "阿斯顿维拉",
+                "abbr": "维拉",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 12,
+              "goals_against": 6,
+              "goal_diff": 6,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 6,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 7,
+              "team": {
+                "id": 5567723,
+                "uid": 17,
+                "name": "曼城",
+                "abbr": "曼城",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 12,
+              "goals_against": 7,
+              "goal_diff": 5,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 2,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 7,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 8,
+              "team": {
+                "id": 45745,
+                "uid": 44,
+                "name": "利物浦",
+                "abbr": "利物浦",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 14,
+              "goals_against": 10,
+              "goal_diff": 4,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 8,
+              "promotion": "季后赛"
+            },
+            {
+              "position": 9,
+              "team": {
+                "id": 119997,
+                "uid": 2888,
+                "name": "布鲁日",
+                "abbr": "布鲁日",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 11,
+              "goals_against": 7,
+              "goal_diff": 4,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 2,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 9,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 10,
+              "team": {
+                "id": 6598,
+                "uid": 3001,
+                "name": "里斯本",
+                "abbr": "里斯本",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 8,
+              "goals_against": 4,
+              "goal_diff": 4,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 2,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 10,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 11,
+              "team": {
+                "id": 542809,
+                "uid": 2816,
+                "name": "皇家贝蒂斯",
+                "abbr": "贝蒂斯",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 8,
+              "goals_against": 6,
+              "goal_diff": 2,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 11,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 12,
+              "team": {
+                "id": 32138,
+                "uid": 2673,
+                "name": "多特蒙德",
+                "abbr": "多特蒙德",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 3,
+              "draws": 0,
+              "losses": 1,
+              "goals_for": 7,
+              "goals_against": 5,
+              "goal_diff": 2,
+              "points": 9,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 12,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 13,
+              "team": {
+                "id": 6631,
+                "uid": 2672,
+                "name": "拜仁",
+                "abbr": "拜仁慕尼黑",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 2,
+              "draws": 2,
+              "losses": 0,
+              "goals_for": 12,
+              "goals_against": 5,
+              "goal_diff": 7,
+              "points": 8,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 0,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 13,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 14,
+              "team": {
+                "id": 224034,
+                "uid": 2677,
+                "name": "斯图加特",
+                "abbr": "斯图加特",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 2,
+              "draws": 1,
+              "losses": 1,
+              "goals_for": 7,
+              "goals_against": 4,
+              "goal_diff": 3,
+              "points": 7,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 0,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 14,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 15,
+              "team": {
+                "id": 122671,
+                "uid": 2697,
+                "name": "国米",
+                "abbr": "国际米兰",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 2,
+              "draws": 0,
+              "losses": 2,
+              "goals_for": 8,
+              "goals_against": 6,
+              "goal_diff": 2,
+              "points": 6,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 15,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 16,
+              "team": {
+                "id": 12339638,
+                "uid": 2058,
+                "name": "LASK林茨",
+                "abbr": "林茨",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 2,
+              "draws": 0,
+              "losses": 2,
+              "goals_for": 10,
+              "goals_against": 9,
+              "goal_diff": 1,
+              "points": 6,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 16,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 17,
+              "team": {
+                "id": 6632,
+                "uid": 35,
+                "name": "曼联",
+                "abbr": "MUN",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 2,
+              "draws": 0,
+              "losses": 2,
+              "goals_for": 8,
+              "goals_against": 8,
+              "goal_diff": 0,
+              "points": 6,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 2,
+              "home_losses": 0,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 17,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 18,
+              "team": {
+                "id": 6485,
+                "uid": 3061,
+                "name": "加拉塔萨雷",
+                "abbr": "GAL",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 2,
+              "draws": 0,
+              "losses": 2,
+              "goals_for": 8,
+              "goals_against": 9,
+              "goal_diff": -1,
+              "points": 6,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 18,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 19,
+              "team": {
+                "id": 32163,
+                "uid": 3052,
+                "name": "费内巴切",
+                "abbr": "费内巴切",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 2,
+              "losses": 1,
+              "goals_for": 6,
+              "goals_against": 11,
+              "goal_diff": -5,
+              "points": 5,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 0,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 19,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 20,
+              "team": {
+                "id": 32154,
+                "uid": 2702,
+                "name": "罗马",
+                "abbr": "罗马",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 1,
+              "losses": 2,
+              "goals_for": 10,
+              "goals_against": 8,
+              "goal_diff": 2,
+              "points": 4,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 20,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 21,
+              "team": {
+                "id": 6637,
+                "uid": 3313,
+                "name": "顿涅茨克矿工",
+                "abbr": "SHA",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 1,
+              "losses": 2,
+              "goals_for": 4,
+              "goals_against": 4,
+              "goal_diff": 0,
+              "points": 4,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 21,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 22,
+              "team": {
+                "id": 21763269,
+                "uid": 1164,
+                "name": "维京",
+                "abbr": "维京",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 1,
+              "losses": 2,
+              "goals_for": 9,
+              "goals_against": 10,
+              "goal_diff": -1,
+              "points": 4,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 0,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 22,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 23,
+              "team": {
+                "id": 1272672,
+                "uid": 2836,
+                "name": "马竞",
+                "abbr": "马德里竞技",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 1,
+              "losses": 2,
+              "goals_for": 4,
+              "goals_against": 5,
+              "goal_diff": -1,
+              "points": 4,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 23,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 24,
+              "team": {
+                "id": 6868,
+                "uid": 2952,
+                "name": "埃因霍温",
+                "abbr": "PSV",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 1,
+              "losses": 2,
+              "goals_for": 3,
+              "goals_against": 4,
+              "goal_diff": -1,
+              "points": 4,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 0,
+              "home_losses": 1,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 24,
+              "promotion": "外围赛附加賽"
+            },
+            {
+              "position": 25,
+              "team": {
+                "id": 17863576,
+                "uid": 656,
+                "name": "博多格林特",
+                "abbr": "博多格林特",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 1,
+              "losses": 2,
+              "goals_for": 4,
+              "goals_against": 9,
+              "goal_diff": -5,
+              "points": 4,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 0,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 25,
+              "promotion": ""
+            },
+            {
+              "position": 26,
+              "team": {
+                "id": 45749,
+                "uid": 3002,
+                "name": "波爾圖",
+                "abbr": "波爾圖",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 6,
+              "goals_against": 7,
+              "goal_diff": -1,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 2,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 26,
+              "promotion": ""
+            },
+            {
+              "position": 27,
+              "team": {
+                "id": 5756773,
+                "uid": 2714,
+                "name": "那不勒斯",
+                "abbr": "NAP",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 6,
+              "goals_against": 11,
+              "goal_diff": -5,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 27,
+              "promotion": ""
+            },
+            {
+              "position": 28,
+              "team": {
+                "id": 322518,
+                "uid": 2819,
+                "name": "比利亚雷亚尔",
+                "abbr": "比利亚雷亚尔",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 8,
+              "goals_against": 14,
+              "goal_diff": -6,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 28,
+              "promotion": ""
+            },
+            {
+              "position": 29,
+              "team": {
+                "id": 122668,
+                "uid": 3250,
+                "name": "雅典AEK",
+                "abbr": "AEK",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 5,
+              "goals_against": 11,
+              "goal_diff": -6,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 29,
+              "promotion": ""
+            },
+            {
+              "position": 29,
+              "team": {
+                "id": 9796666,
+                "uid": 36360,
+                "name": "莱比锡",
+                "abbr": "RBL",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 5,
+              "goals_against": 11,
+              "goal_diff": -6,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 30,
+              "promotion": ""
+            },
+            {
+              "position": 31,
+              "team": {
+                "id": 32067607,
+                "uid": 382568,
+                "name": "萨巴",
+                "abbr": "SBH",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 4,
+              "goals_against": 10,
+              "goal_diff": -6,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 31,
+              "promotion": ""
+            },
+            {
+              "position": 32,
+              "team": {
+                "id": 47227,
+                "uid": 2959,
+                "name": "费耶诺德",
+                "abbr": "FEY",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 4,
+              "goals_against": 11,
+              "goal_diff": -7,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 1,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 2,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 32,
+              "promotion": ""
+            },
+            {
+              "position": 33,
+              "team": {
+                "id": 127322,
+                "uid": 1648,
+                "name": "朗斯",
+                "abbr": "RCL",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 1,
+              "draws": 0,
+              "losses": 3,
+              "goals_for": 4,
+              "goals_against": 16,
+              "goal_diff": -12,
+              "points": 3,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 0,
+              "home_losses": 2,
+              "away_wins": 1,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 33,
+              "promotion": ""
+            },
+            {
+              "position": 34,
+              "team": {
+                "id": 32602,
+                "uid": 2216,
+                "name": "布拉格斯拉维亚",
+                "abbr": "布拉格斯拉维亚",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 0,
+              "draws": 1,
+              "losses": 3,
+              "goals_for": 5,
+              "goals_against": 9,
+              "goal_diff": -4,
+              "points": 1,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 0,
+              "home_losses": 2,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 34,
+              "promotion": ""
+            },
+            {
+              "position": 35,
+              "team": {
+                "id": 45752,
+                "uid": 1643,
+                "name": "里尔",
+                "abbr": "里尔",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 0,
+              "draws": 1,
+              "losses": 3,
+              "goals_for": 4,
+              "goals_against": 10,
+              "goal_diff": -6,
+              "points": 1,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 0,
+              "home_losses": 2,
+              "away_wins": 0,
+              "away_losses": 1,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 35,
+              "promotion": ""
+            },
+            {
+              "position": 36,
+              "team": {
+                "id": 1664178,
+                "uid": 2404,
+                "name": "布拉迪斯拉发斯拉夫",
+                "abbr": "SLO",
+                "country": "",
+                "country_code": ""
+              },
+              "played": 4,
+              "wins": 0,
+              "draws": 0,
+              "losses": 4,
+              "goals_for": 1,
+              "goals_against": 17,
+              "goal_diff": -16,
+              "points": 0,
+              "win_pct": null,
+              "games_back": null,
+              "streak": null,
+              "last_ten_wins": null,
+              "last_ten_losses": null,
+              "home_wins": 0,
+              "home_losses": 1,
+              "away_wins": 0,
+              "away_losses": 3,
+              "conference_wins": null,
+              "conference_losses": null,
+              "division_wins": null,
+              "division_losses": null,
+              "sort_position": 36,
+              "promotion": ""
+            }
+          ]
+        }
+      ],
+      "top_scorers": [
+        {
+          "_doc": "toplistentry",
+          "_id": 1264266,
+          "playerid": 1264266,
+          "player": {
+            "_doc": "player",
+            "_id": 1264266,
+            "name": "杜维卡斯, 阿纳斯塔西奥斯",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "02/08/99",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 933552000
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 83,
+              "a2": "gr",
+              "name": "希腊",
+              "a3": "GRC",
+              "ioc": "GRE",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 11300000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 9
+          },
+          "teams": {
+            "2704": {
+              "active": true,
+              "lastevent": "2026-11-04 21:22:46",
+              "started": 3,
+              "goals": 6,
+              "matches": 4,
+              "goal_points": 8,
+              "minutes_played": 247,
+              "substituted_in": 1,
+              "first_goals": 1,
+              "last_goals": 1,
+              "shirtnumber": "9"
+            }
+          },
+          "total": {
+            "goals": 6,
+            "matches": 4,
+            "goal_points": 8,
+            "minutes_played": 247,
+            "substituted_in": 1,
+            "first_goals": 1,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 4
+          },
+          "firsthalf": {
+            "goals": 3
+          },
+          "secondhalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 991181,
+          "playerid": 991181,
+          "player": {
+            "_doc": "player",
+            "_id": 991181,
+            "name": "哈兰德, 厄林",
+            "fullname": "Haaland, Erling Braut",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "21/07/00",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 964137600
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 160,
+              "a2": "no",
+              "name": "挪威",
+              "a3": "NOR",
+              "ioc": "NOR",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 5290288
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 9
+          },
+          "teams": {
+            "17": {
+              "active": true,
+              "lastevent": "2026-11-04 21:37:29",
+              "started": 3,
+              "goals": 5,
+              "matches": 3,
+              "goal_points": 5,
+              "minutes_played": 270,
+              "first_goals": 1,
+              "last_goals": 3,
+              "shirtnumber": "9"
+            }
+          },
+          "total": {
+            "goals": 5,
+            "matches": 3,
+            "goal_points": 5,
+            "minutes_played": 270,
+            "first_goals": 1,
+            "last_goals": 3
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 3
+          },
+          "secondhalf": {
+            "goals": 5
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 2295427,
+          "playerid": 2295427,
+          "player": {
+            "_doc": "player",
+            "_id": 2295427,
+            "name": "特雷索尔迪，尼科洛",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "20/08/04",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 1092960000
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 80,
+              "a2": "de",
+              "name": "德国",
+              "a3": "DEU",
+              "ioc": "GER",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 82500000
+            },
+            "secondarynationality": {
+              "_doc": "countrycode",
+              "_id": 105,
+              "a2": "it",
+              "name": "意大利",
+              "a3": "ITA",
+              "ioc": "ITA",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 60300000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 7
+          },
+          "teams": {
+            "2888": {
+              "active": true,
+              "lastevent": "2026-11-04 21:41:51",
+              "started": 4,
+              "goals": 5,
+              "matches": 4,
+              "penalties": 2,
+              "goal_points": 5,
+              "minutes_played": 336,
+              "first_goals": 2,
+              "last_goals": 1,
+              "shirtnumber": "7"
+            }
+          },
+          "total": {
+            "goals": 5,
+            "matches": 4,
+            "penalties": 2,
+            "goal_points": 5,
+            "minutes_played": 336,
+            "first_goals": 2,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 1
+          },
+          "away": {
+            "goals": 4
+          },
+          "firsthalf": {
+            "goals": 2
+          },
+          "secondhalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 108579,
+          "playerid": 108579,
+          "player": {
+            "_doc": "player",
+            "_id": 108579,
+            "name": "凯恩, 哈里",
+            "fullname": "Kane, Harry Edward",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "28/07/93",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 743817600
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 240,
+              "a2": "en",
+              "name": "英格兰",
+              "a3": "ENG",
+              "ioc": "ENG",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 51500000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": true,
+            "jerseynumber": 9
+          },
+          "teams": {
+            "2672": {
+              "active": true,
+              "lastevent": "2026-11-03 21:32:56",
+              "started": 4,
+              "goals": 4,
+              "matches": 4,
+              "penalties": 2,
+              "goal_points": 7,
+              "minutes_played": 360,
+              "shirtnumber": "9"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "penalties": 2,
+            "goal_points": 7,
+            "minutes_played": 360
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 2
+          },
+          "secondhalf": {
+            "goals": 4
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 328027,
+          "playerid": 328027,
+          "player": {
+            "_doc": "player",
+            "_id": 328027,
+            "name": "吉拉西，赛鲁",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "12/03/96",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 826588800
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 89,
+              "a2": "gn",
+              "name": "几内亚",
+              "a3": "GIN",
+              "ioc": "GUI",
+              "continentid": 4,
+              "continent": "非洲",
+              "population": 12395000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 9
+          },
+          "teams": {
+            "2673": {
+              "active": true,
+              "lastevent": "2026-11-04 20:37:04",
+              "started": 3,
+              "goals": 4,
+              "matches": 4,
+              "penalties": 1,
+              "goal_points": 4,
+              "minutes_played": 244,
+              "substituted_in": 1,
+              "first_goals": 1,
+              "last_goals": 1,
+              "shirtnumber": "9"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "penalties": 1,
+            "goal_points": 4,
+            "minutes_played": 244,
+            "substituted_in": 1,
+            "first_goals": 1,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 2
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 769317,
+          "playerid": 769317,
+          "player": {
+            "_doc": "player",
+            "_id": 769317,
+            "name": "德米罗维奇, 埃尔梅丁",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "25/03/98",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 890784000
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 27,
+              "a2": "ba",
+              "name": "波黑",
+              "a3": "BIH",
+              "ioc": "BIH",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 3531000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 9
+          },
+          "teams": {
+            "2677": {
+              "active": true,
+              "lastevent": "2026-11-03 19:19:55",
+              "started": 2,
+              "goals": 4,
+              "matches": 4,
+              "goal_points": 4,
+              "minutes_played": 165,
+              "substituted_in": 2,
+              "first_goals": 1,
+              "last_goals": 2,
+              "shirtnumber": "9"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "goal_points": 4,
+            "minutes_played": 165,
+            "substituted_in": 2,
+            "first_goals": 1,
+            "last_goals": 2
+          },
+          "home": {
+            "goals": 3
+          },
+          "away": {
+            "goals": 1
+          },
+          "firsthalf": {
+            "goals": 3
+          },
+          "secondhalf": {
+            "goals": 1
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 784655,
+          "playerid": 784655,
+          "player": {
+            "_doc": "player",
+            "_id": 784655,
+            "name": "鲁伊斯, 法比安",
+            "fullname": "Pena, Fabian Ruiz",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "03/04/96",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 828489600
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 199,
+              "a2": "es",
+              "name": "西班牙",
+              "a3": "ESP",
+              "ioc": "ESP",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 46000000
+            },
+            "position": {
+              "_id": "6",
+              "_type": "M",
+              "name": "中场",
+              "shortname": "中场",
+              "abbr": "M"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 8
+          },
+          "teams": {
+            "1644": {
+              "active": true,
+              "lastevent": "2026-11-03 21:09:13",
+              "started": 4,
+              "goals": 4,
+              "matches": 4,
+              "goal_points": 5,
+              "minutes_played": 354,
+              "last_goals": 2,
+              "shirtnumber": "8"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "goal_points": 5,
+            "minutes_played": 354,
+            "last_goals": 2
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 2
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 796046,
+          "playerid": 796046,
+          "player": {
+            "_doc": "player",
+            "_id": 796046,
+            "name": "姆巴佩, 基利安",
+            "fullname": "Mbappe Lottin, Kylian Sanmi",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "20/12/98",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 914112000
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 73,
+              "a2": "fr",
+              "name": "法国",
+              "a3": "FRA",
+              "ioc": "FRA",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 66000000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": true,
+            "jerseynumber": 10
+          },
+          "teams": {
+            "2829": {
+              "active": true,
+              "lastevent": "2026-11-04 19:21:51",
+              "started": 4,
+              "goals": 4,
+              "matches": 4,
+              "goal_points": 5,
+              "minutes_played": 358,
+              "first_goals": 1,
+              "shirtnumber": "10"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "goal_points": 5,
+            "minutes_played": 358,
+            "first_goals": 1
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 2
+          },
+          "firsthalf": {
+            "goals": 2
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 815746,
+          "playerid": 815746,
+          "player": {
+            "_doc": "player",
+            "_id": 815746,
+            "name": "马伦, 多尼耶尔",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "19/01/99",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 916704000
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 150,
+              "a2": "nl",
+              "name": "荷兰",
+              "a3": "NLD",
+              "ioc": "NED",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 16600000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 14
+          },
+          "teams": {
+            "2702": {
+              "active": true,
+              "lastevent": "2026-11-03 21:37:21",
+              "started": 4,
+              "goals": 4,
+              "matches": 4,
+              "penalties": 2,
+              "goal_points": 6,
+              "minutes_played": 314,
+              "last_goals": 1,
+              "shirtnumber": "14"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "penalties": 2,
+            "goal_points": 6,
+            "minutes_played": 314,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "away": {
+            "goals": 1
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 956430,
+          "playerid": 956430,
+          "player": {
+            "_doc": "player",
+            "_id": 956430,
+            "name": "拉菲尼亚",
+            "fullname": "Dias Belloli, Raphael",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "14/12/96",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 850521600
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 30,
+              "a2": "br",
+              "name": "巴西",
+              "a3": "BRA",
+              "ioc": "BRA",
+              "continentid": 3,
+              "continent": "南美洲",
+              "population": 208360000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 11
+          },
+          "teams": {
+            "2817": {
+              "active": true,
+              "lastevent": "2026-11-03 21:29:56",
+              "started": 3,
+              "goals": 4,
+              "matches": 3,
+              "goal_points": 4,
+              "minutes_played": 201,
+              "first_goals": 1,
+              "last_goals": 1,
+              "shirtnumber": "11"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 3,
+            "goal_points": 4,
+            "minutes_played": 201,
+            "first_goals": 1,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 4
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 1437554,
+          "playerid": 1437554,
+          "player": {
+            "_doc": "player",
+            "_id": 1437554,
+            "name": "苏亚雷斯, 路易斯",
+            "fullname": "Suarez Charris, Luis Javier",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "02/12/97",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 881020800
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 47,
+              "a2": "co",
+              "name": "哥伦比亚",
+              "a3": "COL",
+              "ioc": "COL",
+              "continentid": 3,
+              "continent": "南美洲",
+              "population": 49364000
+            },
+            "secondarynationality": {
+              "_doc": "countrycode",
+              "_id": 199,
+              "a2": "es",
+              "name": "西班牙",
+              "a3": "ESP",
+              "ioc": "ESP",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 46000000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 97
+          },
+          "teams": {
+            "3001": {
+              "active": true,
+              "lastevent": "2026-11-03 16:38:06",
+              "started": 4,
+              "goals": 4,
+              "matches": 4,
+              "penalties": 2,
+              "goal_points": 4,
+              "minutes_played": 339,
+              "first_goals": 2,
+              "last_goals": 1,
+              "shirtnumber": "97"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "penalties": 2,
+            "goal_points": 4,
+            "minutes_played": 339,
+            "first_goals": 2,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "away": {
+            "goals": 1
+          },
+          "firsthalf": {
+            "goals": 2
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 2441831,
+          "playerid": 2441831,
+          "player": {
+            "_doc": "player",
+            "_id": 2441831,
+            "name": "巴特拉科夫, 阿列克谢",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "09/06/05",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 1118275200
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 177,
+              "a2": "ru",
+              "name": "俄罗斯",
+              "a3": "RUS",
+              "ioc": "RUS",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 142905208
+            },
+            "position": {
+              "_id": "6",
+              "_type": "M",
+              "name": "中场",
+              "shortname": "中场",
+              "abbr": "M"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 83
+          },
+          "teams": {
+            "3061": {
+              "active": true,
+              "lastevent": "2026-11-03 19:22:45",
+              "started": 4,
+              "goals": 4,
+              "matches": 4,
+              "goal_points": 4,
+              "minutes_played": 284,
+              "first_goals": 2,
+              "last_goals": 1,
+              "shirtnumber": "83"
+            }
+          },
+          "total": {
+            "goals": 4,
+            "matches": 4,
+            "goal_points": 4,
+            "minutes_played": 284,
+            "first_goals": 2,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "away": {
+            "goals": 1
+          },
+          "firsthalf": {
+            "goals": 4
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 98435,
+          "playerid": 98435,
+          "player": {
+            "_doc": "player",
+            "_id": 98435,
+            "name": "巴克利, 罗斯",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "05/12/93",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 755049600
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 240,
+              "a2": "en",
+              "name": "英格兰",
+              "a3": "ENG",
+              "ioc": "ENG",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 51500000
+            },
+            "position": {
+              "_id": "6",
+              "_type": "M",
+              "name": "中场",
+              "shortname": "中场",
+              "abbr": "M"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 6
+          },
+          "teams": {
+            "40": {
+              "active": true,
+              "lastevent": "2026-11-03 21:22:27",
+              "started": 2,
+              "goals": 3,
+              "matches": 4,
+              "penalties": 1,
+              "goal_points": 4,
+              "minutes_played": 202,
+              "substituted_in": 2,
+              "first_goals": 1,
+              "shirtnumber": "6"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 4,
+            "penalties": 1,
+            "goal_points": 4,
+            "minutes_played": 202,
+            "substituted_in": 2,
+            "first_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 361350,
+          "playerid": 361350,
+          "player": {
+            "_doc": "player",
+            "_id": 361350,
+            "name": "登贝莱, 乌斯曼",
+            "fullname": "Dembele, Masour Ousmane",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "15/05/97",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 863654400
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 73,
+              "a2": "fr",
+              "name": "法国",
+              "a3": "FRA",
+              "ioc": "FRA",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 66000000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": true,
+            "jerseynumber": 10
+          },
+          "teams": {
+            "1644": {
+              "active": true,
+              "lastevent": "2026-10-20 19:21:56",
+              "started": 3,
+              "goals": 3,
+              "matches": 3,
+              "goal_points": 6,
+              "minutes_played": 160,
+              "first_goals": 1,
+              "shirtnumber": "10"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 3,
+            "goal_points": 6,
+            "minutes_played": 160,
+            "first_goals": 1
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 1
+          },
+          "firsthalf": {
+            "goals": 3
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 908372,
+          "playerid": 908372,
+          "player": {
+            "_doc": "player",
+            "_id": 908372,
+            "name": "麦克托米奈, 斯科特",
+            "fullname": "McTominay, Scott Francis",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "08/12/96",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 850003200
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 242,
+              "a2": "s",
+              "name": "苏格兰",
+              "a3": "SCO",
+              "ioc": "SCO",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 5400000
+            },
+            "position": {
+              "_id": "6",
+              "_type": "M",
+              "name": "中场",
+              "shortname": "中场",
+              "abbr": "M"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 8
+          },
+          "teams": {
+            "2714": {
+              "active": true,
+              "lastevent": "2026-11-04 20:44:20",
+              "started": 3,
+              "goals": 3,
+              "matches": 3,
+              "goal_points": 3,
+              "minutes_played": 240,
+              "shirtnumber": "8"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 3,
+            "goal_points": 3,
+            "minutes_played": 240
+          },
+          "home": {
+            "goals": 2
+          },
+          "away": {
+            "goals": 1
+          },
+          "firsthalf": {
+            "goals": 2
+          },
+          "secondhalf": {
+            "goals": 1
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 936026,
+          "playerid": 936026,
+          "player": {
+            "_doc": "player",
+            "_id": 936026,
+            "name": "托雷斯, 费兰",
+            "fullname": "Torres Garcia, Ferran",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "29/02/00",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 951782400
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 199,
+              "a2": "es",
+              "name": "西班牙",
+              "a3": "ESP",
+              "ioc": "ESP",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 46000000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 9
+          },
+          "teams": {
+            "1644": {
+              "active": true,
+              "lastevent": "2026-11-03 21:18:50",
+              "started": 1,
+              "goals": 3,
+              "matches": 4,
+              "goal_points": 3,
+              "minutes_played": 187,
+              "substituted_in": 3,
+              "shirtnumber": "9"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 4,
+            "goal_points": 3,
+            "minutes_played": 187,
+            "substituted_in": 3
+          },
+          "home": {
+            "goals": 3
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 1047129,
+          "playerid": 1047129,
+          "player": {
+            "_doc": "player",
+            "_id": 1047129,
+            "name": "弗登, 菲利普",
+            "fullname": "Foden, Philip Walter",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "28/05/00",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 959472000
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 240,
+              "a2": "en",
+              "name": "英格兰",
+              "a3": "ENG",
+              "ioc": "ENG",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 51500000
+            },
+            "position": {
+              "_id": "6",
+              "_type": "M",
+              "name": "中场",
+              "shortname": "中场",
+              "abbr": "M"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 47
+          },
+          "teams": {
+            "17": {
+              "active": true,
+              "lastevent": "2026-11-04 21:23:52",
+              "started": 3,
+              "goals": 3,
+              "matches": 3,
+              "goal_points": 4,
+              "minutes_played": 231,
+              "last_goals": 1,
+              "shirtnumber": "47"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 3,
+            "goal_points": 4,
+            "minutes_played": 231,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 1146986,
+          "playerid": 1146986,
+          "player": {
+            "_doc": "player",
+            "_id": 1146986,
+            "name": "库尼亚, 马特乌斯",
+            "fullname": "Santos Carneiro Da Cunha, Matheus",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "27/05/99",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 927763200
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 30,
+              "a2": "br",
+              "name": "巴西",
+              "a3": "BRA",
+              "ioc": "BRA",
+              "continentid": 3,
+              "continent": "南美洲",
+              "population": 208360000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 10
+          },
+          "teams": {
+            "35": {
+              "active": true,
+              "lastevent": "2026-11-03 21:50:30",
+              "started": 3,
+              "goals": 3,
+              "matches": 4,
+              "goal_points": 3,
+              "minutes_played": 235,
+              "substituted_in": 1,
+              "first_goals": 1,
+              "last_goals": 1,
+              "shirtnumber": "10"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 4,
+            "goal_points": 3,
+            "minutes_played": 235,
+            "substituted_in": 1,
+            "first_goals": 1,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 1245194,
+          "playerid": 1245194,
+          "player": {
+            "_doc": "player",
+            "_id": 1245194,
+            "name": "麦克阿利斯特, 阿莱克西斯",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "24/12/98",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 914457600
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 10,
+              "a2": "ar",
+              "name": "阿根廷",
+              "a3": "ARG",
+              "ioc": "ARG",
+              "continentid": 3,
+              "continent": "南美洲",
+              "population": 44293000
+            },
+            "position": {
+              "_id": "6",
+              "_type": "M",
+              "name": "中场",
+              "shortname": "中场",
+              "abbr": "M"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 10
+          },
+          "teams": {
+            "44": {
+              "active": true,
+              "lastevent": "2026-11-04 16:32:46",
+              "started": 3,
+              "goals": 3,
+              "matches": 4,
+              "goal_points": 3,
+              "minutes_played": 255,
+              "substituted_in": 1,
+              "last_goals": 1,
+              "shirtnumber": "10"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 4,
+            "goal_points": 3,
+            "minutes_played": 255,
+            "substituted_in": 1,
+            "last_goals": 1
+          },
+          "home": {
+            "goals": 3
+          },
+          "firsthalf": {
+            "goals": 1
+          },
+          "secondhalf": {
+            "goals": 2
+          }
+        },
+        {
+          "_doc": "toplistentry",
+          "_id": 1948356,
+          "playerid": 1948356,
+          "player": {
+            "_doc": "player",
+            "_id": 1948356,
+            "name": "巴尔科拉, 布拉德利",
+            "fullname": "Barcola, Bradley Jean-Manuel Essolisa A",
+            "birthdate": {
+              "_doc": "time",
+              "time": "00:00",
+              "date": "02/09/02",
+              "tz": "UTC",
+              "tzoffset": 0,
+              "uts": 1030924800
+            },
+            "nationality": {
+              "_doc": "countrycode",
+              "_id": 73,
+              "a2": "fr",
+              "name": "法国",
+              "a3": "FRA",
+              "ioc": "FRA",
+              "continentid": 1,
+              "continent": "欧洲",
+              "population": 66000000
+            },
+            "position": {
+              "_id": "8",
+              "_type": "F",
+              "name": "前锋",
+              "shortname": "前锋",
+              "abbr": "F"
+            },
+            "primarypositiontype": null,
+            "haslogo": false,
+            "jerseynumber": 29
+          },
+          "teams": {
+            "44": {
+              "active": true,
+              "lastevent": "2026-11-04 16:32:54",
+              "started": 3,
+              "goals": 3,
+              "matches": 4,
+              "goal_points": 3,
+              "minutes_played": 239,
+              "substituted_in": 1,
+              "shirtnumber": "29"
+            }
+          },
+          "total": {
+            "goals": 3,
+            "matches": 4,
+            "goal_points": 3,
+            "minutes_played": 239,
+            "substituted_in": 1
+          },
+          "away": {
+            "goals": 3
+          },
+          "firsthalf": {
+            "goals": 2
+          },
+          "secondhalf": {
+            "goals": 1
+          }
+        }
+      ]
+    },
+    "source": "stake_sportradar_lmt_plus"
+  },
+  "intel_coverage": {
+    "team": 2,
+    "squad_players": 77,
+    "injuries": 6,
+    "lineups": 2
+  },
+  "detail_url": "intel_prematch_detail_football_46867530-paris-saint-germain-roma.html",
+  "detail_json_url": "intel_prematch_detail_football_46867530-paris-saint-germain-roma.json",
+  "detail_csv_url": "intel_prematch_detail_football_46867530-paris-saint-germain-roma.csv"
+}

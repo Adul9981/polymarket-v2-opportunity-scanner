@@ -1,0 +1,5670 @@
+{
+  "id": "stake:1795510800000-faze-wildcard",
+  "sport": "cs2",
+  "sport_slug": "counter-strike",
+  "sport_label": "CS2",
+  "sport_short": "CS2",
+  "league": "PGL Major Singapore 2026",
+  "league_source_name": "PGL Major Singapore 2026",
+  "category": "international-3",
+  "tournament": "pgl-major-singapore-2026-t3",
+  "teams": [
+    "FaZe",
+    "Wildcard"
+  ],
+  "name": "FaZe - Wildcard",
+  "start_ts": 1795503600,
+  "start_at_utc": "2026-11-24T07:00:00+00:00",
+  "start_at_bj": "11-24 15:00",
+  "date_bj": "2026-11-24",
+  "weekday_bj": "周二",
+  "format": "BO3",
+  "status": "待开赛",
+  "status_key": "upcoming",
+  "fixture_status": "active",
+  "market_label": "独赢",
+  "market_state": "available",
+  "market_state_label": "有效报价",
+  "winner_market": {
+    "market_id": "7e6ef206-8a40-4927-888e-a4a8eb6e3094",
+    "market_name": "Match Winner - Twoway",
+    "market_status": "active",
+    "market_type": "two_way",
+    "margin": 0.084656,
+    "payout_rate": 0.921951,
+    "updated_at": "2026-11-23T15:23:49+00:00",
+    "updated_ts": 1795447429.091,
+    "outcomes": [
+      {
+        "name": "FaZe",
+        "decimal_odds": 1.4,
+        "raw_implied": 0.714286,
+        "fair_probability": 0.658537
+      },
+      {
+        "name": "Wildcard",
+        "decimal_odds": 2.7,
+        "raw_implied": 0.37037,
+        "fair_probability": 0.341463
+      }
+    ]
+  },
+  "game_numbers": [
+    1
+  ],
+  "player_intel": {
+    "status": "full",
+    "method": "比赛内选手对位盘口＋单人数据盘",
+    "team_players": {
+      "FaZe": [
+        {
+          "name": "Jboen",
+          "slot": 1,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 15.5,
+              "over_fair_probability": 0.5,
+              "under_decimal_odds": 1.85,
+              "over_decimal_odds": 1.85
+            },
+            "爆头": {
+              "line": 5.5,
+              "over_fair_probability": 0.537634,
+              "under_decimal_odds": 2.0,
+              "over_decimal_odds": 1.72
+            }
+          }
+        },
+        {
+          "name": "Twistzz",
+          "slot": 2,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 15.5,
+              "over_fair_probability": 0.486486,
+              "under_decimal_odds": 1.8,
+              "over_decimal_odds": 1.9
+            },
+            "爆头": {
+              "line": 9.5,
+              "over_fair_probability": 0.527027,
+              "under_decimal_odds": 1.95,
+              "over_decimal_odds": 1.75
+            }
+          }
+        },
+        {
+          "name": "nemanha",
+          "slot": 3,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 13.5,
+              "over_fair_probability": 0.472973,
+              "under_decimal_odds": 1.75,
+              "over_decimal_odds": 1.95
+            },
+            "爆头": {
+              "line": 6.5,
+              "over_fair_probability": 0.537634,
+              "under_decimal_odds": 2.0,
+              "over_decimal_odds": 1.72
+            }
+          }
+        },
+        {
+          "name": "Jcobbb",
+          "slot": 4,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 14.5,
+              "over_fair_probability": 0.481081,
+              "under_decimal_odds": 1.78,
+              "over_decimal_odds": 1.92
+            },
+            "爆头": {
+              "line": 9.5,
+              "over_fair_probability": 0.518919,
+              "under_decimal_odds": 1.92,
+              "over_decimal_odds": 1.78
+            }
+          }
+        },
+        {
+          "name": "neityu",
+          "slot": 5,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 13.5,
+              "over_fair_probability": 0.462366,
+              "under_decimal_odds": 1.72,
+              "over_decimal_odds": 2.0
+            },
+            "爆头": {
+              "line": 6.5,
+              "over_fair_probability": 0.518919,
+              "under_decimal_odds": 1.92,
+              "over_decimal_odds": 1.78
+            }
+          }
+        }
+      ],
+      "Wildcard": [
+        {
+          "name": "Fr3nd",
+          "slot": 1,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 13.5,
+              "over_fair_probability": 0.472973,
+              "under_decimal_odds": 1.75,
+              "over_decimal_odds": 1.95
+            },
+            "爆头": {
+              "line": 4.5,
+              "over_fair_probability": 0.472973,
+              "under_decimal_odds": 1.75,
+              "over_decimal_odds": 1.95
+            }
+          }
+        },
+        {
+          "name": "Hext",
+          "slot": 2,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 12.5,
+              "over_fair_probability": 0.527027,
+              "under_decimal_odds": 1.95,
+              "over_decimal_odds": 1.75
+            },
+            "爆头": {
+              "line": 6.5,
+              "over_fair_probability": 0.481081,
+              "under_decimal_odds": 1.78,
+              "over_decimal_odds": 1.92
+            }
+          }
+        },
+        {
+          "name": "Frozen",
+          "slot": 3,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 14.5,
+              "over_fair_probability": 0.527027,
+              "under_decimal_odds": 1.95,
+              "over_decimal_odds": 1.75
+            },
+            "爆头": {
+              "line": 7.5,
+              "over_fair_probability": 0.486486,
+              "under_decimal_odds": 1.8,
+              "over_decimal_odds": 1.9
+            }
+          }
+        },
+        {
+          "name": "Reck",
+          "slot": 4,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 12.5,
+              "over_fair_probability": 0.527027,
+              "under_decimal_odds": 1.95,
+              "over_decimal_odds": 1.75
+            },
+            "爆头": {
+              "line": 6.5,
+              "over_fair_probability": 0.513514,
+              "under_decimal_odds": 1.9,
+              "over_decimal_odds": 1.8
+            }
+          }
+        },
+        {
+          "name": "Cxzi",
+          "slot": 5,
+          "metrics": [
+            "击杀",
+            "爆头"
+          ],
+          "projections": {
+            "击杀": {
+              "line": 12.5,
+              "over_fair_probability": 0.5,
+              "under_decimal_odds": 1.85,
+              "over_decimal_odds": 1.85
+            },
+            "爆头": {
+              "line": 5.5,
+              "over_fair_probability": 0.537634,
+              "under_decimal_odds": 2.0,
+              "over_decimal_odds": 1.72
+            }
+          }
+        }
+      ]
+    },
+    "unassigned": [],
+    "note": "盘口可识别参赛选手，但不等于官方首发；角色、替补和临时换人仍需官方确认。"
+  },
+  "team_market_intel": {},
+  "ai_summary": "FaZe 近5场 L/L/L/L/W，Wildcard L/W/W/W/L；对局胜率 51% vs 56%；近期选手池 5+5 人；2026年新加坡PGL Major；近况交锋 0 场。",
+  "market_count": 113,
+  "provider": "oddin",
+  "fixture_slug": "1795510800000-faze-wildcard",
+  "ext_id": "od:match:3389071",
+  "source_url": "https://odds-data.stake.com/fixtures/1795510800000-faze-wildcard",
+  "fixture_updated_at": "2026-11-11T10:10:48+00:00",
+  "source_updated_at": "2026-11-23T15:23:49+00:00",
+  "source": "stake_odds_data",
+  "source_tier": "B · 赛前跨市场参考",
+  "fetched_at": "2026-11-23T16:00:55+00:00",
+  "oddin": {
+    "game": "csgo",
+    "match_id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3MQ==",
+    "tournament_id": "dG91cm5hbWVudC9vZDp0b3VybmFtZW50OjE1NDkx",
+    "coverage": {
+      "teams": 2,
+      "players": 10,
+      "players_with_stats": 10,
+      "favorites": 8,
+      "map_pool": 22,
+      "recent_matches": 10,
+      "h2h": 0,
+      "tournament_teams": 32,
+      "tournament_matches": 8,
+      "standings": 0,
+      "pool_rows": 0
+    },
+    "home": {
+      "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+      "name": "FaZe",
+      "icon": "https://cdn.oddin.gg/assets/teams/icons/faze_1769693813134.png",
+      "map_winrate": {
+        "avg": 51.11110305786133,
+        "percentile": 67.3410415649414,
+        "total": 23,
+        "sample_size": 45
+      },
+      "metrics": {
+        "overallMapWinrate": {
+          "avg": 51.11110305786133,
+          "percentile": 67.3410415649414,
+          "total": 23,
+          "sample_size": 45
+        },
+        "overallRoundWinrate": {
+          "all": {
+            "avg": 51.13975524902344,
+            "percentile": 72.25433349609375,
+            "total": 516
+          },
+          "terrorists": {
+            "avg": 46.94655227661133,
+            "percentile": 54.91329574584961,
+            "total": 246
+          },
+          "counterTerrorists": {
+            "avg": 55.67009353637695,
+            "percentile": 78.32369995117188,
+            "total": 270
+          }
+        },
+        "pistolWinrate": {
+          "all": {
+            "avg": 48.888893127441406,
+            "percentile": 46.53179168701172,
+            "total": 44
+          },
+          "terrorists": {
+            "avg": 48.888893127441406,
+            "percentile": 52.60115432739258,
+            "total": 22
+          },
+          "counterTerrorists": {
+            "avg": 48.888885498046875,
+            "percentile": 42.774566650390625,
+            "total": 22
+          }
+        },
+        "pistolWinConversion": {
+          "all": {
+            "avg": 90.90908813476562,
+            "percentile": 82.08092498779297,
+            "total": 40
+          },
+          "terrorists": {
+            "avg": 22.72727394104004,
+            "percentile": 19.36416244506836,
+            "total": 5
+          },
+          "counterTerrorists": {
+            "avg": 86.3636245727539,
+            "percentile": 66.18497467041016,
+            "total": 19
+          }
+        },
+        "pistolLossConversion": {
+          "all": {
+            "avg": 26.086959838867188,
+            "percentile": 85.83815002441406,
+            "total": 12
+          },
+          "terrorists": {
+            "avg": 30.434783935546875,
+            "percentile": 87.28323364257812,
+            "total": 7
+          },
+          "counterTerrorists": {
+            "avg": 21.739131927490234,
+            "percentile": 73.12138366699219,
+            "total": 5
+          }
+        },
+        "kills": {
+          "all": {
+            "avg": 3.2884044647216797,
+            "percentile": 50,
+            "total": 3318
+          },
+          "terrorists": {
+            "avg": 2.9580154418945312,
+            "percentile": 37.5722541809082,
+            "total": 1550
+          },
+          "counterTerrorists": {
+            "avg": 3.6453604698181152,
+            "percentile": 73.12138366699219,
+            "total": 1768
+          }
+        },
+        "deaths": {
+          "all": {
+            "avg": 3.247770071029663,
+            "percentile": 19.075143814086914,
+            "total": 3277
+          },
+          "terrorists": {
+            "avg": 3.5801525115966797,
+            "percentile": 33.81502914428711,
+            "total": 1876
+          },
+          "counterTerrorists": {
+            "avg": 2.888660192489624,
+            "percentile": 13.294797897338867,
+            "total": 1401
+          }
+        },
+        "killsOverDeaths": {
+          "all": {
+            "avg": 1.0125114917755127,
+            "percentile": 50,
+            "total": 1.0125114917755127
+          },
+          "terrorists": {
+            "avg": 0.8262261152267456,
+            "percentile": 37.5722541809082,
+            "total": 0.8262261152267456
+          },
+          "counterTerrorists": {
+            "avg": 1.2619554996490479,
+            "percentile": 73.12138366699219,
+            "total": 1.2619554996490479
+          }
+        },
+        "assists": {
+          "all": {
+            "avg": 1.2041627168655396,
+            "percentile": 47.687862396240234,
+            "total": 1215
+          },
+          "terrorists": {
+            "avg": 1.1450380086898804,
+            "percentile": 43.35260009765625,
+            "total": 600
+          },
+          "counterTerrorists": {
+            "avg": 1.2680411338806152,
+            "percentile": 53.17919158935547,
+            "total": 615
+          }
+        },
+        "flashAssists": {
+          "all": {
+            "avg": 0.1684836596250534,
+            "percentile": 64.45086669921875,
+            "total": 170
+          }
+        },
+        "damage": {
+          "all": {
+            "avg": 361.6471862792969,
+            "percentile": 48.26589584350586,
+            "total": 364902
+          }
+        },
+        "headshotRate": {
+          "all": {
+            "avg": 52.56178283691406,
+            "percentile": 57.803466796875,
+            "total": 0.5256178379058838
+          }
+        },
+        "openingKills": {
+          "all": {
+            "avg": 0.5272547006607056,
+            "percentile": 88.4393081665039,
+            "total": 532
+          }
+        },
+        "openingConversion": {
+          "all": {
+            "avg": 69.9248046875,
+            "percentile": 45.66474151611328,
+            "total": 372
+          }
+        },
+        "openingDeathConversion": {
+          "all": {
+            "avg": 29.769390106201172,
+            "percentile": 72.25433349609375,
+            "total": 142
+          }
+        },
+        "awpKills": {
+          "all": {
+            "avg": 0.35282447934150696,
+            "percentile": 56.93641662597656,
+            "total": 356
+          }
+        },
+        "eliminationWinrate": {
+          "all": {
+            "avg": 31.417247772216797,
+            "percentile": 49.13294982910156,
+            "total": 317
+          }
+        },
+        "objectiveWinrate": {
+          "all": {
+            "avg": 19.72249984741211,
+            "percentile": 85.54913330078125,
+            "total": 199
+          }
+        },
+        "utilityDamage": {
+          "all": {
+            "avg": 19.080280303955078,
+            "percentile": 28.03468132019043,
+            "total": 19252
+          }
+        },
+        "firstToWin3Rounds": {
+          "all": {
+            "avg": 62.222225189208984,
+            "percentile": 88.1502914428711,
+            "total": 28
+          }
+        },
+        "firstToWin6Rounds": {
+          "all": {
+            "avg": 53.333335876464844,
+            "percentile": 70.23121643066406,
+            "total": 24
+          }
+        },
+        "firstToWin9Rounds": {
+          "all": {
+            "avg": 46.66666030883789,
+            "percentile": 50.578033447265625,
+            "total": 21
+          }
+        },
+        "firstToWin12Rounds": {
+          "all": {
+            "avg": 48.888877868652344,
+            "percentile": 55.78034591674805,
+            "total": 22
+          }
+        },
+        "roundsLost": {
+          "all": {
+            "avg": 10.95555305480957,
+            "percentile": 42.774566650390625,
+            "total": 493
+          }
+        }
+      },
+      "map_pool": [
+        {
+          "name": "Mirage",
+          "win_rate": {
+            "avg": 75,
+            "percentile": 84.08304595947266,
+            "total": 6
+          },
+          "pick_rate": {
+            "avg": 66.66667175292969,
+            "percentile": 88.77005004882812,
+            "total": 2
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 55.61497497558594,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 55.97825622558594,
+              "percentile": 82.35294342041016,
+              "total": 103
+            },
+            "terrorists": {
+              "avg": 49.52381134033203,
+              "percentile": 72.3183364868164,
+              "total": 52
+            },
+            "counterTerrorists": {
+              "avg": 64.55696105957031,
+              "percentile": 82.00691986083984,
+              "total": 51
+            }
+          }
+        },
+        {
+          "name": "Nuke",
+          "win_rate": {
+            "avg": 69.99999237060547,
+            "percentile": 79.53488159179688,
+            "total": 7
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 73.26203155517578,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 45.45454406738281,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 56.81817626953125,
+              "percentile": 86.51162719726562,
+              "total": 125
+            },
+            "terrorists": {
+              "avg": 50.84745407104492,
+              "percentile": 82.3255844116211,
+              "total": 60
+            },
+            "counterTerrorists": {
+              "avg": 63.72549057006836,
+              "percentile": 77.20930480957031,
+              "total": 65
+            }
+          }
+        },
+        {
+          "name": "Dust2",
+          "win_rate": {
+            "avg": 28.571430206298828,
+            "percentile": 31.71641731262207,
+            "total": 2
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 61.4973258972168,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 22.22222328186035,
+            "percentile": 82.35294342041016,
+            "total": 2
+          },
+          "rounds": {
+            "all": {
+              "avg": 46.55172348022461,
+              "percentile": 39.55223846435547,
+              "total": 81
+            },
+            "terrorists": {
+              "avg": 44.1860466003418,
+              "percentile": 38.05970001220703,
+              "total": 38
+            },
+            "counterTerrorists": {
+              "avg": 48.8636360168457,
+              "percentile": 43.656715393066406,
+              "total": 43
+            }
+          }
+        },
+        {
+          "name": "Cache",
+          "win_rate": {
+            "avg": 66.66667175292969,
+            "percentile": 79.82062530517578,
+            "total": 2
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 67.91443634033203,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 11.111111640930176,
+            "percentile": 60.42780685424805,
+            "total": 1
+          },
+          "rounds": {
+            "all": {
+              "avg": 52.05479431152344,
+              "percentile": 65.02242279052734,
+              "total": 38
+            },
+            "terrorists": {
+              "avg": 50,
+              "percentile": 66.36771392822266,
+              "total": 17
+            },
+            "counterTerrorists": {
+              "avg": 53.84615707397461,
+              "percentile": 61.88340759277344,
+              "total": 21
+            }
+          }
+        },
+        {
+          "name": "Ancient",
+          "win_rate": {
+            "avg": 27.272727966308594,
+            "percentile": 33.802818298339844,
+            "total": 3
+          },
+          "pick_rate": {
+            "avg": 33.333335876464844,
+            "percentile": 85.5615005493164,
+            "total": 1
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 47.05882263183594,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 44.64285659790039,
+              "percentile": 30.985916137695312,
+              "total": 100
+            },
+            "terrorists": {
+              "avg": 36.79245376586914,
+              "percentile": 22.18309783935547,
+              "total": 39
+            },
+            "counterTerrorists": {
+              "avg": 51.69491195678711,
+              "percentile": 52.112674713134766,
+              "total": 61
+            }
+          }
+        },
+        {
+          "name": "Anubis",
+          "win_rate": {
+            "avg": 50,
+            "percentile": 66.36771392822266,
+            "total": 3
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 79.67914581298828,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 36.89839553833008,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 51.49253463745117,
+              "percentile": 63.22869873046875,
+              "total": 69
+            },
+            "terrorists": {
+              "avg": 53.333335876464844,
+              "percentile": 65.02242279052734,
+              "total": 40
+            },
+            "counterTerrorists": {
+              "avg": 49.15254592895508,
+              "percentile": 50.672645568847656,
+              "total": 29
+            }
+          }
+        },
+        {
+          "name": "Cobblestone",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Inferno",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 67.37967681884766,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 33.333335876464844,
+            "percentile": 85.5615005493164,
+            "total": 3
+          }
+        },
+        {
+          "name": "Overpass",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Train",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Vertigo",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        }
+      ],
+      "favorites": [
+        {
+          "id": null,
+          "name": "M4A4",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 1.5666667222976685,
+              "percentile": 51.33689880371094,
+              "total": 141
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.7111111879348755,
+              "percentile": 58.28876876831055,
+              "total": 64
+            }
+          }
+        },
+        {
+          "id": null,
+          "name": "AK-47",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 1.3043478727340698,
+              "percentile": 8.55614948272705,
+              "total": 120
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.7717390656471252,
+              "percentile": 8.55614948272705,
+              "total": 71
+            }
+          }
+        },
+        {
+          "id": null,
+          "name": "Galil AR",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 0.5555555820465088,
+              "percentile": 1.7241379022598267,
+              "total": 5
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.4444444477558136,
+              "percentile": 27.586206436157227,
+              "total": 4
+            }
+          }
+        }
+      ],
+      "players": [
+        {
+          "id": "b2Q6cGxheWVyOjQz",
+          "nickname": "Twistzz",
+          "real_name": "Russel Van Dulken",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/twistzz_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.7086225152015686,
+              "percentile": 72.52964782714844,
+              "total": 715
+            },
+            "deaths": {
+              "avg": 0.664023756980896,
+              "percentile": 40.41501998901367,
+              "total": 670
+            },
+            "assists": {
+              "avg": 0.2854310870170593,
+              "percentile": 77.96442413330078,
+              "total": 288
+            },
+            "killsOverDeaths": {
+              "avg": 1.067164421081543,
+              "percentile": 72.52964782714844,
+              "total": 1.067164421081543
+            },
+            "damage": {
+              "avg": 78.22103881835938,
+              "percentile": 77.66798400878906,
+              "total": 78925
+            },
+            "headshotRate": {
+              "avg": 59.30068588256836,
+              "percentile": 83.79446411132812,
+              "total": 0.5930068492889404
+            },
+            "flashAssists": {
+              "avg": 0.05153618007898331,
+              "percentile": 81.62055206298828,
+              "total": 52
+            },
+            "openingKills": {
+              "avg": 0.11199209094047546,
+              "percentile": 68.08300018310547,
+              "total": 113
+            },
+            "awpKills": {
+              "avg": 0.011892963200807571,
+              "percentile": 64.03162384033203,
+              "total": 12
+            },
+            "utilityDamage": {
+              "avg": 4.692764759063721,
+              "percentile": 58.79446792602539,
+              "total": 4735
+            },
+            "enemiesFlashed": {
+              "avg": 0.6600594520568848,
+              "percentile": 94.36759185791016,
+              "total": 666
+            },
+            "multiKillRounds": {
+              "avg": 0.19028741121292114,
+              "percentile": 84.1897201538086,
+              "total": 192
+            },
+            "clutchRounds": {
+              "avg": 0.002973240800201893,
+              "percentile": 47.1343879699707,
+              "total": 3
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 3.8503470420837402,
+              "percentile": 97.33201599121094,
+              "total": 3885
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.44285714626312256,
+                  "percentile": 57.3072509765625,
+                  "total": 31
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.2857142984867096,
+                  "percentile": 89.98849487304688,
+                  "total": 20
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.27956992387771606,
+                  "percentile": 14.300960540771484,
+                  "total": 26
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.20430105924606323,
+                  "percentile": 34.471717834472656,
+                  "total": 19
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Glock-18",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 41.60839080810547,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 56.293704986572266,
+                  "total": 3
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Tec-9",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.3333333432674408,
+                  "percentile": 91.58878326416016,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.2222222238779068,
+                  "percentile": 76.63551330566406,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.2857142984867096,
+                  "percentile": 48.75,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.2857142984867096,
+                  "percentile": 89.58333587646484,
+                  "total": 2
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjg3",
+          "nickname": "frozen",
+          "real_name": "David Čerňanský",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/frozen_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.6620417237281799,
+              "percentile": 53.06324005126953,
+              "total": 668
+            },
+            "deaths": {
+              "avg": 0.6362735033035278,
+              "percentile": 25.29644203186035,
+              "total": 642
+            },
+            "assists": {
+              "avg": 0.23984141647815704,
+              "percentile": 48.91304397583008,
+              "total": 242
+            },
+            "killsOverDeaths": {
+              "avg": 1.0404986143112183,
+              "percentile": 53.06324005126953,
+              "total": 1.0404986143112183
+            },
+            "damage": {
+              "avg": 75.48463439941406,
+              "percentile": 67.39130401611328,
+              "total": 76164
+            },
+            "headshotRate": {
+              "avg": 48.20358657836914,
+              "percentile": 40.11857604980469,
+              "total": 0.48203587532043457
+            },
+            "flashAssists": {
+              "avg": 0.022794848307967186,
+              "percentile": 42.19367599487305,
+              "total": 23
+            },
+            "openingKills": {
+              "avg": 0.0832507386803627,
+              "percentile": 35.869564056396484,
+              "total": 84
+            },
+            "awpKills": {
+              "avg": 0.002973240800201893,
+              "percentile": 41.501976013183594,
+              "total": 3
+            },
+            "utilityDamage": {
+              "avg": 4.139742374420166,
+              "percentile": 45.84980392456055,
+              "total": 4177
+            },
+            "enemiesFlashed": {
+              "avg": 0.26957377791404724,
+              "percentile": 25.691699981689453,
+              "total": 272
+            },
+            "multiKillRounds": {
+              "avg": 0.14866206049919128,
+              "percentile": 43.37944793701172,
+              "total": 150
+            },
+            "clutchRounds": {
+              "avg": 0.004955401178449392,
+              "percentile": 66.20553588867188,
+              "total": 5
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 2.6570866107940674,
+              "percentile": 37.74703598022461,
+              "total": 2681
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.38461539149284363,
+                  "percentile": 44.076839447021484,
+                  "total": 45
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.20512819290161133,
+                  "percentile": 34.89861297607422,
+                  "total": 24
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.43103450536727905,
+                  "percentile": 51.89873504638672,
+                  "total": 25
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.12068966031074524,
+                  "percentile": 18.64211654663086,
+                  "total": 7
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.5,
+                  "percentile": 93.54166412353516,
+                  "total": 6
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0,
+                  "percentile": 16.04166603088379,
+                  "total": 0
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "FAMAS",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 56.77083206176758,
+                  "total": 1
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0,
+                  "percentile": 19.27083396911621,
+                  "total": 0
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjI0MzY=",
+          "nickname": "Neityu",
+          "real_name": "Ryan Aubry",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/neityu_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.4921465814113617,
+              "percentile": 6.719367504119873,
+              "total": 94
+            },
+            "deaths": {
+              "avg": 0.7382198572158813,
+              "percentile": 82.50988006591797,
+              "total": 141
+            },
+            "assists": {
+              "avg": 0.23036648333072662,
+              "percentile": 42.39130401611328,
+              "total": 44
+            },
+            "killsOverDeaths": {
+              "avg": 0.6666666865348816,
+              "percentile": 6.719367504119873,
+              "total": 0.6666666865348816
+            },
+            "damage": {
+              "avg": 61.057594299316406,
+              "percentile": 9.980237007141113,
+              "total": 11662
+            },
+            "headshotRate": {
+              "avg": 47.872344970703125,
+              "percentile": 11.758893013000488,
+              "total": 0.4787234365940094
+            },
+            "flashAssists": {
+              "avg": 0.03141361102461815,
+              "percentile": 61.26482391357422,
+              "total": 6
+            },
+            "openingKills": {
+              "avg": 0.07853402942419052,
+              "percentile": 29.05138397216797,
+              "total": 15
+            },
+            "awpKills": {
+              "avg": 0,
+              "percentile": 33.79446792602539,
+              "total": 0
+            },
+            "utilityDamage": {
+              "avg": 3.6178011894226074,
+              "percentile": 34.78260803222656,
+              "total": 691
+            },
+            "enemiesFlashed": {
+              "avg": 0.28272250294685364,
+              "percentile": 29.249011993408203,
+              "total": 54
+            },
+            "multiKillRounds": {
+              "avg": 0.10994765162467957,
+              "percentile": 9.980237007141113,
+              "total": 21
+            },
+            "clutchRounds": {
+              "avg": 0.005235602147877216,
+              "percentile": 67.8853759765625,
+              "total": 1
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 2.63350772857666,
+              "percentile": 35.968379974365234,
+              "total": 503
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4399999976158142,
+                  "percentile": 56.50172424316406,
+                  "total": 33
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.13333332538604736,
+                  "percentile": 23.935558319091797,
+                  "total": 10
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.29870128631591797,
+                  "percentile": 17.182497024536133,
+                  "total": 23
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.1428571492433548,
+                  "percentile": 10.992528915405273,
+                  "total": 11
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.25925925374031067,
+                  "percentile": 41.04166793823242,
+                  "total": 7
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.07407407462596893,
+                  "percentile": 23.54166603088379,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "USP-S",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 36.86440658569336,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 48.305084228515625,
+                  "total": 2
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjEzNzcw",
+          "nickname": "JBOEN",
+          "real_name": "Jason Boe Nielsen",
+          "shortcut": "",
+          "icon": "",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.7277486324310303,
+              "percentile": 79.24900817871094,
+              "total": 139
+            },
+            "deaths": {
+              "avg": 0.6439790725708008,
+              "percentile": 29.249011993408203,
+              "total": 123
+            },
+            "assists": {
+              "avg": 0.19895288348197937,
+              "percentile": 20.94861602783203,
+              "total": 38
+            },
+            "killsOverDeaths": {
+              "avg": 1.1300811767578125,
+              "percentile": 79.24900817871094,
+              "total": 1.1300811767578125
+            },
+            "damage": {
+              "avg": 74.02617645263672,
+              "percentile": 59.58498001098633,
+              "total": 14139
+            },
+            "headshotRate": {
+              "avg": 40.28777313232422,
+              "percentile": 28.95256996154785,
+              "total": 0.4028777480125427
+            },
+            "flashAssists": {
+              "avg": 0.04712041839957237,
+              "percentile": 77.17391204833984,
+              "total": 9
+            },
+            "openingKills": {
+              "avg": 0.1256544440984726,
+              "percentile": 79.74308013916016,
+              "total": 24
+            },
+            "awpKills": {
+              "avg": 0.34554973244667053,
+              "percentile": 93.37944793701172,
+              "total": 66
+            },
+            "utilityDamage": {
+              "avg": 3.0104713439941406,
+              "percentile": 22.035573959350586,
+              "total": 575
+            },
+            "enemiesFlashed": {
+              "avg": 0.5026177763938904,
+              "percentile": 78.16205596923828,
+              "total": 96
+            },
+            "multiKillRounds": {
+              "avg": 0.19371727108955383,
+              "percentile": 86.36363983154297,
+              "total": 37
+            },
+            "clutchRounds": {
+              "avg": 0.005235602613538504,
+              "percentile": 67.98419189453125,
+              "total": 1
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 2.5445024967193604,
+              "percentile": 27.865612030029297,
+              "total": 486
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "AWP",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4750000238418579,
+                  "percentile": 69.84127044677734,
+                  "total": 57
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.05000000447034836,
+                  "percentile": 65.87301635742188,
+                  "total": 6
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.6363636255264282,
+                  "percentile": 98.9327621459961,
+                  "total": 14
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.4545454680919647,
+                  "percentile": 99.25293731689453,
+                  "total": 10
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.3333333432674408,
+                  "percentile": 68.54166412353516,
+                  "total": 12
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.1666666716337204,
+                  "percentile": 65.20833587646484,
+                  "total": 6
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "MP9",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.75,
+                  "percentile": 98.10426330566406,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.5,
+                  "percentile": 98.57820129394531,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Desert Eagle",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.1111111119389534,
+                  "percentile": 14.634146690368652,
+                  "total": 1
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.1111111119389534,
+                  "percentile": 36.585365295410156,
+                  "total": 1
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjE0MjY0",
+          "nickname": "jcobbb",
+          "real_name": "Jakub Pietruszewski",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/jcobbb_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.5789473652839661,
+              "percentile": 20.94861602783203,
+              "total": 99
+            },
+            "deaths": {
+              "avg": 0.7543859481811523,
+              "percentile": 87.45059204101562,
+              "total": 129
+            },
+            "assists": {
+              "avg": 0.19883041083812714,
+              "percentile": 20.849802017211914,
+              "total": 34
+            },
+            "killsOverDeaths": {
+              "avg": 0.7674418687820435,
+              "percentile": 20.94861602783203,
+              "total": 0.7674418687820435
+            },
+            "damage": {
+              "avg": 65.28655242919922,
+              "percentile": 21.1462459564209,
+              "total": 11164
+            },
+            "headshotRate": {
+              "avg": 62.62626647949219,
+              "percentile": 60.37549591064453,
+              "total": 0.6262626647949219
+            },
+            "flashAssists": {
+              "avg": 0.017543861642479897,
+              "percentile": 30.13833999633789,
+              "total": 3
+            },
+            "openingKills": {
+              "avg": 0.12865497171878815,
+              "percentile": 81.52173614501953,
+              "total": 22
+            },
+            "awpKills": {
+              "avg": 0,
+              "percentile": 33.79446792602539,
+              "total": 0
+            },
+            "utilityDamage": {
+              "avg": 3.3333332538604736,
+              "percentile": 28.359683990478516,
+              "total": 570
+            },
+            "enemiesFlashed": {
+              "avg": 0.30994153022766113,
+              "percentile": 35.37549591064453,
+              "total": 53
+            },
+            "multiKillRounds": {
+              "avg": 0.12865497171878815,
+              "percentile": 23.02371597290039,
+              "total": 22
+            },
+            "clutchRounds": {
+              "avg": 0.005847953259944916,
+              "percentile": 71.83794403076172,
+              "total": 1
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 2.602339267730713,
+              "percentile": 33.30039596557617,
+              "total": 445
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.48148149251937866,
+                  "percentile": 71.80667114257812,
+                  "total": 26
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.24074074625968933,
+                  "percentile": 76.98503875732422,
+                  "total": 13
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.30666664242744446,
+                  "percentile": 19.31696891784668,
+                  "total": 23
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.20000000298023224,
+                  "percentile": 32.87086486816406,
+                  "total": 15
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Desert Eagle",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.10526315867900848,
+                  "percentile": 11.585366249084473,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.10526315867900848,
+                  "percentile": 33.53658676147461,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "MP7",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 42.42424392700195,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.125,
+                  "percentile": 54.54545593261719,
+                  "total": 1
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.06666667014360428,
+                  "percentile": 0.2083333283662796,
+                  "total": 1
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.06666667014360428,
+                  "percentile": 21.875,
+                  "total": 1
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        }
+      ],
+      "recent_matches": [
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzQzMzcyNQ==",
+          "planned_start": "2026-11-15T16:20:13Z",
+          "start": "2026-11-15T16:20:33Z",
+          "end": "2026-11-15T18:25:56Z",
+          "tournament": "PGL Cluj-Napoca 2027: Closed Qualifier",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjIyMA==",
+            "name": "Heroic"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjIyMA==",
+            "name": "Heroic"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNzAzOTQ5",
+              "order": 2,
+              "startTimestamp": "2026-11-15T17:44:01Z",
+              "endTimestamp": "2026-11-15T18:25:56Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNzAzOTQ4",
+              "order": 1,
+              "startTimestamp": "2026-11-15T16:20:33Z",
+              "endTimestamp": "2026-11-15T17:23:39Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNzAzOTUw",
+              "order": 3,
+              "startTimestamp": null,
+              "endTimestamp": null,
+              "isClosed": false
+            }
+          ],
+          "score": "2:0",
+          "team_result": "L"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzQzMzcxOQ==",
+          "planned_start": "2026-11-15T09:53:09Z",
+          "start": "2026-11-15T09:53:09Z",
+          "end": "2026-11-15T12:44:59Z",
+          "tournament": "PGL Cluj-Napoca 2027: Closed Qualifier",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM4",
+            "name": "Fnatic"
+          },
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM4",
+            "name": "Fnatic"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNzAwMzc3",
+              "order": 3,
+              "startTimestamp": "2026-11-15T12:04:30Z",
+              "endTimestamp": "2026-11-15T12:44:59Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNzAwMzc1",
+              "order": 1,
+              "startTimestamp": "2026-11-15T09:53:09Z",
+              "endTimestamp": "2026-11-15T10:38:21Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNzAwMzc2",
+              "order": 2,
+              "startTimestamp": "2026-11-15T11:08:31Z",
+              "endTimestamp": "2026-11-15T11:49:08Z",
+              "isClosed": true
+            }
+          ],
+          "score": "1:2",
+          "team_result": "L"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4MDM1MA==",
+          "planned_start": "2026-11-03T07:00:00Z",
+          "start": "2026-11-03T07:00:29Z",
+          "end": "2026-11-03T09:50:36Z",
+          "tournament": "Intel Extreme Masters Beijing 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM3MzM=",
+            "name": "Team Falcons"
+          },
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM3MzM=",
+            "name": "Team Falcons"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0MTA1",
+              "order": 2,
+              "startTimestamp": "2026-11-03T07:49:31Z",
+              "endTimestamp": "2026-11-03T08:43:43Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjU0MTA0",
+              "order": 1,
+              "startTimestamp": "2026-11-03T07:00:29Z",
+              "endTimestamp": "2026-11-03T07:33:55Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjU0MTA2",
+              "order": 3,
+              "startTimestamp": "2026-11-03T08:58:45Z",
+              "endTimestamp": "2026-11-03T09:50:35Z",
+              "isClosed": true
+            }
+          ],
+          "score": "1:2",
+          "team_result": "L"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM0MDIxMg==",
+          "planned_start": "2026-11-02T08:48:00Z",
+          "start": "2026-11-02T08:48:44Z",
+          "end": "2026-11-02T11:23:54Z",
+          "tournament": "Intel Extreme Masters Beijing 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE5NQ==",
+            "name": "FURIA Esports"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "home_score": 2,
+          "away_score": 1,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE5NQ==",
+            "name": "FURIA Esports"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjAzOTcw",
+              "order": 2,
+              "startTimestamp": "2026-11-02T09:50:51Z",
+              "endTimestamp": "2026-11-02T10:31:25Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjAzOTY5",
+              "order": 1,
+              "startTimestamp": "2026-11-02T08:48:44Z",
+              "endTimestamp": "2026-11-02T09:35:03Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjAzOTcx",
+              "order": 3,
+              "startTimestamp": "2026-11-02T10:47:22Z",
+              "endTimestamp": "2026-11-02T11:23:36Z",
+              "isClosed": true
+            }
+          ],
+          "score": "2:1",
+          "team_result": "L"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM0MzY1Mw==",
+          "planned_start": "2026-10-29T15:23:00Z",
+          "start": "2026-10-29T15:21:53Z",
+          "end": "2026-10-29T17:02:55Z",
+          "tournament": "Tesla Cup 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg1Mw==",
+            "name": "B8"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "home_score": 0,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjM5MDY0",
+              "order": 1,
+              "startTimestamp": "2026-10-29T15:21:53Z",
+              "endTimestamp": "2026-10-29T16:04:54Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjM5MDY1",
+              "order": 2,
+              "startTimestamp": "2026-10-29T16:20:01Z",
+              "endTimestamp": "2026-10-29T17:02:37Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjM5MDY2",
+              "order": 3,
+              "startTimestamp": null,
+              "endTimestamp": null,
+              "isClosed": false
+            }
+          ],
+          "score": "0:2",
+          "team_result": "W"
+        }
+      ]
+    },
+    "away": {
+      "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+      "name": "Wildcard",
+      "icon": "https://cdn.oddin.gg/assets/teams/icons/wildcard_1723140002948.png",
+      "map_winrate": {
+        "avg": 56.00000762939453,
+        "percentile": 78.96341705322266,
+        "total": 28,
+        "sample_size": 50
+      },
+      "metrics": {
+        "overallMapWinrate": {
+          "avg": 56.00000762939453,
+          "percentile": 78.96341705322266,
+          "total": 28,
+          "sample_size": 50
+        },
+        "overallRoundWinrate": {
+          "all": {
+            "avg": 50.877201080322266,
+            "percentile": 68.59756469726562,
+            "total": 551
+          },
+          "terrorists": {
+            "avg": 46.296295166015625,
+            "percentile": 49.39024353027344,
+            "total": 250
+          },
+          "counterTerrorists": {
+            "avg": 55.432777404785156,
+            "percentile": 76.5243911743164,
+            "total": 301
+          }
+        },
+        "pistolWinrate": {
+          "all": {
+            "avg": 59.000003814697266,
+            "percentile": 86.28048706054688,
+            "total": 59
+          },
+          "terrorists": {
+            "avg": 55.99999237060547,
+            "percentile": 76.21951293945312,
+            "total": 28
+          },
+          "counterTerrorists": {
+            "avg": 61.999996185302734,
+            "percentile": 84.45121765136719,
+            "total": 31
+          }
+        },
+        "pistolWinConversion": {
+          "all": {
+            "avg": 49.15254592895508,
+            "percentile": 10.670731544494629,
+            "total": 29
+          },
+          "terrorists": {
+            "avg": 53.57142639160156,
+            "percentile": 39.024391174316406,
+            "total": 15
+          },
+          "counterTerrorists": {
+            "avg": 45.161293029785156,
+            "percentile": 23.780487060546875,
+            "total": 14
+          }
+        },
+        "pistolLossConversion": {
+          "all": {
+            "avg": 26.829269409179688,
+            "percentile": 87.80487823486328,
+            "total": 11
+          },
+          "terrorists": {
+            "avg": 18.18181800842285,
+            "percentile": 74.69512176513672,
+            "total": 4
+          },
+          "counterTerrorists": {
+            "avg": 26.3157901763916,
+            "percentile": 80.48780822753906,
+            "total": 5
+          }
+        },
+        "kills": {
+          "all": {
+            "avg": 3.253000497817993,
+            "percentile": 43.29268264770508,
+            "total": 3523
+          },
+          "terrorists": {
+            "avg": 2.8611111640930176,
+            "percentile": 27.439023971557617,
+            "total": 1545
+          },
+          "counterTerrorists": {
+            "avg": 3.6427254676818848,
+            "percentile": 72.56097412109375,
+            "total": 1978
+          }
+        },
+        "deaths": {
+          "all": {
+            "avg": 3.337026834487915,
+            "percentile": 35.975608825683594,
+            "total": 3614
+          },
+          "terrorists": {
+            "avg": 3.6666667461395264,
+            "percentile": 51.524391174316406,
+            "total": 1980
+          },
+          "counterTerrorists": {
+            "avg": 3.0092082023620605,
+            "percentile": 29.268293380737305,
+            "total": 1634
+          }
+        },
+        "killsOverDeaths": {
+          "all": {
+            "avg": 0.9748200178146362,
+            "percentile": 43.29268264770508,
+            "total": 0.9748200178146362
+          },
+          "terrorists": {
+            "avg": 0.7803030014038086,
+            "percentile": 27.439023971557617,
+            "total": 0.7803030014038086
+          },
+          "counterTerrorists": {
+            "avg": 1.2105262279510498,
+            "percentile": 72.56097412109375,
+            "total": 1.2105262279510498
+          }
+        },
+        "assists": {
+          "all": {
+            "avg": 1.1726685762405396,
+            "percentile": 36.89024353027344,
+            "total": 1270
+          },
+          "terrorists": {
+            "avg": 1.0999999046325684,
+            "percentile": 31.707317352294922,
+            "total": 594
+          },
+          "counterTerrorists": {
+            "avg": 1.2449357509613037,
+            "percentile": 47.25609588623047,
+            "total": 676
+          }
+        },
+        "flashAssists": {
+          "all": {
+            "avg": 0.1375807821750641,
+            "percentile": 36.280487060546875,
+            "total": 149
+          }
+        },
+        "damage": {
+          "all": {
+            "avg": 360.18927001953125,
+            "percentile": 44.20731735229492,
+            "total": 390085
+          }
+        },
+        "headshotRate": {
+          "all": {
+            "avg": 46.09709548950195,
+            "percentile": 11.280488014221191,
+            "total": 0.460970938205719
+          }
+        },
+        "openingKills": {
+          "all": {
+            "avg": 0.4866112768650055,
+            "percentile": 43.59756088256836,
+            "total": 527
+          }
+        },
+        "openingConversion": {
+          "all": {
+            "avg": 75.71155548095703,
+            "percentile": 88.10975646972656,
+            "total": 399
+          }
+        },
+        "openingDeathConversion": {
+          "all": {
+            "avg": 27.158275604248047,
+            "percentile": 52.13414764404297,
+            "total": 151
+          }
+        },
+        "awpKills": {
+          "all": {
+            "avg": 0.33240994811058044,
+            "percentile": 47.86585235595703,
+            "total": 360
+          }
+        },
+        "eliminationWinrate": {
+          "all": {
+            "avg": 32.225303649902344,
+            "percentile": 58.23170852661133,
+            "total": 349
+          }
+        },
+        "objectiveWinrate": {
+          "all": {
+            "avg": 18.651891708374023,
+            "percentile": 72.86585235595703,
+            "total": 202
+          }
+        },
+        "utilityDamage": {
+          "all": {
+            "avg": 22.813480377197266,
+            "percentile": 57.92683029174805,
+            "total": 24707
+          }
+        },
+        "firstToWin3Rounds": {
+          "all": {
+            "avg": 54.00000762939453,
+            "percentile": 71.95121765136719,
+            "total": 27
+          }
+        },
+        "firstToWin6Rounds": {
+          "all": {
+            "avg": 52.0000114440918,
+            "percentile": 64.93902587890625,
+            "total": 26
+          }
+        },
+        "firstToWin9Rounds": {
+          "all": {
+            "avg": 52,
+            "percentile": 65.8536605834961,
+            "total": 26
+          }
+        },
+        "firstToWin12Rounds": {
+          "all": {
+            "avg": 48.000003814697266,
+            "percentile": 53.65853500366211,
+            "total": 24
+          }
+        },
+        "roundsLost": {
+          "all": {
+            "avg": 10.640000343322754,
+            "percentile": 30.792682647705078,
+            "total": 532
+          }
+        }
+      },
+      "map_pool": [
+        {
+          "name": "Inferno",
+          "win_rate": {
+            "avg": 53.84615707397461,
+            "percentile": 65.29680633544922,
+            "total": 7
+          },
+          "pick_rate": {
+            "avg": 33.333335876464844,
+            "percentile": 83.2460708618164,
+            "total": 2
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 46.596858978271484,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 50.7042236328125,
+              "percentile": 62.55707931518555,
+              "total": 144
+            },
+            "terrorists": {
+              "avg": 45.75163269042969,
+              "percentile": 44.292236328125,
+              "total": 70
+            },
+            "counterTerrorists": {
+              "avg": 56.488555908203125,
+              "percentile": 73.05936431884766,
+              "total": 74
+            }
+          }
+        },
+        {
+          "name": "Mirage",
+          "win_rate": {
+            "avg": 41.66666793823242,
+            "percentile": 45.660377502441406,
+            "total": 5
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 60.20942306518555,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 21.428571701049805,
+            "percentile": 87.43455505371094,
+            "total": 3
+          },
+          "rounds": {
+            "all": {
+              "avg": 45.38461685180664,
+              "percentile": 35.09434127807617,
+              "total": 118
+            },
+            "terrorists": {
+              "avg": 37.20930099487305,
+              "percentile": 30.566038131713867,
+              "total": 48
+            },
+            "counterTerrorists": {
+              "avg": 53.43511199951172,
+              "percentile": 50.566036224365234,
+              "total": 70
+            }
+          }
+        },
+        {
+          "name": "Nuke",
+          "win_rate": {
+            "avg": 83.33332824707031,
+            "percentile": 89.04109954833984,
+            "total": 10
+          },
+          "pick_rate": {
+            "avg": 50,
+            "percentile": 90.57591247558594,
+            "total": 3
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 46.596858978271484,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 60.33057403564453,
+              "percentile": 94.06392669677734,
+              "total": 146
+            },
+            "terrorists": {
+              "avg": 61.5384521484375,
+              "percentile": 95.43379211425781,
+              "total": 80
+            },
+            "counterTerrorists": {
+              "avg": 58.928565979003906,
+              "percentile": 61.643836975097656,
+              "total": 66
+            }
+          }
+        },
+        {
+          "name": "Dust2",
+          "win_rate": {
+            "avg": 25,
+            "percentile": 31.481481552124023,
+            "total": 1
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 62.30366516113281,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 14.285715103149414,
+            "percentile": 75.39266967773438,
+            "total": 2
+          },
+          "rounds": {
+            "all": {
+              "avg": 38.82352828979492,
+              "percentile": 17.77777862548828,
+              "total": 33
+            },
+            "terrorists": {
+              "avg": 31.428571701049805,
+              "percentile": 13.703703880310059,
+              "total": 11
+            },
+            "counterTerrorists": {
+              "avg": 44.000003814697266,
+              "percentile": 31.481481552124023,
+              "total": 22
+            }
+          }
+        },
+        {
+          "name": "Cache",
+          "win_rate": {
+            "avg": 57.142860412597656,
+            "percentile": 68.14159393310547,
+            "total": 4
+          },
+          "pick_rate": {
+            "avg": 16.666667938232422,
+            "percentile": 73.82199096679688,
+            "total": 1
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 46.073299407958984,
+            "total": 0
+          },
+          "rounds": {
+            "all": {
+              "avg": 53.125,
+              "percentile": 69.91150665283203,
+              "total": 85
+            },
+            "terrorists": {
+              "avg": 44.117645263671875,
+              "percentile": 46.46017837524414,
+              "total": 30
+            },
+            "counterTerrorists": {
+              "avg": 59.78260040283203,
+              "percentile": 79.20353698730469,
+              "total": 55
+            }
+          }
+        },
+        {
+          "name": "Anubis",
+          "win_rate": {
+            "avg": 50,
+            "percentile": 60.849056243896484,
+            "total": 1
+          },
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 79.5811538696289,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 7.142857551574707,
+            "percentile": 42.40837860107422,
+            "total": 1
+          },
+          "rounds": {
+            "all": {
+              "avg": 48.07692337036133,
+              "percentile": 48.11320877075195,
+              "total": 25
+            },
+            "terrorists": {
+              "avg": 44,
+              "percentile": 37.26415252685547,
+              "total": 11
+            },
+            "counterTerrorists": {
+              "avg": 51.85185623168945,
+              "percentile": 59.90565872192383,
+              "total": 14
+            }
+          }
+        },
+        {
+          "name": "Cobblestone",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Overpass",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Train",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Vertigo",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 0,
+            "percentile": 100,
+            "total": 0
+          }
+        },
+        {
+          "name": "Ancient",
+          "pick_rate": {
+            "avg": 0,
+            "percentile": 65.44502258300781,
+            "total": 0
+          },
+          "ban_rate": {
+            "avg": 42.857147216796875,
+            "percentile": 95.81151580810547,
+            "total": 6
+          }
+        }
+      ],
+      "favorites": [
+        {
+          "id": null,
+          "name": "Dual Berettas",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 3,
+              "percentile": 100,
+              "total": 3
+            },
+            "headshotsWithWeapon": {
+              "avg": 2,
+              "percentile": 100,
+              "total": 2
+            }
+          }
+        },
+        {
+          "id": null,
+          "name": "AK-47",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 1.6766917705535889,
+              "percentile": 44.21052551269531,
+              "total": 223
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.9248120188713074,
+              "percentile": 25.263158798217773,
+              "total": 123
+            }
+          }
+        },
+        {
+          "id": null,
+          "name": "M4A4",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 1.6458332538604736,
+              "percentile": 65.44502258300781,
+              "total": 237
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.5208333134651184,
+              "percentile": 11.518324851989746,
+              "total": 75
+            }
+          }
+        },
+        {
+          "id": null,
+          "name": "Galil AR",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 1.2222222089767456,
+              "percentile": 61.01694869995117,
+              "total": 11
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.4444444477558136,
+              "percentile": 27.11864471435547,
+              "total": 4
+            }
+          }
+        },
+        {
+          "id": null,
+          "name": "Glock-18",
+          "icon": "",
+          "metrics": {
+            "killsWithWeapon": {
+              "avg": 0.6000000238418579,
+              "percentile": 6.818181991577148,
+              "total": 3
+            },
+            "headshotsWithWeapon": {
+              "avg": 0.6000000238418579,
+              "percentile": 20.454545974731445,
+              "total": 3
+            }
+          }
+        }
+      ],
+      "players": [
+        {
+          "id": "b2Q6cGxheWVyOjMwMA==",
+          "nickname": "fr3nd",
+          "real_name": "Sebastian Kuśmierz",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/fr3nd_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.6514807343482971,
+              "percentile": 50.16447448730469,
+              "total": 572
+            },
+            "deaths": {
+              "avg": 0.6104783415794373,
+              "percentile": 16.611841201782227,
+              "total": 536
+            },
+            "assists": {
+              "avg": 0.1867881566286087,
+              "percentile": 15.296052932739258,
+              "total": 164
+            },
+            "killsOverDeaths": {
+              "avg": 1.067164421081543,
+              "percentile": 50.16447448730469,
+              "total": 1.067164421081543
+            },
+            "damage": {
+              "avg": 67.71753692626953,
+              "percentile": 32.07236862182617,
+              "total": 59456
+            },
+            "headshotRate": {
+              "avg": 31.818172454833984,
+              "percentile": 6.5789475440979,
+              "total": 0.31818172335624695
+            },
+            "flashAssists": {
+              "avg": 0.0364464707672596,
+              "percentile": 65.625,
+              "total": 32
+            },
+            "openingKills": {
+              "avg": 0.10706149786710739,
+              "percentile": 64.30921173095703,
+              "total": 94
+            },
+            "awpKills": {
+              "avg": 0.3314349949359894,
+              "percentile": 91.11842346191406,
+              "total": 291
+            },
+            "utilityDamage": {
+              "avg": 3.299544334411621,
+              "percentile": 25.164474487304688,
+              "total": 2897
+            },
+            "enemiesFlashed": {
+              "avg": 0.43621861934661865,
+              "percentile": 63.65131759643555,
+              "total": 383
+            },
+            "multiKillRounds": {
+              "avg": 0.14464692771434784,
+              "percentile": 37.5,
+              "total": 127
+            },
+            "clutchRounds": {
+              "avg": 0.0022779039572924376,
+              "percentile": 47.532894134521484,
+              "total": 2
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 2.4726650714874268,
+              "percentile": 17.598684310913086,
+              "total": 2171
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "AWP",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4201183617115021,
+                  "percentile": 48.249027252197266,
+                  "total": 71
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.041420117020606995,
+                  "percentile": 54.474708557128906,
+                  "total": 7
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.38235294818878174,
+                  "percentile": 33.33333206176758,
+                  "total": 13
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.14705882966518402,
+                  "percentile": 30.39548110961914,
+                  "total": 5
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.16923077404499054,
+                  "percentile": 2.5210084915161133,
+                  "total": 11
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.07692307978868484,
+                  "percentile": 2.1008403301239014,
+                  "total": 5
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "USP-S",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.30000001192092896,
+                  "percentile": 45.5284538269043,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.30000001192092896,
+                  "percentile": 58.53658676147461,
+                  "total": 3
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Glock-18",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.5,
+                  "percentile": 82.09459686279297,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 54.72972869873047,
+                  "total": 1
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "SSG 08",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.2222222238779068,
+                  "percentile": 24.13793182373047,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.1111111119389534,
+                  "percentile": 41.379310607910156,
+                  "total": 1
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjM5OA==",
+          "nickname": "cxzi",
+          "real_name": "Danny Strzelczyk",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/cxzi_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.6325023770332336,
+              "percentile": 41.77631759643555,
+              "total": 685
+            },
+            "deaths": {
+              "avg": 0.7146813273429871,
+              "percentile": 73.84868621826172,
+              "total": 774
+            },
+            "assists": {
+              "avg": 0.2419205754995346,
+              "percentile": 47.86184310913086,
+              "total": 262
+            },
+            "killsOverDeaths": {
+              "avg": 0.8850131630897522,
+              "percentile": 41.77631759643555,
+              "total": 0.8850131630897522
+            },
+            "damage": {
+              "avg": 69.63529205322266,
+              "percentile": 38.48684310913086,
+              "total": 75415
+            },
+            "headshotRate": {
+              "avg": 46.7153205871582,
+              "percentile": 30.427631378173828,
+              "total": 0.4671531915664673
+            },
+            "flashAssists": {
+              "avg": 0.024930743500590324,
+              "percentile": 45.88815689086914,
+              "total": 27
+            },
+            "openingKills": {
+              "avg": 0.09325946867465973,
+              "percentile": 47.86184310913086,
+              "total": 101
+            },
+            "awpKills": {
+              "avg": 0.0027700827922672033,
+              "percentile": 45.06578826904297,
+              "total": 3
+            },
+            "utilityDamage": {
+              "avg": 3.907663345336914,
+              "percentile": 36.34868240356445,
+              "total": 4232
+            },
+            "enemiesFlashed": {
+              "avg": 0.3527239263057709,
+              "percentile": 47.203948974609375,
+              "total": 382
+            },
+            "multiKillRounds": {
+              "avg": 0.150507852435112,
+              "percentile": 45.72368240356445,
+              "total": 163
+            },
+            "clutchRounds": {
+              "avg": 0.004616805352270603,
+              "percentile": 65.29605102539062,
+              "total": 5
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 3.0784852504730225,
+              "percentile": 69.7368392944336,
+              "total": 3334
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.30967745184898376,
+                  "percentile": 19.64285659790039,
+                  "total": 48
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.13548389077186584,
+                  "percentile": 9.138655662536621,
+                  "total": 21
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4660193920135498,
+                  "percentile": 66.21469116210938,
+                  "total": 48
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.12621359527111053,
+                  "percentile": 22.2598876953125,
+                  "total": 13
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.42105263471603394,
+                  "percentile": 85.01026916503906,
+                  "total": 8
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.10526315867900848,
+                  "percentile": 40.65708541870117,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "MP9",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.6000000238418579,
+                  "percentile": 90.65420532226562,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.20000000298023224,
+                  "percentile": 59.81308364868164,
+                  "total": 1
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Glock-18",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.20000000298023224,
+                  "percentile": 24.324323654174805,
+                  "total": 1
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.20000000298023224,
+                  "percentile": 40.202701568603516,
+                  "total": 1
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjc4Ng==",
+          "nickname": "HexT",
+          "real_name": "Jadan Postma",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/hext_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.6565098166465759,
+              "percentile": 51.97368240356445,
+              "total": 711
+            },
+            "deaths": {
+              "avg": 0.6315791606903076,
+              "percentile": 23.519737243652344,
+              "total": 684
+            },
+            "assists": {
+              "avg": 0.20590950548648834,
+              "percentile": 23.355262756347656,
+              "total": 223
+            },
+            "killsOverDeaths": {
+              "avg": 1.039473533630371,
+              "percentile": 51.97368240356445,
+              "total": 1.039473533630371
+            },
+            "damage": {
+              "avg": 71.44322967529297,
+              "percentile": 45.88815689086914,
+              "total": 77373
+            },
+            "headshotRate": {
+              "avg": 48.101253509521484,
+              "percentile": 40.625,
+              "total": 0.4810125529766083
+            },
+            "flashAssists": {
+              "avg": 0.02770083025097847,
+              "percentile": 53.6184196472168,
+              "total": 30
+            },
+            "openingKills": {
+              "avg": 0.06555863469839096,
+              "percentile": 16.9407901763916,
+              "total": 71
+            },
+            "awpKills": {
+              "avg": 0.001846721745096147,
+              "percentile": 41.61184310913086,
+              "total": 2
+            },
+            "utilityDamage": {
+              "avg": 2.8744232654571533,
+              "percentile": 16.611841201782227,
+              "total": 3113
+            },
+            "enemiesFlashed": {
+              "avg": 0.30747920274734497,
+              "percentile": 34.375,
+              "total": 333
+            },
+            "multiKillRounds": {
+              "avg": 0.15420128405094147,
+              "percentile": 49.01315689086914,
+              "total": 167
+            },
+            "clutchRounds": {
+              "avg": 0.00738688837736845,
+              "percentile": 84.53947448730469,
+              "total": 8
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 3.0507848262786865,
+              "percentile": 66.77631378173828,
+              "total": 3304
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.44025152921676636,
+                  "percentile": 66.4916000366211,
+                  "total": 70
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.21383647620677948,
+                  "percentile": 38.130252838134766,
+                  "total": 34
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.38532111048698425,
+                  "percentile": 33.785308837890625,
+                  "total": 42
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.12844036519527435,
+                  "percentile": 22.93785285949707,
+                  "total": 14
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Glock-18",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.2857142984867096,
+                  "percentile": 45.945945739746094,
+                  "total": 4
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.2142857164144516,
+                  "percentile": 41.216217041015625,
+                  "total": 3
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.3333333432674408,
+                  "percentile": 69.4045181274414,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.2222222238779068,
+                  "percentile": 77.0020523071289,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Dual Berettas",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 3,
+                  "percentile": 100,
+                  "total": 3
+                },
+                "headshotsWithWeapon": {
+                  "avg": 2,
+                  "percentile": 100,
+                  "total": 2
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjE2MDE=",
+          "nickname": "reck",
+          "real_name": "Ethan Serrano",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/reck_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.7465753555297852,
+              "percentile": 84.21052551269531,
+              "total": 218
+            },
+            "deaths": {
+              "avg": 0.5856164693832397,
+              "percentile": 9.868420600891113,
+              "total": 171
+            },
+            "assists": {
+              "avg": 0.284246563911438,
+              "percentile": 74.67105102539062,
+              "total": 83
+            },
+            "killsOverDeaths": {
+              "avg": 1.2748537063598633,
+              "percentile": 84.21052551269531,
+              "total": 1.2748537063598633
+            },
+            "damage": {
+              "avg": 73.85617065429688,
+              "percentile": 58.22368240356445,
+              "total": 21566
+            },
+            "headshotRate": {
+              "avg": 50.458709716796875,
+              "percentile": 67.43421173095703,
+              "total": 0.5045871138572693
+            },
+            "flashAssists": {
+              "avg": 0.0445205457508564,
+              "percentile": 74.0131607055664,
+              "total": 13
+            },
+            "openingKills": {
+              "avg": 0.08219178020954132,
+              "percentile": 35.032894134521484,
+              "total": 24
+            },
+            "awpKills": {
+              "avg": 0,
+              "percentile": 36.18421173095703,
+              "total": 0
+            },
+            "utilityDamage": {
+              "avg": 5.530821800231934,
+              "percentile": 70.55921173095703,
+              "total": 1615
+            },
+            "enemiesFlashed": {
+              "avg": 0.4897260367870331,
+              "percentile": 74.0131607055664,
+              "total": 143
+            },
+            "multiKillRounds": {
+              "avg": 0.18493151664733887,
+              "percentile": 79.60526275634766,
+              "total": 54
+            },
+            "clutchRounds": {
+              "avg": 0.003424657043069601,
+              "percentile": 56.08552551269531,
+              "total": 1
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 3.7602736949920654,
+              "percentile": 95.39473724365234,
+              "total": 1098
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4178082346916199,
+                  "percentile": 58.50840377807617,
+                  "total": 61
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.19863012433052063,
+                  "percentile": 30.882352828979492,
+                  "total": 29
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4029850661754608,
+                  "percentile": 40.903953552246094,
+                  "total": 27
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.13432835042476654,
+                  "percentile": 24.971752166748047,
+                  "total": 9
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Glock-18",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.3333333432674408,
+                  "percentile": 61.82432556152344,
+                  "total": 8
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 54.72972869873047,
+                  "total": 6
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Dual Berettas",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4285714328289032,
+                  "percentile": 80.43478393554688,
+                  "total": 6
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.4285714328289032,
+                  "percentile": 84.78260803222656,
+                  "total": 6
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.2777777910232544,
+                  "percentile": 46.40657043457031,
+                  "total": 5
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.1111111119389534,
+                  "percentile": 44.763858795166016,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "MP9",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4000000059604645,
+                  "percentile": 70.09346008300781,
+                  "total": 4
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0,
+                  "percentile": 11.214953422546387,
+                  "total": 0
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "USP-S",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 2,
+                  "percentile": 98.78048706054688,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 2,
+                  "percentile": 99.59349822998047,
+                  "total": 2
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Five-SeveN",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.0833333358168602,
+                  "percentile": 7.142857074737549,
+                  "total": 1
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.0833333358168602,
+                  "percentile": 36.3636360168457,
+                  "total": 1
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        },
+        {
+          "id": "b2Q6cGxheWVyOjI0NjU=",
+          "nickname": "nEMANHA",
+          "real_name": "Nemanja Đukić",
+          "shortcut": "",
+          "icon": "https://cdn.oddin.gg/assets/players/icons/nemanha_csgo.png",
+          "age": null,
+          "role": "",
+          "metrics": {
+            "kills": {
+              "avg": 0.7568493485450745,
+              "percentile": 86.6776351928711,
+              "total": 221
+            },
+            "deaths": {
+              "avg": 0.6780821084976196,
+              "percentile": 50.4934196472168,
+              "total": 198
+            },
+            "assists": {
+              "avg": 0.2602739632129669,
+              "percentile": 61.842105865478516,
+              "total": 76
+            },
+            "killsOverDeaths": {
+              "avg": 1.116161823272705,
+              "percentile": 86.6776351928711,
+              "total": 1.116161823272705
+            },
+            "damage": {
+              "avg": 84.49658203125,
+              "percentile": 91.6118392944336,
+              "total": 24673
+            },
+            "headshotRate": {
+              "avg": 51.58370590209961,
+              "percentile": 74.50657653808594,
+              "total": 0.5158370733261108
+            },
+            "flashAssists": {
+              "avg": 0.010273972526192665,
+              "percentile": 18.421052932739258,
+              "total": 3
+            },
+            "openingKills": {
+              "avg": 0.1335616409778595,
+              "percentile": 87.99342346191406,
+              "total": 39
+            },
+            "awpKills": {
+              "avg": 0.0034246579743921757,
+              "percentile": 46.875,
+              "total": 1
+            },
+            "utilityDamage": {
+              "avg": 7.688355445861816,
+              "percentile": 90.78947448730469,
+              "total": 2245
+            },
+            "enemiesFlashed": {
+              "avg": 0.47945207357406616,
+              "percentile": 72.36842346191406,
+              "total": 140
+            },
+            "multiKillRounds": {
+              "avg": 0.19863013923168182,
+              "percentile": 86.6776351928711,
+              "total": 58
+            },
+            "clutchRounds": {
+              "avg": 0,
+              "percentile": 40.625,
+              "total": 0
+            },
+            "lurkKills": {
+              "avg": 0,
+              "percentile": 100,
+              "total": 0
+            },
+            "grenadesUsed": {
+              "avg": 3.4246575832366943,
+              "percentile": 87.82894897460938,
+              "total": 1000
+            }
+          },
+          "favorites": [
+            {
+              "id": null,
+              "name": "M4A4",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.5847457647323608,
+                  "percentile": 92.09039306640625,
+                  "total": 69
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.20338982343673706,
+                  "percentile": 60.45197677612305,
+                  "total": 24
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "AK-47",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.5360000133514404,
+                  "percentile": 91.17646789550781,
+                  "total": 67
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.35199999809265137,
+                  "percentile": 91.4916000366211,
+                  "total": 44
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "FAMAS",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.4285714328289032,
+                  "percentile": 89.84771728515625,
+                  "total": 6
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.4285714328289032,
+                  "percentile": 98.98477172851562,
+                  "total": 6
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Galil AR",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.2857142984867096,
+                  "percentile": 49.07597351074219,
+                  "total": 4
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.0714285746216774,
+                  "percentile": 22.99794578552246,
+                  "total": 1
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Desert Eagle",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.2857142984867096,
+                  "percentile": 75.5952377319336,
+                  "total": 2
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.1428571492433548,
+                  "percentile": 50.595237731933594,
+                  "total": 1
+                }
+              }
+            },
+            {
+              "id": null,
+              "name": "Glock-18",
+              "icon": "",
+              "metrics": {
+                "killsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 40.5405387878418,
+                  "total": 1
+                },
+                "headshotsWithWeapon": {
+                  "avg": 0.25,
+                  "percentile": 54.72972869873047,
+                  "total": 1
+                }
+              }
+            }
+          ],
+          "has_recent_stats": true
+        }
+      ],
+      "recent_matches": [
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM3NzM5MQ==",
+          "planned_start": "2026-11-01T20:29:00Z",
+          "start": "2026-11-01T20:29:24Z",
+          "end": "2026-11-01T22:38:20Z",
+          "tournament": "FiReSPORTS Last Chance 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI0OQ==",
+            "name": "100 Thieves"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "home_score": 2,
+          "away_score": 0,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI0OQ==",
+            "name": "100 Thieves"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjUwODc0",
+              "order": 1,
+              "startTimestamp": "2026-11-01T20:29:24Z",
+              "endTimestamp": "2026-11-01T21:48:23Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjUwODc1",
+              "order": 2,
+              "startTimestamp": "2026-11-01T22:05:41Z",
+              "endTimestamp": "2026-11-01T22:38:03Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjUwODc2",
+              "order": 3,
+              "startTimestamp": null,
+              "endTimestamp": null,
+              "isClosed": false
+            }
+          ],
+          "score": "2:0",
+          "team_result": "L"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM3NzM4OQ==",
+          "planned_start": "2026-11-01T16:36:00Z",
+          "start": "2026-11-01T16:36:45Z",
+          "end": "2026-11-01T17:57:27Z",
+          "tournament": "FiReSPORTS Last Chance 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI3MzY4",
+            "name": "BARCA"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "home_score": 0,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjQ4NDUx",
+              "order": 2,
+              "startTimestamp": "2026-11-01T17:32:37Z",
+              "endTimestamp": "2026-11-01T17:57:08Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ4NDUw",
+              "order": 1,
+              "startTimestamp": "2026-11-01T16:36:45Z",
+              "endTimestamp": "2026-11-01T17:19:51Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ4NDUy",
+              "order": 3,
+              "startTimestamp": null,
+              "endTimestamp": null,
+              "isClosed": false
+            }
+          ],
+          "score": "0:2",
+          "team_result": "W"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM3NzM4Mg==",
+          "planned_start": "2026-10-31T22:20:00Z",
+          "start": "2026-10-31T22:21:40Z",
+          "end": "2026-11-01T01:21:35Z",
+          "tournament": "FiReSPORTS Last Chance 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjEyNA==",
+            "name": "NRG Esports"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjQ3NTE3",
+              "order": 3,
+              "startTimestamp": "2026-11-01T00:18:29Z",
+              "endTimestamp": "2026-11-01T01:21:16Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ3NTE1",
+              "order": 1,
+              "startTimestamp": "2026-10-31T22:21:40Z",
+              "endTimestamp": "2026-10-31T23:06:26Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ3NTE2",
+              "order": 2,
+              "startTimestamp": "2026-10-31T23:20:42Z",
+              "endTimestamp": "2026-11-01T00:02:31Z",
+              "isClosed": true
+            }
+          ],
+          "score": "1:2",
+          "team_result": "W"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM3NzM4NQ==",
+          "planned_start": "2026-10-31T16:37:00Z",
+          "start": "2026-10-31T16:39:32Z",
+          "end": "2026-10-31T18:02:48Z",
+          "tournament": "FiReSPORTS Last Chance 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjIxNzQw",
+            "name": "Hacha eSports"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "home_score": 0,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjQ1MDgw",
+              "order": 2,
+              "startTimestamp": "2026-10-31T17:16:33Z",
+              "endTimestamp": "2026-10-31T18:02:31Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ1MDgx",
+              "order": 3,
+              "startTimestamp": null,
+              "endTimestamp": null,
+              "isClosed": false
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ1MDc5",
+              "order": 1,
+              "startTimestamp": "2026-10-31T16:39:32Z",
+              "endTimestamp": "2026-10-31T17:10:32Z",
+              "isClosed": true
+            }
+          ],
+          "score": "0:2",
+          "team_result": "W"
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM2NTI4MQ==",
+          "planned_start": "2026-10-30T21:26:00Z",
+          "start": "2026-10-30T21:26:03Z",
+          "end": "2026-10-31T00:05:48Z",
+          "tournament": "FiReSPORTS Last Chance 2026",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg5NDk=",
+            "name": "BESTIA"
+          },
+          "home_score": 1,
+          "away_score": 2,
+          "winner": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg5NDk=",
+            "name": "BESTIA"
+          },
+          "closed": true,
+          "best_of": "BO3",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjQ0MDAz",
+              "order": 3,
+              "startTimestamp": "2026-10-30T23:31:03Z",
+              "endTimestamp": "2026-10-31T00:05:28Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ0MDAx",
+              "order": 1,
+              "startTimestamp": "2026-10-30T21:26:03Z",
+              "endTimestamp": "2026-10-30T22:12:47Z",
+              "isClosed": true
+            },
+            {
+              "id": "bWFwL29kOm1hcDozNjQ0MDAy",
+              "order": 2,
+              "startTimestamp": "2026-10-30T22:29:13Z",
+              "endTimestamp": "2026-10-30T23:08:20Z",
+              "isClosed": true
+            }
+          ],
+          "score": "1:2",
+          "team_result": "L"
+        }
+      ]
+    },
+    "head_to_head": {
+      "home_wins": 0,
+      "away_wins": 0,
+      "matches": []
+    },
+    "tournament": {
+      "metadata": {
+        "tournament": {
+          "id": "dG91cm5hbWVudC9vZDp0b3VybmFtZW50OjE1NDkx",
+          "name": "2026年新加坡PGL Major",
+          "startTimestamp": "2026-11-24T00:00:00Z",
+          "endTimestamp": "2026-12-13T00:00:00Z"
+        },
+        "organizer": "PGL",
+        "location": "Kallang",
+        "prize_pool": "1 250 000 USD",
+        "offline": true,
+        "qualification": false
+      },
+      "teams": [
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjU=",
+            "name": "Team Liquid",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/liquid.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjY2",
+              "nickname": "EliGE",
+              "real_name": "Jonathan Jablonowski",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/elige_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEwMQ==",
+              "nickname": "NAF",
+              "real_name": "Keith Markovic",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/naf_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjUxNw==",
+              "nickname": "JT",
+              "real_name": "Johnny Theodosiou",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jt_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjkzOQ==",
+              "nickname": "malbsMd",
+              "real_name": "Mario Samayoa",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/malbsmd_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3Mjcx",
+              "nickname": "Jorko",
+              "real_name": "Georgi Mitev",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg=",
+            "name": "Ninjas in Pyjamas",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/nip_1674749277550.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjkw",
+              "nickname": "stavn",
+              "real_name": "Martin Lund",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/stavn_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEwMw==",
+              "nickname": "sjuush",
+              "real_name": "Rasmus Beck",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/sjuush_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIyMg==",
+              "nickname": "Krimbo",
+              "real_name": "Karim Moussa",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/krimbo_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEyMjA=",
+              "nickname": "adamb",
+              "real_name": "Adam Ångström",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/adamb_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0ODM4",
+              "nickname": "xKacpersky",
+              "real_name": "Kacper Grabara",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/xkacpersky_csgo.png",
+              "age": 18
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/faze_1769693813134.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjQz",
+              "nickname": "Twistzz",
+              "real_name": "Russel Van Dulken",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/twistzz_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg3",
+              "nickname": "frozen",
+              "real_name": "David Čerňanský",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/frozen_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjI0MzY=",
+              "nickname": "Neityu",
+              "real_name": "Ryan Aubry",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/neityu_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEzNzcw",
+              "nickname": "JBOEN",
+              "real_name": "Jason Boe Nielsen",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0MjY0",
+              "nickname": "jcobbb",
+              "real_name": "Jakub Pietruszewski",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jcobbb_csgo.png",
+              "age": 21
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE1",
+            "name": "G2 Esports",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/g2_1726602099109.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjYx",
+              "nickname": "huNter-",
+              "real_name": "Nemanja Kovač",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/hunter__csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEzMTk=",
+              "nickname": "NertZ",
+              "real_name": "Guy Iluz",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nertz_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE2NzA=",
+              "nickname": "HeavyGod",
+              "real_name": "Nikita Martynenko",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/heavygod_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3MzA=",
+              "nickname": "MATYS",
+              "real_name": "Matúš Šimko",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/matys_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwNDU=",
+              "nickname": "r1nkle",
+              "real_name": "Artem Moroz",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/r1nkle_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI1",
+            "name": "Natus Vincere",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/navi_1726228351641.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjU=",
+              "nickname": "b1t",
+              "real_name": "Valeriy Vakhovskiy",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/b1t_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0OQ==",
+              "nickname": "iM",
+              "real_name": "Ivan Mihai",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/im_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjI1OA==",
+              "nickname": "w0nderful",
+              "real_name": "Igor Zhdanov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/w0nderful_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjU3Mg==",
+              "nickname": "Aleksib",
+              "real_name": "Aleksi Virolainen",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/aleksib_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY4Njg=",
+              "nickname": "makazze",
+              "real_name": "Drin Shaqiri",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/makazze_csgo.png",
+              "age": 18
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE5MQ==",
+            "name": "Astralis",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/astralis.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjExMg==",
+              "nickname": "jabbi",
+              "real_name": "Jakob Nygaard",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jabbi_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIzMw==",
+              "nickname": "phzy",
+              "real_name": "Love Smidebrant",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/phzy_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjM1MA==",
+              "nickname": "siuhy",
+              "real_name": "Kamil Szkaradek",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/siuhy_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwMDA=",
+              "nickname": "ryu",
+              "real_name": "Gytis Glušauskas",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/ryu_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIxMzM=",
+              "nickname": "Staehr",
+              "real_name": "Victor Staehr",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/staehr_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE5Mw==",
+            "name": "Team Vitality",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/team_vitality_1747645796139.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjcz",
+              "nickname": "apEX",
+              "real_name": "Dan Madesclaire",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/apex_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg0",
+              "nickname": "ropz",
+              "real_name": "Robin Kool",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/ropz_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEwOA==",
+              "nickname": "ZywOo",
+              "real_name": "Mathieu Herbaut",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/zywoo_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjU0Nw==",
+              "nickname": "flameZ",
+              "real_name": "Shahar Shushan",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/flamez_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0NTI=",
+              "nickname": "mezii",
+              "real_name": "William Merriman",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/mezii_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE5NQ==",
+            "name": "FURIA Esports",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/furia-esports.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjUy",
+              "nickname": "YEKINDAR",
+              "real_name": "Mareks Gaļinskis",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/yekindar_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjcx",
+              "nickname": "KSCERATO",
+              "real_name": "Kaike Cerato",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/kscerato_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg4",
+              "nickname": "FalleN",
+              "real_name": "Gabriel Toledo",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/fallen_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjky",
+              "nickname": "yuurih",
+              "real_name": "Yuri Santos",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/yuurih_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3OTQx",
+              "nickname": "molodoy",
+              "real_name": "Danil Golubenko",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/molodoy_csgo.png",
+              "age": 20
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE5Ng==",
+            "name": "MIBR",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/mibr.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjEyMA==",
+              "nickname": "LNZ",
+              "real_name": "Linus Holtäng",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/lnz_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjk1Mg==",
+              "nickname": "nqz",
+              "real_name": "Lucas Soares",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nqz_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3MDQ=",
+              "nickname": "insani",
+              "real_name": "Felipe Kuratani",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/insani_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwNjA=",
+              "nickname": "venomzera",
+              "real_name": "Carlos Eduardo",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/venomzera_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY2ODk=",
+              "nickname": "tomaszin",
+              "real_name": "Tomas Corna",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/tomaszin_csgo.png",
+              "age": 21
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjIyMA==",
+            "name": "Heroic",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/heroic_1700831714356.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjI0MA==",
+              "nickname": "nilo",
+              "real_name": "Linus Bergman",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nilo_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjcwMw==",
+              "nickname": "Brollan",
+              "real_name": "Ludvig Brolin",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/brollan_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE5NjM=",
+              "nickname": "susp",
+              "real_name": "Tim Ångström",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/susp_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIyMjI=",
+              "nickname": "MartinezSa",
+              "real_name": "Antonio Martinez Sánchez",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/martinezsa_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjI0MDA=",
+              "nickname": "Chr1zN",
+              "real_name": "Christoffer Storgaard",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/chr1zn_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI0OQ==",
+            "name": "100 Thieves",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/100t.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjM2",
+              "nickname": "rain",
+              "real_name": "Håvard Nygaard",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/rain_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjQ0",
+              "nickname": "device",
+              "real_name": "Nicolai Reedtz",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/device_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjcxNDM=",
+              "nickname": "Gizmy",
+              "real_name": "Jack von Spreckelsen",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/gizmy_csgo.png",
+              "age": 21
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEzMzI4",
+              "nickname": "sirah",
+              "real_name": "William Kjærsgaard",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/sirah_csgo.png",
+              "age": 19
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1NzIw",
+              "nickname": "poiii",
+              "real_name": "Alex Nyholm Sundgren",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/poiii_csgo.png",
+              "age": 19
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI1Mg==",
+            "name": "FlyQuest",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/flyquest.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjcw",
+              "nickname": "aliStair",
+              "real_name": "Alistair Johnston",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/alistair_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjgx",
+              "nickname": "INS",
+              "real_name": "Joshua Potter",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/ins_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY0NA==",
+              "nickname": "jks",
+              "real_name": "Justin Savage",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jks_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEwMDM=",
+              "nickname": "Vexite",
+              "real_name": "Declan Portelli",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/vexite_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1ODU=",
+              "nickname": "nettik",
+              "real_name": "Corey Browne",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nettik_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI2OQ==",
+            "name": "Team Spirit",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/tspirit.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjQ=",
+              "nickname": "magixx",
+              "real_name": "Boris Vorobiev",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/magixx_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1",
+              "nickname": "sh1ro",
+              "real_name": "Dmitry Sokolov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/sh1ro_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEyMzQ=",
+              "nickname": "zont1x",
+              "real_name": "Myroslav Plakhotia",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/zont1x_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE2NzE=",
+              "nickname": "tN1R",
+              "real_name": "Andrey Tatarinovich",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/tn1r_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwMjQ=",
+              "nickname": "donk",
+              "real_name": "Danil Kryshkovets",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/donk_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI3MA==",
+            "name": "Nemiga Gaming",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/nemiga_gaming.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjYzOA==",
+              "nickname": "KaiR0N-",
+              "real_name": "Aleksandr Anashkin",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/kair0n__csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1MjI=",
+              "nickname": "Xant3r",
+              "real_name": "Kirill Kononov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/xant3r_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1ODEx",
+              "nickname": "khaN",
+              "real_name": " Beksultan Ospan",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/khan_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1OTYz",
+              "nickname": "robo",
+              "real_name": "Nikita Dushin",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/robo_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3MzU3",
+              "nickname": "syph0",
+              "real_name": "Daniel Ageyev",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/syph0_csgo.png",
+              "age": 16
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjQ4Mg==",
+            "name": "Lynn Vision",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/lv.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjEzNzY=",
+              "nickname": "Starry",
+              "real_name": "Lizhi Ye",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/starry_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1Nzg=",
+              "nickname": "Westmelon",
+              "real_name": "Zhe Niu",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/westmelon_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE2MTg=",
+              "nickname": "z4KR",
+              "real_name": "Sike Zhang",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/z4kr_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEzODMx",
+              "nickname": "EmiliaQAQ",
+              "real_name": "Junjie Tang",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/emiliaqaq_csgo.png",
+              "age": 20
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE2NjU0",
+              "nickname": "C4LLM3SU3",
+              "real_name": "Qihao Su",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/c4llm3su3_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg1MQ==",
+            "name": "1win",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/1win_1725551847462.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjY=",
+              "nickname": "nafany",
+              "real_name": "Vladislav Gorshkov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nafany_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEx",
+              "nickname": "Ax1Le",
+              "real_name": "Sergey Rykhtorov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/ax1le_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjQ2OA==",
+              "nickname": "BELCHONOKK",
+              "real_name": "Andrey Yasinskiy",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/belchonokk_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjgzNQ==",
+              "nickname": "fame",
+              "real_name": "Petr Bolyshev",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/fame_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIzMTk=",
+              "nickname": "ArtFr0st",
+              "real_name": "Artem Kharitonov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/artfr0st_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjExNDE=",
+            "name": "9z Team",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/9z_team_1792704024960.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjgxNg==",
+              "nickname": "dgt",
+              "real_name": "Franco Garcia",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/dgt_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg3OA==",
+              "nickname": "luchov",
+              "real_name": "Luciano Herrera",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/luchov_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjkwMw==",
+              "nickname": "max",
+              "real_name": "Maximiliano Gonzalez",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/max_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIyNjc=",
+              "nickname": "meyern",
+              "real_name": "Ignacio Meyer",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/meyern_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY4Mjg=",
+              "nickname": "HUASOPEEK",
+              "real_name": "Matias Ibañez Hernandez",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/huasopeek_csgo.png",
+              "age": 22
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM1Mzc=",
+            "name": "Eternal Fire",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/eternal_f_1730557192399.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjI0OQ==",
+              "nickname": "regali",
+              "real_name": "Iulian Harjău",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/regali_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE4NTc=",
+              "nickname": "MisteM",
+              "real_name": "Gareth Ries",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/mistem_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIxNjc=",
+              "nickname": "soulfly",
+              "real_name": "Caner Kesici",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIyOTM=",
+              "nickname": "Kvem",
+              "real_name": "Vladislav Korol",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/kvem_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYzMzk=",
+              "nickname": "jottAAA",
+              "real_name": "Samet Köklü",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jottaaa_csgo.png",
+              "age": 23
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM3MzM=",
+            "name": "Team Falcons",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/falcons_1700742874975.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjQ4",
+              "nickname": "NiKo",
+              "real_name": "Nikola Kovač",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/niko_new_20230830121403_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjgz",
+              "nickname": "TeSeS",
+              "real_name": "René Madsen",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/teses_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg2",
+              "nickname": "karrigan",
+              "real_name": "Finn Andersen",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/karrigan_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjI0Mg==",
+              "nickname": "m0NESY",
+              "real_name": "Ilya Osipov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/m0nesy_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3MzQ4",
+              "nickname": "kyousuke",
+              "real_name": "Maxim Lukin",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/kyousuke_csgo.png",
+              "age": 17
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjQxMTc=",
+            "name": "MOUZ",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/mouz_1705449107673.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjQx",
+              "nickname": "Spinx",
+              "real_name": "Lotan Giladi",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/spinx_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjQ2OQ==",
+              "nickname": "torzsi",
+              "real_name": "Ádám Torzsás",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/torzsi_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE5NjI=",
+              "nickname": "xertioN",
+              "real_name": "Dorian Berman",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/xertion_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYxODg=",
+              "nickname": "PR",
+              "real_name": "Oldřich Nový",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/pr_new_20230830121329_csgo.png",
+              "age": 17
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE4MDU5",
+              "nickname": "xelex",
+              "real_name": "",
+              "shortcut": "xelex",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/xelex_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjQ4NzQ=",
+            "name": "The MongolZ",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/mongolz_1731229167088.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjEyMTk=",
+              "nickname": "bLitz",
+              "real_name": "Garidmagnai Byambasuren",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/blitz_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEyNjI=",
+              "nickname": "Techno",
+              "real_name": "Munkhbold Sodbayar",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/techno_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0NDk=",
+              "nickname": "nin9",
+              "real_name": "Yesuntumur Gantulga",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nin9_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0MzEz",
+              "nickname": "910",
+              "real_name": "Usukhbayar Banzragch",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE4Mzgw",
+              "nickname": "cobrazera",
+              "real_name": "Anarbileg Uuganbayar",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjU0NTc=",
+            "name": "BetBoom Team",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/betboom_team_1719896861061.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjU0",
+              "nickname": "Boombl4",
+              "real_name": "Kirill Mikhailov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/boombl4_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjk1Mw==",
+              "nickname": "d1Ledez",
+              "real_name": "Daniil Kustov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/d1ledez_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3ODE=",
+              "nickname": "zorte",
+              "real_name": "Aleksandr Zagodyrenko",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/zorte_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwMjM=",
+              "nickname": "S1ren",
+              "real_name": "Pavel Ogloblin",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYzNDA=",
+              "nickname": "Magnojez",
+              "real_name": "Kirill Rodnov",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/magnojez_csgo.png",
+              "age": 20
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjU1NjM=",
+            "name": "Imperial",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/imp.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjk2",
+              "nickname": "VINI",
+              "real_name": "Vinicius Figueiredo",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/vini_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjU3Ng==",
+              "nickname": "chelo",
+              "real_name": "Marcelo Cespedes",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/chelo_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE5NDM=",
+              "nickname": "decenty",
+              "real_name": "Lucas Bacelar",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/decenty_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0MDQ5",
+              "nickname": "saadzin",
+              "real_name": "Guilherme Pacheco",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/saadzin_csgo.png",
+              "age": 20
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1NTYz",
+              "nickname": "noway",
+              "real_name": "Kaiky Santos",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/noway_csgo.png",
+              "age": 20
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjYxNTU=",
+            "name": "FUT Esports",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/fut_1725553566127.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjgy",
+              "nickname": "SunPayus",
+              "real_name": "Alvaro Garcia",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/sunpayus_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYzNQ==",
+              "nickname": "xfl0ud",
+              "real_name": "Yasin Koç",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/xfl0ud_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0MjM=",
+              "nickname": "coolio",
+              "real_name": "András Fercsák",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/coolio_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYxMzM=",
+              "nickname": "dem0n",
+              "real_name": "Dmytro Myroshnychenko",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/dem0n_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE1Mjg1",
+              "nickname": "dziugss",
+              "real_name": "",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/dziugss_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjgwMzY=",
+            "name": "Legacy",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/legacy.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjM0",
+              "nickname": "dumau",
+              "real_name": "Eduardo Wolkmer",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/dumau_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjQ5",
+              "nickname": "latto",
+              "real_name": "Bruno Rebelatto",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/latto_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg1",
+              "nickname": "arT",
+              "real_name": "Andrei Piovezan",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/art_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjg1Mw==",
+              "nickname": "try",
+              "real_name": "Santino Rigal",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/try_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYxNzI=",
+              "nickname": "ksloks",
+              "real_name": "Italo Meinberg",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/ksloks_csgo.png",
+              "age": 20
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg4NjY=",
+            "name": "M80",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/m80_1764150586240.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjIyNg==",
+              "nickname": "slaxz-",
+              "real_name": "Fritz Dietrich",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/slaxz__csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjUzOA==",
+              "nickname": "s1n",
+              "real_name": "Elias Stein",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/s1n_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjYzMw==",
+              "nickname": "Swisher",
+              "real_name": "Michael Schmid",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/swisher_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY3NDA=",
+              "nickname": "JBa",
+              "real_name": "Josh Barutt",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jba_csgo.png",
+              "age": 21
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEzODM1",
+              "nickname": "Lake",
+              "real_name": "Mason Sanderson",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/lake_csgo.png",
+              "age": 2025
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjEzNTYw",
+            "name": "Chinggis Warriors",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/chinggis_warriors.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjEyNzg=",
+              "nickname": "sk0R",
+              "real_name": "Tengis Batjargal",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/sk0r_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEyODY=",
+              "nickname": "ROUX",
+              "real_name": "Undrakhbayar Zolbayar",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/roux_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwOTQ=",
+              "nickname": "cool4st",
+              "real_name": "Sodbileg Batbaatar",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/cool4st_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIyODc=",
+              "nickname": "yAmi",
+              "real_name": "Yalalt Oyunbileg",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/yami_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIzMjI=",
+              "nickname": "fury5k",
+              "real_name": "Davaasuren Ganbaatar",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/fury5k_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/wildcard_1723140002948.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjMwMA==",
+              "nickname": "fr3nd",
+              "real_name": "Sebastian Kuśmierz",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/fr3nd_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjM5OA==",
+              "nickname": "cxzi",
+              "real_name": "Danny Strzelczyk",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/cxzi_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjc4Ng==",
+              "nickname": "HexT",
+              "real_name": "Jadan Postma",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/hext_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE2MDE=",
+              "nickname": "reck",
+              "real_name": "Ethan Serrano",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/reck_csgo.png",
+              "age": 21
+            },
+            {
+              "id": "b2Q6cGxheWVyOjI0NjU=",
+              "nickname": "nEMANHA",
+              "real_name": "Nemanja Đukić",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/nemanha_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MzY3",
+            "name": "BC.Game",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/bcg_1795345615675.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjYw",
+              "nickname": "Magisk",
+              "real_name": "Emil Reif",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/magisk_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY0",
+              "nickname": "s1mple",
+              "real_name": "Aleksandr Kostyliev",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/s1mple_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEyNzA=",
+              "nickname": "asap",
+              "real_name": "Tyson Paterson",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIzMjE=",
+              "nickname": "Senzu",
+              "real_name": "Munkhbold Azbayar",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/senzu_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE0ODUy",
+              "nickname": "mzinho",
+              "real_name": "Ayush Batbold",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/mzinho_csgo.png",
+              "age": 18
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE3MDM2",
+            "name": "PARIVISION",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/pvis.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjMx",
+              "nickname": "Jame",
+              "real_name": "Dzhami Ali",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jame_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEwMg==",
+              "nickname": "HObbit",
+              "real_name": "Abay Khasenov",
+              "shortcut": "",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjk4OQ==",
+              "nickname": "FL1T",
+              "real_name": "Evgeny Lebedev",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/fl1t_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY2MDQ=",
+              "nickname": "xiELO",
+              "real_name": "",
+              "shortcut": "xiELO",
+              "icon": "",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3NDIx",
+              "nickname": "zweih",
+              "real_name": "Ivan Gogin",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/zweih_csgo.png",
+              "age": 17
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE3NzQ1",
+            "name": "Aurora Gaming",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/aurora_1749814650703.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjE2MQ==",
+              "nickname": "XANTARES",
+              "real_name": "Ismailcan Dörtkardeş",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/xantares_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEwNjk=",
+              "nickname": "Jimpphat",
+              "real_name": "Jimi Salo",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/jimpphat_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE3MDE=",
+              "nickname": "kyxsan",
+              "real_name": "Damjan Stoilkovski",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/kyxsan_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIwMjk=",
+              "nickname": "woxic",
+              "real_name": "Özgür Eker",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/woxic_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIxNDc=",
+              "nickname": "Wicadia",
+              "real_name": "Ali Haydar Yalçın",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/wicadia_csgo.png",
+              "age": null
+            }
+          ]
+        },
+        {
+          "team": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI0NzY5",
+            "name": "DENDELE CS",
+            "iconPath": "https://cdn.oddin.gg/assets/teams/icons/dnd_1784975463526.png"
+          },
+          "players": [
+            {
+              "id": "b2Q6cGxheWVyOjE2NDk=",
+              "nickname": "gafolo",
+              "real_name": "Victor Andrade",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/gafolo_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjE5MDc=",
+              "nickname": "koala",
+              "real_name": "João Pedro",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/koala_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjIxMjE=",
+              "nickname": "maxxkor",
+              "real_name": "Máximo Cortina",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/maxxkor_csgo.png",
+              "age": null
+            },
+            {
+              "id": "b2Q6cGxheWVyOjY2NjM=",
+              "nickname": "rdnzao",
+              "real_name": "Daniel Monteiro",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/rdnzao_csgo.png",
+              "age": 22
+            },
+            {
+              "id": "b2Q6cGxheWVyOjEzODU1",
+              "nickname": "doc",
+              "real_name": "Danilo Barros",
+              "shortcut": "",
+              "icon": "https://cdn.oddin.gg/assets/players/icons/doc_csgo.png",
+              "age": 22
+            }
+          ]
+        }
+      ],
+      "matches": [
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3MQ==",
+          "planned_start": "2026-11-24T07:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0",
+            "name": "FaZe"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MjY0",
+            "name": "Wildcard"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTU2",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3Mw==",
+          "planned_start": "2026-11-24T07:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjM1Mzc=",
+            "name": "Eternal Fire"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI1Mg==",
+            "name": "FlyQuest"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTYy",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3Mg==",
+          "planned_start": "2026-11-24T06:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjU=",
+            "name": "Team Liquid"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE0MzY3",
+            "name": "BC.Game"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTU5",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA2OQ==",
+          "planned_start": "2026-11-24T06:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjE3MDM2",
+            "name": "PARIVISION"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI0NzY5",
+            "name": "DENDELE CS"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTQ1",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3NA==",
+          "planned_start": "2026-11-24T05:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjI0OQ==",
+            "name": "100 Thieves"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjEzNTYw",
+            "name": "Chinggis Warriors"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTYz",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA2OA==",
+          "planned_start": "2026-11-24T05:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg=",
+            "name": "Ninjas in Pyjamas"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjg4NjY=",
+            "name": "M80"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTQw",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3NQ==",
+          "planned_start": "2026-11-24T04:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjExNDE=",
+            "name": "9z Team"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjQ4Mg==",
+            "name": "Lynn Vision"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTY2",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        },
+        {
+          "id": "bWF0Y2gvb2Q6bWF0Y2g6MzM4OTA3MA==",
+          "planned_start": "2026-11-24T04:00:00Z",
+          "start": "",
+          "end": "",
+          "tournament": "",
+          "home": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjIyMA==",
+            "name": "Heroic"
+          },
+          "away": {
+            "id": "dGVhbS9vZDpjb21wZXRpdG9yOjU1NjM=",
+            "name": "Imperial"
+          },
+          "home_score": null,
+          "away_score": null,
+          "winner": {
+            "id": null,
+            "name": ""
+          },
+          "closed": false,
+          "best_of": "BO1",
+          "maps": [
+            {
+              "id": "bWFwL29kOm1hcDozNjU0OTU0",
+              "order": 1,
+              "isClosed": false
+            }
+          ],
+          "score": ""
+        }
+      ],
+      "standings": [],
+      "brackets": [],
+      "stats": {}
+    },
+    "source": "stake_oddin_widget"
+  },
+  "intel_coverage": {
+    "teams": 2,
+    "players": 10,
+    "players_with_stats": 10,
+    "favorites": 8,
+    "map_pool": 22,
+    "recent_matches": 10,
+    "h2h": 0,
+    "tournament_teams": 32,
+    "tournament_matches": 8,
+    "standings": 0,
+    "pool_rows": 0
+  },
+  "detail_url": "intel_prematch_detail_cs2_1795510800000-faze-wildcard.html",
+  "detail_json_url": "intel_prematch_detail_cs2_1795510800000-faze-wildcard.json",
+  "detail_csv_url": "intel_prematch_detail_cs2_1795510800000-faze-wildcard.csv"
+}

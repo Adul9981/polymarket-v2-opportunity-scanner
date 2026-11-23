@@ -1,0 +1,99 @@
+{
+  "version": "stake-prematch-1",
+  "horizon_hours": 72,
+  "max_fixtures": 160,
+  "max_per_sport": 50,
+  "request_delay_ms": 350,
+  "api": {
+    "base_url": "https://odds-data.stake.com",
+    "docs_url": "https://docs-odds-data.stake.com/",
+    "openapi_url": "https://docs-odds-data.stake.com/dist.yaml/dist.yaml"
+  },
+  "sports": [
+    {
+      "key": "lol",
+      "label": "英雄联盟",
+      "short": "LoL",
+      "sport_slug": "league-of-legends",
+      "mode": "esports_watchlist",
+      "game_key": "lol",
+      "include_prefix": "LoL:"
+    },
+    {
+      "key": "cs2",
+      "label": "CS2",
+      "short": "CS2",
+      "sport_slug": "counter-strike",
+      "mode": "esports_watchlist",
+      "game_key": "cs2",
+      "include_prefix": "Counter-Strike:"
+    },
+    {
+      "key": "dota2",
+      "label": "Dota 2",
+      "short": "Dota2",
+      "sport_slug": "dota-2",
+      "mode": "esports_watchlist",
+      "game_key": "dota2",
+      "include_prefix": "Dota 2:"
+    },
+    {
+      "key": "football",
+      "label": "足球",
+      "short": "足球",
+      "sport_slug": "soccer",
+      "mode": "competitions",
+      "competitions": [
+        {
+          "category": "england",
+          "tournament": "premier-league",
+          "label": "英超"
+        },
+        {
+          "category": "spain",
+          "tournament": "la-liga",
+          "label": "西甲"
+        },
+        {
+          "category": "italy",
+          "tournament": "serie-a",
+          "label": "意甲"
+        },
+        {
+          "category": "germany",
+          "tournament": "bundesliga",
+          "label": "德甲"
+        },
+        {
+          "category": "france",
+          "tournament": "ligue-1",
+          "label": "法甲"
+        },
+        {
+          "category": "international-clubs",
+          "tournament": "uefa-champions-league",
+          "label": "欧冠"
+        },
+        {
+          "category": "international-clubs",
+          "tournament": "uefa-europa-league",
+          "label": "欧联"
+        }
+      ]
+    },
+    {
+      "key": "nba",
+      "label": "NBA",
+      "short": "NBA",
+      "sport_slug": "basketball",
+      "mode": "competitions",
+      "competitions": [
+        {
+          "category": "usa",
+          "tournament": "nba",
+          "label": "NBA"
+        }
+      ]
+    }
+  ]
+}

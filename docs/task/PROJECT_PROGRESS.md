@@ -1,6 +1,6 @@
 # 预测市场网格交易项目进度库
 
-最后更新：2026-08-19
+最后更新：2026-11-08
 
 ## 1. 使用方式
 
@@ -37,6 +37,8 @@
 任务 5：全自动小金额试运行，带风控和复盘            未开始
 任务 6：电竞交易情报库（订阅制网站）                进行中 · 高优先级
 任务 7：交易者拆解与可复制策略沉淀（e46m3）          进行中
+任务 8：形态结构重审与决策重构                      进行中 · P0 审计完成
+任务 9：政治选举叙事幻觉雷达（中选/以色列/加拿大）   进行中 · 重划选区账本已加入
 V2 执行闭环：一分钟信号驱动捕捉（bar 引擎）         已实现 · 待真实比赛 live 验收
 任务 4/5 前置：海外 VPS 执行环境（Tailscale 桥接）   重要不紧急
 ```
@@ -54,6 +56,8 @@ V2 执行闭环：一分钟信号驱动捕捉（bar 引擎）         已实现 
 任务 2 的自动化候选流程设计已定稿：docs/task/TASK2_AUTOMATION_CANDIDATE_FLOW.md。整个自动化以三层框架为核心——触发条件（什么时候看）-> 决策规则（怎么判断）-> 输出与投递（结果写哪里、谁去用），等待 live 验证通过后接入定时调度。
 开发接力（2026-08-06 记录，由另一会话继续开发）：案例入库 -> 扫描器验收 -> 一分钟流小额测试 -> 深反彩票管线（环节 4，排在策略 A/B 定稿之后）；环节 6 为典型案例教科书级入库与结算跟进，详见第 10 节。
 任务 6（高优先级，2026-08-07 启动）：面向外部的 Polymarket 电竞订阅制情报平台，分两大板块——实时情报台（今天：每场比赛一张情报卡：盘口 / 现象 / 翻盘画像 / 近期状态 / 事件情报 + 风险提示）与历史档案库（过去：队伍战绩胜/负、翻盘率/被翻盘率、历史对局、复盘案例；现有本地约 15+ 场 LoL 样本可直接算第一批画像）。页面定为 6 页：为什么订阅、今天有什么机会、比赛情况、比赛档案、情报库、策略实验室。详见第 11 节与 docs/task/TASK6_INTELLIGENCE_LIBRARY_PRODUCT.md；高保真原型待框架确认后制作。
+任务 8（2026-10-22 启动）：形态结构重审独立立项。P0 审计确认当前问题不是 1 分钟原始数据不足，而是候选未来固定压成 9 点、主图降采样到 72 点、历史观察点仅取 7 个固定进度，以及整段终局启发式标签折叠多形态。P1 已确认小局/整场必须分开统计和决策，并把内部英文代码与用户界面的纯中文展示名解耦；下一步先完成形态字典 V2，再重建分钟级样本、重做候选图与回测。详见 docs/task/PATTERN_STRUCTURE_REWORK.md。
+任务 9（2026-10-23 启动，经用户校正）：政治选举叙事幻觉雷达。民调不做核心信号；页面改为“市场信念 x 盘口厚度 x 报价自洽 x 制度/选区结构”的只读观察框架，扫描联邦两院、54 个国会选区委、州长、州检察长、州务卿、州参议院、以色列与阿尔伯塔事件。2026-10-27 新增众议院重划选区账本，把已生效地图、被挡地图、党派目标优势与 218 席多数线分开呈现。详见 docs/task/ELECTION_INTELLIGENCE_WATCH.md。
 V2 执行闭环（2026-08-09 建）：代码已实现并离线验证 + 预挂盘 live 冒烟通过；尚未完成真实比赛全链路 live 验收与小额实盘，autopilot 需用户显式开启——按成熟度纪律，验收通过前不算"完成"。定义见 docs/task/V2_EXECUTION_LOOP.md。
 ```
 
@@ -1888,6 +1892,10 @@ docs/task/TASK6_INTELLIGENCE_LIBRARY_PRODUCT.md（平台框架：情报卡 + 6 �
 6. 路径手册分域细化：样本已扩到 77 场/664 序列，下一步按联赛（LCK/LPL/LEC/EWC/TI…）
    与开赛前后细分（tools/forensics_price_path_analysis.py 已支持），校准
    docs/forensics/PRICE_PATH_PLAYBOOK.md 第 3 节分区参数；每笔复盘打路径标签。
+7. 新增长期跟踪关注账号（2026-09-07）：0x82882d761b0d7f18b2cc286117d10cd8a15a5519
+   （马斯克市场专项，用户观察收益平滑）；已建档 + 链上自检（pUSD $5,650.65），
+   新增工具 tools/account_snapshot.py；首份 data-api 快照因当前网络到
+   data-api/gamma 超时待补（工具已就绪，网络恢复即跑）。
 ```
 
 验收标准：
@@ -2040,4 +2048,2065 @@ Bo5 典型赔率趋势样本）。
 报告：reports/deep_zone_statistics_2026-08-29.html
 数据：/tmp/deep_cases.json（341 例，可复用做回测）。
 下一步：把近期待交易录入 knowledge/trades/ 结构化数据集，接深水区回测。
+```
+
+## 2026-08-30 胜负胜模式回测（用户假设验证，数据支撑）
+
+```text
+用户假设：BO3/BO5 中"G1 强队赢、G2 弱队扳平"后，G2 买强队整场有价格优势
+（基于 Falcons/NAVI/T1 三场观察）。
+回测（20 个有效样本，含胜负负反样本消除幸存者偏差）：
+  全样本：命中 50%（10/20）、平均收益 -11% —— 假设整体不成立；
+  决定性过滤：G2 结束强队整场价 >=0.5 -> 命中 80%（8/10）、平均 +28%；
+              G2 结束强整 <0.5  -> 命中 20%（2/10）、平均 -51%；
+  赛前强队 0.5-0.65（中等热门）-> 命中 100%（仅 4 场样本，幅度待验证）。
+候选规则：G1 强赢 + G2 弱扳平 + G2 结束强整 >=0.5 才买强队整场，
+  止损 = 强整跌破 0.35（G3 早期破位）；<0.5 为反指标（市场已转向）。
+报告：reports/win_lose_win_backtest_2026-08-30.html
+数据：/tmp/wlw_bt.json（20 场，可复用继续扩样本）
+下一步：扩大样本（统计"胜负胜 vs 胜负负"占比、赛前强弱区间 x G2 结束价分层）。
+```
+
+## 2026-09-10 形态库批量入库（price_paths 47 -> 75）
+
+```text
+把 2026-08-30 ~ 09-09 复盘的 28 场赔率形态追加进 docs/data/intel/price_paths.json：
+  - LCK/LPL/LEC 17 场（09-01~09-08）+ LCK CL 1 场（09-09 假赛质疑场）
+  - CS2 FISSURE S3 7 场（09-09）+ G2-AUR1/FNC-GX/NSEA-DNSC 3 场（08-30/31）
+形态来源：每场快照自动分类 classification.jsonl（A/B/C 家族标签 + 高低点），
+  按 game1..game5 + series 逐侧登记（team:标签(低->高)）。
+数据：price_paths.json 累计 75 条，updated 2026-09-10；source 指向对应复盘文档。
+注意：旧 reviews 条目 schema 用 key_points，EWC/新增条目用 price_shape，两者并存可接受。
+```
+
+## 2026-08-30 弹幕采集会话切片防错（工具修复）
+
+```text
+事故：DK vs KT（08-30 16:00）聚合页 intel_danmu_live_lck_dk_kt_2026-08-30.html
+  混入昨晚 LPL/LEC 弹幕（队伍情报出现 KC/GX/WE/TES 等），页面"数据源 2026-08-29 16:29 起"。
+根因：
+  1. 数据文件按日期命名（2026-08-30_huya_remember.jsonl），同一天多场会话共用，
+     昨晚会话从 00:29 起写入，今天会话 append，danmu_live_monitor.py 读全文件未切片；
+  2. 今天 Remember(528222) 采集进程死亡（16:19 后停更）未自动恢复；
+  3. 昨天 lck_bfx_t1 遗留会话（launchd KeepAlive）占用 957 源，与今天会话归属混乱。
+修复（已固化）：
+  1. danmu_live_monitor.py 新增 --since <epoch> 参数，load_rows 只统计 ts>=since；
+     run_danmu_session.py 启动 monitor 时自动传会话启动时刻 → 每场会话只统计本场弹幕；
+  2. 停掉过期会话（launchctl bootout com.ad.danmu-lck-bfx-t1），重启 lck_dk_kt_2026-08-30
+     （we957 + remember 双源），Remember 采集恢复、文件持续增长；
+  3. 页面窗口修正为 2026-08-30 08:28 UTC 起，队伍情报恢复 DK/KT 本场内容。
+防错规则（一次错误原则）：
+  - 聚合监控必须按会话/比赛时间切片，禁止读整文件统计（同一天多场共用文件时必现混源）；
+  - 新会话启动前先检查同 source 是否已有存活进程（防双写/归属混乱）；
+  - 比赛日检查 Remember 等二路源采集心跳，停更即告警恢复。
+```
+
+## 2026-08-30 节点不生成根因修复（VPS 流水线 bug，用户持续反馈）
+
+```text
+用户症状：DK vs KT（08-30 16:00）比赛已开打 1 小时+，时间轴壳节点始终"暂未采集"，
+多次排查未定位。本次从头到尾追到根因：
+  1. 今日比赛清单 runtime/matches_today.json 停留在 08-25，未含 DK vs KT
+     -> 重新 market_scanner.py --live 扫描 + export_today_matches.py 刷新
+     （14 场含 lol-dk-kt-2026-08-30），scp 同步 VPS /opt/danmu-intel/data/；
+  2. VPS 流水线 vps_intel_pipeline.py 在规则直出（USE_LLM=False）分支缺少
+     rc/so/se 初始化，generate_game_node 写状态时 UnboundLocalError:
+     cannot access local variable 'rc' -> 每次跑到节点生成即崩溃退出，
+     节点永不产出（journalctl 有完整报错，此前未查看日志）。
+     -> 补 rc=0; so=se=""（VPS 已 patch + py_compile 通过）；
+  3. 修复后手动 systemctl start vps-intel-pipeline.service，
+     lol-dk-kt-2026-08-30_g1_end.json + intel_danmu_Dplus KIA-KT Rolster_*
+     _g1_end.html 生成，线上 match 壳出现 G1·REVIEW 入口，节点页 200 可访问。
+防错规则（一次错误原则，全项目）：
+  - 节点/情报"没更新"先查 VPS journalctl -u vps-intel-pipeline（崩溃/跳过有完整日志），
+    禁止只查本地 reports 就说"正常"；
+  - 每日清单（matches_today.json）是流水线输入，每日扫描后必须确认含当日场次，
+    且 VPS 端存在（scp 同步成功 + grep 验证）；
+  - 代码修复必须同步到 VPS（本地改 + VPS patch 双写），流水线跑的是服务器副本。
+```
+
+## 2026-08-31 云端成本对齐（任务 6 · 生成端配置交接）
+
+```text
+背景：云端"每页深度版"成本远高于本地实测量级。
+实测基准（直连 DeepSeek API）：单页 ≈0.04–0.06 元（full≈3.3k in/7.9k out），
+一场 BO3 ≈0.25–0.45 元。根因：云端仍走 Codex 全量生成（读 skill+模板+统计
+再逐段写），本地走"固定提示词 + API"程序化生成，成本差一个量级以上。
+产出：
+  - docs/task/CLOUD_COST_CONFIG_CHECKLIST.md（8 项核对 + 同步步骤 + 降本可选）；
+  - dist/intel_server_pkg/ 刷新为 2026-08-31 成本对齐版（34 文件，
+    含时间戳修复后的 generate_intel_report.py 与 prompts/report_full.md），
+    打 zip dist/intel_server_pkg_2026-08-31.zip 已可直发云端；
+  - knowledge/DANMU_INTEL.md 追加批次记录。
+防错规则（一次错误原则）：生成端代码/提示词每次变更后必须同步刷新部署包；
+云端成本异常优先核对生成路径/模型/输入样本量/重试次数，验证以 API usage 为准。
+```
+
+## 2026-08-31 产品框架复跑（grill 收尾 · 任务 6 设计定稿）
+
+```text
+背景：8-23 grill 之后产品实际演化（官方数据成事实层、CS2 上线、VPS+DeepSeek 直连、
+订阅付费墙上线），重新拷问产品框架与弹幕加工引擎，明确"核"= 弹幕加工。
+产出：docs/task/INTEL_PRODUCT_FRAMEWORK_2026-08-31.md（A 产品框架 / B 弹幕加工引擎 /
+C 情报输出模板 / D 四类失效模式防错 / E 执行待办），取代 8-23 产品决策记录。
+关键拍板：
+  - 定位：弹幕情报为内核（A）、综合情报台为形态（B），官方数据只校准不喧宾夺主；
+  - 付费用户=决策者，普通观众=免费漏斗；免费=赛后复盘+验证闭环+画像摘要，Pro=进行中节点+完整画像；
+  - 模板：弃 12 段"速览卡/方向板"，回归旧 10 段框架（INTEL_TEMPLATE_OLD_2026-08-31.md
+    为唯一标准，样页 intel_danmu_LCKCL-NS-DNSC_full_old_2026-08-31.html），
+    speedcard_consistency 不再作为发布门禁；
+  - 引擎：采集→规则统计底料→LLM 自由提炼（保留特殊情报不过度过滤）→校验，不设独立归并层；
+  - 节点：BP 后+局中先出快报（≤2min 硬统计，同 URL 升级完整版），局末直接完整版；
+  - SLA：快报≤2min / 完整版≤10min / 复盘≤15min（北京时间）；事件驱动触发+四段时间戳；
+  - 方向表达：只罗列证据（正锚/负锚/群体共识），不下"看好X"结论；
+  - 覆盖：全量已登记联赛，缺数据显式标"无"，每场至少赛后复盘兜底。
+防错规则（一次错误原则）：模板/生成端变更先改文档再动代码；执行顺序见
+INTEL_PRODUCT_FRAMEWORK_2026-08-31.md 第 E 节（prompts 重写→生成器门禁→发布摘速览卡
+门禁→G5 清理修复→同步云端→样页对照验证→发布）。
+```
+
+## 2026-08-31 云服务器 Python 项目 PRD 定稿（任务 6）
+
+```text
+产出：docs/task/DANMU_INTEL_SERVER_PRD_2026-08-31.md（v1.0，16 节）——
+把弹幕情报库设计为可部署到 VPS 的标准 Python 工程：采集→切片→规则统计→
+LLM 提炼→校验→输出（旧 10 段模板）→发布→订阅→情报库沉淀→监控。
+关键设计：
+  - 情报库沉淀层 = 知识资产：每场提炼本场情报资产，按 选手/队伍/英雄/联赛 四维
+    幂等合并 + 趋势延伸 + 验证回填（不是自动合并弹幕统计）；
+  - 核心定位（两份文档开头一致）：把电竞直播弹幕变成可溯源、可支持决策的情报，
+    并且越攒越值钱；
+  - 技术选型：Python 3.11、SQLite+JSONL、DeepSeek API 直连、systemd、静态站点；
+  - SLA：快报≤2min / 完整版≤10min / 复盘≤15min（北京时间）。
+关联：INTEL_PRODUCT_FRAMEWORK_2026-08-31.md（产品框架）已同步四维知识资产口径
+并新增第 0 节核心定位。PRD 为设计定稿，代码未动。
+```
+
+## 2026-09-02 网站架构调整方案定稿（任务 6）
+
+```text
+决策：在现有架构基础上细化优化，不推倒重建；唯一必动=发布链路。
+产出：docs/task/SITE_ARCHITECTURE_UPGRADE_2026-09-02.md（v1.0，三层升级）：
+  - M1 发布层：nginx 直出 /var/www/danmu-pulse（发布≤10秒，满足快报≤2min SLA），
+    GitHub Pages 降级为镜像备份；vps_publish 增加 --serve-local/--mirror-pages；
+    DNS danmupulse.com → VPS + certbot 证书；
+  - M2 页面骨架：5 个一级入口（今日/历史库/四维画像库/灰信号·验证闭环/订阅），
+    Pro 墙收敛两处，10 段模板统一，时间轴壳强一致，G5 误删修复；
+  - M3 数据服务：SLA 四段时间戳（触发→快报→完整→发布）、成本统计、
+    自检扩展、TG 告警、局中节点机制恢复（GAME_NODE_MID_MIN）；
+  - M4 验证上线：全站审计 + 回归全绿 + 灰度切 DNS + SLA 日报。
+实施：分阶段独立交付可回退；M1 先行（发布变快），M2/M3 并行。
+```
+
+## 2026-09-02 网站架构升级 · M1 发布层 + M2 页面骨架完成（任务 6）
+
+```text
+M1 发布层（nginx 直出）：
+  - VPS 安装 nginx 1.24 + /var/www/danmu-pulse webroot + danmupulse.com server 块
+    （HTML no-cache、静态资源长缓存、gzip）；
+  - vps_publish.py 增加 --serve-local/--no-mirror：发布=审计后同步 webroot（秒级）+ 推 Pages 镜像；
+  - 实测：首页/今日页/局中页 nginx 直出 HTTP 200，HTML no-cache 头正确；
+  - 待办：DNS danmupulse.com → 158.247.214.175 + certbot HTTPS（等用户切 DNS）。
+M2 页面骨架：
+  - 导航 5 一级入口：今日情报 / 历史情报库 / 四维画像库(intel_profiles_index) /
+    灰信号·验证闭环(intel_gray_verification_stats) / 订阅；
+  - Pro 墙收敛：PRO_RE 增加 intel_profile_*（完整画像），节点页仅未结束时付费；
+  - 10 段模板切换：prompts 四份按 INTEL_TEMPLATE_OLD 重写（A 型 0-10/B 型 0-11/赛前 0-8），
+    generate_intel_report.py 门禁按节点类型校验、重试提示语同步；
+    实测 GEN-KT g1_mid 新格式页：0-11 段齐全、无速览卡/方向板残留；
+  - 发布端摘除 speedcard 门禁（import/审计/--fix）；
+  - G5 误删修复：保留依据改 runtime/vps_intel g5 状态文件；
+    实测 NSEA-DNSC / KT.C-DRX.C G5 真页面已重新上线 webroot。
+全部改动已同步 VPS 并编译通过；发布（webroot + Pages 镜像）执行成功。
+```
+
+## 2026-09-02 网站架构升级 · M3 数据服务层完成（任务 6）
+
+```text
+M3 数据服务层：
+  - 局中节点自动生成：恢复 GAME_NODE_MID_MIN（小局开始 16 分钟后自动
+    generate_game_node mid），gstatus 与兜底两条分支都已接入；
+  - SLA 四段时间戳：管线状态文件记录 trigger_at / quick_at / full_at，
+    vps_publish serve_webroot 时补 published_at；
+  - 成本统计：generate_intel_report 每次调用写 runtime/llm_usage.jsonl
+    （in/out tokens + 估算成本，路径修正为部署根 runtime/，非包目录）；
+    实测 pre 页 cost≈0.037 元；
+  - 自检扩展：vps_self_check 增加 sla_check（完整版≤10min/发布≤15min 达标率）
+    与 cost_check（当日聚合，超 ¥10 阈值告警）；
+  - TG 告警：runtime/alert_config.json（bot_token+chat_id 已部署，凭据不外显），
+    SLA 超时 / 成本超限自动推送；
+  - 修复自检付费墙误报：复用 vps_publish finished_slugs/finished_keys，
+    site_issues 336 → 0；
+  - 验证：pre 新框架 9 段 / game B 型 12 段生成通过；自检 sla=100% cost=0.04 元。
+待办：局中机制在下一场进行中比赛实弹验证（今日 HLE-T1 16:00 / CS 14:00-20:00 北京）。
+```
+
+## 2026-09-02 时效性改造：事件驱动 + 快报先行（任务 6）
+
+```text
+背景：用户确认"单局 30-40 分钟，BP/局中情报推迟 20 分钟就失去价值"——
+时效是产品价值命门。旧链路 BP 节点 4-20 分钟时间窗 + 10 分钟轮询 + 全量生成
++ 5 分钟发布 ≈ 20 分钟才上线。
+改造（vps_intel_pipeline.py + systemd）：
+  1. 快报先行：BP/局中节点先出"规则直出速览版"（硬统计：提及量/灰信号数/密度，
+     render_fast_intel，秒级），完整版写临时文件、成功才同 URL 覆盖；
+     深度失败保留速览版（source=fast）；
+  2. 事件驱动 BP：官方局状态 inProgress（=开局/BP 结束）立即触发 BP 节点，
+     不再等时间窗（GAME_NODE_BP_MIN 门控废弃，主分支改用官方事件）；
+  3. 定时器加密：vps-intel-pipeline.timer 10min→2min；
+     vps-publish.timer 5min→1min（nginx 秒级发布配合）；
+  4. SLA 时间戳：quick_at（速览版上线）/ full_at（完整版覆盖）正确落状态文件。
+预期效果：BP 快报 事件后 1-3 分钟上线（2 分钟轮询 + 秒级生成 + 1 分钟发布），
+完整版 5-10 分钟同 URL 升级。
+待验证：今日 14:00 CS / 16:00 HLE-T1 开赛后实测"事件→快报→完整版"三段耗时。
+```
+
+## 2026-09-02 实弹验证 + 两个准确性修复（任务 6）
+
+```text
+实测（16:00 HLE vs T1，官方 window 阵容）：
+  - BP 快报：16:00:13 触发、速览版 +1s、完整版 +36s（秒级达标）；
+    但切片仅 8 行 → LoL inProgress 含 BP 阶段，触发点在 BP 开始而非结束；
+  - 局中触发提速：GAME_NODE_MID_MIN 16→10（BP 结束后 10 分钟）；
+  - LoL BP 门控：等 g_start（估计 BP 结束）再出，覆盖 BP 讨论窗口。
+准确性重大修复（历史库过期阵容冒充现状，踩"事实层只信官方"红线）：
+  - 赛前页曾写 HLE ADC=Viper、T1 ADC=Gumayusi；官方 window 实测：
+    HLE=Zeus/Kanavi/Zeka/Gumayusi/Delight（ADC=Gumayusi）、
+    T1=Doran/Oner/Faker/Peyz/Keria（ADC=Peyz）；
+  - 已用官方阵容重生成 HLE-T1 赛前页并发布；
+  - prompts（pre/full/game）固化：首发/阵容只信官方，官方未确认标
+    "首发待官方确认"，禁止历史库过期阵容断言现状；提及量只来自本场弹幕，
+    引用历史库须标"跨场累计"+日期；
+  - 根因：players.json 库队伍归属未随转会更新（Viper/Gumayusi/Peyz），
+    待官方 roster 同步机制补上（M4+）。
+CS 场次实测（14:10 RA1-LVG 等）：BP 快报触发+2-4s、完整版 40s-1.5min、
+发布 40s（published_at 修复后实测）；发布字段覆盖 bug 已修（只记首次）。
+```
+
+## 2026-09-02 局势层准确性修复（用户实弹指出 · 最高教训）
+
+```text
+现象：HLE-T1 G1 局中页把"谁领先/对线优劣势"写反（用户实测：Zeus 领先多兰、
+Peyz 领先 Gumayusi，情报相反）。
+根因：阵容/比分走了官方源，但"局势/领先/经济/对线"事实层判断退化成了弹幕推断；
+  HLE-T1 弹幕大量反讽与玩梗（"多兰牛逼/多兰专打宙斯"），LLM 把情绪当局势写反。
+  叠加：Riot livestats window feed 对这场停滞（卡 16:11、26 分钟未更新），
+  官方实时经济当时不可得。
+修复：
+  1. prompts（game/live）固化"局势纪律"：谁领先/经济/对线优劣势只允许写官方实时数据；
+     官方滞后/缺失 → 写「官方实时数据滞后，局势待确认」，禁止用弹幕推断领先；
+     弹幕只作情绪层且必须与局势分开呈现；反讽先语气判定，无法判定降级"未确认"；
+  2. HLE-T1 G1 mid 页按新规则重生成并上线（3 处"待确认"，无领先断言）；
+  3. 阵容纪律保持：HLE=Zeus/Kanavi/Zeka/Gumayusi/Delight，
+     T1=Doran/Oner/Faker/Peyz/Keria（官方 window 双重确认）。
+教训固化：事实层三件事（阵容/比分/局势领先）全部只信官方；弹幕永不作局势结论。
+```
+
+## 2026-09-08 全公开模式（会员系统暂时关闭 · 用户定）
+
+```text
+背景：产品运营调整——暂时关闭会员/付费墙，全站全员公开。
+实现（可逆开关）：
+  - runtime/free_mode.flag 存在 = free 模式（vps_publish/add_paywall/vps_self_check 读取）；
+  - add_paywall.inject_all(free=True)：只清除所有付费墙脚本、不重注入；
+  - vps_publish/vps_self_check 在 free 模式下跳过"缺付费墙"审计；
+  - 恢复方法：删除 runtime/free_mode.flag → 下轮发布自动按规则重新注入付费墙。
+验证：webroot 全站含 danmu_member_v1 页面 = 0；进行中节点页/画像页均公开可访问。
+```
+
+## 2026-09-02 情报评判标准定稿（用户确认 · 最高）
+
+```text
+用户明确评判标准（结合官方真实数据确认情报输出，三点缺一不可）：
+  1. 及时性：以官方真实比赛时间为基准，快报≤2min / 完整版≤10min / 复盘≤15min；
+  2. 准确性/有价值性：阵容比分结果只信官方源，弹幕只作情绪层；可溯源、带置信；
+     有价值=能支持决策（灰信号/BP锚点/共识/盘口），非空结构；
+  3. 复盘与长期积累：赛后复盘闭环（共识vs结果/灰信号兑现/BP锚点应验）+ 四维知识资产沉淀。
+已写入 INTEL_PRODUCT_FRAMEWORK_2026-08-31.md 第 F 节；进入自检与 SLA 日报。
+```
+
+## 2026-09-08 虎扑热门赛事接口接入「今日比赛」补漏（用户需求 · 已上线）
+
+```text
+背景：今日比赛清单只来自 Polymarket 市场扫描；无 Polymarket 市场的 CS2
+（IEM/EWC/裂变天地等）被系统性漏掉，今日页只有 LoL。
+方案：接入虎扑公共赛事接口作为第二输入源（2026-09-08 逆向首页赛程 H5 验证）：
+  GET https://match-api.hupu.com/1/8.2.10/matchallapi/bff/standard/
+      getScheduleListByTagForH5?businessType=common&datasource=navigation&businessId=lol|cs2
+  返回：日分组赛程（时间戳/状态/对阵/比分/赛事名/liveRoomLink），实测实时可用。
+落地：
+  - tools/fetch_hupu_esports.py：抓取并归一化到 data/hupu_esports_schedule.json
+    （网络失败保留旧缓存，update_site_today 自动按 >5 分钟刷新）；
+  - tools/update_site_today.py / build_home_today.py：按对阵去重合并虎扑场次，
+    直接用虎扑状态（进行中/已结束/未开始）与比分展示，不覆盖 Polymarket 行；
+  - 去重按对阵双方而非联赛字段（Polymarket LoL 标 LPL / 虎扑标 LoL）；
+    回归测试 tests/test_today_page.py::test_split_teams_handles_*；
+  - 已同步 VPS 并发布，danmupulse.com/intel/today.html 当日即出现 CS2 场次
+    （FURIA vs GL / G2 vs Astralis 等，含明日预告 4 场）。
+边界：虎扑只用于「热门比赛覆盖/展示」，比分与终局仍走官方源交叉仲裁。
+```
+
+## 2026-09-26 danmupulse.com 打不开 · 根因排查（域名被注册商暂停）
+
+```text
+现象：用户报 http://danmupulse.com/ 打不开。
+排查结论：不是服务器/站点故障，是【域名被 Namecheap 暂停】：
+  - whois 显示 Name Server 已被替换为
+    FAILED-WHOIS-VERIFICATION.NAMECHEAP.COM / VERIFY-CONTACT-DETAILS.NAMECHEAP.COM
+    （Namecheap 的"WHOIS/联系人验证未通过"占位域名服务器）；
+  - 域名 2026-08-24 注册，2026-09-08 被替换 NS（正好 15 天 ICANN 验证期截止）；
+  - Domain Status: clientTransferProhibited（未删，仅暂停解析）；
+  - 解析到 198.18.x（本机代理 fake-ip）+ registrar 验证页，非原站。
+源站健康（排除服务器问题）：
+  - VPS nginx active，唯一 server 块 danmupulse.com → root /var/www/danmu-pulse；
+  - 本机 curl http://127.0.0.1/ 首页 200（标题"弹幕情报库 · Danmu Intel"），
+    /intel/today.html 200；
+  - 直连 IP http://158.247.214.175/ 可作临时入口（HTTP/IP，无证书）。
+历史口径：09-02 记录托管为 GitHub Pages（danmupulse.com → 185.199.x.x），
+  DNS 切 VPS + certbot 仍在待办；VPS 目前只监听 80，无 443/证书。
+修复动作（需域名所有者）：
+  1) 登录 Namecheap → Domain List → danmupulse.com → "Verify Contacts"，
+     向 registrant 邮箱重发验证邮件并点击验证链接；
+  2) 若 registrant 邮箱失效，先在 Contacts 改邮箱再验证；
+  3) 验证通过后 Namecheap 恢复原 NS，DNS 生效即可重新访问；
+  4) 长期按时完成 ICANN 验证，避免再次被暂停。
+可选临时缓解：临时移除 site_repo 的 CNAME 文件 → GitHub Pages 走
+  https://adul9981.github.io/danmu-intel/（恢复域名后再加回）。
+```
+
+### 2026-09-26 已执行的修复（当次会话）
+
+```text
+1) 临时摘除自定义域名，站点立刻恢复公网 HTTPS 访问：
+   - 删除仓库 CNAME（原值备份 runtime/domain_backup/CNAME.danmupulse.com.backup）；
+   - GitHub Pages 自定义域名置空（gh api -X PUT .../pages -f cname=""）；
+   - 验证：https://adul9981.github.io/danmu-intel/ 首页/今日页 200，
+     09-09 整场复盘页 200；过了一个自动发布周期仍正常（CNAME 未被推回）。
+2) 域名根因未解（需所有者验证）→ 恢复步骤已写进交接包 03 号文件。
+3) 采集/生成/发布链路体检：nginx active、danmu-session active、
+   stats-server active、三个 timer 正常；发现 UFW 未放行 80/443，
+   VPS 直出对外不可用（文档已记录，需确认后再放行 + certbot）。
+4) 产出服务器交接包（配置 + 说明），本机与服务器各一份：
+   docs/task/server_handover_2026-09-26/（00-06 说明 + config_files 原文）
+   docs/task/server_handover_2026-09-26.zip
+   服务器：/opt/danmu-intel/handover_2026-09-26/ 与 /opt/danmu-intel/server_handover_2026-09-26.zip
+5) 敏感信息纪律：交接包只写密钥"位置/用途/轮换方法"，不含任何明文密钥。
+```
+
+## 2026-09-08 CS2 队伍×地图战绩库 + 可见出口（用户反馈 · 已上线）
+
+```text
+背景：用户反馈"哪里能看到每个队伍对每张图的胜利情况"——此前 maps.json 只有
+强图/弱图等弹幕锚点，无结构化官方 W/L；用户也要求这是情报库长期资产。
+落地：
+  1. docs/data/intel/map_records.json（新库，官方事实层）：
+     records = 逐场逐图（match_id/date/map/双方/比分/胜者/来源）；
+     team_map_stats = 队伍×地图聚合（场次/W-L/胜率/最近日期）；
+  2. tools/sync_map_records.py：只收"可确认胜者"的官方记录（official_matches
+     maps + 台账横扫/显式胜者），2:1 无显式胜者的分数串待官方逐图源回填——
+     宁可少、不可错；VPS 发布流水线已接入，CS 结算后自动重跑；
+  3. 可见出口：队伍画像页新增「CS2 地图战绩（官方累计）」卡；
+     reports/intel_map_records.html 提供 队伍×地图矩阵 + 逐场明细；
+     画像库总览已加入口；线上 danmupulse.com/intel/intel_map_records.html 已发布；
+  4. 纪律：官方战绩与弹幕"强图/弱图"anchors 分文件/分栏，不混为事实；
+     样本少慎用、当日状态 > 历史图池（沿用 08-30 教训）。
+```
+
+## 2026-09-09/10 LCK CL NS.EA vs DNS.C 整场复盘 + 模板两新卡 + LCK CL 自动入清单（用户确认"都做吧"）
+
+```text
+A. NS.EA vs DNS.C 整场复盘（已上线）
+   - 官方口径：DNS.C 3:2 NS.EA（Riot event 116889604984222987，gameWins NS=2/DNS=3，
+     让二追三：G1/G2 NS.EA、G3-G5 DNS.C；Polymarket lol-dnsc-nsea-2026-09-09
+     20:35 结算 DNS 100c）；
+   - 数据：SOOP LCK_CL 官方房 15,631 条（15:36–20:51 北京）+ Riot window G1-G5 阵容；
+   - 灰信号核查：全系列 44 条灰词（패작8/일부러10/던지58/고의6），G3-G5 密集
+     "故意送/教练指使"质疑，双向（DNS Lancer + NS 中野）；用户口径"标准假赛"记
+     allegation-pending，官方无操纵结论（观众质疑·非结论）；
+   - 关键盘口：G3 DNS 0.2c→100c（18:21→18:28 七分钟 V 型）；整场 20:35 定 DNS 100c；
+   - 产物：reports/intel_danmu_LCKCL-NS-DNSC_full_2026-09-09.html（35KB，含
+     关键变量卡 + 阵容裁决卡）+ knowledge/intel_pages 同名 MD 镜像；
+     matches.json / gray_signals / gray_entities 已登记；线上 danmupulse.com
+     整场页 200，时间轴壳入口已挂通。
+
+B. 模板新卡固化（2026-09-10）
+   - knowledge/INTEL_HTML_TEMPLATE.md 新增「〇.0 关键变量卡 + 阵容裁决卡」：
+     关键变量卡 = 变量|角色|作用机制|提及量|方向置信（谁左右战局）；
+     阵容裁决卡 = 局|官方阵容|BP后弹幕裁决|应验/背离（BP 后优劣闭环）；
+   - 本场为首批试产样例（reports/intel_danmu_LCKCL-NS-DNSC_full_2026-09-09.html）。
+
+C. LCK CL / 非 Polymarket 场次自动进今日清单与管线（2026-09-10 修复）
+   - 根因：今日清单与 vps 管线只吃 Polymarket market_scanner 输出
+     （watchlist_events.json），LCK CL 等官方场次在 Polymarket 无市场时
+     系统性漏掉（09-09 NS vs DNS 需用户口播才补）；
+   - 修复：
+     1) 新增 tools/fetch_official_lol_schedule.py（Riot getSchedule 拉
+        LCK CL/LCK/LPL/LEC/LCP 今日+明日官方场次，归一为 watchlist 同构）；
+     2) export_today_matches.py 支持 --official 合并（队名归一化去重，
+        同场保留 Polymarket 条目并补官方比赛 id + LCK CL 联赛名）；
+     3) update_site_today.py 增加第三输入源（官方场次行、无市场时不给
+        市场链接、状态按官方 state），并自动刷新官方缓存；
+     4) runtime/run_daily_polymarket.command 每日流程加入官方赛程拉取；
+     5) 时间轴壳前缀表补 "lckcl-"（根因：此前所有 LCKCL- 前缀情报页
+        都进不了壳，故 09-09 整场页入口显示"暂未采集"）；
+     6) 回归：tests/test_official_schedule_merge.py 新增；相关测试全绿；
+   - 验证：09-10 今日清单正确输出 LCK CL（T1A vs DKC · LCK CL 标签）
+     + 明日 DNS vs KT / GX vs NAVI，且与 Polymarket 行去重不重复。
+```
+
+## 2026-10-01 假赛（剧本）情报库立项 + 价格事实层首跑（用户定稿 · 任务 6）
+
+```text
+用户定稿想法：
+  1. 电竞假赛多，队伍犯过一次一定会再犯 → 必须重点标记、再犯升级；
+  2. 想知道过去三个月有多少队伍出现「赛前高胜率、最后时刻直接反转」（LoL/Dota/CS 都要看）；
+  3. 假赛情报库两个层次成果：① 识别准确率（现在做）② 跟着下单的收益率（后置）。
+
+A. 设计文档（新增）
+   - docs/task/MATCH_FIX_INTEL_LIBRARY.md：两年成果定义、识别口径（价格事实层/
+     弹幕共识层/外部证据层）、再犯升级与降档规则、数据缺口、纪律红线、路线 P0-P3。
+   - 与 gray_entities / gray_signals / FIXED_MATCH_SUSPECT_CASES 的关系写清：
+     本库 = 灰信号库的价格事实层补强 + 两层成果指标化，不覆盖既有口径。
+
+B. 价格事实层扫描工具（新增，零 token、只读）
+   - tools/analyze_favorite_reversal.py：从归档快照算「赛前平台价 / 盘中峰值 /
+     峰值位置 / 终局」，判定 A 赛前热门输盘 / B 大热输盘 / C 末段反转 /
+     D 单局高位崩盘 / E 热门单局崩盘；输出 JSON + MD + SAP 风格 HTML。
+   - 赛前平台价的取法用 15 场有官方开赛时间的比赛校准，误差 ≤2c
+     （NAVI 0.815 vs 实际 0.805；DNS.C/NS.EA 0.575 vs 0.575）。
+
+C. 首跑基线（2026-08-05 ~ 09-09，126 场，全部已结算）
+   - A=5（AL、BLG、NS、WE×2）/ B=2（WE、NS）/ C=3（AL、WE×2）
+   - D=24（快速崩 17）/ E=8（全部 LoL：AL、BLG、BRO.C、KC、NS、MKOI、T1A、WE）
+   - 队伍榜前列：WE（整场 2 次末段反转 + 1 次热门单局崩盘）
+   - 外部证据交叉：WE vs EDG（08-19）弹幕"WE 打假赛" + 价格事实层同向 = 两路共振
+   - 事后上界收益率（仅参照，非可执行）：E 类中位 +1169.8%、C 类中位 +325.5%
+   - 产物：reports/favorite_reversal_scan_2026-10-01.{json,md,html}
+
+D. 待办
+   - P1：回迁 2026-07 与 09-10 之后的价格快照，跑满「三个月」口径；
+        价格事实层 × 灰信号库自动交叉，生成分层疑似名单；
+   - P2：名单再犯升级自动化 + 比赛页/统计页展示 + 识别准确率月度滚动；
+   - P3：可执行进场时点的收益率回测（禁止用事后最优价当业绩）。
+
+纪律：价格异动 ≠ 假赛；疑似 ≠ 认定；对外统一"观众质疑·非结论"，
+      识别结果不得直接作为实盘下单依据。
+```
+
+## 2026-10-03 假赛情报库 P1：三个月价格快照补齐 + 扫描口径修正（任务 6）
+
+```text
+A. 取数通道（韩国出口被 451）
+   - 现象：本机（Shadowrocket 韩国节点）与云服务器（首尔 Vultr）读 Polymarket
+     均 451 / Cloudflare 1026；日本/美国公共出口 200。
+   - 结论：不是脚本问题，是出口地区被拒。取数层增加出口池兜底
+     （tools/pm_proxy_pool.py / pm_http.py），大批量回补改走 GitHub Actions
+     托管跑批（美国出口稳定）：3384 市场切 23 块并行 → artifact → 回灌本地。
+   - 结果：2026-07-01~08-04 覆盖 1821/1829；2026-09-10~10-01 覆盖 1554/1555；
+     9 条缺口经逐条核对均为无成交/无行情真空档（非抓取失败）。
+   - 文档：docs/task/PM_DATA_ACCESS_2026-10-02.md（含两条防错教训：
+     请求失败≠没有数据；ISO 时间字段解析必须兼容带偏移量）。
+
+B. 扫描口径修正（tools/analyze_favorite_reversal.py）
+   1) 收益两层口径，禁止混用：
+      † 可执行 = 赛前按对手价买弱侧持有到结算（下单时点明确）；
+      ‡ 参照上界 = 热门峰值处进场（事后最优），对手价 <2c 标"不可执行"不进统计。
+      教训：cs2-bsta-youren-2026-09-14 峰值 0.9995 → 上界 199900%，曾当业绩展示。
+   2) 「赛前价可靠」门禁：平台起点必须在价格窗口前 25% 内（pre_is_prematch），
+      否则可能是局中平盘；54/190 条 A 类已标注，并另出"赛前确认组"。
+      教训：不做这一步，LoL 基线跟单收益从 -3.1% 虚高成 +9.4%。
+   3) 一级分类按 slug 前缀分游戏（lol-/cs2-/dota2-/val-），不再用子串匹配。
+   4) 区间按 slug 内日期严格裁剪（--since/--until），外溢 22 条已剔除。
+   5) 新增基线对照：赛前 ≥0.70 全部整场侧 1101 条、输盘率 17.3%、
+      无差别跟单期望收益 -15.0%（赛前确认组 -17.5%，分游戏全为负）
+      → 证明「赛前高胜率」单独不是信号，必须叠加筛选。
+   6) 默认三个月口径：不给 --since/--until 时自动取 --date 往前 92 天，
+      裸跑命令与文档基线一致，避免多口径混用。
+
+C. 三个月基线（窗口 2026-07-03 ~ 10-01，3226 场）
+   A=190（赛前确认 136）/ B=110 / C=129 / D=24（快速崩 17）/ E=8（全 LoL）
+   分游戏：CS2 1793 场 A=79/C=55；LoL 733 场 A=71/C=44/D=19/E=8；
+          Valorant 331 场 A=24/C=17；Dota2 369 场 A=16/C=13
+   队伍榜前列（三个月）：Bushido Wildcats、HOTU、ECSTATIC、Nuclear TigeRES、T1、
+     Conviction、Forsaken、G2 NORD、Barça eSports、WE、KT、LYON、Gentle Mates GC、
+     Team Falcons VEGA、1win、Nemiga、VIT、Keyd、Marsborne、TDK、9z
+   产物：reports/favorite_reversal_scan_2026-10-03.{json,md,html}
+
+D. 已知缺口 / 待办
+   - CS2 / Dota2 / Valorant 队伍未登记 docs/data/intel/team_names.json，
+     报告暂用原始写法；需扩充登记表后重跑归一。
+   - 价格事实层 × 灰信号库自动交叉（P1 剩余）、分层疑似名单（P1 剩余）。
+   - 口径 A（信号时点可执行 ROI）需盘口深度数据，当前快照不含，暂不实现。
+   - 临时私有仓库 Adul9981/pm-price-backfill 已完成使命，可删（未推业务代码）。
+
+纪律不变：价格异动 ≠ 假赛；疑似 ≠ 认定；对外统一"观众质疑·非结论"，
+      识别结果不得直接作为实盘下单依据。
+```
+
+## 2026-10-04 清理：历史情报库联赛标签 + 本地站点副本刷新（任务 6）
+
+```text
+A. 触发
+   - 用户："WSCI 要加入（监控白名单），顺手清理掉（既有失败测试）"；
+   - 清理由 DANMU_GAME_SCOPING_MIGRATION_2026-09-26 第 5 节记录的三项"既有失败"
+     （本地 .danmu_intel_site 为 09-10 副本、match_index.json 为 08-29 产物）。
+
+B. 刷新后暴露的真实缺陷（并已修复）
+   1. 联赛标签 "-"：同一场比赛多页（G1/G2/full/live）扫描顺序不定，先扫到无联赛
+      信息的页就把整行写成 "-"；CS2 页还被误标 LEC（NAVI/G2 跨游戏队误判）。
+      → tools/build_history_index.py：
+        · 联赛判定补"文件名联赛前缀"一级（CS2-/DOTA-/LCKCL-…，生成器既有约定）；
+        · league_by_teams 改读注册表 team_names.json 的 league 字段，跨游戏队
+          （NAVI/G2/Legacy/Spirit/VIT）一律不猜；"Challengers"=LCK CL（LFL/LVP 除外）；
+        · CS2 赛事写法（EWC CS2 / ESL Pro League / BLAST / IEM）纳入 normalize_league；
+        · 多页合并时联赛可回填；"情报"入口按节点优先级确定性选页（不再由扫描顺序决定）；
+        · matches.json 只给"LoL 其他"而标题能定二级联赛时，以标题为准。
+   2. 市场链接页空壳：本地无当日/当周扫描数据时三张卡全空，页面变死链页。
+      → 回退展示最近 12 场已确认市场链接（真实历史 slug）。
+   3. 无情报占位行 result 为空 → 历史页显示"待确认"；改为显式标注"暂无情报（未采集）"。
+   4. 站点导航注入要跑两遍才收敛（test_nav_injection_is_idempotent 偶发红）：
+      add_site_nav 清除旧面包屑时多删了后面的换行 → 修正正则（一次性收敛）。
+   5. 队伍命名：新增别名 lgc→legacy、fal2→flc；删除重复条目 dendele
+      （与 dendelecs 同名别名冲突，曾把 Spirit 一场拆成两行）；
+      HLE-BFX 裸缩写页按仓库内跨源说明映射回同一场 LCK CL（BFX.Y vs HLE.C）。
+
+C. 结果与验证
+   - pytest tests/：127 → 132 passed / 0 failed（新增 4 条回归锁联赛判定与重复行）；
+   - 历史库 134 场：联赛标签 0 个 "-"、0 个未知、0 行空结果、0 组重复行；
+   - 站点副本：build_history_index → publish_intel_pages（不带 --push）刷新完成，
+     history.html / market_links.html 已上线到本地副本；**未推送远端**。
+
+D. 未做（需用户决策）
+   - 监控白名单仅加了 WSCI（config/market_watchlist.json）；实测 Gamma 300 个
+     电竞事件里白名单只命中 3 个，EMEA Masters / Demacia Cup / ESL Pro League /
+     Asian Games 等 138 场未覆盖 —— 是否扩白名单待定。
+   - → 2026-10-05 已补（EMEA Masters / Demacia Cup / Asian Games / LCS /
+     ESL Pro League / BLAST Slam），见「2026-10-05 监控白名单补齐」。
+```
+
+## 2026-10-04 待办：直播间中途切场（主播换台）的识别与切片隔离（任务 6）
+
+```text
+A. 现象（当天真实发生，用户标记为待办，待一起定方案）
+   - 虎牙 123321（CSBOY 官方）在 EPL S24 同日两场并行时来回切台：
+     20:20–20:26 9z-TYLOO → 20:27–20:46 Falcons-Aurora →
+     20:47–20:50 9z-TYLOO → 20:51 起 Falcons-Aurora（用户 20:52 反馈"又切回来了"）；
+     房间标题全程未更新（仍写"绿龙 VS PV"）→ 标题/房号/一房一场三类判据全失效。
+   - 现行后果：按时间窗切出的弹幕会串场，污染灰信号/共识/密度/盘口对照，
+     且同联赛跨场混源的危害与规则 19（禁跨联赛混源）同类。
+
+B. 现有资产（规则有、工具在，但未接通）
+   - 规则：knowledge/DANMU_CAPTURE_RULES.md §19bis「主播切赛识别」三信号（时间窗+内容提及+主播画像）；
+   - 工具：tools/check_stream_match.py（已实现三信号打分）；
+   - 实测结论（当日）：**暂不可用**——matches.json 无当日 CS2 场次（最后一条 09-09）
+     导致工具直接报错；即便补上队伍信息，按同算法模拟仍会把 9z-TYLOO 时段判成
+     "匹配本场"（假阴性），因为 TYLOO 未登记且 ≤2 字符 ASCII 关键词（如 "9z"）被主动排除。
+
+C. 结论 / 硬前置
+   - 缺的不是判定逻辑，是前置数据：**当日场次登记 + 联赛全量队伍/选手词表**；
+   - 多房间同场采集本身即是天然交叉校验（今天 321123 全程稳定在 TYLOO-9Z）。
+
+D. 产物与留痕
+   - 方案待议文档：docs/task/STREAM_SWITCH_HANDLING.md（含候选方案 A–E、待决策 8 问）；
+   - 切场日志：runtime/danmu_sessions/cs2_epl_s24_2026-10-04/switch_log.jsonl；
+   - 欠账：reports/intel_danmu_CS2-FLC-AUR_G1_2026-10-04.html 完整性栏未标注
+     20:47–20:50 串场时段，下一节点生成时一并补（剔除 + 标注）。
+
+纪律：方案未定稿前不改采集/切片代码；不擅自上线；先攒样本再固化规则。
+```
+
+## 2026-10-05 监控白名单补齐：顶级赛事漏抓（任务 2 / 任务 6）
+
+```text
+A. 缺口实测（Gamma 电竞标签全量，635 事件）
+   - 改前：白名单只命中 3 个（KeSPA Cup ×2 + LCK Challengers ×1）；
+     其余 632 个未命中，其中"比赛类"覆盖明显缺失的有：
+       LoL：Demacia Cup（3 场，单场 24h 成交 98 万/115 万/13 万）、
+            Asian Games（11 场）、EMEA Masters（2 场）、LCS Promotion（2 场）；
+       CS2：ESL Pro League（8 场，单场 24h 成交 4-8 万）；
+       Dota2：BLAST Slam（3 场，3.5k-5.9k）、PARI Universe 资格赛（4 场，最高 7 万）。
+   - 结论：不是"今天没比赛"，是白名单没登记（违反防错规则 1/4 的口径）。
+
+B. 本次登记（config/market_watchlist.json）
+   - LoL += EMEA Masters / Demacia Cup / Asian Games / LCS；
+   - CS2 += ESL Pro League；
+   - Dota2 += BLAST Slam。
+
+C. live 验证（规则 4 强制，2026-10-05 08:49 UTC）
+   - python3 tools/market_scanner.py --live --live-limit 100 --live-pages 3
+   - 抓取 900 事件 / 电竞标签 300 / watchlist 命中 32（改前 3）/ 窗口内 13 场；
+   - 今日实到：Demacia Cup 3 场、ESL Pro League 8 场、LCS Promotion 1 场，
+     产出候选 4 个（reports/opportunity_scan_2026-10-05.md）；
+   - 回归：tests/test_scan_regression.py 新增 6 条联赛标题（含 WSCI），
+     全量 pytest 139 passed / 0 failed。
+
+D. 已知缺口（未纳入，待用户决策）
+   - CS2 三线赛事约 365 场（Exort 127 / European Pro League 57 / United21 52 /
+     ESEA 43 / Gamers Club 36 / CCT 29 / 1win 8 / Dust2.dk 7 / NODWIN 4 /
+     DACH 2）：多无 24h 成交或 <1k，登记会把扫描面从 13 场推到 300+ 场，
+     建议不纳入（宁缺毋滥）；如要纳入，建议只按"有成交量"过滤后登记。
+   - 其他一级游戏外的项目：R6 Siege 14 / MLBB 16 / Honor of Kings 9 /
+     Overwatch 5 / StarCraft II 2 —— 超出当前一级分类（LoL/CS2/Dota2），暂不纳入。
+   - Valorant 40 场（VCT Champions 4 场，成交 0.3k-5.3k）：一级标准里是"预留"，
+     纳入需同步定采集源与情报口径，待决策。
+   - 采集侧未登记：EMEA Masters / Demacia Cup / Asian Games / LCS /
+     ESL Pro League / BLAST Slam 在 docs/data/intel/leagues.json 还没有默认采集集
+     （平台/直播间），即"扫描到但没弹幕源"——下一步按 17ter 流程补源。
+```
+
+## 2026-10-11 GitHub 失败邮件修复（任务 6 · 基础设施）
+
+```text
+A. 现象：邮箱持续收到 GitHub Actions 失败提醒（约 2 封/天），来自两个工作流：
+   - game-status（auto publish intel pages）：占约 8/10；
+   - pages build and deployment：占约 2/10。
+
+B. 根因（两个不同问题，勿混为一谈）
+   1) game-status = 我们自己的脚本问题：.github/scripts/game_status_fetch.py
+      用裸 urllib，Polymarket gamma 偶发 500 直接抛异常 -> 整个 job 失败 -> 邮件。
+      （日志：urllib.error.HTTPError: HTTP Error 500 at get()）
+   2) pages build = GitHub 侧基础设施偶发：runner 拉 jekyll 构建镜像超时
+      （docker pull ghcr.io/actions/jekyll-build-pages 时 context deadline exceeded），
+      与我们仓库无关；但被"每分钟一次推送"放大（每次推送都触发一次 Pages 构建）。
+
+C. 修复（已上线并验证）
+   1) game_status_fetch.py（提交到 data + main 两个分支，data 才是实际执行副本）：
+      - get() 加退避重试：5 次、1/2/4/8s + 抖动，只重试 5xx/429/超时，4xx 立即失败；
+      - 上游整体不可用 -> 打印 ::warning:: 并保留上一份数据（不覆盖、不失败），
+        数据自愈只需 5 分钟——避免"上游抖一下 = 一封失败邮件"；
+      - 单场详情抓取失败不再静默跳过，累积后写 ::warning:: 留痕。
+      本地已用桩函数验证：5xx 重试后可恢复、4xx 快速失败、断网时退出码 0 且不写文件。
+   2) 消除整站每分钟 churn（tools/build_intel_profiles.py）：
+      画像页脚"生成：%Y-%m-%d %H:%M" -> 只到日；此前每轮重写 159 个 HTML
+      （155 个只有时间戳变化），现已降到 1 个（实时页）。
+   3) 镜像推送节流（tools/vps_publish.py）：
+      仅"实时页/心跳"变化时，最多每 600s 推一次；含真实内容变更（新情报页、
+      今日页、历史库）立即推送。nginx 直出不受影响（仍每分钟最新）。
+      状态文件 runtime/vps_mirror_last_push.txt；已在服务器观察到
+      "镜像推送节流：仅实时页变化"日志，15:38 新节点页发布时仍按真实变更即时推送。
+
+D. 预期效果：Pages 构建从 ~1440 次/天降到 ~144 次/天，叠加脚本重试后，
+   失败邮件应趋近于 0（Pages 剩余风险为 GitHub 自身容器拉取超时）。
+
+E. 回滚：服务器备份 /opt/danmu-intel/runtime/backup_20261011/
+   （vps_publish.py / build_intel_profiles.py 原版）。
+```
+
+## 2026-10-15 形态结构库批量入库：最近一批 LoL 比赛（price_paths 114 -> 371）
+
+```text
+A. 需求（用户）：最近很多场 LoL 比赛，把"每个小局 + 整局"的 K 线走势形态结构记录进形态库
+   （形态库此前已积累 114 条）。
+
+B. 范围界定（重要）：10-02 起（含德玛西亚杯 DCGI 场次）按用户 2026-10-12 指令不接入
+   Polymarket，无价格序列 -> 无法出形态；因此本批覆盖"最后一批有价格数据"的区间
+   2026-09-10 ~ 2026-10-01，共 260 场 LoL（全量，未挑选）。
+   联赛构成：EMEA Masters 97 / 国际赛 71（WSCI 38 + Asian Games 14 + …）/ 其他赛区 46 /
+   VCS 16 / LCS 8 / LPL 7 / LCK CL 6 / LEC 5 / LCK 2（LCK/LPL/LEC 正赛 9 月中旬已收官）。
+
+C. 数据补全（原本只有"整场"序列）
+   1) 新增 tools/index_game_markets.py：逐事件拉 gamma /events，索引 Match Winner +
+      Game N Winner 市场 -> runtime/pm_backfill/index_lol_games_2026-09-10_2026-10-01.json
+      （260 场 / 692 个市场；其中 133 场有逐局盘）。
+   2) 新增 tools/fetch_game_market_series.py：公共出口池已失效（backfill_price_fast 会
+      ZeroDivisionError），改走 pm_http.get_json 的公共只读 CORS 兜底 + 分片并行
+      （4 分片 5.3 分钟，ok=427 / fail=0 / empty=0），写入 docs/data/snapshots/<event>/。
+   3) 粒度真相（2026-10-18 更正：以下结论错误，根因是固定传了 interval）：
+      历史市场只有 10 分钟采样（fidelity=1 返回 0 点，1 分钟不可回溯），
+      小局约 45 分钟 => 4-6 个点，已在页面显式标注"小局形态为粗粒度方向参考"。
+
+D. 入库（新增 tools/build_pattern_library.py）
+   - 逐场解析 整场 <slug>__i__Team.jsonl + 小局 <slug>-gameN__i__Team.jsonl；
+   - 用 tools/classify_pattern.py（A/B/C + 热门压制）分别打标，生成
+     price_shape = "game1:… | game2:… | series:…"（低/高按该侧全窗口 min/max）；
+   - 结果与比分：整场以结算价定胜者，比分由逐局归属统计，决胜局无独立市场时按整场归属补足
+     （39 场，已在 result 里注明）；未结算/无整场定价的 3 场不入库（缺口）；
+   - 已存在条目默认不覆盖（--update 只刷新本工具产出的条目，避免动到人工复盘条目）。
+
+E. 产物
+   - docs/data/intel/price_paths.json：114 -> 371 条（新增 257，全部标注 600s 粒度）；
+   - reports/pattern_shapes_lol_2026-0910_1001.html（SAP/Apple 风格：形态频次 + 按联赛逐场
+     明细 + 缺口说明），明细 JSON 同名 .json；
+   - 抽查校验：LCK 09-12 HLE 3:1 T1、LCK 09-13 GEN 3:1 HLE、LPL 09-13 AL 3:1 BLG、
+     LEC 09-11 NAVI 3:2 GX、LCS 09-12 C9 3:0 SR 均与官方 gameWins 一致。
+
+F. 形态频次（本批，逐局 260 场中 133 场有小局盘 = 约 460 个市场侧）
+   小局：B4 直线阴跌 379 / C2 五五开开局碾压 208 / A2 中位 U 型反转 127 / A5 W 型双底 69 /
+        C1 中位震荡 52 / A3 折价修复 41 / 热门全程压制 29 / B2 死亡螺旋 26 / A7 19 / A1 12；
+   整局：B4 直线阴跌 214 / A3 折价修复 102 / 热门全程压制 76 / C2 70 / B4 低开阴跌 67 /
+        A2 60 / A4 下狗整场反转 35 / B2 23 / A1 12。
+   备注：10 分钟粒度会放大"B4 直线阴跌"与"未知"（C1/细形态识别需要 1 分钟数据）。
+
+G. 未做 / 待办
+   - 10-02 之后（含 DCGI 德杯）无价格数据，若要继续沉淀需重新接入 Polymarket 或改用
+     官方/第三方赔率源；
+   - 本批 127 场无逐局盘（仅整场形态），如需小局形态只能等以后有新数据源；
+   - 形态频次已可直接支撑"形态频率"功能点，下一步可做 A1/A2/A4 分口径期望矩阵。
+```
+
+## 2026-10-15 追加：10 月 LoL（含德杯 DCGI）形态入库（price_paths 371 -> 427）
+
+```text
+A. 背景：用户要"最近 LoL 比赛"的形态。原以为 10-02 起无价格数据（德杯期间按指令未接入
+   Polymarket）；实测 Polymarket 历史市场仍可回补（gamma 事件存在、逐局盘齐全），
+   因此把 2026-10-02 ~ 10-14 的 56 场 LoL 一并补入。
+
+B. 枚举：gamma /events?tag_id=64&closed=true（order=startDate desc 翻页到 10-02）
+   -> 10-02~10-14 共 56 场 LoL 事件（德杯 DCGI 19 / EMEA Masters 16 / 其他赛区 8 / LCS 6 / LCP 6 / VCS 1）。
+   索引：runtime/pm_backfill/index_lol_games_2026-10-02_2026-10-14.json（244 个市场，56 场全部有逐局盘）。
+   抓取：4 分片 3 分钟，ok=244 / fail=0 / empty=0。
+
+C. 校验（Polymarket 结算 vs 官方/在库结果）：德杯 BFX 3:2 JDG、KT 3:2 VIT、WE 3:2 FLY、
+   BRO 3:1 LGD、NAVI 2:0 FLY、JDG 2:0 SR、VIT 2:0 RED、LGD 2:0 JDG 全部一致；
+   LCS 10-04 TL 3:1 LYON 与官方 gameWins 一致。
+
+D. 产物：price_paths.json 427 条；reports/pattern_shapes_lol_2026-1002_1014.html（+明细 JSON）。
+   德杯 19 场结果与比分全部为 Polymarket 结算推导，官方逐局阵容未回填。
+```
+
+
+
+## 2026-10-15 追加：形态结构库补 CS2 逐图 + 大联赛漏接（ESL Pro League S24）
+
+```text
+A. 需求（用户）："把这些形态都放到知识库里；先做 LoL 的形态，再做 CS 的形态，
+   包括每个小局和整局的 CS。最近有几个大的联赛赛事我们都没接。"
+
+B. 缺口定位（关键发现）：用 gamma tag_id=64 closed 事件清单（09-24~10-14 共 1,600 场）
+   与 docs/data/snapshots 对比：
+   - ESL Pro League S24（10-03~10-11，41 场）**一场都没接**；Thunderpick 组赛（10-10 起）同样全缺；
+   - 存量 cs2-* 快照目录 1,971 个 **全部只有整场序列、没有任何逐图序列**（-gameN 文件为 0）；
+   - 09-24~10-14 区间 CS2 事件 888 场，其中 617 场未入库（多为三级赛事：ESEA/CCT/Dust2.dk/United21 等，
+     属 AGENTS 规则 4 的已知缺口）；LoL 同区间 0 场（9 月中旬各赛区收官后无 LoL 赛事）。
+
+C. 工具改造（可复用）
+   1) tools/index_game_markets.py：WINNER_GROUPS 增加 CS2 的 "Map N Winner"；
+      新增 --league-keywords（按事件标题过滤一级赛事）与 --titles-out（事件标题缓存）。
+   2) tools/build_pattern_library.py：新增 --slugs-file（按清单构建，避免扫全量三级赛事）；
+      联赛归一对 CS2 统一为 "CS2"；页面文案随游戏切换（逐小局/逐图）。
+   3) 新增 tools/pattern_library_stats.py：胜方/负方分开的形态统计 + 深水占比 + 让一追二基准率 + 低点买入倍数。
+   4) 新增 tools/build_pattern_index.py：形态库总览页生成器（LoL + CS2 统一口径 + 期望值表）。
+
+D. CS2 批次（2026-08-01 ~ 10-15，63 场：ESL Pro League 41 / EWC 12 / BLAST 10）
+   - 索引 runtime/pm_backfill/index_cs2_tier1_2026-08_2026-10-15.json（189 个市场）；
+     抓取 6 分片 1.3 分钟，ok=156 / fail=0 / empty=0（33 个整场序列已存在，跳过）。
+   - price_paths.json：427 -> 472（+45；18 场为既有复盘条目，不覆盖）。
+   - 页面 reports/pattern_shapes_cs2_2026-08_2026-10.html；总览页改为生成器产出 reports/pattern_shapes_index.html。
+
+E. CS2 结论（样本 63 场，方向性可信）
+   - 逐图主流形态与 LoL 一致：C2 五五开开局碾压 47% / A2 中位 U 型 28%；
+   - **CS2 BO3 让一追二基准率 24%（14/59）> LoL BO3 17%（11/66）**——地图制下"输一图后整场折价"更常有回归；
+   - 机械抄底（首次触及阈值价买入、持有到结算）在 CS2 **全阈值负期望**：
+     逐图 0.35 -0.15 / 0.25 -0.25 / 0.10 -1.00（46 笔全错）；整局 0.35 -0.47；
+   - 结构限制：Polymarket 的 CS2 BO3 只开 Map 1/Map 2 胜者盘（Map 3 仅 Rounds 盘），
+     决胜图按整场结算归属补足（已在条目 result 注明）；BO5 开 Map 1-4。
+
+F. 知识库落点（"形态进知识库"）
+   - 新建 knowledge/PATTERN_STRUCTURE_LIBRARY.md（形态结构库·统计口径）：LoL 316 场 + CS2 63 场，
+     口径/频次/深水/让一追二/期望值/形态→策略映射/复现命令/缺口；
+   - knowledge/README.md 登记；docs/framework/REVERSAL_PATTERN_LIBRARY.md 加交叉引用；
+   - 复盘索引新增 3 条批量入库记录（2 条 LoL + 1 条 CS2）；
+   - 顺手修复：tools/append_knowledge_review.py 的索引重建会清空人工补写的"结果"列
+     （一次重建清空 78 行），已改为保留已有非空结果（本次已从 git HEAD 与 .external 副本回填，
+     refilled 102/115 行）。
+
+G. 缺口（待办，勿静默跳过）
+   - Thunderpick World Championship / PGL Bucharest 资格赛：不在登记一级赛事口径内，待用户确认是否登记；
+   - CS2 三级赛事（ESEA/CCT/Dust2.dk/United21 等约 617 场 09-24~10-14 未接）仍未纳入；
+   - Liquipedia/HLTV 二次交叉未完成（沙箱直连 TLS 失败、公共代理不支持非 Polymarket 域名），
+     CS2 结果目前只以 Polymarket 结算价仲裁；
+   - 10-15 及之后的比赛待赛后回补。
+```
+
+## 2026-10-15 追加：用户四点指令落地（登记 / 不接三级 / Liquipedia 通道 / 分钟级窗口）
+
+```text
+A. 背景：上一轮遗留四项待用户拍板事项。用户回复"第一个要登记；第二个不要；
+   第三个再想想办法；第四个我还是 1 分钟级别的——最近几天结束的能做到 1 分钟级吗？"
+
+B. ① 登记（已完成，上一轮已落）
+   config/market_watchlist.json 的 cs2.league_keywords 扩登记 Thunderpick / PGL Bucharest /
+   PGL Major / PGL Cluj / PGL，并加 tier_note（一级口径）；AGENTS 规则 4 同步更新。
+
+C. ② 三级赛事（已完成，上一轮已落）
+   CS2 三线赛事（Exort/ESEA/United21/Gamers Club/European Pro League/CCT/Dust2.dk/DACH/
+   NODWIN/1win）明确"不接"，写入 AGENTS 规则 4 的未纳入清单。
+
+D. ③ Liquipedia 交叉核对（本轮完成，"另想办法"= 换通道）
+   1) 通道：python urllib 直连 liquipedia.net 在本机 TLS 失败，但 curl 直连正常
+      → tools/fetch_cs2_liquipedia.py 的 fetch() 加 curl 回退（--compressed + UA），打通；
+      并加 --raw-file（离线复算）与 --json（结构化输出）。
+   2) 修两个解析 bug：
+      - `{{Matchlist|...}}` 被前缀匹配当成 `{{Match}}` 整块吞掉 → 41 场只解析出 17 场；
+        修：模板名后必须紧跟非标识符字符；
+      - 加时比分在 `o1t1t/o1t1ct/o1t2t/o1t2ct`，只读常规时间会把 16:12 读成 "12:12"
+        伪平局（曾把 vit-mouz 决赛 G3、lgc-prv G3 误判为"与 Polymarket 不一致"）。
+   3) 新增 tools/crosscheck_cs2_liquipedia.py：按「队伍对 + 日期 ±1 天」配对，
+      输出 agree/mismatch/单边独有清单 + markdown。
+   4) 结果：ESL Pro League S24 **41 场 41/41 胜方一致（0 冲突）**；
+      产物 runtime/pm_backfill/liquipedia_epl_s24.{wikitext,json}、
+      runtime/pm_backfill/crosscheck_epl_s24.md。
+   5) 仍待做：HLTV 层（阵容 / 地图禁选 / 排名），Cloudflare 反爬需人工或封装。
+
+E. ④ 分钟级窗口 —— 实测结论：**只有最近约 24 小时可做，过期不可回溯**
+   （2026-10-18 更正：该结论不成立。不传 interval 时 2 个月前的老比赛仍返回 60s，
+   7 天窗口 9981 点；见本文件末尾“2026-10-18 分钟级可回溯修正”一节。）
+   1) 实测（2026-10-15，CLOB prices-history，只读）：
+      - 15.8h 前的市场 `interval=1d&fidelity=1` → 691-702 点/侧、中位间隔 60s、跨度 11.5h；
+      - 32.8h / 37.9h 前的市场 → 同一参数 0 点；
+      - 32.8h 前用 `interval=max&fidelity=1` → 459 点、中位间隔 600s（即历史库 600s 的来源，
+        是服务端保留策略，不是参数选错）；
+      - `interval=1m&fidelity=1` → 一律 0 点（无效口径）。
+   2) 结论：**"最近几天结束的"做不到分钟级**；要分钟级必须赛后 ~24h 内归档。
+   3) 改造（防覆盖）：fetch_game_market_series.py 新增 --hires-only / --hires-suffix，
+      分钟级写 `<slug>__<idx>__<side>.hires.jsonl`，不覆盖赛前 36h 的 600s 序列；
+      build_pattern_library.py 让 `.hires.jsonl` 优先，spacing_s 反映真实粒度。
+   4) 首跑验证：lol-fox1-kt-2026-10-14（唯一落在 24h 窗口内、BO5）
+      → 5 市场/10 文件 ok=5 fail=0，逐局+整局均 60s；重建 10-02~10-14 LoL 分段
+      （刷新 56 条，price_paths 累计 472 不变），条目 source 标注"60s 粒度"。
+   4bis) 窗口内还发现 2 场 CS2（cs2-9z-aur1 / cs2-fal2-nip，10-14 **Thunderpick 正赛**，
+      属刚扩登记的一级赛事）→ 一并归档 6 市场 12 文件（600s 全量 + 60s hires）；
+      把 09-01~10-15 新关键词索引并入主索引（189→346 市场 / 63→114 事件），
+      CS2 形态批重建 63→65 场（price_paths 累计 **474**），总览页同步重建。
+      新增 tools/build_hires_index.py：离线从既有索引筛出「最近 N 小时」市场，一条命令生成归档索引。
+   4ter) 口径待定：新关键词索引的 114 场事件里 56 场是**资格赛**（PGL 各洲资格赛 /
+      Thunderpick Closed Qualifier / PGL Open Qualifier），**未纳入统计**——是否按一级统计
+      待用户确认（宁缺毋滥：未确认前不计入）。
+   5) 新增 tools/probe_clob_granularity.py（粒度×年龄探测器，--no-pool 跳过空出口池）。
+   6) 知识库落点：knowledge/PATTERN_STRUCTURE_LIBRARY.md 第一节口径改为"两档粒度"、
+      新增 4.7 节（CS2 交叉核对结果）、第六节限制更新；AGENTS 新增规则 26（粒度与赛后
+      24h 归档纪律）、规则 27（CS2 交叉核对通道 + 解析红线）。
+
+F. 回归测试（AGENTS 规则 5 门禁）
+   - tests/test_scan_regression.py：新增 CS2 一级赛事（Thunderpick / PGL）受理用例 +
+     三级赛事（ESEA / CCT / United21）拒收用例，26 passed；
+   - 新增 tests/test_pattern_granularity.py：锁定 `.hires.jsonl` 优先且不污染队伍名、
+     只有 600s 序列时行为不变，2 passed。
+
+G. 缺口（待办）
+   - 分钟级归档仍是**手动/按需**、无赛后自动钩子 → 隔夜未跑即永久损失，
+     属当前最大一条数据资产风险（已写入 AGENTS 规则 26b 与形态库第六节）；
+   - Thunderpick / PGL 场次待补抓（登记已落，索引未重建）；
+   - 存量 600s 条目无法提升粒度，只对"未来 24h 内"的场次生效。
+```
+
+## 2026-10-15 追加：粒度贯穿数据层与页面层（60s / 600s 严格分层）
+
+```text
+背景（用户指令）："这些数据要注意区分，通过 10 分钟颗粒度和 1 分钟颗粒度获取的数据
+质量是不一样的。" 上一轮只做到"另存 .hires 并优先读取"，本轮把粒度做成
+**数据层一等字段 + 页面/统计/回测强制分层**。
+
+A. 数据层
+   1) tools/build_pattern_library.py 新增 granularity_label(spacings)：
+      按实际采样间隔归桶（<=120s -> 60s；>=240s -> 600s；两种并存 -> mixed；
+      无样本 -> unknown）。有 ±1s 抖动（599/601），所以先归桶再输出，禁止原样输秒数。
+   2) build_match() 返回值新增 `granularity`；写入 price_paths.json 时把它作为独立字段
+      （此前粒度只写在 source 文本里，机器不可读）。
+   3) 【关键修正】粒度判定**按实际采样间隔，不看文件名**：
+      主序列里已有多场真实 60s 数据（赛后不久抓取时 `interval=1d&fidelity=1`
+      本身就返回分钟级），并非只有 `.hires.jsonl` 才是 60s。
+      实测分布（381 场）：CS2 53×600s + 12×60s；LoL 315×600s + 1×60s（fox1-kt 10-14）。
+      -> 旧文档"CS2 只有 2 场 60s"是错的，本轮已全量修正。
+   4) 三个报告全部重建（含此前无该字段的 LoL 09-10~10-01 260 场）；
+      price_paths.json 仍为 **474** 条（只加字段，不增条数）。
+
+B. 页面层
+   1) 分段页 reports/pattern_shapes_*.html：卡片"粒度"由硬编码 10m 改为
+      "600s + 60s · 600s 53 场 · 60s 12 场"；逐场明细每行加粒度角标（60s 高亮）；
+      口径段改成两档说明（分辨率 + 窗口都不同，60s 更细但更短）。
+   2) 总览页 reports/pattern_shapes_index.html：卡片显示粒度构成；
+      每个游戏块加"数据粒度构成"行；期望值回测表加"粒度"列并按 600s / 60s 分层出表；
+      口径段新增"两档不得互相推证"的显式说明与归档窗口条目
+      （“不可回溯”措辞已于 2026-10-18 更正）。
+   3) 期望值回测 dip_buy 改为按**实际间隔**分层（原先靠文件名，会把 10 场真实
+      60s 的场次算进 600s 组）。修正后 CS2 600s 组 n 由 39 -> 30（整局 0.35 阈值）。
+
+C. 统计层
+   tools/pattern_library_stats.py 新增 --by-granularity：按粒度分组各出一份完整统计
+   （胜方/负方频次、深水、让一追二、低点买入倍数），最后附一份全量对照并标注
+   "两档混算，仅作对照"。输出里固定打印粒度构成。
+
+D. 关键数字（分层后）
+   CS2 让一追二（BO3）：600s 11/49 = 22% | 60s 3/12 = 25% | 合计 14/61 = 23%
+     -> 该指标两档一致，不被粒度扭曲（结论沿用）。
+   CS2 赢家侧曾 ≤0.30：整局 600s 12/53 = 23% / 60s 4/12 = 33%；逐图 600s 24/105 = 23% /
+     60s 11/24 = 46% -> 深水口径**明显受粒度影响**，只能解读为采样精度，不是机会变多。
+   CS2 机械抄底：600s 组 0.10 阈值逐图 35 笔全错、整局 20 笔全错（结论不变）；
+     60s 组因 n 仅 7-20 笔且含"窗口更短 + 选择性偏差"，**只看不引用**。
+
+E. 纪律固化
+   AGENTS 规则 26c 改写：粒度以 `granularity` 字段为准、按实际间隔归桶、
+   禁止靠文件名判断，并写明两档差异的三重来源（精度 / 窗口 / 选择性偏差）不得互相推证。
+
+F. 回归测试
+   tests/test_pattern_granularity.py 由 2 个用例扩到 5 个：
+   新增 granularity_label 抖动归桶（599/601 -> 600s）、
+   load_sides 按实际间隔分层且 60s/600s 去重（不因文件名误判）、
+   dip_buy 分层（同一场 600s 看不到的深水只能在 60s 组计入）。
+   tests/test_scan_regression.py 26 passed 不变；全量 147 passed / 3 failed
+   （3 个失败仍是既存的站点构建产物问题：intel_gray_verification_stats.html 缺 favicon、
+   两个 match 页关联断言，与本次改动无关）。
+
+G. 事故与回滚（记录）
+   首次重建 CS2 分段页时误用 `--range 2026-08-01:2026-10-15 --prefix cs2-` 全量扫描，
+   把快照目录里 1243 个 cs2-* 目录当成比赛写进 price_paths.json（474 -> 1573）。
+   已定位并按「slug 白名单」精确回滚至 474，同时把正确的 65 场 slug 清单固化到
+   runtime/pm_backfill/cs2_pattern_slugs_2026-10-15.txt，后续重建一律用 --slugs-file。
+   教训：形态库重建必须显式给 slugs-file，禁止用 range/prefix 全扫（磁盘上存在大量
+   非比赛目录）。
+```
+
+## 2026-10-15 追加：粒度对照页 + 总览页补齐 LoL 全量（用户要求"画到 HTML 里"）
+
+```text
+1) 新增 tools/build_pattern_granularity_page.py -> reports/pattern_shapes_granularity.html
+   回答"多少情报来自 1 分钟级 / 多少来自 10 分钟级"，四段结构：
+   - 粒度普查：381 场里 60s 仅 13 场（3%）、600s 368 场；小局维度 752 个市场里
+     60s 只有 28 个（4%）；并写明 60s 场次偏近期/受关注 = 选择性偏差；
+   - 形态样本 × 粒度：11 个实际出现的标签逐条拆 60s / 600s（几乎全在 600s 组，
+     60s 组每形态个位数），合计 <20 的标"样本不足"（A1/A5/A6/A7/C2 早期缩距）；
+   - 关键结论来源分层：让一追二 BO3（60s 3/12=25% vs 600s 22/115=19%，合计 25/127=20%）、
+     整局/逐局深水 ≤0.30 与 ≤0.20、机械抄底 0.35/0.25/0.10 的 n/命中/ROI，全部两档并列；
+     明确"右列（600s）可当基线，左列（60s）只能当观察，两档不构成互推证据"；
+   - 口径与限制：多标签、B 类是负方侧恒等式产物、定义 15 个标签仅 11 个出现、
+     粒度按实际采样间隔归桶（不看文件名）。
+2) 总览页 reports/pattern_shapes_index.html 补齐 LoL 09-10~10-01 的 260 场
+   （此前只挂了 LoL 10-02~10-14 + CS2，与知识库"LoL 316 场"口径不一致）：
+   现在卡片为"本批比赛 381（LoL 316 + CS2 65）/ 含逐局 252 / 粒度 600s 368 + 60s 13"，
+   与粒度对照页、knowledge/PATTERN_STRUCTURE_LIBRARY.md 三处口径统一；
+   并新增指向粒度对照页的入口。
+3) 顺带修一处重复计数：同一市场同时有 600s 与 .hires 时，机械抄底回测此前两条都算，
+   LoL 侧多算 1-2 笔（0.35 阈值 173->172 笔、命中 28%->27%、ROI +0.10->+0.09），
+   去重后与知识库表格同步更新；结论方向不变。
+4) 测试：tests/ 147 passed / 3 failed（3 个仍为既存站点构建产物问题，与本次无关）。
+```
+
+## 2026-10-15 追加：形态曲线图页（把标签还原成图形）+ 粒度筛选
+
+```text
+背景（用户要求）："我要能够看到那个形态变化……两根线、两个队伍，他们赔率交叉那个形态变化，
+就是图形……首先分比赛，然后再分颗粒度，然后能够看到那个形态。" 此前只有文字标签
+（如 "A2_中位U型反转 0.21->1.00"），看不到形状本身。
+
+1) 新增 tools/build_pattern_charts.py（纯 SVG，无外部依赖）
+   - 结构：先按比赛分卡片，卡片内 = 整局 + 每个小局/地图 各一张小图（330x118）；
+   - 每张图两条线 = 两支队伍的代币价格（side 0 蓝 #0071e3 / side 1 橙 #ff9f0a），
+     50c 虚线为领先权分界 => 两线交叉即"优势翻转"，翻转过程就是形态；
+     粗实线 = 赢家侧、细淡线 = 输家侧；实心圆 = 该侧窗口低点，空心圆 = 终点；
+   - 图下标注：队伍名 + 形态标签 + 低→高 + 终点 + 原始采样点数 + 粒度；
+   - 顶部粒度筛选按钮（全部 / 只看 1 分钟级 / 只看 10 分钟级），按 data-gran 前端过滤；
+   - 曲线用 LTTB 降采样（默认 180 点/线，保尖峰保形状），页面注明"绘图降采样、统计用全量"。
+2) 产物（3 页 + 与总览/粒度页互链）
+   - reports/pattern_charts_cs2_2026-08_2026-10.html（65 场 / 194 张图 / 0.86 MB）
+   - reports/pattern_charts_lol_2026-1002_1014.html（56 场 / 230 张图 / 1.12 MB）
+   - reports/pattern_charts_lol_2026-0910_1001.html（260 场 / 655 张图 / 3.16 MB）
+   - build_pattern_index.py 与 build_pattern_granularity_page.py 自动按
+     pattern_shapes_X -> pattern_charts_X 命名规则探测并挂入口（存在才挂）。
+3) 校验：194 张图全部两条线、坐标无越界；50c 参考线 y=61（=8+106*0.5）；
+   抽样 cs2-ast10-mouz-2026-08-01：1WIN 侧 0.00→0.38、Aurora 侧 0.62→1.00，
+   与形态库记录的 low/high/end 完全一致，终点位置贴顶/贴底符合 y 轴反转。
+4) 修正一处实现 bug：整局曲线最初只取了 side 0（单个市场两条序列），
+   渲染成"单线图"（194 张里有 65 张）；改为按 side 索引分别取序列后双线正常。
+```
+
+## 2026-10-15 追加：形态分级体系页（用户问"一共能搞出多少种形态、该怎么分级"）
+
+```text
+背景（用户要求）："现在你看出来我们一共总结出多少种形态了吗？这里边有 CS 的，有英雄联盟的吗？
+我希望两个赛事其实是分开的，然后小局、整局也是分开的，1 分钟、5 分钟也是分开的。
+你考虑一下这个分级到底怎么分，看看我们一定可以搞出多少种形态。"
+
+1) 定稿分级口径（写入页面 + knowledge/PATTERN_STRUCTURE_LIBRARY.md 新增"一·补"节）
+   第 1 层 游戏 LoL / CS2 —— 必须拆（地图制 vs 小局制，市场结构不同）；
+   第 2 层 范围 整局 / 逐局 —— 必须拆（LoL 逐局由 C2 开局碾压主导 298/569 ≈ 52%）；
+   第 3 层 侧 胜方 / 负方 —— 分开统计，负方侧只作对照（B 类是恒等式衰减）；
+   第 4 层 粒度 60s / 600s —— **暂不拆**，只当格内"数据质量档"
+     （四主格 60s 仅 1 / 4 / 12 / 24 例，单独成表每格会掉到个位数；≥20 例再升格）；
+   不拆 联赛（属策略层筛选参数，切碎样本）。
+   => 有效主格 = 2 × 2 = 4。
+
+2) 结论数字（胜方侧样本 1076 例）
+   - 上限 = 分类器定义 16 个；C3「中位震荡后突破」手册有定义、classify_pattern.py 未实现，
+     **不计入 16**（待决：补分类器 or 从手册撤下）。
+   - 已观测 15 个（胜方侧 10 + 负方侧 5 个 B 类）；唯一未出现 = C1 中位震荡。
+   - 四主格：LoL 整局 313 例/9 种/可用 5；LoL 逐局 569/9/5；CS2 整局 65/7/2；CS2 逐局 129/9/3。
+   - 判断：形态种类够用，缺的是"每格 × 每种形态"的样本密度；CS2 两格需扩 3-5 倍。
+
+3) 新增 tools/build_pattern_taxonomy_page.py -> reports/pattern_taxonomy.html
+   （SAP/Apple 风格、移动端优先、favicon data URI）；
+   页面数字全部由数据生成（样本量、粒度构成、可用形态数、关键结论句），
+   并修掉三处自相矛盾口径：
+     a) "已观测"卡片误算 16（把负方侧非 B 类噪声与"未知"也算进去）-> 改为 15（10 + 5 B 类）；
+     b) 粒度句写"1 / 4 / 18 / 30 例"与第三节 1 / 4 / 12 / 24 不一致 -> 统一由数据生成；
+     c) 结论段引用的样本基数（448/662、81/118）与第三节口径不同源 -> 统一为 313/569/65/129。
+
+4) 入口串联：reports/pattern_shapes_index.html 增加"形态分级体系"入口；
+   reports/pattern_shapes_granularity.html 的"形态标签 11 / 15"口径修正为
+   "胜方侧 10 / 分类器定义 16"，与分级页对齐（一次错误原则：口径不一致即修）。
+   tools/INDEX.md 补 build_pattern_taxonomy_page.py 条目。
+
+5) 校验：写入重跑后正则抽检四个主格表 + 结论段，数字自洽（可用 5 / 5 / 2 / 3，种数 9/9/7/9）。
+   待办（仍待用户拍板）：① 56 场资格赛（PGL 各洲资格赛 / Thunderpick Closed Qualifier）
+   是否按一级统计；② 是否做赛后分钟级自动归档钩子（当前最大数据资产风险）。
+```
+
+## 2026-10-15 追加：赛事分级 + 关键比赛过滤（用户："把一些不关键的比赛筛选过滤掉"）
+
+```text
+背景（用户原话）："这些比赛可能还要区分一下，把一些不关键的比赛筛选过滤掉"。
+触发：形态分级体系做完后，用户意识到库里混着大量次级赛事，形态占比不代表关键比赛。
+
+1) 新增分级口径（配置 + 判定 + 回归，三件套）
+   - config/esports_tiers.json：三级规则（一级 / 二级 / 其他），按 league_raw 关键字匹配；
+   - tools/esports_tier.py：tier_of(league_raw, game)，**判定顺序 其他 -> 一级 -> 二级**
+     （必须先判"其他"：'Esports World Cup Open Qualifier' 含一级关键词
+     'Esports World Cup'，顺序反了就把资格赛算成一级）；
+   - tests/test_esports_tier.py：18 条映射 + 资格赛不得升级 两条用例锁定。
+
+2) 实测发现（这是本轮最重要的结论）
+   - LoL 316 场里**只有 40 场（13%）是一级赛事**（LCK/LPL/LEC/LCP/LCS/KeSPA/德杯/国际赛）；
+     其余 245 场二级（EMEA Masters 居首、VCS/CBLOL/区域联赛/LCK CL）+ 31 场资格赛/升降级赛。
+   - CS2 65 场里 58 场（89%）是一级——因为 CS2 回填时只接了
+     ESL Pro League / IEM / BLAST / EWC / Thunderpick。
+   - **只算一级赛事时**：LoL 整局 40 例 → 可用形态 0 种（最厚的 A3 仅 17 例）；
+     LoL 逐局 126 例 → 可用 3（C2 59 / A2 40 / A3 21）；
+     CS2 整局 58 例 → 可用 2（A3 30 / 热门 24）；CS2 逐局 → 可用 3（C2 50 / A2 35 / A3 25）。
+   ⇒ 此前所有"形态占比"主体是次级赛事形状，不能直接套到 LCK/LPL/LEC；
+     LoL 侧必须先补一级赛事样本（这正是"最近几个大联赛没接"的直接后果）。
+
+3) 页面出口（数字全部由数据生成，不手写）
+   - reports/pattern_taxonomy.html 新增第零节：分级表（场次/占比）+ 一级明细 +
+     "零·二 只算一级赛事时的四个主格"（cell_table 支持独立样本源，
+     一级视图下"要扩多少倍"改成如实提示缺口，不再套 20 倍算式算荒诞数字）；
+   - reports/pattern_playbook.html 一览表新增「一级（关键）」列（高亮），
+     每张形态卡的统计行末尾附"其中一级赛事 N 例"；
+   - reports/pattern_shapes_index.html 口径节新增"赛事分级"条目 + 补 favicon；
+   - 修复：分级表最初按**赛事名去重计数**（LoL 显示 7/33/10）而非按场次（应为 40/245/31），
+     已改为按场次统计；一级过滤视图的"样本 0 例"是样本量取自全量源，已改为独立样本源。
+
+4) 新增工具：tools/build_pattern_playbook.py（形态速查页，交易决策用）
+   每个形态 = 示意线条（canonical SVG）+ 真实样本曲线（库里最接近中位的那一场）+
+   线条特征 / 机器判定 / 买点 / 卖点 / 失效反例 + 实测统计（n、起点/低点/穿越50c/到99.5c 中位、
+   低点买入到结算倍数）；负方侧 B 类单独统计并按"风控视角"呈现（B 类只活在负方侧，
+   与胜方侧混算会全是 0）。页面顶部有幸存者偏差警示（标签按事后赢家侧标注，≠胜率）。
+
+5) 回归：tests/ 147 passed / 3 failed（3 个为既存站点产物问题，与本轮无关）+
+   新增 tests/test_esports_tier.py 2 passed。
+
+待办（仍需用户拍板）：① 一级赛事样本补采排期（LoL 整局缺口最大）；
+② 56 场资格赛是否入统计（分级口径已可判定为"其他"，随时可并入或排除）。
+```
+
+## 2026-10-15 追加：库口径收紧为"只收一级" + 回补 72 场一级样本
+
+```text
+背景（用户原话）："emea 和小区域联赛的数据不要了"。
+
+1) 口径落地：形态库只统计一级（关键）赛事
+   - 剔除：LoL −276 场（二级 245 + 资格赛/升降级 31）、CS2 −7 场；
+   - 原始快照仍留 docs/data/snapshots（不可再生的分钟级数据不删），
+     旧全分级明细 JSON 留在 reports/ 作存档、不参与出数；
+   - 分级判定修一处误判：Thunderpick 洲际系列赛（European/South American Series #N）
+     是资格赛路径，此前被"Thunderpick World Championship"关键词误判成一级 ->
+     config 的"其他"档补 Series # / European Series / South American Series 等，
+     并补回归用例（tests/test_esports_tier.py 现 3 passed）。
+
+2) 顺带回补 72 场一级样本（这是本轮最大的实际收益）
+   扫全部 gamma 索引发现 72 场一级比赛有快照但从未入形态库：
+   KeSPA Cup 25 / MSI 14 / LEC 常规赛 14 / LCS 常规赛 8 / LCP 小组赛 7 / CS2 BLAST Bounty 4。
+   合并索引（index_tier1_merged_2026-10-15.json）+ 显式 slug 清单重建：
+     reports/pattern_shapes_lol_tier1_2026-07_2026-10.json —— 108 场（整局 108 / 逐局 40）
+     reports/pattern_shapes_cs2_tier1_2026-07_2026-10.json ——  62 场（整局 62 / 逐局 56）
+   ⇒ LoL 整局一级样本 40 -> 107，可用形态 0 种 -> 4 种（A3 46 / 热门 35 / A4 28 / A2 27）；
+     CS2 逐局可用 3 种（C2 50 / A2 35 / A3 25）。
+
+3) 工具改动（默认值变化，均带开关可回退）
+   - build_pattern_taxonomy_page.py：新增 --tiers（默认"一级"，"all"=全分级混算）
+     + --archive（读旧全分级 JSON，用于显示"已剔除多少场"）；非混算模式下省略重复的对照节；
+   - build_pattern_playbook.py / build_pattern_index.py / build_pattern_granularity_page.py：
+     输入切到 tier1 库；修正粒度页写死的"381 场"（改为按数据生成）；
+   - 页面互链全部改指 tier1 曲线图/速查页，已校验无死链。
+   - 产物：pattern_charts_lol_tier1（108 场 / 234 图）、pattern_charts_cs2_tier1（62 场 / 177 图）。
+
+4) 校验：tests/ 149 passed / 3 failed（3 个为既存站点产物问题，与本轮无关）。
+
+缺口（下一步）：① 7-8 月与 MSI/KeSPA 那批快照只有整场序列，逐局要联网回补
+（index_game_markets + fetch_game_market_series）；② LCK 在本区间只有 2 场；
+③ 一级样本 170 场，要让每种形态都 ≥20 例仍需继续累积。
+```
+
+### 2026-10-15（续）赛事分级口径修正 + 8 月窗口回补 + 逐局回补
+
+```text
+背景：用户确认"EMEA 和小区域联赛的数据不要了"（库口径 = 只收一级）。
+收尾时发现上一轮重建有一个**覆盖级错误**：8/5–9/9 这段本地快照没有赛事标题索引
+（league_raw 在 7 月与 9-10 月有、8 月整段缺失），该窗口整批被判"其他"挡在库外——
+用户实际交易的 8 月 LCK/LPL 常规赛（T1-GEN 08-16、DK-HLE 08-20、BRO-FOX 08-21…）一场都没进库。
+另发现分级关键词只写了 LCK/LPL 的 Playoffs/Regular，而 2026 赛季真实命名是
+'LCK Round 3-4 Legend/Rise Group'、'LCK Play-In'、'LPL Group Ascend/Nirvana'、
+'LCP Swiss Stage'、LoL 侧 'Esports World Cup Group X' —— 全被判成"其他"。
+
+1) 分级规则修正（config/esports_tiers.json + tools/esports_tier.py）
+   - 一级补：LCK Round / LCK Play-In / LPL Group / LCP Swiss / EWC / Esports World Cup；
+   - 其他档去掉过宽的 'Play-In'（LCK、MSI 的 Play-In 是一级赛程阶段；
+     TCL、LCK CL 的 Play-In 由二级关键词接住）；
+   - 回归用例补齐（tests/test_esports_tier.py 现 12 条 CASE + 自检 23 例）。
+
+2) 8/5–9/9 窗口回补（联网 gamma）
+   - 137 场快照补赛事标题 -> runtime/pm_backfill/titles_gap_2026-08-05_2026-09-09.json；
+   - 合并全量 league_raw -> runtime/pm_backfill/league_raw_v2_2026-10-15.json；
+   - 一级 slug 清单重算：LoL 108 -> 256（本地全部有快照）/ CS2 62；
+     重建后可入库：LoL 231 场、CS2 62 场。
+
+3) 逐局回补（联网 CLOB）
+   - 索引缺逐局的 137 场 Game N Winner 市场（371 条，其中逐局 234 条）；
+   - 分 4 片抓 600s 序列：ok=234 / fail=0
+     （当时判断“赛后 >24h，1 分钟级已永久关闭”；该判断已于 2026-10-18 推翻，
+     见本文件末尾“分钟级可回溯”一节）；
+   - LoL 逐局从 94 场 -> 194 场（493 个小局样本）。
+
+4) 重建后的库与页面
+   LoL 一级 231 场：整局 225 例（可用 5 种）/ 逐局 493 例（可用 5 种）
+   CS2 一级  62 场：整局  62 例（可用 2 种）/ 逐局 115 例（可用 3 种）
+   联赛分布：LPL 50 / 国际赛 43 / LEC 33 / LCK 31 / KeSPA Cup 26 / 德杯 19 / LCS 17 / LCP 12
+   页面：taxonomy（新增 --tier-map 全量剔除量：LoL −557 / CS2 −1965）、playbook、
+        charts_lol_tier1（231 场 / 722 图）、charts_cs2_tier1、index、granularity，
+        全部只含一级；taxonomy/playbook 的写死数字改为按数据生成。
+
+5) 工程侧顺带修掉 3 个既存红测试
+   - match_index.json 重建（08-29 的旧索引 -> 10-15，133 -> 159 场；补 TEAMS-BB-PV 同场并表）；
+   - intel_gray_verification_stats.html 生成器补 favicon（站点相对路径 / reports 用 data URI）；
+   - 站点 nav/面包屑/padding 注入链路随重建重跑。
+   ⇒ tests/ 153 passed / 0 failed（此前 3 failed）。
+
+关键教训（已写进 AGENTS 规则 28f/28g）：
+   ① 一级关键词必须覆盖赛季真实命名，改规则必须补回归用例；
+   ② 区间 league_raw 覆盖率要先自查——"本地有快照"不等于"能进库"，
+      缺标题索引的窗口会整批静默漏收。
+
+缺口（下一步）：① 37 场无逐局数据（Polymarket 未开逐局盘）；
+② CS2 一级只有 62 场，要和 LoL 同权需扩 3-5 倍；
+③ 60s 分钟级 LoL 逐局 87 / 整局 34，仍需常态归档。
+```
+
+### 2026-10-18 分钟级可回溯修正 + 形态库平滑 + 外部数据源调查
+
+```text
+背景：用户要求（a）增加真实 1 分钟数据、（b）形态曲线更平滑、（c）调查除
+Polymarket 外是否有更好的分钟级赔率源。
+
+1) 结论修正（最重要）
+   - 2026-10-15 的“分钟级只能赛后 24 小时内归档、过期不可回溯”是**误判**。
+     根因：旧工具固定传 `interval=1d`，请求进入服务端聚合路径。
+   - 正确请求：`/prices-history?market=<TOKEN>&startTs=..&endTs=..&fidelity=1`
+     **不传 interval**。实测 2026-08-16 老比赛：
+       12h 625 点/侧、24h 1345 点、7 天 9981 点，中位间隔全部 60s；
+       60s 与 600s 在 63 个重叠时间戳上最大价差 0.0000。
+   - LoL / CS2 / Dota2 均已实测可回溯；AGENTS 规则 26 已同步改写。
+
+2) 回填结果
+   - 一级 LoL 231/231 场、CS2 62/62 场全部为真实 60s；
+     世界赛入围赛 4 场也完成回填。
+   - 297 个事件 / 1,914 个 `.hires.jsonl` / 1,183,045 点，中位采样间隔 60s。
+   - 工具：tools/backfill_minute_snapshots.py（只写 .hires，不覆盖原 600s）；
+     fetch_price_snapshot.py / fetch_game_market_series.py 改为优先不传 interval。
+
+3) 曲线平滑（不伪造数据）
+   - tools/path_series.py 分三层：raw（原始观测）/ filled（仅补 ≤3 倍中位间隔
+     的小缺口）/ display（3 点中值 + EMA，仅用于画图）。
+   - 600s 路径不做分钟级插值，保持原始折线并标低置信度；
+     形态分类与统计只用 raw；图下标“原始点数 / 插值比例 / 置信度”。
+
+4) 外部数据源（详见 knowledge/ODDS_DATA_SOURCES.md）
+   - 主源仍是 Polymarket：覆盖最好、可交易、60s 可回溯。
+   - Kalshi 有官方 1 分钟 K 线，但电竞盘极薄（单市场几十张）；
+   - The Odds API 历史快照为 5 分钟；Betfair/Abios/Bayes 为付费或合同制；
+   - 公开全历史数据集：HF `SII-WANGZJ/Polymarket_data`（12.7 亿笔成交，约 280GB）、
+     `TrevorJS/kalshi-trades`（1.545 亿笔）。
+
+5) 验证
+   - 新增 tests/test_path_series.py、tests/test_fetch_price_history.py；
+     更新 tests/test_pattern_granularity.py 的旧口径说明。
+   - 页面：pattern_shapes_index / granularity / taxonomy / playbook / charts 全量重建。
+
+6) 用户盘感假设库（knowledge/PATTERN_HYPOTHESES.md）
+   - H1 强打弱 BO3 输 G2 后买强队：n=13，命中 8（62%），均价 0.685，EV −0.12，
+     初步不支持无脑抄底；G2 后守住 50c 的 7 场全赢、跌破 50c 的 6 场仅 1 胜。
+   - H2 G1 碾压后的后续小局：n=13，系列赛 13/13 赢，但干净横扫仅 10/13；
+     G2 单局 12/13（均价 0.812，EV +0.15）——只支持“G2”，不支持“必 3:0”。
+   - H3 BO5 G3/G4 弱队深水抄底：≤0.20 共 42 场、命中 12%、按 0.20 成交 EV −0.41；
+     仅 G3 前 1-1 且 ≤0.10（17 场、命中 17.6%、EV@0.10 +0.77）有正期望迹象，
+     0-2 落后时（24 场、8.3%）是陷阱。
+   - H4 整场基本盘 + 小局极值卫星仓：盲买 0.01 阈值 308 个小局、命中 1.0%、
+     EV −0.03；0.05 阈值 473 个、命中 3.6%、EV −0.28；反弹到 0.10 卖出 EV −0.68。
+     追加“等确认反转”（≤0.05 后重新站上确认位才买，剔除结算跳价）：
+     0.20 档 n=34、命中 44.1%、实际价 EV +0.60（95% 区间 −0.02~+1.25）；
+     0.30 档 n=25、命中 52.0%、EV +0.29（−0.20~+0.80）；0.50 档 n=16、
+     EV −0.01（太晚）。473 个极值里只有 34 个（7.2%）给出 0.20 确认，
+     策略常态是不出手。所有档位 EV 区间跨零，只能算方向性迹象。
+     稳健性：要求触价前曾站上 0.20（真崩塌而非一直便宜），0.30 档 n=21、
+     命中 57.1%、EV +0.43（95% 区间 −0.11~+0.97），方向一致但样本更小。
+     结论：极值本身不是 edge，“反转确认 + 本场上下文”才可能是；盲买不升级，
+     只把 0.30 确认列为 L0 观察候选，卫星仓 1–2%、不补仓、待样本外验证。
+   - 页面 reports/pattern_hypotheses.html；生成器 tools/build_pattern_hypotheses.py；
+     回归 tests/test_pattern_hypotheses.py。全部 L0 观察，不自动执行。
+```
+
+### 2026-10-22 形态决策台 V1 上线
+
+```text
+目的：把“赛后看形态”升级成随时可打开的只读决策页面：当前观察点 -> 同游戏/同层级近邻样本
+-> Top 3 候选形态 -> 条件方向 -> 买入区 -> 分批止盈 -> 失效位。
+
+交付：
+- 生成器 tools/build_pattern_decision_site.py；模板 pattern_decision_workspace.template.html；
+- 本地页 reports/pattern_decision_workspace.html；
+- 公网页 http://158.247.214.175/intel/pattern_decision_workspace.html（VPS nginx，已验证 200）；
+- 页面可筛选 LoL / CS2 / Dota2、比赛、整场/逐局，并拖动历史观察点回放；
+- 候选卡显示相似权重、去重比赛数、观察点数、方向率、买入区、两档止盈、触达率、失效位；
+- 方向率按比赛去重并使用 Beta(2,2) 平滑；少于 8 场显示“样本不足”；
+- 买入区最多约 10c，并区分现价附近/回踩区/等待回踩；行情超 15 分钟标“数据陈旧”。
+
+当前数据：12,852 个训练观察点 / 297 场去重训练比赛 / 318 个历史可回放盘面。
+验证：tests/test_pattern_decision_site.py 通过；本地和公网页面均完成浏览器渲染检查。
+
+边界与缺口：
+- 只读分析，不接自动下单，不主动平仓；
+- V1.1 已接入 VPS 云端实时刷新（每 5 分钟）：Gamma 扫描正式 Winner 市场，CLOB 取
+  1 分钟线，与预训练数据集合并后原子发布；失败不覆盖旧页；
+- 候选有效性尚未完成严格时间切分回测，页面所有概率均为历史条件统计，不是胜率承诺；
+- 下一步：接入扫描器实时快照、滚动 backtest（Brier/方向命中/区间触达/扣滑点期望）。
+```
+
+### 2026-10-22 形态决策台 V1.2：未来赛程 + Stake 交叉源
+
+```text
+目标：让页面不只显示当前一两场，而是提前看到未来赛程，并把 Stake 的传统市场赛前定价
+作为独立参考源接入；Polymarket 仍是分钟级形态、可成交价格和买卖点的主源。
+
+交付：
+- Polymarket 扫描窗口改读 config/market_watchlist.json 的 time_window；
+- 远端未来场次使用 Gamma 赛前快照，临近 90 分钟或已开赛才请求 CLOB 分钟历史；
+- 新增“未来赛程”横向卡片：默认覆盖 3 天，显示北京时间、游戏、赛事、对阵、赛制、Stake 十进制赔率、去水概率；
+- 赛程卡标记“PM 已接入 / PM 待开盘”，已接入场次可直达形态盘面；
+- Stake live 盘暂停时只记“盘口暂停/缺口”，不沿用旧赔率、不把 0 当价格；
+- Stake 与 Polymarket 两套价格语义严格分开展示。
+- 候选图恢复历史复盘式双线结构：观察方粗蓝实线、对手方浅橙细线、带文字的 50:50 灰色中枢虚线；候选延续降为底层彩色虚线，确保不盖住真实路径；
+- 三张候选卡缩略图同步保留双方路径、50c 中枢与候选延续，切换观察方时图例和线色同步更新。
+
+真实验收（2026-10-22 11:00 CST）：
+- Gamma 扫描 634 个电竞事件 / 456 个正式对阵盘；
+- 两天窗口识别 9 场 Polymarket 赛前盘、13 个市场；
+- Stake 读取 18 个赛事目录、9 场有效未来对阵，9 场均有独赢赔率；
+- 9 场全部与 Polymarket 对齐，行情错误 0，Stake 错误 0；
+- 回归测试 tests/test_pattern_decision_live.py + page/site + scan 共 58 项通过；已用 CS2 Aurora Gaming vs Vitality 历史 1 分钟盘面完成浏览器双线与候选卡渲染验证。
+
+边界：Stake 没有已验证历史序列与推送，live 常整盘暂停；当前只作赛前共识参考，
+不接入自动下单，不替代 Polymarket 1 分钟形态主数据。
+```
+
+### 2026-10-22 任务 8 立项：形态结构重审与决策重构
+
+```text
+状态：进行中 · P0 现状审计完成
+目标：先重新定义“什么形态算同一种”，再重建分钟级样本、重做图形与决策回测；
+      不继续在旧启发式标签上叠加候选解释层。
+
+审计结论：
+- 当前并非缺少 1 分钟数据：可回放 1,042 个盘面中 993 个为 1 分钟级；
+- 候选未来路径 MAX_FUTURE_POINTS=9，12,852 个训练点中 12,099 个（94.1%）未来仅有 9 点；
+- 主图 MAX_PUBLIC_POINTS=72；Aurora Gaming vs Vitality 整场原始一侧 174 点，页面仅展示 72 点；
+- 历史观察点仅用 7 个固定进度检查点，不是分钟滑窗；
+- 现有分类器基于整段低点/高点/终点做启发式标签，primary_label 折叠多标签，候选主标签高度集中，
+  A5/A6/C1/B3 等结构难以呈现。
+
+下一步：完成 P1 形态字典 V2 第一版，优先复核 B4/A3/A2/C2/A1/B1 六类，
+补齐结构骨架、正反例、失效边界和最小样本门槛。
+首批审阅页：reports/pattern_structure_audit_2026-10-22.html（LoL 233 场 / CS2 64 场，
+6 类形态共 1,770 个命中侧）；已发现 B4 定义“全程未站上 50c”与实际“高位先到 75c 后回落归零”
+案例不一致，进入分类描述与识别条件同步修订。
+交付文档：docs/task/PATTERN_STRUCTURE_REWORK.md
+```
+
+### 2026-10-22 形态决策台 V1.3：接入新版形态规范
+
+```text
+状态：已上线
+目标：把新版形态审计中的中文命名、市场层级和观察边界搬进已有形态决策台，不另建重复页面。
+
+交付：
+- 新增 tools/pattern_display.py，统一形态中文展示名、结构族和层级文案；
+- 决策台候选卡、KPI、结构解释全部使用纯中文形态名，界面不再显示内部标签代码；
+- 状态栏明确区分“小局预测 / 整场预测”，候选卡可直达新版形态审计页对应案例；
+- 保留观察方粗蓝线、对手方浅橙线、50c 中线和候选延续；
+- 顶部统一标注“P1 观察版”，相似度与方向率不再被描述为已验证胜率；
+- 历史回放、当前盘面和未来 Stake 赛程继续在同一页面切换查看。
+
+验收：
+- tests/test_pattern_decision_site.py、tests/test_pattern_decision_live.py、
+  tests/test_pattern_structure_audit.py 共 24 项通过；
+- 本地全页与公网页面均完成浏览器视觉核验；
+- 公网 16 场未来赛程、中文候选卡和历史案例链接均可见；
+- pattern-decision-live.service 手动触发成功，仍由 timer 每 5 分钟自动刷新。
+
+边界：当前仍是 P1 观察版；P2 分钟滑窗样本、P3 候选区间带和 P4 时间切分回测完成前，
+不把候选卡当作可执行概率或自动下单依据。
+```
+
+### 2026-10-23 形态决策台 V1.4：候选真实分钟路径与断轴证据图
+
+```text
+状态：已实现，待发布验收
+目标：解决候选形态摘要点过少、图上看不出方向和买卖位的问题；不再用人造平滑线替代真实路径。
+
+交付：
+- 候选区改为“候选切换 + 证据大图 + 决策侧栏 + 横向比较表”；
+- 左段显示已发生的双方真实赔率走势，右段展开观察后的历史剩余时间，避免 80%+ 观察点只剩窄条；
+- 候选大图同时显示历史中位路径、25%–75% 区间、3–5 条真实历史分钟案例、50c 中线、买入带、两档止盈和失效线；
+- 训练记录新增真实盘面引用、局号、观察进度和价格粒度；浏览器直接回读历史盘面分钟路径；
+- 主图单侧路径保留上限从 72 点提升到 240 点；
+- 训练近邻池强制按游戏、小局/整场、粒度隔离，1 分钟与 10 分钟不混算；
+- 12,852 条训练记录全部可回连真实盘面，相关回归 53 项通过。
+
+边界：仍是 P1 观察版；真实路径增加可读性，不等于完成 P2 分钟滑窗、结构多标签和 P4 时间切分回测。
+```
+
+### 2026-10-23 形态决策台 V1.5：完整平滑曲线 + 赛前先验修复
+
+```text
+状态：已上线并完成赛前/历史双路径验收
+目标：去掉候选形态的粗泛摘要感，并修复赛前盘面被粒度过滤成 0 场的问题。
+
+交付：
+- 候选历史中位路径提升到最多 180 个插值步点；代表性案例直接回读真实盘面分钟路径；
+- 双方真实路径、历史中位与代表性路径统一采用 Catmull-Rom 平滑连接，不删原始点、不改点值；
+- 候选大图 viewBox 调整为 920×500，1360px 以下把决策栏移到图下方，1280px 笔记本可见面积更大；
+- 赛前单点快照的当前行情仍标记“数据不足”，但历史先验单独匹配 1 分钟层，页面显示“历史 1 分钟级先验”；
+- 数据体检拆分“当前行情粒度”和“历史匹配粒度”，避免混淆事实层。
+
+验收：
+- tests/test_pattern_decision_site.py、test_pattern_decision_live.py、
+  test_pattern_structure_audit.py、test_scan_regression.py 共 55 项通过；
+- 赛前单点夹具实际渲染出 3 个候选、双方路径、买入区、两档止盈和失效位；
+- 回归锁定平滑函数、180 步分布、桌面断点与赛前先验回退逻辑。
+
+边界：P1 观察版；平滑只改善阅读，不是概率校准，也不改变原始分钟数据。
+```
+
+### 2026-10-23 形态决策台 V1.5.1：候选终结坐标修正
+
+```text
+状态：已上线并完成本地、云端验收
+问题：候选图末端多条线看起来都接近 100c，像是双方价格同时到 100c。
+
+根因：
+- 训练记录保存的是被采样队伍自己的价格路径；
+- 当前观察点也按所选观察方计算，近邻记录已经是同侧类比；
+- 旧实现又按候选方向做了一次反转，导致看空候选被画到错误坐标，多个方向叠图后视觉上都靠近 100c；
+- 原始行情并非双方同时到 100c：当前 1,042 组双方终点中，双方同时 >=99c 为 0 组。
+
+修复：
+- 候选历史中位与代表性路径统一使用匹配记录的同侧价格坐标，不再按候选方向/队名二次反转；
+- 看多候选终结约 100c，看空候选终结约 0c；
+- 图例、断轴图标题与图下说明明确“观察方价格坐标”，并提示不是双方同时到 100c；
+- 新增回归测试锁定 futureDistribution(g.records,false) 与 representativePaths(g.records,false,5)。
+- 修复本地预览与云端发布目录缺少关联页面、相对链接 404 的问题；顶部直接提供新版形态审计、形态总库、形态速查、形态分类、分类图表、粒度对照与频率排行入口；
+- “力度分析”暂无独立同名页面，现有相关内容分散于形态审计、形态速查和频率排行，暂不伪造独立入口。
+
+验收：
+- pattern_decision_site / pattern_decision_live / pattern_structure_audit / scan_regression 共 57 项通过；
+- 本地静态页和 reports/pattern_decision_workspace.html 已重建；
+- 公网页面已确认加载修正代码；
+- 公网发布目录已同步 20 个 pattern 页面，17 个页面逐一返回 HTTP 200；
+- VPS pattern-decision-live.service 手工运行成功，Result=success、ExecMainStatus=0；
+- timer 继续每 5 分钟刷新后台数据；浏览器页面目前仍需重新加载后才显示最新计算，后续可按需增加进行中盘面的低频自动刷新。
+
+边界：P1 观察版；候选形态会随新增分钟价格重算，但当前输出仍不是胜率或自动下单信号。
+```
+
+### 2026-10-23 政治选举叙事幻觉雷达 v1：180+ 活跃事件
+
+```text
+状态：第一版已生成，进入事件覆盖与结构校验阶段
+用户校正：民调不作为核心信号，页面改为“市场叙事是否被误认成事实”的只读雷达。
+
+交付：
+- reports/intel_elections_hallucination_2026-10-23.html；
+- 当前扫描 182 个活跃 Polymarket 事件：
+  众议院选区 54、联邦参议院（含县级切片）47、州长 28、
+  海外选举 27、州检察长 12、州务卿 7、州参议院 6、联邦众议院控制权 1；
+- 页面包含高信念 × 薄盘口散点图、翻盘窗口队列、州议会席位门槛、
+  10 个核心叙事卡、8 个重划/退休风险众议院席、可筛选全事件雷达、美国州级地图；
+- 数据快照：docs/data/elections/election_hallucination_snapshot_2026-10-23.json；
+- 配置：config/election_hallucination_2026.json；
+- 生成器：tools/build_election_hallucination.py；探针：tools/probe_election_markets.py；
+- 方法文档：docs/task/ELECTION_INTELLIGENCE_WATCH.md；
+- 官方日期与制度事实底稿：docs/task/ELECTION_WATCH_EVIDENCE_2026-10-23.md
+  （其中民调部分仅保留为历史背景，不参与当前评分）。
+
+方法：
+- 幻觉压力 = 信念强度 + 薄盘口 + 多档报价不自洽 + 叙事热度；
+- 翻盘窗口 = 幻觉压力 × 距离 100c 的空间 × 信念修正；
+- 两者均为启发式排序，不是胜率、收益率或实盘信号；
+- 多档 YES 只在同一事件的有效互斥范围内合计，县/投票率等不强行归一。
+
+结构校验：
+- 2026 州议会：88 chamber / 46 州 / 6,064 个州议席改选；
+- 当前 chamber control：R 57 / D 39 / coalition 2；
+- 关键州参议院席位门槛与改选比例已写入页面；
+- AL-02、FL-09、CA-06、CA-48、NE-02、IA-02、AZ-01、MI-10
+  已标注重划/退休导致“历史高胜幅不可继承”的案例。
+
+验收：
+- `pytest -q tests/test_election_hallucination.py tests/test_scan_regression.py`
+  共 30 项通过；
+- `--refresh` 成功扫描 182 个活跃事件、errors=0；
+- `--offline` 可逐字节重建同一页面；
+- 页面在桌面与移动端完成视觉检查。
+
+下一步：
+1. 增加 CLOB 订单簿深度与近 24h 主动成交方向，替代单看 liquidity 字段；
+2. 为更多州级 chamber 和县级切片建立正式的事件分组，避免把不同县的二选一市场混算；
+3. 做每日快照差异，观察“薄叙事高价格是否向厚盘收敛”；
+4. 只读观察，不接入自动下单。
+```
+
+### 2026-10-24 选举全景清单 + 现任席位 + 操纵假设监察
+
+```text
+状态：已生成，第一版可直接使用
+
+新增：
+- reports/intel_elections_events_2026-10-24.html：
+  182 个活跃事件的全景表，直接显示成交量/流动性、市场正反比例、
+  当前席位党派、认知状态、翻盘窗口与幻觉压力；
+- reports/intel_elections_hallucination_2026-10-24.html：
+  分析页同步加入全部事件清单入口和“操纵假设监察”板块；
+- 众议院 54 个选区委已补齐当前众议员党派；
+- 参议院席位、州长、州检察长、州务卿、州参议院 chamber 当前控制均已映射；
+- 用户提出的“贿赂官员/操纵中期选举”明确标为待证假设，
+  不写成事实，并列出官方调查/起诉、资金证据、法院文件、计票审计、
+  多源独立报道五类硬证据门槛。
+
+验证：
+- 182 个事件，无抓取错误；
+- 所有分类的 current-control 映射无缺口；
+- tests/test_election_hallucination.py + test_scan_regression.py 共 31 项通过；
+- --offline 可重建分析页与清单页。
+
+边界：
+- “市场正反比例”是有效 YES 聚合或前两名；报价不自洽时可以超过 100%；
+- 当前席位是现任者/当前 chamber 控制，重划州可能不完全等同 2026 新边界；
+- 翻盘窗口不是胜率；操纵假设没有证据前不升级为结论。
+```
+
+### 2026-10-24 Worlds Swiss R1 一分钟赔率复盘与历史形态入口恢复
+
+```text
+状态：已完成
+
+交付：
+- reports/intel_worlds_swiss_r1_odds_2026-10-24.html；
+- knowledge/intel_pages/intel_worlds_swiss_r1_odds_2026-10-24.md；
+- reports/pattern_shapes_lol_worlds_r1_2026-10-24.json；
+- docs/data/intel/price_paths.json 新增/替换 8 个 Worlds R1 market slug；
+- tools/build_worlds_r1_odds_review.py（可重建页面、JSON、MD 与形态库）；
+- patterns 旧地址 reports/pattern_decision_static_v14.html 兼容跳转到统一形态总库。
+
+数据：
+- Riot 官方 8 场全部 completed，Polymarket 结算与官方胜方一致；
+- 全部为 BO1，每方 50–97 个真实 60 秒点；
+- 窗口为市场 gameStartTime→closedTime；
+- 胜方中位 U 型反转 4、折价修复 3、五五开开局后单向压制 1；
+- BO1 无独立 G2/G3 市场，不伪造逐局曲线。
+
+历史库：
+- training_samples=12,852；training_matches=297；历史记录=318；
+- price_paths 由 627 增至 635；
+- pattern_library.html 与 pattern_decision_workspace.html 增加 Worlds R1 入口。
+
+边界：公开价格点不等于完整可成交深度；形态是统计描述，不是自动下单信号。
+```
+
+### 2026-10-25 CS2 G2 vs Aurora 局中主仓 + 对冲观察
+
+```text
+状态：局中记录完成，待赛后回填
+
+快照：2026-10-25 23:15 CST；Aurora 1–0，Map 2 进行中
+- G2 整场 37c / Aurora 64c；
+- G2 Map 2 72c / Aurora 29c；
+- Under 2.5 31c（用户记录曾低至 4c，后回到约 30–31c）。
+
+交易记录：
+- 用户口述第一图期间买入 G2 35c；当前 37c 更接近整场 Moneyline，暂按整场记录，
+  但仓位金额与“整场 / Map 1 Winner”归属待确认，不算实际盈亏。
+
+结构判断：
+- 主仓 G2 + Under 2.5 只覆盖“Aurora 赢 Map 2 并 2–0”分支；
+- G2 赢 Map 2、但输 Map 3 时，主仓和 Under 同时归零，仍是裸风险；
+- 页面显示互补价合计不等于 100c，不能用点击价直接宣称套利。
+
+交付：
+- reports/intel_trade_observation_CS2-G2-AUR1_live_2026-10-25.html
+- knowledge/intel_pages/intel_trade_observation_CS2-G2-AUR1_live_2026-10-25.md
+- runtime/intel/cs2-g2-aur1-2026-10-25.json
+
+后续：确认持仓市场与 size；比赛结束后回填 G2/G3、整场形态和实际盈亏，
+并将“主仓 + 对冲”纳入分支覆盖回测，禁止在任一终态亏损时标注 risk-free。
+```
+
+### 2026-10-24/25 Worlds R2 + PGL 布加勒斯特赔率复盘
+
+```text
+状态：已完成
+
+范围：
+- 已做过的 Worlds R1 跳过；本轮补齐 Worlds R2 八场 BO1。
+- 新增 PGL Masters Bucharest 十二场 BO3，共 12 个整场 + 24 个已上市小局市场。
+- 只使用比赛内窗口；请求 fidelity=1，双方 outcome token 分别抓取，不用 1-p 镜像。
+
+交付：
+- reports/intel_worlds_swiss_r2_odds_2026-10-25.html
+  + knowledge/intel_pages/intel_worlds_swiss_r2_odds_2026-10-25.md
+- reports/intel_cs2_pgl_bucharest_odds_2026-10-24_25.html
+  + knowledge/intel_pages/intel_cs2_pgl_bucharest_odds_2026-10-24_25.md
+- reports/pattern_shapes_lol_worlds_r2_2026-10-24.json
+- reports/pattern_shapes_cs2_pgl_bucharest_2026-10-24_25.json
+- tools/build_recent_odds_reviews_2026_10_24.py
+
+库与入口：
+- LoL 一级形态库新增 8 场，总数 241；CS2 一级形态库新增 12 场，总数 76；
+- docs/data/intel/price_paths.json 由 635 增至 655 条；
+- docs/data/intel/matches.json 新增 8 场 Worlds R2 + 12 场 PGL，合计 20 条终态记录；
+- The MongolZ（MGLZ）已登记 team_names / teams，避免新赛事裸用别名；
+- 重建 pattern_shapes_index / granularity / taxonomy / playbook / frequency /
+  LoL+CS2 一级曲线、两个本批曲线页与 pattern_decision_workspace；
+- intel_danmu_index.html、intel_pages/README.md、intel_danmu_index.md、
+  DANMU_INTEL.md 已挂新页。
+
+关键观察：
+- LoL 三场整场下狗反转：TES-AL、DK-T1、LYON-KC；其余五场以热门折价修复、
+  热门全程压制或五五开后单向确立为主。
+- CS2 三场 G1 后让一追二：AUR-MGLZ、MOUZ-TL、TS-BB。整场赢家低点分别约
+  12.5c / 3.5c / 7.5c，跨 50c 时间约 65 / 87.7 / 71 分钟。
+- 三场打满 BO3 的比赛没有独立 G3 Winner 市场；页面显式标缺口，不用整场曲线冒充。
+
+数据质量：
+- 已修复 fetch_event_market_pack 对结算后异常尾点的逐市场裁切；原始价格图不以
+  1-p 补线。G2-LOS 实际采样间隔为 mixed，其余中位间隔约 60 秒。
+
+验证：
+- pytest tests/test_recent_odds_reviews_2026_10_24.py tests/test_path_series.py
+  tests/test_pattern_granularity.py tests/test_scan_regression.py -> 40 passed；
+- pytest tests/test_pattern_decision_site.py tests/test_worlds_r1_odds_review.py
+  -> 11 passed；
+- price_paths 655 条 slug 唯一；matches 新增记录 20 条 id 唯一；新增 20 场均在
+  对应一级形态库中。
+
+边界：形态仍为历史归纳；“让一追二深水反转”只作观察样本，不升级自动下单信号。
+```
+
+### 2026-10-26 政治选举雷达：低量过滤 + 州议会简化 + 四字段清单
+
+```text
+状态：已更新，当前版本可直接使用
+
+用户修正：
+- 州议会章节过于抽象，需要改成“现在谁控制、差几席、本轮改选几席”的人话；
+- 几百到几千美元成交的单区盘没有参考价值，应从排名和赔率分析中移除。
+
+执行：
+- 新增质量门槛：成交量 ≥ $50k 且流动性 ≥ $20k；
+- 当前原始扫描 184 个事件，58 个进入可参考层，126 个低量事件仅留原始快照；
+- 主分析页、散点图、翻盘队列、州地图和明细表均只用可参考事件；
+- CA-06、AL-02、FL-09 等低量众议院 margin 盘不再进入赔率卡片或排名；
+- 众议院重划/退休只保留“结构事实”，不展示低量概率；
+- 州议会改用“现在归属 / 多席过半 / 翻盘需净增几席 / 本轮改选几席”表达；
+- 每个可参考事件新增：成交量/流动性、市场正反比例、当前席位、认知状态。
+
+交付：
+- reports/intel_elections_hallucination_2026-10-26.html；
+- reports/intel_elections_events_2026-10-26.html；
+- docs/data/elections/election_hallucination_snapshot_2026-10-26.json；
+- tools/build_election_hallucination.py 同步生成分析页与可参考事件清单。
+
+验证：
+- 184 个原始事件，errors=0；
+- 58 个可参考事件的 current-control 映射无缺口；
+- pytest tests/test_election_hallucination.py tests/test_scan_regression.py
+  共 33 项通过；
+- 离线重建两份页面一致。
+
+边界：
+- 被剔除事件仍完整保存在 snapshot，可在后续提高成交量后重新进入；
+- “当前席位”是当前议员/当前 chamber 控制；重划州的新旧选区边界可能不完全同域；
+- 州议会市场全部因低于质量门槛而不参与价格判断，只保留制度结构。
+```
+
+### 2026-10-27 政治选举雷达：众议院重划选区账本
+
+```text
+状态：已更新，当前版本可直接使用
+
+用户补充：
+- 用户提供 BBC 2025-11-04 报道，指出特朗普阵营通过重划选区改变共和党
+  众议院路径；
+- 要求把“哪些调整对特朗普有利”作为独立分析维度，而不是背景注释。
+
+执行：
+- 新增 redistricting_watch 配置，按“已用于 2026 / 2026 被挡下 /
+  未改变”拆分 18 个相关州；
+- 2026 已生效 9 州：得州、佛州、俄亥俄、北卡、阿拉巴马、路易斯安那、
+  田纳西偏 R；加州、犹他偏 D；
+- 页面明确列出各州法庭/公投状态，不把被挡地图算进 2026 席位账本；
+- 使用当前众议院 R 218 / D 214 / I 1，说明民主党仍需净增 4 席；
+- 单列州级目标账：已生效地图直接相加为 R +15 / D +6，净共和党 +9 席，
+  并明确它不是九席已经翻转；
+- 列出重点目标选区：TX-09/28/32/34/35、CA-01/03/22/41/48、
+  OH-01/09、NC-01、TN-09、LA-06、AL-02、FL-09/14/22/25、UT-01；
+- 新增“这些选区现在能买什么”表：逐区显示结构受益党、对应市场、
+  成交/流动性、当前报价、执行建议和条件买入方向；
+- 当前 21 个目标选区没有一个单区盘同时达到 $50k 成交/$20k 流动性；
+  TX-34 只可观察 R 方向，AL-02 报价裂解禁止交易，其余多数无盘；
+- 唯一达标表达为众议院控制权：仅把 Republican Party — Yes 作为
+  小仓逆向仓，不把当前 8.5% 写成高概率结论；
+- 汇总口径区分“地图目标优势”与“实际胜选”，并标注 12 个席位更稳固偏 R、
+  1 个更偏 D、13 个竞争席消失；该席位分类账与州级净 +9 不重复相加；
+- 页面把 BBC 报道定位为 2025-11-04 的重划战起点，不把当时的估计当作
+  2026-10 最终状态。
+
+交付：
+- reports/intel_elections_hallucination_2026-10-27.html；
+- reports/intel_elections_events_2026-10-27.html；
+- config/election_hallucination_2026.json 的 redistricting_watch；
+- tools/build_election_hallucination.py 的重划账本渲染；
+- docs/task/ELECTION_INTELLIGENCE_WATCH.md 方法同步。
+
+验证：
+- pytest tests/test_election_hallucination.py -> 14 项通过；
+- Python 编译与 JSON 解析通过；
+- 页面桌面与 390px 宽移动端可视检查通过；
+- 市场数据仍使用 2026-10-26 快照；制度状态更新日期为 2026-10-26/27，
+  不与实时行情混淆。
+
+边界：
+- 重划设计目标不等于已赢席位；
+- 党派偏向不自动等于违法；
+- 不把每张共和党方向州图都归因于特朗普个人；
+- 地图优势可能被全国浪潮覆盖，不能单独当作守住众议院的结论。
+```
+
+### 2026-10-28 选举事件雷达：标记筛选、排序与重划关联
+
+```text
+状态：已完成，主分析页与完整事件清单同步
+
+新增：
+- 风险标记单选/取消：强信念 ≥80%、高信念 ≥85%、高换手 ≥5x、
+  薄盘 <$50k、报价裂解、高信念·厚共识；
+- 排序：翻盘窗口、幻觉压力、成交量、流动性、当前信念、换手率；
+  支持升序/降序切换；
+- 新增“重划关联”列：直接目标选区 / 聚合影响 / 另套地图 /
+  无直接·仅间接 / 无直接影响 / 非目标选区 / 无关。
+
+口径：
+- 州长、州检察长、州务卿是全州选举，国会选区边界没有直接影响；
+  只能通过资源、候选人、turnout、全国政治环境产生间接影响；
+- 州参议院通常使用另一套州议会地图；
+- 联邦参议院不由众议院选区制决定；
+- 只有目标国会选区和全国众议院控制权属于直接/聚合重划链条。
+
+验证：
+- 主页面 58 行、完整清单 58 行；
+- 高换手筛选后为 8 行，高信念筛选后为 32 行；
+- 成交量升序排序实测通过；
+- pytest tests/test_election_hallucination.py tests/test_scan_regression.py
+  共 43 项通过。
+```
+
+### 2026-10-27 以色列：看守总理与组阁规则核对
+
+```text
+状态：已完成证据核对，待选举结果与正式组阁进程更新
+
+核心：
+- 新 Knesset 选出后，卸任政府继续履职，已辞职总理继续履行角色，直到新政府成立；
+  看守延续不等于自动连任；
+- 正式组阁路径：总统 7 天内授权、第一轮 28+14 天、第二轮 28 天、
+  必要时 61 名议员指定授权 14 天，失败则 Knesset 视为解散并再次选举；
+- 以色列全国比例代表制，没有美国式地理国会选区重划；
+  最接近的制度工程是 3.25% 门槛、名单合并/拆分、剩余票协议与 61 席联盟算术；
+- 本地 2026-10-26 市场：下一任总理 Eizenkot 50.25c / Netanyahu 26.5c；
+  Yashar 最大党 69.0c / Likud 30.5c；市场不是最终概率，选举当日不据此定结果。
+
+交付：
+- docs/task/ISRAEL_CARETAKER_ANALYSIS_2026-10-27.md
+
+边界：
+- 《政府基本法》英文合并文本为非官方翻译，法律效力以希伯来文 Reshumot 为准；
+- 当前未核到 2026-10-27 前存在触发基本法第 18 条的最终道德败坏判决；
+- 看守角色、正式出任总理、监票争议是三种不同问题，禁止混写；
+- 规则工程与原证实作弊严格分开。
+```
+
+### 2026-10-26 比赛日：CS2 + LoL 十场赔率复盘与幻觉审计
+
+```text
+状态：已完成并入库
+
+范围：
+- Worlds 2026 Swiss R3 八场 LoL；
+- PGL Masters Bucharest 两场 CS2；
+- 保留逐小局/逐图、整场、双方真实 token、低高点、终值、形态、缺口与溯源；
+- 在原有赔率复盘维度上叠加事实 / 投影 / 叙事 / 剧本假设四层幻觉审计。
+
+交付：
+- reports/intel_daily_esports_hallucination_2026-10-26.html
+  + knowledge/intel_pages/intel_daily_esports_hallucination_2026-10-26.md；
+- docs/data/intel/daily_esports_2026_10_26.json；
+- reports/pattern_shapes_lol_daily_2026-10-26.json/html；
+- reports/pattern_shapes_cs2_pgl_2026-10-26.json/html；
+- tools/build_daily_esports_hallucination_2026_10_26.py。
+
+事实：
+- CS2：FUT 2:1 Vitality、TYLOO 2:1 9z，均为 G1 后让一追二；
+- LoL：IG、TES、DK、GEN、T1、BLG、LOS、TL 取胜；
+- 两场高先验方 0:2 出局：TL 2:0 AL、LOS 2:0 TSW；
+- AL 已由用户直接指认；第二场按“同为 0-2 BO3 强先验方直接出局”锁定 TSW–LOS。
+
+灰信号：
+- gray_signals 新增两条用户口述记录；
+- gray_entities 更新 AL，并新增 TSW / TL / LOS；
+- 全部状态为 pending / 仅留痕·非结论；
+- 没有本场弹幕原文、VOD 逐回合、异常成交或官方调查，不升级为操纵结论。
+
+形态库：
+- LoL 一级形态库 241 -> 249；
+- CS2 一级形态库 76 -> 78；
+- docs/data/intel/price_paths.json 655 -> 665；
+- matches 更新 10 场，全部 finished / settled；
+- 两份 9z–TYLOO 报告均已从“图三进行中”修正为 TYLOO 2:1 已结算。
+
+边界：
+- 实力评分、地图胜率、外推赔率只作带误差投影；
+- 两场 CS2 的 G3 无独立 Winner 市场，不用整场曲线伪造第三图；
+- 价格路径与赛果不能单独证明假赛或赛前剧本。
+```
+
+### 2026-10-29 Worlds Swiss R4 一分钟赔率增量复盘
+
+```text
+状态：已完成并入库
+
+范围：
+- T1 2:0 Movistar KOI；
+- Invictus Gaming 2:1 LYON；
+- 双方真实 outcome token，约 60 秒比赛内路径；Riot 官方系列比分交叉校验。
+
+关键观察：
+- T1：85.5c → 低 75.5c → 98.5c；
+- IG：66.5c → 低 56.5c → 99.5c；
+- 两场胜方均为 A3 折价修复 / 热门全程压制，均未跌穿 50c；
+- IG-LYON 打满 BO3，但整场价格从未翻到 LYON 一侧，证明“打满”不等于“领先权翻转”。
+
+A3 子形态：
+- 当前 Worlds R1-R4 整场赢家 26 场：A3 13 / A2 8 / A4 3 / C2 2；
+- A3 n=13，低点范围 42.5-86.5c，中位 63.5c；
+- 起点到低点中位回撤 10pp、最大 47pp；低点 <60c 为 5/13，<50c 为 2/13；
+- 后续不能只用 A3 名称路由，必须拆回撤深度、低点时长、恢复速度与 50c 穿越。
+
+交付：
+- reports/intel_worlds_swiss_r4_odds_2026-10-29.html
+  + knowledge/intel_pages/intel_worlds_swiss_r4_odds_2026-10-29.md；
+- reports/pattern_shapes_lol_worlds_r4_2026-10-29.json/html；
+- docs/data/snapshots/lol-mkoi-t1-2026-10-29/；
+- docs/data/snapshots/lol-ig1-ly-2026-10-28/；
+- tools/build_worlds_r4_odds_review.py；
+- tools/pm_public_search.py；
+- tools/fetch_official_game_data.py 补充官方系列比分输出；
+- tools/pm_http.py 修复公共出口池为空时 fanout 除零。
+
+入库与验证：
+- price_paths 665 -> 667；
+- LoL 一级形态库 249 -> 251；
+- matches / match_index / 情报索引 / DANMU_INTEL 已同步；
+- 重建 LoL 曲线、playbook、形态总览、粒度对照、频率榜；
+- 21 项相关回归通过。
+
+缺口：
+- 两场均只有 Match Winner，无独立逐局 Winner 市场；
+- 因此本轮只做整场形态，不生成 G1/G2/G3 价格路径；
+- 下一批 CFO-KC、BLG-TES 待赛后补入；CS2 PGL 淘汰赛待赛果/赛程源可用后补入。
+```
+
+### 2026-11-03 美国选举日最新快照与延期剧本
+
+```text
+状态：已生成当日快照，选举结果尚未产生
+
+最新核心赔率（Polymarket Gamma API，API updatedAt 2026-11-03T13:14:06Z）：
+- 众议院控制权：D 94.5c / R 5.5c；成交 $43.42m、流动性 $12.16m；
+  10/26 为 D 91.5c / R 8.5c；
+- 参议院控制权：D 77.5c / R 22.5c；成交 $18.82m、流动性 $2.04m；
+  10/26 为 D 64.5c / R 35.5c。
+
+关键州重估：
+- 得州参议院 D 63.5 -> 74.5；
+- 俄亥俄参议院 D 66.5 -> 71.5；
+- 缅因参议院 D 59.5 -> 72.5；
+- 密歇根参议院 D 68.5 -> 80.5；
+- 内华达州长 D 67.0 -> 76.5；
+- 佐治亚州长 D 62.5 -> 70.5；
+- 佛州州长 R 81.5 -> 64.5。
+
+延期判断：
+- 全国选举日改期：极低；2 U.S.C. §7 固定偶数年 11 月第一个星期一后的星期二，
+  没有总统单方面推迟通道；
+- 结果认证延后：仍可能出现，来自邮寄票统计、重新计票、诉讼和县认证争议；
+- 局部站点/时段异常：低但非零，属于州/地方应急和司法处理；
+- 本次查询未发现明确、高流动性的“2026 全国选举延期”市场；
+  众参两院主市场仍以 2026-11-04 04:59 UTC 为结算截止。
+
+交付：
+- reports/intel_elections_latest_2026-11-03.html；
+- docs/data/elections/election_current_snapshot_2026-11-03.json；
+- tools/build_election_latest_2026_11_03.py；
+- docs/task/ELECTION_DAY_UPDATE_2026-11-03.md；
+- tests/test_election_latest_2026_11_03.py。
+
+边界：
+- 赔率不是官方结果或真实概率；
+- 结果晚出 ≠ 投票日期被取消；
+- 不把没有专门延期市场解释成绝对不可能，只表示未发现可交易的全国延期主线。
+```
+
+### 2026-11-03 形态决策台赛程发现、开赛判定与本地刷新修复
+
+```text
+状态：已修复并完成实时验证
+
+现象：
+- 本地形态决策台长时间未出现正在进行的 IEM Beijing 比赛；
+- 开赛/结束节点和比赛数量在部分 CS2 场次上不稳定；
+- 同一场 BO3 的前一图尚未结束时，后续图可能被提前标成“进行中”。
+
+根因：
+- 本地 reports/pattern_decision_workspace.html 最后生成于 2026-10-29，没有本地定时刷新；
+- 实时刷新器只走 Polymarket 直连，遇到超时/TLS reset 会漏掉整轮候选；
+- Liquipedia CS2 脚本把所有赛程都当成 CEST 再加 6 小时，IEM Beijing（CST）整体错后 6 小时；
+- 比赛级 started 状态被错误套用到所有未关闭的子市场，导致未来小局被提前当作当前局。
+
+修复：
+- 新增 LaunchAgent com.ad.pattern-decision-live，每 10 分钟刷新本地页面；
+- http_json 增加 tools/pm_http.py 公共只读代理兜底；
+- 开赛时间优先 gameStartTime，缺失回退 eventStartTime，禁止回退 startDate；
+- 扫描诊断新增 unregistered_league / missing_start / outside_window 计数及样例；
+- 多个小局市场同时打开时，仅最低未结算局为当前局，后续小局保持赛前；
+- Liquipedia 按 Abbr 时区转换，CST 不再被当作 CEST。
+
+实时核验（2026-11-03 15:21 CST）：
+- Gamma 开放电竞事件 597，match-shaped 429；
+- 已登记联赛且落在两天窗口内 8 场，构建市场 27 个，行情错误 0；
+- IEM Beijing 6 场：FaZe-Falcons、MOUZ-BetBoom 在盘；其余 4 场待开赛；
+- FaZe G1 在盘时 G2 正确显示赛前待走势；MOUZ G1 已结束后当前局切换到 G2；
+- 形态训练集仍为 329 场 / 13,587 个观察点，新增实时盘面只用于当前决策，不冒充已结算历史样本。
+- 当日形态巡检写入 reports/pattern_audit_2026-11-03.md：11,894 条快照序列、3,647 个快照组；
+  435 条未知序列与 40 组候选结构只进入待审队列，未满足验证门槛前不新增正式形态。
+
+验证：
+- tests/test_pattern_decision_live.py、tests/test_fetch_cs2_liquipedia.py、
+  tests/test_pattern_decision_site.py、tests/test_pattern_structure_audit.py 共 36 项通过。
+```
+
+### 2026-11-08 LoL + CS2 最新赔率同步与双线形态图谱
+
+```text
+状态：已完成并入库
+
+新增比赛：
+- Worlds 淘汰赛 4 场：GEN 3:0 LYON、BLG 3:0 DK、
+  T1 3:1 KC、GEN 3:0 IG；
+- IEM Beijing 9 场；
+- 共 13 场、45 个 Winner 市场、90 条双方真实 token 序列。
+
+数据：
+- 比赛内单侧分钟点 6,545，约 60 秒，未使用 1-p 镜像；
+- LoL 由 Riot matchId、gameWins、逐局阵容交叉；
+- CS2 使用 Polymarket Match/Map Winner 结算；
+- Dota2 本窗口无已登记一级赛事，未混入 DreamLeague Division 2 /
+  1win Play-in。
+
+库更新：
+- price_paths 704 -> 717；
+- LoL 一级库 259 -> 263；CS2 一级库 101 -> 110；
+- 统一训练 366 -> 379 场；观察点 15,405 -> 16,050。
+
+形态与聚类：
+- 正式形态 16 种，当前实际命中 14 种；B3/C1 仍为零样本；
+- 5 个游戏×层级、16 个细分聚类组；
+- 16 个细分簇聚合为 4 个高层结构族，降低阅读复杂度；
+- 每张正式形态/聚类卡展示观察方+对手方两条真实价格线。
+
+交付：
+- reports/intel_lol_cs2_odds_2026_11_08.html
+  + knowledge/intel_pages/intel_lol_cs2_odds_2026_11_08.md；
+- reports/pattern_morphology_catalog_2026-11-08.html
+  + knowledge/intel_pages/pattern_morphology_catalog_2026-11-08.md；
+- reports/pattern_clusters_2026-11-08.json；
+- docs/data/intel/lol_cs2_review_2026_11_08.json；
+- tools/build_latest_lol_cs2_review_2026_11_08.py；
+- tools/build_pattern_clusters_2026_11_08.py；
+- tools/list_settled_esports.py。
+```
+
+### 2026-11-04 Worlds 淘汰赛与 IEM Beijing 一分钟赔率、形态库与聚类增量
+
+```text
+状态：已完成并入库
+
+范围：
+- IEM Beijing 11-03/04 已结算 5 场、15 个 Winner 市场；
+  Team Falcons 2:0 Heroic、TheMongolz 2:1 FURIA、
+  Natus Vincere 2:1 Team Falcons、BetBoom 2:1 Liquid、Liquid 2:0 TYLOO；
+- Worlds Playoffs 已结算 1 场、5 个 Winner 市场：
+  IG 3:1 TES（G1 IG / G2 TES / G3 IG / G4 IG，G5 unneeded）。
+
+数据：
+- 双方真实 outcome token，Polymarket CLOB prices-history fidelity=1；
+- 比赛内约 60 秒；IEM 2,448 个、Worlds 905 个单侧分钟点；
+- Worlds 由 Riot matchId 115660540726095109 核对 series gameWins
+  与 G1–G4 阵容；
+- 三场 2:1 的 G3 无独立 Map Winner 市场，只按整场结算归属，
+  不生成虚假第三图曲线，不使用 1-p 镜像。
+
+库更新：
+- price_paths 698 -> 704；
+- LoL 一级形态库 258 -> 259；
+- CS2 一级形态库 96 -> 101；
+- 统一训练 360 -> 366 场，观察点 14,532 -> 15,405。
+
+形态与聚类：
+- 正式命名保持 16 个有效标签 + 暂未归类；
+- 聚类域仍为 5 个：LoL 整场 259 / 小局 510、CS2 整场 101 /
+  单图 201、Dota2 整场 6；
+- 共 16 个具体聚类组；聚类为 L0 观察，不新增正式第 17 种形态。
+
+交付：
+- reports/intel_cs2_iem_beijing_2026_11_03_04.html
+  + knowledge/intel_pages/intel_cs2_iem_beijing_2026_11_03_04.md；
+- reports/intel_lol_worlds_qf_2026_11_04.html
+  + knowledge/intel_pages/intel_lol_worlds_qf_2026_11_04.md；
+- reports/pattern_shapes_lol_worlds_qf_2026_11_04.json/html；
+- reports/pattern_shapes_cs2_iem_beijing_2026_11_03_04.json/html；
+- reports/pattern_cluster_2026-11-04.html；
+- reports/pattern_clusters_2026-11-04.json；
+- docs/data/intel/cs2_iem_beijing_review_2026_11_03_04.json；
+- docs/data/intel/lol_worlds_qf_review_2026_11_04.json；
+- tools/build_cs2_iem_beijing_2026_11_04.py；
+- tools/build_lol_worlds_qf_2026_11_04.py；
+- tests/test_cs2_iem_beijing_2026_11_04.py、
+  tests/test_lol_worlds_qf_2026_11_04.py。
+```
+
+### 2026-11-03 多赛事一分钟赔率、形态库与聚类更新
+
+```text
+状态：已完成并入库
+
+范围：
+- LoL：Worlds 7 场；
+- CS2：PGL Bucharest Playoffs 5 场 + IEM Beijing Group Stage 13 场；
+- Dota2：PARI Universe Playoffs 6 场；
+- 合计 31 场、67 个 Winner 市场。
+
+数据：
+- 双方真实 outcome token，约 60 秒，游戏与赛事分层。
+- Worlds / Dota2 本次无独立逐局 Winner 市场。
+- PGL Nemiga-FURIA 2:3 的 G1/G2 单边分钟价格缺失、G5 无独立市场；
+  整场样本保留，小局缺口显式记录。
+- 精确赛制比分取 Polymarket Gamma event score，并与 Riot/官方赛果交叉。
+
+库更新：
+- price_paths 667 -> 698；
+- LoL 一级形态库 251 -> 258；
+- CS2 一级形态库 78 -> 96；
+- 统一训练 329 -> 360 场，观察点 13,587 -> 14,532；
+- Dota2 首次进入统一训练，独立样本 6 场。
+
+命名：
+- 正式展示名固定为 16 个有效形态 + 暂未归类。
+- A3=高位回撤修复、A4=整场逆袭反转、B4=持续阴跌/低位持续阴跌；
+  旧赔率生成器同步消除旧称。
+
+聚类：
+- 5 个游戏×层级组：LoL 整场 258 / LoL 小局 506 / CS2 整场 96 /
+  CS2 逐图 191 / Dota2 整场 6；
+- 巡检 12,029 条序列、436 条未知、40 组签名候选；
+- 37 组进入观察池，3 组中位停滞判为数据质量/未完成；
+- 聚类仍为 L0，不升级自动策略。
+
+交付：
+- reports/intel_multi_game_odds_2026_11_03.html
+  + knowledge/intel_pages/intel_multi_game_odds_2026_11_03.md；
+- reports/pattern_cluster_2026-11-03.html；
+- reports/pattern_clusters_2026-11-03.json；
+- reports/pattern_audit_2026-11-03.md；
+- docs/data/intel/multi_game_review_2026_11_03.json；
+- tools/build_multi_game_odds_review_2026_11_03.py；
+- tools/fetch_event_meta.py；
+- tests/test_multi_game_odds_2026_11_03.py、
+  tests/test_pattern_library_missing_map_prices.py。
+
+验证：
+- 80 项相关回归通过；
+- 目标 31 场在 matches / match_index / price_paths 无重复；
+- 全部 JSON 可解析；
+- 用户可见赔率、形态、频率、粒度页面已消除内部 A/B/C 代码直出。
+```
+
+### 2026-11-23 弹幕情报台新增“赛前情报”独立模块
+
+```text
+状态：本地已实现并完成真实只读验收；待 VPS 部署/线上验收
+
+数据源：
+- Stake 官方 Sports Data API（赛程 / 市场）；
+- 足球 / NBA：Stake 页面公开嵌入的 Sportradar LMT Plus；
+- CS2 / Dota2 / LoL：Stake 页面公开嵌入的 Oddin iframe + GraphQL；
+- 足球首批 7 个热门赛事目录，NBA 1 个目录；
+- 电竞继续使用 LoL / CS2 / Dota2 联赛白名单；
+- 不登录、不使用账户 Token、不调用下注或账户接口。
+
+交付：
+- config/stake_prematch.json；
+- tools/build_stake_prematch_site.py；
+- tools/stake_lmt.py；
+- tools/stake_oddin.py；
+- reports/intel_prematch.html；
+- reports/intel_prematch.json；
+- 导航新增“赛前情报”；
+- deploy/prematch-intel/prematch-intel.service / .timer（每 10 分钟）；
+- docs/task/PREMATCH_INTEL_MODULE.md；
+- tests/test_stake_prematch.py。
+
+真实只读验收（2026-11-23，72 小时窗口）：
+- 43 场未来比赛；
+- CS2 8、Dota2 4、足球 21、NBA 10；
+- 42 场有效主市场报价，1 场 fixture detail 500 缺口；
+- 43 场完整深包：LMT 31/31、Oddin 12/12；
+- CS2 深包含双方约 10 人、地图池、T/CT 与逐选手统计；
+- Dota2 深包含双方约 10 人、近 5 场、H2H、127 项赛事英雄池；
+- 足球 / NBA 深包含排名/近况、伤停、名单、首发与 H2H；
+- 页面不再读取旧队伍/选手画像库；
+- 英雄联盟当前窗口 0 场，按无场次显示；
+- NBA 当前近况/伤停/名单/近场五人/总体与分区积分榜可用；
+- 请求错误 1（Atletico Madrid - Viking fixture detail；详情深包仍保留）。
+
+边界：
+- 十进制赔率与去水概率只作赛前市场共识；
+- 不混入 Polymarket 0–1 分钟价格；
+- 不触发自动交易；
+- GitHub 是站点产物版本仓库/Pages 镜像，生产实时展示仍由 VPS nginx 承担。
 ```

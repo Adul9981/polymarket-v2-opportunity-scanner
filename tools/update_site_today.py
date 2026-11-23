@@ -16,10 +16,38 @@ import datetime
 import html
 import json
 import re
+import subprocess
+import sys
+import time
 from datetime import datetime as dt_fmt, timedelta, timezone
 from pathlib import Path
 
 from match_status import match_status
+
+
+PREMATCH_JSON = Path("reports/intel_prematch.json")
+TEAM_ALIASES = {
+    "nip": "ninjas in pyjamas",
+    "ninjas in pyjamas": "ninjas in pyjamas",
+    "liquid": "team liquid",
+    "team liquid": "team liquid",
+    "9z": "9z team",
+    "9z team": "9z team",
+    "dendele": "dendele cs",
+    "dendele cs": "dendele cs",
+    "aurora": "aurora gaming",
+    "aurora gaming": "aurora gaming",
+    "lgd": "lgd gaming",
+    "lgd gaming": "lgd gaming",
+    "navi": "natus vincere",
+    "natus vincere": "natus vincere",
+    "spirit": "team spirit",
+    "team spirit": "team spirit",
+    "falcons": "team falcons",
+    "team falcons": "team falcons",
+    "vitality": "team vitality",
+    "team vitality": "team vitality",
+}
 
 
 def esc(s) -> str:
@@ -55,6 +83,63 @@ def bj_date_of(start_raw: str, slug: str = "") -> str:
     return ""
 
 
+def split_teams(title: str) -> tuple[str, str] | None:
+    """从标题拆出对阵双方（容忍 'LoL:'/'Counter-Strike:' 前缀与
+    '(BO5)'/' - LPL Playoffs' 后缀）。模块级便于回归测试。"""
+    mm = re.search(r"\s+vs\s+", title or "", re.I)
+    if not mm:
+        return None
+    left = title[: mm.start()]
+    right = title[mm.end():]
+    # 右侧队伍：到括号 / 破折号即止
+    right = re.split(r"\s*[\(（\-\u2013\u2014]\s*", right, maxsplit=1)[0].strip()
+    # 左侧队伍：取最后一个冒号 / 破折号之后的片段
+    left = re.split(r"(?:\s+[—\-–]\s+|[:：]\s+)", left)[-1].strip()
+    if not left or not right:
+        return None
+    return left, right
+
+
+def refresh_hupu_cache(path: Path, max_age_sec: int = 300) -> bool:
+    """虎扑缓存 >5 分钟即后台刷新一次（失败保留旧缓存，不影响页面）。"""
+    try:
+        if path.exists():
+            age = time.time() - path.stat().st_mtime
+            if age < max_age_sec:
+                return True
+        script = Path(__file__).resolve().parent / "fetch_hupu_esports.py"
+        if not script.exists():
+            return False
+        r = subprocess.run(
+            [sys.executable, str(script), "--out", str(path)],
+            capture_output=True,
+            text=True,
+            timeout=90,
+        )
+        return r.returncode == 0
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def refresh_official_cache(path: Path, date: str, max_age_sec: int = 600) -> bool:
+    """官方 Riot LoL 赛程缓存 >10 分钟即刷新（失败保留旧缓存）。"""
+    try:
+        if path.exists() and time.time() - path.stat().st_mtime < max_age_sec:
+            return True
+        script = Path(__file__).resolve().parent / "fetch_official_lol_schedule.py"
+        if not script.exists():
+            return False
+        r = subprocess.run(
+            [sys.executable, str(script), "--date", date, "--out", str(path)],
+            capture_output=True,
+            text=True,
+            timeout=90,
+        )
+        return r.returncode == 0
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def league_of(title: str) -> str:
     t = title.lower()
     if t.startswith("lol:"):
@@ -71,13 +156,110 @@ def league_of(title: str) -> str:
     return "-"
 
 
+def _prematch_key(names: list[str]) -> tuple[str, str]:
+    """Stable team-pair key tolerant of punctuation and casing."""
+    def norm(value: str) -> str:
+        value = html.unescape(str(value or "")).lower()
+        value = TEAM_ALIASES.get(value.strip(), value)
+        value = re.sub(r"\b(?:esports?|gaming|team)\b", " ", value)
+        return re.sub(r"[^a-z0-9]+", "", value)
+
+    left, right = (norm(names[0]), norm(names[1]))
+    return (min(left, right), max(left, right))
+
+
+def load_prematch_index() -> tuple[dict[tuple[str, str], dict], list[dict]]:
+    """Load the local AI pre-match snapshot and build lookup records.
+
+    The list page uses Polymarket titles while the pre-match page uses the
+    platform's team spelling. Exact normalized pair matching is preferred;
+    callers can use ``prematch_for`` for a conservative fallback.
+    """
+    if not PREMATCH_JSON.exists():
+        return {}, []
+    try:
+        data = json.loads(PREMATCH_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}, []
+    fixtures = [row for row in data.get("fixtures") or [] if isinstance(row, dict)]
+    index: dict[tuple[str, str], dict] = {}
+    for row in fixtures:
+        teams = row.get("teams") or []
+        if len(teams) != 2:
+            continue
+        item = dict(row)
+        item["_prematch_date"] = str(row.get("date_bj") or "")
+        item["_prematch_key"] = _prematch_key(teams)
+        detail = str(row.get("detail_url") or "")
+        if not detail:
+            detail = "intel_prematch.html"
+        item["_prematch_href"] = detail
+        index[item["_prematch_key"]] = item
+    return index, fixtures
+
+
+def prematch_for(
+    title: str,
+    date: str,
+    index: dict[tuple[str, str], dict],
+    fixtures: list[dict],
+) -> dict | None:
+    teams = split_teams(title)
+    if not teams:
+        return None
+    wanted = _prematch_key(list(teams))
+    exact = index.get(wanted)
+    if exact:
+        return exact
+    # Conservative fallback for common suffix differences (e.g. "Gaming").
+    wanted_words = [
+        set(re.findall(r"[a-z0-9]+", item.lower()))
+        for item in teams
+    ]
+    best: tuple[float, dict] | None = None
+    for row in fixtures:
+        if str(row.get("date_bj") or "") != date:
+            continue
+        candidates = [
+            set(re.findall(r"[a-z0-9]+", str(name).lower()))
+            for name in row.get("teams") or []
+        ]
+        if len(candidates) != 2:
+            continue
+        # Pair-wise token overlap; require both sides to have a meaningful hit.
+        score = max(
+            len(wanted_words[0] & candidates[0])
+            + len(wanted_words[1] & candidates[1]),
+            len(wanted_words[0] & candidates[1])
+            + len(wanted_words[1] & candidates[0]),
+        )
+        if score >= 2 and (best is None or score > best[0]):
+            best = (
+                float(score),
+                index.get(_prematch_key([str(name) for name in row.get("teams") or []]), row),
+            )
+    return index.get(_prematch_key(list(best[1].get("teams") or []))) if best else None
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=datetime.date.today().isoformat())
     ap.add_argument("--watchlist", default="runtime/watchlist_events.json")
     ap.add_argument("--matches-json", default="docs/data/intel/matches.json")
+    ap.add_argument(
+        "--hupu-json",
+        default="data/hupu_esports_schedule.json",
+        help="虎扑热门比赛缓存（tools/fetch_hupu_esports.py 产出）",
+    )
     ap.add_argument("--site-dir", default=".danmu_intel_site")
     args = ap.parse_args()
+
+    prematch_index, prematch_fixtures = load_prematch_index()
+
+    # 虎扑赛程缓存自动刷新（失败不阻塞今日页，最多沿用 5 分钟前的快照）
+    hupu_cache = Path(args.hupu_json)
+    if not refresh_hupu_cache(hupu_cache):
+        print(f"[today] hupu cache unavailable/miss: {hupu_cache} (continue without)")
 
     rows: list[dict] = []
     rows_tomorrow: list[dict] = []
@@ -121,7 +303,22 @@ def main() -> None:
                 and end_dt is not None
                 and end_dt >= dt_fmt.now(datetime.timezone.utc)
             )
-            if slug and (is_today or still_live):
+            # 2026-08-31：跨午夜保护——凌晨（近 8 小时）开赛的场次即使按
+            # 扫描时间归到"昨天"，只要尚未结束，仍显示在今日页
+            # （教训：LEC GX-FNC 00:30 CST 开赛，扫描 start 偏差 45 分钟
+            # 被归到昨日，今日页漏掉）。
+            start_dt = None
+            if start:
+                try:
+                    start_dt = dt_fmt.fromisoformat(start.replace("Z", "+00:00"))
+                except ValueError:
+                    start_dt = None
+            recent_start = (
+                start_dt is not None
+                and 0 <= (dt_fmt.now(datetime.timezone.utc) - start_dt).total_seconds() <= 8 * 3600
+                and (end_dt is None or end_dt >= dt_fmt.now(datetime.timezone.utc))
+            )
+            if slug and (is_today or still_live or recent_start):
                 title = e.get("title", e.get("name", "-"))
                 lg = league_of(title)
                 if lg == "LCS":
@@ -179,13 +376,6 @@ def main() -> None:
                     }
                 )
 
-    out_json = Path("runtime/intel_today.json")
-    out_json.parent.mkdir(parents=True, exist_ok=True)
-    out_json.write_text(
-        json.dumps({"date": args.date, "matches": rows}, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-
     def parse_dt(iso: str):
         if not iso:
             return None
@@ -213,8 +403,11 @@ def main() -> None:
         except Exception:  # noqa: BLE001
             return ""
 
-    def market_link(slug: str) -> str:
+    def market_link(slug: str, r: dict | None = None) -> str:
         if not slug:
+            return ""
+        # 官方补漏场次（无 Polymarket 快照）不挂市场链接（2026-09-10）
+        if r is not None and r.get("_official") and not r.get("_polymarket_known"):
             return ""
         return (
             f'<a class="b" href="https://polymarket.com/event/{esc(slug)}{via_suffix()}" '
@@ -222,6 +415,28 @@ def main() -> None:
         )
 
     def status_of(r: dict) -> str:
+        # Riot 官方补漏行直接采用官方 state（2026-09-10）
+        if r.get("_official") and r.get("_official_result"):
+            return "ended"
+        if r.get("_official") and str(r.get("status", "")).lower() in (
+            "unstarted", "未开始", "inprogress", "进行中", "completed", "已结束",
+        ):
+            return {
+                "unstarted": "upcoming",
+                "未开始": "upcoming",
+                "inprogress": "live",
+                "进行中": "live",
+                "completed": "ended",
+                "已结束": "ended",
+            }.get(str(r["status"]).lower(), "upcoming")
+        # 虎扑源状态直接采用：无 Polymarket 元数据的 CS2/LOL 热门场次不
+        # 套 match_status 的"已开赛未结束"推断，避免把已结束标成进行中。
+        if r.get("_hupu_status") in ("completed", "inProgress", "notStarted"):
+            return {
+                "completed": "ended",
+                "inProgress": "live",
+                "notStarted": "upcoming",
+            }[r["_hupu_status"]]
         # 2026-08-27 固化：今日页状态优先采用 matches.json 权威状态
         # （教训：CS2 短队名 "9z" 等导致整场页匹配失败，MOUZ-9z 已结束
         # 却仍显示"未开始"；matches.json 由官方数据源回填，作为最高优先）。
@@ -259,12 +474,152 @@ def main() -> None:
                 md_by_teams[(m.get("date"), tuple(sorted(norm_team(t) for t in teams)))] = m
 
     def match_info(title: str, date: str) -> tuple[dict, dict | None]:
-        mm = re.search(r":\s*(.+?)\s+vs\s+(.+?)\s*(?:\(|\-|$)", title or "", re.I)
-        if not mm:
+        pair = split_teams(title)
+        if not pair:
             return {}, None
-        teams = tuple(sorted([norm_team(mm.group(1)), norm_team(mm.group(2))]))
+        teams = tuple(sorted((norm_team(pair[0]), norm_team(pair[1]))))
         m = md_by_teams.get((date, teams))
         return {}, m
+
+    # ============ 虎扑赛程合并（2026-09-08 第二输入源） ============
+    # 虎扑补 Polymarket 无市场但虎扑有热门的场次（教训：今日 CS2 被清单
+    # 系统性漏掉）。只影响展示，不写 matches.json / matches_today.json。
+    def _canon_key(r: dict) -> tuple:
+        pair = split_teams(r.get("title", ""))
+        if not pair:
+            return ()
+        # 只按对阵双方去重：同一场 LoL 比赛在 Polymarket 可能标 LPL、
+        # 在虎扑标 LoL，联赛字段不同不应导致重复行。
+        return tuple(sorted((norm_team(pair[0]), norm_team(pair[1]))))
+
+    hupu_rows_added = 0
+    hupu_tomorrow_added = 0
+    if hupu_cache.exists():
+        try:
+            _hp = json.loads(hupu_cache.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            _hp = None
+        if _hp:
+            _seen = {_canon_key(r) for r in rows + rows_tomorrow if _canon_key(r)}
+            for h in _hp.get("matches", []) or []:
+                lg = h.get("league", "")
+                teams = h.get("teams") or []
+                if len(teams) != 2 or lg not in ("CS2", "LoL"):
+                    continue
+                if any(
+                    "待定" in str(t) or str(t).lower() in ("tbd",)
+                    for t in teams
+                ):
+                    continue  # 占位对阵不进今日页
+                scores = h.get("scores") or ["-", "-"]
+                row = {
+                    "league": lg,
+                    "title": f"{teams[0]} vs {teams[1]}",
+                    "slug": "",
+                    "date": h.get("date", ""),
+                    "time": fmt_time(h.get("start_iso", "")),
+                    "status": h.get("status_label", ""),
+                    "start_raw": h.get("start_iso", ""),
+                    "end_raw": "",
+                    "_hupu_status": h.get("status", ""),
+                    "_hupu_result": (
+                        f"{scores[0]}:{scores[1]}"
+                        if h.get("status") == "completed"
+                        and all(str(s) not in ("", "-") for s in scores)
+                        else ""
+                    ),
+                    "_hupu_stage": h.get("tournament", ""),
+                }
+                key = _canon_key(row)
+                if not key or key in _seen:
+                    continue
+                if row["date"] == args.date:
+                    rows.append(row)
+                    _seen.add(key)
+                    hupu_rows_added += 1
+                elif row["date"] == tomorrow and h.get("status") == "notStarted":
+                    rows_tomorrow.append(row)
+                    _seen.add(key)
+                    hupu_tomorrow_added += 1
+
+    # ============ Riot 官方 LoL 赛程合并（2026-09-10 第三输入源） ============
+    # 补 LCK CL / LPL 等 Polymarket 无市场的官方场次（教训：09-09 NS vs DNS、
+    # 09-10 前多场 LCK CL 未进今日页）。只影响展示；matches.json 登记仍由
+    # vps 回填/export_today_matches 的 official 合并负责。
+    official_cache = Path("runtime/official_lol_today.json")
+    official_added = 0
+    official_tomorrow_added = 0
+    refresh_official_cache(official_cache, args.date)
+    if official_cache.exists():
+        try:
+            _ol = json.loads(official_cache.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            _ol = None
+        if _ol:
+            _seen = {_canon_key(r) for r in rows + rows_tomorrow if _canon_key(r)}
+            for om in _ol.get("matches", []) or []:
+                teams = om.get("teams") or []
+                if len(teams) != 2:
+                    continue
+                if any("待定" in str(t) or str(t).lower() in ("tbd",) for t in teams):
+                    continue
+                d = (om.get("start_time") or "")[:10]
+                if d not in (args.date, tomorrow):
+                    continue
+                oslug = om.get("slug", "") or ""
+                row = {
+                    "league": om.get("league", "LoL"),
+                    "title": f"{teams[0]} vs {teams[1]}",
+                    "slug": oslug,
+                    "date": d,
+                    "time": fmt_time(om.get("start_time", "")),
+                    "status": om.get("time_status", ""),
+                    "start_raw": om.get("start_time", ""),
+                    "end_raw": om.get("end_time", ""),
+                    "_official": True,
+                    "_official_result": (
+                        om.get("result_inferred", "") if om.get("closed") else ""
+                    ),
+                }
+                key = _canon_key(row)
+                if not key:
+                    continue
+                if key in _seen:
+                    # 同一场已有 Polymarket 行：保留市场/情报入口，但用官方
+                    # 源补更精确的联赛名（LCK CL）与官方状态（2026-09-10）
+                    for r0 in rows:
+                        if _canon_key(r0) == key:
+                            r0["_polymarket_known"] = True
+                            if "LCK CL" in str(om.get("league", "")):
+                                r0["league"] = om.get("league")
+                            r0["_official"] = True
+                            break
+                    continue
+                if d == args.date:
+                    rows.append(row)
+                    _seen.add(key)
+                    official_added += 1
+                elif d == tomorrow and not om.get("closed"):
+                    rows_tomorrow.append(row)
+                    _seen.add(key)
+                    official_tomorrow_added += 1
+    if official_added or official_tomorrow_added:
+        print(
+            f"[today] merged official riot rows: +{official_added} today, "
+            f"+{official_tomorrow_added} tomorrow"
+        )
+
+    out_json = Path("runtime/intel_today.json")
+    out_json.parent.mkdir(parents=True, exist_ok=True)
+    out_json.write_text(
+        json.dumps({"date": args.date, "matches": rows}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    if hupu_rows_added or hupu_tomorrow_added:
+        print(
+            f"[today] merged hupu rows: +{hupu_rows_added} today, "
+            f"+{hupu_tomorrow_added} tomorrow"
+        )
 
     def intel_link(m: dict | None, title: str, date: str, slug: str = "") -> str:
         if slug:
@@ -321,7 +676,9 @@ def main() -> None:
 
     def row_html(r: dict) -> str:
         _, m = match_info(r["title"], r.get("date", ""))
-        result = (m or {}).get("result_inferred", "") if m else ""
+        result = r.get("_hupu_result", "") or (
+            (m or {}).get("result_inferred", "") if m else ""
+        )
         cls = status_of(r)
         # 开赛时间以 matches.json 官方登记为准（教训 2026-08-27：
         # watchlist 快照 22:00 vs Liquipedia 官方 22:30，页面曾显示错误时间）
@@ -338,8 +695,22 @@ def main() -> None:
         if cls == "ended" and result:
             st += f'<span class="rs" title="{esc(result)}">{esc(result[:34])}</span>'
         elif cls == "ended":
-            st += '<span class="rs">结果待回填</span>'
-        st += market_link(r.get("slug", ""))  # 市场链接（带联盟后缀）
+            if r.get("_hupu_status"):
+                st += '<span class="rs">虎扑比分待核对</span>'
+            else:
+                st += '<span class="rs">结果待回填</span>'
+        st += market_link(r.get("slug", ""), r)  # 市场链接（带联盟后缀）
+        prematch = prematch_for(
+            r["title"],
+            r.get("date", ""),
+            prematch_index,
+            prematch_fixtures,
+        )
+        if prematch:
+            st += (
+                f'<a class="b" href="{esc(prematch.get("_prematch_href"))}">'
+                '赛前情报 →</a>'
+            )
         if link:
             st += link
         st += "</span>"
@@ -400,13 +771,57 @@ def main() -> None:
         + (detail_rows or empty_detail) + '</div>'
     )
 
+    prematch_today = [
+        r for r in prematch_fixtures
+        if str(r.get("date_bj") or "") == args.date
+    ]
+    prematch_today.sort(key=lambda r: (r.get("start_ts") or 0, r.get("sport") or ""))
+    prematch_rows = ""
+    for r in prematch_today:
+        teams = r.get("teams") or []
+        if len(teams) != 2:
+            continue
+        winner = (r.get("winner_market") or {}).get("outcomes") or []
+        top = max(
+            winner,
+            key=lambda x: float(x.get("fair_probability") or 0),
+            default=None,
+        )
+        market = (
+            f'{esc(top.get("name"))} {float(top.get("fair_probability")) * 100:.1f}%'
+            if top else esc(r.get("market_state_label") or "市场缺口")
+        )
+        detail_href = r.get("detail_url") or "intel_prematch.html"
+        prematch_rows += (
+            '<div class="row" data-league="prematch">'
+            f'<span class="lg">{esc(r.get("sport_short"))}</span>'
+            f'<span class="tm">{esc(teams[0])} vs {esc(teams[1])}</span>'
+            f'<span class="dt">{esc(str(r.get("start_at_bj") or ""))}</span>'
+            '<span class="st"><span class="bd up">赛前</span>'
+            f'<span class="rs">{esc(market)}</span>'
+            f'<a class="b" href="{esc(detail_href)}">完整数据 →</a></span></div>'
+        )
+    prematch_body = prematch_rows or (
+        '<div class="row"><span class="tm">今日暂无可关联的赛前数据</span></div>'
+    )
+    prematch_card = (
+        '<div class="card"><h2>今日赛前情报</h2>'
+        '<div class="sub">队伍、选手、地图/英雄池、赛事与市场共识'
+        ' · <a class="b" href="intel_prematch.html">查看完整窗口 →</a></div>'
+        f'<div class="grp">{prematch_body}</div>'
+        '</div>'
+    )
+
     tomorrow_rows = "".join(row_html(r) for r in rows_tomorrow)
+    tomorrow_body = tomorrow_rows or (
+        '<div class="row"><span class="tm">明日暂无已确认场次</span></div>'
+    )
     tomorrow_html = (
-        f'<div class="card"><h2>明日预告</h2>'
-        f'<div class="grp">{tomorrow_rows}</div>'
-        f'<div class="note">明日重点比赛提前预告（以开赛当天自动页为准）</div></div>'
-    ) if rows_tomorrow else ""
-    body = f'<div class="card"><h2>赛程</h2>{sched}<div class="note">未开始 = 重点关注；进行中 = 可看实时情报；已结束 = 置灰 + 结果说明。关注联赛：LPL / LCK / LEC（英雄联盟）。</div></div>{tomorrow_html}{detail}'
+        '<div class="card"><h2>明日预告</h2>'
+        f'<div class="grp">{tomorrow_body}</div>'
+        '<div class="note">明日重点比赛提前预告（以开赛当天自动页为准）</div></div>'
+    )
+    body = f'<div class="card"><h2>赛程</h2>{sched}<div class="note">未开始 = 重点关注；进行中 = 可看实时情报；已结束 = 置灰 + 结果说明。关注联赛：LPL / LCK / LEC（英雄联盟）。</div></div>{prematch_card}{tomorrow_html}{detail}'
 
     page = f"""<!doctype html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -451,7 +866,7 @@ footer{{margin-top:16px;font-size:11.5px;color:var(--sub);border-top:1px solid v
 @media(max-width:640px){{.row{{flex-wrap:wrap}} .dt{{order:3;width:100%}}}}
 </style></head><body><div class="wrap">
 <h1>今日比赛</h1>
-<div class="sub">Polymarket 电竞白名单场次（近期扫描窗口）· {args.date} · 数据源：实时扫描 + 情报库 slug</div>
+<div class="sub">电竞热门比赛 · {args.date} · 数据源：Polymarket 实时扫描 + 情报库 slug + 虎扑赛程（CS2/LOL 补漏）</div>
 {body}
 <footer>弹幕情报库 · 每日自动更新</footer>
 <script>

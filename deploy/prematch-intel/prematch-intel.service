@@ -1,0 +1,17 @@
+[Unit]
+Description=Refresh Stake pre-match intelligence (read-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/danmu-intel
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/opt/danmu-intel/runtime/stake_prematch.env
+ExecStart=/opt/danmu-intel/.venv/bin/python /opt/danmu-intel/tools/build_stake_prematch_site.py
+Nice=10
+TimeoutStartSec=420
+
+[Install]
+WantedBy=multi-user.target

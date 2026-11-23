@@ -37,12 +37,21 @@
         "LCP Regular Season",
         " - LEC ",
         " LEC ",
-  "LEC Regular Season",
-  "LEC Playoffs",
-  "LEC Summer",
-  "KeSPA Cup",
-  "Kespa Cup"
-]
+        "LEC Regular Season",
+        "LEC Playoffs",
+        "LEC Summer",
+        "KeSPA Cup",
+        "Kespa Cup",
+        "Worlds",
+        "World Championship",
+        "World Star Challengers",
+        "World Star Challengers Invitational",
+        "WSCI",
+        "EMEA Masters",
+        "Demacia Cup",
+        "Asian Games",
+        "LCS"
+      ]
     },
     "cs2": {
       "name": "Counter-Strike 2",
@@ -55,8 +64,15 @@
         "IEM",
         "BLAST",
         "Esports World Cup",
-        "EWC"
-      ]
+        "EWC",
+        "ESL Pro League",
+        "Thunderpick",
+        "PGL Bucharest",
+        "PGL Major",
+        "PGL Cluj",
+        "PGL"
+      ],
+      "tier_note": "一级口径（2026-10-15 用户确认扩登记）：IEM / BLAST / EWC / ESL Pro League / Thunderpick / PGL；三级赛事（ESEA/CCT/Dust2.dk/United21 等）按用户指令不纳入"
     },
     "dota2": {
       "name": "Dota 2",
@@ -67,7 +83,8 @@
       ],
       "league_keywords": [
         "The International",
-        "ESL One"
+        "ESL One",
+        "BLAST Slam"
       ]
     }
   }

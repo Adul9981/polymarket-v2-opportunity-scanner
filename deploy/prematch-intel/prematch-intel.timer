@@ -1,0 +1,13 @@
+[Unit]
+Description=Refresh Stake pre-match intelligence every ten minutes
+
+[Timer]
+OnBootSec=45s
+OnUnitActiveSec=10min
+AccuracySec=30s
+RandomizedDelaySec=10s
+Persistent=true
+Unit=prematch-intel.service
+
+[Install]
+WantedBy=timers.target

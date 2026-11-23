@@ -11,6 +11,8 @@ import json
 import re
 from pathlib import Path
 
+from update_site_today import split_teams
+
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / ".danmu_intel_site"
 TODAY_JSON = ROOT / "runtime" / "intel_today.json"
@@ -24,7 +26,8 @@ def test_today_page_has_exactly_one_unified_nav() -> None:
     # 禁止生成器旧导航残留（class="inner" 是旧模板特征）
     assert 'class="inner"' not in t, "today.html 残留旧模板导航"
     # 统一导航必须有完整内联样式 + 当前页高亮
-    assert 'color:#0071e3;font-weight:700;font-size:13px;text-decoration:none"' in t
+    assert 'background:#1d1d1f;color:#fff;font-weight:650;font-size:13px;text-decoration:none' in t
+    assert 'aria-current="page"' in t
     assert "弹幕情报库</a>" in t
 
 
@@ -123,3 +126,15 @@ def test_history_lists_node_breakdown_or_none() -> None:
         for known in ("GIANTX vs G2 Esports", "Natus Vincere vs Fnatic", "BFX.Y vs HLE.C"):
             if known in row:
                 assert "暂无" not in row, f"{known} 被误标暂无"
+
+
+def test_split_teams_handles_polymarket_and_hupu_titles() -> None:
+    """虎扑去重回归（2026-09-08）：Polymarket 'LoL: ... (BO5) - LPL'
+    标题与虎扑 'LGD vs IG' 必须能拆成同一对阵，避免同日重复行。"""
+    assert split_teams(
+        "LoL: Invictus Gaming vs LGD Gaming (BO5) - LPL Playoffs"
+    ) == ("Invictus Gaming", "LGD Gaming")
+    assert split_teams("LGD vs IG") == ("LGD", "IG")
+    assert split_teams(
+        "Counter-Strike: G2 vs Natus Vincere (BO3) - BLAST Open Porto Group A"
+    ) == ("G2", "Natus Vincere")

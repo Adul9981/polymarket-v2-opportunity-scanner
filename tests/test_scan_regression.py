@@ -7,9 +7,10 @@ These tests guard the failure modes that once made the scanner report
    gameStartTime, not fall back to event.startDate (listing time).
 2. Esports events must be fetched via the Esports tag (config
    esports.tag_id), not by paging the global feed by listing time.
-3. The watchlist must include every league the project tracks
-   (LCK/LPL/LCP/LEC/KeSPA Cup / IEM/BLAST/EWC / TI/ESL One), otherwise
-   fetched matches get silently filtered out.
+3. The watchlist must include every league the project tracks — 权威清单见
+   config/market_watchlist.json（LoL：LCK/LPL/LCP/LEC/KeSPA Cup/WSCI/
+   EMEA Masters/Demacia Cup/Asian Games/LCS；CS2：IEM/BLAST/EWC/ESL Pro
+   League；Dota2：TI/ESL One/BLAST Slam），否则抓到的比赛会被静默过滤。
 4. The pipeline empty-result sanity check must turn silent failures into
    loud warnings instead of a valid "no signal" conclusion.
 
@@ -74,8 +75,17 @@ def test_watchlist_esports_tag_fetch_is_enabled():
         "LoL: Team Secret Whales vs CTBC Flying Oyster (BO5) - LCP Group Stage",
         "LoL: G2 Esports vs Fnatic (BO3) - LEC Regular Season",
         "LoL: T1 vs DN SOOPers (BO5) - KeSPA Cup Playoffs",
+        "LoL: SLY vs MKF (BO5) - World Star Challengers Invitational Playoffs",
+        "LoL: TLN Pirates vs Anubis Gaming (BO3) - EMEA Masters Swiss Stage",
+        "LoL: Shopify Rebellion vs JD Gaming (BO3) - Demacia Cup Global Invitational Group Stage",
+        "LoL: Chinese Taipei vs South Korea (BO5) - Asian Games Playoffs",
+        "LoL: Maryville University vs Zeu5 Esports (BO5) - LCS Promotion Playoffs",
         "Counter-Strike: Astralis vs NIP (BO3) - Esports World Cup Group B",
+        "Counter-Strike: Vitality vs Team Falcons (BO3) - ESL Pro League Group Stage",
+        "Counter-Strike: Vitality vs MOUZ (BO5) - Thunderpick World Championship Playoffs",
+        "Counter-Strike: Ancient vs B8 (BO3) - PGL Bucharest Group Stage",
         "Dota 2: Team Spirit vs Team Resilience (BO3) - The International Elimination Round",
+        "Dota 2: Team Yandex vs LGD Gaming (BO3) - BLAST Slam Playoffs",
     ],
 )
 def test_watchlist_matches_tracked_leagues(title: str):
@@ -85,12 +95,19 @@ def test_watchlist_matches_tracked_leagues(title: str):
     assert ok, f"watchlist missed tracked league title: {title}"
 
 
-def test_watchlist_rejects_unlisted_leagues():
+@pytest.mark.parametrize(
+    "title",
+    [
+        "Counter-Strike: Keyd vs Imperial (BO3) - BetBoom Storm Playoffs",
+        # CS2 三级赛事：2026-10-15 用户明确不纳入（AGENTS 规则 4）
+        "Counter-Strike: Lilmix vs WOPA (BO3) - ESEA Advanced Season 55 Europe",
+        "Counter-Strike: ALTERNATE aTTaX vs BIG Academy (BO3) - CCT Season 3 Europe Series 4",
+        "Counter-Strike: GenOne vs INGLORIOUS (BO3) - United21 Season 32",
+    ],
+)
+def test_watchlist_rejects_unlisted_leagues(title: str):
     cfg = load_config("market_watchlist.json")
-    ok, _group = ms.watchlist_match(
-        {"title": "Counter-Strike: Keyd vs Imperial (BO3) - BetBoom Storm Playoffs", "slug": "x"},
-        cfg,
-    )
+    ok, _group = ms.watchlist_match({"title": title, "slug": "x"}, cfg)
     assert not ok
 
 
