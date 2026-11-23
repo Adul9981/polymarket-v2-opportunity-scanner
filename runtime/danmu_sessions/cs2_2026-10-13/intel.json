@@ -1,0 +1,726 @@
+{
+  "meta": {
+    "total": 4397,
+    "active_users": 1225,
+    "window_utc": [
+      "2026-10-13 13:35",
+      "2026-10-13 15:38"
+    ],
+    "density_per_min": 35.9,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Vitality": {
+      "mentions": 11,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "小蜜蜂谁去指挥都是一样",
+        "就小蜜蜂的断后，狙，突破谁指挥都一样的",
+        "小蜜蜂谁是指挥",
+        "液体还赢过小蜜蜂呢",
+        "都不是同一批人了，还赢小蜜蜂呢，笑死"
+      ]
+    },
+    "Spirit": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "沙二100t是不是被绿龙零封过",
+        "是的，100t被绿龙零封过",
+        "绿龙下一场是什么时候",
+        "绿龙什么时候再有比赛",
+        "猎鹰连绿龙都打不过，菊花可是完全体了"
+      ]
+    },
+    "G2": {
+      "mentions": 6,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "马尔布斯在g2没这么拉吧",
+        "马儿真的是G2喂起来的吗",
+        "不是马儿要去 是G2给他换走了换的呢子",
+        "我对小马哥的记忆还停留在g2",
+        "感觉他比G2那个狙强"
+      ]
+    },
+    "NAVI": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 1,
+      "samples": [
+        "100T打赢这场排名就超Navi了",
+        "液体的分不但比100t高，还比navi高",
+        "100t赢了积分超过navi",
+        "mo队要是英语好，就去navi了，不在天禄了",
+        "说是菜鸡，但真鸡的分比navi高"
+      ]
+    },
+    "FaZe": {
+      "mentions": 12,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "鸡哥雨神 faze来啦",
+        "感觉雨神再打一打可以去faze",
+        "把这两个老宝贝带去 faze 吧",
+        "想起一件faze和liquid的往事了……",
+        "这队现在真比faze牛吧"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "老鼠洗完头",
+        "载物暴打老鼠那场还是太精彩,这场索然无味",
+        "年轻的汤在老鼠",
+        "直播间里有老鼠啊"
+      ]
+    },
+    "Liquid": {
+      "mentions": 298,
+      "pos": 11,
+      "neg": 24,
+      "samples": [
+        "这液体太糙了",
+        "液体不会这图",
+        "液体怎么回事啊",
+        "液体打不过A队不是很正常吗",
+        "液体打不过a队符合我的历史印象"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "被潇洒哥＋两个蒙古人嚯嚯黄了",
+        "蒙古爹终生禁赛了",
+        "蒙古怎么回事",
+        "蒙古人",
+        "有个蒙古"
+      ]
+    },
+    "AG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "edg omg weibo。lgd ag为啥不做cs"
+      ]
+    }
+  },
+  "players": {
+    "Niko": {
+      "mentions": 10,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "马哥没了尼公子真废了",
+        "那niko什么时候才会转指挥",
+        "NIKO的脑子指挥不了",
+        "比niko厉害太多了",
+        "小孩要在法尔孔2030年，那niko肯定也是2030年了"
+      ]
+    },
+    "Apex": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "apex怀孕了"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 14,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "汤：听说载物最近挺狂的",
+        "zywoo play",
+        "液体狙对位过载物有水平的",
+        "载物",
+        "装载物"
+      ]
+    },
+    "donk": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "鸡哥状态起来 和donk掰手腕",
+        "donk有什么好学的",
+        "真有人学donk的demo吗",
+        "有人在猎鹰学donk把自己学没了呢",
+        "现在全部打法只针对donk"
+      ]
+    },
+    "ropz": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "致敬ropz",
+        "ropz在你家门口炸街",
+        "ropz也是r开头，Rain也是r开头，看看r家军的实力"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 7,
+    "samples": [
+      "naf全是无效人头",
+      "naf全是无效人头",
+      "7个人头6个是打保枪的",
+      "naf全是保枪的人头",
+      "缴枪送了一半人头",
+      "保枪猛拿人头",
+      "这1.15全是缴枪无效人头"
+    ]
+  },
+  "situation": {
+    "count": 23,
+    "samples": [
+      "本来经济就不好",
+      "经济太好了？",
+      "这比分确实不用当人看",
+      "洗个澡回来这比分认真的？？？？？？",
+      "gg",
+      "gg",
+      "gg‘",
+      "gg"
+    ]
+  },
+  "gray_signals": {
+    "count": 4,
+    "samples": [
+      "买了有纯净流 没买就没有",
+      "打不过好啊 送分",
+      "版权都买了 肯定播",
+      "马西西买了版权"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "13:56",
+      "minute": 29864996,
+      "count": 118,
+      "pos": 2,
+      "neg": 3,
+      "tone": "分歧",
+      "samples": [
+        "又3000",
+        "神队",
+        "12分",
+        "太菜了哥们"
+      ]
+    },
+    {
+      "minute_utc": "13:57",
+      "minute": 29864997,
+      "count": 91,
+      "pos": 1,
+      "neg": 0,
+      "tone": "中性",
+      "samples": [
+        "要是液体翻了我给你3000",
+        "桌面上怎么个有个EXE的应用？",
+        "0分1分自动触发3000",
+        "nip现在多少分 是不是能进major了？"
+      ]
+    },
+    {
+      "minute_utc": "13:50",
+      "minute": 29864990,
+      "count": 85,
+      "pos": 2,
+      "neg": 2,
+      "tone": "分歧",
+      "samples": [
+        "设备回暖了",
+        "欺负小孩",
+        "处刑",
+        "老汤真不一样了"
+      ]
+    },
+    {
+      "minute_utc": "13:49",
+      "minute": 29864989,
+      "count": 83,
+      "pos": 3,
+      "neg": 4,
+      "tone": "分歧",
+      "samples": [
+        "Gizmy危",
+        "这狙是职业吗",
+        "这个新人在干嘛呢",
+        "又是j"
+      ]
+    },
+    {
+      "minute_utc": "13:55",
+      "minute": 29864995,
+      "count": 82,
+      "pos": 3,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "早上好啊mo,马西西还没睡醒吗",
+        "26年了鸡哥还在是被阿汤哥暴打",
+        "神了",
+        "大东太油了"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 161,
+      "neg": 100,
+      "net": 61,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "13:35",
+        "count": 1246,
+        "pos": 48,
+        "neg": 36,
+        "net": 12,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:00",
+        "count": 562,
+        "pos": 17,
+        "neg": 4,
+        "net": 13,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:24",
+        "count": 931,
+        "pos": 21,
+        "neg": 14,
+        "net": 7,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:49",
+        "count": 657,
+        "pos": 25,
+        "neg": 10,
+        "net": 15,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "15:13",
+        "count": 1001,
+        "pos": 50,
+        "neg": 36,
+        "net": 14,
+        "tone": "正面"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "13:55",
+        "count": 82,
+        "tone": "正面",
+        "pos": 3,
+        "neg": 0,
+        "sample": "早上好啊mo,马西西还没睡醒吗"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "液体怎么这么菜了？",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "13:43"
+    },
+    {
+      "text": "液体被总监毁了",
+      "count": 4,
+      "entity": true,
+      "minute_utc": "13:42"
+    },
+    {
+      "text": "液体狙想学小孩的感觉",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "13:49"
+    },
+    {
+      "text": "依旧液体严父",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "13:54"
+    },
+    {
+      "text": "如果小蜜蜂拿下年底major，今年小蜜蜂还算王朝年吗？",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "15:29"
+    },
+    {
+      "text": "mo你觉得明年niko会转指挥吗",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "15:31"
+    },
+    {
+      "text": "液体怎么这么菜了？？？？？？？",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:42"
+    },
+    {
+      "text": "液体真变态吧",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:56"
+    },
+    {
+      "text": "液体现在谁指挥",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:47"
+    },
+    {
+      "text": "检测到对手是液体，化身人类极限",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:50"
+    },
+    {
+      "text": "看到打液体以为是19年",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:50"
+    },
+    {
+      "text": "液体这个教练纯瘫子、",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:52"
+    },
+    {
+      "text": "老汤glave以为在北京海淀虐液体呢",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:58"
+    },
+    {
+      "text": "所以液体还能黏一下",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:25"
+    },
+    {
+      "text": "液体谁指挥",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:45"
+    },
+    {
+      "text": "液体的赛点",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:47"
+    },
+    {
+      "text": "在faze是不是鸡哥想宫雨神宫不动",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "15:23"
+    },
+    {
+      "text": "这液体太糙了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:36"
+    },
+    {
+      "text": "液体真的神队",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:39"
+    },
+    {
+      "text": "液体还真打不过100t啊",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:40"
+    },
+    {
+      "text": "马尔布斯在g2没这么拉吧",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:42"
+    },
+    {
+      "text": "马儿真的是G2喂起来的吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:43"
+    },
+    {
+      "text": "狂哥液体也就前期有点成绩后面烂完了都",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:44"
+    },
+    {
+      "text": "说总监毁液体真的不是尬黑吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:44"
+    },
+    {
+      "text": "马哥没了尼公子真废了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:45"
+    },
+    {
+      "text": "液体真烂完了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:47"
+    },
+    {
+      "text": "液体现在这么垃圾了？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:48"
+    },
+    {
+      "text": "液体烂完了，没一个是人",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:50"
+    },
+    {
+      "text": "液体小孩子认真学学老前辈的狙",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:50"
+    },
+    {
+      "text": "液体这队伍真是毒鱼缸",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:52"
+    },
+    {
+      "text": "液体赶紧抬走吧，太拉了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:53"
+    },
+    {
+      "text": "这液体的b真跟小姑娘一样守不住",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:54"
+    },
+    {
+      "text": "液体真绝了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:56"
+    },
+    {
+      "text": "液体有这么菜吗？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:56"
+    },
+    {
+      "text": "不是吧 液体这么拉了？又触发3000？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:56"
+    },
+    {
+      "text": "这液体现在真是路边啊",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:56"
+    },
+    {
+      "text": "液体狙击手心态崩了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:57"
+    },
+    {
+      "text": "液体太变态了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:57"
+    },
+    {
+      "text": "太夸张了吧液体这么拉了 鸡哥呢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:58"
+    },
+    {
+      "text": "液体是真液体吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "13:58"
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      109
+    ],
+    [
+      "AAAAA",
+      93
+    ],
+    [
+      "退后",
+      72
+    ],
+    [
+      "塔塔丸",
+      70
+    ],
+    [
+      "万年老咸鱼",
+      58
+    ],
+    [
+      "牛东东我顶死你",
+      58
+    ],
+    [
+      "逍遥叹",
+      52
+    ],
+    [
+      "-l-l-",
+      41
+    ]
+  ],
+  "sources": {
+    "huya_csboy_official": 0,
+    "huya_csboy_mo": 4397
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "offline_waiting",
+      "started_at": "2026-10-13T13:35:55+00:00",
+      "heartbeat_at": "2026-10-13T15:38:11+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】11点小蜜蜂-MOUZ 决赛",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-10-13T13:35:55+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-10-13T13:35:55+00:00",
+      "heartbeat_at": "2026-10-13T15:38:18+00:00",
+      "last_message_at": "2026-10-13T15:38:18+00:00",
+      "message_count": 4397,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "单败吗",
+          "ts": 1791905862.37
+        },
+        {
+          "t": "在意南他?在意南他?在意南他?在意南他?在意南他?在意南他?",
+          "ts": 1791905863.38
+        },
+        {
+          "t": "在意南他?在意南他?在意南他?在意南他?在意南他?在意南他?",
+          "ts": 1791905865.19
+        },
+        {
+          "t": "北京吗？",
+          "ts": 1791905866.02
+        },
+        {
+          "t": "很阳间阿",
+          "ts": 1791905868.66
+        },
+        {
+          "t": "单败吗",
+          "ts": 1791905872.1
+        },
+        {
+          "t": "nip怎么打，卡比赛了",
+          "ts": 1791905872.92
+        },
+        {
+          "t": "NB",
+          "ts": 1791905874.12
+        },
+        {
+          "t": "不是北京，北京在11月份",
+          "ts": 1791905879.23
+        },
+        {
+          "t": "第一名奖金赶上MJ的奖金了",
+          "ts": 1791905882.1
+        },
+        {
+          "t": "明天猎鹰几点？",
+          "ts": 1791905884.13
+        },
+        {
+          "t": "cmtry和小夫",
+          "ts": 1791905885.18
+        },
+        {
+          "t": "卡巴斯基要是状态爆的话应该能打一打",
+          "ts": 1791905889.46
+        },
+        {
+          "t": "怎么两个叫tbd点",
+          "ts": 1791905896.76
+        },
+        {
+          "t": "小夫 cmtry",
+          "ts": 1791905898.97
+        }
+      ],
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】9点20 100T-液体",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-13T13:35:55+00:00"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_lol_official",
+  "url": "https://www.huya.com/660000",
+  "state": "preflight",
+  "started_at": "2026-09-11T16:00:11+00:00",
+  "heartbeat_at": "2026-09-11T16:00:11+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": null,
+  "error": null,
+  "recent_msgs": []
+}

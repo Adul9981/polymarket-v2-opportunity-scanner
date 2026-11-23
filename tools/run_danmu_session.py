@@ -26,6 +26,8 @@ import subprocess
 import time
 from pathlib import Path
 
+from streamer_game import game_of, label
+
 ROOT = Path(__file__).resolve().parent.parent
 # VPS 部署时可经 INTEL_PY 指定 venv 解释器；本地默认路径保持不变。
 PY = os.environ.get("INTEL_PY") or "/tmp/intel-whisper-venv/bin/python"
@@ -82,31 +84,53 @@ def read_status(path: Path) -> dict:
 def main() -> int:
     ap = argparse.ArgumentParser(description="多直播间弹幕采集 + 情报监控")
     ap.add_argument("--room", action="append", default=[], help="SOURCE=URL；可重复")
+    ap.add_argument("--game", default="", help="游戏标签 lol/cs2/dota2（可选；未给则按 source 自动推断）")
     ap.add_argument("--session", default=None, help="稳定会话标识")
     ap.add_argument("--title", default="多直播间弹幕实时情报")
     ap.add_argument("--seconds", type=int, default=0, help="0 = 持续到 Ctrl-C")
-    ap.add_argument("--monitor-interval", type=int, default=60)
+    ap.add_argument("--monitor-interval", type=int, default=30)
     ap.add_argument("--first-message-timeout", type=int, default=120)
     ap.add_argument("--restart-delay", type=int, default=10)
+    ap.add_argument("--teams", default="", help="逗号分隔两队（如 KC,MVK）；透传给监控渲染【比赛局势】胜率")
+    ap.add_argument("--hupu-out-biz-no", default="", help="虎扑评分 match key 的 outBizNo（透传给监控拉选手评分）")
+    ap.add_argument("--hupu-out-biz-type", default="lol_match", help="虎扑评分节点类型，默认 lol_match")
     args = ap.parse_args()
 
     rooms = parse_rooms(args.room)
+    game = (args.game or "").strip().lower()
+    if game:
+        for source, _ in rooms:
+            inferred = game_of(source)
+            if inferred in ("lol", "cs2", "dota2") and inferred != game:
+                raise SystemExit(
+                    f"[multi] --game {game} 与直播间 {source}（{inferred}）不符；"
+                    f"请检查或去掉 --game 让其自动推断"
+                )
+    else:
+        inferred_games = {game_of(source) for source, _ in rooms}
+        if len(inferred_games) > 1:
+            raise SystemExit(
+                f"[multi] 同一会话检测到多个游戏 {sorted(inferred_games)}；"
+                f"请按游戏拆分会话（--game）"
+            )
+        game = inferred_games.pop()
     date = datetime.datetime.now().strftime("%Y-%m-%d")
-    session = safe_source(args.session or f"danmu_{date}_{datetime.datetime.now():%H%M%S}")
+    session = safe_source(args.session or f"{game}_{date}_{datetime.datetime.now():%H%M%S}")
     session_dir = ROOT / "runtime" / "danmu_sessions" / session
     report = ROOT / "reports" / f"intel_danmu_live_{session}.html"
     intel_json = session_dir / "intel.json"
     manifest_path = session_dir / "session.json"
     session_dir.mkdir(parents=True, exist_ok=True)
+    print(f"[multi] 会话 {session} · 游戏 {label(game)}（{game}）", flush=True)
 
     room_defs: list[dict] = []
     for source, url in rooms:
         platform = platform_of(url)
-        out = ROOT / "docs" / "data" / "danmu" / platform / f"{date}_{source}.jsonl"
+        out = ROOT / "docs" / "data" / "danmu" / game / platform / f"{date}_{source}.jsonl"
         status = session_dir / f"{source}.status.json"
         out.parent.mkdir(parents=True, exist_ok=True)
         room_defs.append(
-            {"source": source, "url": url, "platform": platform, "out": out, "status": status}
+            {"source": source, "url": url, "platform": platform, "game": game, "out": out, "status": status}
         )
 
     env = dict(os.environ)
@@ -126,7 +150,7 @@ def main() -> int:
         cmd = [PY, str(script), "--url", item["url"]]
         if args.seconds:
             cmd += ["--seconds", str(args.seconds)]
-        cmd += ["--out", str(item["out"])]
+        cmd += ["--out", str(item["out"]), "--game", item["game"]]
         if platform in ("huya", "twitch", "kick"):
             cmd += [
                 "--status", str(item["status"]),
@@ -150,6 +174,13 @@ def main() -> int:
         "--title", args.title,
         "--interval", str(args.monitor_interval),
     ]
+    if args.teams:
+        monitor_cmd += ["--teams", args.teams]
+    if args.hupu_out_biz_no:
+        monitor_cmd += [
+            "--hupu-out-biz-no", args.hupu_out_biz_no,
+            "--hupu-out-biz-type", args.hupu_out_biz_type,
+        ]
     for item in room_defs:
         monitor_cmd += ["--input", str(item["out"])]
         if item["platform"] in ("huya", "twitch", "kick"):
@@ -200,6 +231,7 @@ def main() -> int:
             for item in room_defs:
                 status = read_status(item["status"])
                 status.setdefault("source", item["source"])
+                status["game"] = game
                 status["restart_count"] = restart_counts[item["source"]]
                 statuses.append(status)
             atomic_json(
@@ -208,6 +240,7 @@ def main() -> int:
                     "schema_version": 1,
                     "session": session,
                     "title": args.title,
+                    "game": game,
                     "state": "running",
                     "updated_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds"),
                     "report": str(report.relative_to(ROOT)),

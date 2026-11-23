@@ -91,6 +91,7 @@ async def run_capture(
     source: str = "",
     first_message_timeout: int = 120,
     pusher_key: str = PUSHER_KEY,
+    game: str = "",
 ) -> int:
     import asyncio
 
@@ -156,6 +157,7 @@ async def run_capture(
                             "platform": "kick",
                             "channel": slug,
                             "source": source_id,
+                            "game": game,
                             "user": username,
                             "nick": username,
                             "text": content,
@@ -240,6 +242,7 @@ def main() -> int:
     ap.add_argument("--out", required=True, help="JSONL output path")
     ap.add_argument("--status", default="", help="optional status JSON path")
     ap.add_argument("--source", default="", help="stable source id written to each record")
+    ap.add_argument("--game", default="", help="game tag lol/cs2/dota2 written to each record")
     ap.add_argument("--first-message-timeout", type=int, default=120)
     ap.add_argument("--pusher-key", default=PUSHER_KEY)
     ap.add_argument("--verbose", action="store_true")
@@ -259,6 +262,7 @@ def main() -> int:
             source=args.source,
             first_message_timeout=args.first_message_timeout,
             pusher_key=args.pusher_key,
+            game=args.game,
         )
     )
     print(f"captured {count} messages from {slug}")

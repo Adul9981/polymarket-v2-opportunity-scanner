@@ -1,0 +1,464 @@
+{
+  "date": "2026-10-25",
+  "matches": [
+    {
+      "id": "lol-hupu-1693138568019968",
+      "slug": "lol-hupu-1693138568019968",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "TES",
+        "AL"
+      ],
+      "start_time": "2026-10-24T17:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4604",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "TES",
+          "member_id": "42"
+        },
+        {
+          "name": "AL",
+          "member_id": "422"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138568183808",
+      "slug": "lol-hupu-1693138568183808",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "KOI",
+        "CFO"
+      ],
+      "start_time": "2026-10-24T18:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4508",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "KOI",
+          "member_id": "1017990330368000"
+        },
+        {
+          "name": "CFO",
+          "member_id": "194097831"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138568364032",
+      "slug": "lol-hupu-1693138568364032",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "LOS",
+        "G2"
+      ],
+      "start_time": "2026-10-24T19:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4605",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "LOS",
+          "member_id": "1693079574265856"
+        },
+        {
+          "name": "G2",
+          "member_id": "16300"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138568577024",
+      "slug": "lol-hupu-1693138568577024",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "KC",
+        "LYON"
+      ],
+      "start_time": "2026-10-24T20:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4509",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "KC",
+          "member_id": "853996080463872"
+        },
+        {
+          "name": "LYON",
+          "member_id": "1693079573970944"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138568790016",
+      "slug": "lol-hupu-1693138568790016",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "TSW",
+        "IG"
+      ],
+      "start_time": "2026-10-24T21:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4606",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "TSW",
+          "member_id": "1693079574134784"
+        },
+        {
+          "name": "IG",
+          "member_id": "2"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138569019392",
+      "slug": "lol-hupu-1693138569019392",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "HLE",
+        "GEN"
+      ],
+      "start_time": "2026-10-24T22:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4510",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "HLE",
+          "member_id": "100193"
+        },
+        {
+          "name": "GEN",
+          "member_id": "137"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138569248768",
+      "slug": "lol-hupu-1693138569248768",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "DK",
+        "T1"
+      ],
+      "start_time": "2026-10-24T23:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4511",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "DK",
+          "member_id": "10112"
+        },
+        {
+          "name": "T1",
+          "member_id": "10064"
+        }
+      ]
+    },
+    {
+      "id": "lol-hupu-1693138569461760",
+      "slug": "lol-hupu-1693138569461760",
+      "official_match_id": "",
+      "league": "LoL",
+      "teams": [
+        "TL",
+        "BLG"
+      ],
+      "start_time": "2026-10-25T00:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "全球总决赛瑞士轮",
+      "hupu_score_out_biz_no": "4512",
+      "hupu_score_out_biz_type": "lol_match",
+      "hupu_member_ids": [
+        {
+          "name": "TL",
+          "member_id": "5300"
+        },
+        {
+          "name": "BLG",
+          "member_id": "57"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564991679",
+      "slug": "cs2-hupu-1441778164564991679",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "FURIA",
+        "DENDELE"
+      ],
+      "start_time": "2026-10-24T16:10:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36210",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "FURIA",
+          "member_id": "1219093243631763456"
+        },
+        {
+          "name": "DENDELE",
+          "member_id": "1441778164564959397"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564991678",
+      "slug": "cs2-hupu-1441778164564991678",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "G2",
+        "NaVi"
+      ],
+      "start_time": "2026-10-24T16:15:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36211",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "G2",
+          "member_id": "1184525783624843264"
+        },
+        {
+          "name": "NaVi",
+          "member_id": "1176666288626335744"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995311",
+      "slug": "cs2-hupu-1441778164564995311",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "Spirit",
+        "TYLOO"
+      ],
+      "start_time": "2026-10-25T08:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36312",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "Spirit",
+          "member_id": "1203334120843771904"
+        },
+        {
+          "name": "TYLOO",
+          "member_id": "1177622591544754176"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995312",
+      "slug": "cs2-hupu-1441778164564995312",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "FUT",
+        "Liquid"
+      ],
+      "start_time": "2026-10-25T08:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36313",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "FUT",
+          "member_id": "1441778164564854072"
+        },
+        {
+          "name": "Liquid",
+          "member_id": "1224410130250989568"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995313",
+      "slug": "cs2-hupu-1441778164564995313",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "Vitality",
+        "The MongolZ"
+      ],
+      "start_time": "2026-10-25T09:40:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36231",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "Vitality",
+          "member_id": "1176666425880739840"
+        },
+        {
+          "name": "The MongolZ",
+          "member_id": "1218345618087346176"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995314",
+      "slug": "cs2-hupu-1441778164564995314",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "BETBOOM",
+        "Nemiga"
+      ],
+      "start_time": "2026-10-25T10:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36318",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "BETBOOM",
+          "member_id": "1331374056917696512"
+        },
+        {
+          "name": "Nemiga",
+          "member_id": "1226973700444651520"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995315",
+      "slug": "cs2-hupu-1441778164564995315",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "G2",
+        "Aurora"
+      ],
+      "start_time": "2026-10-25T13:00:00Z",
+      "end_time": "",
+      "closed": false,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36329",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "G2",
+          "member_id": "1184525783624843264"
+        },
+        {
+          "name": "Aurora",
+          "member_id": "1441778164564632411"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995316",
+      "slug": "cs2-hupu-1441778164564995316",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "MOUZ",
+        "9z"
+      ],
+      "start_time": "2026-10-25T13:00:00Z",
+      "end_time": "",
+      "closed": true,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36328",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "MOUZ",
+          "member_id": "1184525984716554240"
+        },
+        {
+          "name": "9z",
+          "member_id": "1441778164564921581"
+        }
+      ]
+    },
+    {
+      "id": "cs2-hupu-1441778164564995318",
+      "slug": "cs2-hupu-1441778164564995318",
+      "official_match_id": "",
+      "league": "CS2",
+      "teams": [
+        "Legacy",
+        "DENDELE"
+      ],
+      "start_time": "2026-10-25T14:50:00Z",
+      "end_time": "",
+      "closed": false,
+      "_hupu": true,
+      "_hupu_tournament": "PGL大师赛 布加勒斯特",
+      "hupu_score_out_biz_no": "36237",
+      "hupu_score_out_biz_type": "common_sports_first",
+      "hupu_member_ids": [
+        {
+          "name": "Legacy",
+          "member_id": "1441778164564631837"
+        },
+        {
+          "name": "DENDELE",
+          "member_id": "1441778164564959397"
+        }
+      ]
+    }
+  ]
+}

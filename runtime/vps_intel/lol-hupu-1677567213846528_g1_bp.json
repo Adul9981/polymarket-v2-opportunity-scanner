@@ -1,0 +1,11 @@
+{
+  "match": "lol-hupu-1677567213846528",
+  "game": 1,
+  "phase": "bp",
+  "slice_rows": 0,
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_BRO-LGD_2026-10-13_g1_bp.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-10-13T14:15:55+00:00"
+}

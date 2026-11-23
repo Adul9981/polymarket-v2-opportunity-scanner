@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUR vs MVK · G1 局中弹幕情报</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #1d1d1f;
+    line-height: 1.6;
+    padding: 24px 16px 60px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 6px 20px rgba(0,0,0,0.03);
+  }
+  .card.speed {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+    border: 1px solid rgba(0,113,227,0.18);
+    box-shadow: 0 2px 8px rgba(0,113,227,0.06), 0 10px 30px rgba(0,0,0,0.04);
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2 .no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 7px;
+    background: #0071e3;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .card.speed h2 .no { background: #0071e3; }
+  .scoreline {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    color: #0071e3;
+    background: rgba(0,113,227,0.09);
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .tag.warn {
+    color: #b25000;
+    background: rgba(255,149,0,0.12);
+  }
+  .meta-line {
+    font-size: 12.5px;
+    color: #6e6e73;
+    margin-bottom: 14px;
+  }
+  ul.klist { list-style: none; }
+  ul.klist li {
+    position: relative;
+    padding: 9px 0 9px 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  ul.klist li:last-child { border-bottom: none; }
+  ul.klist li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 17px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0071e3;
+  }
+  .arrow { color: #0071e3; font-weight: 600; }
+  .src { color: #86868b; font-size: 12px; }
+  .decision {
+    margin-top: 16px;
+    padding: 13px 16px;
+    background: rgba(0,113,227,0.06);
+    border-left: 3px solid #0071e3;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .decision b { color: #0071e3; }
+  p, li { font-size: 14px; }
+  .muted { color: #6e6e73; }
+  .empty {
+    font-size: 13.5px;
+    color: #86868b;
+    padding: 10px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  th {
+    font-weight: 600;
+    color: #6e6e73;
+    font-size: 12px;
+    background: #fafafa;
+  }
+  td.num { font-variant-numeric: tabular-nums; }
+  .pos { color: #1a8a3a; font-weight: 600; }
+  .neg { color: #c0392b; font-weight: 600; }
+  .neu { color: #86868b; }
+  details {
+    margin-top: 8px;
+    font-size: 12.5px;
+    color: #6e6e73;
+  }
+  details summary {
+    cursor: pointer;
+    color: #0071e3;
+    font-size: 12.5px;
+    outline: none;
+  }
+  details p { font-size: 12.5px; margin-top: 6px; color: #6e6e73; }
+  .timeline { list-style: none; }
+  .timeline li {
+    position: relative;
+    padding: 8px 0 8px 18px;
+    font-size: 13.5px;
+    border-bottom: 1px dashed #f0f0f2;
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c7c7cc;
+  }
+  .timeline li.peak::before { background: #0071e3; }
+  .timeline .t { font-weight: 600; color: #1d1d1f; margin-right: 6px; }
+  .grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .grid3 .box {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 13px 14px;
+  }
+  .grid3 .box h4 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0071e3;
+    margin-bottom: 7px;
+    letter-spacing: 0.02em;
+  }
+  .grid3 .box p { font-size: 12.5px; color: #3a3a3c; }
+  .pill {
+    display: inline-block;
+    font-size: 11.5px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    background: #f0f0f2;
+    color: #3a3a3c;
+    margin: 2px 4px 2px 0;
+  }
+  .pill.blue { background: rgba(0,113,227,0.1); color: #0071e3; }
+  .pill.gray { background: #f0f0f2; color: #86868b; }
+  .note {
+    font-size: 12px;
+    color: #86868b;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f2;
+  }
+  @media (max-width: 600px) {
+    .grid3 { grid-template-columns: 1fr; }
+    .card { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 0 核心情报速览 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="scoreline">FUR vs MVK · 第 1 小局进行中 <span class="tag warn">局中·非终局，结果待定</span></div>
+    <div class="meta-line">BO5 · 弹幕口径·官方待回填 · 窗口 2026-10-16 14:12–14:22（26 条 / 16 人 / 2.4 条·分）</div>
+    <ul class="klist">
+      <li><b>弹幕密度峰值 14:15 达 9 条</b>，内容高度集中于「sofm 普通话这么溜？」<span class="arrow">→</span> 观众注意力被选手语言能力吸走，非战术讨论，说明本局前期缺乏高价值对抗看点（弹幕口径·待官方）<span class="src">→ 详 §7</span></li>
+      <li><b>中性弹幕二次判定后，真实情绪信号仍为 0</b>：26 条中无一条可判定为对局正面/负面的评价<span class="arrow">→</span> 本局弹幕情绪无方向，不可作为 LONG/SHORT 依据（单源待验证）<span class="src">→ 详 §5</span></li>
+      <li><b>人员画像唯一被提及对象为 sofm</b>（含「这是sofm？」「ＳＯＦＭ中文水平高于很多国内选手」等），提及量约 5 条<span class="arrow">→</span> 观众对 sofm 身份/语言产生认知反差，属人物话题而非赛场表现（弹幕口径·待官方）<span class="src">→ 详 §8</span></li>
+      <li><b>出现「直播间封面有G2？依旧草台班子」「业余」等制作层质疑</b>，共 3 条<span class="arrow">→</span> 观众对直播质量不满，属灰信号（非比赛结论），需与赛果解耦（单源待验证）<span class="src">→ 详 §2</span></li>
+      <li><b>队伍提及为 0，BP/盘口/阵容信息全部缺失</b><span class="arrow">→</span> 本窗口弹幕未覆盖任何战术或市场维度，情报价值集中在人物与制作层（弹幕口径·待官方）<span class="src">→ 详 §3/§4</span></li>
+    </ul>
+    <div class="decision">决策落点：<b>本局弹幕无方向性信号，不构成任何 LONG/SHORT 依据</b>；唯一可跟踪的是 sofm 人物话题热度，若后续窗口出现其操作评价，可作为情绪转折观察点。</div>
+  </div>
+
+  <!-- 1 结果总览/状态核验 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <p>比赛：FUR vs MVK（2026-10-15，slug=lol-hupu-1683760379346944），赛制 <b>BO5</b>，当前进行第 1 小局。</p>
+    <p style="margin-top:8px;">节点：G1｜局末/局间（S4 · GAME-REVIEW），结束依据 est，<b>结果待官方核对</b>。页面标注「局中·非终局，结果待定」。</p>
+    <p style="margin-top:8px;" class="muted">弹幕窗口 2026-10-16 14:12–14:22，共 26 条、16 人、2.4 条/分，样本状态 ready。队伍提及：无。灰信号：无（规则层）。</p>
+  </div>
+
+  <!-- 2 灰信号汇总 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑·非结论）</h2>
+    <p class="empty">规则层灰信号：无。</p>
+    <p style="margin-top:8px;">但中性弹幕二次判定中，识别到 3 条制作层质疑，属观众情绪而非比赛结论，留痕如下：</p>
+    <ul class="klist" style="margin-top:6px;">
+      <li>「直播间封面有G2？依旧草台班子」×1 <span class="arrow">→</span> 对直播封面/制作方不满，与赛果无关（单源待验证）</li>
+      <li>「确实草台班子」×1 <span class="arrow">→</span> 附和上条，形成小范围负向共识（单源待验证）</li>
+      <li>「业余」×1 <span class="arrow">→</span> 对直播质量的负面评价（单源待验证）</li>
+    </ul>
+    <p class="note">以上均为观众质疑，非比赛结论，不纳入方向板。</p>
+  </div>
+
+  <!-- 3 BP 锚点与选人情报 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <p class="empty">样本不足：本窗口 26 条弹幕中无任何 BP、选人、阵容相关讨论，队伍提及为 0。</p>
+    <p style="margin-top:8px;" class="muted">本局阵容（英雄+选手映射）：无数据。BP 后战绩情报（选人窗口选手×英雄胜率/战绩提及）：无战绩情报提及。</p>
+  </div>
+
+  <!-- 4 盘口与市场讨论 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <p class="empty">样本不足：本窗口无任何盘口、赔率、Polymarket 或市场方向讨论。</p>
+    <p style="margin-top:8px;" class="muted">跨源一致性提示：本场实际数据源仅弹幕文本，无盘口数据源接入，缺口为市场维度全空。</p>
+  </div>
+
+  <!-- 5 方向性情报板 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板（正锚×负锚×共识×灰信号条件预测）</h2>
+    <p><b>正锚：</b>无。中性弹幕二次判定后，未发现任何可判定为对局正面（高光/翻盘/夸赞）的弹幕。</p>
+    <p style="margin-top:6px;"><b>负锚：</b>无。未发现任何可判定为对局负面（失误/送/拉胯）的弹幕。</p>
+    <p style="margin-top:6px;"><b>群体共识：</b>共识不足。情绪走势：中性(+0) → 中性(+0) → 中性(+0)，全程无方向。</p>
+    <p style="margin-top:6px;"><b>灰信号条件预测：</b>制作层质疑（草台班子/业余）若持续放大，可能影响观众留存，但与比赛胜负无因果，不构成预测条件。</p>
+    <p class="note">模型二次判定说明：对「中性弹幕抢救候选」逐条判定后，仅识别出上述制作层负向与 sofm 人物话题，纯聊天/表情/无情绪内容已丢弃，未硬套情绪。</p>
+  </div>
+
+  <!-- 6 情报含义与决策落点 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点（LONG/SHORT）</h2>
+    <p><b>LONG：</b>无依据。弹幕无正向信号，无队伍/选手表现支撑。</p>
+    <p style="margin-top:6px;"><b>SHORT：</b>无依据。弹幕无负向信号，无失误/崩盘讨论。</p>
+    <p style="margin-top:6px;"><b>决策落点：</b>本局弹幕情报不足以支撑任何方向性决策，建议观望，等待官方结果与后续窗口弹幕密度回升后再评估。</p>
+  </div>
+
+  <!-- 7 本局复盘（证据层） -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <p><b>比赛叙事（观众共识/情绪时间轴/关键转折点）：</b>本窗口观众共识不足，情绪全程中性，无看涨/看跌/翻转段落。关键转折点：无比赛内转折；唯一注意力峰值出现在 14:15，由 sofm 人物话题驱动，非赛场事件。</p>
+    <ul class="timeline" style="margin-top:10px;">
+      <li class="peak"><span class="t">14:15</span>9 条 · 样本「sofm普通话这么溜？」×2 等 —— 密度峰值，人物话题</li>
+      <li><span class="t">14:12–14:22</span>其余分钟条数均低于峰值，内容为零散聊天、数字、表情</li>
+    </ul>
+    <p class="note">弹幕密度峰值时间线：14:15 9 条（sofm普通话这么溜？sofm普通话这么溜？）；其余分钟样本不足，不逐一列举。</p>
+  </div>
+
+  <!-- 8 队伍/人员画像 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍/人员画像（带提及量）</h2>
+    <table>
+      <thead>
+        <tr><th>对象</th><th>提及量</th><th>正/负向</th><th>样本摘要</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>sofm</td><td class="num">约 5</td><td class="neu">中性</td><td>「sofm普通话这么溜？」「这是sofm？」「ＳＯＦＭ中文水平高于很多国内选手」</td></tr>
+        <tr><td>FUR</td><td class="num">0</td><td class="neu">—</td><td>无提及</td></tr>
+        <tr><td>MVK</td><td class="num">0</td><td class="neu">—</td><td>无提及</td></tr>
+      </tbody>
+    </table>
+    <p class="note">人员画像表仅含被提及对象；队伍提及为 0，故无队伍画像。</p>
+  </div>
+
+  <!-- 9 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <p class="empty">样本不足：本窗口无联赛规律、版本、英雄优先级相关讨论。</p>
+  </div>
+
+  <!-- 10 预测验证回填 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <p class="empty">样本不足：本窗口无预测性弹幕，无可回填的预测验证项。</p>
+  </div>
+
+  <!-- 11 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="grid3">
+      <div class="box">
+        <h4>实际数据源</h4>
+        <p>弹幕文本 26 条 / 16 人 / 2.4 条·分；窗口 2026-10-16 14:12–14:22；规则层情报文件 lol-hupu-1683760379346944_g1_end_intel.json。</p>
+      </div>
+      <div class="box">
+        <h4>预期数据源</h4>
+        <p>官方比分/结果、BP 与阵容、盘口与市场数据、选手×英雄战绩。</p>
+      </div>
+      <div class="box">
+        <h4>缺口</h4>
+        <p>队伍提及 0、BP 0、盘口 0、战绩 0；灰信号规则层 0；结果待官方核对。</p>
+      </div>
+    </div>
+    <p class="note">比赛元数据：全称 FUR vs MVK（2026-10-15）；league id 未提供；Polymarket slug=lol-hupu-1683760379346944；赛制 BO5；当前第 1 小局，局中·非终局，结果待定。</p>
+  </div>
+
+</div>
+</body>
+</html>

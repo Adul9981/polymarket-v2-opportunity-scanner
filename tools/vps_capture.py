@@ -20,13 +20,18 @@ import argparse
 import datetime
 import json
 import os
+import signal
 import subprocess
 import sys
 import time
 from pathlib import Path
 
+from streamer_game import game_of, label
+
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_REGISTRY = ROOT / "knowledge" / "streamer_registry.json"
+
+GAMES = ("lol", "cs2", "dota2")
 
 
 def load_rooms(registry: Path) -> list[dict]:
@@ -40,32 +45,75 @@ def load_rooms(registry: Path) -> list[dict]:
         if not sid or not url:
             continue
         status = s.get("capture_status") or ""
-        rooms.append({**s, "verified": "待验证" not in status})
+        game = (s.get("game") or "").strip().lower()
+        if game not in GAMES:
+            game = game_of(sid)
+        rooms.append({**s, "game": game, "verified": "待验证" not in status})
     if not rooms:
         raise SystemExit(f"[vps_capture] 注册表为空: {registry}")
     return rooms
 
 
-def start_session(rooms: list[dict], session: str) -> subprocess.Popen:
+def group_rooms(rooms: list[dict]) -> dict[str, list[dict]]:
+    groups: dict[str, list[dict]] = {}
+    for r in rooms:
+        groups.setdefault(r["game"], []).append(r)
+    return groups
+
+
+def start_session(rooms: list[dict], session: str, game: str) -> subprocess.Popen:
     cmd = [
         sys.executable,
         str(ROOT / "tools" / "run_danmu_session.py"),
         "--session", session,
-        "--title", "VPS 7x24 弹幕采集（本地分析过渡方案）",
+        "--game", game,
+        "--title", f"VPS 7x24 弹幕采集 · {label(game)}（{game}）",
     ]
     for r in rooms:
         cmd += ["--room", f"{r['id']}={r['live_url']}"]
     print(
         f"[vps_capture] {datetime.datetime.now():%F %T} 启动会话 {session}"
-        f"（{len(rooms)} 个直播间）",
+        f"（{label(game)}，{len(rooms)} 个直播间）",
         flush=True,
     )
-    return subprocess.Popen(cmd, env=os.environ.copy())
+    # start_new_session=True 使每组成为独立进程组（pgid == p.pid），跨天滚动/崩溃
+    # 重启时才能连同 run_danmu_session 派生的采集/监控孙进程一起回收，避免孤儿化。
+    return subprocess.Popen(cmd, env=os.environ.copy(), start_new_session=True)
+
+
+def stop_session(p: subprocess.Popen, timeout: int = 15) -> None:
+    """终止整个会话进程组（组长 run_danmu_session + 派生的采集/监控孙进程）。
+
+    若只 terminate 组长，派生的 fetch_huya_danmu 孙进程会孤儿化，继续占用直播间并
+    写旧日期文件（2026-10-30 教训：csboy 房间 123321 被 10-27/28/29 三批僵尸同时占用）。
+    组长可能已退出（崩溃重启场景），此时孙进程仍在同组，直接用 p.pid 作 pgid 发信号。
+    """
+    try:
+        os.killpg(p.pid, signal.SIGTERM)
+    except ProcessLookupError:
+        pass  # 组已不存在（组长与孙进程均已退出）
+    except PermissionError:
+        try:
+            p.terminate()
+        except Exception:  # noqa: BLE001
+            pass
+    try:
+        p.wait(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        try:
+            os.killpg(p.pid, signal.SIGKILL)
+        except (ProcessLookupError, PermissionError):
+            try:
+                p.kill()
+            except Exception:  # noqa: BLE001
+                pass
+        p.wait(timeout=timeout)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--registry", default=str(DEFAULT_REGISTRY))
+    ap.add_argument("--game", default="", help="只采集指定游戏 lol/cs2/dota2（默认全部）")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--poll-interval", type=int, default=5)
     ap.add_argument("--restart-delay", type=int, default=15)
@@ -74,11 +122,27 @@ def main() -> int:
 
     registry = Path(args.registry)
     rooms = load_rooms(registry)
+    groups = group_rooms(rooms)
+
+    game_filter = (args.game or "").strip().lower()
+    if game_filter:
+        if game_filter not in groups:
+            raise SystemExit(
+                f"[vps_capture] 没有游戏 {game_filter} 的直播间；可选：{sorted(groups)}"
+            )
+        groups = {game_filter: groups[game_filter]}
+
     if args.dry_run:
-        print(f"[vps_capture] 将抓取 {len(rooms)} 个直播间（{registry}）：")
-        for r in rooms:
-            mark = "已实测" if r["verified"] else "待验证"
-            print(f"  - {r['id']:<22} {r['platform']:<6} {r['live_url']}  [{mark}]")
+        total = sum(len(rs) for rs in groups.values())
+        print(f"[vps_capture] 将抓取 {total} 个直播间（{registry}），按游戏分组：")
+        for game in GAMES:
+            rs = groups.get(game)
+            if not rs:
+                continue
+            print(f"  {label(game)}（{game}）× {len(rs)}")
+            for r in rs:
+                mark = "已实测" if r["verified"] else "待验证"
+                print(f"    - {r['id']:<22} {r['platform']:<6} {r['live_url']}  [{mark}]")
         return 0
 
     # run_danmu_session 用它启动各采集/监控子进程，确保与当前 venv 一致。
@@ -87,36 +151,32 @@ def main() -> int:
     consecutive_crashes = 0
     while True:
         today = datetime.date.today().isoformat()
-        session = f"vps_{today}"
-        proc = start_session(rooms, session)
+        procs = {
+            game: start_session(rs, f"{game}_{today}", game)
+            for game, rs in groups.items()
+        }
         while True:
             time.sleep(args.poll_interval)
             if datetime.date.today().isoformat() != today:
                 print("[vps_capture] 日期变化，滚动到新一天文件", flush=True)
-                proc.terminate()
-                try:
-                    proc.wait(timeout=15)
-                except subprocess.TimeoutExpired:
-                    proc.kill()
+                for p in procs.values():
+                    stop_session(p)
                 consecutive_crashes = 0
                 break
-            if proc.poll() is not None:
-                code = proc.returncode
-                if code == 0:
-                    print("[vps_capture] 会话正常退出", flush=True)
-                else:
-                    consecutive_crashes += 1
-                    delay = args.crash_backoff if consecutive_crashes >= 3 else args.restart_delay
-                    print(
-                        f"[vps_capture] 会话异常退出 code={code}，"
-                        f"{delay}s 后重启（连续 {consecutive_crashes} 次）",
-                        flush=True,
-                    )
-                    time.sleep(delay)
-                break
-        if proc.poll() is not None and proc.returncode == 0:
-            # 正常退出：交回给 systemd 决定是否拉起，避免空转。
-            return 0
+            for game, p in list(procs.items()):
+                if p.poll() is None:
+                    continue
+                code = p.returncode
+                consecutive_crashes += 1
+                delay = args.crash_backoff if consecutive_crashes >= 3 else args.restart_delay
+                print(
+                    f"[vps_capture] {game} 会话退出 code={code}，"
+                    f"{delay}s 后重启（连续 {consecutive_crashes} 次）",
+                    flush=True,
+                )
+                stop_session(p)  # 组长已退出，清理同组残余孙进程再重启
+                time.sleep(delay)
+                procs[game] = start_session(groups[game], f"{game}_{today}", game)
         time.sleep(args.restart_delay)
 
 

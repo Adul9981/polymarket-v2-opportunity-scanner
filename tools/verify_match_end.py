@@ -119,10 +119,13 @@ def main() -> None:
         if len(teams_low) != 2:
             return False
         a, b = teams_low
+        # 2026-10-16 修复：生成器表达式里 for a, b in ((a,b),(b,a)) 会让 a/b 变成本地
+        # 未赋值变量 -> UnboundLocalError（教训：Aurora vs 9z 结束检测全程崩溃）。
+        # 改用 x/y 作循环目标，a/b 保持闭包自由变量。
         return any(
-            (a in low and s in low and b in low)
+            (x in low and s in low and y in low)
             for s in ("2:0", "2-0", "2:1", "2-1")
-            for a, b in ((a, b), (b, a))
+            for x, y in ((a, b), (b, a))
         )
 
     score_claims = [r for r in last2 if _series_claim(r.get("text") or "")]

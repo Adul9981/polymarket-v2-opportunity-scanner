@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "total": 4319,
+    "active_users": 1599,
+    "window_utc": [
+      "2026-10-25 14:07",
+      "2026-10-25 15:01"
+    ],
+    "density_per_min": 80.7,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Vitality": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "9Z也是惨啊先打小蜜蜂再打老鼠",
+        "这和昨天打小蜜蜂是一个队伍吗",
+        "9z打完小蜜蜂打老鼠",
+        "9z昨天和小蜜蜂打的有来有回的，天路用头打",
+        "这个图小蜜蜂不一定能赢"
+      ]
+    },
+    "Spirit": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "不会把老鼠送去打绿龙吧"
+      ]
+    },
+    "G2": {
+      "mentions": 102,
+      "pos": 2,
+      "neg": 10,
+      "samples": [
+        "G2",
+        "g2剧情？",
+        "不是g2吗",
+        "G2呢",
+        "不是g2吗"
+      ]
+    },
+    "NAVI": {
+      "mentions": 10,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "navi那个流",
+        "navi那个流",
+        "navi接哪场",
+        "navi会提前吗",
+        "navi会提前开吗"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 45,
+      "pos": 4,
+      "neg": 2,
+      "samples": [
+        "马总为啥显示老鼠菊花都打9z",
+        "老鼠换队服了吗，之前是红色的吧",
+        "老鼠 欧若拉 菊花赢，基本上就鲨鱼",
+        "老鼠 欧若拉 菊花赢，基本上就鲨鱼",
+        "9Z也是惨啊先打小蜜蜂再打老鼠"
+      ]
+    },
+    "Liquid": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这老鼠到底怎么输的液体？",
+        "昨天被液体打开窍了",
+        "老鼠昨天怎么输给液体的"
+      ]
+    },
+    "EF": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "右边永恒之火"
+      ]
+    },
+    "AG": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "刚来，左边是白鲨，右边是AG吗",
+        "右边是AG吗"
+      ]
+    },
+    "白鲨": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "刚来，左边是白鲨，右边是AG吗"
+      ]
+    },
+    "情久": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "左边情久右边kz"
+      ]
+    }
+  },
+  "players": {
+    "Niko": {
+      "mentions": 38,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我擦niko年轻版",
+        "niko指挥的",
+        "niko指挥的",
+        "这分niko指挥的",
+        "niko教的"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 7,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "载物开挂",
+        "载物开挂",
+        "载物开挂",
+        "载物开挂",
+        "载物开挂"
+      ]
+    },
+    "donk": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "表哥和donk谁更爱特"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 2,
+    "samples": [
+      "无效人头",
+      "1个人头多久了"
+    ]
+  },
+  "situation": {
+    "count": 17,
+    "samples": [
+      "经济炸了 有钱有ak",
+      "人数优势磨磨唧唧",
+      "g2要gg啊",
+      "左边三个科学家比分怎么一样？",
+      "难道能翻盘？",
+      "这阿罗拉这图明显不会 正常ct都用道具都能前期拿到优势",
+      "输了经济就炸了这1分",
+      "打一波流 又打默认"
+    ]
+  },
+  "gray_signals": {
+    "count": 14,
+    "samples": [
+      "赶着到处送分",
+      "千里送分 辛苦了",
+      "送分童子",
+      "赶着到处送分",
+      "一直喷的是不是买了很多哈哈哈哈哈气死你",
+      "auro买了吧？",
+      "太故意了",
+      "故意装唐送一分"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "14:58",
+      "minute": 29882338,
+      "count": 372,
+      "pos": 10,
+      "neg": 3,
+      "tone": "正面",
+      "samples": [
+        "？? ?",
+        "举报",
+        "？？？？？",
+        "？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "14:54",
+      "minute": 29882334,
+      "count": 356,
+      "pos": 13,
+      "neg": 10,
+      "tone": "正面",
+      "samples": [
+        "哈哈哈",
+        "666666",
+        "66666",
+        "？？？？？？？"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 157,
+      "neg": 103,
+      "net": 54,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "14:07",
+        "count": 926,
+        "pos": 57,
+        "neg": 36,
+        "net": 21,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:18",
+        "count": 743,
+        "pos": 14,
+        "neg": 15,
+        "net": -1,
+        "tone": "分歧"
+      },
+      {
+        "start_utc": "14:28",
+        "count": 773,
+        "pos": 35,
+        "neg": 12,
+        "net": 23,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:39",
+        "count": 322,
+        "pos": 7,
+        "neg": 5,
+        "net": 2,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "14:50",
+        "count": 1555,
+        "pos": 44,
+        "neg": 35,
+        "net": 9,
+        "tone": "正面"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "14:58",
+        "count": 372,
+        "tone": "正面",
+        "pos": 10,
+        "neg": 3,
+        "sample": "？? ?"
+      },
+      {
+        "minute_utc": "14:54",
+        "count": 356,
+        "tone": "正面",
+        "pos": 13,
+        "neg": 10,
+        "sample": "哈哈哈"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "niko指挥的",
+      "count": 7,
+      "entity": true,
+      "minute_utc": "14:23"
+    },
+    {
+      "text": "这分Niko指挥的",
+      "count": 6,
+      "entity": true,
+      "minute_utc": "14:30"
+    },
+    {
+      "text": "载物开挂",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "14:21"
+    },
+    {
+      "text": "NiKo教NiKo教NiKo教NiKo教NiKo教NiKo教",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "14:30"
+    },
+    {
+      "text": "这分niko指挥的",
+      "count": 4,
+      "entity": true,
+      "minute_utc": "14:29"
+    },
+    {
+      "text": "9Z昨天打蜜蜂，今天打老鼠？？？",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "老鼠赢了",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "14:34"
+    },
+    {
+      "text": "G2真玩不过欧若拉。。。",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:26"
+    },
+    {
+      "text": "老鼠 欧若拉 菊花赢，基本上就鲨鱼",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "不是g2吗",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "老鼠有个乌鲁鲁怎么打",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "navi那个流",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "看G2",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:14"
+    },
+    {
+      "text": "Niko指挥的",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "14:55"
+    },
+    {
+      "text": "这g2真废啊",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "g2拉了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:23"
+    },
+    {
+      "text": "G2是不是要没了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:26"
+    },
+    {
+      "text": "g2指挥太蠢了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:30"
+    },
+    {
+      "text": "现在在看小蜜蜂的b是真的赏心悦目",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:40"
+    },
+    {
+      "text": "G2这狙击枪真的比阳叔好吗？换错人了啊",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:43"
+    },
+    {
+      "text": "G2进攻这么流畅？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:43"
+    },
+    {
+      "text": "g2不会守b，k3不打b，太对味了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:55"
+    },
+    {
+      "text": "G2有点不当人了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:56"
+    },
+    {
+      "text": "g2的比赛总是这么变态",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:56"
+    },
+    {
+      "text": "其实G2比赛很好看的，随时抽象，莫名其妙输赢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:58"
+    },
+    {
+      "text": "这 G2 太抽象了和昨天打 navi 一样",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:59"
+    },
+    {
+      "text": "马总为啥显示老鼠菊花都打9z",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "老鼠换队服了吗，之前是红色的吧",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "G2",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "g2剧情？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:07"
+    },
+    {
+      "text": "G2呢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "9Z也是惨啊先打小蜜蜂再打老鼠",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:08"
+    },
+    {
+      "text": "g2和欧若拉哪去了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "老鼠吃一把怎么了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:09"
+    },
+    {
+      "text": "天禄打G2两图能拿十分吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "直播间写着g2欧若拉比赛呢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "开始了这老鼠",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:10"
+    },
+    {
+      "text": "老鼠这两小伙托子爽透",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "不会把老鼠送去打绿龙吧",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:12"
+    },
+    {
+      "text": "决赛前的老鼠[调皮]",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "14:12"
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      163
+    ],
+    [
+      "滴滴答答的芸酥饼",
+      64
+    ],
+    [
+      "副歌之木舟",
+      57
+    ],
+    [
+      "没撒打算",
+      26
+    ],
+    [
+      "凡智智",
+      22
+    ],
+    [
+      "月光碎了一地",
+      22
+    ],
+    [
+      "慕北之辰",
+      21
+    ],
+    [
+      "homla",
+      21
+    ]
+  ],
+  "win_signal": null,
+  "sources": {
+    "huya_csboy_official": 3938,
+    "huya_csboy_mo": 381
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "capturing",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:04+00:00",
+      "last_message_at": "2026-10-25T15:01:04+00:00",
+      "message_count": 1374,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "好变态啊",
+          "ts": 1792940461.98
+        },
+        {
+          "t": "这能保？？",
+          "ts": 1792940462.39
+        },
+        {
+          "t": "真的无敌变态。",
+          "ts": 1792940462.6
+        },
+        {
+          "t": "真尼玛牛逼",
+          "ts": 1792940462.6
+        },
+        {
+          "t": "哈哈哈",
+          "ts": 1792940463.0
+        },
+        {
+          "t": "真的神了。。。",
+          "ts": 1792940463.2
+        },
+        {
+          "t": "这皮特放人进来了没看满",
+          "ts": 1792940463.2
+        },
+        {
+          "t": "这两队真变态吧",
+          "ts": 1792940463.59
+        },
+        {
+          "t": "你一分我一分？",
+          "ts": 1792940463.59
+        },
+        {
+          "t": "这肯定保啊，这回不了了",
+          "ts": 1792940464.02
+        },
+        {
+          "t": "nertz真tm差点给人家活活混死了",
+          "ts": 1792940464.02
+        },
+        {
+          "t": "都不想赢！都不想赢！都不想赢！",
+          "ts": 1792940464.2
+        },
+        {
+          "t": "好保",
+          "ts": 1792940464.39
+        },
+        {
+          "t": "呵呵呵嘿嘿嘿？",
+          "ts": 1792940464.6
+        },
+        {
+          "t": "你一分我一分",
+          "ts": 1792940464.79
+        }
+      ],
+      "room_id": 123321,
+      "channel_id": 10748220,
+      "nickname": "CSBOY",
+      "introduction": "【直播】9点G2-Aurora",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-10-25T14:54:01+00:00",
+      "heartbeat_at": "2026-10-25T15:01:04+00:00",
+      "last_message_at": "2026-10-25T15:01:03+00:00",
+      "message_count": 181,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "又又又又翻了",
+          "ts": 1792940428.13
+        },
+        {
+          "t": "翻不了",
+          "ts": 1792940436.65
+        },
+        {
+          "t": "你一分我一分？",
+          "ts": 1792940437.68
+        },
+        {
+          "t": "保了？？",
+          "ts": 1792940442.64
+        },
+        {
+          "t": "又翻？",
+          "ts": 1792940445.34
+        },
+        {
+          "t": "你看吧",
+          "ts": 1792940451.09
+        },
+        {
+          "t": "专业",
+          "ts": 1792940452.53
+        },
+        {
+          "t": "不打了不打了",
+          "ts": 1792940452.93
+        },
+        {
+          "t": "太变态了",
+          "ts": 1792940453.94
+        },
+        {
+          "t": "太变态了",
+          "ts": 1792940453.94
+        },
+        {
+          "t": "又翻回来了",
+          "ts": 1792940455.97
+        },
+        {
+          "t": "又杀鸡",
+          "ts": 1792940456.37
+        },
+        {
+          "t": "全在后点躲着？",
+          "ts": 1792940458.23
+        },
+        {
+          "t": "谁有钱谁不会玩",
+          "ts": 1792940461.7
+        },
+        {
+          "t": "听你指挥",
+          "ts": 1792940463.52
+        }
+      ],
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】9点G2-Aurora",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-25T14:54:01+00:00"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "session": "cs2_2026-10-16",
+  "title": "VPS 7x24 弹幕采集 · CS2（cs2）",
+  "game": "cs2",
+  "state": "stopped",
+  "updated_at": "2026-10-16T16:00:24+00:00",
+  "report": "reports/intel_danmu_live_cs2_2026-10-16.html",
+  "intel_json": "runtime/danmu_sessions/cs2_2026-10-16/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "capturing",
+      "started_at": "2026-10-16T16:00:14+00:00",
+      "heartbeat_at": "2026-10-16T16:00:23+00:00",
+      "last_message_at": "2026-10-16T16:00:20+00:00",
+      "message_count": 4,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "对对对",
+          "ts": 1792166416.3
+        },
+        {
+          "t": "1",
+          "ts": 1792166417.71
+        },
+        {
+          "t": "先让3分的话，真有可能",
+          "ts": 1792166420.36
+        },
+        {
+          "t": "就是他",
+          "ts": 1792166420.36
+        }
+      ],
+      "room_id": 123321,
+      "channel_id": 10748220,
+      "nickname": "CSBOY",
+      "introduction": "【直播】Aurora-9Z",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T16:00:14+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "capturing",
+      "started_at": "2026-10-16T14:12:03+00:00",
+      "heartbeat_at": "2026-10-16T16:00:02+00:00",
+      "last_message_at": "2026-10-16T16:00:01+00:00",
+      "message_count": 2842,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "faze夺冠那个比赛就是决赛BO3",
+          "ts": 1792166363.93
+        },
+        {
+          "t": "K3的进攻你就看吧",
+          "ts": 1792166367.81
+        },
+        {
+          "t": "k3的进攻指挥不见得翻不了",
+          "ts": 1792166368.02
+        },
+        {
+          "t": "去年奥斯汀major决赛还是bo3呢",
+          "ts": 1792166373.92
+        },
+        {
+          "t": "这样，不怎么看小众变态比赛",
+          "ts": 1792166380.84
+        },
+        {
+          "t": "这是做啥",
+          "ts": 1792166385.51
+        },
+        {
+          "t": "k3的进攻确实有点问题",
+          "ts": 1792166386.76
+        },
+        {
+          "t": "大狠人想被下放了",
+          "ts": 1792166388.98
+        },
+        {
+          "t": "39",
+          "ts": 1792166391.24
+        },
+        {
+          "t": "大ct图，谁不会ct",
+          "ts": 1792166391.83
+        },
+        {
+          "t": "K3的进攻你就享受吧，直接从一线队变野鸡",
+          "ts": 1792166395.11
+        },
+        {
+          "t": "开始了？",
+          "ts": 1792166396.53
+        },
+        {
+          "t": "右边怎么还有个报警的",
+          "ts": 1792166396.74
+        },
+        {
+          "t": "刚了？",
+          "ts": 1792166399.39
+        },
+        {
+          "t": "道具都还没冷能怪战术",
+          "ts": 1792166401.41
+        }
+      ],
+      "room_id": 321123,
+      "channel_id": 1199652774074,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】9Z-AURORA",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-10-16T14:12:03+00:00",
+      "restart_count": 1
+    }
+  ]
+}

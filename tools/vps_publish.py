@@ -29,6 +29,7 @@ from add_paywall import inject_all as paywall_inject  # noqa: E402
 from add_paywall import page_key as paywall_page_key  # noqa: E402
 from add_site_nav import inject_all as nav_inject  # noqa: E402
 from add_stats_track import inject_all as track_inject  # noqa: E402
+import analytics_publish  # noqa: E402
 
 ROOT = Path("/opt/danmu-intel")
 REPORTS = ROOT / "reports"
@@ -40,18 +41,9 @@ GIT_SSH = f"ssh -i {KEY} -o StrictHostKeyChecking=accept-new"
 PATTERNS = (
     "intel_danmu_*.html",
     "intel_soop_*.html",
-    "intel_profile_*.html",
-    "intel_gray_*.html",
     "intel_prematch*",
     "match_*.html",
     "case_*.html",
-)
-ANALYTICS_ASSETS = (
-    "analytics.html",
-    "analytics.css",
-    "analytics-config.js",
-    "analytics.js",
-    "analytics-page.js",
 )
 PATTERN_WORKSPACE = (
     ROOT / "pattern-decision" / "live" / "reports" / "pattern_decision_workspace.html"
@@ -128,35 +120,6 @@ def serve_webroot(repo: Path, webroot: Path) -> int:
         return 0
 
 
-def sync_analytics_api_config() -> None:
-    """Publish the current stable-within-process Cloudflare tunnel URL.
-
-    GitHub Pages has no Python backend. The first-party loader therefore needs
-    an absolute API origin when viewed through github.io. The quick tunnel URL
-    is read from its persistent log before every publish so a tunnel restart is
-    reflected automatically on the next site publication.
-    """
-    log_path = ROOT / "logs" / "cloudflared-quick.err"
-    config_path = REPORTS / "analytics-config.js"
-    try:
-        matches = re.findall(
-            r"https://[A-Za-z0-9.-]+\.trycloudflare\.com",
-            log_path.read_text(encoding="utf-8", errors="ignore"),
-        )
-    except OSError:
-        matches = []
-    if not matches:
-        if not config_path.exists():
-            config_path.write_text('window.DANMU_ANALYTICS_API = "";\n', encoding="utf-8")
-        print("[publish] analytics API config: no tunnel URL found", flush=True)
-        return
-    api_origin = matches[-1].rstrip("/")
-    config_path.write_text(
-        f"window.DANMU_ANALYTICS_API = {json.dumps(api_origin)};\n",
-        encoding="utf-8",
-    )
-
-
 def regen_today_page(repo: Path) -> None:
     """Rebuild intel/today.html from latest scan + published pages (best effort).
 
@@ -216,6 +179,41 @@ def rebuild_match_shells() -> int:
             pass
     print(f"[publish] rebuilt {len(seen)} match shells", flush=True)
     return len(seen)
+
+
+def build_situation_json() -> None:
+    """跑 build_situation_page.py 生成 data/situation_live.json（规则层实时局势）。
+
+    独立「比赛局势」页（match_situation.html）的实时数据源：胜率=累积弹幕口径、
+    评分=虎扑按小局实时。与情报页比赛局势栏（refresh_situation.py 注入节点页）互不干扰。
+    """
+    try:
+        env = dict(os.environ)
+        subprocess.run(
+            [str(ROOT / ".venv" / "bin" / "python"),
+             str(ROOT / "tools" / "build_situation_page.py"), "--once"],
+            cwd=str(ROOT), env=env, capture_output=True, text=True, timeout=120,
+        )
+    except Exception as e:  # noqa: BLE001
+        print(f"[publish] situation json build failed (non-fatal): {e}")
+
+
+def copy_situation_files(repo: Path) -> int:
+    """把比赛局势页 + 数据 JSON 同步进站点仓库（静态页幂等覆盖，JSON 每轮最新）。"""
+    n = 0
+    target = repo / "intel"
+    target.mkdir(parents=True, exist_ok=True)
+    src_page = ROOT / "tools" / "templates" / "match_situation.html"
+    if src_page.exists():
+        shutil.copy2(src_page, target / "match_situation.html")
+        n += 1
+    src_json = ROOT / "data" / "situation_live.json"
+    if src_json.exists():
+        shutil.copy2(src_json, target / "situation_live.json")
+        n += 1
+    if n:
+        print(f"[publish] situation page/json synced ({n} files)", flush=True)
+    return n
 
 
 def sync_game_status(repo: Path) -> None:
@@ -369,7 +367,7 @@ _MIRROR_STATE = ROOT / "runtime" / "vps_mirror_last_push.txt"
 # "每轮必变"的易变文件：实时刷新页的统计计数、空闲心跳。
 # 它们单独变化不构成"站点内容变化"，不值得每次都触发 GitHub Pages 重建。
 _VOLATILE_NAMES = ("intel_danmu_live_vps_",)
-_VOLATILE_EXACT = (".heartbeat",)
+_VOLATILE_EXACT = (".heartbeat", "situation_live.json")
 
 
 def volatile_path(p: str) -> bool:
@@ -391,6 +389,23 @@ def _mark_mirror_push() -> None:
         _MIRROR_STATE.write_text(str(time.time()), encoding="utf-8")
     except OSError:
         pass
+
+
+def _clear_stale_index_lock(repo: Path) -> None:
+    """发布前清理陈旧 .git/index.lock。
+
+    教训 2026-10-26：git add/commit 被中断会留下 0 字节 index.lock，之后每次
+    git add 都因锁存在而失败（rc!=0）；脚本又不查 add/commit 返回码，导致每分钟
+    "pushed rc=0" 假成功、线上停更 4+ 小时。site_repo 只被本 oneshot 脚本触碰，
+    发布起点（fetch/rebase 已完成）残留的锁必为陈旧，直接删除兜底。
+    """
+    lock = repo / ".git" / "index.lock"
+    try:
+        if lock.exists():
+            lock.unlink()
+            print("[publish] 清理陈旧 index.lock", flush=True)
+    except OSError as e:  # noqa: BLE001
+        print(f"[publish] WARN: 清理 index.lock 失败 {e}", flush=True)
 
 
 def heartbeat(repo: Path) -> None:
@@ -524,20 +539,17 @@ def main(argv: list[str] | None = None) -> int:
     for stale in target.glob("intel_prematch_detail_*"):
         if stale.is_file():
             stale.unlink(missing_ok=True)
-    sync_analytics_api_config()
+    analytics_publish.prepare_release(ROOT, REPORTS, target)
     rebuild_match_shells()  # 2026-08-27：节点生成后壳必须最新（防线上入口缺失）
+    build_situation_json()  # 独立比赛局势页的实时数据（规则层，零 AI）
+    copy_situation_files(REPO)  # 局势页 + situation_live.json 进站点仓库
     copied = 0
     for pattern in PATTERNS:
         for f in REPORTS.glob(pattern):
             shutil.copy2(f, target / f.name)
             copied += 1
-    for name in ANALYTICS_ASSETS:
-        source = REPORTS / name
-        if source.exists():
-            shutil.copy2(source, target / name)
-            copied += 1
-    # A publish pass resets site_repo to origin/main before syncing sources.
-    # Reinstall the VPS-built workspace so the reset cannot roll it back.
+    # The repository reset above restores the previously published workspace.
+    # Always reinstall the VPS-built page so publishing cannot roll it back.
     if PATTERN_WORKSPACE.exists():
         shutil.copy2(PATTERN_WORKSPACE, target / PATTERN_WORKSPACE.name)
         copied += 1
@@ -552,23 +564,7 @@ def main(argv: list[str] | None = None) -> int:
     # （教训 2026-08-25：注入在前、重建在后会把生成器旧导航重新推上线）
     regen_today_page(REPO)
     merge_settlements()
-    # CS2 地图战绩（2026-09-08）：官方结算后自动累计队伍×地图记录，并重建画像页。
-    for _tool in ("sync_map_records.py", "build_intel_profiles.py"):
-        subprocess.run(
-            [str(ROOT / ".venv" / "bin" / "python"), str(ROOT / "tools" / _tool)],
-            cwd=str(ROOT), capture_output=True, text=True, timeout=300,
-        )
-    for _glob in (
-        "intel_profile_*.html",
-        "intel_map_records.html",
-        "intel_gray_verification_stats.html",
-        "intel_profiles_index.html",
-    ):
-        for _f in REPORTS.glob(_glob):
-            try:
-                shutil.copy2(_f, target / _f.name)
-            except OSError:
-                pass
+    # 2026-10-24 用户定稿：不再生成/发布四维画像库、地图战绩、灰信号·验证闭环三个特征页（省算力）。
     # 队伍情报库自动沉淀（2026-08-26 用户定稿）：每场结算后自动把弹幕统计
     # 合并进 teams.json + TEAM_PROFILES.md（幂等，runtime/accumulated_matches.json 防重复）
     subprocess.run(
@@ -622,11 +618,18 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[publish] {datetime.datetime.now():%F %T} mirror skipped (--no-mirror)")
         return 0
 
-    git(REPO, "add", "-A")
+    _clear_stale_index_lock(REPO)
+    r_add = git(REPO, "add", "-A")
+    if r_add.returncode != 0:
+        print(f"[publish] {datetime.datetime.now():%F %T} WARN: git add 失败 rc={r_add.returncode}: {r_add.stderr.strip()[-200:]}")
+        return 3
     status = git(REPO, "status", "--porcelain").stdout.strip()
     if not status:
         heartbeat(REPO)
-        git(REPO, "add", "-A")
+        r_add = git(REPO, "add", "-A")
+        if r_add.returncode != 0:
+            print(f"[publish] {datetime.datetime.now():%F %T} WARN: git add 失败 rc={r_add.returncode}: {r_add.stderr.strip()[-200:]}")
+            return 3
         status = git(REPO, "status", "--porcelain").stdout.strip()
         if not status:
             print(f"[publish] {datetime.datetime.now():%F %T} nothing changed")
@@ -644,7 +647,10 @@ def main(argv: list[str] | None = None) -> int:
                 f"{int(MIRROR_MIN_INTERVAL - (time.time() - _last))}s 后再推"
             )
             return 0
-    git(REPO, "commit", "-m", f"auto publish intel pages {datetime.date.today()}", "-q")
+    r_commit = git(REPO, "commit", "-m", f"auto publish intel pages {datetime.date.today()}", "-q")
+    if r_commit.returncode != 0:
+        print(f"[publish] {datetime.datetime.now():%F %T} WARN: git commit 失败 rc={r_commit.returncode}: {r_commit.stderr.strip()[-200:]}")
+        return 3
     r = git(REPO, "push", "-q")
     if r.returncode == 0:
         _mark_mirror_push()

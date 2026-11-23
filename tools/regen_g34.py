@@ -30,7 +30,7 @@ DATE = "2026-08-26"
 
 
 def main() -> int:
-    allf = sorted(DANMU.glob("*/*.jsonl"))
+    allf = sorted(DANMU.glob("*/*/*.jsonl"))
     files = league_files({"id": MID}, allf)
     # G4 BP 优先（当前局），再补 G3 局末
     nodes = [

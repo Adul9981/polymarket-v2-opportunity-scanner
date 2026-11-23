@@ -1,0 +1,438 @@
+{
+  "meta": {
+    "total": 19833,
+    "active_users": 4974,
+    "window_utc": [
+      "2026-09-12 10:13",
+      "2026-09-12 15:13"
+    ],
+    "density_per_min": 66.0,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "Navi": {
+      "mentions": 9,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "navi跟谁打来着上半场拿了一分翻了",
+        "两年一冠是navi还是tyloo？",
+        "胖球喊有什么奇怪的，以前在navi胖球也是气氛组、",
+        "重新定位21NAVI强度",
+        "21NAVI是5位真神"
+      ]
+    },
+    "T1": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "只分三种队 T1 G2 和其他队"
+      ]
+    },
+    "EDG": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "看edg呢"
+      ]
+    },
+    "IG": {
+      "mentions": 4,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "ig牛逼",
+        "ig牛逼",
+        "ig夺冠了",
+        "Ig来坐满了"
+      ]
+    },
+    "Vitality": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "没有僵尸的小蜜蜂失去了灵魂",
+        "僵尸不打cs，在玩球，小蜜蜂完蛋了",
+        "咋，没小蜜蜂，那菜笔队那，不王朝么，不朝了[笑哭][笑哭][笑哭][笑哭][笑哭]",
+        "咋，没小蜜蜂，那菜笔队那，不王朝么，不朝了[笑哭][笑哭][笑哭][笑哭][笑哭]",
+        "G2曾经不是脚踢小蜜蜂拳打绿龙吗"
+      ]
+    },
+    "Spirit": {
+      "mentions": 135,
+      "pos": 3,
+      "neg": 11,
+      "samples": [
+        "绿龙的马西西",
+        "不好意思 波尔图又是绿龙",
+        "绿龙指挥马西西也在现场",
+        "还有绿龙的事",
+        "绿龙没比赛啊"
+      ]
+    },
+    "G2": {
+      "mentions": 917,
+      "pos": 33,
+      "neg": 98,
+      "samples": [
+        "g2怎么还没开",
+        "G2不是15开吗",
+        "g2几点",
+        "G2",
+        "B2大战G2，你知道吗"
+      ]
+    },
+    "NAVI": {
+      "mentions": 9,
+      "pos": 3,
+      "neg": 0,
+      "samples": [
+        "navi跟谁打来着上半场拿了一分翻了",
+        "两年一冠是navi还是tyloo？",
+        "胖球喊有什么奇怪的，以前在navi胖球也是气氛组、",
+        "重新定位21NAVI强度",
+        "21NAVI是5位真神"
+      ]
+    },
+    "FaZe": {
+      "mentions": 61,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "faze up",
+        "这不我们faze手势吗哈哈哈",
+        "其实都是faze粉丝",
+        "其实都是faze粉丝",
+        "faze啥时候开"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 6,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "憋不住了 把我鱼生和活老鼠拿来",
+        "刚来，if我们赢了蜜蜂老鼠3major冠军了吗？",
+        "来个打不过老鼠的一线队",
+        "梅西矮子老鼠",
+        "老鼠梅西"
+      ]
+    },
+    "Liquid": {
+      "mentions": 6,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "离开液体最正确的决定",
+        "马儿不死现在也跟着液体打野鸡了，G2差不多要去打野鸡了",
+        "离开液体太正确了",
+        "Nertz 完全走出液体阴影了",
+        "Nertz以前在ence就是大哥 去液体迷失了"
+      ]
+    },
+    "FURIA": {
+      "mentions": 29,
+      "pos": 2,
+      "neg": 1,
+      "samples": [
+        "黑豹不强，懂你意思",
+        "猎鹰运气好？把绿龙蜜蜂黑豹杀了个遍，纯实力夺冠好吧！！！",
+        "猎鹰就是运气好，换黑豹那边就被bb逮捕了",
+        "黑豹怎么输的",
+        "黑豹岂不是更菜"
+      ]
+    },
+    "MongolZ": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "蒙古队加油啊"
+      ]
+    },
+    "AG": {
+      "mentions": 2,
+      "pos": 2,
+      "neg": 0,
+      "samples": [
+        "纯路人，猎鹰真没ag强吧，ag有世界冠军，猎有什么",
+        "纯路人，猎鹰真没ag强吧，ag有世界冠军，猎鹰有什么"
+      ]
+    }
+  },
+  "players": {
+    "Chovy": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "我超威你们比赛特么给我打好了啊",
+        "我 chovy"
+      ]
+    },
+    "Niko": {
+      "mentions": 135,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "Niko也在现场",
+        "Niko也在现场",
+        "Niko在吗？",
+        "这分niko指挥的",
+        "别串老尼了，NIKO现在也是major冠军了！！！"
+      ]
+    },
+    "Apex": {
+      "mentions": 4,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "APEX???",
+        "fkuApex",
+        "fkuApex",
+        "fxxk apex都来了"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 46,
+      "pos": 4,
+      "neg": 0,
+      "samples": [
+        "孩神今年top1，donk载物什么top？",
+        "孩神今年top1，donk载物什么top？",
+        "孩神今年top1，donk载物什么top？",
+        "孩神今年top1，donk载物什么top？",
+        "孩神今年top1，donk载物什么top？"
+      ]
+    },
+    "donk": {
+      "mentions": 93,
+      "pos": 11,
+      "neg": 0,
+      "samples": [
+        "donk666",
+        "支持Donk的闺蜜芒果，BB加油👍",
+        "孩神今年top1，donk载物什么top？",
+        "孩神今年top1，donk载物什么top？",
+        "孩神今年top1，donk载物什么top？"
+      ]
+    },
+    "sh1ro": {
+      "mentions": 2,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "什么DONK,NIKO,都不如和sh1ro高级",
+        "不如学西若稳架"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 9,
+    "samples": [
+      "切半天切不到人头",
+      "故意送人头",
+      "150咋了？不少的哈，四分之一的人头钱呢",
+      "导播人头切不到说是",
+      "老子的人头",
+      "bb失误太多了，各种切刀、转头送人头",
+      "导播永远切不到人头",
+      "4发700大狙就没了"
+    ]
+  },
+  "situation": {
+    "count": 226,
+    "samples": [
+      "看的都是击杀画面，一看比分儿。落后",
+      "gg",
+      "gg",
+      "gg",
+      "gg",
+      "gg",
+      "gg？",
+      "暗示gg"
+    ]
+  },
+  "gray_signals": {
+    "count": 41,
+    "samples": [
+      "这a1故意的吧",
+      "这不是在故意送么",
+      "a1故意的吧",
+      "FLC买了",
+      "这打法不是故意放图三？",
+      "双e故意送分",
+      "g2故意的，断连败经济",
+      "那个人身攻击的弹幕你买了吧"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "11:59",
+      "count": 605,
+      "samples": [
+        "马",
+        "？？",
+        "???",
+        "这什么枪法"
+      ]
+    },
+    {
+      "minute_utc": "13:22",
+      "count": 528,
+      "samples": [
+        "重神 今天怎么搞的？？昨天打黑豹好好的啊",
+        "1???????",
+        "666666666666666",
+        "重神 今天怎么搞的？？昨天打黑豹好好的啊重神 今天怎么搞的？"
+      ]
+    },
+    {
+      "minute_utc": "13:20",
+      "count": 434,
+      "samples": [
+        "G兔比赛死里回生是常事",
+        "为什么不能笑？为什么不能笑？为什么不能笑？为什么不能笑？",
+        "g2管理层是在意淫等猎鹰买表哥吗",
+        "！？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "13:23",
+      "count": 305,
+      "samples": [
+        "1v3啊",
+        "maty把把表面搜点",
+        "我操！",
+        "什么"
+      ]
+    },
+    {
+      "minute_utc": "14:00",
+      "count": 288,
+      "samples": [
+        "狙就是犯罪你别管，不空能输？",
+        "打爆哦哦队",
+        "保枪",
+        "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈"
+      ]
+    },
+    {
+      "minute_utc": "13:25",
+      "count": 258,
+      "samples": [
+        "拿下",
+        "保了算了",
+        "２打４",
+        "图三见"
+      ]
+    },
+    {
+      "minute_utc": "12:33",
+      "count": 245,
+      "samples": [
+        "想用重奶的嘎子榨金",
+        "绿龙玩具选拔赛",
+        "队长解说喜欢拖长音，我真想掐死他。",
+        "小江是坏人"
+      ]
+    },
+    {
+      "minute_utc": "13:13",
+      "count": 241,
+      "samples": [
+        "蛋肯 进不去还不大洲 你在这混时长呢",
+        "gg",
+        "ggg",
+        "还来这套路？"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      738
+    ],
+    [
+      "不问深冬头号铁粉",
+      115
+    ],
+    [
+      "还有光吗",
+      91
+    ],
+    [
+      "纯净养精神",
+      84
+    ],
+    [
+      "。",
+      79
+    ],
+    [
+      "引壶有穷时",
+      73
+    ],
+    [
+      "青青草原最懒",
+      71
+    ],
+    [
+      "谷雨醇雅鹿",
+      68
+    ]
+  ],
+  "sources": {
+    "huya_csboy_official": 16846,
+    "huya_csboy_mo": 2987
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T15:20:35+00:00",
+      "heartbeat_at": "2026-09-12T15:59:16+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】7点 G2-BB",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T15:20:35+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T15:20:45+00:00",
+      "heartbeat_at": "2026-09-12T15:59:17+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】7点 G2-BB",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T15:20:45+00:00"
+    }
+  ]
+}

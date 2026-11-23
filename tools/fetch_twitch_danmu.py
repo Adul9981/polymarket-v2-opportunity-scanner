@@ -80,6 +80,7 @@ def run_capture(
     verbose: bool = False,
     source: str = "",
     first_message_timeout: int = 120,
+    game: str = "",
 ) -> int:
     nick = "justinfan%d" % random.randint(10000, 99999)
     msg_count = 0
@@ -156,6 +157,7 @@ def run_capture(
                                 "platform": "twitch",
                                 "channel": channel,
                                 "source": source_id,
+                                "game": game,
                                 "user": user,
                                 "nick": user,
                                 "user_id": user_id,
@@ -241,6 +243,7 @@ def main() -> int:
     ap.add_argument("--out", required=True, help="JSONL output path")
     ap.add_argument("--status", default="", help="optional status JSON path")
     ap.add_argument("--source", default="", help="stable source id written to each record")
+    ap.add_argument("--game", default="", help="game tag lol/cs2/dota2 written to each record")
     ap.add_argument("--first-message-timeout", type=int, default=120)
     ap.add_argument("--verbose", action="store_true")
     args = ap.parse_args()
@@ -258,6 +261,7 @@ def main() -> int:
         verbose=args.verbose,
         source=args.source,
         first_message_timeout=args.first_message_timeout,
+        game=args.game,
     )
     print(f"captured {count} messages from #{channel}")
     return 0

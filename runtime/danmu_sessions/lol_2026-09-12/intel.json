@@ -1,0 +1,810 @@
+{
+  "meta": {
+    "total": 252647,
+    "active_users": 66315,
+    "window_utc": [
+      "2026-09-12 03:56",
+      "2026-09-12 15:58"
+    ],
+    "density_per_min": 349.7,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "KC": {
+      "mentions": 23,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "这大飞怪不得被kc暴虐",
+        "kc进世界赛 问大飞怕不怕",
+        "kc都随便虐大飞",
+        "体育生的潘森吗？KC那个心理阴影还是太大了",
+        "被kc吊虐的大飞"
+      ]
+    },
+    "GX": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这个魏我想起了昨天gx的魏，不会比那个魏还差吧",
+        "被GX翻盘3句"
+      ]
+    },
+    "TH": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "怎么又给th拿这种坦克啊",
+        "呼吸身价都是打th打出来的",
+        "其他人打呼吸打出身价，呼吸打th打出身价"
+      ]
+    },
+    "Navi": {
+      "mentions": 95,
+      "pos": 2,
+      "neg": 3,
+      "samples": [
+        "中间那个是kanavi吗",
+        "NAVI：全体集合进攻对面F6",
+        "NAVI：全体集合进攻对面F6",
+        "navi韩语说的不错",
+        "NAVI：全体集合进攻对面F6"
+      ]
+    },
+    "T1": {
+      "mentions": 2785,
+      "pos": 218,
+      "neg": 332,
+      "samples": [
+        "你们看T1还是看IG",
+        "t1",
+        "肯定是看t1啊",
+        "不能先看T1再看IG吗",
+        "一点不播T1的比赛吗"
+      ]
+    },
+    "DNS": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "T1把dns的打野买过来吧",
+        "dns剧本来了"
+      ]
+    },
+    "KT": {
+      "mentions": 10,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "T1 世界赛名额给KT吧，要不然S赛16强的",
+        "你们能不能让KT去世界赛啊？？？",
+        "这比赛内容不如bfx打kt，有感觉吗",
+        "kt随便虐这两个队伍",
+        "去德杯打kt吧"
+      ]
+    },
+    "HLE": {
+      "mentions": 440,
+      "pos": 39,
+      "neg": 27,
+      "samples": [
+        "看好hle keria要发力才行",
+        "HLE 3:0",
+        "hle没了",
+        "hle正常点t1就是打不过",
+        "不是说读hle不让读韩华吗"
+      ]
+    },
+    "GEN": {
+      "mentions": 153,
+      "pos": 3,
+      "neg": 27,
+      "samples": [
+        "过了这关也干不过GEN",
+        "反正这俩谁进感觉都打不过gen",
+        "没办法，一串三hle geng dk的难度确实比世界赛大",
+        "说是要向T1和gen报仇",
+        "gen是胜者吗"
+      ]
+    },
+    "WBG": {
+      "mentions": 45,
+      "pos": 3,
+      "neg": 1,
+      "samples": [
+        "管泽元今天解说，微博发了",
+        "t1好菜打的过微博吗",
+        "不是wbg杰杰吗",
+        "不如WBG",
+        "微博来了"
+      ]
+    },
+    "LNG": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 3,
+      "samples": [
+        "lng来随便虐",
+        "李宁现场送的袜子吗？",
+        "李宁两盒都赞助",
+        "李宁峡谷",
+        "lng时期呢"
+      ]
+    },
+    "WE": {
+      "mentions": 192,
+      "pos": 6,
+      "neg": 11,
+      "samples": [
+        "t1估计打不过we，都是这种风格",
+        "WE加油",
+        "WE加油",
+        "WE加油",
+        "WE加油"
+      ]
+    },
+    "EDG": {
+      "mentions": 28,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "有点像tt大战edg",
+        "这就是lck最好质量的比赛？不看队名，还以为up打edg",
+        "我还以为TT打EDG呢。",
+        "EDG来都全杀了",
+        "t1估计打不过edg"
+      ]
+    },
+    "BLG": {
+      "mentions": 4241,
+      "pos": 196,
+      "neg": 245,
+      "samples": [
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "IG打BLG堪比电竞春晚"
+      ]
+    },
+    "TES": {
+      "mentions": 191,
+      "pos": 8,
+      "neg": 10,
+      "samples": [
+        "HLE这射手跟TES的弟弟一样打谁都被压",
+        "怎么碰BLG？去年被100T G2 TES送走了",
+        "今天这两队都是ig和tes的玩具",
+        "IG今天应该会输，然后再输TES结束",
+        "t1今年真就是大号tes优势握不住，一劣就一溃到底"
+      ]
+    },
+    "IG": {
+      "mentions": 14524,
+      "pos": 516,
+      "neg": 801,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "你们看T1还是看IG",
+        "IG加油啊，拿下窒息和绝望",
+        "不能先看T1再看IG吗"
+      ]
+    },
+    "Vitality": {
+      "mentions": 50,
+      "pos": 1,
+      "neg": 11,
+      "samples": [
+        "今晚小蜜蜂打谁",
+        "小蜜蜂",
+        "想看小蜜蜂打 navi[拥抱]",
+        "小蜜蜂大概率是三号种子吧",
+        "小蜜蜂0-6直接滚"
+      ]
+    },
+    "G2": {
+      "mentions": 41,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "怎么碰BLG？去年被100T G2 TES送走了",
+        "说实话lck连g2和kc都过不了",
+        "他们指挥今年一直有问题啊，msi打g2那个问题还不大吗",
+        "G2夺冠了",
+        "G2夺冠了"
+      ]
+    },
+    "NAVI": {
+      "mentions": 95,
+      "pos": 2,
+      "neg": 3,
+      "samples": [
+        "中间那个是kanavi吗",
+        "NAVI：全体集合进攻对面F6",
+        "NAVI：全体集合进攻对面F6",
+        "navi韩语说的不错",
+        "NAVI：全体集合进攻对面F6"
+      ]
+    },
+    "MOUZ": {
+      "mentions": 68,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "不会吧，老鼠队还有人粉？",
+        "2026还有人说老鼠队我要笑死了",
+        "你说的老鼠队当年可是第一个为rng重赛发声的",
+        "说老鼠队的你全价活过2020年了吗哈哈哈",
+        "老鼠队老鼠队老鼠队老鼠队老鼠队老鼠队老鼠队老鼠队老鼠队老鼠队"
+      ]
+    },
+    "AG": {
+      "mentions": 59,
+      "pos": 1,
+      "neg": 2,
+      "samples": [
+        "ag八强还是四强来着",
+        "AG加油",
+        "。把ag请过来。",
+        "AG粉丝呢",
+        "AG粉丝呢"
+      ]
+    },
+    "Iron Wing": {
+      "mentions": 10,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "牛至少刷了1w伤害",
+        "这个时候是你T1爹领先1w了",
+        "赶紧3-0，领先1w经济都没用",
+        "有奥恩 后期自动领先1W",
+        "Rookie这把能有1W输出吗？"
+      ]
+    }
+  },
+  "players": {
+    "Oscar": {
+      "mentions": 29,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "奥斯卡之夜",
+        "奥斯卡之夜",
+        "奥斯卡之夜",
+        "奥斯卡之夜",
+        "奥斯卡之夜，都不敢面对blg"
+      ]
+    },
+    "Guma": {
+      "mentions": 206,
+      "pos": 29,
+      "neg": 9,
+      "samples": [
+        "姑妈又胖了",
+        "姑妈都被peyz虐成猪头了，还在这装",
+        "这么看还是guma帅",
+        "姑妈越来越像神了",
+        "guma大小姐视频播放量特别高"
+      ]
+    },
+    "Faker": {
+      "mentions": 1813,
+      "pos": 62,
+      "neg": 159,
+      "samples": [
+        "faker这两天状态不错，把把mvp",
+        "好有态度啊faker",
+        "老李总是那么彬彬有礼",
+        "只有FAKER才会向观众敬礼？",
+        "老李加油"
+      ]
+    },
+    "Chovy": {
+      "mentions": 111,
+      "pos": 6,
+      "neg": 13,
+      "samples": [
+        "超威害怕了",
+        "超威害怕人多的地方",
+        "败决搞这么大排场我超威，决赛不敢想",
+        "我超威。现场那么多人吗",
+        "chovy的陀螺选拔赛"
+      ]
+    },
+    "Zeus": {
+      "mentions": 800,
+      "pos": 82,
+      "neg": 33,
+      "samples": [
+        "张神上路有机会看宙斯青钢影打蓝子薇恩有机会看到吗",
+        "Zeus~",
+        "这角度给宙斯拍的脸很大",
+        "兰子要暴打宙斯了吗",
+        "想赢姑妈必须咬牙，宙斯带c"
+      ]
+    },
+    "Niko": {
+      "mentions": 8,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "niko kasa",
+        "阵前再亮大虾钳，寒光凛凛似当年，大家举起虾钳把光传给NIKO",
+        "阵前再亮大虾钳，寒光凛凛似当年，大家举起虾钳把光传给NIKO",
+        "阵前再亮大虾钳，寒光凛凛似当年，大家举起虾钳把光传给NIKO",
+        "阵前再亮大虾钳，寒光凛凛似当年，大家举起虾钳把光传给NIKO"
+      ]
+    },
+    "Apex": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "apex人品咋样",
+        "apex人品咋样"
+      ]
+    },
+    "Zywoo": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "载物打得载物来报沙二的仇了",
+        "不上载物打不过",
+        "载物来全狙了"
+      ]
+    },
+    "donk": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "Donk666"
+      ]
+    },
+    "33": {
+      "mentions": 20,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "大33收",
+        "承伤33",
+        "没毛 输出24 承伤33 参团率最高",
+        "拖到33能赢",
+        "33有了"
+      ]
+    },
+    "Collapse": {
+      "mentions": 1,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "可见AL还是比前几个强多了，30多分钟才崩溃"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 719,
+    "samples": [
+      "没争议IG直接打48得了",
+      "48不封杀 封人家解说要点脸？",
+      "我48的杰斯呢",
+      "领先一个人头！",
+      "小人头任务",
+      "48",
+      "48",
+      "一个人头没有"
+    ]
+  },
+  "situation": {
+    "count": 5394,
+    "samples": [
+      "gg不想打t1",
+      "今天不是gg的比赛吗？",
+      "超级兵，假电脑",
+      "你们咋不说hle打t1五把17条小龙",
+      "哈哈navi的奇亚纳。gg",
+      "来个奥拉夫勇往直前一波",
+      "去年决赛兰桶抢的龙魂",
+      "耶律又落后了"
+    ]
+  },
+  "gray_signals": {
+    "count": 1042,
+    "samples": [
+      "韩国人挺会设计的，这衣服我还买了一件",
+      "买了T1的人 所以支持率高啊",
+      "LCK打假赛真的会坐牢吗",
+      "LCK打假赛真的会坐牢吗",
+      "老张 lck打假赛真的会坐牢吗",
+      "Lck打假赛不坐牢，要枪毙[笑哭]",
+      "大飞是内部人 假赛不会坐牢",
+      "全世界都说假赛坐牢 然后这个不叫假赛 叫表演赛"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "10:42",
+      "count": 8148,
+      "samples": [
+        "ig中上两个彩笔，ig中上两个彩笔",
+        "真的彩笔",
+        "没前排对面土龙魂，可以点了",
+        "Rookie混两局了，还有人吹自律鸡能打左手？"
+      ]
+    },
+    {
+      "minute_utc": "12:35",
+      "count": 2403,
+      "samples": [
+        "666",
+        "666666",
+        "6666",
+        "？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "13:26",
+      "count": 2020,
+      "samples": [
+        "？？？？",
+        "GG",
+        "ig这什么烂bp卧槽了",
+        "下班"
+      ]
+    },
+    {
+      "minute_utc": "13:37",
+      "count": 1976,
+      "samples": [
+        "？？？？？？？？？？？？？？？",
+        "？？？？？？",
+        "？？？？？？？？",
+        "？？？？？？"
+      ]
+    },
+    {
+      "minute_utc": "13:38",
+      "count": 1957,
+      "samples": [
+        "那几对打冒泡赛啊",
+        "舒服了",
+        "舒服了",
+        "决赛退票吧"
+      ]
+    },
+    {
+      "minute_utc": "11:40",
+      "count": 1888,
+      "samples": [
+        "iG今天来搞笑的",
+        "预测对了，被3比1",
+        "ig吹子说话",
+        "中路太拉了"
+      ]
+    },
+    {
+      "minute_utc": "13:06",
+      "count": 1842,
+      "samples": [
+        "塔姆",
+        "vn",
+        "剑魔",
+        "？？？"
+      ]
+    },
+    {
+      "minute_utc": "09:37",
+      "count": 1832,
+      "samples": [
+        "hope 给力",
+        "绝望窒息",
+        "刮痧AD还没退役",
+        "刮痧"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      13212
+    ],
+    [
+      "黑闇騎士",
+      467
+    ],
+    [
+      "你好呀白鹿my",
+      421
+    ],
+    [
+      "我就是ikun不骗你",
+      348
+    ],
+    [
+      "皮皮光Rational",
+      331
+    ],
+    [
+      "爹永远是爹",
+      286
+    ],
+    [
+      "亿墨L",
+      263
+    ],
+    [
+      "贪睡糕羊羊",
+      248
+    ]
+  ],
+  "sources": {
+    "huya_lol_official": 189369,
+    "huya_we957": 31331,
+    "huya_maomao": 0,
+    "huya_mile": 897,
+    "huya_remember": 5779,
+    "huya_shuoshuo": 25271
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T15:58:45+00:00",
+      "last_message_at": "2026-09-12T15:58:35+00:00",
+      "message_count": 116700,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "谁赢了",
+          "ts": 1789228530.29
+        },
+        {
+          "t": "你赢了",
+          "ts": 1789228541.23
+        },
+        {
+          "t": "AL",
+          "ts": 1789228570.67
+        },
+        {
+          "t": "IG赢了",
+          "ts": 1789228574.75
+        },
+        {
+          "t": "ig回家了呗[偷笑]",
+          "ts": 1789228595.01
+        },
+        {
+          "t": "不敢放",
+          "ts": 1789228604.33
+        },
+        {
+          "t": "拿ES就输",
+          "ts": 1789228659.4
+        },
+        {
+          "t": "lol要凉打成这样还想打世界赛",
+          "ts": 1789228671.59
+        },
+        {
+          "t": "？？？怎么还在打",
+          "ts": 1789228673.82
+        },
+        {
+          "t": "?????还在打?",
+          "ts": 1789228687.82
+        },
+        {
+          "t": "重播",
+          "ts": 1789228690.45
+        },
+        {
+          "t": "还在打",
+          "ts": 1789228701.84
+        },
+        {
+          "t": "谁赢了啊",
+          "ts": 1789228705.5
+        },
+        {
+          "t": "拿EZ就输",
+          "ts": 1789228710.96
+        },
+        {
+          "t": "AL",
+          "ts": 1789228715.04
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【交锋正此时】AL 1:1 iG 2026LPL败决",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-09-12T10:56:21+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T14:24:36+00:00",
+      "heartbeat_at": "2026-09-12T15:58:41+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "IG大战AL ！！胜者进决赛！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T14:24:38+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T15:58:43+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "LEC季后赛 GX VS NAVI",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T10:56:21+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T15:20:34+00:00",
+      "heartbeat_at": "2026-09-12T15:58:45+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "LPL败者组决赛 iG vs AL",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T15:20:34+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T15:58:43+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[LCK] 败决 HLEvsT1 ",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-12T10:56:21+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "capturing",
+      "started_at": "2026-09-12T10:56:21+00:00",
+      "heartbeat_at": "2026-09-12T15:58:46+00:00",
+      "last_message_at": "2026-09-12T15:58:46+00:00",
+      "message_count": 5083,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "亚恒下水道喜欢玩",
+          "ts": 1789228439.75
+        },
+        {
+          "t": "老张去美国吗",
+          "ts": 1789228445.81
+        },
+        {
+          "t": "不出暴击书的永恩都是菜b",
+          "ts": 1789228465.33
+        },
+        {
+          "t": "现场解说至少得4强，张出也就在上海解说几场入围赛",
+          "ts": 1789228473.25
+        },
+        {
+          "t": "1",
+          "ts": 1789228480.55
+        },
+        {
+          "t": "1",
+          "ts": 1789228486.04
+        },
+        {
+          "t": "溢出的暴击能加攻击的吧",
+          "ts": 1789228505.39
+        },
+        {
+          "t": "所以呢为什么不选会心防御",
+          "ts": 1789228586.71
+        },
+        {
+          "t": "让你出暴击书耳朵🐲吗",
+          "ts": 1789228613.61
+        },
+        {
+          "t": "狗屎",
+          "ts": 1789228619.81
+        },
+        {
+          "t": "暴击书比死舞都肉，你会玩吗",
+          "ts": 1789228623.69
+        },
+        {
+          "t": "这大什么啊",
+          "ts": 1789228630.23
+        },
+        {
+          "t": "死舞不如法爆书",
+          "ts": 1789228711.91
+        },
+        {
+          "t": "bp了",
+          "ts": 1789228721.04
+        },
+        {
+          "t": "开了",
+          "ts": 1789228726.13
+        }
+      ],
+      "room_id": 323444,
+      "channel_id": 1279512307519,
+      "nickname": "解说硕硕",
+      "introduction": "LPL败决！IG AL！",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-12T10:56:21+00:00"
+    }
+  ]
+}

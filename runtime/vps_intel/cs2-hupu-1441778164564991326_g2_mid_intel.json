@@ -1,0 +1,430 @@
+{
+ "meta": {
+  "total": 1076,
+  "active_users": 484,
+  "window_utc": [
+   "2026-10-16 15:34",
+   "2026-10-16 15:51"
+  ],
+  "density_per_min": 61.8,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "Vitality": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "小蜜蜂加油！"
+   ]
+  },
+  "MOUZ": {
+   "mentions": 3,
+   "pos": 1,
+   "neg": 0,
+   "samples": [
+    "老鼠出来的小吉米这图肯定厉害啊",
+    "小鸡米活该被老鼠踢",
+    "哈基米是被老鼠踢掉的"
+   ]
+  },
+  "Astra": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "Astralis这钢枪指挥去猎鹰那不直接王朝了?"
+   ]
+  }
+ },
+ "players": {
+  "Niko": {
+   "mentions": 10,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "这分Niko指挥的",
+    "这分Niko指挥的吧",
+    "这分niko指挥的",
+    "你们懂什么，赢了才是niko指挥的",
+    "今天niko有没有指挥"
+   ]
+  },
+  "Zywoo": {
+   "mentions": 5,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "载物play",
+    "载物来了",
+    "载物来了",
+    "就这一波，载物来了也不过如此吧",
+    "载物来了也就这两下子"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 1,
+  "samples": [
+   "好他妈的菜啊买了17009z直接捐？？？"
+  ]
+ },
+ "situation": {
+  "count": 11,
+  "samples": [
+   "直接一波带走了",
+   "9儿子人数优势不会玩了尴住了",
+   "全是墨迹死，就不能打一波",
+   "连败经济有了",
+   "人数优势不会玩",
+   "欧罗拉连输2把就没经济",
+   "9z把把人数优势 打得这么费劲",
+   "再输一把断经济"
+  ]
+ },
+ "gray_signals": {
+  "count": 4,
+  "samples": [
+   "这能不看的？ 妈的 9z买了吧",
+   "这是人？买了吧",
+   "这不就是故意送的吗 吹什么呢",
+   "好他妈的菜啊买了17009z直接捐？？？"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "15:47",
+   "minute": 29869427,
+   "count": 174,
+   "pos": 18,
+   "neg": 3,
+   "tone": "正面",
+   "samples": [
+    "马西西呢",
+    "刚刚小狠人链接打一个 跑去b挺变态",
+    "？？？？？？？？？？？？？",
+    "？？"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 80,
+   "neg": 54,
+   "net": 26,
+   "tone": "正面"
+  },
+  "timeline": [
+   {
+    "start_utc": "15:34",
+    "count": 280,
+    "pos": 19,
+    "neg": 18,
+    "net": 1,
+    "tone": "分歧"
+   },
+   {
+    "start_utc": "15:40",
+    "count": 275,
+    "pos": 17,
+    "neg": 17,
+    "net": 0,
+    "tone": "分歧"
+   },
+   {
+    "start_utc": "15:46",
+    "count": 521,
+    "pos": 44,
+    "neg": 19,
+    "net": 25,
+    "tone": "正面"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "15:47",
+    "count": 174,
+    "tone": "正面",
+    "pos": 18,
+    "neg": 3,
+    "sample": "马西西呢"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "niko指挥的",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "15:48"
+  },
+  {
+   "text": "载物来了",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "15:47"
+  },
+  {
+   "text": "这分Niko指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "Astralis这钢枪指挥去猎鹰那不直接王朝了?",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:38"
+  },
+  {
+   "text": "这分Niko指挥的吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:40"
+  },
+  {
+   "text": "小鸡米活该被老鼠踢",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:43"
+  },
+  {
+   "text": "哈基米是被老鼠踢掉的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:43"
+  },
+  {
+   "text": "这分niko指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:43"
+  },
+  {
+   "text": "你们懂什么，赢了才是niko指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:44"
+  },
+  {
+   "text": "今天niko有没有指挥",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:46"
+  },
+  {
+   "text": "载物play",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:47"
+  },
+  {
+   "text": "小蜜蜂加油！",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:48"
+  },
+  {
+   "text": "就这一波，载物来了也不过如此吧",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:48"
+  },
+  {
+   "text": "载物来了也就这两下子",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:49"
+  },
+  {
+   "text": "niko",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:51"
+  },
+  {
+   "text": "这波niko指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "15:51"
+  },
+  {
+   "text": "？？？？？？？",
+   "count": 15,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "？？？？？？？？",
+   "count": 12,
+   "entity": false,
+   "minute_utc": "15:45"
+  },
+  {
+   "text": "？？？？",
+   "count": 10,
+   "entity": false,
+   "minute_utc": "15:43"
+  },
+  {
+   "text": "？？？？？",
+   "count": 9,
+   "entity": false,
+   "minute_utc": "15:38"
+  },
+  {
+   "text": "？？？？？？",
+   "count": 9,
+   "entity": false,
+   "minute_utc": "15:47"
+  },
+  {
+   "text": "666",
+   "count": 8,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "K3 你个乐子",
+   "count": 8,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "？？？？？？？？？？？？？",
+   "count": 8,
+   "entity": false,
+   "minute_utc": "15:39"
+  },
+  {
+   "text": "漂漂漂漂漂漂漂漂漂漂漂漂漂漂漂",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "？",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "？？？",
+   "count": 6,
+   "entity": false,
+   "minute_utc": "15:39"
+  },
+  {
+   "text": "6666",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "66666",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:42"
+  },
+  {
+   "text": "这指挥我们猎鹰要了",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "？？？？？？？？？？",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:47"
+  },
+  {
+   "text": "小狠人今年能有top吗",
+   "count": 5,
+   "entity": false,
+   "minute_utc": "15:49"
+  },
+  {
+   "text": "666666",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:39"
+  },
+  {
+   "text": "k3",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "钢枪指挥",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:35"
+  },
+  {
+   "text": "这钢枪指挥我们猎鹰要了",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:37"
+  },
+  {
+   "text": "k3去猎鹰王朝了",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:38"
+  },
+  {
+   "text": "？？？？？？？？？？？？",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:47"
+  },
+  {
+   "text": "??????????????",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:47"
+  },
+  {
+   "text": "我糙",
+   "count": 4,
+   "entity": false,
+   "minute_utc": "15:47"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   29
+  ],
+  [
+   "一起犇骉",
+   18
+  ],
+  [
+   "小虎牙-t9z2A6Pk0F",
+   17
+  ],
+  [
+   "凯伦罗伯逊",
+   15
+  ],
+  [
+   "CN、哇哇哇",
+   13
+  ],
+  [
+   "暑雨小鳝",
+   13
+  ],
+  [
+   "超级刹那仁",
+   11
+  ],
+  [
+   "Cosmo1314",
+   11
+  ]
+ ]
+}

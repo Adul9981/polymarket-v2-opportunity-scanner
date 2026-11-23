@@ -1,0 +1,134 @@
+{
+  "source": "hupu",
+  "out_biz_no": "3817",
+  "out_biz_type": "lol_match",
+  "match_name": "LNG 1-2 WBG",
+  "home": {
+    "name": "LNG",
+    "team_id": "9"
+  },
+  "away": {
+    "name": "WBG",
+    "team_id": "41"
+  },
+  "game": {
+    "num": 3,
+    "name": "第3局",
+    "biz_id": "6856"
+  },
+  "players": [
+    {
+      "name": "Elk",
+      "score": 6.9,
+      "count": 1233,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "Xiaohu",
+      "score": 5.6,
+      "count": 934,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "Nia",
+      "score": 2.5,
+      "count": 839,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "Zika",
+      "score": 2.8,
+      "count": 762,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "Xiaohao",
+      "score": 6.6,
+      "count": 516,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "1xn",
+      "score": 3.3,
+      "count": 371,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "Weiwei",
+      "score": 4.3,
+      "count": 346,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "Moham",
+      "score": 4.8,
+      "count": 343,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "Ycx",
+      "score": 4.3,
+      "count": 264,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "sheer",
+      "score": 4.0,
+      "count": 264,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "教练 Clearlove",
+      "score": 4.2,
+      "count": 261,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "替补：Jwei",
+      "score": 5.3,
+      "count": 136,
+      "team_id": "",
+      "team": ""
+    },
+    {
+      "name": "教练 LvMao",
+      "score": 3.2,
+      "count": 113,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "塞拉斯/波比/阿卡丽/奥拉夫/贾克斯",
+      "score": 5.7,
+      "count": 83,
+      "team_id": "41",
+      "team": "WBG"
+    },
+    {
+      "name": "卡西奥佩娅/薇恩/杰斯/辛德拉/奥莉安娜",
+      "score": 3.9,
+      "count": 70,
+      "team_id": "9",
+      "team": "LNG"
+    },
+    {
+      "name": "替补：Missing",
+      "score": 4.2,
+      "count": 55,
+      "team_id": "",
+      "team": ""
+    }
+  ],
+  "fetched_at_utc": "2026-10-18T12:53:47Z"
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>局中弹幕情报 · FUR vs MVK · G1 BP后</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color: #1d1d1f;
+    line-height: 1.5;
+    padding: 24px 16px 48px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
+  }
+  .card.speed {
+    border: 1.5px solid #0071e3;
+    background: linear-gradient(180deg, #f7fbff 0%, #ffffff 60%);
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h2 .no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 7px;
+    background: #0071e3;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .scoreline {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d1d1f;
+    background: #f0f6ff;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    align-items: baseline;
+  }
+  .scoreline .tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: #0071e3;
+    background: #e3f0ff;
+    border-radius: 6px;
+    padding: 2px 8px;
+  }
+  ul { list-style: none; }
+  .speed ul li {
+    position: relative;
+    padding: 9px 0 9px 22px;
+    font-size: 14.5px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  .speed ul li:last-child { border-bottom: none; }
+  .speed ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 17px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0071e3;
+  }
+  .arrow { color: #0071e3; font-weight: 700; }
+  .src { color: #86868b; font-size: 12.5px; }
+  .decision {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: #1d1d1f;
+    color: #f5f5f7;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .decision .hl { color: #6fb6ff; }
+  .kv { font-size: 14px; }
+  .kv .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  .kv .row:last-child { border-bottom: none; }
+  .kv .k { color: #86868b; min-width: 108px; font-size: 13px; }
+  .kv .v { font-weight: 500; }
+  .pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-right: 6px;
+  }
+  .pill.pos { background: #e6f7ec; color: #1a7f37; }
+  .pill.neg { background: #fdecec; color: #c0392b; }
+  .pill.neu { background: #f0f0f2; color: #6e6e73; }
+  .pill.gray { background: #f2f2f4; color: #86868b; }
+  .empty {
+    font-size: 14px;
+    color: #86868b;
+    background: #fafafa;
+    border: 1px dashed #d2d2d7;
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 8px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  th {
+    color: #86868b;
+    font-weight: 600;
+    font-size: 12.5px;
+    background: #fafafa;
+  }
+  td .muted { color: #86868b; }
+  details {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #6e6e73;
+  }
+  details summary {
+    cursor: pointer;
+    color: #0071e3;
+    font-weight: 500;
+    font-size: 13px;
+    outline: none;
+  }
+  details p { margin-top: 6px; padding-left: 4px; }
+  .threecol {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .threecol .col {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+  .threecol .col h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1d1d1f;
+  }
+  .threecol .col ul li {
+    padding: 3px 0 3px 14px;
+    position: relative;
+    color: #424245;
+  }
+  .threecol .col ul li::before {
+    content: "·";
+    position: absolute;
+    left: 2px;
+    color: #0071e3;
+    font-weight: 700;
+  }
+  .footnote {
+    text-align: center;
+    font-size: 12px;
+    color: #86868b;
+    margin-top: 8px;
+    line-height: 1.7;
+  }
+  @media (max-width: 640px) {
+    .threecol { grid-template-columns: 1fr; }
+    .kv .k { min-width: 84px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 0 核心情报速览 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="scoreline">
+      FUR <span style="color:#86868b;font-weight:400;">vs</span> MVK · 第 1 小局 · BO5 · 局中
+      <span class="tag">弹幕口径 · 官方待回填</span>
+    </div>
+    <ul>
+      <li>弹幕窗口 <b>['等待首条弹幕','等待首条弹幕']</b> 共 <b>0 条 / 0 人 / 0.0 条·分⁻¹</b>，样本状态 <b>insufficient</b> <span class="arrow">→</span> 当前无任何可采信观众信号，方向判断置信度为零 <span class="src">（弹幕口径·待官方 → 详 §2、§11）</span></li>
+      <li>队伍提及：<b>无</b>；灰信号（观众质疑）：<b>无</b>；弹幕密度峰值：<b>无</b> <span class="arrow">→</span> 无正/负锚点可锚定，市场与盘口讨论缺乏弹幕侧证据 <span class="src">（弹幕口径·待官方 → 详 §2、§4）</span></li>
+      <li>BP 后战绩情报（选人窗口选手×英雄胜率/战绩提及）：<b>无战绩情报提及</b> <span class="arrow">→</span> 无法从弹幕侧验证选人质量，BP 锚点仅能依赖官方数据回填 <span class="src">（弹幕口径·待官方 → 详 §3）</span></li>
+      <li>中性弹幕抢救候选：<b>无</b>；二次判定情绪：<b>无</b> <span class="arrow">→</span> 无被规则层误判的中性内容可回收为情绪信号 <span class="src">（弹幕口径·待官方 → 详 §5、§7）</span></li>
+      <li>比赛叙事（观众共识/情绪走势/关键转折点）：<b>样本不足</b> <span class="arrow">→</span> 本局情绪时间轴为空，禁止编造看涨/看跌/翻转节点 <span class="src">（弹幕口径·待官方 → 详 §5、§7）</span></li>
+    </ul>
+    <div class="decision">
+      决策落点：<span class="hl">样本不足，暂不给出 LONG/SHORT 方向</span>；等待首条弹幕进入窗口后重跑本节点，再评估盘口与方向。
+    </div>
+  </div>
+
+  <!-- 1 结果总览/状态核验 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <div class="kv">
+      <div class="row"><span class="k">比赛</span><span class="v">FUR vs MVK（League of Legends）</span></div>
+      <div class="row"><span class="k">日期</span><span class="v">2026-10-15</span></div>
+      <div class="row"><span class="k">赛制</span><span class="v">BO5（本场共 5 局，当前第 1 小局）</span></div>
+      <div class="row"><span class="k">节点</span><span class="v">G1｜BP 后 / 开局（S0 · EARLY-GAME）· 补发节点（流水线延迟，窗口后生成）</span></div>
+      <div class="row"><span class="k">状态</span><span class="v"><span class="pill neu">局中 · 非终局</span>结果待定</span></div>
+      <div class="row"><span class="k">比分</span><span class="v">官方待回填（弹幕口径无比分信息）</span></div>
+      <div class="row"><span class="k">样本</span><span class="v">0 条 / 0 人 · 0.0 条·分⁻¹ · insufficient</span></div>
+    </div>
+  </div>
+
+  <!-- 2 灰信号汇总 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑 · 非结论）</h2>
+    <div class="empty">样本不足：窗口内无任何弹幕，未捕获观众质疑类灰信号。灰信号留痕为空，不作为任何方向判断依据。</div>
+  </div>
+
+  <!-- 3 BP 锚点与选人情报 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <div class="empty">样本不足：无弹幕提及选人、Ban/Pick 争议或选手×英雄战绩。BP 后战绩情报：<b>无战绩情报提及</b>。本段待官方 BP 数据与弹幕窗口回填。</div>
+  </div>
+
+  <!-- 4 盘口与市场讨论 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <div class="empty">样本不足：窗口内无盘口、赔率或市场方向讨论。Polymarket slug：<b>lol-hupu-1683760379346944</b>（仅元数据，无弹幕侧市场信号）。</div>
+  </div>
+
+  <!-- 5 方向性情报板 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板（正锚 × 负锚 × 共识 × 灰信号条件预测）</h2>
+    <div class="kv">
+      <div class="row"><span class="k">正锚</span><span class="v"><span class="pill neu">无</span>无正面弹幕锚点</span></div>
+      <div class="row"><span class="k">负锚</span><span class="v"><span class="pill neu">无</span>无负面弹幕锚点</span></div>
+      <div class="row"><span class="k">群体共识</span><span class="v"><span class="pill neu">共识不足</span>样本 0 条，无法形成共识净值</span></div>
+      <div class="row"><span class="k">灰信号条件预测</span><span class="v">无灰信号，无条件预测可生成</span></div>
+      <div class="row"><span class="k">中性弹幕二次判定</span><span class="v">无候选，无模型二次判定结果</span></div>
+    </div>
+    <div class="empty" style="margin-top:12px;">比赛叙事：观众共识 / 情绪走势 / 关键转折点均<b>样本不足</b>，禁止编造看涨、看跌或翻转节点。</div>
+  </div>
+
+  <!-- 6 情报含义与决策落点 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点（LONG / SHORT）</h2>
+    <div class="kv">
+      <div class="row"><span class="k">方向</span><span class="v"><span class="pill neu">观望</span>样本不足，不给出 LONG / SHORT</span></div>
+      <div class="row"><span class="k">理由</span><span class="v">弹幕窗口 0 条、0 人，无正/负锚点、无灰信号、无盘口讨论，任何方向判断均无证据支撑</span></div>
+      <div class="row"><span class="k">触发条件</span><span class="v">首条弹幕进入窗口并形成 ≥1 条有效信号后，重跑本节点</span></div>
+      <div class="row"><span class="k">风险</span><span class="v">补发节点存在流水线延迟，窗口可能未覆盖真实开局弹幕高峰</span></div>
+    </div>
+  </div>
+
+  <!-- 7 本局复盘（证据层） -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <div class="empty">
+      时间线：<b>样本不足</b>，无分钟级弹幕密度峰值（分钟 + 条数 + 样本）可记录。<br>
+      情绪走势：<b>样本不足</b>，无看涨 / 看跌 / 翻转段落。<br>
+      关键转折点：<b>样本不足</b>，无正面（高光 / 翻盘）或负面（失误 / 送）观众解读。<br>
+      中性弹幕二次判定：无候选，无「模型二次判定」条目。
+    </div>
+  </div>
+
+  <!-- 8 队伍/人员画像 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <thead>
+        <tr><th>对象</th><th>提及量</th><th>正 / 负向</th><th>备注</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>FUR</td><td class="muted">0</td><td><span class="pill neu">无</span></td><td class="muted">无弹幕提及</td></tr>
+        <tr><td>MVK</td><td class="muted">0</td><td><span class="pill neu">无</span></td><td class="muted">无弹幕提及</td></tr>
+        <tr><td>选手（双方）</td><td class="muted">0</td><td><span class="pill neu">无</span></td><td class="muted">无人员画像数据</td></tr>
+      </tbody>
+    </table>
+    <div class="empty" style="margin-top:12px;">本局阵容（英雄 + 选手映射）：<b>样本不足</b>，无弹幕侧阵容情报。</div>
+  </div>
+
+  <!-- 9 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <div class="empty">样本不足：窗口内无版本、英雄优先级或联赛规律讨论。本段待弹幕窗口回填。</div>
+  </div>
+
+  <!-- 10 预测验证回填 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <div class="empty">样本不足：无历史预测条目可在本节点验证。等待后续节点回填 BP 后预测与实际走势对照。</div>
+  </div>
+
+  <!-- 11 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="threecol">
+      <div class="col">
+        <h4>实际数据源</h4>
+        <ul>
+          <li>弹幕窗口：['等待首条弹幕','等待首条弹幕']</li>
+          <li>统计：0 条 / 0 人 / 0.0 条·分⁻¹</li>
+          <li>样本状态：insufficient</li>
+          <li>规则层情报文件：lol-hupu-1683760379346944_g1_bp_intel.json</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>预期数据源</h4>
+        <ul>
+          <li>弹幕原文与时间戳（分钟级）</li>
+          <li>队伍 / 选手提及计数</li>
+          <li>BP 与选人窗口战绩</li>
+          <li>盘口与市场讨论信号</li>
+          <li>灰信号与中性候选二次判定</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>缺口</h4>
+        <ul>
+          <li>弹幕条数为 0，无任何信号</li>
+          <li>无队伍提及、无灰信号</li>
+          <li>无密度峰值时间线</li>
+          <li>无比赛叙事与转折点</li>
+          <li>官方比分 / BP 数据待回填</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footnote">
+      比赛元数据：FUR vs MVK · 2026-10-15 · League of Legends · BO5（共 5 局，当前第 1 小局）<br>
+      league id：lol-hupu-1683760379346944 · Polymarket slug：lol-hupu-1683760379346944<br>
+      局中 · 非终局，结果待定 · 弹幕口径 · 官方待回填
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

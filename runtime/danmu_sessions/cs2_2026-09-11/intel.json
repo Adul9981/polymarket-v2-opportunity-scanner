@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "total": 0,
+    "active_users": 0,
+    "window_utc": [
+      "等待首条弹幕",
+      "等待首条弹幕"
+    ],
+    "density_per_min": 0.0,
+    "sample_status": "insufficient"
+  },
+  "teams": {},
+  "players": {},
+  "odds_discussion": {
+    "count": 0,
+    "samples": []
+  },
+  "situation": {
+    "count": 0,
+    "samples": []
+  },
+  "gray_signals": {
+    "count": 0,
+    "samples": []
+  },
+  "density_bursts": [],
+  "top_users": [],
+  "sources": {
+    "huya_csboy_official": 0,
+    "huya_csboy_mo": 0
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_official",
+      "url": "https://www.huya.com/123321",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T15:59:10+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 123321,
+      "channel_id": 20540844,
+      "nickname": "CSBOY",
+      "introduction": "【直播】G2-5star",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:39+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "cs2",
+      "source": "huya_csboy_mo",
+      "url": "https://www.huya.com/captainmo",
+      "state": "offline_waiting",
+      "started_at": "2026-09-10T16:00:39+00:00",
+      "heartbeat_at": "2026-09-11T15:59:11+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 321123,
+      "channel_id": 35184698021314,
+      "nickname": "CSBOY-Mo",
+      "introduction": "【直播】Alliance-magic",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-10T16:00:40+00:00"
+    }
+  ]
+}

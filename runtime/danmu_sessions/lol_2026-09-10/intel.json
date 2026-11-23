@@ -1,0 +1,400 @@
+{
+  "meta": {
+    "total": 1717,
+    "active_users": 797,
+    "window_utc": [
+      "2026-09-09 16:54",
+      "2026-09-10 15:57"
+    ],
+    "density_per_min": 1.2,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "BLG": {
+      "mentions": 57,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    "TES": {
+      "mentions": 5,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中指挥TES战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥TES战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥TES战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥TES战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥TES战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    "IG": {
+      "mentions": 392,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "ig今年这么猛吗",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  },
+  "players": {
+    "Faker": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "飞科现在的状态，的确挺让人怀疑前几冠希含金量",
+        "还有人怀疑飞科吗😲",
+        "也不是说飞科弱，如果他要证明自己就努力打好接下来的比赛就行了"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 0,
+    "samples": []
+  },
+  "situation": {
+    "count": 4,
+    "samples": [
+      "打小龙",
+      "现在比分呢",
+      "gg",
+      "还不如替大树打会大龙有拼惩的可能"
+    ]
+  },
+  "gray_signals": {
+    "count": 1,
+    "samples": [
+      "这特么演都不演了"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "18:22",
+      "count": 12,
+      "samples": [
+        "1",
+        "1",
+        "1",
+        "1"
+      ]
+    },
+    {
+      "minute_utc": "23:04",
+      "count": 12,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    {
+      "minute_utc": "01:54",
+      "count": 12,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "[枯萎]",
+        "[害羞]",
+        "1"
+      ]
+    },
+    {
+      "minute_utc": "12:48",
+      "count": 12,
+      "samples": [
+        "6",
+        "5",
+        "3",
+        "1"
+      ]
+    },
+    {
+      "minute_utc": "14:17",
+      "count": 11,
+      "samples": [
+        "瘤神是先知",
+        "1",
+        "2",
+        "？"
+      ]
+    },
+    {
+      "minute_utc": "18:27",
+      "count": 10,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "9",
+        "1",
+        "6"
+      ]
+    },
+    {
+      "minute_utc": "23:09",
+      "count": 10,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "。",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    },
+    {
+      "minute_utc": "23:14",
+      "count": 9,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      39
+    ],
+    [
+      "很难读的名字",
+      12
+    ],
+    [
+      "星星",
+      10
+    ],
+    [
+      "我是神器",
+      10
+    ],
+    [
+      "夜色中的你",
+      10
+    ],
+    [
+      "BF-Ray",
+      10
+    ],
+    [
+      "我家那个糖斑斑小萱",
+      10
+    ],
+    [
+      "昔虹市ovo",
+      10
+    ]
+  ],
+  "sources": {
+    "huya_lol_official": 1717,
+    "huya_we957": 0,
+    "huya_maomao": 0,
+    "huya_mile": 0,
+    "huya_remember": 0,
+    "huya_shuoshuo": 0
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-09-09T16:53:55+00:00",
+      "heartbeat_at": "2026-09-10T15:59:45+00:00",
+      "last_message_at": "2026-09-10T15:57:38+00:00",
+      "message_count": 1717,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": ".",
+          "ts": 1789055098.7
+        },
+        {
+          "t": "1",
+          "ts": 1789055200.08
+        },
+        {
+          "t": "1",
+          "ts": 1789055200.59
+        },
+        {
+          "t": "1",
+          "ts": 1789055201.84
+        },
+        {
+          "t": "1",
+          "ts": 1789055202.51
+        },
+        {
+          "t": "111",
+          "ts": 1789055284.57
+        },
+        {
+          "t": "一",
+          "ts": 1789055353.65
+        },
+        {
+          "t": "1",
+          "ts": 1789055453.78
+        },
+        {
+          "t": "什么气候的比赛",
+          "ts": 1789055577.17
+        },
+        {
+          "t": "可惜了",
+          "ts": 1789055682.12
+        },
+        {
+          "t": "1",
+          "ts": 1789055710.93
+        },
+        {
+          "t": "3",
+          "ts": 1789055750.47
+        },
+        {
+          "t": ".",
+          "ts": 1789055775.18
+        },
+        {
+          "t": "1",
+          "ts": 1789055793.63
+        },
+        {
+          "t": "0",
+          "ts": 1789055858.39
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】12日17点iG vs AL 2026LPL败决",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-09-09T16:53:55+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "offline_waiting",
+      "started_at": "2026-09-09T16:53:55+00:00",
+      "heartbeat_at": "2026-09-10T15:59:43+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 890001,
+      "channel_id": 968316902,
+      "nickname": "WE957",
+      "introduction": "一区大师上点分！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-09T16:53:55+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-09-09T16:53:55+00:00",
+      "heartbeat_at": "2026-09-10T15:59:43+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "小CK NS VS DNS",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-09T16:53:55+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-09T16:53:55+00:00",
+      "heartbeat_at": "2026-09-10T15:59:43+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "我叫大米 擅长的英雄是牧魂掘墓",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-09T16:53:55+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-09T16:53:55+00:00",
+      "heartbeat_at": "2026-09-10T15:59:44+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[CL] 季后赛 NSvsDNS",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-09T16:53:55+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "offline_waiting",
+      "started_at": "2026-09-09T16:53:55+00:00",
+      "heartbeat_at": "2026-09-10T15:59:45+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 323444,
+      "channel_id": 35184381630871,
+      "nickname": "解说硕硕",
+      "introduction": "LCK CL！NS DNS！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-09T16:53:56+00:00"
+    }
+  ]
+}

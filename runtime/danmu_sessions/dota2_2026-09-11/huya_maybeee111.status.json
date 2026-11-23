@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "dota2",
+  "source": "huya_maybeee111",
+  "url": "https://www.huya.com/211888",
+  "state": "offline_waiting",
+  "started_at": "2026-09-10T16:00:39+00:00",
+  "heartbeat_at": "2026-09-11T16:00:02+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 211888,
+  "channel_id": 2383118571,
+  "nickname": "Maybeee111",
+  "introduction": "csMajor",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-09-10T16:00:41+00:00"
+}

@@ -208,7 +208,7 @@ def chat_host(room: dict) -> str:
 # ---- collector ----
 
 
-async def collect(url: str, seconds: int, out_path: Path | None) -> int:
+async def collect(url: str, seconds: int, out_path: Path | None, game: str = "") -> int:
     room = fetch_room_info(url)
     host = chat_host(room)
     port = room["chpt"] + 1
@@ -302,6 +302,7 @@ async def collect(url: str, seconds: int, out_path: Path | None) -> int:
                             "ts": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
                             "unixtime": int(time.time()),
                             "platform": "soop",
+                            "game": game,
                             "bj_id": room["bj_id"],
                             "broad_no": room["broad_no"],
                             "chat_no": room["chat_no"],
@@ -333,6 +334,7 @@ def main() -> int:
     ap.add_argument("--url", required=True, help="https://play.sooplive.com/<bj>/<broad_no>")
     ap.add_argument("--seconds", type=int, default=0, help="0 = until Ctrl-C")
     ap.add_argument("--out", default="", help="JSONL output path")
+    ap.add_argument("--game", default="", help="game tag lol/cs2/dota2 written to each record")
     ap.add_argument("--debug", action="store_true", help="print every frame")
     args = ap.parse_args()
     global DEBUG
@@ -340,7 +342,7 @@ def main() -> int:
     out = Path(args.out) if args.out else None
     if out:
         out.parent.mkdir(parents=True, exist_ok=True)
-    return asyncio.run(collect(args.url, args.seconds, out))
+    return asyncio.run(collect(args.url, args.seconds, out, args.game))
 
 
 if __name__ == "__main__":

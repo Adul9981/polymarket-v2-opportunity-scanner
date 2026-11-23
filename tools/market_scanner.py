@@ -648,6 +648,9 @@ def parse_datetime(value: Any) -> datetime | None:
     try:
         if raw.endswith("Z"):
             raw = f"{raw[:-1]}+00:00"
+        # "+HH" 简写时区偏移（如 "2026-08-19 08:00:00+00"）补成 "+HH:MM"，
+        # Python fromisoformat 不接受 2 位偏移，否则退回挂牌时间（防错规则 2）。
+        raw = re.sub(r"([+-]\d{2})$", r"\1:00", raw)
         parsed = datetime.fromisoformat(raw)
     except ValueError:
         return None

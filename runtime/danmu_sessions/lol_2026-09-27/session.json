@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "session": "lol_2026-09-27",
+  "title": "VPS 7x24 弹幕采集 · 英雄联盟（lol）",
+  "game": "lol",
+  "state": "stopped",
+  "updated_at": "2026-09-27T13:05:22+00:00",
+  "report": "reports/intel_danmu_live_lol_2026-09-27.html",
+  "intel_json": "runtime/danmu_sessions/lol_2026-09-27/intel.json",
+  "rooms": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "live_waiting_danmaku",
+      "started_at": "2026-09-27T13:04:22+00:00",
+      "heartbeat_at": "2026-09-27T13:05:21+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】10月3日德玛西亚杯开赛！",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-09-27T13:04:23+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "capturing",
+      "started_at": "2026-09-27T13:04:32+00:00",
+      "heartbeat_at": "2026-09-27T13:05:22+00:00",
+      "last_message_at": "2026-09-27T13:05:12+00:00",
+      "message_count": 2,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "猪都能看出这个是假赛",
+          "ts": 1790514282.25
+        },
+        {
+          "t": "又是拿龙魂被翻吗",
+          "ts": 1790514312.67
+        }
+      ],
+      "room_id": 890001,
+      "channel_id": 1001276654,
+      "nickname": "WE957",
+      "introduction": "次级世界赛淘汰赛",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-27T13:04:33+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "capturing",
+      "started_at": "2026-09-27T13:04:42+00:00",
+      "heartbeat_at": "2026-09-27T13:05:22+00:00",
+      "last_message_at": "2026-09-27T13:05:17+00:00",
+      "message_count": 6,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "小心车",
+          "ts": 1790514298.54
+        },
+        {
+          "t": "毛神 昨天的演员费结一下",
+          "ts": 1790514298.75
+        },
+        {
+          "t": "不得亲一下牢毛",
+          "ts": 1790514298.98
+        },
+        {
+          "t": "@花盆战神亏石头k 真的是你吗",
+          "ts": 1790514303.0
+        },
+        {
+          "t": "史无前例大开机",
+          "ts": 1790514313.17
+        },
+        {
+          "t": "还是闹闹的",
+          "ts": 1790514317.61
+        }
+      ],
+      "room_id": 149346,
+      "channel_id": 1173534659,
+      "nickname": "解说毛毛",
+      "introduction": "横店玩一下",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-27T13:04:43+00:00",
+      "restart_count": 2
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-27T13:04:52+00:00",
+      "heartbeat_at": "2026-09-27T13:05:13+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "内战高端局~！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-27T13:04:53+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-27T13:05:02+00:00",
+      "heartbeat_at": "2026-09-27T13:05:13+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[LCS] LYONvsSR 最后一张票",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-27T13:05:03+00:00",
+      "restart_count": 1
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "capturing",
+      "started_at": "2026-09-27T13:05:12+00:00",
+      "heartbeat_at": "2026-09-27T13:05:22+00:00",
+      "last_message_at": "2026-09-27T13:05:22+00:00",
+      "message_count": 3,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "右边3个ap出全护甲",
+          "ts": 1790514314.29
+        },
+        {
+          "t": "奶油异父异母的棒子兄弟",
+          "ts": 1790514317.31
+        },
+        {
+          "t": "奥拉夫真实伤害 双 AP 做一堆护甲这不明着来吗",
+          "ts": 1790514322.59
+        }
+      ],
+      "room_id": 323444,
+      "channel_id": 1279512307519,
+      "nickname": "解说硕硕",
+      "introduction": "次级世界赛！DK DNS！",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-27T13:05:13+00:00",
+      "restart_count": 1
+    },
+    {
+      "source": "soop_lck_cl",
+      "game": "lol",
+      "restart_count": 1
+    }
+  ]
+}

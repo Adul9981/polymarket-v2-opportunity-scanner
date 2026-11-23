@@ -63,6 +63,13 @@ def main() -> None:
             return None
 
     def status_of(r: dict) -> str:
+        # 虎扑源状态直接采用（2026-09-08：今日页合并了虎扑 CS2/LOL 场次）
+        if r.get("_hupu_status") in ("completed", "inProgress", "notStarted"):
+            return {
+                "completed": "ended",
+                "inProgress": "live",
+                "notStarted": "upcoming",
+            }[r["_hupu_status"]]
         return match_status(
             r.get("start_raw", ""), r.get("end_raw", ""), r.get("status", ""),
             r.get("title", ""), r.get("date", ""), now, ROOT / site_dir / "intel",

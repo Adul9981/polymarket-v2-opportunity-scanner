@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "lol",
+  "source": "huya_mile",
+  "url": "https://www.huya.com/149361",
+  "state": "offline_waiting",
+  "started_at": "2026-09-12T15:20:34+00:00",
+  "heartbeat_at": "2026-09-12T15:59:55+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 149361,
+  "channel_id": 1925949926,
+  "nickname": "解说米勒",
+  "introduction": "LPL败者组决赛 iG vs AL",
+  "room_name": "",
+  "page_live": false,
+  "checked_at": "2026-09-12T15:20:34+00:00"
+}

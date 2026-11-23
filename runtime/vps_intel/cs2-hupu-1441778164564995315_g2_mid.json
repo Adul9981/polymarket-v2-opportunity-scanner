@@ -1,0 +1,12 @@
+{
+  "match": "cs2-hupu-1441778164564995315",
+  "game": 2,
+  "phase": "mid",
+  "slice_rows": 1197,
+  "slice_from": "2026-10-25T14:15:58+00:00",
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_G2-Aurora_2026-10-25_g2_mid.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-10-25T14:32:20+00:00"
+}

@@ -2,7 +2,7 @@
 """Live danmaku monitor: analyze a growing JSONL every N seconds and refresh an HTML page.
 
 Reads the JSONL being appended by tools/fetch_huya_danmu.py, runs the intel
-analysis every --interval seconds (default 300 = 5 min), and rewrites an
+analysis every --interval seconds (default 30), and rewrites an
 auto-refreshing SAP/Apple-style HTML page. Only reads the JSONL (no conflicts
 with the writer process).
 
@@ -10,7 +10,7 @@ Usage:
   python3 tools/danmu_live_monitor.py \
       --input docs/data/danmu/shuoshuo/2026-08-18_323444.jsonl \
       --html reports/intel_danmu_live_KC-GX_2026-08-18.html \
-      --title "KC vs GX 弹幕实时监控" --interval 300
+      --title "KC vs GX 弹幕实时监控" --interval 30
 """
 
 from __future__ import annotations
@@ -23,6 +23,8 @@ import time
 from pathlib import Path
 
 import danmu_intel
+import fetch_hupu_player_ratings
+import render_node_page
 
 
 def esc(s: str) -> str:
@@ -74,6 +76,9 @@ def render_page(
     title: str,
     updated: str,
     statuses: list[dict] | None = None,
+    interval: int = 30,
+    ratings: dict | None = None,
+    teams: list[str] | None = None,
 ) -> str:
     m = intel["meta"]
     bursts = intel.get("density_bursts", [])
@@ -111,12 +116,20 @@ def render_page(
             '<p>当前不能输出“无信号”结论。系统会持续检查开播状态、连接异常和数据停滞。</p></section>'
         )
 
+    # 0.5) 比赛局势：两队胜率（观众口径·非结论）+ 虎扑队员评分（实时）
+    if teams and len(teams) == 2:
+        blocks += (
+            '<section class="card"><h2>比赛局势</h2>'
+            + render_node_page._situation(intel, ratings, teams)
+            + '</section>'
+        )
+
     # 1) 队伍情报
     teams = sorted(intel["teams"].items(), key=lambda kv: -kv[1]["mentions"])[:4]
     if teams:
         rows_html = ""
         for n, d in teams:
-            tone = "分歧" if d["pos"] and d["neg"] else ("正面" if d["pos"] > d["neg"] else "负面")
+            tone = danmu_intel.tone_label(d["pos"], d["neg"], d["mentions"])
             sample = "".join(f'<li>{esc(s)}</li>' for s in d["samples"][:3])
             rows_html += (
                 f'<div class="row"><b>{esc(n)}</b> 提及 {d["mentions"]} · 情绪：{tone}'
@@ -136,10 +149,34 @@ def render_page(
     if players:
         rows_html = ""
         for n, d in players:
-            tone = "正面" if d["pos"] > d["neg"] else ("负面" if d["neg"] > d["pos"] else "分歧")
+            tone = danmu_intel.tone_label(d["pos"], d["neg"], d["mentions"])
             sample = "".join(f'<li>{esc(s)}</li>' for s in d["samples"][:2])
             rows_html += f'<div class="row"><b>{esc(n)}</b> {tone}（正 {d["pos"]} / 负 {d["neg"]}）<ul>{sample}</ul></div>'
         blocks += f'<section class="card"><h2>选手状态</h2>{rows_html}</section>'
+
+    # 3.5) 比赛叙事（阶段2：观众共识 / 情绪时间轴 / 关键转折点）
+    narr = intel.get("narrative") or {}
+    if narr.get("timeline") or narr.get("turning_points"):
+        narr_rows = ""
+        cons = narr.get("consensus") or {}
+        if cons.get("pos") or cons.get("neg"):
+            narr_rows += (
+                f'<div class="row"><b>观众共识</b>：{esc(cons.get("tone", "中性"))}'
+                f'（正 {cons.get("pos", 0)} / 负 {cons.get("neg", 0)}，净 {cons.get("net", 0):+d}）</div>'
+            )
+        tl = narr.get("timeline") or []
+        if len(tl) >= 2:
+            arc = " → ".join(f'{esc(b["tone"])}({b["net"]:+d})' for b in tl)
+            narr_rows += f'<div class="row"><b>情绪走势</b>：{arc}</div>'
+        tp = narr.get("turning_points") or []
+        if tp:
+            tp_items = "".join(
+                f'<li>{esc(t["minute_utc"])} {esc(t["tone"])}（{t["count"]} 条）{esc(t["sample"][:40])}</li>'
+                for t in tp[:4]
+            )
+            narr_rows += f'<div class="row"><b>关键转折点</b><ul>{tp_items}</ul></div>'
+        if narr_rows:
+            blocks += f'<section class="card"><h2>比赛叙事</h2>{narr_rows}</section>'
 
     # 4) 盘口讨论
     odds = intel["odds_discussion"]
@@ -157,7 +194,7 @@ def render_page(
     return f"""<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="300">
+<meta http-equiv="refresh" content="{interval}">
 <title>{esc(title)}</title>
 <style>
 :root{{--bg:#f5f5f7;--card:#fff;--ink:#1d1d1f;--sub:#86868b;--accent:#0071e3;--line:#e8e8ed}}
@@ -188,7 +225,7 @@ li{{margin-left:18px;font-size:13px}}
 @media(max-width:640px){{.stats{{grid-template-columns:repeat(2,1fr)}}}}
 </style></head><body><div class="wrap">
 <h1>{esc(title)}</h1>
-<p class="sub">最后更新：{esc(updated)} · 页面每 5 分钟自动刷新 · 数据源 {esc(m['window_utc'][0])} 起</p>
+<p class="sub">最后更新：{esc(updated)} · 页面每 {interval} 秒自动刷新 · 数据源 {esc(m['window_utc'][0])} 起</p>
 <div class="stats">
 <div class="stat"><div class="num">{m['total']}</div><div class="lbl">弹幕累计</div></div>
 <div class="stat"><div class="num">{m['active_users']}</div><div class="lbl">用户</div></div>
@@ -202,7 +239,7 @@ li{{margin-left:18px;font-size:13px}}
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="弹幕实时监控（5 分钟刷新 HTML）")
+    parser = argparse.ArgumentParser(description="弹幕实时监控（定时刷新 HTML）")
     parser.add_argument(
         "--input", action="append", required=True,
         help="JSONL 弹幕文件；多直播间可重复传入",
@@ -214,19 +251,36 @@ def main() -> int:
     parser.add_argument("--html", required=True, help="输出 HTML 路径")
     parser.add_argument("--json", default=None, help="输出结构化情报 JSON（可选）")
     parser.add_argument("--title", default="直播间弹幕实时监控")
-    parser.add_argument("--interval", type=int, default=300, help="刷新间隔秒（默认 300）")
+    parser.add_argument("--interval", type=int, default=30, help="刷新间隔秒（默认 30）")
+    parser.add_argument("--teams", default="", help="逗号分隔两队（如 KC,MVK）；给则渲染【比赛局势】胜率")
+    parser.add_argument("--hupu-out-biz-no", default="", help="虎扑评分 match key 的 outBizNo（选手评分用）")
+    parser.add_argument("--hupu-out-biz-type", default="lol_match", help="虎扑评分节点类型，默认 lol_match")
     args = parser.parse_args()
 
     inputs = [Path(value) for value in args.input]
     status_paths = [Path(value) for value in args.status]
     out = Path(args.html)
     out.parent.mkdir(parents=True, exist_ok=True)
+    teams = [t.strip() for t in args.teams.split(",") if t.strip()] if args.teams else None
+    if teams is not None and len(teams) != 2:
+        print("[monitor] --teams 需要恰好两个队伍，忽略比赛局势栏", flush=True)
+        teams = None
+    ratings: dict | None = None
+    ratings_ts = 0.0
     print(f"监控启动：{len(inputs)} 个数据源 -> {out}，每 {args.interval}s 刷新一次", flush=True)
     while True:
         rows = load_rows(inputs)
         statuses = [read_json(path) for path in status_paths]
         statuses = [item for item in statuses if item]
-        intel = danmu_intel.analyze(rows)
+        # 虎扑首发阵容 -> 选手名折算进胜率（复用评分接口已含 name/team；未拉到则静态 PLAYER_TEAM 兜底）
+        player_teams = None
+        if ratings and teams:
+            player_teams = {
+                str(p.get("name") or "").strip(): str(p.get("team") or "").strip()
+                for p in (ratings.get("players") or [])
+                if p.get("name") and p.get("team")
+            }
+        intel = danmu_intel.analyze(rows, teams=teams, player_teams=player_teams or None)
         deep = danmu_intel.analyze_deep(rows)
         intel["sources"] = {
             item.get("source", "unknown"): sum(
@@ -235,9 +289,22 @@ def main() -> int:
             for item in statuses
         }
         intel["capture_health"] = statuses
+        # 虎扑选手评分：节流 60s 拉一次（实时变动），失败沿用上次缓存
+        if args.hupu_out_biz_no and teams:
+            now = time.time()
+            if now - ratings_ts >= 60:
+                try:
+                    ratings = fetch_hupu_player_ratings.fetch_player_ratings(
+                        args.hupu_out_biz_no, args.hupu_out_biz_type
+                    )
+                    ratings_ts = now
+                except Exception:  # noqa: BLE001
+                    pass
         updated = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         out.write_text(
-            render_page(intel, deep, args.title, updated, statuses), encoding="utf-8"
+            render_page(intel, deep, args.title, updated, statuses, interval=args.interval,
+                        ratings=ratings, teams=teams),
+            encoding="utf-8",
         )
         if args.json:
             json_out = Path(args.json)

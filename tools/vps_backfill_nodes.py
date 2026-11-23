@@ -26,7 +26,7 @@ STATE = V.STATE_DIR
 
 def backfill(mid: str, teams: list[str], league: str, date: str, start_iso: str, end_iso: str) -> None:
     slug_id = re.sub(r"[^a-zA-Z0-9_-]", "_", mid)
-    files = sorted(V.DANMU.glob("*/*.jsonl"))
+    files = sorted(V.DANMU.glob("*/*/*.jsonl"))
     pre = V.REPORTS / f"intel_danmu_{teams[0]}-{teams[1]}_{date}_pre.html"
     if not pre.exists():
         pre_slice = V.SLICE_DIR / f"{slug_id}_pre.jsonl"

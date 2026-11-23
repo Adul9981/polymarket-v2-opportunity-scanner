@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C9 vs KC · G1 局中弹幕情报（S0 · EARLY-GAME）</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px 64px;
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color: #1d1d1f; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .card {
+    background: #fff; border-radius: 18px; padding: 22px 24px;
+    margin-bottom: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 8px 24px rgba(0,0,0,.04);
+  }
+  h1 { font-size: 22px; font-weight: 700; margin: 0 0 6px; letter-spacing: -.2px; }
+  .sub { font-size: 13px; color: #6e6e73; margin-bottom: 4px; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px;
+    border-radius: 999px; background: #fff4e5; color: #b25b00; margin-right: 6px;
+  }
+  .badge.blue { background: #e8f1fd; color: #0071e3; }
+  h2 { font-size: 17px; font-weight: 700; margin: 0 0 14px; letter-spacing: -.2px; }
+  h2 .no {
+    display: inline-block; min-width: 22px; height: 22px; line-height: 22px; text-align: center;
+    background: #0071e3; color: #fff; border-radius: 7px; font-size: 13px; margin-right: 9px;
+    vertical-align: 1px; padding: 0 5px;
+  }
+  .card.speed { border: 1px solid #d6e6fb; background: linear-gradient(180deg,#fbfdff 0%,#fff 60%); }
+  .scoreline {
+    font-size: 14px; font-weight: 600; padding: 10px 14px; border-radius: 12px;
+    background: #f0f6ff; color: #0b4ea2; margin-bottom: 14px;
+  }
+  .scoreline .tag { font-size: 12px; font-weight: 500; color: #6e6e73; margin-left: 8px; }
+  ul { margin: 0; padding-left: 0; list-style: none; }
+  li { position: relative; padding-left: 16px; margin-bottom: 9px; font-size: 14px; }
+  li::before {
+    content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px;
+    border-radius: 50%; background: #0071e3;
+  }
+  .val { color: #0071e3; font-weight: 600; }
+  .src { color: #86868b; font-size: 12px; }
+  .decision {
+    margin-top: 14px; padding: 12px 14px; border-radius: 12px;
+    background: #f5f5f7; font-size: 14px; font-weight: 600; color: #1d1d1f;
+  }
+  .decision span { color: #0071e3; }
+  p { font-size: 14px; margin: 0 0 10px; }
+  .muted { color: #86868b; font-size: 13px; }
+  .empty { font-size: 14px; color: #86868b; padding: 6px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #f0f0f2; }
+  th { color: #6e6e73; font-weight: 600; font-size: 12px; background: #fafafa; }
+  td.num { font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #f0f0f2; color: #6e6e73; }
+  .pill.pos { background: #e6f7ec; color: #1a7f37; }
+  .pill.neg { background: #fdecec; color: #c0392b; }
+  .pill.gray { background: #f0f0f2; color: #6e6e73; }
+  details { margin: 6px 0 10px; font-size: 13px; }
+  summary { cursor: pointer; color: #0071e3; font-size: 13px; }
+  details p { margin: 6px 0 0; color: #6e6e73; font-size: 13px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 8px; }
+  .box { background: #fafafa; border-radius: 12px; padding: 12px 14px; }
+  .box h4 { margin: 0 0 6px; font-size: 13px; color: #1d1d1f; }
+  .box p { font-size: 12.5px; color: #6e6e73; margin: 0; }
+  .kv { font-size: 13px; color: #6e6e73; }
+  .kv b { color: #1d1d1f; font-weight: 600; }
+  @media (max-width: 640px) { .grid3 { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="card">
+    <h1>C9 vs KC · 第 1 小局 局中弹幕情报</h1>
+    <div class="sub">LoL · 2026-10-15 · BO5（本场共 5 局，当前第 1 局） · 节点 G1｜BP 后/开局（S0 · EARLY-GAME）</div>
+    <div class="sub">
+      <span class="badge">局中·非终局，结果待定</span>
+      <span class="badge blue">补发节点：流水线延迟，窗口后生成</span>
+    </div>
+  </div>
+
+  <!-- 0 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="scoreline">C9 vs KC · 第 1 小局进行中（BO5）<span class="tag">弹幕口径·官方待回填</span></div>
+    <ul>
+      <li>弹幕窗口内共 0 条、0 人、0.0 条/分，样本状态 insufficient <span class="val">→ 无任何可判读信号，方向性结论一律不成立</span> <span class="src">→ 详 §1</span></li>
+      <li>队伍提及：C9 0 次、KC 0 次，无正负向锚点 <span class="val">→ 观众未形成对任一方的看涨/看跌倾向</span> <span class="src">→ 详 §8</span></li>
+      <li>灰信号（观众质疑）0 条 <span class="val">→ 无质疑性线索可作反向参考，非「无质疑=看好」</span> <span class="src">→ 详 §2</span></li>
+      <li>弹幕密度峰值：无；中性弹幕抢救候选 0 条 <span class="val">→ 情绪时间轴为空，无法定位关键转折点</span> <span class="src">→ 详 §7</span></li>
+      <li>BP 锚点、盘口讨论、跨源一致性均无弹幕侧输入 <span class="val">→ 本节点情报价值为「确认无信号」，非「确认利好」</span> <span class="src">→ 详 §3、§4、§11</span></li>
+    </ul>
+    <div class="decision">决策落点：<span>本节点不产生 LONG/SHORT 方向</span>，仅登记「弹幕侧零信号」，等待后续窗口回填后再判读。</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <p>比赛：C9 vs KC（LoL），赛制 <b>BO5</b>，当前进行 <b>第 1 小局</b>，节点为 BP 后/开局（S0 · EARLY-GAME）。</p>
+    <p>弹幕统计窗口：['等待首条弹幕', '等待首条弹幕']，共 <b>0 条</b>，参与人数 <b>0 人</b>，密度 <b>0.0 条/分</b>，样本状态 <b>insufficient</b>。</p>
+    <p class="muted">核验结论：窗口内未捕获任何弹幕，比分与局势均无弹幕口径可回填，官方数据待回填。本页为局中快照，非终局判定。</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑·非结论）</h2>
+    <div class="empty">样本不足：窗口内灰信号 0 条，无观众质疑性线索可汇总。</div>
+    <p class="muted">说明：灰信号为观众质疑性表达，仅作反向参考，不构成结论；本节点无此类样本。</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <div class="empty">样本不足：无 BP 相关弹幕，无选人锚点、无禁用/选取争议提及。</div>
+    <p class="muted">本局阵容（英雄+选手映射）：无弹幕侧情报提及，待官方阵容回填。</p>
+    <p class="muted">BP 后战绩情报（选人窗口选手×英雄胜率/战绩提及）：无战绩情报提及。</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <div class="empty">样本不足：窗口内无盘口、赔率、让分或市场情绪相关弹幕。</div>
+    <p class="muted">Polymarket slug：lol-hupu-1683760378707968；本节点无市场讨论样本可对照。</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板（正锚 × 负锚 × 共识 × 灰信号条件预测）</h2>
+    <table>
+      <tr><th>维度</th><th>内容</th><th>状态</th></tr>
+      <tr><td>正锚（看涨 C9 / KC）</td><td>无</td><td><span class="pill gray">样本不足</span></td></tr>
+      <tr><td>负锚（看跌 C9 / KC）</td><td>无</td><td><span class="pill gray">样本不足</span></td></tr>
+      <tr><td>群体共识</td><td>共识不足（0 条样本，净值为 0）</td><td><span class="pill gray">样本不足</span></td></tr>
+      <tr><td>灰信号条件预测</td><td>无灰信号，无条件预测可构造</td><td><span class="pill gray">样本不足</span></td></tr>
+    </table>
+    <p class="muted" style="margin-top:10px;">比赛叙事（观众共识 / 情绪走势 / 关键转折点）：样本不足，无看涨、看跌或翻转段落可复述；中性弹幕抢救候选 0 条，无模型二次判定结果可纳入。</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点（LONG / SHORT）</h2>
+    <p><b>LONG：</b>无依据。窗口内无正向锚点、无共识支撑。</p>
+    <p><b>SHORT：</b>无依据。窗口内无负向锚点、无质疑性灰信号。</p>
+    <p><b>决策落点：</b>本节点维持中性观察，不建仓、不追方向；待后续弹幕窗口或官方数据回填后重新判读。零信号 ≠ 利好，仅代表信息缺口。</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <div class="empty">样本不足：无弹幕证据可复盘。</div>
+    <p class="muted">情绪时间轴：无。弹幕密度峰值时间线（分钟 + 条数 + 样本）：无峰值记录，窗口内 0 条。</p>
+    <p class="muted">关键转折点（观众解读：正面=高光/翻盘，负面=失误/送）：无样本，不编造。</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <tr><th>对象</th><th>提及量</th><th>正/负向</th><th>备注</th></tr>
+      <tr><td>C9</td><td class="num">0</td><td><span class="pill gray">无</span></td><td>无弹幕提及</td></tr>
+      <tr><td>KC</td><td class="num">0</td><td><span class="pill gray">无</span></td><td>无弹幕提及</td></tr>
+      <tr><td>选手个体</td><td class="num">0</td><td><span class="pill gray">无</span></td><td>无人员画像样本</td></tr>
+    </table>
+    <p class="muted" style="margin-top:10px;">韩/英弹幕信号层：窗口内无样本，无中文意译与原文摘录可折叠呈现。</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <div class="empty">样本不足：无弹幕讨论涉及联赛规律、版本强势英雄或赛区风格。</div>
+    <p class="muted">本节点不引入外部版本结论，避免与零样本窗口混淆。</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <div class="empty">无待验证预测：本节点未产生方向性预测，故无回填项。</div>
+    <p class="muted">后续窗口若出现方向性情报，将在此登记预测与验证状态。</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="grid3">
+      <div class="box">
+        <h4>实际数据源</h4>
+        <p>弹幕规则层统计（窗口 ['等待首条弹幕','等待首条弹幕']，0 条 / 0 人 / 0.0 条/分，insufficient）；规则层情报文件：/home/liucong/polymarket-v2-opportunity-scanner/runtime/vps_intel/lol-hupu-1683760378707968_g1_bp_intel.json</p>
+      </div>
+      <div class="box">
+        <h4>预期数据源</h4>
+        <p>实时弹幕流（含韩/英原文与意译）、BP 选人面板、官方阵容与比分回填、盘口/市场讨论样本。</p>
+      </div>
+      <div class="box">
+        <h4>缺口</h4>
+        <p>弹幕 0 条（无情绪、无锚点、无灰信号、无密度峰值）；官方比分与阵容未回填；跨源一致性无法校验。</p>
+      </div>
+    </div>
+    <p class="kv" style="margin-top:12px;">
+      比赛元数据：全称 C9 vs KC（LoL）· league id：lol-hupu-1683760378707968 · Polymarket slug：lol-hupu-1683760378707968 · 赛制：<b>BO5</b> · 节点：G1｜BP 后/开局（S0 · EARLY-GAME）· 状态：局中·非终局，结果待定。
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

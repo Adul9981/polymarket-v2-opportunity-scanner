@@ -529,6 +529,15 @@ def main() -> None:
                         else ""
                     ),
                     "_hupu_stage": h.get("tournament", ""),
+                    # 时间轴壳 id：match_<game>-hupu-<id>.html（与 matches_today.json 的
+                    # id 一致）。虎扑行 slug 恒为空，但 pipeline 已为该场生成时间轴壳，
+                    # 情报入口应优先指向壳（支持节点切换），否则直播中的比赛看不到入口
+                    # （教训 2026-10-25：Spirit-TYLOO 直播中却无"情报 →"入口）。
+                    "_hupu_shell": (
+                        f"{h.get('business_id', '')}-hupu-{h.get('hupu_match_id', '')}"
+                        if h.get("business_id") and h.get("hupu_match_id")
+                        else ""
+                    ),
                 }
                 key = _canon_key(row)
                 if not key or key in _seen:
@@ -621,11 +630,12 @@ def main() -> None:
             f"+{hupu_tomorrow_added} tomorrow"
         )
 
-    def intel_link(m: dict | None, title: str, date: str, slug: str = "") -> str:
-        if slug:
-            shell = site_dir / "intel" / f"match_{slug}.html"
-            if shell.exists():
-                return f'<a class="b" href="{esc(shell.name)}">情报 →</a>'
+    def intel_link(m: dict | None, title: str, date: str, slug: str = "", shell_id: str = "") -> str:
+        for sid in (shell_id, slug):
+            if sid:
+                shell = site_dir / "intel" / f"match_{sid}.html"
+                if shell.exists():
+                    return f'<a class="b" href="{esc(shell.name)}">情报 →</a>'
         if not m:
             pass
         else:
@@ -642,7 +652,7 @@ def main() -> None:
         if not k1 or not k2:
             return ""
         matches = []
-        for f in (site_dir / "intel").glob(f"intel_danmu_*{date}.html"):
+        for f in (site_dir / "intel").glob(f"intel_danmu_*{date}*.html"):
             low = f.name.lower()
             if any(w.lower() in low for w in k1) and any(w.lower() in low for w in k2):
                 matches.append(f.name)
@@ -690,7 +700,9 @@ def main() -> None:
             "live": '<span class="bd live">进行中</span>',
             "ended": '<span class="bd end">已结束</span>',
         }[cls]
-        link = intel_link(m, r["title"], r.get("date", ""), r.get("slug", ""))
+        link = intel_link(
+            m, r["title"], r.get("date", ""), r.get("slug", ""), r.get("_hupu_shell", "")
+        )
         st = f'<span class="st">{badge}'
         if cls == "ended" and result:
             st += f'<span class="rs" title="{esc(result)}">{esc(result[:34])}</span>'

@@ -1,0 +1,510 @@
+{
+ "meta": {
+  "total": 2645,
+  "active_users": 1007,
+  "window_utc": [
+   "2026-10-16 14:12",
+   "2026-10-16 14:50"
+  ],
+  "density_per_min": 68.4,
+  "sample_status": "ready"
+ },
+ "teams": {
+  "Vitality": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "我想看小蜜蜂比赛"
+   ]
+  },
+  "Spirit": {
+   "mentions": 4,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "有绿龙吗？",
+    "真有时间 聊聊咱们伟大的绿龙呗",
+    "绿龙td 聊聊来",
+    "绿龙td 聊聊来"
+   ]
+  },
+  "G2": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "我说fut大于G2有没有懂的"
+   ]
+  },
+  "NAVI": {
+   "mentions": 2,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "NaVi进不去major了9z都不可能不进major",
+    "fut还好 navi是真消失了"
+   ]
+  },
+  "FURIA": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "谁赢谁打黑豹"
+   ]
+  },
+  "MongolZ": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "蒙古老九",
+    "蒙古什么时候开",
+    "蒙古会不会越打越往后"
+   ]
+  }
+ },
+ "players": {
+  "Niko": {
+   "mentions": 39,
+   "pos": 1,
+   "neg": 1,
+   "samples": [
+    "niko指挥的",
+    "donk是海参niko严父懂吗",
+    "niko指挥的",
+    "雨姐被Niko夺舍了",
+    "niko智慧的"
+   ]
+  },
+  "donk": {
+   "mentions": 5,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "donkct会守哪",
+    "donk是海参niko严父懂吗",
+    "K3脑子肯定有问题，把一个30岁的老头当donk用",
+    "30岁老年版donk",
+    "阿若拉队里面怎么有个30岁的老年donk"
+   ]
+  },
+  "ropz": {
+   "mentions": 1,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "那ropz呢"
+   ]
+  },
+  "sh1ro": {
+   "mentions": 3,
+   "pos": 0,
+   "neg": 0,
+   "samples": [
+    "sh1ro",
+    "sh1ro",
+    "sh1ro"
+   ]
+  }
+ },
+ "odds_discussion": {
+  "count": 2,
+  "samples": [
+   "唯一一个人头是雷杀的还敢拿AK",
+   "人头马呢"
+  ]
+ },
+ "situation": {
+  "count": 28,
+  "samples": [
+   "预测一波，一会k3进攻指挥雨姐肯定叹气",
+   "有经济的 没起。",
+   "经济不好 保是对的",
+   "gg",
+   "这么蠢，一波爆都进去了",
+   "多打少直接一波爆弹都行",
+   "a点一波进去说不定还赢了",
+   "K3指挥 经典有优势晃着晃着就没了"
+  ]
+ },
+ "gray_signals": {
+  "count": 7,
+  "samples": [
+   "马西西故意的，在躲节奏",
+   "马西西故意的，在躲节奏",
+   "故意放分的",
+   "跳下来没反应 买了吧",
+   "这不是故意送啊？？不躲起来 出去送？",
+   "说真的，这九阶好像他妈个个都买了一样，那些操作啊，不是人来的",
+   "九阶的操作啊，我都估计是买了这些操作，傻傻的。"
+  ]
+ },
+ "density_bursts": [
+  {
+   "minute_utc": "14:49",
+   "minute": 29869369,
+   "count": 192,
+   "pos": 19,
+   "neg": 6,
+   "tone": "正面",
+   "samples": [
+    "gg fking EZ",
+    "去猎鹰肯定无敌了",
+    "k3把脑子转换成枪法了",
+    "这猎鹰我们指挥要了"
+   ]
+  },
+  {
+   "minute_utc": "14:31",
+   "minute": 29869351,
+   "count": 169,
+   "pos": 8,
+   "neg": 7,
+   "tone": "分歧",
+   "samples": [
+    "5打3变2打3吗",
+    "5打3打成这样",
+    "3打5这样玩是人类嘛？",
+    "给自己盖颗烟来了"
+   ]
+  }
+ ],
+ "narrative": {
+  "consensus": {
+   "pos": 142,
+   "neg": 77,
+   "net": 65,
+   "tone": "正面"
+  },
+  "timeline": [
+   {
+    "start_utc": "14:12",
+    "count": 397,
+    "pos": 12,
+    "neg": 10,
+    "net": 2,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:19",
+    "count": 308,
+    "pos": 23,
+    "neg": 10,
+    "net": 13,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:27",
+    "count": 670,
+    "pos": 20,
+    "neg": 13,
+    "net": 7,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:35",
+    "count": 550,
+    "pos": 30,
+    "neg": 15,
+    "net": 15,
+    "tone": "正面"
+   },
+   {
+    "start_utc": "14:43",
+    "count": 720,
+    "pos": 57,
+    "neg": 29,
+    "net": 28,
+    "tone": "正面"
+   }
+  ],
+  "turning_points": [
+   {
+    "minute_utc": "14:49",
+    "count": 192,
+    "tone": "正面",
+    "pos": 19,
+    "neg": 6,
+    "sample": "gg fking EZ"
+   }
+  ]
+ },
+ "neutral_salvage": [
+  {
+   "text": "niko指挥的",
+   "count": 9,
+   "entity": true,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "这波niko指挥的进攻",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "14:34"
+  },
+  {
+   "text": "刚来，这波是niko指挥的吗？",
+   "count": 5,
+   "entity": true,
+   "minute_utc": "14:36"
+  },
+  {
+   "text": "这把niko指挥的这把niko指挥的",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:34"
+  },
+  {
+   "text": "这分niko指挥的",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:41"
+  },
+  {
+   "text": "sh1ro",
+   "count": 3,
+   "entity": true,
+   "minute_utc": "14:47"
+  },
+  {
+   "text": "Niko指挥的",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:31"
+  },
+  {
+   "text": "绿龙td 聊聊来",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:37"
+  },
+  {
+   "text": "求求了k3 去猎鹰帮niko拿下拿该死的新加坡major吧",
+   "count": 2,
+   "entity": true,
+   "minute_utc": "14:45"
+  },
+  {
+   "text": "fut还好 navi是真消失了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "真有时间 聊聊咱们伟大的绿龙呗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:36"
+  },
+  {
+   "text": "谁赢谁打黑豹",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "donkct会守哪",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:20"
+  },
+  {
+   "text": "NaVi进不去major了9z都不可能不进major",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:23"
+  },
+  {
+   "text": "donk是海参niko严父懂吗",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:24"
+  },
+  {
+   "text": "我想看小蜜蜂比赛",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:26"
+  },
+  {
+   "text": "雨姐被Niko夺舍了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:28"
+  },
+  {
+   "text": "蒙古老九",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "有绿龙吗？",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "蒙古什么时候开",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "蒙古会不会越打越往后",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "我说fut大于G2有没有懂的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:29"
+  },
+  {
+   "text": "niko智慧的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:31"
+  },
+  {
+   "text": "NIKO指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:36"
+  },
+  {
+   "text": "进攻不是niko指挥的",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:39"
+  },
+  {
+   "text": "像niko",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:39"
+  },
+  {
+   "text": "那ropz呢",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:39"
+  },
+  {
+   "text": "K3脑子肯定有问题，把一个30岁的老头当donk用",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:40"
+  },
+  {
+   "text": "30岁老年版donk",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:44"
+  },
+  {
+   "text": "阿若拉队里面怎么有个30岁的老年donk",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:44"
+  },
+  {
+   "text": "niko好像也是p2000",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:47"
+  },
+  {
+   "text": "反正现在niko指挥大表哥也就这样了",
+   "count": 1,
+   "entity": true,
+   "minute_utc": "14:49"
+  },
+  {
+   "text": "明日晴 你的每一根脚趾都是我的阿尔卑斯棒棒糖🍭🍭🍭",
+   "count": 53,
+   "entity": false,
+   "minute_utc": "14:24"
+  },
+  {
+   "text": "？？？？？",
+   "count": 27,
+   "entity": false,
+   "minute_utc": "14:17"
+  },
+  {
+   "text": "？",
+   "count": 20,
+   "entity": false,
+   "minute_utc": "14:14"
+  },
+  {
+   "text": "这指挥我们猎鹰要了",
+   "count": 18,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "大家好，我是明，我的女朋友是晴",
+   "count": 15,
+   "entity": false,
+   "minute_utc": "14:16"
+  },
+  {
+   "text": "？？？",
+   "count": 15,
+   "entity": false,
+   "minute_utc": "14:18"
+  },
+  {
+   "text": "猎鹰要了",
+   "count": 15,
+   "entity": false,
+   "minute_utc": "14:43"
+  },
+  {
+   "text": "？？？？？？？？",
+   "count": 14,
+   "entity": false,
+   "minute_utc": "14:18"
+  }
+ ],
+ "top_users": [
+  [
+   "我是一颗小虎牙",
+   96
+  ],
+  [
+   "来虎牙看sdn",
+   30
+  ],
+  [
+   "和仲阳",
+   24
+  ],
+  [
+   "落寞i",
+   24
+  ],
+  [
+   "航",
+   22
+  ],
+  [
+   "花末君",
+   20
+  ],
+  [
+   "小虎牙-mhOdN8d6oC",
+   20
+  ],
+  [
+   "Cosmo1314",
+   20
+  ]
+ ]
+}

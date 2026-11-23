@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "source": "mile_149361",
+  "url": "https://www.huya.com/149361",
+  "state": "live_waiting_danmaku",
+  "started_at": "2026-09-05T09:00:36+00:00",
+  "heartbeat_at": "2026-09-05T09:00:46+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": null,
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 149361,
+  "channel_id": 1690094984,
+  "nickname": "解说米勒",
+  "introduction": "仁川3C不来看吗！IG vs TES~!",
+  "room_name": "",
+  "page_live": true,
+  "checked_at": "2026-09-05T09:00:37+00:00"
+}

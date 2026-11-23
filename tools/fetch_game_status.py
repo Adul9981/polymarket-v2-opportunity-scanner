@@ -57,7 +57,21 @@ def fetch(slug: str) -> dict:
                 winner = 0
             elif prices[1] >= 0.99:
                 winner = 1
-        out[gi] = {"closed": bool(mk.get("closed")), "prices": prices, "winner": winner}
+        # 2026-10-31：官方结果回填——多存 outcomes 全称队名数组（顺序与 prices 一致），
+        # 供 winner=0/1 映射到具体队名（"Hanwha Life Esports" 等），用于 end 页胜率 100:0。
+        raw_out = mk.get("outcomes")
+        try:
+            if isinstance(raw_out, str):
+                raw_out = json.loads(raw_out)
+            outcomes = list(raw_out or [])
+        except (ValueError, TypeError, json.JSONDecodeError):
+            outcomes = []
+        out[gi] = {
+            "closed": bool(mk.get("closed")),
+            "prices": prices,
+            "winner": winner,
+            "outcomes": outcomes,
+        }
     return out
 
 

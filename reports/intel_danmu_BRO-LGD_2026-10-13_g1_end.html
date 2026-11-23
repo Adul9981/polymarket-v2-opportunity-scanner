@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BRO vs LGD · 终局弹幕情报 · 末局切片（BRO 3:1 胜）</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color: #1d1d1f;
+    line-height: 1.6;
+    padding: 24px 16px 64px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  .card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .card.speed {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfbfd 100%);
+    border: 1px solid rgba(0,113,227,0.18);
+    box-shadow: 0 4px 20px rgba(0,113,227,0.08);
+  }
+  h2 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1d1d1f;
+  }
+  h2 .no {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 7px;
+    background: #0071e3;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .scoreline {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0071e3;
+    background: rgba(0,113,227,0.07);
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 14px;
+  }
+  .scoreline .tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: #86868b;
+    margin-left: 8px;
+  }
+  ul { list-style: none; }
+  .speed ul li {
+    position: relative;
+    padding: 9px 0 9px 20px;
+    font-size: 14.5px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  .speed ul li:last-child { border-bottom: none; }
+  .speed ul li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 17px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0071e3;
+  }
+  .arrow { color: #0071e3; font-weight: 700; }
+  .conf {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 6px;
+    margin-left: 4px;
+    vertical-align: 1px;
+  }
+  .conf.multi { background: rgba(48,209,88,0.14); color: #1a8a3a; }
+  .conf.single { background: rgba(255,159,10,0.16); color: #b26a00; }
+  .conf.danmu { background: rgba(0,113,227,0.12); color: #0071e3; }
+  .decision {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: rgba(0,113,227,0.06);
+    border-left: 3px solid #0071e3;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1d1d1f;
+  }
+  .kv { font-size: 14px; }
+  .kv li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f2;
+    display: flex;
+    gap: 10px;
+  }
+  .kv li:last-child { border-bottom: none; }
+  .kv .k { color: #86868b; min-width: 96px; flex-shrink: 0; font-size: 13px; }
+  .kv .v { color: #1d1d1f; }
+  .gray li {
+    padding: 9px 0 9px 22px;
+    position: relative;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  .gray li:last-child { border-bottom: none; }
+  .gray li::before {
+    content: "?";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 16px;
+    height: 16px;
+    background: rgba(255,159,10,0.18);
+    color: #b26a00;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  th {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    color: #86868b;
+    padding: 8px 8px;
+    border-bottom: 1px solid #e8e8ed;
+    white-space: nowrap;
+  }
+  td {
+    padding: 9px 8px;
+    border-bottom: 1px solid #f0f0f2;
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  .pos { color: #1a8a3a; font-weight: 600; }
+  .neg { color: #d70015; font-weight: 600; }
+  .neu { color: #86868b; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .pill.pos { background: rgba(48,209,88,0.13); color: #1a8a3a; }
+  .pill.neg { background: rgba(215,0,21,0.10); color: #d70015; }
+  .pill.neu { background: rgba(134,134,139,0.12); color: #6e6e73; }
+  .pill.mix { background: rgba(255,159,10,0.14); color: #b26a00; }
+  .timeline li {
+    position: relative;
+    padding: 8px 0 8px 18px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c7c7cc;
+  }
+  .timeline li.hot::before { background: #d70015; }
+  .timeline li.warm::before { background: #ff9f0a; }
+  details {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #6e6e73;
+  }
+  details summary {
+    cursor: pointer;
+    color: #0071e3;
+    font-size: 12.5px;
+    font-weight: 500;
+    outline: none;
+  }
+  details p {
+    margin-top: 6px;
+    padding: 8px 12px;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 12.5px;
+    color: #6e6e73;
+    line-height: 1.5;
+  }
+  .src3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .src3 > div {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 14px 14px;
+    font-size: 13px;
+  }
+  .src3 h4 {
+    font-size: 12px;
+    color: #86868b;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .src3 ul li {
+    padding: 4px 0;
+    font-size: 13px;
+    color: #1d1d1f;
+    line-height: 1.5;
+  }
+  .note {
+    font-size: 12.5px;
+    color: #86868b;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  .banner {
+    text-align: center;
+    font-size: 12.5px;
+    color: #b26a00;
+    background: rgba(255,159,10,0.10);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .meta-line {
+    font-size: 12.5px;
+    color: #86868b;
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 1.7;
+  }
+  .meta-line b { color: #1d1d1f; font-weight: 600; }
+  .sub {
+    font-size: 12.5px;
+    color: #86868b;
+    margin: -6px 0 12px;
+  }
+  @media (max-width: 640px) {
+    .src3 { grid-template-columns: 1fr; }
+    .card { padding: 20px 18px; }
+    .kv .k { min-width: 78px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="banner">已终局 · BRO 3:1 胜（虎扑结算）｜ 末局切片（采集晚启动，仅末局弹幕）</div>
+  <div class="meta-line">
+    <b>BRO vs LGD</b> ｜ 2026-10-13 ｜ 赛制 <b>BO5</b>（本场共 5 局）｜ 当前 <b>整场终局</b>（末局切片，BRO 3:1 胜）<br>
+    league id：lol-hupu-1677567213846528 ｜ Polymarket slug：lol-hupu-1677567213846528
+  </div>
+
+  <!-- 0 核心情报速览 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="scoreline">终局 · BRO 3:1 LGD（虎扑结算） <span class="tag">结构源 · 虎扑已结算</span></div>
+    <ul>
+      <li>弹幕共识转负：正 568 / 负 976，净 <span class="neg">-408</span>，情绪五段走势 +52 → -46 → -32 → -332 → -50，<span class="arrow">→</span> 观众对局内表现持续看跌，负面情绪未收敛 <span class="conf danmu">弹幕口径·待官方</span> → 详 §5</li>
+      <li>14:04 峰值 1737 条「GGG」、14:08 峰值 1099 条「蛆蛆蛆…」，<span class="arrow">→</span> 两次负面爆发集中在局末，指向观众认定局面已崩 <span class="conf danmu">弹幕口径·待官方</span> → 详 §7</li>
+      <li>WE 提及 609 条（正 38 / 负 17）为本窗口最高实体，且「WE 一穿三夺冠」×63、「WE 是 LPL 最后的希望」×22 等抢救候选密集，<span class="arrow">→</span> 观众把本场叙事挂到 WE 赛程线上，非本局直接情报 <span class="conf danmu">弹幕口径·待官方</span> → 详 §8</li>
+      <li>BLG 提及 158 条（正 1 / 负 0），「都是 BLG 的玩具罢了」×53、「给 BLG 道歉」×36，<span class="arrow">→</span> 观众用 BLG 作强度锚，暗示对当前对局质量评价偏低 <span class="conf danmu">弹幕口径·待官方</span> → 详 §8</li>
+      <li>灰信号集中指向 LGD 教练：「教练收钱了吧」「LGD 这个教练指定买了」×3，<span class="arrow">→</span> 观众把局内崩盘归因于 BP/介入，属质疑非结论 <span class="conf single">单源待验证</span> → 详 §2</li>
+    </ul>
+    <div class="decision">决策落点：末局弹幕方向为负面共识（净 -408），情绪锚点集中在局末崩盘与教练质疑；终局比分 BRO 3:1 已由虎扑结算确认，本页 LONG/SHORT 仍以「弹幕口径」降权处理（仅末局切片）。</div>
+  </div>
+
+  <!-- 1 结果总览/状态核验 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <ul class="kv">
+      <li><span class="k">比赛状态</span><span class="v">整场已终局（BRO 3:1 胜，虎扑结算）</span></li>
+      <li><span class="k">结束依据</span><span class="v">虎扑结算（structural，2026-10-13 已结束）</span></li>
+      <li><span class="k">赛制</span><span class="v">BO5，最终比分 3:1（让一追三）</span></li>
+      <li><span class="k">比分</span><span class="v">BRO 3:1 LGD（虎扑已结算）</span></li>
+      <li><span class="k">样本状态</span><span class="v">ready ｜ 窗口 2026-10-13 13:35 – 14:16 ｜ 13570 条 / 4361 人 / 335.2 条·分⁻¹</span></li>
+    </ul>
+    <p class="note">核验结论：比分为虎扑结算（BRO 3:1 LGD）；情绪/方向判断为末局弹幕口径。注意：采集 21:20 才启动（比赛 17:00 开赛），本页仅覆盖最后一局弹幕（窗口 UTC 13:35–14:16 = 北京 21:35–22:16），前几局数据缺失。</p>
+  </div>
+
+  <!-- 2 灰信号汇总 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑 · 非结论）</h2>
+    <ul class="gray">
+      <li>「教练收钱了吧」——指向 LGD 教练组，属观众质疑，无证据支撑。</li>
+      <li>「LGD 这个教练指定买了」×3——同上，重复出现说明质疑在窗口内被放大。</li>
+      <li>「有木有 we 一穿三夺冠的剧本」——赛程叙事型猜测，非本局事实。</li>
+      <li>「经典打满 5 把的剧本[大哥]」×3——BO5 赛制下的观众预期，属剧本化调侃。</li>
+    </ul>
+    <p class="note">灰信号仅作情绪留痕，不进入方向板结论；教练相关质疑为单源待验证。</p>
+  </div>
+
+  <!-- 3 BP 锚点与选人情报 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <ul class="kv">
+      <li><span class="k">本局阵容</span><span class="v">样本不足——弹幕未提供可核对的英雄+选手映射</span></li>
+      <li><span class="k">BP 后战绩</span><span class="v">无战绩情报提及（选人窗口选手×英雄胜率/战绩未在样本中出现）</span></li>
+      <li><span class="k">BP 相关锚点</span><span class="v">「WE 的阿卡丽虽然送，但起码有作用能限制对面 C」×4、「原➗又在看戏了，四局都在混」×3——指向 WE 侧阿卡丽与「原」选手表现对比，属他场/跨局叙事，非本局 BP 事实</span></li>
+      <li><span class="k">教练介入锚点</span><span class="v">「这把教练再介入后崩了，大家去 lgd 微博喷」×3——观众将崩盘归因于教练介入</span></li>
+    </ul>
+    <p class="note">本段无本局可核对阵容信息，硬信息缺口已在 §11 记录。</p>
+  </div>
+
+  <!-- 4 盘口与市场讨论 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <ul class="kv">
+      <li><span class="k">盘口提及</span><span class="v">样本不足——窗口内未出现可核对的赔率/盘口数字</span></li>
+      <li><span class="k">市场叙事</span><span class="v">「经典打满 5 把的剧本」×3 反映观众对 BO5 拉满的预期，属剧本化讨论，非盘口数据</span></li>
+      <li><span class="k">Polymarket</span><span class="v">slug=lol-hupu-1677567213846528，本页不引用未给出的市场价格</span></li>
+    </ul>
+    <p class="note">无盘口硬数据，禁止据此推导概率；市场讨论仅作情绪背景。</p>
+  </div>
+
+  <!-- 5 方向性情报板 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板（正锚 × 负锚 × 共识 × 灰信号条件预测）</h2>
+    <ul class="kv">
+      <li><span class="k">正锚</span><span class="v">WE 提及 609 条中正 38（如「we 已经赢了」「WE 已经进四强了啊」）；T1 提及 25 条正 6 负 0；DNS 正 2；KT 正 2；IG 正 2；BLG 正 1；TES 正 1</span></li>
+      <li><span class="k">负锚</span><span class="v">WE 负 17；DNS 负 2；IG 负 1；全局共识负 976</span></li>
+      <li><span class="k">群体共识</span><span class="v">负面（正 568 / 负 976，净 -408）。情绪走势：正面(+52) → 负面(-46) → 负面(-32) → 负面(-332) → 负面(-50)，第四段大幅转负后未修复</span></li>
+      <li><span class="k">关键转折</span><span class="v">14:04 负面 1737 条「GGG」；14:08 负面 1099 条「蛆蛆蛆蛆蛆蛆蛆蛆蛆蛆」——两次峰值均为负面，观众解读为局末崩盘/送</span></li>
+      <li><span class="k">模型二次判定</span><span class="v">「we 一穿三夺冠」×63、「We 一穿三夺冠」×32、「WE，LPL 最后的希望！一穿 3LCK 夺冠吧！」×9 → 正面（期待型）；「都是 blg 的玩具罢了」×53 → 负面（贬低当前对局质量）；「给我 blg 道歉」×36 → 正面（对 BLG 的认可）；「笑死，WE 赢了 BRO 一个 BO5 闹麻了，一打 BO5WE 必输」×4 → 负面（质疑 WE BO5 能力）；「WE 打个北美捞比满头大汗，怎么打 LCK」×4 → 负面</span></li>
+      <li><span class="k">灰信号条件预测</span><span class="v">若官方回填确认 LGD 本局失利，教练质疑（「教练指定买了」）预计升温；若确认打满 BO5，则「经典打满 5 把」剧本叙事将被强化</span></li>
+    </ul>
+    <p class="note">共识净值为 -408，方向明确为负面；正负锚均以 WE/BLG 等他场实体为主，本局直接锚点稀薄。</p>
+  </div>
+
+  <!-- 6 情报含义与决策落点 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点（LONG / SHORT）</h2>
+    <ul class="kv">
+      <li><span class="k">SHORT 倾向</span><span class="v">弹幕共识净 -408、两次负面峰值（GGG / 蛆蛆蛆），指向观众对本局质量与结果的看跌；对「本局精彩度/竞技质量」类判断可偏 SHORT</span></li>
+      <li><span class="k">LONG 倾向</span><span class="v">WE 正 38、BLG 正 1 负 0、T1 正 6 负 0，观众对 LPL 头部/WE 赛程线仍保留正面期待；对「WE 赛程叙事」类判断可偏 LONG</span></li>
+      <li><span class="k">风险</span><span class="v">本局比分未回填，所有方向均以弹幕口径降权；教练质疑为单源待验证，不可作为事实依据</span></li>
+      <li><span class="k">落点</span><span class="v">在官方回填前，不建议基于本局结果做方向性加仓；可观察 14:04 / 14:08 峰值后情绪是否修复作为二次信号</span></li>
+    </ul>
+  </div>
+
+  <!-- 7 本局复盘（证据层） -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <ul class="timeline">
+      <li>窗口起点 13:35 起，情绪首段为正面(+52)，观众对开局/前期节奏偏乐观。</li>
+      <li>第二、三段转负(-46 → -32)，负面开始累积，但幅度有限。</li>
+      <li class="hot">14:04 峰值 1737 条「GGG」——负面爆发，观众解读为局面已崩/结束信号。</li>
+      <li class="hot">14:08 峰值 1099 条「蛆蛆蛆蛆蛆蛆蛆蛆蛆蛆」——第二波负面，观众解读为失误/送。</li>
+      <li>末段 -50，负面未修复，共识定格为负面（净 -408）。</li>
+      <li>模型二次判定补充：负面侧「都是 blg 的玩具罢了」×53、「WE 打 BO5 必输」×4、「WE 打北美捞比满头大汗」×4；正面侧「we 一穿三夺冠」×63、「给我 blg 道歉」×36。</li>
+    </ul>
+    <p class="note">复盘仅基于弹幕情绪与峰值样本，不含官方比分；「GGG」「蛆蛆蛆」为观众对局末的直接反应。</p>
+  </div>
+
+  <!-- 8 队伍/人员画像 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <thead>
+        <tr><th>实体</th><th>提及</th><th>正/负</th><th>情绪</th><th>代表样本</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>WE</td><td>609</td><td class="pos">38</td><td><span class="pill pos">正面</span></td><td>we 已经赢了 / WE 已经进四强了啊</td></tr>
+        <tr><td>BLG</td><td>158</td><td class="pos">1 / 0</td><td><span class="pill neu">观望</span></td><td>都是 blg 的玩具罢了</td></tr>
+        <tr><td>IG</td><td>48</td><td class="pos">2</td><td><span class="pill mix">分歧</span></td><td>在赛事模拟中指挥 IG 战队大获全胜</td></tr>
+        <tr><td>KT</td><td>27</td><td class="pos">2 / 0</td><td><span class="pill neu">观望</span></td><td>kt 绝对是区杯冠军</td></tr>
+        <tr><td>T1</td><td>25</td><td class="pos">6 / 0</td><td><span class="pill pos">正面</span></td><td>已经可以看到 BLG 打 T1 也是这个样子</td></tr>
+        <tr><td>DK</td><td>10</td><td class="neu">0 / 0</td><td><span class="pill neu">观望</span></td><td>已经结束咧！！/{dk/{dk/{dk</td></tr>
+        <tr><td>DNS</td><td>9</td><td class="neu">2 / 2</td><td><span class="pill mix">分歧</span></td><td>lck 倒数第一 dns 换了打野也强得离谱</td></tr>
+        <tr><td>EDG</td><td>6</td><td class="neu">0 / 0</td><td><span class="pill neu">观望</span></td><td>WE 竟然能有 21 年 EDG 的待遇</td></tr>
+        <tr><td>WBG</td><td>5</td><td class="neu">0 / 0</td><td><span class="pill neu">观望</span></td><td>带下节奏 这把教练再介入后崩了</td></tr>
+        <tr><td>TES</td><td>5</td><td class="pos">1 / 0</td><td><span class="pill neu">观望</span></td><td>TES 附体</td></tr>
+      </tbody>
+    </table>
+    <p class="note">人员画像：窗口内未出现可核对的选手级提及量，样本不足；「原➗」「阿卡丽」等为跨局叙事，未计入本局人员画像。</p>
+  </div>
+
+  <!-- 9 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <ul class="kv">
+      <li><span class="k">赛区叙事</span><span class="v">「LPL 还有 BLG！最后的希望！」×22、「LPL 还有 BLG 啊！最后的希望」×21——观众将 LPL 希望锚定在 BLG，反映对赛区整体强度的担忧</span></li>
+      <li><span class="k">签运讨论</span><span class="v">「WE 运气好啊 没遇到 LCK」×10、「也就得亏 WE 签运好没碰 LCK」×5——签运成为观众解释赛果的主要框架</span></li>
+      <li><span class="k">BO5 规律</span><span class="v">「WE 赢了 BRO 一个 BO5 闹麻了，一打 BO5WE 必输」×4——观众对 BO5 与 BO5 的差异有明确认知，本场恰为 BO5</span></li>
+      <li><span class="k">版本</span><span class="v">样本不足——窗口内未出现可核对的版本号或版本改动讨论</span></li>
+    </ul>
+  </div>
+
+  <!-- 10 预测验证回填 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <ul class="kv">
+      <li><span class="k">赛前预测</span><span class="v">样本不足——本页未获取赛前预测数据</span></li>
+      <li><span class="k">局中验证</span><span class="v">弹幕共识由首段正面(+52)转为末段负面(-50)，与「本局走势看跌」方向一致</span></li>
+      <li><span class="k">待回填</span><span class="v">官方比分、本局胜负、BO5 后续局数——均待官方核对后回填</span></li>
+    </ul>
+    <p class="note">本段不编造预测命中率；验证以官方回填为准。</p>
+  </div>
+
+  <!-- 11 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="src3">
+      <div>
+        <h4>实际数据源</h4>
+        <ul>
+          <li>弹幕窗口 2026-10-13 13:35–14:16</li>
+          <li>13570 条 / 4361 人 / 335.2 条·分⁻¹</li>
+          <li>样本状态 ready</li>
+          <li>规则层情报文件：lol-hupu-1677567213846528_g1_end_intel.json</li>
+        </ul>
+      </div>
+      <div>
+        <h4>预期数据源</h4>
+        <ul>
+          <li>官方比分与胜负回填</li>
+          <li>本局阵容（英雄+选手映射）</li>
+          <li>BP 后选手×英雄胜率/战绩</li>
+          <li>盘口/赔率数据</li>
+          <li>版本号与版本改动</li>
+        </ul>
+      </div>
+      <div>
+        <h4>缺口</h4>
+        <ul>
+          <li>比分：待官方核对</li>
+          <li>阵容：样本不足</li>
+          <li>BP 战绩：无战绩情报提及</li>
+          <li>盘口：样本不足</li>
+          <li>版本：样本不足</li>
+          <li>赛前预测：样本不足</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">跨源一致性提示：本页仅使用弹幕单源数据，与官方数据源存在缺口；所有结论以「弹幕口径 · 待官方」标注，官方回填后需重新校验。</p>
+  </div>
+
+</div>
+</body>
+</html>

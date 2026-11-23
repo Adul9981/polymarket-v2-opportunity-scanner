@@ -22,7 +22,13 @@ def favicon_href(p: Path, site: Path) -> str:
 def inject_all(site: Path = SITE) -> int:
     changed = 0
     for p in site.rglob("*.html"):
-        text = p.read_text(encoding="utf-8")
+        if p.name.startswith("._"):
+            continue
+        try:
+            text = p.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            print(f"[add-favicon] skip non-utf8 file: {p}")
+            continue
         if 'rel="icon"' in text:
             continue
         m = re.search(r"<head>", text, re.I)

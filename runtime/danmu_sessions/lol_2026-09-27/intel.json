@@ -1,0 +1,1021 @@
+{
+  "meta": {
+    "total": 9113,
+    "active_users": 2580,
+    "window_utc": [
+      "2026-09-27 06:31",
+      "2026-09-27 13:01"
+    ],
+    "density_per_min": 23.4,
+    "sample_status": "ready"
+  },
+  "teams": {
+    "GX": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这个sly能赢GX这种队伍的"
+      ]
+    },
+    "T1": {
+      "mentions": 54,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "sly大战t1",
+        "T1还想进决赛？",
+        "t1刚把kt3-0",
+        "EDG都打不过的T1",
+        "KT和T1都在下半区 怎么一起打决赛啊"
+      ]
+    },
+    "DNS": {
+      "mentions": 58,
+      "pos": 6,
+      "neg": 2,
+      "samples": [
+        "你说的是DNS碰不了UP",
+        "DNS 估计还打不赢这个SLY",
+        "DK DNS",
+        "DNS是哪边的队",
+        "dns拿下"
+      ]
+    },
+    "KT": {
+      "mentions": 9,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "很难想象，KT跟右边能打个37分，SLY打M，像9-1开",
+        "KT和T1都在下半区 怎么一起打决赛啊",
+        "按这个状态，SLY还真可以跟KT碰一碰了",
+        "KT是最菜的 也是最能吃的",
+        "他们都打KT，结果一个2:3，一个1:3！！！！！！！！"
+      ]
+    },
+    "WBG": {
+      "mentions": 4,
+      "pos": 1,
+      "neg": 0,
+      "samples": [
+        "WBG可以去打",
+        "牛头已经打开手机 开始发微博了 最痛苦的一天",
+        "微博找到了 解说硕硕",
+        "微博找到了：彭于晏"
+      ]
+    },
+    "WE": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "这个we是不是也能打",
+        "想看we打kt"
+      ]
+    },
+    "EDG": {
+      "mentions": 18,
+      "pos": 1,
+      "neg": 1,
+      "samples": [
+        "edg.y还在吗",
+        "EDG都打不过的T1",
+        "t1不是被edg虐了吗，edg呢",
+        "t1不是被edg虐了吗，edg呢",
+        "t1不是被edg虐了吗，edg呢"
+      ]
+    },
+    "BLG": {
+      "mentions": 20,
+      "pos": 5,
+      "neg": 0,
+      "samples": [
+        "比BLG厉害",
+        "ldl只有blg有希望，是那个TT阵容的Blg，就是kesh",
+        "还在吹LDL blg有希望的 以前又不是没打",
+        "MKOI怎么这么弱，前面不是双杀BLG吗",
+        "MKOI怎么这么弱，前面不是双杀BLG吗"
+      ]
+    },
+    "TES": {
+      "mentions": 9,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中被TES夺得头筹，下局等你来逆袭！",
+        "c罗就是足坛的tes 外战像陀螺",
+        "c罗就是足坛的tes 外战像陀螺",
+        "c罗就是足坛的tes 外战像陀螺",
+        "tes也很会打内战"
+      ]
+    },
+    "IG": {
+      "mentions": 73,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+        "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧"
+      ]
+    }
+  },
+  "players": {
+    "Guma": {
+      "mentions": 1,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "姑妈"
+      ]
+    },
+    "Faker": {
+      "mentions": 11,
+      "pos": 0,
+      "neg": 5,
+      "samples": [
+        "你连比赛都不看的 肯定喜欢c罗 他现在菜的不如faker",
+        "比赛都不看的 肯定喜欢c罗 他现在菜的不如faker",
+        "你连比赛都不看的 肯定喜欢c罗 他现在菜的不如faker",
+        "你连比赛都不看的 肯定喜欢c罗 他现在菜的不如faker",
+        "飞科菜是事实"
+      ]
+    },
+    "Chovy": {
+      "mentions": 2,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "凯恩和超威谁更软脚",
+        "我超威"
+      ]
+    },
+    "Zeus": {
+      "mentions": 3,
+      "pos": 0,
+      "neg": 0,
+      "samples": [
+        "宙斯也怕输啊",
+        "宙斯输了难道会很开心？",
+        "我有宙斯水平不一样在这里跟你们看直播"
+      ]
+    }
+  },
+  "odds_discussion": {
+    "count": 43,
+    "samples": [
+      "人头必须打到单，不然老板会亏[笑哭]",
+      "行个毛，直接自己赢水位更高，他要有本事吃啊",
+      "48",
+      "怎么右边赔率还这么高啊",
+      "6倍赔率",
+      "12个人头，5-0-10么？",
+      "36.5",
+      "毛出也是出人头地了"
+    ]
+  },
+  "situation": {
+    "count": 295,
+    "samples": [
+      "gg",
+      "一波一波",
+      "螳螂没见赢过的，前期可以优势但赢不了",
+      "gg",
+      "这不一波吗",
+      "经济没拉开 右边翻了",
+      "这不一波吗",
+      "这为什么不一波"
+    ]
+  },
+  "gray_signals": {
+    "count": 139,
+    "samples": [
+      "右边不打假赛3-0了",
+      "法国队不打假赛，你怕是没睡醒吧，TMD",
+      "这不是假赛？",
+      "还不是假赛",
+      "小时有了 一样是假赛",
+      "都说了这是假赛 猜硬币吧",
+      "没剧本背台词嘛",
+      "xun一直都假赛狗"
+    ]
+  },
+  "density_bursts": [
+    {
+      "minute_utc": "08:43",
+      "minute": 29841643,
+      "count": 111,
+      "pos": 3,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "回到你这里了",
+        "我到了",
+        "儿资发大毛",
+        "儿姿没开播"
+      ]
+    },
+    {
+      "minute_utc": "07:51",
+      "minute": 29841591,
+      "count": 93,
+      "pos": 4,
+      "neg": 1,
+      "tone": "正面",
+      "samples": [
+        "哈哈哈哈啊哈哈",
+        "樱花⭕️",
+        "卤蛋好",
+        "龟田毛太"
+      ]
+    },
+    {
+      "minute_utc": "08:19",
+      "minute": 29841619,
+      "count": 87,
+      "pos": 17,
+      "neg": 0,
+      "tone": "正面",
+      "samples": [
+        "比赛都不播你是人？",
+        "燕雀建议点了",
+        "毛神好帅啊",
+        "二郎神 来了"
+      ]
+    },
+    {
+      "minute_utc": "10:28",
+      "minute": 29841748,
+      "count": 87,
+      "pos": 3,
+      "neg": 1,
+      "tone": "正面",
+      "samples": [
+        "1",
+        "火龙魂是垃圾龙魂",
+        "鬼鬼强队的任性",
+        "弱悲"
+      ]
+    },
+    {
+      "minute_utc": "08:42",
+      "minute": 29841642,
+      "count": 86,
+      "pos": 11,
+      "neg": 3,
+      "tone": "正面",
+      "samples": [
+        "姿态已经到现场了",
+        "请问这里是张凌赫直播间吗",
+        "哈哈",
+        "舒服"
+      ]
+    },
+    {
+      "minute_utc": "07:53",
+      "minute": 29841593,
+      "count": 85,
+      "pos": 4,
+      "neg": 4,
+      "tone": "分歧",
+      "samples": [
+        "毛毛口红敢涂黑的吗",
+        "一姿并肩王",
+        "老张：跟我有鸡毛关系",
+        "你以为ldl真打不过吗"
+      ]
+    },
+    {
+      "minute_utc": "10:33",
+      "minute": 29841753,
+      "count": 83,
+      "pos": 8,
+      "neg": 6,
+      "tone": "正面",
+      "samples": [
+        "？",
+        "龙魂诱盘，握草",
+        "结束了",
+        "去泥马的"
+      ]
+    },
+    {
+      "minute_utc": "07:05",
+      "minute": 29841545,
+      "count": 75,
+      "pos": 2,
+      "neg": 1,
+      "tone": "分歧",
+      "samples": [
+        "信爷一打二越塔",
+        "还在送 这个13",
+        "一个小分都拿不到",
+        "闹麻了"
+      ]
+    }
+  ],
+  "narrative": {
+    "consensus": {
+      "pos": 619,
+      "neg": 293,
+      "net": 326,
+      "tone": "正面"
+    },
+    "timeline": [
+      {
+        "start_utc": "06:31",
+        "count": 1784,
+        "pos": 155,
+        "neg": 49,
+        "net": 106,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "07:49",
+        "count": 3032,
+        "pos": 287,
+        "neg": 58,
+        "net": 229,
+        "tone": "正面"
+      },
+      {
+        "start_utc": "09:07",
+        "count": 1132,
+        "pos": 41,
+        "neg": 63,
+        "net": -22,
+        "tone": "负面"
+      },
+      {
+        "start_utc": "10:25",
+        "count": 1518,
+        "pos": 55,
+        "neg": 56,
+        "net": -1,
+        "tone": "分歧"
+      },
+      {
+        "start_utc": "11:43",
+        "count": 1647,
+        "pos": 81,
+        "neg": 67,
+        "net": 14,
+        "tone": "正面"
+      }
+    ],
+    "turning_points": [
+      {
+        "minute_utc": "08:43",
+        "count": 111,
+        "tone": "正面",
+        "pos": 3,
+        "neg": 0,
+        "sample": "回到你这里了"
+      },
+      {
+        "minute_utc": "07:51",
+        "count": 93,
+        "tone": "正面",
+        "pos": 4,
+        "neg": 1,
+        "sample": "哈哈哈哈啊哈哈"
+      },
+      {
+        "minute_utc": "08:19",
+        "count": 87,
+        "tone": "正面",
+        "pos": 17,
+        "neg": 0,
+        "sample": "比赛都不播你是人？"
+      },
+      {
+        "minute_utc": "10:28",
+        "count": 87,
+        "tone": "正面",
+        "pos": 3,
+        "neg": 1,
+        "sample": "1"
+      },
+      {
+        "minute_utc": "08:42",
+        "count": 86,
+        "tone": "正面",
+        "pos": 11,
+        "neg": 3,
+        "sample": "姿态已经到现场了"
+      },
+      {
+        "minute_utc": "10:33",
+        "count": 83,
+        "tone": "正面",
+        "pos": 8,
+        "neg": 6,
+        "sample": "？"
+      }
+    ]
+  },
+  "neutral_salvage": [
+    {
+      "text": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+      "count": 72,
+      "entity": true,
+      "minute_utc": "06:37"
+    },
+    {
+      "text": "t1不是被edg虐了吗，edg呢",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "07:02"
+    },
+    {
+      "text": "在赛事模拟中指挥BLG战队大获全胜，快来一起挑战吧",
+      "count": 5,
+      "entity": true,
+      "minute_utc": "10:31"
+    },
+    {
+      "text": "MKOI怎么这么弱，前面不是双杀BLG吗",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "07:34"
+    },
+    {
+      "text": "c罗就是足坛的tes 外战像陀螺",
+      "count": 3,
+      "entity": true,
+      "minute_utc": "06:57"
+    },
+    {
+      "text": "对啊，那天blg丹妮都说选潘森，xun硬要选狗",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "07:35"
+    },
+    {
+      "text": "拿T1来翻？？？",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "09:35"
+    },
+    {
+      "text": "T1 A 几号",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "10:00"
+    },
+    {
+      "text": "我感觉冠军还是T1 啊",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "10:57"
+    },
+    {
+      "text": "DNS基本有两个萨勒芬妮的RDNS基本有两个萨勒芬妮的R",
+      "count": 2,
+      "entity": true,
+      "minute_utc": "13:01"
+    },
+    {
+      "text": "跟瓦比我们对tes还是太严厉了",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:09"
+    },
+    {
+      "text": "上把DNS这么好的阵容都输",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "10:51"
+    },
+    {
+      "text": "DNS的终结能力太差了吧",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "11:26"
+    },
+    {
+      "text": "EDG撸跟瓦一样都是擦边夺冠 只能说钱真多",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "11:57"
+    },
+    {
+      "text": "DK难道就这么被DNS送走了？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "11:58"
+    },
+    {
+      "text": "放在瓦洛兰特，TES的外战真牛吧",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "12:02"
+    },
+    {
+      "text": "DNS这么喜欢打大龙吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "12:20"
+    },
+    {
+      "text": "抽象啊dns",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "12:20"
+    },
+    {
+      "text": "在赛事模拟中被TES夺得头筹，下局等你来逆袭！",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:32"
+    },
+    {
+      "text": "这个sly能赢GX这种队伍的",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:33"
+    },
+    {
+      "text": "你说的是DNS碰不了UP",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:50"
+    },
+    {
+      "text": "edg.y还在吗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:56"
+    },
+    {
+      "text": "凯恩和超威谁更软脚",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:57"
+    },
+    {
+      "text": "tes也很会打内战",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:58"
+    },
+    {
+      "text": "很难想象，KT跟右边能打个37分，SLY打M，像9-1开",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "06:59"
+    },
+    {
+      "text": "sly大战t1",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:01"
+    },
+    {
+      "text": "T1还想进决赛？",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:01"
+    },
+    {
+      "text": "t1刚把kt3-0",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:02"
+    },
+    {
+      "text": "EDG都打不过的T1",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:02"
+    },
+    {
+      "text": "KT和T1都在下半区 怎么一起打决赛啊",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:02"
+    },
+    {
+      "text": "决赛肯定是DK打T1",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:02"
+    },
+    {
+      "text": "这都不训练的三线队 赢了 t1 一把 瓦是什么路边",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:04"
+    },
+    {
+      "text": "万一t1又冠军，老张两头吃",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:07"
+    },
+    {
+      "text": "打EDG像打狗",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:08"
+    },
+    {
+      "text": "那哥们，历史负战绩，没正过。结果打EDG战绩25-2",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:09"
+    },
+    {
+      "text": "blg是哪条路边",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:34"
+    },
+    {
+      "text": "Blg什么臭鱼烂虾",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:34"
+    },
+    {
+      "text": "blg",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:35"
+    },
+    {
+      "text": "不会玩就不选吗？T1决胜局蒙多打野也没玩过，还是能赢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:35"
+    },
+    {
+      "text": "T1呢",
+      "count": 1,
+      "entity": true,
+      "minute_utc": "07:43"
+    }
+  ],
+  "top_users": [
+    [
+      "我是一颗小虎牙",
+      172
+    ],
+    [
+      "春熙路上林心如",
+      166
+    ],
+    [
+      "父老36282",
+      124
+    ],
+    [
+      "Lulu淕",
+      97
+    ],
+    [
+      "伍星差评",
+      91
+    ],
+    [
+      "爱炮家族丶分析炮",
+      85
+    ],
+    [
+      "猪头最叼",
+      72
+    ],
+    [
+      "哈米吉多顿大战",
+      70
+    ]
+  ],
+  "sources": {
+    "huya_lol_official": 257,
+    "huya_we957": 691,
+    "huya_maomao": 2379,
+    "huya_mile": 0,
+    "huya_remember": 0,
+    "huya_shuoshuo": 5786
+  },
+  "capture_health": [
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_lol_official",
+      "url": "https://www.huya.com/660000",
+      "state": "capturing",
+      "started_at": "2026-09-27T07:27:56+00:00",
+      "heartbeat_at": "2026-09-27T13:03:12+00:00",
+      "last_message_at": "2026-09-27T13:01:24+00:00",
+      "message_count": 236,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "哈哈哈哈哈哈",
+          "ts": 1790513466.1
+        },
+        {
+          "t": "666666",
+          "ts": 1790513466.84
+        },
+        {
+          "t": "哈哈哈哈哈哈",
+          "ts": 1790513467.53
+        },
+        {
+          "t": "？？？？？？",
+          "ts": 1790513469.23
+        },
+        {
+          "t": "[心动]",
+          "ts": 1790513480.99
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1790513531.16
+        },
+        {
+          "t": "在赛事模拟中指挥IG战队大获全胜，快来一起挑战吧",
+          "ts": 1790513549.09
+        },
+        {
+          "t": "在赛事模拟中被JDG夺得头筹，下局等你来逆袭！",
+          "ts": 1790513565.67
+        },
+        {
+          "t": "，",
+          "ts": 1790513571.05
+        },
+        {
+          "t": "2054",
+          "ts": 1790513694.95
+        },
+        {
+          "t": "直播？",
+          "ts": 1790513744.58
+        },
+        {
+          "t": "重播",
+          "ts": 1790513771.11
+        },
+        {
+          "t": "。。。。",
+          "ts": 1790514031.29
+        },
+        {
+          "t": "4343434",
+          "ts": 1790514080.95
+        },
+        {
+          "t": "有没有人是来完成任务的",
+          "ts": 1790514084.58
+        }
+      ],
+      "room_id": 660000,
+      "channel_id": 1346609715,
+      "nickname": "虎牙英雄联盟赛事",
+      "introduction": "【预告】10月3日德玛西亚杯开赛！",
+      "room_name": "【预告】1日17点iG vs LNG 德杯半决赛",
+      "page_live": true,
+      "checked_at": "2026-09-27T07:27:57+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_we957",
+      "url": "https://www.huya.com/890001",
+      "state": "capturing",
+      "started_at": "2026-09-27T07:27:56+00:00",
+      "heartbeat_at": "2026-09-27T13:03:11+00:00",
+      "last_message_at": "2026-09-27T13:01:19+00:00",
+      "message_count": 585,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "说话啊！",
+          "ts": 1790512116.1
+        },
+        {
+          "t": "这把双数人头",
+          "ts": 1790512124.96
+        },
+        {
+          "t": "把把小时间",
+          "ts": 1790512750.87
+        },
+        {
+          "t": "这是什么比赛",
+          "ts": 1790512977.8
+        },
+        {
+          "t": "双数46",
+          "ts": 1790513185.05
+        },
+        {
+          "t": "右边选的什么够吧阵容啊",
+          "ts": 1790513251.02
+        },
+        {
+          "t": "30分钟后面右边自动赢",
+          "ts": 1790513294.23
+        },
+        {
+          "t": "一血谁的？",
+          "ts": 1790513301.07
+        },
+        {
+          "t": "这样越也是厉害",
+          "ts": 1790513333.48
+        },
+        {
+          "t": "小炮无敌了有感觉吗？",
+          "ts": 1790513379.78
+        },
+        {
+          "t": "DK太菜了",
+          "ts": 1790514007.04
+        },
+        {
+          "t": "gg",
+          "ts": 1790514009.25
+        },
+        {
+          "t": "666",
+          "ts": 1790514016.31
+        },
+        {
+          "t": "好假",
+          "ts": 1790514026.65
+        },
+        {
+          "t": "这逼无脑跳上去图啥",
+          "ts": 1790514079.11
+        }
+      ],
+      "room_id": 890001,
+      "channel_id": 1001276654,
+      "nickname": "WE957",
+      "introduction": "次级世界赛淘汰赛",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-27T07:27:57+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_maomao",
+      "url": "https://www.huya.com/149346",
+      "state": "offline_waiting",
+      "started_at": "2026-09-27T08:49:11+00:00",
+      "heartbeat_at": "2026-09-27T13:03:03+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149346,
+      "channel_id": 1267235383,
+      "nickname": "解说毛毛",
+      "introduction": "横店玩一下",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-27T08:49:12+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_mile",
+      "url": "https://www.huya.com/149361",
+      "state": "offline_waiting",
+      "started_at": "2026-09-27T07:27:56+00:00",
+      "heartbeat_at": "2026-09-27T13:03:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 149361,
+      "channel_id": 1925949926,
+      "nickname": "解说米勒",
+      "introduction": "内战高端局~！",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-27T07:27:57+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_remember",
+      "url": "https://www.huya.com/rememberlol",
+      "state": "offline_waiting",
+      "started_at": "2026-09-27T07:27:56+00:00",
+      "heartbeat_at": "2026-09-27T13:03:02+00:00",
+      "last_message_at": null,
+      "message_count": 0,
+      "warning": "页面显示未开播，继续等待；不得判定为无弹幕",
+      "error": null,
+      "recent_msgs": [],
+      "room_id": 528222,
+      "channel_id": 1950358554,
+      "nickname": "Remember",
+      "introduction": "[LCS] LYONvsSR 最后一张票",
+      "room_name": "",
+      "page_live": false,
+      "checked_at": "2026-09-27T07:27:57+00:00"
+    },
+    {
+      "schema_version": 1,
+      "platform": "huya",
+      "game": "lol",
+      "source": "huya_shuoshuo",
+      "url": "https://www.huya.com/323444",
+      "state": "capturing",
+      "started_at": "2026-09-27T07:27:56+00:00",
+      "heartbeat_at": "2026-09-27T13:03:11+00:00",
+      "last_message_at": "2026-09-27T13:01:36+00:00",
+      "message_count": 5019,
+      "warning": null,
+      "error": null,
+      "recent_msgs": [
+        {
+          "t": "怎么上了个厕所回来大结局了",
+          "ts": 1790514062.83
+        },
+        {
+          "t": "DNS基本有两个萨勒芬妮的RDNS基本有两个萨勒芬妮的R",
+          "ts": 1790514063.96
+        },
+        {
+          "t": "k博士附体了",
+          "ts": 1790514065.6
+        },
+        {
+          "t": "一点配合都没有 又选个垃圾阵容",
+          "ts": 1790514067.46
+        },
+        {
+          "t": "感觉是个人就能去韩国打职业啊",
+          "ts": 1790514069.22
+        },
+        {
+          "t": "dns一队代打",
+          "ts": 1790514071.27
+        },
+        {
+          "t": "左边这么强的下路打成这个吊样",
+          "ts": 1790514073.01
+        },
+        {
+          "t": "DK假赛吃饱了",
+          "ts": 1790514073.01
+        },
+        {
+          "t": "这个垃圾打野还不被踢dk是真没钱了",
+          "ts": 1790514076.75
+        },
+        {
+          "t": "DNS反弹一个  偷一个 两个萨勒芬妮的R",
+          "ts": 1790514079.11
+        },
+        {
+          "t": "就知道带线",
+          "ts": 1790514080.83
+        },
+        {
+          "t": "派克好厉害啊啊啊啊",
+          "ts": 1790514086.07
+        },
+        {
+          "t": "dns换的这个新ad真不错",
+          "ts": 1790514089.39
+        },
+        {
+          "t": "DK啊  支离破碎了呀 我的1000补贴啊",
+          "ts": 1790514093.8
+        },
+        {
+          "t": "辅助差距",
+          "ts": 1790514096.69
+        }
+      ],
+      "room_id": 323444,
+      "channel_id": 1279512307519,
+      "nickname": "解说硕硕",
+      "introduction": "次级世界赛！SLY MKF！",
+      "room_name": "",
+      "page_live": true,
+      "checked_at": "2026-09-27T07:27:57+00:00"
+    }
+  ]
+}

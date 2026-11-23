@@ -74,6 +74,7 @@ def nav_html(pre: str, active: str = "") -> str:
     in_sub = bool(pre)
     home_h = pre + "index.html"
     today_h = "today.html" if in_sub else "intel/today.html"
+    situation_h = "match_situation.html" if in_sub else "intel/match_situation.html"
     hist_h = "history.html" if in_sub else "intel/history.html"
     prof_h = "intel_profiles_index.html" if in_sub else "intel/intel_profiles_index.html"
     maps_h = "intel_map_records.html" if in_sub else "intel/intel_map_records.html"
@@ -97,6 +98,7 @@ def nav_html(pre: str, active: str = "") -> str:
         f'margin-right:7px;box-shadow:0 4px 10px rgba(0,113,227,.18)">DI</span>弹幕情报库</a>'
         f'{link(home_h, "首页", "home")}'
         f'{link(today_h, "今日情报", "today")}'
+        f'{link(situation_h, "比赛局势", "situation")}'
         f'{link(hist_h, "历史情报库", "history")}'
         f'{divider()}'
         f'{link(prematch_h, "赛前情报", "prematch")}'
@@ -112,7 +114,43 @@ def nav_html(pre: str, active: str = "") -> str:
     )
 
 
-def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "") -> str:
+def _shell_date(name: str, text: str = "") -> str:
+    """比赛时间轴壳（match_*.html）的比赛日期。
+
+    优先从文件名取（match_2026-08-23_x_y.html / match_x-y-2026-08-26.html）；
+    文件名无日期时（hupu 壳 match_cs2-hupu-<id>.html / match_lol-dk-dns.html）
+    回退到页面内容里的日期（sub 行 / footer / 节点文件名），壳内容恒带比赛日期。
+    （教训 2026-10-25：hupu 壳文件名无日期，旧逻辑一律归「历史情报库」——
+    今日直播的 Spirit-TYLOO 从今日情报页点进去，导航却高亮「历史情报库」。）
+    """
+    mm = re.search(r"(\d{4}-\d{2}-\d{2})", name or "")
+    if mm:
+        return mm.group(1)
+    mm = re.search(r"(\d{4}-\d{2}-\d{2})", text or "")
+    return mm.group(1) if mm else ""
+
+
+def _shell_is_today(name: str, text: str = "") -> bool:
+    """比赛时间轴壳（match_*.html）是否属于今天（北京时间）。"""
+    today = datetime.datetime.now(
+        datetime.timezone(datetime.timedelta(hours=8))
+    ).date().isoformat()
+    return bool(_shell_date(name, text) == today)
+
+
+def _shell_title(name: str, text: str = "") -> str:
+    """比赛时间轴壳的面包屑标题：优先用壳内容自带的 <h1> 对阵（"Spirit vs TYLOO"），
+    取不到再回退文件名解析（title_of）。hupu 壳文件名解析不出队名（"hupu vs <id>"），
+    必须走 <h1>。"""
+    mm = re.search(r"<h1[^>]*>([^<]+)</h1>", text or "")
+    if mm:
+        t = mm.group(1).strip()
+        if t:
+            return t
+    return title_of(name)
+
+
+def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: str = "") -> str:
     if kind == "root":
         return ""
     home = f'<a href="{pre}index.html" style="color:#6e6e73;text-decoration:none">首页</a>'
@@ -122,6 +160,7 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "") -> str
         "pattern-atlas": "形态图谱",
         "prematch": "赛前情报",
         "today": "今日情报",
+        "situation": "比赛局势",
         "history": "历史情报库",
         "market": "市场链接",
         "profiles": "四维画像库",
@@ -143,6 +182,7 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "") -> str
         "pattern-atlas": "pattern_decision_workspace.html",
         "prematch": None,
         "today": "today.html",
+        "situation": "match_situation.html",
         "history": "history.html",
         "market": "market_links.html",
         "profiles": "profiles.html",
@@ -156,11 +196,7 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "") -> str
     }
     if kind == "shell":
         # 壳的父级：今日开赛的比赛回「今日比赛」，历史比赛回「历史情报库」
-        mm = re.search(r"(\d{4}-\d{2}-\d{2})", name or "")
-        today = datetime.datetime.now(
-            datetime.timezone(datetime.timedelta(hours=8))
-        ).date().isoformat()
-        if mm and mm.group(1) == today:
+        if _shell_is_today(name, text):
             parents["shell"] = "today.html"
         else:
             parents["shell"] = "history.html"
@@ -192,6 +228,7 @@ def kind_of(name: str) -> str:
         "subscribe.html": "subscribe",
         "stats.html": "stats",
         "today.html": "today",
+        "match_situation.html": "situation",
         "history.html": "history",
         "market_links.html": "market",
         "profiles.html": "profiles",
@@ -217,9 +254,14 @@ def kind_of(name: str) -> str:
     return "root"
 
 
-def active_of(kind: str) -> str:
+def active_of(kind: str, name: str = "", text: str = "") -> str:
+    if kind == "shell":
+        # 壳页导航高亮跟面包屑同一口径：今天的比赛高亮「今日情报」，
+        # 历史比赛（含文件名无日期但内容也无日期的壳）高亮「历史情报库」。
+        return "today" if _shell_is_today(name, text) else "history"
     return {
         "today": "today",
+        "situation": "situation",
         "history": "history",
         "market": "market",
         "subscribe": "subscribe",
@@ -274,7 +316,11 @@ def inject_file(p: Path, site: Path = SITE) -> bool:
         return False
     clean = _clean(text)
     kind = kind_of(p.name)
-    block = nav_html(pre, active_of(kind)) + breadcrumb_html(pre, kind, title_of(p.name), p.name)
+    # 比赛局势是顶级工作台页（非比赛壳），面包屑不带 title（避免 title_of 把
+    # "match_situation" 误解析成 "situation" 后缀）；比赛壳的标题优先用页面 <h1>
+    # 对阵（hupu 壳文件名解析不出队名，否则显示 "hupu vs <id>"）
+    title = "" if kind == "situation" else (_shell_title(p.name, clean) if kind == "shell" else title_of(p.name))
+    block = nav_html(pre, active_of(kind, p.name, clean)) + breadcrumb_html(pre, kind, title, p.name, clean)
     m = re.search(r"<body[^>]*>", clean, re.I)
     if not m:
         return False

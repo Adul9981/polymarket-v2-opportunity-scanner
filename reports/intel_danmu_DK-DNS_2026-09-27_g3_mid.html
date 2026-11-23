@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DK vs DNS · G3 局中弹幕情报（BO3）</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#f5f5f7;
+    font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color:#1d1d1f;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:28px 16px 60px;
+  }
+  .wrap { max-width:860px; margin:0 auto; }
+  .page-head { margin-bottom:20px; }
+  .page-head h1 { font-size:24px; font-weight:700; letter-spacing:-0.02em; }
+  .page-head .sub { font-size:13px; color:#6e6e73; margin-top:6px; }
+  .tag-live {
+    display:inline-block; font-size:11px; font-weight:600; color:#0071e3;
+    border:1px solid #0071e3; border-radius:20px; padding:1px 9px; margin-left:8px;
+    vertical-align:middle;
+  }
+  .card {
+    background:#fff; border-radius:16px; padding:22px 24px;
+    margin-bottom:16px; box-shadow:0 1px 3px rgba(0,0,0,0.05);
+  }
+  .card h2 {
+    font-size:17px; font-weight:700; letter-spacing:-0.01em;
+    display:flex; align-items:center; gap:10px; margin-bottom:14px;
+  }
+  .card h2 .no {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:24px; height:24px; border-radius:8px; background:#0071e3; color:#fff;
+    font-size:13px; font-weight:700; flex:0 0 auto;
+  }
+  .card.speed { border:1.5px solid #0071e3; }
+  .card.speed h2 { color:#0071e3; }
+  .score-line {
+    font-size:15px; font-weight:600; background:#f0f7ff; border-radius:10px;
+    padding:10px 14px; margin-bottom:14px; color:#0b3d75;
+  }
+  .score-line .note { font-size:12px; font-weight:400; color:#6e6e73; margin-left:6px; }
+  ul.klist { list-style:none; }
+  ul.klist li {
+    font-size:14px; padding:8px 0 8px 18px; position:relative;
+    border-bottom:1px solid #f0f0f2;
+  }
+  ul.klist li:last-child { border-bottom:none; }
+  ul.klist li::before {
+    content:""; position:absolute; left:0; top:16px;
+    width:6px; height:6px; border-radius:50%; background:#0071e3;
+  }
+  .so-what { color:#0071e3; font-weight:600; }
+  .src { color:#8e8e93; font-size:12px; }
+  .decision {
+    margin-top:14px; font-size:14px; font-weight:600; color:#1d1d1f;
+    background:#f5f5f7; border-radius:10px; padding:12px 14px;
+  }
+  .decision b { color:#0071e3; }
+  p.txt { font-size:14px; color:#3a3a3c; margin-bottom:10px; }
+  p.txt:last-child { margin-bottom:0; }
+  .kv { font-size:13px; color:#3a3a3c; }
+  .kv div { padding:6px 0; border-bottom:1px solid #f0f0f2; }
+  .kv div:last-child { border-bottom:none; }
+  .kv b { color:#1d1d1f; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #f0f0f2; }
+  th { color:#6e6e73; font-weight:600; font-size:12px; }
+  td.num { font-variant-numeric:tabular-nums; }
+  .pos { color:#1a8a3c; font-weight:600; }
+  .neg { color:#d70015; font-weight:600; }
+  .neu { color:#8e8e93; font-weight:600; }
+  .pill {
+    display:inline-block; font-size:11px; font-weight:600; border-radius:6px;
+    padding:1px 7px; margin-right:6px;
+  }
+  .pill.gray { background:#f2f2f4; color:#6e6e73; }
+  .pill.blue { background:#e8f1fd; color:#0071e3; }
+  .pill.red { background:#fdecee; color:#d70015; }
+  .pill.green { background:#e9f7ee; color:#1a8a3c; }
+  details {
+    margin-top:8px; font-size:13px; color:#6e6e73;
+  }
+  details summary { cursor:pointer; color:#0071e3; font-size:12px; }
+  details p { margin-top:6px; color:#6e6e73; font-size:12.5px; }
+  .three-col { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  .three-col .col {
+    background:#f5f5f7; border-radius:10px; padding:12px 14px; font-size:12.5px;
+  }
+  .three-col .col h4 { font-size:12px; color:#6e6e73; margin-bottom:8px; font-weight:600; }
+  .three-col .col li { list-style:none; padding:3px 0; color:#3a3a3c; }
+  .three-col .col li::before { content:"· "; color:#0071e3; }
+  .timeline { font-size:13px; }
+  .timeline div { padding:6px 0; border-bottom:1px solid #f0f0f2; }
+  .timeline div:last-child { border-bottom:none; }
+  .timeline .t { font-weight:700; color:#0071e3; margin-right:8px; font-variant-numeric:tabular-nums; }
+  .foot { text-align:center; font-size:11.5px; color:#a1a1a6; margin-top:24px; }
+  @media (max-width:640px){ .three-col { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="page-head">
+    <h1>DK vs DNS · 第 3 小局 局中情报<span class="tag-live">局中·非终局，结果待定</span></h1>
+    <div class="sub">2026-09-27 · BO3（本场共 3 局）· 弹幕窗口 09:24–09:40 · 438 条 / 224 人 / 26.7 条·分⁻¹ · 样本 ready</div>
+  </div>
+
+  <!-- 0 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="score-line">比分：弹幕口径未形成有效比分共识 · 官方待回填<span class="note">弹幕口径·官方待回填</span></div>
+    <ul class="klist">
+      <li>DK 被集中质疑：打野与 DDV 状态被指「喝坏脑子」，并出现「赵信买了」的假赛质疑 → <span class="so-what">DK 侧负面信号最密集，任何 DK 领先都需打折看待（弹幕口径·待官方）</span> <span class="src">→ 详 §2 §5</span></li>
+      <li>09:33 弹幕密度冲到 60 条/分，触发词为「基尼今天凌晨刚走」 → <span class="so-what">情绪峰值与负面转折同点，是全场最需回看的窗口（单源待验证）</span> <span class="src">→ 详 §7</span></li>
+      <li>DNS 被两向拉扯：既被称「在韩国暴打过所有强队」，又被判「会送一波大的」 → <span class="so-what">DNS 方向不明，正负各 1，暂不构成可交易锚（弹幕口径·待官方）</span> <span class="src">→ 详 §5 §8</span></li>
+      <li>赵信成为焦点英雄：一条称「赵信拿人头对 DNS 是好事，拿完值钱了」 → <span class="so-what">赵信人头归属被观众当作价值变量，可作节奏观察点（单源待验证）</span> <span class="src">→ 详 §3</span></li>
+      <li>大量弹幕外溢到 T1 / IG（T1 提及 9、IG 提及 5），与 DK 本局无关 → <span class="so-what">注意力被分流，本局有效信号密度被稀释（多源确认）</span> <span class="src">→ 详 §8 §11</span></li>
+    </ul>
+    <div class="decision">决策落点：<b>DK 侧偏 SHORT（情绪面）</b>，但灰信号未证实、比分未回填，仅作观察级倾向，不做方向性下注依据。</div>
+  </div>
+
+  <!-- 1 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <div class="kv">
+      <div><b>比赛：</b>DK vs DNS（LoL）· 2026-09-27 · 第 3 小局进行中</div>
+      <div><b>赛制：</b>BO3（本场共 3 局）· 当前为决胜局语境，<b>局中·非终局，结果待定</b></div>
+      <div><b>弹幕样本：</b>438 条 · 224 人 · 26.7 条/分 · 状态 ready</div>
+      <div><b>共识净值：</b>正 15 / 负 18，净 <span class="neg">-3</span>（负面）</div>
+      <div><b>比分核验：</b>弹幕口径未形成有效比分共识，官方待回填</div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑·非结论）</h2>
+    <p class="txt"><span class="pill gray">灰信号</span><b>「赵信买了」</b>——指向 DK 侧赵信相关操作存在假赛质疑。</p>
+    <p class="txt">该条为观众单点质疑，<b>非结论</b>，无第二独立来源印证，不纳入方向性判断，仅作风险留痕。与之呼应的还有「Dk 这个队不干净的」「dk 第一把就吃」等零散负面表述，均属同源情绪，不重复计数。</p>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <p class="txt"><b>本局阵容（英雄+选手映射）：</b>样本不足——弹幕窗口内未出现可核验的完整阵容描述，不做推断。</p>
+    <p class="txt"><b>BP 后战绩情报：</b>无战绩情报提及（选人窗口内无选手×英雄胜率/历史战绩类弹幕）。</p>
+    <p class="txt"><b>可确认锚点：</b>赵信在场，且被观众视为价值变量——「赵信拿人头对 dns 来说是好事，毕竟拿完值钱了」；另有「dk 这赵信给张硕玩还有点机会」指向 DK 侧赵信使用者被质疑。</p>
+    <p class="txt"><b>BP 评价：</b>「DK 教练没有十年脑溢血，bp 做不了这样」——单条负面，指向 DK 教练组 BP 决策。</p>
+    <details><summary>原文摘录（1 条）</summary><p>dk 这赵信给张硕玩还有点机会 / DK 教练没有十年脑溢血，bp 做不了这样</p></details>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <p class="txt">样本不足——窗口内无有效盘口、赔率或市场资金讨论。仅出现「dk 第一把就吃」类暗示性表述，属灰信号范畴，已归入 §2，不作为盘口情报。</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板</h2>
+    <div class="kv">
+      <div><b>正锚：</b>DNS「前面在韩国暴打过所有强队」（+1）；「赵信拿人头对 DNS 是好事」（模型二次判定·偏正，指向 DNS 收益）</div>
+      <div><b>负锚：</b>DK 打野与 DDV「农药把脑子喝坏了」（-1）；「DK 日常爆第一把」；「DK 这状态 基本 3-0 了」（反讽向）；「dk 送了」</div>
+      <div><b>群体共识：</b>负面，净 -3（正 15 / 负 18）</div>
+      <div><b>情绪走势：</b>分歧(+0) → 负面(-2) → 分歧(-1)</div>
+      <div><b>灰信号条件预测：</b>若「赵信买了」质疑被后续操作印证，DK 侧负面将进一步放大；若 DK 稳住节奏，则该质疑自然衰减</div>
+    </div>
+    <p class="txt" style="margin-top:12px;"><b>中性弹幕二次判定（模型二次判定）：</b>「dk 送了」→ 负面（失误/送）；「DK 这状态 基本 3-0 了」→ 负面（反讽）；「不愧是 DK」→ 负面（讽刺语境）；「翻了」×6 → 情绪翻转信号，方向依上下文，暂记中性偏波动；「，」×6、「？」×2 等纯符号无情绪，丢弃不写。</p>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点</h2>
+    <p class="txt"><span class="pill red">SHORT</span><b>DK（情绪面）</b>：负面锚点数量与密度均高于 DNS，且叠加假赛质疑灰信号。含义：DK 侧任何领先都应打折，情绪面不支持追多。</p>
+    <p class="txt"><span class="pill blue">观察</span><b>DNS</b>：正负各 1，方向不明。含义：DNS 暂不构成可交易锚，需等比分或阵容回填后再判。</p>
+    <p class="txt"><span class="pill gray">风险</span>灰信号未证实 + 比分未回填，本页所有倾向均为观察级，<b>不构成下注依据</b>。</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <div class="timeline">
+      <div><span class="t">09:24–09:30</span>开局段：情绪分歧（+0），DK 与 DNS 提及交替出现，无主导方向。</div>
+      <div><span class="t">09:30–09:33</span>情绪转负（-2）：DK 打野/DDV 状态被质疑，「DK 日常爆第一把」类表述增多。</div>
+      <div><span class="t">09:33</span><b>关键转折点</b>：弹幕密度峰值 60 条/分，触发词「基尼今天凌晨刚走」，观众解读为负面（失误/送）语境，情绪在此点集中释放。</div>
+      <div><span class="t">09:33–09:40</span>情绪回到分歧（-1）：「翻了」×6 出现，观众对局势是否翻转存在分歧，未形成新共识。</div>
+    </div>
+    <p class="txt" style="margin-top:12px;">全程无有效比分与阵容证据，复盘以情绪证据为主，<b>结果待定</b>。</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <tr><th>对象</th><th>提及</th><th>正向</th><th>负向</th><th>情绪</th><th>样本</th></tr>
+      <tr><td>DK</td><td class="num">18</td><td class="num">0</td><td class="num neg">1</td><td class="neu">观望</td><td>dk 打野和 ddv 农药把脑子喝坏了</td></tr>
+      <tr><td>T1</td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="neu">观望</td><td>为什么不看 t1 / T1 打不过 100T</td></tr>
+      <tr><td>DNS</td><td class="num">5</td><td class="num pos">1</td><td class="num neg">1</td><td class="neu">观望</td><td>DNS 前面在韩国暴打过所有强队 / 我感觉 DNS 会送一波大的</td></tr>
+      <tr><td>IG</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="neu">观望</td><td>右边男神不送，能打过 ig 吗？</td></tr>
+    </table>
+    <p class="txt" style="margin-top:12px;">注：T1 与 IG 的高提及量来自外溢讨论（其他赛事/模拟活动），与本局无直接关联，已计入注意力分流。</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <p class="txt">窗口内出现「DK 小组赛 就不正常 输了很正常」「DK 二队两个月没发工资了」等表述，指向观众对 DK 队伍稳定性与运营状况的既有印象，属长期叙事而非本局证据。</p>
+    <p class="txt">版本层面：样本不足——无英雄强度、版本改动或战术趋势类弹幕。</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <p class="txt">本页为局中快照，<b>非终局</b>，比分与结果均待官方回填。当前可回填项：情绪共识净值 -3（负面）、密度峰值 09:33 / 60 条。待回填项：最终比分、本局胜负、灰信号「赵信买了」是否被印证。</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="three-col">
+      <div class="col">
+        <h4>实际数据源</h4>
+        <ul>
+          <li>弹幕窗口 09:24–09:40</li>
+          <li>438 条 / 224 人 / 26.7 条·分⁻¹</li>
+          <li>规则层情报文件 lol-dk-dns_g3_mid_intel.json</li>
+          <li>队伍提及与灰信号统计</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>预期数据源</h4>
+        <ul>
+          <li>官方比分与赛果回填</li>
+          <li>本局完整阵容与选手映射</li>
+          <li>BP 后选手×英雄战绩</li>
+          <li>盘口/赔率市场数据</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>缺口</h4>
+        <ul>
+          <li>比分未回填</li>
+          <li>阵容样本不足</li>
+          <li>无战绩情报提及</li>
+          <li>无盘口讨论</li>
+          <li>灰信号无第二来源</li>
+        </ul>
+      </div>
+    </div>
+    <p class="txt" style="margin-top:14px;"><b>比赛元数据：</b>全称 DK vs DNS（LoL）· league id：lol-dk-dns · Polymarket slug：lol-dk-dns · 赛制 BO3 · 节点 G3 局中（S1–S3 快照 · MID-GAME）。</p>
+  </div>
+
+  <div class="foot">局中·非终局，结果待定 · 弹幕口径·官方待回填 · 生成于 2026-09-27 弹幕窗口 09:24–09:40</div>
+
+</div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
- "version": "2026-08-20",
+ "version": "2026-08-20-game-classified",
  "description": "弹幕情报源直播间注册表（虎牙 + SOOP）。房间号用于实时弹幕抓取（fetch_huya_danmu / fetch_soop_danmu），uid 用于回放/录播列表（v.huya.com 视频页）。",
  "streamers": [
   {
@@ -18,7 +18,8 @@
    "capture_status": "已实测（2026-08-19 WebSocket 实时入库）",
    "replay_status": "未验证",
    "priority": "关键（官方大样本源）",
-   "verified_at": "2026-08-19"
+   "verified_at": "2026-08-19",
+   "game": "lol"
   },
   {
    "id": "huya_we957",
@@ -38,7 +39,8 @@
    "capture_status": "已实测（2026-08-18 并发抓取 15s 样本，见 docs/data/danmu/huya/2026-08-18_890001.jsonl）",
    "replay_status": "录播已解析（长回放 6-9h/场，最新 vid=1121405272）",
    "priority": "首选",
-   "verified_at": "2026-08-18"
+   "verified_at": "2026-08-18",
+   "game": "lol"
   },
   {
    "id": "huya_maomao",
@@ -57,7 +59,8 @@
    "capture_status": "待验证（协议已由 957 实测证明通用，房间号已确认；2026-08-18 未开播）",
    "replay_status": "以赛后锐评为主",
    "priority": "高",
-   "verified_at": "2026-08-18"
+   "verified_at": "2026-08-18",
+   "game": "lol"
   },
   {
    "id": "huya_mile",
@@ -76,7 +79,8 @@
    "capture_status": "已实测（2026-08-18 并发抓取 45s 样本，见 docs/data/danmu/huya/2026-08-18_149361.jsonl）",
    "replay_status": "主页视频库为空，直播录像待确认",
    "priority": "高",
-   "verified_at": "2026-08-19"
+   "verified_at": "2026-08-19",
+   "game": "lol"
   },
   {
    "id": "huya_remember",
@@ -95,7 +99,8 @@
    "capture_status": "已登记并用于实时采集（2026-08-19）",
    "replay_status": "待验证",
    "priority": "高",
-   "verified_at": "2026-08-19"
+   "verified_at": "2026-08-19",
+   "game": "lol"
   },
   {
    "id": "huya_shuoshuo",
@@ -114,7 +119,8 @@
    "capture_status": "已打通（实时 WebSocket，TH vs Navi / KC vs GX 两场已入库）",
    "replay_status": "视频剪辑为主",
    "priority": "中",
-   "verified_at": "2026-08-18"
+   "verified_at": "2026-08-18",
+   "game": "lol"
   },
   {
    "id": "soop_lck_cl",
@@ -132,7 +138,8 @@
    "capture_status": "已打通（实时 WebSocket + VOD 历史弹幕回捞，DNS vs NS 已测）",
    "replay_status": "VOD 全量聊天可回捞（ChatLoadSplit 分片）",
    "priority": "关键（LCK 二线情报源）",
-   "verified_at": "2026-08-18"
+   "verified_at": "2026-08-18",
+   "game": "lol"
   },
   {
    "id": "huya_csboy_official",
@@ -153,7 +160,8 @@
    "capture_status": "已登记（2026-08-19 房间页验证：title=CSBOY官方直播间，CS2，EWC16强直播中）",
    "replay_status": "待验证",
    "priority": "关键（CS 官方大样本源）",
-   "verified_at": "2026-08-19"
+   "verified_at": "2026-08-19",
+   "game": "cs2"
   },
   {
    "id": "huya_csboy_mo",
@@ -174,7 +182,8 @@
    "capture_status": "已登记（2026-08-19 房间页验证：title=CSBOY-Mo官方直播间，CS2，EWC直播中；URL 别名 captainmo -> 房间 321123）",
    "replay_status": "待验证",
    "priority": "高",
-   "verified_at": "2026-08-19"
+   "verified_at": "2026-08-19",
+   "game": "cs2"
   },
   {
    "id": "huya_ti2026_stage1",
@@ -193,7 +202,8 @@
    "capture_status": "已实测（2026-08-20 WebSocket 实时入库；TI2026 Iron Wing vs Team Spirit 双源会话）",
    "replay_status": "待验证",
    "priority": "关键（TI 主舞台大样本源）",
-   "verified_at": "2026-08-20"
+   "verified_at": "2026-08-20",
+   "game": "dota2"
   },
   {
    "id": "huya_maybeee111",
@@ -212,7 +222,8 @@
    "capture_status": "已实测（2026-08-20 WebSocket 实时入库；TI2026 Iron Wing vs Team Spirit 双源会话）",
    "replay_status": "待验证",
    "priority": "高（TI 二路交叉验证源）",
-   "verified_at": "2026-08-20"
+   "verified_at": "2026-08-20",
+   "game": "dota2"
   }
  ],
  "updated_at": "2026-08-20T00:00:00+08:00"

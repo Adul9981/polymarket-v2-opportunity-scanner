@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>局中弹幕情报 · Legacy vs FURIA · G1 BP后/开局（S0 · EARLY-GAME）</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#f5f5f7;
+    font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color:#1d1d1f;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:28px 16px 60px;
+  }
+  .wrap { max-width:860px; margin:0 auto; }
+  .page-head { margin-bottom:20px; }
+  .page-head h1 { font-size:24px; font-weight:700; letter-spacing:-0.02em; }
+  .page-head .sub { font-size:13px; color:#6e6e73; margin-top:6px; }
+  .badge {
+    display:inline-block; font-size:12px; font-weight:600; color:#0071e3;
+    background:rgba(0,113,227,0.08); border:1px solid rgba(0,113,227,0.25);
+    border-radius:999px; padding:2px 10px; margin-right:8px; vertical-align:middle;
+  }
+  .badge.warn { color:#b25000; background:rgba(255,149,0,0.10); border-color:rgba(255,149,0,0.35); }
+  .card {
+    background:#fff; border-radius:18px; padding:22px 24px; margin-bottom:16px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+  }
+  .card.speed { border:1.5px solid rgba(0,113,227,0.35); }
+  h2 { font-size:17px; font-weight:700; letter-spacing:-0.01em; margin-bottom:12px; display:flex; align-items:center; }
+  h2 .no {
+    display:inline-flex; align-items:center; justify-content:center;
+    min-width:24px; height:24px; border-radius:8px; background:#0071e3; color:#fff;
+    font-size:13px; font-weight:700; margin-right:9px; padding:0 6px;
+  }
+  .scoreline {
+    font-size:14px; font-weight:600; color:#1d1d1f; background:#f5f5f7;
+    border-radius:10px; padding:9px 13px; margin-bottom:13px;
+  }
+  .scoreline .tag { font-size:11.5px; font-weight:600; color:#0071e3; margin-left:6px; }
+  ul { list-style:none; }
+  li { font-size:14px; margin-bottom:9px; padding-left:15px; position:relative; }
+  li::before { content:""; position:absolute; left:0; top:8px; width:5px; height:5px; border-radius:50%; background:#0071e3; }
+  li:last-child { margin-bottom:0; }
+  .so-what {
+    font-size:13.5px; font-weight:600; color:#0071e3; background:rgba(0,113,227,0.07);
+    border-left:3px solid #0071e3; border-radius:0 10px 10px 0; padding:10px 13px; margin-top:14px;
+  }
+  .muted { color:#6e6e73; font-size:13px; }
+  .empty { font-size:13.5px; color:#86868b; }
+  .kv { font-size:13.5px; }
+  .kv div { display:flex; padding:6px 0; border-bottom:1px solid #f0f0f2; }
+  .kv div:last-child { border-bottom:none; }
+  .kv .k { width:150px; flex:0 0 150px; color:#6e6e73; }
+  .kv .v { flex:1; font-weight:500; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { text-align:left; font-size:12px; color:#6e6e73; font-weight:600; padding:7px 8px; border-bottom:1px solid #e8e8ed; }
+  td { padding:8px; border-bottom:1px solid #f0f0f2; vertical-align:top; }
+  tr:last-child td { border-bottom:none; }
+  .pos { color:#0a8f4d; font-weight:600; }
+  .neg { color:#d70015; font-weight:600; }
+  .neu { color:#6e6e73; font-weight:600; }
+  details { margin-top:8px; font-size:12.5px; }
+  summary { cursor:pointer; color:#0071e3; font-weight:600; font-size:12.5px; }
+  details .orig { color:#6e6e73; margin-top:6px; padding-left:12px; border-left:2px solid #e8e8ed; }
+  .three { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .three .col { background:#f5f5f7; border-radius:12px; padding:13px 14px; }
+  .three .col h4 { font-size:12.5px; font-weight:700; margin-bottom:8px; color:#1d1d1f; }
+  .three .col p { font-size:12.5px; color:#6e6e73; }
+  .foot { text-align:center; font-size:12px; color:#86868b; margin-top:22px; }
+  @media (max-width:640px){ .three { grid-template-columns:1fr; } .kv .k { width:110px; flex:0 0 110px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="page-head">
+    <h1>Legacy vs FURIA · 第 1 小局弹幕情报</h1>
+    <div class="sub">
+      <span class="badge">BO5</span>
+      <span class="badge warn">局中 · 非终局，结果待定</span>
+      节点 G1｜BP 后 / 开局（S0 · EARLY-GAME）· 补发节点：流水线延迟，窗口后生成<br>
+      2026-10-15 · 数据源：huputiyu 弹幕流 · slug=cs2-hupu-1441778164564990880
+    </div>
+  </div>
+
+  <!-- 0 核心情报速览 -->
+  <div class="card speed">
+    <h2><span class="no">0</span>核心情报速览</h2>
+    <div class="scoreline">比分：—（弹幕口径·官方待回填）<span class="tag">窗口内 0 条弹幕</span></div>
+    <ul>
+      <li>弹幕窗口 ['等待首条弹幕','等待首条弹幕'] 全程空窗，0 条 / 0 人 / 0.0 条·分 → 观众侧无任何方向性信号，本节点不具备情绪定价能力（弹幕口径·待官方）→ 详 §1</li>
+      <li>队伍提及：Legacy 0 次、FURIA 0 次，双方均无正负锚 → 无法从观众侧区分强弱侧，方向板只能挂空（弹幕口径·待官方）→ 详 §5</li>
+      <li>灰信号（观众质疑）0 条，无「BP 质疑 / 选手质疑 / 赛制质疑」留痕 → 不存在被误读为负面共识的噪声源（弹幕口径·待官方）→ 详 §2</li>
+      <li>BP 锚点与选人情报：窗口内无任何英雄 / 选手映射提及，BP 后战绩情报为「无战绩情报提及」→ 选人阶段判断需完全依赖官方 BP 面板回填（单源待验证）→ 详 §3</li>
+      <li>弹幕密度峰值：无（0 条样本，无法形成分钟级峰值）→ 情绪时间轴与关键转折点均不可构建（弹幕口径·待官方）→ 详 §7</li>
+    </ul>
+    <div class="so-what">决策落点：本节点为「零样本空窗」，弹幕侧不支持任何 LONG / SHORT 方向；建议仅保留观察位，待首条弹幕落地或官方 BP / 比分回填后再定价。</div>
+  </div>
+
+  <!-- 1 结果总览 / 状态核验 -->
+  <div class="card">
+    <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+    <div class="kv">
+      <div><span class="k">比赛状态</span><span class="v">进行中 · 第 1 小局 · 局中非终局，结果待定</span></div>
+      <div><span class="k">赛制</span><span class="v">BO5（本场共 5 局）</span></div>
+      <div><span class="k">当前节点</span><span class="v">G1｜BP 后 / 开局（S0 · EARLY-GAME）· 补发节点</span></div>
+      <div><span class="k">弹幕窗口</span><span class="v">['等待首条弹幕','等待首条弹幕']</span></div>
+      <div><span class="k">样本量</span><span class="v">0 条 · 0 人 · 0.0 条/分 · 样本状态 insufficient</span></div>
+      <div><span class="k">比分</span><span class="v">—（弹幕口径·官方待回填）</span></div>
+      <div><span class="k">情报文件</span><span class="v">runtime/vps_intel/cs2-hupu-1441778164564990880_g1_bp_intel.json</span></div>
+    </div>
+    <p class="empty" style="margin-top:12px;">核验结论：窗口内无任何弹幕事件落地，规则层统计与叙事层均为空，本节点情报等级为「不可用」。</p>
+  </div>
+
+  <!-- 2 灰信号汇总 -->
+  <div class="card">
+    <h2><span class="no">2</span>灰信号汇总（观众质疑 · 非结论）</h2>
+    <p class="empty">样本不足：窗口内灰信号 0 条，无 BP 质疑、选手质疑、赛制质疑或判罚争议留痕。无内容可汇总，亦无可交叉验证的负面噪声。</p>
+  </div>
+
+  <!-- 3 BP 锚点与选人情报 -->
+  <div class="card">
+    <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+    <p class="empty">样本不足：窗口内无英雄名、选手名或位置相关提及，无法提取 BP 锚点、选人倾向或禁用优先级。</p>
+    <table style="margin-top:12px;">
+      <tr><th>项目</th><th>状态</th></tr>
+      <tr><td>本局阵容（英雄 + 选手映射）</td><td class="neu">无提及 · 待官方 BP 面板回填</td></tr>
+      <tr><td>BP 后战绩情报（选手 × 英雄胜率 / 战绩）</td><td class="neu">无战绩情报提及</td></tr>
+      <tr><td>禁用 / 抢选优先级讨论</td><td class="neu">无提及</td></tr>
+      <tr><td>版本强势英雄共识</td><td class="neu">无提及</td></tr>
+    </table>
+  </div>
+
+  <!-- 4 盘口与市场讨论 -->
+  <div class="card">
+    <h2><span class="no">4</span>盘口与市场讨论</h2>
+    <p class="empty">样本不足：窗口内无赔率、盘口、让分或资金流向相关弹幕，观众侧未形成任何市场讨论。Polymarket 侧价格未在本节点采集，不做推断。</p>
+  </div>
+
+  <!-- 5 方向性情报板 -->
+  <div class="card">
+    <h2><span class="no">5</span>方向性情报板</h2>
+    <table>
+      <tr><th>维度</th><th>内容</th><th>置信</th></tr>
+      <tr><td>正锚（看涨 Legacy）</td><td class="neu">无</td><td>弹幕口径·待官方</td></tr>
+      <tr><td>正锚（看涨 FURIA）</td><td class="neu">无</td><td>弹幕口径·待官方</td></tr>
+      <tr><td>负锚（看跌）</td><td class="neu">无</td><td>弹幕口径·待官方</td></tr>
+      <tr><td>群体共识</td><td class="neu">共识不足（0 条样本，净值为 0）</td><td>弹幕口径·待官方</td></tr>
+      <tr><td>灰信号条件预测</td><td class="neu">无条件项（无灰信号触发）</td><td>弹幕口径·待官方</td></tr>
+    </table>
+    <p class="empty" style="margin-top:12px;">情绪走势：窗口内无分钟级弹幕落地，看涨 / 看跌 / 翻转三段均不可划分；关键转折点（高光 / 翻盘 / 失误 / 送）无观众解读样本。中性弹幕抢救候选 0 条，无「模型二次判定」可纳入项。</p>
+  </div>
+
+  <!-- 6 情报含义与决策落点 -->
+  <div class="card">
+    <h2><span class="no">6</span>情报含义与决策落点</h2>
+    <ul>
+      <li>LONG 侧：无任何正锚支撑，弹幕侧不支持做多任一方 → 不建仓。</li>
+      <li>SHORT 侧：无负锚、无灰信号，亦不构成反向做空依据 → 不建仓。</li>
+      <li>观察位：等待首条弹幕落地、或官方 BP / 比分回填后重新定价；下一有效节点建议为 G1 中期（S1 · MID-GAME）。</li>
+    </ul>
+    <div class="so-what">落点：本节点维持空仓观察，情报价值为「确认无信号」而非「确认方向」。</div>
+  </div>
+
+  <!-- 7 本局复盘（证据层） -->
+  <div class="card">
+    <h2><span class="no">7</span>本局复盘（证据层）</h2>
+    <p class="empty">样本不足：无弹幕事件可构成时间线，故无「分钟 + 条数 + 样本」形式的密度峰值，亦无阶段情绪复述。</p>
+    <table style="margin-top:12px;">
+      <tr><th>时间（分钟）</th><th>条数</th><th>样本</th></tr>
+      <tr><td class="neu">—</td><td class="neu">0</td><td class="neu">无</td></tr>
+    </table>
+    <p class="empty" style="margin-top:12px;">关键转折点：无。观众共识：共识不足。禁止编造比分与结果。</p>
+  </div>
+
+  <!-- 8 队伍 / 人员画像 -->
+  <div class="card">
+    <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+    <table>
+      <tr><th>对象</th><th>提及量</th><th>正 / 负向</th><th>备注</th></tr>
+      <tr><td>Legacy（队伍）</td><td>0</td><td class="neu">中性</td><td>无弹幕提及</td></tr>
+      <tr><td>FURIA（队伍）</td><td>0</td><td class="neu">中性</td><td>无弹幕提及</td></tr>
+      <tr><td>选手个体</td><td>0</td><td class="neu">中性</td><td>无选手名提及，画像不可构建</td></tr>
+    </table>
+    <p class="empty" style="margin-top:12px;">韩 / 英弹幕信号层：窗口内无外语弹幕样本，无中文意译条目可列，无原文可折叠。</p>
+  </div>
+
+  <!-- 9 联赛规律与版本 -->
+  <div class="card">
+    <h2><span class="no">9</span>联赛规律与版本</h2>
+    <p class="empty">样本不足：窗口内无版本、英雄优先级、赛区风格或 BO5 长局节奏相关讨论。本节点不引用历史规律做外推，避免以先验替代现场信号。</p>
+  </div>
+
+  <!-- 10 预测验证回填 -->
+  <div class="card">
+    <h2><span class="no">10</span>预测验证回填</h2>
+    <table>
+      <tr><th>预测项</th><th>验证状态</th><th>说明</th></tr>
+      <tr><td>BP 阶段方向预测</td><td class="neu">待回填</td><td>无样本，无法生成预测</td></tr>
+      <tr><td>开局情绪方向预测</td><td class="neu">待回填</td><td>无样本，无法生成预测</td></tr>
+      <tr><td>灰信号触发预测</td><td class="neu">待回填</td><td>无灰信号</td></tr>
+    </table>
+  </div>
+
+  <!-- 11 数据与溯源 -->
+  <div class="card">
+    <h2><span class="no">11</span>数据与溯源</h2>
+    <div class="three">
+      <div class="col">
+        <h4>实际数据源</h4>
+        <p>huputiyu 弹幕流（窗口 ['等待首条弹幕','等待首条弹幕']，0 条 / 0 人 / 0.0 条·分）；规则层情报文件 cs2-hupu-1441778164564990880_g1_bp_intel.json。</p>
+      </div>
+      <div class="col">
+        <h4>预期数据源</h4>
+        <p>官方 BP 面板与比分回填、分钟级弹幕密度、队伍 / 选手提及计数、外语弹幕样本、Polymarket 价格快照。</p>
+      </div>
+      <div class="col">
+        <h4>缺口</h4>
+        <p>弹幕 0 条（样本 insufficient）；无 BP 锚点、无盘口讨论、无灰信号、无密度峰值、无跨源一致性可校验项。</p>
+      </div>
+    </div>
+    <p class="empty" style="margin-top:12px;">跨源一致性提示：本场仅弹幕单源可用且为空，官方数据未回填，暂无可交叉验证的一致性结论。</p>
+  </div>
+
+  <div class="foot">局中 · 非终局，结果待定 · 节点 G1｜BP 后 / 开局（S0 · EARLY-GAME）· 补发节点（流水线延迟，窗口后生成）</div>
+
+</div>
+</body>
+</html>

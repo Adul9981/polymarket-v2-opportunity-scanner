@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DK vs DNS · G1 局中弹幕情报（BO3）</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#f5f5f7;
+    font-family:-apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    color:#1d1d1f;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:24px 16px 64px;
+  }
+  .wrap { max-width:920px; margin:0 auto; }
+  header.page {
+    padding:8px 4px 20px;
+  }
+  header.page h1 {
+    font-size:26px; font-weight:700; letter-spacing:-0.02em;
+  }
+  header.page .sub {
+    margin-top:6px; font-size:13px; color:#6e6e73;
+  }
+  .badge {
+    display:inline-block; margin-top:10px; padding:4px 12px;
+    background:#fff3cd; color:#8a6100; border-radius:999px;
+    font-size:12px; font-weight:600;
+  }
+  .card {
+    background:#ffffff; border-radius:18px;
+    padding:22px 24px; margin-bottom:18px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.03);
+  }
+  .card h2 {
+    font-size:18px; font-weight:700; letter-spacing:-0.01em;
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:14px;
+  }
+  .card h2 .no {
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; border-radius:8px;
+    background:#0071e3; color:#fff; font-size:14px; font-weight:700;
+    flex:0 0 auto;
+  }
+  .card.speed {
+    background:linear-gradient(180deg,#ffffff 0%,#fbfcff 100%);
+    border:1px solid rgba(0,113,227,0.18);
+  }
+  .scoreline {
+    font-size:14px; font-weight:600; color:#0071e3;
+    background:#f0f7ff; border-radius:10px; padding:8px 14px;
+    margin-bottom:14px;
+  }
+  .scoreline span.tag {
+    font-weight:500; color:#6e6e73; font-size:12px; margin-left:6px;
+  }
+  ul.klist { list-style:none; }
+  ul.klist li {
+    position:relative; padding:9px 0 9px 18px;
+    font-size:14px; border-bottom:1px dashed #ececf0;
+  }
+  ul.klist li:last-child { border-bottom:none; }
+  ul.klist li::before {
+    content:""; position:absolute; left:0; top:17px;
+    width:7px; height:7px; border-radius:50%; background:#0071e3;
+  }
+  .so-what { color:#0071e3; font-weight:600; }
+  .src { color:#8e8e93; font-size:12px; }
+  .decision {
+    margin-top:14px; padding:12px 16px; border-radius:12px;
+    background:#1d1d1f; color:#fff; font-size:14px; font-weight:600;
+  }
+  .decision em { color:#7ec2ff; font-style:normal; }
+  p, li { font-size:14px; }
+  .muted { color:#6e6e73; font-size:13px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (max-width:640px){ .grid2 { grid-template-columns:1fr; } }
+  .mini {
+    background:#f5f5f7; border-radius:12px; padding:12px 14px;
+  }
+  .mini h4 { font-size:13px; font-weight:700; margin-bottom:6px; color:#1d1d1f; }
+  .mini p { font-size:13px; color:#3a3a3c; }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #ececf0; }
+  th { color:#6e6e73; font-weight:600; font-size:12px; }
+  td.num { font-variant-numeric:tabular-nums; }
+  .pos { color:#1a7f37; font-weight:600; }
+  .neg { color:#c62828; font-weight:600; }
+  .neu { color:#8e8e93; font-weight:600; }
+  .pill {
+    display:inline-block; padding:2px 9px; border-radius:999px;
+    font-size:11px; font-weight:600; margin-right:6px;
+  }
+  .pill.gray { background:#f2f2f7; color:#6e6e73; }
+  .pill.warn { background:#fff3cd; color:#8a6100; }
+  .pill.ok { background:#e6f4ea; color:#1a7f37; }
+  .pill.bad { background:#fdecea; color:#c62828; }
+  details {
+    margin-top:8px; font-size:13px; color:#3a3a3c;
+  }
+  details summary {
+    cursor:pointer; color:#0071e3; font-weight:600; font-size:13px;
+    list-style:none;
+  }
+  details summary::-webkit-details-marker { display:none; }
+  details summary::before { content:"▸ "; }
+  details[open] summary::before { content:"▾ "; }
+  details .orig { color:#8e8e93; font-size:12px; margin-top:4px; }
+  .timeline { list-style:none; }
+  .timeline li {
+    position:relative; padding:6px 0 6px 74px; font-size:13px;
+    border-bottom:1px dashed #ececf0;
+  }
+  .timeline li:last-child { border-bottom:none; }
+  .timeline li .t {
+    position:absolute; left:0; top:6px; font-weight:700; color:#0071e3;
+    font-variant-numeric:tabular-nums;
+  }
+  .threecol { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  @media (max-width:700px){ .threecol { grid-template-columns:1fr; } }
+  .threecol .mini h4 { color:#0071e3; }
+  .gap { color:#c62828; }
+  footer.page {
+    text-align:center; font-size:12px; color:#8e8e93; margin-top:26px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="page">
+  <h1>DK vs DNS · 第 1 小局 局中弹幕情报</h1>
+  <div class="sub">英雄联盟 · 2026-09-27 · BO3（本场共 3 局）· league id: lol-dk-dns · Polymarket slug: lol-dk-dns</div>
+  <div class="badge">局中 · 非终局，结果待定 ｜ 节点 G1｜BP 后/开局（S0 · EARLY-GAME）· 补发节点（流水线延迟，窗口后生成）</div>
+</header>
+
+<!-- 0 -->
+<div class="card speed">
+  <h2><span class="no">0</span>核心情报速览</h2>
+  <div class="scoreline">比分：DK 0 - 0 DNS（G1 进行中）<span class="tag">弹幕口径 · 官方待回填</span></div>
+  <ul class="klist">
+    <li>DK 提及 40 条、负向 6 / 正向 3，弹幕集中质疑打野节奏与轮换（「DK 的打野完全没节奏的」「dk 换了个三队打野，弱了很多」）→ <span class="so-what">DK 侧情绪偏空，阵容磨合是最大不确定项</span>（弹幕口径·待官方）<span class="src">→ 详 §5 §8</span></li>
+    <li>DNS 提及仅 6 条、正向 1，出现「DNS 中野挺尽力的」「dns 拿下」→ <span class="so-what">DNS 声量小但方向偏正，属低置信反向信号</span>（单源待验证）<span class="src">→ 详 §5 §8</span></li>
+    <li>窗口内共 484 条 / 208 人 / 17.4 条每分，情绪净 -15（正 20 / 负 35）→ <span class="so-what">整体共识偏负面，DK 是负面情绪主要承压方</span>（多源确认）<span class="src">→ 详 §1 §7</span></li>
+    <li>灰信号两条：「故意安排 各赛区内战吗」「毛出在演恶霸」→ <span class="so-what">观众质疑赛程/表演性，非结论，仅作情绪折价项</span>（弹幕口径·待官方）<span class="src">→ 详 §2</span></li>
+    <li>密度峰值 09:23 52 条（「米神 有一颗想 c 的心」）、09:24 44 条（解说争议）→ <span class="so-what">峰值由解说话题而非战局驱动，战局信号稀薄</span>（多源确认）<span class="src">→ 详 §7</span></li>
+  </ul>
+  <div class="decision">决策落点：<em>DK 侧情绪空、DNS 侧低量偏多</em>，但战局硬信号缺失，建议以「观望」为主，等 G1 首个资源团后再定方向。</div>
+</div>
+
+<!-- 1 -->
+<div class="card">
+  <h2><span class="no">1</span>结果总览 / 状态核验</h2>
+  <p>比赛 DK vs DNS，2026-09-27，BO3 第 1 小局进行中。窗口 ['2026-09-27 09:00','2026-09-27 09:27']，共 484 条弹幕、208 人、17.4 条/分，样本状态 <span class="pill ok">ready</span>。</p>
+  <p class="muted" style="margin-top:8px;">比分与胜负：官方待回填；本页一切结论均为弹幕口径，非终局。比赛叙事共识：负面（正 20 / 负 35，净 -15）。</p>
+</div>
+
+<!-- 2 -->
+<div class="card">
+  <h2><span class="no">2</span>灰信号汇总（观众质疑 · 非结论）</h2>
+  <ul class="klist">
+    <li><span class="pill gray">灰信号</span>「故意安排 各赛区内战吗」→ 对赛程编排的质疑，无证据支撑，仅作情绪折价。<span class="src">→ 详 §5</span></li>
+    <li><span class="pill gray">灰信号</span>「毛出在演恶霸」→ 指向表演性/放水猜测，属观众情绪外溢，不构成事实判断。<span class="src">→ 详 §5</span></li>
+  </ul>
+  <p class="muted" style="margin-top:10px;">两条均为观众质疑，非结论；未发现指向具体选手或具体回合的实证性指控。</p>
+</div>
+
+<!-- 3 -->
+<div class="card">
+  <h2><span class="no">3</span>BP 锚点与选人情报</h2>
+  <p>本局阵容（英雄 + 选手映射）：<span class="pill warn">样本不足</span> 窗口内无完整阵容弹幕，仅出现打野位指向——「dk 这赵信给张硕玩还有点机会」「dk 换了个三队打野，弱了很多」「DK 换了打野差了一个档次」。</p>
+  <p style="margin-top:8px;">BP 后战绩情报：<span class="pill warn">无战绩情报提及</span>（窗口内无选手×英雄胜率/历史战绩类弹幕）。</p>
+  <p class="muted" style="margin-top:8px;">可确认锚点：DK 打野位为弹幕焦点，赵信被点名讨论；DNS 侧无选人锚点。</p>
+</div>
+
+<!-- 4 -->
+<div class="card">
+  <h2><span class="no">4</span>盘口与市场讨论</h2>
+  <p><span class="pill warn">样本不足</span> 窗口内未出现赔率、盘口、让分或 Polymarket 价格类弹幕，无市场讨论可归纳。</p>
+  <p class="muted" style="margin-top:8px;">相关情绪替代指标：DK 负向 6 条（含「DK 送钱，跟上了吗」「点了点了，dk，连点三把放假了」），可视为观众对 DK 侧价值的自发看空表达，但不构成盘口依据。</p>
+</div>
+
+<!-- 5 -->
+<div class="card">
+  <h2><span class="no">5</span>方向性情报板</h2>
+  <div class="grid2">
+    <div class="mini">
+      <h4>正锚（看多方向）</h4>
+      <p>DNS：正向 1 / 负向 0，样本「DNS 中野挺尽力的」「dns 拿下」；DK 正向 3 条（如「二哥狂热 dk」）。<span class="src">→ 详 §8</span></p>
+    </div>
+    <div class="mini">
+      <h4>负锚（看空方向）</h4>
+      <p>DK：负向 6 条，集中于打野节奏与轮换（「DK 的打野完全没节奏的」「dk 最后一天小组赛就有颓势，今天就爆了」）。<span class="src">→ 详 §8</span></p>
+    </div>
+  </div>
+  <p style="margin-top:12px;"><strong>群体共识：</strong>负面（净 -15）。情绪走势：分歧(+1) → 负面(-3) → 负面(-17) → 分歧(+1) → 正面(+3)，中段负面最深，尾段小幅回正。</p>
+  <p style="margin-top:8px;"><strong>关键转折点：</strong>窗口前段由 DK 轮换质疑主导（负面加深至 -17）；尾段出现「DNS 中野挺尽力」等正向样本，情绪回正 +3，属观众对 DNS 表现的局部认可，非翻盘结论。</p>
+  <p style="margin-top:8px;"><strong>模型二次判定（中性抢救）：</strong>「dk 没了」「dk 是不是不是亚洲之星的那个阵容了」「dk 有彩笔吗」「DK 二队最恶心的队伍 必输」「说了 dk 拉坨大的没人信」「这就是 dk」判定为负面（失误/看空）；「dns 拿下」「DNS 中野挺尽力了」判定为正面（认可）；「在赛事模拟中指挥 IG 战队大获全胜」（×17）为推广刷屏，无情绪，丢弃。</p>
+  <p style="margin-top:8px;"><strong>灰信号条件预测：</strong>若后续出现赛程编排或表演性指控扩散，DK 侧情绪折价将进一步扩大；当前仅 2 条，未成规模。</p>
+</div>
+
+<!-- 6 -->
+<div class="card">
+  <h2><span class="no">6</span>情报含义与决策落点</h2>
+  <p><strong>LONG 侧：</strong>DNS 低量偏正（6 提及 / 正 1 / 负 0），若 G1 前 10 分钟 DNS 中野取得线权或首个资源，情绪可能继续向 DNS 倾斜——但样本量不足，置信低。</p>
+  <p style="margin-top:8px;"><strong>SHORT 侧：</strong>DK 负面 6 条且集中于打野节奏与轮换，若 G1 首个峡谷先锋/小龙团失利，负面情绪将快速放大，构成 DK 侧看空条件。</p>
+  <p style="margin-top:8px;"><strong>落点：</strong>本节点为补发节点（流水线延迟），战局硬信号缺失，建议维持观望；以 G1 首个资源团结果作为方向确认触发条件。</p>
+</div>
+
+<!-- 7 -->
+<div class="card">
+  <h2><span class="no">7</span>本局复盘（证据层）</h2>
+  <p class="muted">局中·非终局，以下为弹幕情绪时间线，非比赛结果。</p>
+  <ul class="timeline">
+    <li><span class="t">09:00-09:10</span>分歧(+1)：开局观望，DK/DNS 讨论混杂。</li>
+    <li><span class="t">09:10-09:18</span>负面(-3)：DK 打野轮换质疑出现（「dk 换了个三队打野，弱了很多」）。</li>
+    <li><span class="t">09:18-09:23</span>负面(-17)：负面最深段，DK 看空集中（「今天 dk 拉坨大的，你就看吧」「dk 最后一天小组赛就有颓势，今天就爆了」）。</li>
+    <li><span class="t">09:23</span>密度峰值 52 条：「米神 有一颗想 c 的心」——话题转向解说/选手评价，非战局。</li>
+    <li><span class="t">09:24</span>密度峰值 44 条：「解说比赛就解说比赛 背后说人什么意思」——解说争议驱动。</li>
+    <li><span class="t">09:24-09:27</span>分歧(+1) → 正面(+3)：DNS 侧正向样本出现（「DNS 中野挺尽力了」「dns 拿下」），情绪小幅回正。</li>
+  </ul>
+  <p style="margin-top:10px;">观众解读：负面段对应 DK 失误/轮换质疑，正面段对应 DNS 局部高光认可；无翻盘类高光样本。</p>
+</div>
+
+<!-- 8 -->
+<div class="card">
+  <h2><span class="no">8</span>队伍 / 人员画像（带提及量）</h2>
+  <table>
+    <thead>
+      <tr><th>对象</th><th>情绪</th><th class="num">提及</th><th class="num">正 / 负</th><th>样本</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>DK</td><td class="neg">负面</td><td class="num">40</td><td class="num">3 / 6</td><td>「今天 dk 拉坨大的，你就看吧」</td></tr>
+      <tr><td>IG</td><td class="neu">观望</td><td class="num">17</td><td class="num">0 / 0</td><td>推广刷屏（赛事模拟）</td></tr>
+      <tr><td>DNS</td><td class="neu">观望</td><td class="num">6</td><td class="num">1 / 0</td><td>「DNS 是哪边的队」「dns 拿下」</td></tr>
+      <tr><td>T1</td><td class="neu">观望</td><td class="num">5</td><td class="num">0 / 0</td><td>「遇到 T1 屁都不敢放」</td></tr>
+      <tr><td>KT</td><td class="neu">样本不足</td><td class="num">1</td><td class="num">0 / 0</td><td>「他们都打 KT，结果一个 2:3，一个 1:3」</td></tr>
+      <tr><td>EDG</td><td class="neu">样本不足</td><td class="num">1</td><td class="num">0 / 0</td><td>「你笑兰瑟人家打 EDG 都是虐」</td></tr>
+    </tbody>
+  </table>
+  <p class="muted" style="margin-top:10px;">人员侧：DK 打野位为唯一被点名的位置（赵信、三队打野、换打野差一档）；DNS 中野被正向提及；无其他选手个体画像样本。</p>
+</div>
+
+<!-- 9 -->
+<div class="card">
+  <h2><span class="no">9</span>联赛规律与版本</h2>
+  <p><span class="pill warn">样本不足</span> 窗口内无版本、英雄优先级、赛区规律类弹幕。</p>
+  <p class="muted" style="margin-top:8px;">可提取的弱规律：DK 被反复关联「小组赛最后一天颓势」「二队阵容」「换打野」等历史印象，属观众长期记忆投射，非本局版本判断。</p>
+</div>
+
+<!-- 10 -->
+<div class="card">
+  <h2><span class="no">10</span>预测验证回填</h2>
+  <p>本节点为 G1 BP 后/开局（S0 · EARLY-GAME）补发节点，无前置预测可回填。</p>
+  <p class="muted" style="margin-top:8px;">待回填项：G1 首个资源团结果、DK 打野节奏实际表现、DNS 中野线权——用于验证 §6 的 LONG/SHORT 触发条件。</p>
+</div>
+
+<!-- 11 -->
+<div class="card">
+  <h2><span class="no">11</span>数据与溯源</h2>
+  <div class="threecol">
+    <div class="mini">
+      <h4>实际数据源</h4>
+      <p>弹幕窗口 2026-09-27 09:00–09:27，484 条 / 208 人 / 17.4 条每分，样本状态 ready；规则层情报文件 lol-dk-dns_g1_bp_intel.json。</p>
+    </div>
+    <div class="mini">
+      <h4>预期数据源</h4>
+      <p>官方比分与阵容回填、BP 顺序、选手×英雄战绩、盘口/Polymarket 价格、分钟级战局事件。</p>
+    </div>
+    <div class="mini">
+      <h4>缺口</h4>
+      <p class="gap">官方比分未回填；完整阵容缺失；无战绩情报；无盘口讨论；无版本/联赛规律样本；KT/EDG 样本不足。</p>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:12px;">跨源一致性提示：本页仅单一弹幕源，无第二数据源交叉验证；所有方向性结论置信度低，须待官方数据回填后复核。</p>
+</div>
+
+<footer class="page">局中 · 非终局，结果待定 ｜ 生成节点 G1｜BP 后/开局（S0 · EARLY-GAME）· 补发节点</footer>
+
+</div>
+</body>
+</html>

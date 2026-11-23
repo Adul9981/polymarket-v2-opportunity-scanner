@@ -2,6 +2,10 @@
 
 本文件是"每个会话都必须知道的核心共识"。新会话启动时先读本文件，再读 docs/AGENTS.md（文档管理规范），然后按窗口类型读对应手册。详细内容按路径进入对应文档，本文件不展开。
 
+## 检索与 Token 预算
+
+本项目执行用户级 `/Users/ad/.codex/AGENTS.md` 的“检索与 Token 预算”：本地证据优先、聚焦搜索、直接来源、批量抓取、复用与压缩上下文；事实准确性始终优先于节省请求。交易执行窗口继续以实时风控和权威数据校验为最高优先。
+
 ## 项目是什么
 
 Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交易的市场现象，用固定金额网格策略买入/卖出，并把每笔交易沉淀为复盘知识库。真实下单复用外部仓库 `/Users/ad/Documents/polydata/polymarket_trading_bot_strategy` 的钱包能力，本仓库不持有私钥。
@@ -22,6 +26,9 @@ Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交
 任务 7（交易者拆解）进行中：拆解外部交易者（当前目标 e46m3）的公开行为，沉淀可复制策略；
 基础知识库 docs/forensics/KNOWLEDGE_BASE.md，策略库 docs/forensics/STRATEGY_LIBRARY.md，
 逐场拆解流程 docs/forensics/DISSECTION_GUIDE.md，案例跟踪 docs/forensics/cases/README.md。
+任务 9（政治选举情报）进行中：加拿大/以色列/美国中选的叙事幻觉雷达
+  （市场信念 x 盘口厚度 x 报价自洽 x 结构锚点），当前入口
+  docs/task/ELECTION_INTELLIGENCE_WATCH.md。
 
 ## 窗口类型（会话分工）
 
@@ -55,6 +62,8 @@ Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交
 - docs/task/TASK2_AUTOMATION_CANDIDATE_FLOW.md：自动化候选流程设计（三层框架）。
 - docs/task/INTEL_SIGNAL_LIBRARY_PLAN.md：主观情报库建设方案（解说信号 -> 画像）。
 - docs/task/DANMU_POLYMARKET_ROADMAP.md：弹幕情报 × Polymarket 行情对接路线图。
+- docs/task/ELECTION_INTELLIGENCE_WATCH.md：2026 政治选举叙事幻觉雷达（只读）。
+- docs/task/STREAM_SWITCH_HANDLING.md：直播间切场（主播临时换比赛）处理方案·待议（2026-10-04 用户标记待办）。
 - docs/data/DATA_COLLECTION_GUIDE.md：数据采集、打点与切片。
 - docs/forensics/KNOWLEDGE_BASE.md：交易者拆解基础知识库（概念/规则/账号/数据源）。
 - docs/forensics/STRATEGY_LIBRARY.md：从拆解沉淀的可复制策略（成熟度分级）。
@@ -180,7 +189,13 @@ Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交
 3. 电竞抓取方式：必须按 Esports 标签（config/market_watchlist.json 的
    esports.tag_id=64）全量拉取；禁止用"全局按时间两头翻页"替代（会漏中间段）。
 4. 联赛监控登记：所有要监控的联赛必须先登记白名单关键词并跑一次 live 验证。
-   已登记 LoL：LCK/LPL/LCP/LEC/KeSPA Cup；CS2：IEM/BLAST/EWC；Dota2：TI/ESL One。
+   已登记（2026-10-05 补齐 + 2026-10-15 扩登记，权威见 config/market_watchlist.json）：
+   LoL：LCK/LPL/LCP/LEC/KeSPA Cup/WSCI/EMEA Masters/Demacia Cup/Asian Games/LCS；
+   CS2：IEM/BLAST/EWC/ESL Pro League/Thunderpick/PGL（2026-10-15 用户确认扩登记）；
+   Dota2：TI/ESL One/BLAST Slam。
+   未纳入（2026-10-15 用户确认：CS2 三级赛事**不接**）：CS2 三线赛事（Exort/ESEA/
+   United21/Gamers Club/European Pro League/CCT/Dust2.dk/DACH/NODWIN/1win）、
+   其他游戏（R6/MLBB/HoK/Overwatch）、Valorant（一级标准预留）。
 5. 回归测试门禁：任何改动上线前 tests/test_scan_regression.py 必须全绿；
    新增联赛/新功能同步补测试，不允许出现漏抓/空结果误报类回归。
 6. 用户对数据提出异议时，优先怀疑工具：先交叉验证、先查根因，再回应；
@@ -364,7 +379,24 @@ Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交
        逐图比分含加时、赛制晋级含义、阵容完整度（stand-in）、选手角色/状态、
        HLTV 排名/H2H/地图胜率、官方规则书与赛事级别。
     （验证：2026-08-27 IC 2-0 VIT 爆冷，17:00 CST 开赛，Anubis 13:8 / Cache 16:13；
-     LQ 时间/队伍/图一准，Cache 滞后印证交叉纪律。）
+    LQ 时间/队伍/图一准，Cache 滞后印证交叉纪律。）
+25. 假赛（剧本）情报库双层成果（2026-10-01 用户定稿，最高优先级）：
+    假赛情报按两层成果建设——**① 识别准确率**（现在做：识别出的疑似场次中，
+    最终按剧本方向完成的比例；分子=兑现，分母=已结算可判定，未结算/无权威源/证据不足单列）
+    **② 收益率**（后置：按识别信号可执行进场并持有到结算的实际 ROI）。
+    a. 价格事实层自动化：tools/analyze_favorite_reversal.py 扫描
+       「赛前高胜率 → 终局/末段反转」，输出 A 赛前热门输盘（pre≥0.70 且输）/
+       B 大热输盘（≥0.75）/ C 末段反转（结算前 25% 时长仍 ≥0.50）/
+       D 单局高位崩盘（峰值 ≥0.85 后输）/ E 热门单局崩盘（进局前 ≥0.60 且局内 ≥0.85）；
+       零 token、只读、可月度复算，产物 reports/favorite_reversal_scan_<date>.{json,md,html}；
+       设计文档 docs/task/MATCH_FIX_INTEL_LIBRARY.md。
+    b. 再犯律（用户判断）：犯过一次的队伍必然再犯——灰信号点名的队伍/选手/教练
+       一律写入 gray_entities（重点标记），再犯自动升档，连续 5 场无异常才可降档。
+    c. 边界：价格异动/疑似 ≠ 认定；定性必须外部证据（官方调查 / 选手回应 /
+       盘口资金 / 后续 3-5 场表现）；对外统一"观众质疑·非结论"，
+       识别结果不得直接作为实盘下单依据。
+    d. 收益率必须用可执行进场时点，禁止用事后最优价（peak/(1-peak)）当业绩；
+       实现顺序：识别准确率闭环 → 可执行进场时点 → ROI → 资金容量。
 23. 节点切片窗口精确（2026-08-27 强化，最高优先级）：
     每个节点（赛前/BP 后/局中/局末）的情报只使用**本节点阶段时间窗**的弹幕，
     禁止混入上一局尾段、局间闲聊、更早节点数据。
@@ -431,6 +463,95 @@ Polymarket 预测市场电竞网格交易项目：从公开行情中识别可交
        （教训：KT-BRO G5 20:38 弹幕"一波了/恭喜bro"提前判 BRO 3-2，
        实际 20:45 KT 鳄鱼偷家翻盘 KT 3-2——Polymarket lol-kt-bro2
        结算 KT 99.95c 为最终仲裁，线上对话判定正确、本端判反。）
+26. 价格数据粒度与分钟级回填（2026-10-15 初版，2026-10-18 修正，最高优先级）：
+    a. 正确用法：`prices-history?market=<TOKEN>&startTs=..&endTs=..&fidelity=1`，
+       **不要传 `interval`**。实测（2026-10-18，只读）：
+       - 2 个月前的老市场 `lol-t1-gen-2026-08-16`：12h 窗口 625 点/侧、中位 **60s**；
+         24h 1345 点；7 天 9981 点（跨度 166.4h）；
+       - 60s 与 600s 序列在 63 个重叠时间戳上最大价差 **0.0000**；
+       - 错误用法：`interval=1d&fidelity=1` → 老市场 0 点（旧工具误判根因）；
+         `interval=max&fidelity=1` → 1 点；`interval=max&fidelity=10` → 600s。
+       - LoL / CS2 / Dota2 均已实测可回溯。
+    b. **结论更正：分钟级可回溯，"超过 24 小时永久不可回溯"不成立**。
+       2026-10-15 的旧结论来自固定传 `interval` 的抓取路径，已于 2026-10-18 推翻。
+       仍建议赛后当日归档（减少重试与窗口不确定性），批量回填用
+       `python3 tools/backfill_minute_snapshots.py --section <pattern json>`；
+       写 `.hires.jsonl`，**不覆盖**既有 600s 序列。
+    c. 粒度必须在消费端显式可见：条目字段 `granularity`（`60s`/`600s`/`mixed`）
+       + 页面"粒度"标签；判定**按实际采样间隔（median spacing）归桶**，
+       **禁止靠文件名判断**——赛后不久抓取的普通序列本身就是 60s，
+       并非只有 `.hires.jsonl` 才是 60s（2026-10-15 教训：曾按文件名把 12 场中
+       的 10 场真实 60s 场次错分进 600s 组，分层统计失真）。
+       任何跨场次统计、形态比较、期望值回测，**先按粒度分层**，
+       禁止把 600s 与 60s 混在一起下结论（600s 会系统性吃掉 A1/A6 快速 V 型）；
+       两档的 n/ROI 差异含「采样精度 + 窗口长度 + 选择性偏差」三重来源，
+       **不得互相推证**。工具：build_pattern_library 写 `granularity`；
+       build_pattern_index `dip_buy` 与 pattern_library_stats `--by-granularity`
+       各自按实际间隔分层（60s 可覆盖赛前与赛中，窗口按请求的 startTs/endTs）。
+    d. 探边界用 `tools/probe_clob_granularity.py`（--no-pool 走 CORS 兜底；
+       出口池为空时探测本身会拖到分钟级）；离线复算/解析核对禁止重复联网。
+       （回归测试：tests/test_pattern_granularity.py。）
+27. CS2 事实层交叉核对通道（2026-10-15 落地，承接规则 24）：
+    a. Liquipedia 通道 = `tools/fetch_cs2_liquipedia.py`
+       （urllib TLS 失败自动退回 `curl -sS --compressed`，--raw-file 支持离线复算）；
+       配对核对 = `tools/crosscheck_cs2_liquipedia.py`（按队伍对 + 日期 ±1 天）。
+    b. **解析红线（踩过两次）**：
+       ① 模板名必须精确匹配（`{{Matchlist}}` 不是 `{{Match}}`，前缀匹配会把整块吞掉）；
+       ② 逐图比分必须读加时字段 `o{k}t1t/o{k}t1ct/o{k}t2t/o{k}t2ct`，
+          只读常规时间会把 16:12 读成 "12:12" 伪平局 → 误报"与 Polymarket 不一致"。
+    c. 战绩：ESL Pro League S24 41 场 41/41 胜方一致（2026-10-15）；
+       仍待做 HLTV 层（阵容 / 地图禁选 / 排名）。
+    d. 三级赛事口径（用户 2026-10-15 指令）：**不接**（ESEA/CCT/Dust2.dk/United21 等），
+       回归测试 tests/test_scan_regression.py 已加拒收用例；
+       Thunderpick / PGL 已扩登记为一级。
+
+28. 赛事分级与关键比赛过滤（2026-10-15 用户指令，最高优先级，统计口径层）：
+    a. **所有形态 / 统计 / 筛选 / 展示必须带赛事分级标签**，禁止把一级与次级混算后
+       当成一级赛事的结论。唯一权威 = `config/esports_tiers.json`（规则）
+       + `tools/esports_tier.py`（判定：`tier_of(league_raw, game)`），回归测试
+       tests/test_esports_tier.py。
+    b. 三级口径：**一级（关键）** = LCK / LPL / LEC / LCP / LCS / KeSPA Cup / 德杯 /
+       国际赛；CS2 = ESL Pro League / IEM / BLAST / EWC / Thunderpick / PGL。
+       **二级** = EMEA Masters、VCS、CBLOL、TCL、LFL、Prime League 等区域联赛 +
+       LCK CL / NACL 等次级青训。**其他** = 资格赛 / 升降级赛（Promotion）/ Play-In /
+       未标注。
+    c. **判定顺序必须是 其他 -> 一级 -> 二级**：`Esports World Cup Open Qualifier`
+       含一级关键词，顺序反了会把资格赛算进一级（同规则 27b 的教训）。
+    d. **库口径 = 只收一级（2026-10-15 用户定稿："EMEA 和小区域联赛的数据不要了"）**：
+       形态库只统计一级赛事；二级与资格赛/升降级赛从统计口径剔除
+       （全量口径实算：LoL −557 场、CS2 −1965 场）。原始快照仍留 docs/data/snapshots、
+       旧全分级 JSON 留在 reports/ 作存档，**不参与出数**。
+       一级样本不足时必须如实显示，禁止用次级样本顶替（"无样本不硬撑"同一原则）。
+    e. 现库：`reports/pattern_shapes_{lol,cs2}_tier1_2026-07_2026-10.json`
+       （LoL 231 场 / CS2 62 场）；页面出口 `reports/pattern_taxonomy.html`（第零节含剔除量）、
+       `reports/pattern_playbook.html`（形态速查）、
+       `reports/pattern_charts_{lol,cs2}_tier1_2026-07_2026-10.html`（真实曲线）。
+       新增赛事/联赛先登记 tiers 配置并跑 tests/test_esports_tier.py，再进统计。
+    f. **一级关键词必须覆盖赛季真实命名（2026-10-15 教训，最高优先级）**：
+       2026 赛季实际写作 `LCK Round 3-4 Legend/Rise Group`、`LCK Play-In`、
+       `LPL Group Ascend/Nirvana`、`LCP Swiss Stage`、LoL 侧 `Esports World Cup Group X`，
+       旧关键词只列了 Playoffs/Regular，导致这批关键比赛被静默判成"其他"剔除
+       （曾少收 123 场一级样本）。新增/改动分级规则必须同时补
+       tests/test_esports_tier.py 用例；`Play-In` 不能一律当"其他"
+       （LCK/MSI 的 Play-In 属一级赛程，TCL/LCK CL 的由二级关键词接住）。
+    g. **覆盖完整性（2026-10-15 教训）**：某区间本地快照存在但没有赛事标题索引时，
+       整批会被判"其他"漏收——重建前先确认该区间的 league_raw 覆盖率
+       （`runtime/pm_backfill/league_raw_*.json`），缺口先联网补标题再入库。
+
+29. 形态决策台云端交付原则（2026-11-08 用户指令，最高优先级）：
+    a. 形态决策台、赔率采集、实时快照、形态候选或页面逻辑的任何更新，
+       **本地验证通过只是中间态，不计为交付**；必须同步到首尔 VPS
+       `root@158.247.214.175` 并完成线上发布。
+    b. VPS 运行目录 = `/opt/danmu-intel/pattern-decision/live`；实时任务 =
+       `pattern-decision-live.timer`（每 2 分钟）。页面同时安装到
+       `/opt/danmu-intel/site_repo/intel/` 与 `/var/www/danmu-pulse/intel/`，
+       再由站点发布链同步 GitHub Pages。
+    c. 部署前必须先备份目标文件；只替换形态决策台相关文件，禁止顺手覆盖其他情报库内容。
+    d. 验收必须同时满足：service `Result=success` / `ExecMainStatus=0`、
+       timer 为 active、快照 `generated_at` 新鲜且训练样本未回退、
+       GitHub Pages 页面包含本次新增逻辑。任一项不满足 = 未完成部署。
+    e. 若 Mac 休眠、断网或抓取脚本未运行，本地页面不能作为实时数据源；
+       实时赔率必须由 VPS 定时采集并生成 `pattern_decision_live.json`。
 
 ## 数据同步约定（2026-08-18 起，全项目通用）
 

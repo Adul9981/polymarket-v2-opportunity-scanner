@@ -112,6 +112,7 @@ async def collect(
     status_path: Path | None = None,
     source: str = "",
     first_message_timeout: int = 120,
+    game: str = "",
 ) -> int:
     sys.path.insert(0, str(DANMU_LIB))
     from danmaku import DanmakuClient  # local import: external lib
@@ -120,6 +121,7 @@ async def collect(
     status = {
         "schema_version": 1,
         "platform": "huya",
+        "game": game,
         "source": source or url.rstrip("/").split("/")[-1],
         "url": url,
         "state": "preflight",
@@ -144,17 +146,37 @@ async def collect(
     count = 0
     if not room_info["page_live"]:
         # offline room: heartbeat + offline_waiting, do not connect (the lib
-        # crashes with NoneType.group() on offline pages)
+        # crashes with NoneType.group() on offline pages). Re-check live status
+        # every ~60s so a room that goes live mid-session is picked up
+        # (2026-10-30 fix: CSBOY 早上未开播、晚上开播 MOUZ-FURIA，采集器一直傻等).
+        recheck_sec = 60.0
+        last_check = time.time()
         try:
             while not seconds or time.time() - start < seconds:
                 await asyncio.sleep(10)
                 status["heartbeat_at"] = utc_now()
                 status["state"] = "offline_waiting"
                 status["warning"] = "页面显示未开播，继续等待；不得判定为无弹幕"
-                write_status(status_path, status)
+                if time.time() - last_check >= recheck_sec:
+                    last_check = time.time()
+                    try:
+                        fresh = await fetch_room_info(url)
+                    except Exception:
+                        write_status(status_path, status)
+                        continue
+                    room_info = fresh
+                    status.update(room_info)
+                    status["heartbeat_at"] = utc_now()
+                    if room_info["page_live"]:
+                        status["state"] = "live_waiting_danmaku"
+                        status["warning"] = None
+                        write_status(status_path, status)
+                        break
+                    write_status(status_path, status)
         except KeyboardInterrupt:
             pass
-        return 0
+        if not room_info["page_live"]:
+            return 0
 
     q: asyncio.Queue = asyncio.Queue()
     dc = DanmakuClient(url, q)
@@ -175,6 +197,7 @@ async def collect(
                         "uid": m.get("uid", 0),
                         "text": m["content"],
                         "source": status["source"],
+                        "game": game,
                         "room_id": room_info["room_id"],
                     }
                     print(f"[{count}] {m['name']}: {m['content']}", flush=True)
@@ -246,6 +269,7 @@ def main() -> int:
     parser.add_argument("--out", default=None, help="JSONL 输出路径（可选，边抓边写）")
     parser.add_argument("--status", default=None, help="健康状态 JSON（原子更新）")
     parser.add_argument("--source", default="", help="稳定来源标识，写入每条弹幕")
+    parser.add_argument("--game", default="", help="游戏标签 lol/cs2/dota2，写入每条记录")
     parser.add_argument(
         "--first-message-timeout",
         type=int,
@@ -263,6 +287,7 @@ def main() -> int:
                 Path(args.status) if args.status else None,
                 args.source,
                 args.first_message_timeout,
+                args.game,
             )
         )
     except Exception as exc:

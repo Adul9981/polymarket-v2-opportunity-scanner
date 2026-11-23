@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "platform": "huya",
+  "game": "cs2",
+  "source": "huya_csboy_official",
+  "url": "https://www.huya.com/123321",
+  "state": "live_waiting_danmaku",
+  "started_at": "2026-10-16T16:23:05+00:00",
+  "heartbeat_at": "2026-10-16T16:23:14+00:00",
+  "last_message_at": null,
+  "message_count": 0,
+  "warning": null,
+  "error": null,
+  "recent_msgs": [],
+  "room_id": 123321,
+  "channel_id": 10748220,
+  "nickname": "CSBOY",
+  "introduction": "【直播】1点BB-Legacy",
+  "room_name": "",
+  "page_live": true,
+  "checked_at": "2026-10-16T16:23:05+00:00"
+}

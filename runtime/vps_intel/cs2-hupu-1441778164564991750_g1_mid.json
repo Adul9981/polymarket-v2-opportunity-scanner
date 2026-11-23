@@ -1,0 +1,11 @@
+{
+  "match": "cs2-hupu-1441778164564991750",
+  "game": 1,
+  "phase": "mid",
+  "slice_rows": 0,
+  "report": "/home/liucong/polymarket-v2-opportunity-scanner/reports/intel_danmu_FURIA-Aurora_2026-10-17_g1_mid.html",
+  "report_exists": true,
+  "codex_rc": 0,
+  "source": "deepseek",
+  "generated_at": "2026-10-17T15:03:40+00:00"
+}
