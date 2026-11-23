@@ -34,6 +34,16 @@ def short_title(title: str) -> str:
     return (m.group(1).strip() if m else title).strip()
 
 
+def detail_href(row: dict) -> str:
+    """Homepage match row target: direct pre-match detail, else today's intel."""
+    href = str(row.get("_prematch_href") or "").strip()
+    if not href:
+        return "intel/today.html"
+    if href.startswith(("http://", "https://", "intel/", "../", "/")):
+        return href
+    return f"intel/{href}"
+
+
 def main() -> None:
     import argparse
     ap = argparse.ArgumentParser()
@@ -85,10 +95,11 @@ def main() -> None:
         for r in focus:
             st = status_of(r)
             badge = {"upcoming": "未开始", "live": "进行中", "ended": "已结束"}.get(st, st)
+            href = detail_href(r)
             mrows += (
-                f'<div class="mrow" style="cursor:default"><span class="lg">{esc(r["league"])}</span>'
+                f'<a class="mrow" href="{esc(href)}"><span class="lg">{esc(r["league"])}</span>'
                 f'<span class="tm">{esc(short_title(r["title"]))}</span>'
-                f'<span class="st">{esc(r.get("time", ""))} · {badge}</span></div>'
+                f'<span class="st">{esc(r.get("time", ""))} · {badge} · 查看 →</span></a>'
             )
     else:
         mrows = '<div class="mrow" style="cursor:default"><span class="lg">-</span><span class="tm">今日暂无已确认场次</span><span class="st"></span></div>'

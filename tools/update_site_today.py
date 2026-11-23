@@ -618,6 +618,18 @@ def main() -> None:
             f"+{official_tomorrow_added} tomorrow"
         )
 
+    # The homepage consumes this snapshot directly. Preserve its link to the
+    # matching pre-match detail page so a match row is actionable there too.
+    for row in rows:
+        prematch = prematch_for(
+            row.get("title", ""),
+            row.get("date", ""),
+            prematch_index,
+            prematch_fixtures,
+        )
+        if prematch:
+            row["_prematch_href"] = prematch.get("_prematch_href") or ""
+
     out_json = Path("runtime/intel_today.json")
     out_json.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(

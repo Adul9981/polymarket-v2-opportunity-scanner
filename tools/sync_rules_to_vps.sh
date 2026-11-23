@@ -68,6 +68,7 @@ FILES=(
   "tools/inject_pattern_nav.py"
   "tools/vps_self_check.py"
   "tools/update_site_today.py"
+  "tools/build_home_today.py"
   "tools/export_today_matches.py"
   "tools/fetch_official_lol_schedule.py"
   "tools/build_history_index.py"
