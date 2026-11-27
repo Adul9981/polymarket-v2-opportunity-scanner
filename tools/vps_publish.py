@@ -51,6 +51,12 @@ PATTERNS = (
 PATTERN_WORKSPACE = (
     ROOT / "pattern-decision" / "live" / "reports" / "pattern_decision_workspace.html"
 )
+PATTERN_PAYLOAD = (
+    ROOT / "pattern-decision" / "live" / "reports" / "pattern_decision_payload.json"
+)
+PATTERN_PAYLOAD_GZIP = (
+    ROOT / "pattern-decision" / "live" / "reports" / "pattern_decision_payload.json.gz"
+)
 PATTERN_ATLAS = ROOT / "pattern-decision" / "live" / "reports" / "pattern_atlas.html"
 
 
@@ -558,6 +564,16 @@ def main(argv: list[str] | None = None) -> int:
         copied += 1
     else:
         print(f"[publish] WARN: pattern workspace missing: {PATTERN_WORKSPACE}", flush=True)
+    if PATTERN_PAYLOAD.exists():
+        shutil.copy2(PATTERN_PAYLOAD, target / PATTERN_PAYLOAD.name)
+        copied += 1
+    else:
+        print(f"[publish] WARN: pattern payload missing: {PATTERN_PAYLOAD}", flush=True)
+    if PATTERN_PAYLOAD_GZIP.exists():
+        shutil.copy2(PATTERN_PAYLOAD_GZIP, target / PATTERN_PAYLOAD_GZIP.name)
+        copied += 1
+    else:
+        print(f"[publish] WARN: compressed pattern payload missing: {PATTERN_PAYLOAD_GZIP}", flush=True)
     if PATTERN_ATLAS.exists():
         shutil.copy2(PATTERN_ATLAS, target / PATTERN_ATLAS.name)
         copied += 1

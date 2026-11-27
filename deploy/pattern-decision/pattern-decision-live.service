@@ -1,0 +1,16 @@
+[Unit]
+Description=Refresh Polymarket pattern decision live snapshot (read-only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/danmu-intel/pattern-decision/live
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/bin/bash /opt/danmu-intel/pattern-decision/live/runtime/refresh_pattern_decision_cloud.command
+Nice=10
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

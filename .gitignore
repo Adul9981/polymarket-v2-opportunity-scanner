@@ -16,6 +16,10 @@ runtime/markers/
 reports/opportunity_scan*.md
 reports/diag_*_scan_*.md
 
+# Generated pattern-decision browser payloads (large; rebuilt from source data)
+reports/pattern_decision_payload.json
+reports/pattern_decision_payload.json.gz
+
 # Raw bulk data (too large for GitHub / not product logic): keep intel/ structured library
 docs/forensics/data/
 docs/data/danmu/

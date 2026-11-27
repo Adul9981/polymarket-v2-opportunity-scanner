@@ -1,0 +1,13 @@
+[Unit]
+Description=Refresh the pattern decision live snapshot every two minutes
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=2min
+AccuracySec=10s
+RandomizedDelaySec=5s
+Persistent=true
+Unit=pattern-decision-live.service
+
+[Install]
+WantedBy=timers.target
