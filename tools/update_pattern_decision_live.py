@@ -16,6 +16,7 @@ import argparse
 import concurrent.futures
 import datetime as dt
 import difflib
+import gzip
 import json
 import math
 import os
@@ -108,13 +109,23 @@ def http_json(url: str, params: dict[str, Any] | None = None, *, tries: int = 4,
         url = f"{url}?{urllib.parse.urlencode(params)}"
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "polymarket-pattern-decision-live/1.0", "Accept": "application/json"},
+        headers={
+            "User-Agent": "polymarket-pattern-decision-live/1.0",
+            "Accept": "application/json",
+            # Gamma /events requires gzip when limit > 50 and returns
+            # HTTP 406 {"error":"gzip_required"} otherwise.
+            "Accept-Encoding": "gzip",
+        },
     )
     last_error: Exception | None = None
     for attempt in range(max(1, tries)):
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:  # noqa: S310
-                return json.loads(response.read().decode("utf-8"))
+                raw = response.read()
+                encoding = response.headers.get("Content-Encoding", "").lower()
+                if "gzip" in encoding or raw.startswith(b"\x1f\x8b"):
+                    raw = gzip.decompress(raw)
+                return json.loads(raw.decode("utf-8"))
         except Exception as exc:  # noqa: BLE001 - bounded public read retries
             last_error = exc
             if getattr(exc, "code", None) in (403, 451):

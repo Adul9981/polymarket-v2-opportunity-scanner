@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import gzip
 import json
 import sys
 from pathlib import Path
@@ -12,6 +13,34 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 import update_pattern_decision_live as live  # noqa: E402
 import publish_pattern_live_snapshot as publisher  # noqa: E402
+
+
+def test_gamma_events_request_requires_and_decodes_gzip(monkeypatch):
+    expected = {"events": [{"slug": "live-match"}]}
+    encoded = gzip.compress(json.dumps(expected).encode("utf-8"))
+    seen = {}
+
+    class Response:
+        headers = {"Content-Encoding": "gzip"}
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def read(self):
+            return encoded
+
+    def fake_urlopen(request, timeout):
+        seen["accept_encoding"] = request.get_header("Accept-encoding")
+        seen["timeout"] = timeout
+        return Response()
+
+    monkeypatch.setattr(live.urllib.request, "urlopen", fake_urlopen)
+
+    assert live.http_json(f"{live.GAMMA}/events", {"limit": 100}) == expected
+    assert seen["accept_encoding"] == "gzip"
 
 
 def market(slug: str, question: str, sports_type: str) -> dict:
