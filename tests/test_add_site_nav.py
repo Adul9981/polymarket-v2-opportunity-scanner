@@ -57,12 +57,21 @@ def test_pattern_pages_get_current_page_nav_state():
     assert "max-width:1280px" in atlas
 
 
-def test_analytics_tab_is_linked_and_active():
+def test_analytics_is_a_top_level_nav_entry():
     nav = add_site_nav.nav_html("", "analytics")
     assert "访问统计" in nav
     assert "intel/analytics.html" in nav
     assert add_site_nav.kind_of("analytics.html") == "analytics"
     assert add_site_nav.active_of("analytics") == "analytics"
+
+
+def test_navigation_keeps_user_selected_areas_and_removes_disabled_ones():
+    nav = add_site_nav.nav_html("", "search")
+    for label in ("今日情报", "比赛局势", "历史库", "赛前情报", "FAQ", "形态决策台", "形态图谱", "访问统计", "搜索"):
+        assert label in nav
+    assert 'href="intel/search.html"' in nav
+    assert "地图战绩" not in nav
+    assert "验证闭环" not in nav
 
 
 def test_inject_file_supports_single_page_systemd_hooks_and_is_idempotent(tmp_path):
