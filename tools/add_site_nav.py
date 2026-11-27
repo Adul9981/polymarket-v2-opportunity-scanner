@@ -56,6 +56,9 @@ def _clean(text: str) -> str:
 
 
 def nav_html(pre: str, active: str = "") -> str:
+    if active:
+        active = active_of(active)
+
     def link(href: str, label: str, key: str) -> str:
         on = (
             ' style="display:inline-flex;align-items:center;height:32px;padding:0 11px;'
@@ -76,14 +79,12 @@ def nav_html(pre: str, active: str = "") -> str:
     today_h = "today.html" if in_sub else "intel/today.html"
     situation_h = "match_situation.html" if in_sub else "intel/match_situation.html"
     hist_h = "history.html" if in_sub else "intel/history.html"
-    prof_h = "intel_profiles_index.html" if in_sub else "intel/intel_profiles_index.html"
-    maps_h = "intel_map_records.html" if in_sub else "intel/intel_map_records.html"
-    ver_h = "intel_gray_verification_stats.html" if in_sub else "intel/intel_gray_verification_stats.html"
-    pattern_h = "pattern_decision_workspace.html" if in_sub else "intel/pattern_decision_workspace.html"
-    atlas_h = "pattern_atlas.html" if in_sub else "intel/pattern_atlas.html"
     prematch_h = "intel_prematch.html" if in_sub else "intel/intel_prematch.html"
     help_h = "intel_help.html" if in_sub else "intel/intel_help.html"
+    pattern_h = "pattern_decision_workspace.html" if in_sub else "intel/pattern_decision_workspace.html"
+    atlas_h = "pattern_atlas.html" if in_sub else "intel/pattern_atlas.html"
     analytics_h = "analytics.html" if in_sub else "intel/analytics.html"
+    search_h = "search.html" if in_sub else "intel/search.html"
     sub_h = pre + "subscribe.html"
     return (
         f'<nav aria-label="弹幕情报库主导航" style="position:sticky;top:0;z-index:20;'
@@ -91,26 +92,25 @@ def nav_html(pre: str, active: str = "") -> str:
         f'border-bottom:1px solid rgba(0,0,0,.08);font-family:-apple-system,BlinkMacSystemFont,'
         f'\'PingFang SC\',sans-serif;box-sizing:border-box">'
         f'<div style="max-width:1280px;margin:0 auto;padding:9px 16px;display:flex;gap:5px;'
-        f'align-items:center;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch">'
+        f'align-items:center;flex-wrap:wrap;overflow-x:auto;scrollbar-width:none;'
+        f'-webkit-overflow-scrolling:touch">'
         f'<a href="{home_h}" style="display:inline-flex;align-items:center;color:#1d1d1f;'
         f'text-decoration:none;font-weight:800;font-size:14px;margin-right:auto;white-space:nowrap">'
         f'<span style="display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;'
         f'background:linear-gradient(135deg,#0071e3,#5ac8fa);color:#fff;font-size:11px;font-weight:800;'
         f'margin-right:7px;box-shadow:0 4px 10px rgba(0,113,227,.18)">DI</span>弹幕情报库</a>'
-        f'{link(home_h, "首页", "home")}'
         f'{link(today_h, "今日情报", "today")}'
         f'{link(situation_h, "比赛局势", "situation")}'
-        f'{link(hist_h, "历史情报库", "history")}'
+        f'{link(hist_h, "历史库", "library")}'
         f'{divider()}'
         f'{link(prematch_h, "赛前情报", "prematch")}'
-        f'{link(help_h, "问答 FAQ", "help")}'
+        f'{link(help_h, "FAQ", "help")}'
+        f'{divider()}'
         f'{link(pattern_h, "形态决策台", "pattern")}'
         f'{link(atlas_h, "形态图谱", "pattern-atlas")}'
         f'{divider()}'
-        f'{link(prof_h, "四维画像", "profiles")}'
-        f'{link(maps_h, "地图战绩", "maps")}'
-        f'{link(ver_h, "验证闭环", "verification")}'
         f'{link(analytics_h, "访问统计", "analytics")}'
+        f'{link(search_h, "搜索", "search")}'
         + ("" if free_mode() else link(sub_h, "订阅", "subscribe"))
         + '</div></nav>'
     )
@@ -164,16 +164,18 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
         "help": "问答与使用指南",
         "today": "今日情报",
         "situation": "比赛局势",
-        "history": "历史情报库",
+        "history": "历史库",
         "market": "市场链接",
-        "profiles": "四维画像库",
+        "profiles": "四维画像",
         "maps": "地图战绩",
         "verification": "灰信号·验证闭环",
-        "analytics": "访问用户统计",
+        "analytics": "访问统计",
         "stats": "数据统计",
         "subscribe": "订阅",
-        "report": "历史情报库",
-        "shell": "今日比赛",
+        "research": "形态研究",
+        "search": "搜索",
+        "report": "历史库",
+        "shell": "今日情报",
     }
     label = labels.get(kind, "")
     if not label:
@@ -185,16 +187,18 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
         "pattern-atlas": "pattern_decision_workspace.html",
         "prematch": None,
         "help": None,
-        "today": "today.html",
-        "situation": "match_situation.html",
-        "history": "history.html",
-        "market": "market_links.html",
-        "profiles": "profiles.html",
-        "maps": "intel_profiles_index.html",
-        "verification": "verification_traces.html",
+        "today": None,
+        "situation": "today.html",
+        "history": None,
+        "market": None,
+        "profiles": None,
+        "maps": None,
+        "verification": None,
         "analytics": None,
-        "stats": "stats.html",
-        "subscribe": "subscribe.html",
+        "stats": None,
+        "subscribe": None,
+        "research": None,
+        "search": None,
         "report": "history.html",
         "shell": "today.html",
     }
@@ -204,9 +208,9 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
             parents["shell"] = "today.html"
         else:
             parents["shell"] = "history.html"
-            label = "历史情报库"
+            label = "历史库"
     parent_link = parents.get(kind)
-    parent_label = "形态决策台" if kind == "pattern-atlas" else label
+    parent_label = label
     # 父级页与当前页同目录（intel/ 内页面 -> intel/history.html），
     # 不能再加 pre("../")——教训 2026-08-26：曾拼成 ../history.html 导致 404
     label_html = (
@@ -215,7 +219,20 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
         else f'<b style="color:#1d1d1f">{label}</b>'
     )
     # 情报页/壳加当前标题
-    cur_title = "形态图谱" if kind == "pattern-atlas" else title
+    fixed_titles = {
+        "pattern": "形态决策台",
+        "pattern-atlas": "形态图谱",
+        "profiles": "四维画像",
+        "maps": "地图战绩",
+        "help": "问答与使用指南",
+        "situation": "比赛局势",
+        "prematch": "赛前情报",
+        "research": "",
+        "search": "",
+    }
+    cur_title = fixed_titles.get(kind, title)
+    if cur_title == label:
+        cur_title = ""
     cur = f" › <b style=\"color:#1d1d1f\">{cur_title}</b>" if cur_title else ""
     return (
         f'<div style="max-width:1280px;margin:4px auto 14px;padding:0 16px;'
@@ -225,8 +242,6 @@ def breadcrumb_html(pre: str, kind: str, title: str = "", name: str = "", text: 
 
 
 def kind_of(name: str) -> str:
-    if name == "subscribe.html" and free_mode():
-        return "root"
     mapping = {
         "index.html": "root",
         "subscribe.html": "subscribe",
@@ -238,6 +253,8 @@ def kind_of(name: str) -> str:
         "profiles.html": "profiles",
         "verification_traces.html": "verification",
         "intel_map_records.html": "maps",
+        "research.html": "research",
+        "search.html": "search",
         "pattern_decision_workspace.html": "pattern",
         "pattern_atlas.html": "pattern-atlas",
         "intel_prematch.html": "prematch",
@@ -263,25 +280,27 @@ def active_of(kind: str, name: str = "", text: str = "") -> str:
     if kind == "shell":
         # 壳页导航高亮跟面包屑同一口径：今天的比赛高亮「今日情报」，
         # 历史比赛（含文件名无日期但内容也无日期的壳）高亮「历史情报库」。
-        return "today" if _shell_is_today(name, text) else "history"
+        return "today" if _shell_is_today(name, text) else "library"
     return {
         "today": "today",
         "situation": "situation",
-        "history": "history",
-        "market": "market",
+        "history": "library",
+        "market": "library",
         "subscribe": "subscribe",
-        "root": "home",
-        "report": "history",
+        "root": "",
+        "report": "library",
         "shell": "today",
-        "profiles": "history",
-        "maps": "maps",
-        "verification": "history",
-        "stats": "home",
+        "profiles": "",
+        "maps": "",
+        "verification": "",
+        "stats": "today",
         "pattern": "pattern",
         "pattern-atlas": "pattern-atlas",
         "prematch": "prematch",
         "help": "help",
         "analytics": "analytics",
+        "research": "",
+        "search": "search",
     }.get(kind, "")
 
 

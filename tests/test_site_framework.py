@@ -165,13 +165,13 @@ def test_shell_nav_highlight_follows_date() -> None:
         datetime.timezone(datetime.timedelta(hours=8))
     ).date().isoformat()
     cases = {
-        "match_2026-08-23_bfx_ns.html": "history",           # 历史（日期在开头）
-        "match_cs2-furia-pain-2026-08-26.html": "history",   # 历史（日期在末尾）
-        "match_cs2-hupu-1441778164564990880.html": "history",  # 无日期 -> 历史
-        "match_lol-dk-dns.html": "history",                  # 无日期 -> 历史
+            "match_2026-08-23_bfx_ns.html": "library",           # 历史（日期在开头）
+            "match_cs2-furia-pain-2026-08-26.html": "library",   # 历史（日期在末尾）
+            "match_cs2-hupu-1441778164564990880.html": "library",  # 无日期 -> 历史
+            "match_lol-dk-dns.html": "library",                  # 无日期 -> 历史
         f"match_{today}_a_b.html": "today",                  # 今天
         f"match_x-y-{today}.html": "today",                  # 今天
-        "intel_danmu_BRO-LGD_2026-10-13_g1_end.html": "history",  # 节点页不受影响
+            "intel_danmu_BRO-LGD_2026-10-13_g1_end.html": "library",  # 节点页归比赛情报库
     }
     for name, want in cases.items():
         assert active_of(kind_of(name), name) == want, f"{name}: active={active_of(kind_of(name), name)} != {want}"
@@ -197,11 +197,11 @@ def test_hupu_shell_uses_content_date_and_h1() -> None:
     # 内容是今天的日期 -> 高亮「今日情报」
     assert active_of(kind_of(name), name, content) == "today"
     # 文件名/内容都无日期 -> 仍归历史（旧口径，不误报今日）
-    assert active_of(kind_of(name), name) == "history"
+    assert active_of(kind_of(name), name) == "library"
     # 历史日期 -> 历史
     assert (
         active_of(kind_of(name), name, '<div class="sub">CS2 · 2026-10-24 · x</div>')
-        == "history"
+            == "library"
     )
     # 面包屑标题从页面 <h1> 取，不再出现 "hupu vs <id>"
     assert _shell_title(name, content) == "Spirit vs TYLOO"

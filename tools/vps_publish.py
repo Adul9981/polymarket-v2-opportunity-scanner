@@ -31,6 +31,7 @@ from add_paywall import page_key as paywall_page_key  # noqa: E402
 from add_site_nav import inject_all as nav_inject  # noqa: E402
 from add_stats_track import inject_all as track_inject  # noqa: E402
 import analytics_publish  # noqa: E402
+import build_site_search as site_search  # noqa: E402
 
 ROOT = Path("/opt/danmu-intel")
 REPORTS = ROOT / "reports"
@@ -606,6 +607,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"[publish] 清理未进行 G5 页: {p.name}", flush=True)
         except OSError:
             pass
+    search_counts = site_search.build_all(REPO)
+    print(f"[publish] site search rebuilt: {search_counts}", flush=True)
     nav_inject(REPO)
     favicon_inject(REPO)
     track_inject(REPO)

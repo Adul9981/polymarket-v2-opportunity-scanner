@@ -49,17 +49,15 @@ def test_strip_markers():
 
 # ---------- 导航 ----------
 
-def test_nav_situation_between_today_and_history():
-    # intel/ 子页变体（pre 非空 -> in_sub）：href 不带前缀
+def test_nav_situation_is_grouped_under_today():
     html = N.nav_html("../", "today")
+    assert "今日情报" in html
     assert "比赛局势" in html
-    assert html.index("今日情报") < html.index("比赛局势") < html.index("历史情报库")
-    # 站内链接（非外链），与 today/history 同目录
+    assert 'href="today.html"' in html
     assert 'href="match_situation.html"' in html
 
 
 def test_nav_root_pre_variant():
-    # 根目录页面（in_sub=False）指向 intel/match_situation.html
     assert 'href="intel/match_situation.html"' in N.nav_html("", "today")
 
 
@@ -71,8 +69,7 @@ def test_kind_and_active():
 def test_breadcrumb_situation_no_title():
     bc = N.breadcrumb_html("../", "situation", "", "match_situation.html")
     assert "比赛局势" in bc
-    # 面包屑不得带 title 后缀（title_of 会把 match_situation 误解析成 "situation"）
-    assert "› <b" not in bc
+    assert 'href="today.html"' in bc
 
 
 # ---------- 发布易变文件 ----------

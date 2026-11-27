@@ -22,6 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from add_site_nav import inject_all  # noqa: E402
 import add_favicon  # noqa: E402
+import build_site_search  # noqa: E402
 
 
 def esc(s: str) -> str:
@@ -128,6 +129,8 @@ footer{{margin-top:16px;font-size:11.5px;color:var(--sub);border-top:1px solid v
 
     (intel_dir / "index.html").write_text(page, encoding="utf-8")
     print(f"synced {len(copied)} pages; index rows {len(match_files)} match / {len(profile_files)} profile / {len(gray_files)} gray")
+    search_counts = build_site_search.build_all(site)
+    print(f"search built: {search_counts}")
 
     # 注入与 git 解耦：nav/favicon 注入总是执行（2026-08-26 修复：
     # 此前只在 --push 时注入，导致不带 --push 的同步页面缺导航/图标）
