@@ -27,6 +27,7 @@ import subprocess
 import time
 import urllib.request
 from pathlib import Path
+from typing import Any
 
 import danmu_intel
 import fetch_hupu_player_ratings
@@ -47,11 +48,27 @@ MAX_MATCH_WORKERS = int(os.environ.get("INTEL_MAX_MATCH_WORKERS", "3"))  # 跨�
 LIVE_INTERVAL_SEC = 1800  # 局中情报快照限频：30 分钟一份
 GAME_BP_GAP_MIN = 8    # 开赛/上一局结束后到本小局 BP 的估计间隔（分钟）
 GAME_NODE_BP_MIN = 4   # 小局 BP 后/开局节点：小局开始后 X 分钟（2026-08-26 由 12+8 提速）
+GAME_BP_GAP_MIN_CS2 = 0     # CS2 market gameStartTime 已接近地图开始，不再加 LoL 式 BP 间隔
+GAME_NODE_BP_MIN_CS2 = 2    # CS2 开赛后 2 分钟允许生成 G1 BP/开局节点
 GAME_NODE_MID_MIN = 16  # 小局局中节点：小局开始后 X 分钟（由 22 提速）
 GAME_NODE_BP_MAX_MIN = 20  # BP 后节点最晚窗口（错过则不再补发，避免"BP后"内容失真）
 MAX_GAME = 5
 GAME_STATUS_FILE = ROOT / "data" / "game_status.json"
 GAME_STATUS_FRESH_SEC = 1200  # 本地推送的小局状态 20 分钟内视为新鲜
+
+
+def _match_is_cs2(match: dict[str, Any]) -> bool:
+    league = str((match or {}).get("league") or "").upper()
+    game = str((match or {}).get("game") or (match or {}).get("sport") or "").lower()
+    return league.startswith("CS2") or game == "cs2"
+
+
+def bp_gap_minutes(match: dict[str, Any]) -> int:
+    return GAME_BP_GAP_MIN_CS2 if _match_is_cs2(match) else GAME_BP_GAP_MIN
+
+
+def bp_node_wait_minutes(match: dict[str, Any]) -> int:
+    return GAME_NODE_BP_MIN_CS2 if _match_is_cs2(match) else GAME_NODE_BP_MIN
 
 # 2026-08-29：时间轴壳匹配增强——队伍别名（team_names.json）与联赛前缀
 # （LCK-/CS2-/LPL- 等文件名）支持。教训：BRO-BFX 全称节点页与短名 teams
@@ -2055,8 +2072,8 @@ def process_match(m: dict, all_files: list) -> None:
                     elif detect_match_end_gg(files, game_t - datetime.timedelta(minutes=10)):
                         print(f"[pipeline] {mid}: series-end GG detected, stop game nodes", flush=True)
                         break
-                g_start = game_t + datetime.timedelta(minutes=GAME_BP_GAP_MIN)
-                if now_utc >= g_start + datetime.timedelta(minutes=GAME_NODE_BP_MIN):
+                g_start = game_t + datetime.timedelta(minutes=bp_gap_minutes(m))
+                if now_utc >= g_start + datetime.timedelta(minutes=bp_node_wait_minutes(m)):
                     # BP 节点不因错过窗口而放弃：切片限定 BP/开局时段，晚生成标注"补发"
                     generate_game_node(
                         mid, teams, date, slug_id, gi, "bp",
@@ -2132,10 +2149,10 @@ def process_match(m: dict, all_files: list) -> None:
                         )
                         break
                     # 市场缺失（如 G5 条件市场）-> 按时间窗/弹幕兜底出节点
-                    g_start_est = game_t + datetime.timedelta(minutes=GAME_BP_GAP_MIN)
+                    g_start_est = game_t + datetime.timedelta(minutes=bp_gap_minutes(m))
                     if prev_ended:
                         tasks = []
-                        if now_utc >= g_start_est + datetime.timedelta(minutes=GAME_NODE_BP_MIN):
+                        if now_utc >= g_start_est + datetime.timedelta(minutes=bp_node_wait_minutes(m)):
                             tasks.append(functools.partial(
                                 generate_game_node,
                                 mid, teams, date, slug_id, gi, "bp",
@@ -2173,7 +2190,7 @@ def process_match(m: dict, all_files: list) -> None:
                         game_t = g_start_est
                     prev_ended = False
                     continue
-                g_start = game_t + datetime.timedelta(minutes=GAME_BP_GAP_MIN)
+                g_start = game_t + datetime.timedelta(minutes=bp_gap_minutes(m))
                 # 2026-08-26 教训：game_status 快照滞后（winner 未及时置位）时，
                 # 局后节点会延迟——小局结束判定必须覆盖「价格 ≥0.99 即结算」
                 # （Polymarket 小局市场常保持 closed=false 但已定价 99.95c）。
@@ -2205,7 +2222,7 @@ def process_match(m: dict, all_files: list) -> None:
                 else:
                     if prev_ended:
                         tasks = []
-                        if now_utc >= g_start + datetime.timedelta(minutes=GAME_NODE_BP_MIN):
+                        if now_utc >= g_start + datetime.timedelta(minutes=bp_node_wait_minutes(m)):
                             tasks.append(functools.partial(
                                 generate_game_node,
                                 mid, teams, date, slug_id, gi, "bp",
